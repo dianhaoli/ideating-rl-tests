@@ -176,3 +176,47 @@
   bf16 model copy required (RAM cap), agent_prompt.md contains literal JSON braces (do not render it with str.format),
   `task_info` tool supplies the public slots to scripted solvers, solvers' `unwrap()` accepts raw results or the
   {"ok","result"} envelope, prelim pool is gate-only (per-slot kinds were committed once).
+
+## 2026-10-01 16:58 UTC — stage 2 (integrator): wired into the shared harness
+- Merged main (harness READY, machine-wide GPU queue D11, review hardening D13) into task/featurematch.
+- **What broke and how it was fixed** (all found by running one episode through `prepare`/`./tool`/`finish` and one
+  `run-scripted` per solver type before the gates):
+  - The reference solver read the `budget` built-in as `{"forward": n}`; the broker returns
+    `{"forward": {"used", "cap", "remaining"}}`, so the division would have crashed. `remaining_forward()` now accepts
+    every shape.
+  - All three scripted solvers submitted `call("submit", answer={...})`. The broker treats the call's args AS the
+    submission, so the grader saw `{"answer": ...}` and the format check rejected it. They now send
+    `call("submit", answers=[...])`, the same object an agent passes to `./tool submit`.
+  - `run-scripted` runs every repeat with the same environment, and the solvers seeded their probe-text sampling from
+    `RL_SEED` (default 0), so `--repeats 5` would have run five IDENTICAL attempts and "best-of-5" would have meant
+    nothing. Seeds now come from the episode id (RL_SEED still overrides).
+  - `run-scripted` passes only `--episode E` to a solver, so `recipe_baseline.py <variant>` could not get its variant.
+    It now reads `RL_RECIPE` (inherited by the solver subprocess); the label is set with `--solver-label recipe_<v>`.
+  - tools.py fell back to `local_shim` when `common.toolserver` was missing; the fallback is gone, and `local_shim.py`
+    and the in-process `run_gates.py` are deleted (preliminary numbers stay in git history at 99d1398).
+- **Model loads in a background thread.** `load()` now only reads the permutation seed and starts loading
+  gemma-2-2b + SAEs in a thread; model tools wait for it. WHY: `task_info` needs no model, and five of the eight
+  recipe variants call nothing else. Loading a 5 GB model for each of their ~360 gate episodes would hold the shared
+  GPU for nothing. For an LLM agent the effect is that its first model call takes ~30 s longer (the measured load
+  time), which counts toward the 180 s per-call limit with plenty of room. Planted and null instances load the same
+  way, so this adds no timing fingerprint.
+- **Fresh pool.** The prelim pool's null pattern was committed once (ac29984), so it moved to `instances_prelim/`
+  (gitignored; its manifest is now `instances_manifest_prelim.json`). The gate + agent pool is 24 instances per tier
+  generated from new seeds (`generate.py --n-per-tier 24 --start-seed 5000 --tiers T1,T2,T3 --clean`: T1 5000-5023,
+  T2 105000-105023, T3 205000-205023). Null fraction of slots: T1 0.51, T2 0.41, T3 0.42.
+- **Rendered TASK.md checked** (`prepare` also checks it automatically for codename, canary, leak strings and private
+  paths): no codename, no layer hint, no method beyond the definition of the answer. One cosmetic fix: the budget list
+  now starts on its own line. `task_info` doc corrected: it costs one tool call (not "free").
+- **D6 for harness run dirs.** A harness run dir holds `grade.json` with per-slot planted/null flags and the
+  reference's `submission.json` (which is right on ~95% of slots, i.e. effectively the answer key). The gate pool is
+  also the smoke pool, so `runs/featurematch/.gitignore` now keeps `*_gate_*/episodes/` and `summary.*` local until
+  the smoke episodes are done; only `config.json` and the aggregate `<ts>_gates_public.json` (from `gate_report.py`)
+  are committed. Delete those ignore lines after the smoke run and commit the full dirs.
+- **Harness hazard found (not mine to fix, reported):** the codename "featurematch" is a never-exempt private
+  string, and the leak scan removes whitespace before matching. So an agent note such as "this feature matches
+  Spanish" in its own scratch file makes the episode INVALID (`private string ... in sandbox file`). Checked with
+  `leakscan.scan_text`. For THIS task that phrase is natural. Suggested fix in common/: match codename variants with
+  whitespace preserved (or on word boundaries), or exempt codename variants in agent-written files.
+- Gates launched through `common.sandbox run-scripted` at 16:51 UTC, prefix `runs/featurematch/20261001-165118_gate_*`:
+  reference (one attempt per instance first; best-of-5 retries only on failures), blackbox, and all 8 recipes, on all
+  72 instances. The GPU was full (21/21 GB admitted to other builders), so they started queued.
