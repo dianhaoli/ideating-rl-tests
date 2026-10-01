@@ -1,0 +1,51 @@
+{
+ "score": 1.0,
+ "pass": true,
+ "details": {
+  "slots": [
+   {
+    "planted": false,
+    "correct": true,
+    "claimed": false
+   }
+  ],
+  "submitted": true,
+  "grader_pid": 115416
+ },
+ "harness": {
+  "episode": "epb8868b8fb7",
+  "task": "_demo",
+  "instance_id": "dm-0c5c7fd0",
+  "tier": "T1",
+  "profile": "full",
+  "solver_label": "api-haiku",
+  "agent_model": "api:claude-haiku-4-5",
+  "submitted": true,
+  "status": "submitted",
+  "counters": {
+   "tool_calls": 2,
+   "forward": 8,
+   "generate": 0,
+   "gradient": 0
+  },
+  "caps": {
+   "tool_calls": 20,
+   "forward": 40,
+   "generate": 0,
+   "gradient": 0,
+   "wall_clock_s": 600,
+   "call_timeout_s": 30
+  },
+  "behavioral_exposure": 0,
+  "leak_detected": false,
+  "leak_reasons": [],
+  "agent_files_with_leak_strings": 0,
+  "audit_valid": true,
+  "audit_skipped": null,
+  "n_audit_violations": 0,
+  "valid": true,
+  "invalid_reasons": [],
+  "elapsed_s": 14.2,
+  "wait_s": 0.1
+ }
+}

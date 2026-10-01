@@ -212,7 +212,7 @@ def run(args):
         _ledger_append({"t": time.time(), "episode": args.episode, "task": args.task, "model": model,
                         "effort": args.effort, "turn": turns, "usd": round(usd, 6), **u})
         content = [b.model_dump() for b in resp.content]
-        tlog({"type": "assistant", "message": {"role": "assistant", "model": model, "content": content},
+        tlog({"type": "assistant", "cwd": sbx, "message": {"role": "assistant", "model": model, "content": content},
               "usage": u, "usd": usd})
         if resp.stop_reason == "refusal":
             stop = "refusal"
