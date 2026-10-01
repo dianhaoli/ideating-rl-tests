@@ -1,0 +1,744 @@
+{
+ "task": "featurematch",
+ "created_at": "2026-10-01T20:05:57Z",
+ "git_sha": "54ef40be2aa2dd358234c0e0d9fd8c0760d0897b",
+ "git_dirty": false,
+ "task_root": "/home/ec2-user/wt/featurematch",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "full"
+ ],
+ "solver_labels": [
+  "audit_learned_prior"
+ ],
+ "agent_models": [],
+ "instances": {
+  "fm-t1-07e0a3cb3f": {
+   "seed": 5009,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/5adcfc5c50d7/fm-t1-07e0a3cb3f"
+  },
+  "fm-t2-08a4773087": {
+   "seed": 105022,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/3902c4f50761/fm-t2-08a4773087"
+  },
+  "fm-t3-025fcaa85e": {
+   "seed": 205004,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/368654d3b670/fm-t3-025fcaa85e"
+  },
+  "fm-t1-1c0cd1d5ed": {
+   "seed": 5008,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/f3912759b0cb/fm-t1-1c0cd1d5ed"
+  },
+  "fm-t2-0b1b5c8b61": {
+   "seed": 105018,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/cade673a874b/fm-t2-0b1b5c8b61"
+  },
+  "fm-t3-0ad5ad6daf": {
+   "seed": 205008,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/2d1a6b060535/fm-t3-0ad5ad6daf"
+  },
+  "fm-t1-243d62887a": {
+   "seed": 5018,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/44dee6a4a7f0/fm-t1-243d62887a"
+  },
+  "fm-t2-18d866dedf": {
+   "seed": 105021,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/27b776a59999/fm-t2-18d866dedf"
+  },
+  "fm-t3-158eeee570": {
+   "seed": 205009,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/63873da8f823/fm-t3-158eeee570"
+  },
+  "fm-t1-29f1aef970": {
+   "seed": 5006,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/c6aa1f2b94cd/fm-t1-29f1aef970"
+  },
+  "fm-t2-1e88f74c7b": {
+   "seed": 105005,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/4efaea4b89ce/fm-t2-1e88f74c7b"
+  },
+  "fm-t3-166da72e67": {
+   "seed": 205020,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/27da68c3d3a4/fm-t3-166da72e67"
+  },
+  "fm-t1-385b4cde6f": {
+   "seed": 5005,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/9bdf150f2a2e/fm-t1-385b4cde6f"
+  },
+  "fm-t2-22a847f996": {
+   "seed": 105023,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/5fab1bf76c2c/fm-t2-22a847f996"
+  },
+  "fm-t3-2f10e80afa": {
+   "seed": 205010,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/2f53115e1298/fm-t3-2f10e80afa"
+  },
+  "fm-t1-3a6443abb7": {
+   "seed": 5014,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/c86eeb5998e0/fm-t1-3a6443abb7"
+  },
+  "fm-t2-278783937f": {
+   "seed": 105001,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/f712c0f18fd6/fm-t2-278783937f"
+  },
+  "fm-t3-440b4a9595": {
+   "seed": 205011,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/b875c8030511/fm-t3-440b4a9595"
+  },
+  "fm-t1-3c515b99a6": {
+   "seed": 5012,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/727099338521/fm-t1-3c515b99a6"
+  },
+  "fm-t2-2a8ba6c60f": {
+   "seed": 105006,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/4f52fa31a8a5/fm-t2-2a8ba6c60f"
+  },
+  "fm-t3-4d644ef0b8": {
+   "seed": 205022,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/b982492f5e00/fm-t3-4d644ef0b8"
+  },
+  "fm-t1-48c9b85687": {
+   "seed": 5015,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/083a02eba739/fm-t1-48c9b85687"
+  },
+  "fm-t2-3873e2258c": {
+   "seed": 105007,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/fcc4a12e2587/fm-t2-3873e2258c"
+  },
+  "fm-t3-4e8d2a06c9": {
+   "seed": 205006,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/dc6b32e954f9/fm-t3-4e8d2a06c9"
+  },
+  "fm-t1-5e33776213": {
+   "seed": 5022,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/60595be2b30c/fm-t1-5e33776213"
+  },
+  "fm-t2-5556fb6d2d": {
+   "seed": 105003,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/4c6660cf1669/fm-t2-5556fb6d2d"
+  },
+  "fm-t3-51df00ca7e": {
+   "seed": 205007,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e18060ca0487/fm-t3-51df00ca7e"
+  },
+  "fm-t1-683b61583f": {
+   "seed": 5000,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/dba3f8fcdfa3/fm-t1-683b61583f"
+  },
+  "fm-t2-61a345cf58": {
+   "seed": 105004,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/d339f71ade06/fm-t2-61a345cf58"
+  },
+  "fm-t3-54a29708fb": {
+   "seed": 205019,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e25502a4832d/fm-t3-54a29708fb"
+  },
+  "fm-t1-7336320fe7": {
+   "seed": 5010,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/0d10e35e85eb/fm-t1-7336320fe7"
+  },
+  "fm-t2-7fcbed7ec0": {
+   "seed": 105019,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/5eb9eab59ece/fm-t2-7fcbed7ec0"
+  },
+  "fm-t3-559934cf66": {
+   "seed": 205023,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/807487f11384/fm-t3-559934cf66"
+  },
+  "fm-t1-7c2699b0ad": {
+   "seed": 5001,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/a7da3132240f/fm-t1-7c2699b0ad"
+  },
+  "fm-t2-8892de8911": {
+   "seed": 105002,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/6137dd6b3290/fm-t2-8892de8911"
+  },
+  "fm-t3-5ae5375486": {
+   "seed": 205016,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/2587d6575476/fm-t3-5ae5375486"
+  },
+  "fm-t1-89cae67800": {
+   "seed": 5004,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e67ec0470e10/fm-t1-89cae67800"
+  },
+  "fm-t2-8bec41690e": {
+   "seed": 105012,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/8694cbdf5ed8/fm-t2-8bec41690e"
+  },
+  "fm-t3-679256e915": {
+   "seed": 205001,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/18468f2bf948/fm-t3-679256e915"
+  },
+  "fm-t1-aee3f9b22d": {
+   "seed": 5017,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/a8f4ff3a91a6/fm-t1-aee3f9b22d"
+  },
+  "fm-t2-a3ce4600b2": {
+   "seed": 105013,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/bcb92c15ea0d/fm-t2-a3ce4600b2"
+  },
+  "fm-t3-731d134906": {
+   "seed": 205014,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/dac1b0ab62cf/fm-t3-731d134906"
+  },
+  "fm-t1-b3daf56703": {
+   "seed": 5023,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/c7ca66b1af33/fm-t1-b3daf56703"
+  },
+  "fm-t2-a95b8cd6f4": {
+   "seed": 105008,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/3680e8eec904/fm-t2-a95b8cd6f4"
+  },
+  "fm-t3-7e335c2340": {
+   "seed": 205000,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/a43cd3d102e2/fm-t3-7e335c2340"
+  },
+  "fm-t1-bad8fea09f": {
+   "seed": 5007,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/ed1568684526/fm-t1-bad8fea09f"
+  },
+  "fm-t2-b9ef35417e": {
+   "seed": 105017,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/5ff5bc80c486/fm-t2-b9ef35417e"
+  },
+  "fm-t3-9442c26d1b": {
+   "seed": 205003,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/bbf810aee804/fm-t3-9442c26d1b"
+  },
+  "fm-t1-bf27a4ab2c": {
+   "seed": 5013,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/9af85155bcec/fm-t1-bf27a4ab2c"
+  },
+  "fm-t2-ce893caa60": {
+   "seed": 105014,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/666fa113bdac/fm-t2-ce893caa60"
+  },
+  "fm-t3-9b88613bd3": {
+   "seed": 205002,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/48eaacb29d51/fm-t3-9b88613bd3"
+  },
+  "fm-t1-d757115148": {
+   "seed": 5002,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/8515dee0a8ab/fm-t1-d757115148"
+  },
+  "fm-t2-d4517f279a": {
+   "seed": 105011,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/9ec29620ddf9/fm-t2-d4517f279a"
+  },
+  "fm-t3-ad1a01b3a4": {
+   "seed": 205012,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/0917e65f7e89/fm-t3-ad1a01b3a4"
+  },
+  "fm-t1-ddefee841b": {
+   "seed": 5003,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/2773c8118cb3/fm-t1-ddefee841b"
+  },
+  "fm-t2-d8c89f35e9": {
+   "seed": 105020,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/d5317e466ad1/fm-t2-d8c89f35e9"
+  },
+  "fm-t3-cf9547f73d": {
+   "seed": 205021,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/6c86a0c4ea9a/fm-t3-cf9547f73d"
+  },
+  "fm-t1-e3489ce375": {
+   "seed": 5011,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/fdde174ccb4f/fm-t1-e3489ce375"
+  },
+  "fm-t2-dcf333f8bc": {
+   "seed": 105000,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/b6fcd4c4075a/fm-t2-dcf333f8bc"
+  },
+  "fm-t3-d300e01abd": {
+   "seed": 205017,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/8aa80e5a6606/fm-t3-d300e01abd"
+  },
+  "fm-t1-f491d6db33": {
+   "seed": 5016,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/bbb6a7fcfaaa/fm-t1-f491d6db33"
+  },
+  "fm-t2-de837644c7": {
+   "seed": 105016,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/677a1500d33d/fm-t2-de837644c7"
+  },
+  "fm-t3-e8efa83fe0": {
+   "seed": 205013,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/cd0468453f29/fm-t3-e8efa83fe0"
+  },
+  "fm-t1-f7f20e93d2": {
+   "seed": 5019,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/1f8770614205/fm-t1-f7f20e93d2"
+  },
+  "fm-t2-e7b435bfe8": {
+   "seed": 105010,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e930ca757ffc/fm-t2-e7b435bfe8"
+  },
+  "fm-t3-f63d9b8210": {
+   "seed": 205018,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/eb6866702082/fm-t3-f63d9b8210"
+  },
+  "fm-t1-f98b8f50b3": {
+   "seed": 5021,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/1157cc730fbd/fm-t1-f98b8f50b3"
+  },
+  "fm-t2-eb91d05cb0": {
+   "seed": 105009,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/d8a14699b89b/fm-t2-eb91d05cb0"
+  },
+  "fm-t3-fc7f5a638b": {
+   "seed": 205015,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/0175b3d5d2a8/fm-t3-fc7f5a638b"
+  },
+  "fm-t1-fc6f6d61a2": {
+   "seed": 5020,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/c330eaae278f/fm-t1-fc6f6d61a2"
+  },
+  "fm-t2-f8b4fddaa6": {
+   "seed": 105015,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e42a63ca8113/fm-t2-f8b4fddaa6"
+  },
+  "fm-t3-fddef20379": {
+   "seed": 205005,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/f23672352034/fm-t3-fddef20379"
+  }
+ }
+}

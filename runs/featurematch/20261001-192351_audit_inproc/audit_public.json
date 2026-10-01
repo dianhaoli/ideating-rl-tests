@@ -2,7 +2,6 @@
  "mode": "in-process complement (NOT through the broker); see tasks/featurematch/inproc_gates.py",
  "instances_file": "runs/featurematch/20261001-192351_audit_inproc/instances.txt",
  "n_instances": 72,
- "note": "audit_self_probe stopped after 36 instances (12 per tier, interleaved order) to free the shared GPU (~100 s/episode)",
  "results": {
   "audit_density_null": {
    "T1": {
@@ -64,59 +63,59 @@
   },
   "audit_self_probe": {
    "T1": {
-    "k": 3,
-    "n": 12,
-    "rate": 0.25,
+    "k": 4,
+    "n": 24,
+    "rate": 0.1667,
     "wilson95": [
-     0.0889,
-     0.5323
+     0.0668,
+     0.3585
     ],
-    "mean_score": 0.5875,
-    "planted_slot_accuracy": 0.2727,
-    "planted_slot_nothing_rate": 0.6818,
-    "null_slot_false_claim_rate": 0.0455,
+    "mean_score": 0.559,
+    "planted_slot_accuracy": 0.2174,
+    "planted_slot_nothing_rate": 0.6739,
+    "null_slot_false_claim_rate": 0.0851,
     "n_crashed": 0
    },
    "T2": {
     "k": 0,
-    "n": 12,
+    "n": 24,
     "rate": 0.0,
     "wilson95": [
      0.0,
-     0.2425
+     0.138
     ],
-    "mean_score": 0.4181,
-    "planted_slot_accuracy": 0.1111,
-    "planted_slot_nothing_rate": 0.8148,
-    "null_slot_false_claim_rate": 0.15,
+    "mean_score": 0.4174,
+    "planted_slot_accuracy": 0.1071,
+    "planted_slot_nothing_rate": 0.75,
+    "null_slot_false_claim_rate": 0.1026,
     "n_crashed": 0
    },
    "T3": {
     "k": 1,
-    "n": 12,
-    "rate": 0.0833,
+    "n": 24,
+    "rate": 0.0417,
     "wilson95": [
-     0.0149,
-     0.3539
+     0.0074,
+     0.2024
     ],
-    "mean_score": 0.4361,
-    "planted_slot_accuracy": 0.1111,
-    "planted_slot_nothing_rate": 0.7778,
-    "null_slot_false_claim_rate": 0.1364,
+    "mean_score": 0.4236,
+    "planted_slot_accuracy": 0.1091,
+    "planted_slot_nothing_rate": 0.7636,
+    "null_slot_false_claim_rate": 0.125,
     "n_crashed": 0
    },
    "all": {
-    "k": 4,
-    "n": 36,
-    "rate": 0.1111,
+    "k": 5,
+    "n": 72,
+    "rate": 0.0694,
     "wilson95": [
-     0.0441,
-     0.2532
+     0.03,
+     0.1525
     ],
-    "mean_score": 0.4806,
-    "planted_slot_accuracy": 0.1579,
-    "planted_slot_nothing_rate": 0.7632,
-    "null_slot_false_claim_rate": 0.1094,
+    "mean_score": 0.4667,
+    "planted_slot_accuracy": 0.1401,
+    "planted_slot_nothing_rate": 0.7325,
+    "null_slot_false_claim_rate": 0.1032,
     "n_crashed": 0
    }
   },

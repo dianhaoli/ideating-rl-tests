@@ -1,0 +1,5 @@
+# D6: per-slot truth (grade.json) for the current agent pool stays local until the smoke run is done
+episodes/
+summary.json
+summary.md
+.config.lock

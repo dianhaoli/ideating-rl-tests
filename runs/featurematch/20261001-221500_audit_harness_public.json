@@ -1,0 +1,239 @@
+{
+ "note": "Aggregates of the audit's harness runs (common.sandbox run-scripted). Per-episode dirs stay local (D6).",
+ "runs": {
+  "20261001-200556_audit_harness_learned_prior": {
+   "infrastructure_failures_excluded": 0,
+   "results": {
+    "T1": {
+     "k": 1,
+     "n": 24,
+     "wilson95": [
+      0.0074,
+      0.2024
+     ],
+     "mean_score": 0.4896,
+     "valid": 24,
+     "leak_detected": 0
+    },
+    "T2": {
+     "k": 0,
+     "n": 24,
+     "wilson95": [
+      0.0,
+      0.138
+     ],
+     "mean_score": 0.4306,
+     "valid": 24,
+     "leak_detected": 0
+    },
+    "T3": {
+     "k": 0,
+     "n": 24,
+     "wilson95": [
+      0.0,
+      0.138
+     ],
+     "mean_score": 0.3785,
+     "valid": 24,
+     "leak_detected": 0
+    },
+    "all": {
+     "k": 1,
+     "n": 72,
+     "wilson95": [
+      0.0025,
+      0.0746
+     ],
+     "mean_score": 0.4329,
+     "valid": 72,
+     "leak_detected": 0
+    }
+   }
+  },
+  "20261001-200623_audit_harness_density_null": {
+   "infrastructure_failures_excluded": 1,
+   "results": {
+    "T1": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.0,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T3": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.25,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "all": {
+     "k": 0,
+     "n": 2,
+     "wilson95": [
+      0.0,
+      0.6576
+     ],
+     "mean_score": 0.125,
+     "valid": 2,
+     "leak_detected": 0
+    }
+   }
+  },
+  "20261001-200623_audit_harness_name_rank2": {
+   "infrastructure_failures_excluded": 0,
+   "results": {
+    "T1": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.3333,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T2": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.2,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T3": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.0,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "all": {
+     "k": 0,
+     "n": 3,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "mean_score": 0.1778,
+     "valid": 3,
+     "leak_detected": 0
+    }
+   }
+  },
+  "20261001-200623_audit_harness_self_probe": {
+   "infrastructure_failures_excluded": 0,
+   "results": {
+    "T1": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.0,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T2": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.6,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T3": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.0,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "all": {
+     "k": 0,
+     "n": 3,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "mean_score": 0.2,
+     "valid": 3,
+     "leak_detected": 0
+    }
+   }
+  },
+  "20261001-200623_audit_harness_template_probe": {
+   "infrastructure_failures_excluded": 0,
+   "results": {
+    "T1": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.0,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T2": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.2,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "T3": {
+     "k": 0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "mean_score": 0.25,
+     "valid": 1,
+     "leak_detected": 0
+    },
+    "all": {
+     "k": 0,
+     "n": 3,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "mean_score": 0.15,
+     "valid": 3,
+     "leak_detected": 0
+    }
+   }
+  }
+ }
+}

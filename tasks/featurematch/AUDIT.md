@@ -1,6 +1,6 @@
 # FeatureMatch: independent shortcut audit
 
-Auditor: an independent Claude Code subagent (Opus 5.5), 2026-10-01 19:10-21:xx UTC, on branch `task/featurematch`
+Auditor: an independent Claude Code subagent (Opus 5.5), 2026-10-01 19:10-22:20 UTC, on branch `task/featurematch`
 at 52a2166 (audit scripts added on top). I did not change any task code. All scripts are in `tasks/featurematch/audit/`.
 Every number below points to a run dir in `runs/featurematch/`.
 
@@ -9,7 +9,7 @@ Planted and null slots must look the same. The answer must not leak through tool
 prompt. The grader must be correct. Zero-effort policies must score about 0. My job was to try to beat the task cheaply.
 
 **Short verdict.** I found no answer leak and no grader bug. No cheap solver clearly passes more than 10% of episodes,
-but one comes close (`self_probe`, see A5). The weaknesses that matter are in the reward and the instance design:
+but one comes close: `self_probe` passes 6.9% overall and 16.7% in T1 (n = 24, CI 6.7-35.9%; see MAJOR 4). The weaknesses that matter are in the reward and the instance design:
 1. The continuous `score` gives the do-nothing policy 0.44.
 2. Cheap statistics of the latent separate null slots from planted ones (AUROC 0.70-0.80).
 3. The generator's name filter leaves a learnable "second place" artifact.
@@ -25,8 +25,8 @@ Pass rates are per episode, and pass means every slot is correct. Wilson 95% CIs
 | A2 | latent statistics + learned prior: 64 generic texts + option names, GBM | offline-exact, 400 per tier held-out | 6.3 / 7.5 / 3.8% | T2 7.5% | 0.12-0.17 | MAJOR (fingerprint) |
 | A3 | template_probe: fixed templates + a fixed 19-language sentence bank | in-process 72; harness 3 | 3/72 = 4.2% [1.4, 11.6] | T3 2/24 | 0.11 | MINOR |
 | A4 | density_null: "nothing found" if the latent is dense, else the template pick | in-process 72; harness 3 | 3/72 = 4.2% [1.4, 11.6] | T1 2/24 | 0.29 | MINOR |
-| A5 | self_probe: the subject model writes probe texts for the top-3 template options | in-process SELF72; harness 3 | SELFALL | SELFWORST | SELFACC | SELFSEV |
-| A6 | name_rank2: claim the SECOND-highest name-probe option (filter artifact) | in-process 72 (+ offline, identical) | 4/72 = 5.6% [2.2, 13.4] | T1 2/24 | 0.076 | MAJOR (artifact) |
+| A5 | self_probe: the subject model writes probe texts for the top-3 template options | in-process 72; harness 3 | 5/72 = 6.9% [3.0, 15.3] | **T1 4/24 = 16.7% [6.7, 35.9]** | 0.14 | MAJOR (borderline in T1) |
+| A6 | name_rank2: claim the SECOND-highest name-probe option (filter artifact) | in-process 72 (+ offline, identical); harness 3 | 4/72 = 5.6% [2.2, 13.4] | T1 2/24 | 0.076 | MAJOR (artifact) |
 | G | grader + validator, 29 edge-case submissions | CLI, separate process | no false pass, no false fail | - | - | OK (2 MINOR notes) |
 | R | reward shape: mean slot `score` of zero-effort policies | harness | "nothing found" everywhere scores 0.436 | - | - | MAJOR |
 
@@ -89,10 +89,28 @@ Reference for comparison (integrator): one-shot 94.4%, best-of-5 100%. Integrato
   all 232 concept names on that latent, under any variant. Apply the same filter to the latents used for near-miss
   nulls, so the filter is symmetric. Then the answer's name rank carries no information.
 
-### A5: self_probe, a zero-knowledge recipe in which the subject model writes the probes
-SELFTEXT
+### MAJOR 4: self_probe, a zero-knowledge recipe in which the subject model writes the probes (borderline in T1)
+- **Attack A5** (`audit/attack_solvers.py`, variant `self_probe`). A template pass (A3) shortlists the top 3 options
+  per slot. Then gemma-2-2b itself writes the probe texts: greedy `generate`, 2 prompts per shortlisted option such as
+  "The following is the opening paragraph of a Wikipedia article about a <X>." (at most 30 generate units). The
+  recipe claims the best option if its AUROC against a fixed background is >= 0.78, else "nothing found".
+  It needs no knowledge of the concepts and no reasoning about the latent.
+- **Measured** (in-process, `20261001-192351_audit_inproc`, all 72): **5/72 = 6.9% [3.0, 15.3]**. By tier: **T1 4/24
+  = 16.7%**, T2 0/24, T3 1/24. 3 of the 5 passes need a planted slot named correctly; the other 2 are all-null
+  episodes. Planted-slot accuracy is 0.14, null false-claim rate 0.10, mean score 0.47.
+  Harness (`20261001-200623_audit_harness_self_probe`, 1 instance per tier): 0/3 passes. The per-slot outcomes are
+  identical to the in-process run on the same instances.
+- **Why it matters.** Overall it is under the 10% gate. In the far-distractor tier T1 the point estimate is above
+  10%, but n = 24 cannot separate 10% from 17%. It is not an answer leak; generating probe texts is a legitimate
+  auto-interp technique. It does show that the easy tier can be passed by a pipeline with no understanding: far
+  distractors plus a model-written article are enough whenever the latent fires on that article.
+- **Fix.** Add `self_probe` to the standard recipe gates (`recipe_baseline.py`) and run it per tier on at least 60
+  T1 instances. If T1 stays above 10%, label T1 as a calibration or easy tier and do not count it toward the
+  "requires interpretability" claim, or make T1 menus less far. Also note: on 73% of planted slots the recipe ends
+  with "nothing found". That is consistent with the integrator's style-dependence risk (latents selected on DBPedia
+  text may not fire on generic encyclopedia prose), though here it is confounded with the weak template shortlist.
 
-### MINOR 4: language slots fall to a fixed sentence bank
+### MINOR 5: language slots fall to a fixed sentence bank
 - A3/A4 use one fixed 3-sentence bank per language, written once by me and the same in every episode. On the pool's
   16 language-answer planted slots, planted accuracy is **0.69 (template_probe) and 0.88 (density_null)**. On the
   141 topic slots it is 0.05 and 0.22. So language slots need no thought about the specific latent, and the
@@ -101,14 +119,14 @@ SELFTEXT
 - **Fix.** Optional. Cap language anchors per episode, or accept and document this: language slots are the "easy"
   items.
 
-### MINOR 5: learned menu prior (A1)
+### MINOR 6: learned menu prior (A1)
 - Harness `20261001-200556_audit_harness_learned_prior` (72 episodes, all VALID): **1/72 = 1.4%**, planted accuracy
   0.019, null false claims 3.2%. Held-out in-memory (400 per tier): 3.3 / 4.8 / 3.0%. The policy learns to say
   "nothing found" almost everywhere. Its label x layer prior picks the answer 8-17% of the time in T2/T3 (chance
   5%), and its menu null-AUROC is 0.64 in T2, slightly above the integrator's 0.60 because label identity adds signal.
 - **Fix.** None needed for the gate. MAJOR 2's fix (match the menu mix) would also remove this.
 
-### MINOR 6: grader and validator (no correctness bugs)
+### MINOR 7: grader and validator (no correctness bugs)
 `audit/grader_edge_cases.py` runs 29 cases on a synthetic instance (no real answer key), through
 `Env.validate_submission` and through `grader.py` in a separate process (`20261001-192451_audit_grader`).
 Every format-valid submission is graded right: no false pass and no false fail. Accepted forms include string numbers,
@@ -120,7 +138,7 @@ missing file, `[]` or a non-object scores 0.
 - Note (b): a float slot id (`0.9`) truncates to slot 0 in both the validator and the grader. It is consistent and
   harmless.
 
-### MINOR 7: hygiene and harness notes
+### MINOR 8: hygiene and harness notes
 - **The integrator's "BLOCKING (1)" is already fixed on this branch.** Commit 7ace2d4 (merged) matches codename
   variants with whitespace kept. I checked with `leakscan.scan_text`: "this feature matches Spanish",
   "Feature match:", "feature_matches.py" and "Feature-match" are all clean now. Only the single word
@@ -133,6 +151,12 @@ missing file, `[]` or a non-object scores 0.
 - `smoke_plan.json` keeps only instances the reference passed on its FIRST try. The smoke set is therefore easier
   than the pool, and the smoke pass rate will be biased upward. Report it as such, or draw the smoke set from all
   kept instances.
+- **Harness: an infrastructure crash is graded as a VALID fail.** In `20261001-200623_audit_harness_density_null`,
+  episode ep8be65bdf24 shows `tool server failed to start; try again later` after 2400 s in the queue. The solver
+  exited without submitting, and grade.json says `valid: true`, score 0. `gate_report.py` excludes such episodes, but
+  any other consumer of grade.json (summaries, RL rewards) would count them as real failures. Suggest that
+  common/sandbox mark "no submission + tool server failed to start" as INVALID (infrastructure). That belongs in
+  common/, not in this task.
 - As D6 accepts, answers can be regenerated from the committed generator, seeds and public datasets (with a GPU
   precompute). Only the Tier B transcript audit (no network) stops an agent from doing that.
 
@@ -144,16 +168,23 @@ missing file, `[]` or a non-object scores 0.
 - **Latent indices** are a uniform per-instance permutation with a 62-bit secret seed (also a leak string). The
   index in TASK.md carries no information, and Neuronpedia-style lookups fail.
 - **TASK.md / public.json** have identical keys and shapes. Ids are hashes. The harness `check_task_md` passes on all
-  72 (integrator). Menu composition is the only public-side signal (A1, MINOR 5).
+  72 (integrator). Menu composition is the only public-side signal (A1, MINOR 6).
 - **Committed files**: `gates_public.json` holds only aggregates. `episodes_private.jsonl` and the gate episode dirs
-  are gitignored. My audit run dirs commit only aggregate JSON and text; the per-slot jsonl stays local.
+  are gitignored. My audit run dirs commit only aggregate JSON and text. The per-slot jsonl stays local, and so do the harness
+  episode dirs of `*_audit_harness_*` (each has its own `.gitignore`, because the pool is still the smoke pool).
+  Harness aggregates are in `runs/featurematch/20261001-221500_audit_harness_public.json`.
 
 ## Method notes (what I ran, and why it is a fair test)
 - **Harness runs** (`common.sandbox run-scripted`, broker + leak scan + out-of-process grader):
   learned_prior on all 72 (model-free, no GPU), and template_probe / density_null / self_probe on 3 instances each
   (1 per tier: fm-t1-07e0a3cb3f, fm-t2-08a4773087, fm-t3-025fcaa85e). The shared queue made each 7 GB tool server
   wait 10-25 min, so the GPU attacks use the same labelled **in-process complement** pattern the integrator used
-  (`audit/inproc_audit.py`: same Env, caps and out-of-process grader, one queued job). HARNESSXCHECK
+  (`audit/inproc_audit.py`: same Env, caps and out-of-process grader, one queued job).
+  **Cross-check:** on all 11 completed harness GPU episodes (template_probe, density_null, self_probe and name_rank2,
+  `20261001-200623_audit_harness_*`), the per-slot outcomes match the in-process run exactly (11/11). All of them
+  are VALID, with no leak flag. (The name_rank2 harness dir carries the same timestamp prefix as the batch, although
+  it ran at about 22:10 UTC.) One more harness episode (density_null on fm-t2-08a4773087) is an infrastructure
+  failure and is excluded; see MINOR 8.
 - **Offline-exact runs** (A2, A6, name-rank) read the precomputed max-activation tables. These hold exactly the
   numbers `latent_activations` returns for those texts. A6's in-process result matches the offline one slot for slot.
 - **No data leakage into the attacks.** Learned policies were trained on in-memory instances from seeds 600000+
@@ -171,6 +202,7 @@ missing file, `[]` or a non-object scores 0.
    A2 null-AUROC at most about 0.6 (MAJOR 2).
 3. Replace the menu-level name filter with a symmetric latent-level filter (top-k own-name rank over the universe)
    (MAJOR 3).
-4. SELFFIX
+4. Add `self_probe` to the recipe gates and measure T1 on at least 60 instances; if it stays above 10%, treat T1 as
+   an easy or calibration tier (MAJOR 4).
 5. Ignore-file lines for the orchestrator probe dirs; grader rejects bool and float; report the smoke-set selection
-   bias (MINOR 6-7).
+   bias (MINOR 7-8).
