@@ -1,8 +1,10 @@
 # Harness API (common/) — contract between the harness and every task
 
-Status: SPEC. `common/` is being implemented against this document. Task builders code
-against it. If you must change the contract, edit this file in the same commit and log
-the change in docs/DECISIONS.md.
+Status: IMPLEMENTED (2026-10-01). `common/` implements this document; tests in `common/tests/`
+(`/opt/pytorch/bin/python -m pytest -q common/tests`). Where the implementation had to refine
+the original spec, the change is listed in section 10 and logged in docs/DECISIONS.md (D10, D11).
+If you must change the contract, edit this file in the same commit and log the change in
+docs/DECISIONS.md. A complete worked example of a task is `tasks/_demo/` (no GPU).
 
 Terms used below:
 - **Privileged side**: the repo, instance answer keys, graders, reference solvers. The test agent must never see any of it.
@@ -106,7 +108,7 @@ Python helper for scripted solvers: `from common.toolclient import Client; c = C
 ```
 python -m common.sandbox prepare --task T --instance-dir D --profile full|blackbox \
        --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus|haiku|reference|blackbox|recipe]
-   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py -> analysis venv python, out/, scratch/, .episode}
+   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, .episode}
       writes runs/.episodes/<E>.json and <run-dir>/episodes/<E>/episode.json
       prints E and the exact test-agent prompt (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
 python -m common.sandbox finish --episode E [--transcript PATH] [--agent-model MODEL]
@@ -151,3 +153,83 @@ The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[]}
 - `summary.json` and `summary.md`.
 
 Every reported number must point to one of these directories.
+
+## 9. How to run an LLM test-agent episode
+
+One-time machine setup (already done on this machine): `python -m common.sandbox setup` creates the
+analysis venv `~/rlsbx/.venv` (numpy, scipy, scikit-learn; deliberately no torch) behind each sandbox's `./py`.
+The broker starts automatically on the first `prepare`; `python -m common.broker status|stop` manage it.
+
+```
+source ~/ideating-rl-tests/common/env.sh          # from the checkout that holds tasks/<T>/
+$PY -m common.sandbox prepare --task T --instance-dir tasks/T/instances/<id> --profile full \
+     --run-dir runs/T/$(date -u +%Y%m%d-%H%M%S)_smoke --solver-label opus
+#   prints EPISODE <E>, SANDBOX ~/rlsbx/<E>, then the exact test-agent prompt between two marker lines
+#   (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
+```
+1. Give the printed prompt, and nothing else, to a FRESH subagent (no context, no repo access hints).
+   Record which model it ran on. Do not add hints; the prompt already tells it to stay inside
+   `~/rlsbx/<E>/`, use `./tool` and `./py`, not to use web search/fetch, not to spawn sub-agents,
+   and to finish with `./tool submit`.
+2. When the subagent returns:
+```
+$PY -m common.sandbox finish --episode <E> --agent-model <model> [--transcript PATH]
+```
+   Without `--transcript`, finish searches `~/.claude/projects/` (recursively, including `subagents/`
+   and workflow directories) for the transcript whose first user message contains `<E>`. With
+   `--agent-model` set and no transcript found, the episode is INVALID (rule R0): we cannot vouch for it.
+3. Read `<run-dir>/episodes/<E>/grade.json`: grader output plus a `harness` block
+   (`valid`, `invalid_reasons`, counters, `behavioral_exposure`, `leak_detected`, audit result).
+   `$PY -m common.sandbox summarize --run-dir <run-dir>` aggregates all episodes in the run dir.
+
+Scripted baselines use `run-scripted` instead (no transcript; the audit is marked skipped):
+```
+$PY -m common.sandbox run-scripted --task T --solver tasks/T/reference_solver.py \
+     --instances tasks/T/instances/a tasks/T/instances/b --profile full --run-dir runs/T/<ts>_reference --repeats 5
+```
+
+## 10. Implementation notes and contract refinements (read this if you build a task)
+
+Builder-facing API (all in `common/`):
+- `toolserver.TaskEnv`: attributes `PROFILES`, `GPU_GB` (0 = CPU only, no queue), `GRADER_GPU_GB` (set >0 if
+  `grader.py` runs the model; `finish` then runs the grader through `gpuq run`), `MODEL_OUTPUT_FIELDS`.
+  `self.public` (public.json) and `self.instance_dir` are set in `__init__`, before `load()`.
+- `validate_submission` is called **without `load()`**, in a short-lived separate process (so a format check
+  never needs the GPU). Use only `self.public` / `self.instance_dir` there.
+- `@tool` and `@tool(doc=...)` both work; the doc (or docstring) is the agent-visible tool doc.
+- `self.charge(kind, n)` works for `forward`, `generate`, `gradient` and any extra counter kind the instance
+  lists in `caps` (e.g. `"train_steps": 2000`). Work done before a `ToolError` is still charged.
+- `self.write_array(name, arr)` -> `"out/<name>.npy"` (suffixed `_2`, `_3`... if the name exists; max 200 MB).
+- In-process testing without the broker: `make_local_call(env, caps)` gives a `call(tool, **args)` with the
+  same cap accounting. Scripted solvers: `from common.toolclient import Client, episode_from_argv`;
+  `Client(ep).call` raises `ToolCallError` on `{"ok": false}`; `Client(ep).sandbox` is `~/rlsbx/<E>`.
+- run-scripted starts the solver as `python solver.py --episode <E>` with `RL_EPISODE=<E>`, cwd = the sandbox.
+  It never passes the instance path.
+
+Refinements to the spec above:
+- **Caps**: two extra caps with defaults: `wall_clock_s` (3600; counted from the first tool call, excluding time
+  spent waiting for GPU admission or model load; after it, only `help`, `budget` and `submit` work) and
+  `call_timeout_s` (180; a call over it is killed, the server restarted, the tool call charged).
+  Default counters: tool_calls 150, forward 4000, generate 200, gradient 50. Instance caps override.
+- **Built-ins are free**: `help`, `budget` and `submit` do not use `tool_calls`.
+- **`./py` is a two-line exec wrapper**, not a symlink: Python 3.9 locates its venv from the path it was invoked
+  by, so a symlinked `py` ran the system Python without numpy.
+- **Leak scan details** (`common/leakscan.py`): case-insensitive and whitespace-insensitive matching on the JSON
+  rendering (so numbers and lists are matched as text); a needle that starts/ends with a digit needs a non-digit
+  neighbour; leak strings shorter than 3 characters are rejected at prepare time. A leak string that the agent
+  itself sent in the same call (its own guess echoed back) is not a leak; the canary is never exempt.
+  At finish: canary anywhere in the sandbox => leak; leak strings in harness-written files (TASK.md, tool) => leak;
+  leak strings in the agent's own files are expected when it found the answer, so they are only counted.
+- **Episode records** live in the MAIN checkout's `runs/.episodes/` even when `prepare` runs in a worktree
+  (one broker serves all worktrees); the GPU-queue ledger likewise (D10). Episode ids are `ep` + 10 hex chars.
+  `prepare --tasks-root DIR` uses tasks from another checkout.
+- **Tool servers run with `HF_HUB_OFFLINE=1`** (cached models only, no downloads mid-episode), the RAM cap
+  `GPUQ_RAM_GB` (8 GB) enforced by the broker, and stdout redirected to a per-episode server log.
+- **Transcript audit** (section 7) also flags `mcp__*` connector tools (external services) and shell commands
+  run from a cwd outside the sandbox without entering it (R8). `~` and `$HOME` are expanded and then checked like
+  any path (so `cd ~/rlsbx/<E>` is fine); `..` is resolved against the sandbox root. `/dev/null` is allowed.
+  Text written into files (Write/Edit) is checked for paths and network use, not for the word list.
+- **Run-dir copies hold no secrets**: `episode.json` omits canary and leak strings; the tool log stores the response
+  as served (a leaked response is stored as the replacement "internal error").
+- **Summaries** group episodes by (solver label, agent model, profile, tier); pass rate is over VALID episodes.
+

@@ -33,14 +33,15 @@ DESIGN RULES, BASELINES, PREDICTIONS), `docs/HARNESS_API.md` (the interface to c
 - RAM: the default cap is 8 GB per job. The machine has 30 GB shared by everything.
 - Check the queue with `$PY -m common.gpuq status`. If you wait more than 15 minutes, do CPU work meanwhile.
 
-## The harness (common/) is being built concurrently
-- `common/gpuq.py` exists now. The broker, sandbox, toolclient, leak scanner and transcript audit are being
-  written on `main` right now. When `~/ideating-rl-tests/common/READY` exists, run `git merge main` in your
-  worktree to pick them up.
-- Until then, build the science: generator, planted artifacts, Env class in tools.py (test it by importing
-  and calling its methods directly), the grader, and the reference-solver logic. Write the reference
-  solver as a function that takes a `call(tool_name, **args)` callable. It then runs unchanged against
-  the real client later: `Client(ep).call`.
+## The harness (common/) is READY (2026-10-01)
+- Run `git merge main` in your worktree now. Besides the harness, this fixes the GPU queue: before, each worktree
+  had its own queue ledger, so jobs from different builders did not see each other (docs/DECISIONS.md D10).
+- Contract and builder-facing API: docs/HARNESS_API.md, especially section 10 (implementation notes) and section 9
+  (how to run an LLM test-agent episode). Worked example of every required file: `tasks/_demo/`.
+- Test your Env in-process with `make_local_call(env, caps)`; write the reference solver as a function taking a
+  `call(tool_name, **args)` callable, then run it unchanged through `Client(episode_from_argv()).call`.
+- `validate_submission` must work without `load()` (it runs in a separate short-lived process).
+- Final gates go through `python -m common.sandbox run-scripted` (it records config, logs and summary in the run dir).
 
 ## Required files: tasks/<name>/
 `generate.py, tools.py, grader.py, reference_solver.py, blackbox_control.py, recipe_baseline.py,

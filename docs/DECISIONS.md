@@ -89,3 +89,25 @@ Format: decision | alternatives | why | what the original plan said.
   into `<main>/.git/worktrees/<name>`). The ledger (`runs/.gpuq/`) and the harness episode registry (`runs/.episodes/`)
   always live in the main checkout. Overridable with `GPUQ_DIR` / `RL_EPISODES_DIR` (tests use this).
 - **Action for builders**: `git merge main` as soon as possible so your jobs join the shared ledger.
+
+## D11. Harness implementation choices that refine HARNESS_API.md (2026-10-01 15:19 UTC)
+Full list in docs/HARNESS_API.md section 10. The ones Dan might want to reverse:
+- **Built-ins are free** (help, budget, submit do not cost tool_calls). Alternative: charge everything. Why: an agent
+  checking its budget should not lose budget; the spec's "every call costs one unit" is kept for task tools.
+- **Wall-clock cap excludes compute waiting.** Each episode has `wall_clock_s` (default 3600 s) counted from its
+  first tool call minus time spent in the GPU queue or loading the model. Why: with ~5 agents sharing one L4, queue
+  time is noise the agent cannot control. After the cap, only help/budget/submit work, so the agent can still answer.
+  Per-call timeout `call_timeout_s` (default 180 s) kills runaway calls (plan v2's in-episode training cap together
+  with the `gradient` counter).
+- **Agent-supplied text is exempt from the leak scan for that call.** If the agent sends a leak string (its own
+  guess) and a tool echoes it back, that is not a leak. Why: otherwise the episodes where the agent guessed right would
+  be invalidated by any tool that echoes its prompt. The canary is never exempt.
+- **Leak strings in the agent's own sandbox files are counted, not flagged.** An agent that found the answer writes it in
+  its notes; flagging that would invalidate successes.
+- **`./py` is an exec wrapper, not a symlink** (Python 3.9 resolves its venv from the invoked path). Same effect.
+- **Transcript audit is slightly stricter than the spec**: it also flags mcp__* connector tools and commands run from a cwd
+  outside the sandbox (R8). It is slightly more precise on `~`/`$HOME`/`..`: they are expanded/resolved and then
+  checked, so `cd ~/rlsbx/<E>` is not a violation. The agent prompt tells the agent to start every command with
+  `cd <sandbox> &&` and not to use `..`, `~` or /tmp, so these rules are stated up front, not traps.
+- **validate_submission runs in a fresh process without load()** so format checks never need the GPU.
+- **Tool servers run offline** (`HF_HUB_OFFLINE=1`): no downloads mid-episode.

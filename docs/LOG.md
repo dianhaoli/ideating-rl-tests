@@ -29,3 +29,19 @@ events, orchestration decisions and gate summaries, with links.
   and the T2-RAVEL spec. Saved the differences in docs/PLAN_V2_DELTA.md and appended the new rules to BUILDER_GUIDE.
   Decisions D8 (T2-RAVEL from scratch as a Wave-2 candidate) and D9 (TriggerHunt deferred).
 - The machine is still the L4. Plan: build the harness in parallel with the three Wave-1 builders and the Phase-0 ideation.
+
+## 2026-10-01 15:19 UTC: harness implemented (common/), READY
+- Implemented docs/HARNESS_API.md: `common/toolserver.py` (TaskEnv, @tool, ToolError, charge, write_array, per-episode
+  server process admitted through the GPU queue, apply_caps), `common/broker.py` (Unix-socket broker, counters/caps incl.
+  wall-clock and per-call timeout, built-ins help/budget/submit, privileged JSONL tool log, idle eviction, RAM cap,
+  concurrent episodes), `common/leakscan.py`, `common/agent_client/tool` (stdlib, Python 3.9), `common/toolclient.py`,
+  `common/sandbox.py` (setup/prepare/finish/run-scripted/summarize), `common/transcript_audit.py`, `common/paths.py`.
+- Demo task `tasks/_demo/` (no GPU; hidden table with one edited entry or none) used by the tests and as a worked example.
+- **Bug found and fixed**: `common/gpuq.py` kept its ledger per checkout, so every task worktree had its own GPU queue
+  (D10). The ledger and the episode registry now live in the main checkout. Builders must `git merge main`.
+- **Contract refinements** (D11, HARNESS_API section 10): free built-ins, wall-clock cap excluding queue time,
+  agent-text exemption in the leak scan, ./py wrapper instead of symlink, stricter/more precise transcript audit.
+- Tests: `/opt/pytorch/bin/python -m pytest -q common/tests` (unit + end-to-end on _demo + transcript-audit rules with
+  false-positive checks + GPU smoke on Qwen2.5-0.5B through the queue with eviction). Results in the READY commit message.
+- Not yet exercised: a real LLM subagent episode end to end (the builder of this harness could not spawn subagents).
+  The audit was checked to parse a real Claude Code subagent transcript from this machine.
