@@ -77,19 +77,38 @@ class Subject:
         out = []
         for t in texts:
             ids = self.tok(t, truncation=True, max_length=MAX_TOKENS + 1, add_special_tokens=True)["input_ids"]
-            out.append([self.tok.decode([i]) for i in ids[1:]])
+            out.append([x.replace("\u2581", " ") for x in self.tok.convert_ids_to_tokens(ids[1:])])
         return out
 
     # ------------------------------------------------------------------ residual + SAE
     def resid(self, texts, layers=None):
-        """Return ({layer: [B, T, d] float32}, attention_mask[B, T]) for residual after block L."""
+        """Return ({layer: [B, T, d] float32}, attention_mask[B, T]) for residual after block L.
+        Hooks the block outputs (identical to HF hidden_states[L + 1]) and stops the forward pass after the deepest
+        requested block, so later blocks and the 256k-vocab LM head are never computed."""
         torch = self.torch
-        layers = layers or self.layers
+        layers = tuple(layers or self.layers)
         enc = self.encode_batch(texts)
-        with torch.no_grad():
-            out = self.model.model(**enc, output_hidden_states=True)   # base model only: skip the 256k-vocab LM head
-        hs = {L: out.hidden_states[L + 1].float() for L in layers}
-        return hs, enc["attention_mask"]
+        caught, deepest = {}, max(layers)
+
+        class _Stop(Exception):
+            pass
+
+        def mk(L):
+            def hook(_m, _i, o):
+                caught[L] = (o[0] if isinstance(o, tuple) else o).float()
+                if L == deepest:
+                    raise _Stop()
+            return hook
+        hs_ = [self.model.model.layers[L].register_forward_hook(mk(L)) for L in layers]
+        try:
+            with torch.no_grad():
+                self.model.model(**enc)
+        except _Stop:
+            pass
+        finally:
+            for h in hs_:
+                h.remove()
+        return {L: caught[L] for L in layers}, enc["attention_mask"]
 
     def sae_encode(self, x, layer):
         s = self.sae[layer]
@@ -119,7 +138,10 @@ class Subject:
         """Per-token activations (non-BOS) of selected latents. Returns list of [T_i, k] arrays + token strings."""
         torch = self.torch
         hs, mask = self.resid(texts, [layer])
-        a = self.sae_encode(hs[layer], layer)[..., torch.as_tensor(latents, device=self.device)]
+        s = self.sae[layer]
+        idx = torch.as_tensor(latents, device=self.device)
+        pre = hs[layer] @ s["W_enc"][:, idx] + s["b_enc"][idx]          # only the requested latents
+        a = pre * (pre > s["thr"][idx])
         a = a.cpu().numpy()
         mask = mask.cpu().numpy()
         out = []

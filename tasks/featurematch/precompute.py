@@ -6,10 +6,12 @@ Writes (gitignored, regenerable; see MANIFEST.md):
   cache/acts_L{6,12,18}_names.npy  float16 [n_concepts * 3, 16384]  naive "encode the concept name" probes
   cache/precompute_meta.json       row -> concept index maps, name-probe strings, SAE sanity check
 
-Run: $PY -m common.gpuq run --gb 8 --heavy --label fm-precompute -- $PY -m tasks.featurematch.precompute
+Run: $PY -m common.gpuq run --gb 8 --heavy --label fm-precompute -- $PY -m tasks.featurematch.precompute [names C B A]
+  cache/acts_L{6,12,18}_C.npy      float16 [N_C_total, 16384]   reference-solver probe split (offline simulation only)
 """
 import json
 import os
+import sys
 import time
 
 import numpy as np
@@ -71,11 +73,16 @@ def main():
     print(json.dumps(meta["sanity"]), flush=True)
     A = [t for c in cs for t in c["A"]]
     B = [t for c in cs for t in c["B"]]
+    Cc = [t for c in cs for t in c["C"]]
     names = [p for c in cs for p in name_probes(c)]
     meta.update({"rowsA": [i for i, c in enumerate(cs) for _ in c["A"]],
                  "rowsB": [i for i, c in enumerate(cs) for _ in c["B"]],
+                 "rowsC": [i for i, c in enumerate(cs) for _ in c["C"]],
                  "names": names, "cids": [c["cid"] for c in cs]})
-    for tag, texts in (("names", names), ("B", B), ("A", A)):
+    only = set(sys.argv[1:]) or {"names", "B", "A", "C"}
+    for tag, texts in (("names", names), ("C", Cc), ("B", B), ("A", A)):
+        if tag not in only:
+            continue
         acts = run(subj, texts)
         for L in LAYERS:
             np.save(os.path.join(C.CACHE, f"acts_L{L}_{tag}.npy"), acts[L])

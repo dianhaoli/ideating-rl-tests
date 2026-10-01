@@ -43,6 +43,7 @@ from tasks.featurematch.fm_core import LAYERS
 HERE = os.path.dirname(os.path.abspath(__file__))
 INST = os.path.join(HERE, "instances")
 P_THR, P_THR_B, N_THR, MARGIN, FIRE_MIN = 0.90, 0.85, 0.65, 0.10, 0.5
+MARGIN_B, N_THR_B = 0.08, 0.72   # the same verdict must hold on the independent split B (robust ground truth)
 MAX_SPECIFIC = 3          # at most this many concepts within MARGIN of the best (otherwise the latent is generic)
 N_OPT = 20
 P_NULL = 0.4              # per-slot null probability (independent per slot => randomised null pattern)
@@ -65,6 +66,9 @@ class Tables:
         self.rate = {L: np.load(os.path.join(C.CACHE, f"firerate_L{L}_A.npy")) for L in LAYERS}
         self.names = {L: np.load(os.path.join(C.CACHE, f"acts_L{L}_names.npy")).astype(np.float32) for L in LAYERS}
         self.paths = [c["path"] for c in self.cs]
+        # only concepts with a split-C probe set can be menu options or anchors (the reference must be able to probe
+        # every option); the others still serve as AUROC negatives
+        self.eligible = np.array([bool(c["C"]) for c in self.cs])
         # taxonomy closeness = length of shared path prefix
         P = self.paths
         self.close = np.array([[self._prefix(P[i], P[j]) for j in range(self.n_c)] for i in range(self.n_c)])
@@ -88,8 +92,16 @@ class Tables:
             bB = B[np.arange(len(B)), best]
             bF = F[np.arange(len(F)), best]
             n_near = (A >= (bA - MARGIN)[:, None]).sum(1)
-            ok = (bA >= P_THR) & (bB >= P_THR_B) & (bF >= FIRE_MIN) & (n_near <= MAX_SPECIFIC)
+            ok = (bA >= P_THR) & (bB >= P_THR_B) & (bF >= FIRE_MIN) & (n_near <= MAX_SPECIFIC) & self.eligible[best]
             self.planted[L] = [(int(j), int(best[j])) for j in np.nonzero(ok)[0]]
+            # index by concept: slots sample a CONCEPT uniformly first, then one of its latents. WHY: some concepts
+            # own hundreds of selective latents (formulaic texts such as solar-eclipse articles own >2000), so
+            # sampling latents uniformly would make "guess the most popular concept" a working prior.
+            byc = {}
+            for j, c in self.planted[L]:
+                byc.setdefault(c, []).append(j)
+            self.planted_by_c = getattr(self, "planted_by_c", {})
+            self.planted_by_c[L] = byc
             off = (A.max(1) < N_THR) & (B.max(1) < N_THR + 0.05) & (self.rate[L] >= 0.01)
             self.offu[L] = [int(j) for j in np.nonzero(off)[0]]
 
@@ -102,7 +114,7 @@ class Tables:
         return picks
 
     def menu_around(self, rng, anchor, exclude, closeness, k):
-        pool = np.array([c for c in range(self.n_c) if c not in exclude])
+        pool = np.array([c for c in range(self.n_c) if c not in exclude and self.eligible[c]])
         if closeness == "far":
             return [int(x) for x in rng.choice(pool, size=k, replace=False)]
         key = -self.close[anchor, pool] + rng.random(len(pool)) * 0.5   # closest first, random tie-break
@@ -113,23 +125,30 @@ def make_slot(T, rng, closeness, null, used):
     L = int(rng.choice(LAYERS))
     for _ in range(500):
         if not null or rng.random() < P_NEAR_MISS:
-            j, cstar = T.planted[L][int(rng.integers(len(T.planted[L])))]
+            byc = T.planted_by_c[L]
+            cstar = sorted(byc)[int(rng.integers(len(byc)))]
+            j = byc[cstar][int(rng.integers(len(byc[cstar])))]
             kind = "planted" if not null else "near_miss"
         else:
             j = T.offu[L][int(rng.integers(len(T.offu[L])))]
-            cstar = int(rng.integers(T.n_c))
+            cstar = int(rng.choice(np.nonzero(T.eligible)[0]))
             kind = "off_universe"
         if (L, j) in used:
             continue
         A = T.aA[L][j]
+        Bv = T.aB[L][j]
         if kind == "planted":
             excl = set(np.nonzero(A >= A[cstar] - MARGIN)[0].tolist())
             menu = [cstar] + T.menu_around(rng, cstar, excl | {cstar}, closeness, N_OPT - 1)
             if any(p == cstar for p in T.naive_pick(L, j, menu)):
                 continue                                   # token-identity shortcut works here: reject
+            if max(Bv[c] for c in menu[1:]) > Bv[cstar] - MARGIN_B:
+                continue                                   # verdict not robust on split B: reject
         else:
             excl = set(np.nonzero(A >= N_THR)[0].tolist()) | {cstar}
             menu = T.menu_around(rng, cstar, excl, closeness, N_OPT)
+            if max(Bv[c] for c in menu) >= N_THR_B:
+                continue                                   # some option looks selective on split B: ambiguous null
         menu = [menu[i] for i in rng.permutation(len(menu))]
         aucs = [float(A[c]) for c in menu]
         srt = sorted(aucs, reverse=True)
@@ -181,7 +200,7 @@ def make_instance(T, seed, tier):
                   "slots": [{k: (s[k] if k != "menu" else [T.cs[c]["cid"] for c in s["menu"]]) for k in s}
                             for s in slots],
                   "thresholds": {"P_THR": P_THR, "P_THR_B": P_THR_B, "N_THR": N_THR, "MARGIN": MARGIN,
-                                 "FIRE_MIN": FIRE_MIN}},
+                                 "FIRE_MIN": FIRE_MIN, "MARGIN_B": MARGIN_B, "N_THR_B": N_THR_B}},
     }
     return iid, inst, public
 
@@ -216,8 +235,25 @@ def main():
     ap.add_argument("--start-seed", type=int, default=1000)
     ap.add_argument("--tiers", default="T1,T2")
     ap.add_argument("--clean", action="store_true")
+    ap.add_argument("--prior", type=int, default=0,
+                    help="instead of writing instances, build prior.json (planted-answer label frequencies) from this "
+                         "many in-memory instances on seeds 900000+ (disjoint from the evaluation pool)")
     a = ap.parse_args()
     T = Tables()
+    if a.prior:
+        from collections import Counter
+        cnt = Counter()
+        for k in range(a.prior):
+            for tier in TIERS:
+                _, inst, public = make_instance(T, 900000 + k, tier)
+                for s, pub in zip(inst["answer"]["slots"], public["slots"]):
+                    if s["planted"]:
+                        cnt[pub["options"][s["choice"] - 1]] += 1
+        tot = sum(cnt.values())
+        json.dump({lab: round(n / tot, 5) for lab, n in cnt.most_common()}, open(os.path.join(HERE, "prior.json"), "w"),
+                  indent=0)
+        print("prior over", tot, "planted slots; top:", cnt.most_common(5))
+        return
     print({L: (len(T.planted[L]), len(T.offu[L])) for L in LAYERS})
     if a.clean and os.path.exists(INST):
         shutil.rmtree(INST)

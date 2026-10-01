@@ -8,11 +8,15 @@ Sources (public HF datasets, downloaded into HF_HOME, never committed):
     language except English is one LANGUAGE concept (English is dropped because every DBPedia text is
     English, so "English" would be confounded with "not a review"). Language families give siblings.
 
-Per concept we keep two DISJOINT splits:
+Per concept we keep three DISJOINT splits:
   A  "held-out"  (N_A texts): used only by generate.py to pick latents and compute ground truth. No tool can
                  read these texts, so an agent cannot score candidate answers on the grading data.
-  B  "probe"     (N_B texts): the reference solver's own probe corpus. It stands in for the probe texts an
-                 LLM agent would write itself. It never contains split-A texts (checked below).
+  B  "validation" (N_B texts): generator-only second opinion. A slot is kept only if its verdict (planted answer
+                 or "nothing found") also holds on B, so the ground truth does not hinge on one sample of texts.
+  C  "probe"     (N_C texts): the reference solver's own probe corpus, standing in for the probe texts an LLM agent
+                 would write itself. Disjoint from A and B, so the reference is NOT tuned on the data that selected
+                 or validated the slot. Concepts with fewer than N_A+N_B+N_C clean texts get no C split and are never
+                 used as menu options (they still count as negatives in the AUROC universe).
 
 Validation ("is the held-out split clean?"), logged to cache/concepts_validation.json:
   1. exact/near duplicate removal inside a concept and across concepts (first 60 normalised chars);
@@ -34,6 +38,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache")
 OUT = os.path.join(CACHE, "concepts.json")
 N_A, N_B = 40, 24
+N_C = 20          # split C: the reference solver's probe corpus (only concepts with >= N_A+N_B+N_C clean texts)
 SEED = 20261001
 MAX_CHARS = 400
 
@@ -91,7 +96,8 @@ def build():
         texts = lang[lang.labels == code].text.astype(str).tolist()
         raw.append((f"lang:{code}", f"text written in {name}", "language", ["Language", LANG_FAMILY[code], name], texts))
     for (l1, l2, l3), g in db.groupby(["l1", "l2", "l3"]):
-        raw.append((f"topic:{l3}", f"article about a {db_label(l3)}" if not db_label(l3)[0] in "aeiou"
+        raw.append((f"topic:{l3}", f"article about a {db_label(l3)}" if not (db_label(l3)[0].lower() in "aeiou"
+                                                                    and not db_label(l3).startswith(("US", "Eu", "uni")))
                     else f"article about an {db_label(l3)}", "topic", ["Topic", l1, l2, l3], g.text.astype(str).tolist()))
     # global near-duplicate removal: a key seen in two concepts is dropped from both
     owner = {}
@@ -114,8 +120,10 @@ def build():
         idx = rng.permutation(len(clean))
         A = [clean[i] for i in idx[:N_A]]
         B = [clean[i] for i in idx[N_A:N_A + N_B]]
+        Cs = [clean[i] for i in idx[N_A + N_B:N_A + N_B + N_C]] if len(clean) >= N_A + N_B + N_C else []
         assert not ({norm_key(t) for t in A} & {norm_key(t) for t in B})
-        concepts.append({"cid": cid, "label": label, "source": src, "path": path, "A": A, "B": B})
+        assert not ({norm_key(t) for t in A} & {norm_key(t) for t in Cs})
+        concepts.append({"cid": cid, "label": label, "source": src, "path": path, "A": A, "B": B, "C": Cs})
     return concepts, dropped
 
 
@@ -158,6 +166,7 @@ def main():
     val = {"n_candidates": len(concepts) + len(dropped), "dropped_too_few": dropped,
            "dropped_label_check_auroc_lt_0.9": failed, "n_kept": len(kept),
            "n_kept_by_source": {s: sum(c["source"] == s for c in kept) for s in ("language", "topic")},
+           "n_menu_eligible_with_C": sum(bool(c["C"]) for c in kept),
            "bow_auroc": {k: round(v, 4) for k, v in aucs.items()},
            "sha256": hashlib.sha256(blob).hexdigest()}
     with open(os.path.join(CACHE, "concepts_validation.json"), "w") as f:
