@@ -164,3 +164,18 @@ events, orchestration decisions and gate summaries, with links.
   relation moves, to the target, on held-out wordings). Log per-relation survival and check the filter does not leave
   only "easy" edits. Enlarge the pool >= 2x (memorisation risk). Time-box 1.5 h. If the reference is still < 95% after
   this, editfind is DROP / "explored, not validated" (second gate failure for the same root cause).
+
+## 2026-10-01 19:55 UTC: EditFind DROP (explored, not validated)
+- The specificity rebuild kept **0/154** ROME edits, in all 10 relations (runs/editfind/20261001-193758_v5_bank_specificity,
+  editfind worktree, commit b6844c9). The blocking criterion is "only the edited relation moves". A layer-4 ROME edit moves
+  the subject's OTHER relations by a median of 7.4 nats (deciles 2.6-11.8). Neighbours-only keeps 71/154 and held-out-only 110/154.
+  Neighbours + held-out keeps 54/154, but that would mean grading every changed answer, i.e. a different task.
+- This is the second gate failure from the same root cause (an under-specified planted ground truth), so it is DROPPED per the plan.
+- What worked and is worth keeping: localisation. The corpus key-scan finds edited subjects (rank 1/3000), decoys are
+  rejected, null copies get no false claims, and recipes stay <= 1/36.
+- Finding worth telling Dan: "find the planted edit" tasks built on ROME inherit ROME's lack of specificity. The edit
+  is a change to the whole subject, not a single fact, so a pair-level answer key is ill-posed. Revival would need a
+  more specific editing method (e.g. MEMIT across several layers with a strong locality term, or fine-tuned single-fact
+  LoRAs validated for specificity). This is a transfer-relevant lesson for auditing benchmarks.
+- Coordination: copies of the resumed agent committed concurrently (16b627d, 6bcf82b, 84149f1). One used a lock file
+  to prevent a duplicate rebuild. The SendMessage-resumes-workflow-agent problem cost real confusion; see 18:10 entry.
