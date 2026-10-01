@@ -89,7 +89,9 @@ def _trunc(s, n):
 
 def server_env(task_root):
     env = dict(os.environ)
-    env["PYTHONPATH"] = task_root
+    # the task's checkout first (a worktree uses its own common/ if it has one), then this harness
+    harness_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    env["PYTHONPATH"] = os.pathsep.join(dict.fromkeys([task_root, harness_root]))
     env.pop("GPUQ_GB", None)
     env.setdefault("HF_HOME", os.path.expanduser("~/hf_home"))
     env.setdefault("TOKENIZERS_PARALLELISM", "false")

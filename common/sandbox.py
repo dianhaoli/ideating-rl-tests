@@ -444,7 +444,8 @@ def run_scripted(task, solver, instances, profile, run_dir, repeats=1, solver_la
             ep = prepare(task, inst, profile, run_dir, solver_label=label, tasks_root=tasks_root)
             eid = ep["episode"]
             rec = _load_json(broker.record_path(eid))
-            env = dict(os.environ, RL_EPISODE=eid, PYTHONPATH=rec["task_root"])
+            env = dict(os.environ, RL_EPISODE=eid,
+                       PYTHONPATH=os.pathsep.join(dict.fromkeys([rec["task_root"], HARNESS_ROOT])))
             # The solver gets ONLY the episode id (argv + RL_EPISODE): no instance path, no record path.
             t0 = time.time()
             with open(os.path.join(ep["episode_dir"], "solver.log"), "w") as log:
