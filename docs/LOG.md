@@ -100,3 +100,16 @@ events, orchestration decisions and gate summaries, with links.
 - Fix: the estimate is now cache-read context + ~4k new tokens + 1.5x the largest output seen so far. When the
   episode nears its cap (or its turn limit), the agent gets a "[budget notice] submit now" text with its tool results
   and two more turns, before any hard stop. Verified on _demo (runs/_demo/*_apiwarn: warned, submitted, pass, $0.015).
+
+## 2026-10-01 17:30 UTC: first Wave-1 probes (FeatureMatch, Sonnet), plus a transcript-audit false positive
+- FeatureMatch probes (runs/featurematch/20261001-171048_apiprobe_sonnet in the featurematch worktree), Sonnet 5.5
+  at medium effort:
+  - T2, 5 slots: 4/5 correct. It answered "nothing found" on one planted slot, so it FAILED the all-slots rule. $0.152, 9 turns.
+  - T3, 4 slots: 2/4 correct. It claimed the wrong sibling twice and used only 103 of 550 forward units. FAIL. $0.087, 7 turns.
+  - Two earlier Opus probes were aborted at turn 3 on Dan's instruction (runs/.../20261001-165348_apiprobe_orch,
+    marked ABORTED, excluded).
+- The T2 episode was flagged INVALID by the transcript audit. A false positive: the audit read the sed expression
+  `s/a=list.*/.../` as the path "/a=list". Fixed: sed s///, y/// expressions are removed before path scanning, and
+  real file arguments to sed are still checked. 156 audit and verification tests pass. Re-audit: audit_rerun_sedfix.json (valid).
+- Reading: neither failure is an environment fault. The near-miss slots (sibling confusion, a planted latent read
+  as dead) are the difficulty the builder predicted. Sonnet costs about $0.09-0.15 per episode on this task.
