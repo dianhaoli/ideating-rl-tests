@@ -14,7 +14,7 @@
  "harness": {
   "invalid_episodes": {},
   "infrastructure_failures_excluded": {
-   "reference": 1,
+   "reference": 2,
    "blackbox": 2,
    "recipe_name_probe": 1
   },

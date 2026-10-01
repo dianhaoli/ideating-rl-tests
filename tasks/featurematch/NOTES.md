@@ -286,3 +286,27 @@
   the orchestrator's LLM probes already used (fm-t2-08a4773087, fm-t3-025fcaa85e, fm-t2-0b1b5c8b61, fm-t2-18d866dedf).
 - Rendered TASK.md for all 72 instances passes the harness's own check_task_md (codename, canary, leak strings,
   private paths): 0 problems. The prompt names no method, layer hint, dataset name or grading term.
+
+## 2026-10-01 19:12 UTC — fingerprint re-check on the stage-2 code
+- `fingerprint_check.py --n 400` (in-memory instances, seeds 500000+; gradient-boosted classifier on public menu
+  structure, 5-fold CV AUROC for planted vs null slot): T1 0.535 +- 0.022, T2 0.597 +- 0.025, T3 0.596 +- 0.025.
+  Same as stage 1. WHY it is acceptable for now: the signal can only nudge an agent's belief that a slot is null; it
+  never says which option is right, and claiming the wrong option on a planted slot fails just like a false claim.
+  No recipe gets above 4.2% in any tier. Still a known weakness (near-miss null menus contain fewer languages);
+  a fix would draw the near-miss menu's anchor-family mix to match the planted menus' mix.
+- Tool outputs and timing do not depend on planted vs null at all: the tools only use the instance's permutation seed,
+  never the answer key, and model load is identical for every instance.
+
+## 2026-10-01 19:12 UTC — end of stage 2 (integration): status ready_for_smoke
+- Harness reference stream stopped at 3 graded episodes (3/3 pass: 2 T1, 1 T2) so it stops competing in the queue with
+  the orchestrator's own probes on this task. Final harness infrastructure exclusions (unsubmitted, killed while waiting
+  for the GPU): reference 2, black box 2, name_probe 1. No harness episode was INVALID.
+  `runs/featurematch/20261001-172659_gates_public.json` refreshed; smoke plan unchanged.
+- Rabbit-hole check (plan questions): (1) still on the path to a validated task? Yes; every gate passes with margin,
+  and both dials move the reference's one-shot rate. (2) Polishing something that doesn't change the conclusion?
+  Further harness GPU episodes would; stopped. (3) Cheapest next test: the smoke run (3 per tier), watching
+  the planted-slot "nothing found" rate (the style-dependence risk) and the near-miss null false-claim rate.
+  (4) Lost if abandoned now: a working, gated SAE-latent-explanation environment; little extra work is sunk.
+- **Before the smoke run (blocking):** fix the harness codename check (an agent note "feature matches" invalidates
+  the episode), and expect long GPU-queue waits for 7 GB servers unless the queue gets aging/FIFO for light waiters.
+  After the smoke run: remove the D6 ignore lines in runs/featurematch/.gitignore and commit the full gate run dirs.
