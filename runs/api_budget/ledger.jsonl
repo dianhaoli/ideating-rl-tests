@@ -1,0 +1,2 @@
+{"t": 1790866937.8486977, "episode": "keycheck", "task": "keycheck", "model": "claude-haiku-4-5", "effort": "low", "turn": 1, "usd": 3.4e-05, "input": 14, "cache_write": 0, "cache_read": 0, "output": 4}
+{"t": 1790866938.763874, "episode": "keycheck", "task": "keycheck", "model": "claude-opus-5-5", "effort": "low", "turn": 1, "usd": 0.000152, "input": 18, "cache_write": 0, "cache_read": 0, "output": 4}

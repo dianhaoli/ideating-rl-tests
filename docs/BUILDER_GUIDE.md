@@ -120,3 +120,19 @@ If your task cannot be multi-slot, explain why in SPEC.md and propose another fi
 - **Framing.** This is defensive interpretability research on small open models. Planted behaviours (edits, triggers,
   circuits) exist only as known answers for grading auditing methods. Keep planted behaviours harmless (e.g. a
   marker string or a changed fact) and describe them neutrally in all docs and prompts.
+
+## Fast difficulty probes with the Claude API (D10). Wave-2 builders must use this.
+Build a minimal working version first: generator + Env + grader + a reference solver that passes a few instances.
+Then measure difficulty with 1-2 real agent episodes BEFORE polishing:
+```
+E=$($PY -m common.sandbox prepare --task T --instance-dir D --profile full --run-dir runs/T/<ts>_apiprobe --solver-label api-opus | head -1)
+$PY -m common.api_agent run --episode $E --task T --prompt-file runs/T/<ts>_apiprobe/episodes/$E/agent_prompt.txt \
+    --out runs/T/<ts>_apiprobe/episodes/$E --model claude-opus-5-5 --effort medium --max-usd 1.0 --max-turns 35
+$PY -m common.sandbox finish --episode $E --transcript runs/T/<ts>_apiprobe/episodes/$E/api_transcript.jsonl --agent-model api:claude-opus-5-5:medium
+$PY -m common.api_agent spent
+```
+(Check `docs/HARNESS_API.md` for exact flags. The prepare output format may differ slightly.)
+Read the transcript. Did the agent understand the task? Was it trivially easy? Did it fail for a reason that is about
+interpretability, or because of an environment problem? Tweak, then probe again. **Budget: at most $1.50 of API spend per
+task in total, at most 3 episodes.** The ledger is shared by all tasks and hard-stops at $16 overall. Never print the key.
+For more episodes use free fresh Claude Code subagents (the orchestrator runs those).

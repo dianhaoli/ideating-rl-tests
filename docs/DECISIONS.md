@@ -60,3 +60,23 @@ Format: decision | alternatives | why | what the original plan said.
   Qwen2.5-0.5B) runs as a separate pass once the harness and these three are through their gates.
 - **Why**: the plan marks it optional. It also needs a LoRA bank trained up front (GPU-heavy), which would compete with
   the other builders for the single L4.
+
+## D10. Claude API test agent with a hard $17 total budget (Dan, 2026-10-01 ~15:10 UTC)
+- **Change**: Dan added an Anthropic key and allowed API use with a TOTAL budget of $17. It is mainly for testing task
+  difficulty early, in fast feedback loops, before a lot gets built. This supersedes the plan's "do not call the
+  Anthropic API".
+- **Mechanism**: `common/api_agent.py` runs a minimal agent loop with one tool, `bash`, inside the episode sandbox. The
+  environment is scrubbed (HOME = sandbox, no tokens or keys). Commands that reference anything outside the sandbox are
+  refused before they run. Every request's list-price cost is appended to `runs/api_budget/ledger.jsonl` (committed).
+  A global hard stop at $16.00 leaves $1 slack, and each request is checked against a pessimistic estimate first.
+  There are also per-episode caps (--max-usd, --max-turns).
+- **Allocation plan** (soft): Wave-1 early probes about $4.5 (3 tasks); Wave-2 early probes about $6 (6 tasks, about $1
+  each); measurement on the candidate validated task, including Haiku separation, about $4; reserve about $1.5.
+- **Models**: main = `claude-opus-5-5` (effort medium); small = `claude-haiku-4-5`. API runs carry the label
+  "API (model X, effort Y)" and are kept separate from "fresh Claude Code subagent" runs. Free subagent runs stay
+  the high-volume channel (smoke, bug-finding, scale-up). API runs are the fast, exact-model difficulty probe.
+- **No server-side model fallbacks**: refusals are logged and the episode is marked invalid. A silent fallback to
+  another model would contaminate the model label on a difficulty measurement.
+- Key storage: Dan's key sits in the gitignored repo `.env` as `ANT_KEY`, quoted. I chmod-ed that file to 600 because
+  it was 644 and also holds the HF token. The runner reads an unquoted copy at `~/.anthropic_env` (mode 600, outside
+  the repo).
