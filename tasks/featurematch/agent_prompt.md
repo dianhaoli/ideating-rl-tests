@@ -10,8 +10,10 @@ the concept whose texts reliably activate this latent more than other text does.
 
 What the concepts mean: "article about a X" stands for encyclopedia-style (Wikipedia-like) English articles about an
 entity of that kind (for example "article about a volcano" means articles describing a particular volcano).
-"text written in L" stands for everyday sentences, questions and short product reviews written in language L. For some slots none of the 20
-candidates is what the latent encodes; for those, the correct answer is "nothing found".
+"text written in L" stands for everyday sentences, questions and short product reviews written in language L.
+
+For some slots none of the 20 candidates is what the latent encodes; for those, the correct answer is
+"nothing found".
 
 Latent indices in this episode are specific to this episode; they do not correspond to the index numbering used
 anywhere else.
