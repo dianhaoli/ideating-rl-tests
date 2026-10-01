@@ -310,3 +310,58 @@
 - **Before the smoke run (blocking):** fix the harness codename check (an agent note "feature matches" invalidates
   the episode), and expect long GPU-queue waits for 7 GB servers unless the queue gets aging/FIFO for light waiters.
   After the smoke run: remove the D6 ignore lines in runs/featurematch/.gitignore and commit the full gate run dirs.
+
+## 2026-10-01 23:14 UTC — fix stage after the independent audit (AUDIT.md): generator v2, product reward
+The auditor found no leak and no grader bug, but 4 MAJOR issues. What I changed, and WHY, in plain terms:
+- **MAJOR 1, reward rewards doing nothing.** The continuous `score` was the mean slot correctness. About 40% of slots
+  are null, so answering "nothing found" everywhere earned 0.44 while the reference earns ~0.98: an RL policy trained on
+  `score` would happily settle there (the auditor-RL failure mode CONTEXT.md warns about, in reverse). Fix in grader.py:
+  `score = planted_acc x null_acc` (empty factor = 1). Both halves of the job must be done to earn anything. The old
+  mean survives as `details.slot_accuracy` (diagnostic only). SPEC now says the RL reward is `pass` or `score`.
+  Measured (harness, 180 episodes each, run dir 20261001-222256_gate_recipes): "nothing" mean score 0.061 (v1 0.436),
+  which is exactly its all-null pass rate; always_claim 0.008; prior 0.009; random 0.036.
+- **MAJOR 2, cheap latent statistics separated null from planted slots (AUROC 0.70-0.80).** Cause: 40% of nulls were
+  "off-universe" latents (live but not selective for any concept) whose firing on generic text looks different from
+  concept-selective latents. Fix: drop off-universe nulls. Every slot now draws its latent from ONE pool by the same
+  steps (layer -> anchor concept c* uniformly -> one of c*'s selective latents); a planted slot puts c* on the menu, a
+  null slot does not. Both kinds remove the SAME confusable set (AUROC_A >= 0.65 or AUROC_B >= 0.72) from the
+  distractors, and there is no rejection step that depends on the kind. So the latent of a null slot is statistically
+  identical to the latent of a planted slot; only testing the options can tell them apart. Side effect: planted
+  answers now win by >= 0.25 AUROC (v1: >= 0.10), so the ground truth is cleaner.
+  Considered instead: keep off-universe nulls but stratify them to match planted firing statistics. Rejected: matching
+  rate/mean/quantiles still leaves any other statistic free, so it is an arms race; one shared pool ends it.
+- **MAJOR 3, the name filter left a "second place" artifact.** v1 rejected a planted MENU when the answer's name was
+  the top name-probe activation; only rank 1 was removed (the answer's name was exactly rank 2 in 36-44% of cases) and
+  only planted slots were filtered. Fix: filter LATENTS, for every slot: a latent that fires on any of the 3 surface
+  forms of its own concept's name never enters the pool. On every slot the answer's name is silent, like most
+  distractor names. Cost: the pool shrinks from 2210/2631/2508 to 1413/1855/1749 latents (layers 6/12/18), and the
+  answerable concepts from 174/178/190 to 108/118/149. Risk this raises: the kept latents respond to context, not to
+  the bare name, which may add to the style-dependence risk (NOTES 16:42); the smoke run should watch the planted-slot
+  "nothing found" rate.
+- **Menu universe per layer (new).** Distractors are drawn only from concepts that own a pooled latent at that layer,
+  so no label can be ruled out because "it is never an answer at layer 6" (that would have grown with the stricter
+  filter).
+- **MINOR 7.** grader.py now parses choices exactly like the format check (bool and float choices or slot ids
+  rejected, no `{"answer": ...}` unwrapping). audit/grader_edge_cases.py re-run with the new expectations: 29/29 as
+  expected (run dir 20261001-222216_fix_grader).
+- **MINOR 8.** runs/featurematch/.gitignore now holds back the orchestrator's probe episode dirs. gate_report.py draws
+  the smoke set at random from ALL kept instances (not only the reference's first-try passes) and reports mean score.
+- **MAJOR 4 (self_probe).** Added self_probe, template_probe, density_null and name_rank2 to recipe_baseline.py as
+  standing recipe gates. Measurement below.
+- **Fresh pool (generator v2).** The old pool moved to instances_v1/ (gitignored; manifest instances_manifest_v1.json).
+  New: `generate.py --n-per-tier 60 --start-seed 7000 --tiers T1,T2,T3 --clean` (T1 7000-7059, T2 107000-107059,
+  T3 207000-207059), 60 per tier so the T1 recipe measurement has n = 60 as the auditor asked. Null fraction of slots
+  0.38 / 0.41 / 0.37; all-null episodes 4 / 4 / 3 (expected ~3.3% per tier; this sample is a bit high, and "nothing
+  found" everywhere passes exactly these). prior.json regenerated (seeds 900000+).
+- Offline checks on v2 (CPU, precomputed tables; run dir 20261001-222059_fix_offline):
+  menu-structure fingerprint CV AUROC 0.49 / 0.54 / 0.55 (v1 0.54 / 0.60 / 0.60). Auditor's A1 learned menu prior,
+  held-out null AUROC 0.50 / 0.56 / 0.59; A2 latent statistics + names + menu 0.51 / 0.58 / 0.59 (v1 0.70 / 0.80 /
+  0.77), i.e. at or under the auditor's 0.6 acceptance line in every tier; A2 planted-slot accuracy 0.00 / 0.07 /
+  0.04, held-out pass 3.3 / 3.5 / 3.5% (all from all-null episodes or near it). Name probes: "any option name fires"
+  0.14 on null vs 0.15 on planted slots; the answer's own name never fires.
+  Offline reference simulation (simulate.py): best-of-5 1.00 / 0.97 / 0.98.
+- Asked to stop my own GPU jobs to reorder them (self_probe takes ~70 s per episode; the harness cross-check stream
+  was competing with my in-process job for the queue): the permission classifier refused ("interfere with
+  workloads"). I did not pursue it; both jobs run to completion as launched, which only costs wall-clock time.
+- PREDICTIONS.md is left untouched: LLM agents (orchestrator API probes) have already run on this task, so it may
+  not be replaced. Its numbers were made for the v1 design.
