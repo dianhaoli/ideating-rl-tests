@@ -7,6 +7,7 @@
 ## docs/
 - `PLAN_PROMPT.md`: the full original plan, verbatim.
 - `HARNESS_API.md`: the contract for common/: instances, tools, broker, sandbox, grader, audit, run dirs.
+- `HARNESS_VERIFICATION.md`: independent review of the harness: each attack/check, what failed, what was fixed, remaining risks.
 - `BUILDER_GUIDE.md`: how each task is built (worktrees, GPU queue, required files, gates, docs).
 - `LOG.md`: append-only orchestrator lab notebook.
 - `DECISIONS.md`: choices Dan may want to reverse.
@@ -21,8 +22,8 @@
 - `leakscan.py`: canary / leak-string scanner applied to every response and at finish.
 - `agent_client/tool`: the agent-side `./tool` client (stdlib, Python 3.9). `toolclient.py`: `Client` for scripted solvers.
 - `sandbox.py`: `setup | prepare | finish | run-scripted | summarize` (see docs/HARNESS_API.md sections 5 and 9).
-- `transcript_audit.py`: invalidates LLM episodes that left the sandbox (rules R0-R8).
-- `tests/`: harness tests (`/opt/pytorch/bin/python -m pytest -q common/tests`). `READY`: marker that the harness is usable.
+- `transcript_audit.py`: invalidates LLM episodes that left the sandbox (rules R0-R9).
+- `tests/`: harness tests (`/opt/pytorch/bin/python -m pytest -q common/tests`); `test_verify_*.py` + `verify_task/` are the reviewer's adversarial tests. `READY`: marker that the harness is usable.
 
 ## tasks/ (one directory per task; see each SPEC.md)
 - `_demo/`: GPU-free harness fixture and worked example of every required task file (not a research task).

@@ -37,7 +37,7 @@ PY = sys.executable
 
 AGENT_PROMPT = """You are being given a self-contained research task to attempt on your own.
 
-Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths).
+Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or use encoded commands (base64, eval, exec).
 
 Start every shell command with:  cd {sandbox} &&
 Then read TASK.md there (cat TASK.md). It explains the task, the tools and the exact answer format.
@@ -168,17 +168,33 @@ def codename_variants(task):
     return {v for v in (base, base.replace("_", ""), base.replace("-", ""), base.replace("_", " ")) if len(v) >= 3}
 
 
-def check_task_md(text, task, canary, leak_strings):
+def private_strings_for(task, task_root, instance_dir, inst, public):
+    """Strings no agent-visible text may contain, ever (leak scan `private_strings`): where the answer
+    key lives (instance dir, repo paths, episode registry), the instance id, and the task codename.
+    The instance id is skipped if the task deliberately publishes it in public.json; codename
+    variants shorter than 6 characters are skipped (too generic, e.g. "demo")."""
+    out = [os.path.abspath(instance_dir), os.path.abspath(task_root), HARNESS_ROOT, paths.episodes_dir(),
+           paths.MAIN_REPO]
+    iid = str(inst.get("instance_id") or "")
+    if len(leakscan.norm(iid)) >= 6 and leakscan.norm(iid) not in leakscan.norm(json.dumps(public)):
+        out.append(iid)
+    out += sorted(v for v in codename_variants(task) if len(v) >= 6)
+    return list(dict.fromkeys(out))
+
+
+def check_task_md(text, task, canary, leak_strings, private_strings=()):
     problems = []
     low = text.lower()
     for v in codename_variants(task):
         if v in low:
             problems.append(f"task codename '{v}' appears in TASK.md")
-    hit = leakscan.scan_text(text, canary, leak_strings)
+    hit = leakscan.scan_text(text, canary, leak_strings, private_strings)
     if hit["canary"]:
         problems.append("canary appears in TASK.md")
     if hit["leak_strings"]:
         problems.append(f"leak_strings {hit['leak_strings']} appear in TASK.md")
+    if hit["private"]:
+        problems.append(f"private strings (instance path/id, repo path) {hit['private']} appear in TASK.md")
     return problems
 
 
@@ -219,7 +235,8 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     with open(os.path.join(tdir, "agent_prompt.md")) as f:
         template = f.read()
     task_md = render_task_md(template, public, render_tool_docs(desc["tool_docs"]), render_caps(caps))
-    problems = check_task_md(task_md, task, canary, leak_strings)
+    private = private_strings_for(task, task_root, instance_dir, inst, public)
+    problems = check_task_md(task_md, task, canary, leak_strings, private)
     if problems:
         raise ValueError("TASK.md failed checks: " + "; ".join(problems))
     vpy = os.path.join(paths.venv_dir(), "bin", "python")
@@ -248,7 +265,8 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
            "instance_id": inst.get("instance_id"), "tier": inst.get("tier"), "profile": profile,
            "sandbox": sbx, "run_dir": run_dir, "solver_label": solver_label, "agent_model": agent_model,
            "caps": caps, "counters": {k: 0 for k in broker.counter_kinds(caps)},
-           "canary": canary, "leak_strings": leak_strings, "model_output_fields": desc["model_output_fields"],
+           "canary": canary, "leak_strings": leak_strings, "private_strings": private,
+           "model_output_fields": desc["model_output_fields"],
            "tools": [t["name"] for t in desc["tool_docs"]], "tool_docs": desc["tool_docs"],
            "builtin_docs": BUILTIN_DOCS, "gpu_gb": desc["gpu_gb"], "grader_gpu_gb": desc.get("grader_gpu_gb", 0),
            "status": "open", "created_at": now, "started_at": None, "wait_s": 0.0, "submission": None,
@@ -277,35 +295,114 @@ def _public_record(rec):
             "submitted_at", "closed_at", "wait_s", "leak_detected", "behavioral_exposure", "git_sha", "git_dirty")
     out = {k: rec.get(k) for k in keep}
     out["n_leak_events"] = len(rec.get("leak_events") or [])
+    out["cross_episode_access"] = bool(rec.get("cross_episode_access"))
     return out
 
 
 # ---------------------------------------------------------------------------------------------- finish
+GRADER_TIMEOUT_S = 3600
+
+
+def _check_grade(g):
+    """Return an error string if the grader output is not {"score": finite float in [0,1], "pass": bool, ...}."""
+    if not isinstance(g, dict):
+        return f"grader output is not a JSON object ({type(g).__name__})"
+    sc = g.get("score")
+    if isinstance(sc, bool) or not isinstance(sc, (int, float)) or not math.isfinite(sc) or not 0 <= sc <= 1:
+        return f"grader score must be a number in [0, 1], got {sc!r}"
+    if not isinstance(g.get("pass"), bool):
+        return f"grader pass must be true/false, got {g.get('pass')!r}"
+    if "details" in g and not isinstance(g["details"], dict):
+        return "grader details must be a JSON object"
+    return None
+
+
 def _run_grader(rec, sub_path, grade_path):
+    """Run tasks/T/grader.py in a separate process. Any failure (crash, non-zero exit, timeout, missing or
+    malformed output) gives score 0, pass False and a non-empty grader_error; finish() then marks the
+    episode INVALID (grader_error) instead of crashing the harness or trusting a broken grade."""
     grader = os.path.join(rec["task_root"], "tasks", rec["task"], "grader.py")
     cmd = [PY, grader, "--instance-dir", rec["instance_dir"], "--submission", sub_path, "--out", grade_path]
     gb = float(rec.get("grader_gpu_gb") or 0)
     if gb > 0:   # graders that run the model on held-out data queue for the GPU like everything else
         cmd = [PY, "-m", "common.gpuq", "run", "--gb", str(gb), "--label", f"grader:{rec['task']}", "--"] + cmd
-    r = subprocess.run(cmd, cwd=rec["task_root"], env=broker.server_env(rec["task_root"]), capture_output=True,
-                       text=True, timeout=3600)
+    timeout = float(os.environ.get("RL_GRADER_TIMEOUT_S", GRADER_TIMEOUT_S))
+    try:
+        os.unlink(grade_path)            # never read a stale grade from an earlier finish
+    except OSError:
+        pass
+    fail = {"score": 0.0, "pass": False, "details": {}}
+    proc = subprocess.Popen(cmd, cwd=rec["task_root"], env=broker.server_env(rec["task_root"]),
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, start_new_session=True)
+    try:
+        _, err = proc.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(proc.pid, 9)
+        except OSError:
+            pass
+        proc.communicate()
+        return dict(fail, grader_error=f"grader timed out after {timeout:.0f} s")
+    if proc.returncode != 0:
+        return dict(fail, grader_error=f"grader exited with code {proc.returncode}: {(err or '')[-2000:]}")
     g = _load_json(grade_path)
-    if r.returncode != 0 or not isinstance(g, dict) or "score" not in g or "pass" not in g:
-        return {"score": 0.0, "pass": False, "details": {}, "grader_error": (r.stderr or "")[-2000:]}
+    if g is None:
+        return dict(fail, grader_error="grader wrote no (valid JSON) output file")
+    bad = _check_grade(g)
+    if bad:
+        return dict(fail, grader_error=bad)
+    g = dict(g, score=float(g["score"]))
+    g.setdefault("details", {})
     return g
 
 
 def _scan_sandbox(rec):
-    """Canary anywhere in the sandbox => leak. leak_strings in harness-written files (TASK.md, tool,
-    .episode) => leak. leak_strings in files the agent wrote are expected when it found the answer,
-    so they are only counted (agent_files_with_leak_strings), never flagged."""
-    sbx = rec["sandbox"]
-    harness_files = {"TASK.md", "tool", ".episode"}
-    res = {"leak": False, "reasons": [], "agent_files_with_leak_strings": 0, "n_files": 0}
+    """Scan the sandbox at finish (file contents AND file names):
+    - canary or a private string (instance path/id, repo path, codename) anywhere => leak;
+    - leak_strings in harness-written files (TASK.md as written, tool, py, .episode) or in the names of
+      tool-written arrays (out/*.npy) => leak;
+    - leak_strings in files the agent wrote are expected when it found the answer, so they are only
+      counted (agent_files_with_leak_strings), never flagged. A TASK.md the agent edited counts as its file;
+    - a symlink that points outside the sandbox => symlinks_outside (finish marks the episode INVALID:
+      reading through it would leave the sandbox without naming an outside path)."""
+    sbx = os.path.realpath(rec["sandbox"])
+    canary, leaks, private = rec.get("canary"), rec.get("leak_strings"), rec.get("private_strings", [])
+    pristine = {"tool": CLIENT_SRC}
+    edir = os.path.join(rec.get("run_dir") or "", "episodes", rec.get("episode") or "")
+    if rec.get("run_dir") and os.path.exists(os.path.join(edir, "TASK.md")):
+        pristine["TASK.md"] = os.path.join(edir, "TASK.md")
+
+    def same_as_written(rel, p):
+        if rel in (".episode", "py"):
+            return True
+        src = pristine.get(rel)
+        if src is None:
+            return rel == "TASK.md"         # no copy to compare against: treat as harness-written
+        try:
+            with open(src, "rb") as a, open(p, "rb") as b:
+                return a.read() == b.read()
+        except OSError:
+            return False
+
+    res = {"leak": False, "reasons": [], "agent_files_with_leak_strings": 0, "n_files": 0, "symlinks_outside": []}
     for dp, dns, fns in os.walk(sbx):
-        for fn in fns:
+        for fn in sorted(fns + [d for d in dns if os.path.islink(os.path.join(dp, d))]):
             p = os.path.join(dp, fn)
+            rel = os.path.relpath(p, sbx)
+            name_hit = leakscan.scan_text(rel, canary, leaks, private)
+            if name_hit["canary"] or name_hit["private"]:
+                res["leak"] = True
+                res["reasons"].append("canary or private string in a file name")
+            if name_hit["leak_strings"]:
+                if rel.startswith("out" + os.sep) and rel.endswith(".npy"):
+                    res["leak"] = True
+                    res["reasons"].append("leak_string in the name of a tool-written array")
+                else:
+                    res["agent_files_with_leak_strings"] += 1
             if os.path.islink(p):
+                tgt = os.path.realpath(p)
+                if not (tgt == sbx or tgt.startswith(sbx + os.sep)):
+                    res["symlinks_outside"].append(rel)
                 continue
             res["n_files"] += 1
             try:
@@ -313,13 +410,15 @@ def _scan_sandbox(rec):
                     text = f.read(50_000_000).decode("utf-8", errors="replace")
             except OSError:
                 continue
-            hit = leakscan.scan_text(text, rec.get("canary"), rec.get("leak_strings"))
-            rel = os.path.relpath(p, sbx)
+            hit = leakscan.scan_text(text, canary, leaks, private)
             if hit["canary"]:
                 res["leak"] = True
                 res["reasons"].append(f"canary in sandbox file {rel}")
+            if hit["private"]:
+                res["leak"] = True
+                res["reasons"].append(f"private string (instance path/id, repo path or codename) in sandbox file {rel}")
             if hit["leak_strings"]:
-                if rel in harness_files:
+                if rel in ("TASK.md", "tool", "py", ".episode") and same_as_written(rel, p):
                     res["leak"] = True
                     res["reasons"].append(f"leak_string in harness file {rel}")
                 else:
@@ -343,11 +442,16 @@ def _scan_tool_log(rec, log_path):
                 continue
             try:
                 obj = json.loads(resp)
-                s = leakscan.scan(obj, rec.get("canary"), rec.get("leak_strings"), rec.get("model_output_fields"),
-                                  agent_text=e.get("args"))
+                # If the logged args were truncated, the agent-text exemption cannot be recomputed; the live
+                # scan (which saw the full args) is authoritative for leak strings, so re-check only the
+                # canary and the private strings here.
+                ls = [] if e.get("args_truncated") else rec.get("leak_strings")
+                s = leakscan.scan(obj, rec.get("canary"), ls, rec.get("model_output_fields"),
+                                  agent_text=e.get("args"), private_strings=rec.get("private_strings", []))
                 bad = s["leak"]
-            except json.JSONDecodeError:      # truncated entry: canary check only
-                bad = leakscan.scan_text(resp, rec.get("canary"))["canary"]
+            except json.JSONDecodeError:      # truncated entry: canary / private check only
+                h = leakscan.scan_text(resp, rec.get("canary"), (), rec.get("private_strings", []))
+                bad = h["canary"] or bool(h["private"])
             if bad:
                 res["leak"] = True
                 res["reasons"].append(f"tool log entry n={e.get('n')} tool={e.get('tool')}")
@@ -360,7 +464,10 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
     if rec is None:
         raise FileNotFoundError(f"no episode record {rp}")
     if broker.ping():
-        broker.admin("close", episode=episode)
+        try:
+            broker.admin("close", episode=episode)
+        except Exception as e:          # never let a busy/old broker crash grading; the record is closed below
+            print(f"warning: broker close failed ({type(e).__name__}); closing the record directly", file=sys.stderr)
     rec = _load_json(rp)
     if rec.get("status") == "open":
         rec["status"] = "closed"
@@ -404,6 +511,10 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
         invalid.append("transcript_audit")
     if grade.get("grader_error") is not None:
         invalid.append("grader_error")
+    if rec.get("cross_episode_access"):
+        invalid.append("cross_episode_access")
+    if sbx_scan["symlinks_outside"]:
+        invalid.append("sandbox_symlink_outside")
     end = rec.get("submitted_at") or rec.get("closed_at") or time.time()
     grade["harness"] = {
         "episode": episode, "task": rec["task"], "instance_id": rec.get("instance_id"), "tier": rec.get("tier"),
@@ -413,6 +524,8 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
         "leak_detected": leak, "leak_reasons": [r for e in rec.get("leak_events", []) for r in e["reasons"]]
         + sbx_scan["reasons"] + log_scan["reasons"],
         "agent_files_with_leak_strings": sbx_scan["agent_files_with_leak_strings"],
+        "symlinks_outside": sbx_scan["symlinks_outside"],
+        "cross_episode_access": bool(rec.get("cross_episode_access")),
         "audit_valid": audit["valid"], "audit_skipped": audit.get("skipped"),
         "n_audit_violations": len(audit["violations"]),
         "valid": not invalid, "invalid_reasons": invalid,
@@ -495,6 +608,10 @@ def _bin(r):
     return "(0.75,1)"
 
 
+def _dict(x):
+    return x if isinstance(x, dict) else {}
+
+
 def _group_stats(rows):
     valid = [g for g in rows if g["harness"]["valid"]]
     n, k = len(valid), sum(1 for g in valid if g.get("pass"))
@@ -508,7 +625,7 @@ def _group_stats(rows):
     for kk, nn in per_inst.values():
         hist[_bin(kk / nn)] += 1
     multi = [kk / nn for kk, nn in per_inst.values() if nn >= 2]
-    slots = [s for g in valid for s in ((g.get("details") or {}).get("slots") or []) if isinstance(s, dict)]
+    slots = [s for g in valid for s in (_dict(g.get("details")).get("slots") or []) if isinstance(s, dict)]
     null_slots = [s for s in slots if s.get("planted") is False]
     planted_slots = [s for s in slots if s.get("planted") is True]
     fc = sum(1 for s in null_slots if s.get("claimed"))

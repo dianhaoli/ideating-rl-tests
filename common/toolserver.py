@@ -86,6 +86,8 @@ class TaskEnv:
                 self.public = json.load(f)
         self._remaining = None   # dict kind -> remaining units (None = unlimited, for local use)
         self._charges = {}
+        self._emit = None        # server mode: reports each charge to the broker as it happens
+        self._rid = None
 
     # ---- to override -------------------------------------------------------------
     def load(self, instance_dir):
@@ -110,10 +112,19 @@ class TaskEnv:
             if n > left:
                 raise ToolError(f"{kind} budget exceeded: this call needs {n}, {max(left, 0)} left")
         self._charges[kind] = self._charges.get(kind, 0) + n
+        if self._emit is not None and n:
+            # Streamed immediately, so the broker still counts work done before a call is killed for
+            # running over call_timeout_s (or crashes the server). Without this, a tool that charges and
+            # then hangs would give the agent free compute.
+            self._emit({"id": self._rid, "event": "charge", "kind": kind, "n": n})
 
     def write_array(self, name, arr):
         """Save a numpy array as out/<name>.npy in the episode sandbox; returns 'out/<file>'.
-        The agent loads it with ./py (numpy). Name: letters, digits, _ and - only."""
+        The agent loads it with ./py (numpy). Name: letters, digits, _ and - only.
+
+        The sandbox is agent-writable, so this never follows a symlink the agent planted: out/ must be a
+        real directory inside the sandbox, the temp file is created with O_EXCL|O_NOFOLLOW under a random
+        name, and the final name is chosen so it does not exist (not even as a dangling link)."""
         import numpy as np
         if not re.fullmatch(r"[A-Za-z0-9_\-]{1,64}", str(name)):
             raise ToolError("invalid array name")
@@ -124,14 +135,27 @@ class TaskEnv:
             raise ToolError("array too large; request a smaller slice")
         base = self.sandbox_dir or tempfile.mkdtemp(prefix="rl_local_")
         out = os.path.join(base, "out")
-        os.makedirs(out, exist_ok=True)
+        if not os.path.lexists(out):
+            os.makedirs(out, exist_ok=True)
+        real_base = os.path.realpath(base)
+        if os.path.islink(out) or not os.path.isdir(out) or \
+                os.path.dirname(os.path.realpath(out)) != real_base:
+            raise ToolError("cannot write arrays: out/ must be a plain directory in your working directory")
         fn, k = f"{name}.npy", 2
-        while os.path.exists(os.path.join(out, fn)):
+        while os.path.lexists(os.path.join(out, fn)):
             fn, k = f"{name}_{k}.npy", k + 1
-        tmp = os.path.join(out, "." + fn + ".tmp")
-        with open(tmp, "wb") as f:
-            np.save(f, arr)
-        os.replace(tmp, os.path.join(out, fn))
+        tmp = os.path.join(out, f".tmp_{os.getpid()}_{time.time_ns()}.npy")
+        fd = os.open(tmp, os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0), 0o644)
+        try:
+            with os.fdopen(fd, "wb") as f:
+                np.save(f, arr)
+            os.replace(tmp, os.path.join(out, fn))
+        except BaseException:
+            try:
+                os.unlink(tmp)
+            except OSError:
+                pass
+            raise
         return f"out/{fn}"
 
     # ---- introspection -------------------------------------------------------------
@@ -273,6 +297,7 @@ def _serve(record_path):
         os.environ["GPUQ_GB"] = str(gb)
     gpuq.apply_caps()
     env = Env(instance_dir=rec["instance_dir"], sandbox_dir=rec["sandbox"], profile=rec["profile"])
+    env._emit = emit
     t0 = time.time()
     env.load(rec["instance_dir"])
     print(f"[toolserver] loaded in {time.time()-t0:.1f}s", file=sys.stderr, flush=True)
@@ -282,6 +307,7 @@ def _serve(record_path):
             continue
         req = json.loads(line)
         rid = req.get("id")
+        env._rid = rid
         try:
             res, ch = env._invoke(req["tool"], req.get("args") or {}, req.get("remaining"))
             emit({"id": rid, "ok": True, "result": res, "charges": ch})

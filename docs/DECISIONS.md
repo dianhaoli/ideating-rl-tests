@@ -111,3 +111,22 @@ Full list in docs/HARNESS_API.md section 10. The ones Dan might want to reverse:
   `cd <sandbox> &&` and not to use `..`, `~` or /tmp, so these rules are stated up front, not traps.
 - **validate_submission runs in a fresh process without load()** so format checks never need the GPU.
 - **Tool servers run offline** (`HF_HUB_OFFLINE=1`): no downloads mid-episode.
+
+## D13. Harness hardening after independent review (2026-10-01 15:45 UTC)
+Full list with before/after in docs/HARNESS_VERIFICATION.md. The ones Dan might want to reverse:
+- **Calls are bound to the caller's sandbox.** The broker reads the calling process's working directory. A call
+  for episode B from inside sandbox A is refused and A is marked INVALID (`cross_episode_access`).
+  Alternative: no binding, and rely on the audit alone. Why: sibling episode ids are visible directory names.
+- **Admin commands need a token file** (`runs/.episodes/.admin_token`, mode 600). Alternative: an open socket.
+  Why: before this, any agent could list all episodes and their task codenames, or shut the shared broker down.
+- **The leak-scan agent-text exemption is count-based** (D12 exempted any leak string the agent had sent).
+  Why: an agent could send every candidate answer and switch the scan off for that call.
+- **New never-exempt `private_strings`**: the instance dir, repo paths, instance id and task codename.
+  These are leaks anywhere in a response or in sandbox files.
+- **A grader with malformed output is a grader error.** Score not a finite number in [0,1], pass not a bool,
+  output not an object, no output, or a timeout (`RL_GRADER_TIMEOUT_S`) all count. The episode becomes
+  INVALID with score 0. Alternative: clamp the score. Why: a silently clamped NaN or 7.0 would hide a grader bug.
+- **The audit is stricter in a few places and more precise in others.** It now flags `ln`, environment-variable
+  and home-directory access from Python, `cd -` or a bare `cd`, and decode-and-run (R9). It tracks `cd` inside
+  a command, so `cd scratch && ls ..` is valid. The agent prompt states the new rules.
+- **A symlink in the sandbox pointing outside makes the episode INVALID** at finish.

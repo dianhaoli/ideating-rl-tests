@@ -26,7 +26,20 @@ Calls within one episode are serialised (per-episode lock); different episodes r
 Servers idle for RL_IDLE_S seconds (default 600) are stopped; counters live here, so a reload is
 invisible to the agent apart from load time. Time spent waiting for GPU admission or model load
 does not count against the episode wall-clock cap (the agent cannot control it).
+
+Hardening from the 2026-10-01 review (docs/HARNESS_VERIFICATION.md):
+- Admin commands (status/close/evict/shutdown) need the token in <episodes dir>/.admin_token
+  (mode 600, privileged side). Before, any process that could reach the socket, i.e. any agent,
+  could list every episode with its task codename or shut the broker down.
+- A call whose client process runs inside ANOTHER episode's sandbox (peer cwd via SO_PEERCRED and
+  /proc/<pid>/cwd) is refused as "unknown episode", and the caller's own episode is flagged
+  cross_episode_access (INVALID). Episode ids are visible as sibling directory names, so without
+  this an agent could spend another episode's budget or read another instance's tools.
+- Requests larger than RL_MAX_REQUEST_BYTES (default 8 MB) are refused (the broker is shared).
+- Charges are streamed by the tool server as they happen, so a call killed for running over
+  call_timeout_s (or a server crash) still pays for the work it did before.
 """
+import hmac
 import json
 import os
 import queue
@@ -34,6 +47,7 @@ import re
 import signal
 import socket
 import socketserver
+import struct
 import subprocess
 import sys
 import tempfile
@@ -54,6 +68,7 @@ LOAD_TIMEOUT_S = float(os.environ.get("RL_LOAD_TIMEOUT_S", "2400"))
 RAM_CAP_GB = float(os.environ.get("GPUQ_RAM_GB", "8"))
 LOG_RESULT_CHARS = 4000
 LOG_ARGS_CHARS = 10000
+MAX_REQUEST_BYTES = int(os.environ.get("RL_MAX_REQUEST_BYTES", str(8 << 20)))
 
 
 def merged_caps(caps):
@@ -68,6 +83,55 @@ def counter_kinds(caps):
 
 def record_path(eid):
     return os.path.join(paths.episodes_dir(), f"{eid}.json")
+
+
+def admin_token_path():
+    return os.path.join(paths.episodes_dir(), ".admin_token")
+
+
+def read_admin_token():
+    try:
+        with open(admin_token_path()) as f:
+            return f.read().strip()
+    except OSError:
+        return None
+
+
+def _make_admin_token():
+    """Create (or reuse) the admin token file, readable only by this user (privileged side)."""
+    tok = read_admin_token()
+    if tok:
+        return tok
+    import secrets
+    tok = secrets.token_hex(16)
+    d = paths.episodes_dir()
+    os.makedirs(d, exist_ok=True)
+    fd = os.open(admin_token_path(), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(fd, "w") as f:
+        f.write(tok + "\n")
+    return tok
+
+
+def peer_cwd(conn):
+    """Working directory of the process on the other end of a Unix socket (None if unknown)."""
+    try:
+        cred = conn.getsockopt(socket.SOL_SOCKET, socket.SO_PEERCRED, struct.calcsize("3i"))
+        pid = struct.unpack("3i", cred)[0]
+        return os.readlink(f"/proc/{pid}/cwd")
+    except (OSError, AttributeError, struct.error):
+        return None
+
+
+def sandbox_owner(cwd):
+    """Episode id whose sandbox contains `cwd` (None if cwd is not inside any episode sandbox)."""
+    if not cwd:
+        return None
+    root = os.path.realpath(paths.sandbox_root())
+    cwd = os.path.realpath(cwd)
+    if not cwd.startswith(root + os.sep):
+        return None
+    first = os.path.relpath(cwd, root).split(os.sep)[0]
+    return first if EPISODE_RX.match(first) else None
 
 
 def tool_log_path(eid):
@@ -102,6 +166,12 @@ def server_env(task_root):
 
 class ClientGone(Exception):
     pass
+
+
+class CallFailed(Exception):
+    def __init__(self, why, charges):
+        super().__init__(why)
+        self.why, self.charges = why, charges
 
 
 class Server:
@@ -161,21 +231,29 @@ class Server:
                 raise RuntimeError("server exited during load")
 
     def call(self, tool, args, remaining, timeout):
+        """Returns the server's reply. On timeout/death raises CallFailed carrying the charges the
+        server streamed before it stopped answering."""
         self._n += 1
         rid = self._n
+        streamed = {}
         self.proc.stdin.write(json.dumps({"id": rid, "tool": tool, "args": args, "remaining": remaining}) + "\n")
         self.proc.stdin.flush()
         deadline = time.time() + timeout
         while True:
             left = deadline - time.time()
             if left <= 0:
-                raise TimeoutError()
+                raise CallFailed("timeout", streamed)
             try:
                 msg = self.q.get(timeout=left)
             except queue.Empty:
-                raise TimeoutError()
+                raise CallFailed("timeout", streamed)
             if msg.get("event") == "eof":
-                raise RuntimeError("server died")
+                raise CallFailed("died", streamed)
+            if msg.get("event") == "charge":
+                if msg.get("id") == rid:
+                    k = str(msg.get("kind"))
+                    streamed[k] = streamed.get(k, 0) + int(msg.get("n") or 0)
+                continue
             if msg.get("id") == rid:
                 self.last_used = time.time()
                 return msg
@@ -232,9 +310,11 @@ class Episode:
 
 class Broker:
     def __init__(self):
+        import secrets
         self.eps = {}
         self.lock = threading.Lock()
         self.stopping = False
+        self.token = secrets.token_hex(16)   # replaced by the on-disk token in serve()
 
     def get(self, eid):
         if not isinstance(eid, str) or not EPISODE_RX.match(eid):
@@ -251,7 +331,23 @@ class Broker:
             return ep
 
     # ------------------------------------------------------------ the main entry point
-    def handle_call(self, eid, tool, args, heartbeat):
+    def flag_cross_episode(self, owner, target, tool):
+        """The process calling episode `target` runs inside `owner`'s sandbox: flag `owner` (INVALID)."""
+        ep = self.get(owner)
+        if ep is None:
+            return
+        with ep.lock:
+            ep.rec["cross_episode_access"] = True
+            ep.rec.setdefault("cross_episode_events", []).append({"t": time.time(), "target": target, "tool": tool})
+            ep.save()
+            ep.log({"t": time.time(), "event": "cross_episode_access", "target": target, "tool": tool})
+
+    def handle_call(self, eid, tool, args, heartbeat, caller_cwd=None):
+        owner = sandbox_owner(caller_cwd)
+        if owner is not None and owner != eid:
+            if isinstance(eid, str) and EPISODE_RX.match(eid):
+                self.flag_cross_episode(owner, eid, tool)
+            return {"ok": False, "error": "unknown episode"}
         ep = self.get(eid)
         if ep is None:
             return {"ok": False, "error": "unknown episode"}
@@ -262,8 +358,9 @@ class Broker:
             t0 = time.time()
             if rec.get("started_at") is None:
                 rec["started_at"] = t0
+            args_json = json.dumps(args, default=str, ensure_ascii=False)
             entry = {"n": rec["counters"].get("tool_calls", 0), "t": t0, "tool": tool,
-                     "args": _trunc(json.dumps(args, default=str), LOG_ARGS_CHARS)}
+                     "args": _trunc(args_json, LOG_ARGS_CHARS), "args_truncated": len(args_json) > LOG_ARGS_CHARS}
             charges, wait_s = {}, 0.0
             try:
                 resp, charges, wait_s = self._dispatch(ep, tool, args, heartbeat)
@@ -275,7 +372,7 @@ class Broker:
             # ---- leak scan (every response, built-ins included) ----
             scan = leakscan.scan(resp, canary=rec.get("canary"), leak_strings=rec.get("leak_strings", []),
                                  model_output_fields=rec.get("model_output_fields", []),
-                                 agent_text=json.dumps(args, default=str))
+                                 agent_text=args, private_strings=rec.get("private_strings", []))
             served = resp
             if scan["leak"]:
                 served = {"ok": False, "error": "internal error"}
@@ -324,10 +421,15 @@ class Broker:
         remaining = {k: caps[k] - rec["counters"].get(k, 0) for k in counter_kinds(caps)}
         try:
             msg = ep.server.call(tool, args, remaining, caps["call_timeout_s"])
-        except TimeoutError:
-            ep.stop_server("call timeout")
-            return {"ok": False, "error": f"tool call timed out (limit {caps['call_timeout_s']} s)"}, charges, wait_s
-        except (RuntimeError, BrokenPipeError, OSError):
+        except (CallFailed, BrokenPipeError, OSError) as e:
+            streamed = getattr(e, "charges", {}) or {}
+            for k, v in streamed.items():           # work done before the kill is still paid for
+                if k in rec["counters"] and k != "tool_calls":
+                    rec["counters"][k] += int(v)
+                    charges[k] = charges.get(k, 0) + int(v)
+            if getattr(e, "why", None) == "timeout":
+                ep.stop_server("call timeout")
+                return {"ok": False, "error": f"tool call timed out (limit {caps['call_timeout_s']} s)"}, charges, wait_s
             ep.stop_server("server died")
             return {"ok": False, "error": "tool failed (internal error)"}, charges, wait_s
         for k, v in (msg.get("charges") or {}).items():
@@ -477,10 +579,16 @@ BROKER = None
 class Handler(socketserver.StreamRequestHandler):
     def handle(self):
         try:
-            line = self.rfile.readline()
+            line = self.rfile.readline(MAX_REQUEST_BYTES + 1)
             if not line:
                 return
+            if len(line) > MAX_REQUEST_BYTES:
+                self._send({"ok": False, "error": f"request too large (limit {MAX_REQUEST_BYTES >> 20} MB); "
+                                                  "pass large data in smaller pieces"})
+                return
             req = json.loads(line)
+            if not isinstance(req, dict):
+                raise ValueError("not an object")
         except Exception:
             self._send({"ok": False, "error": "bad request"})
             return
@@ -490,9 +598,15 @@ class Handler(socketserver.StreamRequestHandler):
 
         try:
             if "admin" in req:
-                resp = BROKER.admin(req)
+                if req.get("admin") != "ping" and not (
+                        isinstance(req.get("token"), str) and hmac.compare_digest(req["token"], BROKER.token)):
+                    resp = {"ok": False, "error": "bad request"}
+                else:
+                    resp = BROKER.admin(req)
             else:
-                resp = BROKER.handle_call(req.get("episode"), req.get("tool"), req.get("args") or {}, heartbeat)
+                args = req.get("args")
+                resp = BROKER.handle_call(req.get("episode"), req.get("tool"), {} if args is None else args,
+                                          heartbeat, caller_cwd=peer_cwd(self.request))
                 if resp is None:
                     return
         except Exception:
@@ -531,7 +645,7 @@ def admin(cmd, **kw):
     s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     s.settimeout(120)
     s.connect(paths.broker_sock())
-    s.sendall((json.dumps(dict(admin=cmd, **kw)) + "\n").encode())
+    s.sendall((json.dumps(dict(admin=cmd, token=read_admin_token(), **kw)) + "\n").encode())
     data = s.makefile("rb").readline()
     s.close()
     return json.loads(data)
@@ -548,6 +662,7 @@ def serve():
             return
         os.unlink(sock)
     BROKER = Broker()
+    BROKER.token = _make_admin_token()
     srv = _Server(sock, Handler)
     os.chmod(sock, 0o600)
     threading.Thread(target=BROKER.reaper, daemon=True).start()

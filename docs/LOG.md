@@ -54,3 +54,17 @@ events, orchestration decisions and gate summaries, with links.
   BoolIntermediates (a), C03 SilentPathway (a), C20 LatentDiff (b), C13 ResidualRecall (b), C27 ShiftHunt (c),
   C37 T2-RAVEL from scratch (c). T2-RAVEL scored only 28/45 (weak nulls, mid-band doubts). It is built anyway because Dan
   asked for it explicitly. The builder must make the null design honest or report that it cannot.
+
+## 2026-10-01 15:45 UTC: independent harness verification (reviewer agent)
+- Wrote adversarial tests `common/tests/test_verify_harness.py` (isolation, leak scan, caps, grader, fingerprinting,
+  run-scripted/summarize, Wilson vs scipy) and `common/tests/test_verify_audit.py` (50 evasion transcripts, normal-work
+  false-positive suites). The fixture task `common/tests/verify_task/tasks/_vcheck/` has tools that misbehave on purpose.
+- Against the harness as built: 23 harness checks and 32 audit checks failed (29 of 50 out-of-sandbox evasions passed
+  the audit). Main bugs: admin commands open to agents (status leaks codenames, shutdown kills the shared broker);
+  another episode's id usable; write_array followed agent symlinks; 32 MB requests accepted; leak scan missed
+  escaped strings, the canary tail, instance paths/ids/codename, and could be switched off by sending every candidate;
+  a legitimate long echo was flagged at finish; a charge-then-hang call was free; a hanging grader blocked finish
+  for an hour; malformed grader output (NaN, 7.0, "high") was accepted.
+- All fixed (D13); details and remaining risks in docs/HARNESS_VERIFICATION.md. Full suite: see the commit message.
+- The real API-agent episode (runs/_demo/20261001-152109_apiplumbing) is still VALID under the new audit.
+- Action: the live broker must be restarted to load the fixes (done if no episode was open). Builders: `git merge main`.

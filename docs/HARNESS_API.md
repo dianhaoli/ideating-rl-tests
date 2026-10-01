@@ -143,6 +143,9 @@ searching `~/.claude/projects/` for the episode id. The episode is INVALID if an
 - mentions the repo, `.claude`, `hf_home`, `.hf_env`, `rlsbx/` siblings, `RLCANARY`, `instances/`, `grader` or `reference_solver`.
 - uses the network or installs packages: `curl`, `wget`, `git clone`, `pip install`, `huggingface`, `from_pretrained`, `snapshot_download`.
 - uses `sudo`, `su`, `docker`, `ps`/`/proc` inspection of other processes, or `/opt/pytorch` (the privileged ML env).
+- (added after review, D13) reaches outside without a literal path: `ln`/symlinks, `cd -`, bare `cd`, `$OLDPWD`,
+  `${PWD%...}`, `dirname`, Python `os.environ`/`getenv`/`expanduser`/`Path.home()`/`cwd().parent`; or runs
+  decode-and-execute commands (`base64 -d`, `eval`, `exec(`, `b64decode`) (R9).
 The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[]}`.
 
 ## 8. Run directories
@@ -234,3 +237,22 @@ Refinements to the spec above:
   as served (a leaked response is stored as the replacement "internal error").
 - **Summaries** group episodes by (solver label, agent model, profile, tier); pass rate is over VALID episodes.
 
+### Review hardening (2026-10-01, D13; details in docs/HARNESS_VERIFICATION.md)
+- **Admin commands** on the broker socket (`status`, `close`, `evict`, `shutdown`) require the token in
+  `<episodes dir>/.admin_token`. `broker.admin()` sends it automatically. `ping` is open.
+- **Caller binding**: a call for episode E from a process whose cwd is inside another episode's sandbox is refused
+  ("unknown episode"), and that other episode is flagged `cross_episode_access` (INVALID).
+- **Request size**: requests over `RL_MAX_REQUEST_BYTES` (8 MB) are refused. Pass big data in pieces.
+- **Streamed charges**: `charge()` reports each charge to the broker immediately, so a call killed by
+  `call_timeout_s` still pays for the work it charged.
+- **`write_array`** refuses an `out/` that is a symlink, and never follows agent-planted links.
+- **Leak scan**: raw string leaves are scanned as well as the JSON text. Matching uses NFKC + casefold. The canary's
+  hex tail is a needle of its own. The exemption is count-based. New never-exempt `private_strings` (instance
+  dir, repo paths, instance id unless in public.json, codename variants ≥ 6 chars) are computed at prepare and
+  also checked in TASK.md. At finish, file NAMES are scanned too: a leak string in `out/*.npy` names is a leak. A
+  TASK.md that the agent edited counts as the agent's file. A symlink pointing outside the sandbox makes the episode INVALID.
+- **Grader output is validated**: `score` must be a finite number in [0,1], `pass` a bool, and `details` an object.
+  A timeout (`RL_GRADER_TIMEOUT_S`, default 3600 s), a crash, no output or a malformed output each give score 0,
+  a non-empty `grader_error` and INVALID.
+- New `grade.json` harness fields: `symlinks_outside`, `cross_episode_access`. New invalid reasons:
+  `cross_episode_access`, `sandbox_symlink_outside`.
