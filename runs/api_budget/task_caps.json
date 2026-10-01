@@ -9,5 +9,9 @@
  "latentdiff": 1.2,
  "residualrecall": 1.2,
  "shifthunt": 1.2,
- "t2ravel": 1.2
+ "t2ravel": 1.2,
+ "allowed_models": [
+  "claude-sonnet-5-5",
+  "claude-haiku-4-5"
+ ]
 }

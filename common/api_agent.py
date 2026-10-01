@@ -197,6 +197,13 @@ def run(args):
         raise SystemExit("--task is required (per-task API caps are enforced)")
     if model not in PRICES:
         raise SystemExit(f"unknown model {model}; known: {list(PRICES)}")
+    try:
+        allowed = json.load(open(CAPS_FILE)).get("allowed_models")
+    except Exception:
+        allowed = None
+    if allowed and model not in allowed and not args.allow_any_model:
+        raise SystemExit(f"model {model} is not allowed for probes (Dan, 2026-10-01: Opus is too expensive). "
+                         f"Use one of {allowed}, e.g. --model claude-sonnet-5-5 (default) or claude-haiku-4-5.")
     sbx = os.path.join(SBX_ROOT, args.episode)
     if not os.path.isdir(sbx):
         raise SystemExit(f"sandbox {sbx} not found (run common.sandbox prepare first)")
@@ -340,8 +347,9 @@ def main():
     r.add_argument("--prompt-file", required=True)
     r.add_argument("--out", required=True)
     r.add_argument("--task", default="")
-    r.add_argument("--model", default="claude-opus-5-5")
+    r.add_argument("--model", default="claude-sonnet-5-5")
     r.add_argument("--effort", default="medium")
+    r.add_argument("--allow-any-model", action="store_true", help="orchestrator only: bypass allowed_models")
     r.add_argument("--max-turns", type=int, default=40)
     r.add_argument("--max-tokens", type=int, default=12000)
     r.add_argument("--max-usd", type=float, default=1.25)

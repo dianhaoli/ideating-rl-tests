@@ -128,8 +128,8 @@ Then measure difficulty with 1-2 real agent episodes BEFORE polishing:
 ```
 E=$($PY -m common.sandbox prepare --task T --instance-dir D --profile full --run-dir runs/T/<ts>_apiprobe --solver-label api-opus | head -1)
 $PY -m common.api_agent run --episode $E --task T --prompt-file runs/T/<ts>_apiprobe/episodes/$E/agent_prompt.txt \
-    --out runs/T/<ts>_apiprobe/episodes/$E --model claude-opus-5-5 --effort medium --max-usd 1.0 --max-turns 35
-$PY -m common.sandbox finish --episode $E --transcript runs/T/<ts>_apiprobe/episodes/$E/api_transcript.jsonl --agent-model api:claude-opus-5-5:medium
+    --out runs/T/<ts>_apiprobe/episodes/$E --model claude-sonnet-5-5 --effort medium --max-usd 0.4 --max-turns 35
+$PY -m common.sandbox finish --episode $E --transcript runs/T/<ts>_apiprobe/episodes/$E/api_transcript.jsonl --agent-model api:claude-sonnet-5-5:medium
 $PY -m common.api_agent spent
 ```
 (Check `docs/HARNESS_API.md` for exact flags. The prepare output format may differ slightly.)
@@ -145,3 +145,7 @@ slots while another task waits. Always launch GPU work through `python -m common
 name (e.g. `--label editfind-gates`). Fairness is keyed on that prefix.
 - **2026-10-01 17:00: `git merge main` before your next API probe.** The old api_agent stopped episodes far too early
   (a pessimistic budget guard). The new one warns the agent to submit before stopping.
+
+- **2026-10-01 17:20: probes use Sonnet or Haiku, NOT Opus (Dan: Opus is too expensive).** api_agent now refuses
+  `claude-opus-5-5` (allowed: `claude-sonnet-5-5` (default), `claude-haiku-4-5`). Sonnet 5.5 costs half as much as Opus 5.5
+  per token. A task that Sonnet solves trivially is too easy for Opus as well. Label runs `api-sonnet` / `api-haiku`.
