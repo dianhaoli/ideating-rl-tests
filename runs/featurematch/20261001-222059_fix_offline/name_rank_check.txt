@@ -1,0 +1,5 @@
+('T1', 'near_miss') slots 474 any option name fires 0.14
+('T1', 'planted') slots 729 any option name fires 0.15
+('T2', 'near_miss') slots 504 any option name fires 0.13
+('T2', 'planted') slots 708 any option name fires 0.14
+planted slots with any name firing, rank of the answer's name: [(('T1', 'zero'), 110), (('T2', 'zero'), 96)]

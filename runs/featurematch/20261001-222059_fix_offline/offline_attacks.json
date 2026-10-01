@@ -1,0 +1,160 @@
+{
+ "config": {
+  "n_train": 1200,
+  "n_test": 400,
+  "out": "runs/featurematch/20261001-222059_fix_offline",
+  "save_model": "tasks/featurematch/audit/cache",
+  "only_latent": false,
+  "tiers": "T1,T2,T3",
+  "feats": "all"
+ },
+ "n_pool": 180,
+ "learned_prior": {
+  "T1": {
+   "heldout_inmemory": {
+    "T1": {
+     "episodes": 400,
+     "pass": 13,
+     "pass_rate": 0.0325,
+     "mean_score": 0.0325,
+     "planted_slot_acc": 0.0,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.4993
+   },
+   "pool72": {
+    "T1": {
+     "episodes": 60,
+     "pass": 4,
+     "pass_rate": 0.0667,
+     "mean_score": 0.0667,
+     "planted_slot_acc": 0.0,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.4895
+   }
+  },
+  "T2": {
+   "heldout_inmemory": {
+    "T2": {
+     "episodes": 400,
+     "pass": 14,
+     "pass_rate": 0.035,
+     "mean_score": 0.0759,
+     "planted_slot_acc": 0.0411,
+     "null_slot_acc": 0.9482
+    },
+    "null_auroc": 0.561
+   },
+   "pool72": {
+    "T2": {
+     "episodes": 60,
+     "pass": 4,
+     "pass_rate": 0.0667,
+     "mean_score": 0.1036,
+     "planted_slot_acc": 0.0429,
+     "null_slot_acc": 0.9375
+    },
+    "null_auroc": 0.5748
+   }
+  },
+  "T3": {
+   "heldout_inmemory": {
+    "T3": {
+     "episodes": 400,
+     "pass": 11,
+     "pass_rate": 0.0275,
+     "mean_score": 0.0554,
+     "planted_slot_acc": 0.0291,
+     "null_slot_acc": 0.9583
+    },
+    "null_auroc": 0.594
+   },
+   "pool72": {
+    "T3": {
+     "episodes": 60,
+     "pass": 3,
+     "pass_rate": 0.05,
+     "mean_score": 0.0694,
+     "planted_slot_acc": 0.0278,
+     "null_slot_acc": 0.9651
+    },
+    "null_auroc": 0.5543
+   }
+  }
+ },
+ "latent_stats": {
+  "T1": {
+   "heldout_inmemory": {
+    "T1": {
+     "episodes": 400,
+     "pass": 13,
+     "pass_rate": 0.0325,
+     "mean_score": 0.0325,
+     "planted_slot_acc": 0.0,
+     "null_slot_acc": 0.9984
+    },
+    "null_auroc": 0.5127
+   },
+   "pool72": {
+    "T1": {
+     "episodes": 60,
+     "pass": 4,
+     "pass_rate": 0.0667,
+     "mean_score": 0.0667,
+     "planted_slot_acc": 0.0,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.5281
+   }
+  },
+  "T2": {
+   "heldout_inmemory": {
+    "T2": {
+     "episodes": 400,
+     "pass": 14,
+     "pass_rate": 0.035,
+     "mean_score": 0.1027,
+     "planted_slot_acc": 0.0663,
+     "null_slot_acc": 0.9547
+    },
+    "null_auroc": 0.5848
+   },
+   "pool72": {
+    "T2": {
+     "episodes": 60,
+     "pass": 4,
+     "pass_rate": 0.0667,
+     "mean_score": 0.1064,
+     "planted_slot_acc": 0.0429,
+     "null_slot_acc": 0.9583
+    },
+    "null_auroc": 0.5622
+   }
+  },
+  "T3": {
+   "heldout_inmemory": {
+    "T3": {
+     "episodes": 400,
+     "pass": 14,
+     "pass_rate": 0.035,
+     "mean_score": 0.0682,
+     "planted_slot_acc": 0.0374,
+     "null_slot_acc": 0.9614
+    },
+    "null_auroc": 0.5919
+   },
+   "pool72": {
+    "T3": {
+     "episodes": 60,
+     "pass": 3,
+     "pass_rate": 0.05,
+     "mean_score": 0.0736,
+     "planted_slot_acc": 0.0278,
+     "null_slot_acc": 0.9651
+    },
+    "null_auroc": 0.5805
+   }
+  }
+ }
+}

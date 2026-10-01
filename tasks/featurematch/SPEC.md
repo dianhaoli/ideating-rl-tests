@@ -7,19 +7,27 @@ the concept the latent encodes, or `"nothing found"`. Concepts come in two kinds
 (19 languages). Automated version of the human practice of explaining SAE latents by testing them on probe text
 (SAEBench, Karvonen et al. 2025; auto-interp detection scoring, Paulo et al. 2024 / Bills et al. 2023).
 
-**Planted ground truth.** Per slot, the generator computes each option's **held-out AUROC**. This is the probability that
-the latent's max activation on a held-out text of that concept beats its activation on a held-out text of any other of
-the 232 concepts. It uses split A (40 texts per concept), which no tool can read. A *planted* slot's menu contains the
-latent's best concept c\* (AUROC >= 0.90, fires on >= 50% of c\*'s texts). Every other option is >= 0.10 below
-c\*, and the same verdict holds on an independent split B (AUROC_B >= 0.85, margin >= 0.08). A *null* slot has every
-option < 0.65 on A and < 0.72 on B. Nulls come in two kinds. In a **near-miss** null (60%), the latent selects a concept
-that is left out of a menu built from that concept's taxonomy neighbourhood (for example a Greek latent offered
-Bulgarian, Turkish and so on). In an **off-universe** null (40%), the latent is live but not selective for any concept.
-The 0.65-0.90 gap keeps both answers unambiguous.
+**Planted ground truth** (generator v2, after the independent audit; v1 is in git history at 6847c88). Per slot, the
+generator computes each option's **held-out AUROC**. This is the probability that the latent's max activation on a
+held-out text of that concept beats its activation on a held-out text of any other of the 232 concepts. It uses split
+A (40 texts per concept), which no tool can read. **Every slot, planted or null, draws its latent the same way**: a
+layer, then an anchor concept c\* uniformly among the concepts that own a pooled latent at that layer, then one of
+c\*'s pooled latents. A pooled latent is selective for c\* (AUROC_A >= 0.90, fires on >= 50% of c\*'s texts, AUROC on
+the independent split B >= 0.85, at most 3 concepts within 0.10 of the best). It also stays **silent on all three
+surface forms of c\*'s own name** ("article about a volcano", "volcano", "This is about volcano."). Both kinds then
+drop the same confusable set (every concept with AUROC_A >= 0.65 or AUROC_B >= 0.72) from the distractor candidates.
+A **planted** slot's menu is c\* plus 19 distractors (so the answer wins by >= 0.25 on A and >= 0.13 on B). A **null**
+slot's menu is 20 distractors: the latent clearly encodes something, just not any option (a "near-miss": for example a
+Greek latent offered Bulgarian, Turkish and so on). WHY this shape: it answers audit MAJOR 2 and 3; see Null design below.
 
 **Grader.** Exact option match on planted slots and an explicit "nothing found" on null slots. Claiming anything on a
-null slot is a scored failure (`null_fp`). score = mean slot correctness. **pass = all slots correct** (product rule,
-D7). Details use the convention `slots: [{planted, correct, claimed}]`.
+null slot is a scored failure (`null_fp`). **pass = all slots correct** (product rule, D7). **score = (planted-slot
+accuracy) x (null-slot accuracy)**, with an empty factor counted as 1. **The RL reward is `pass` (binary) or `score`
+(continuous); both are products**, so the null action, always-claim and any constant answer get 0 unless the episode
+happens to be all-null or has no null slot (plan v2 rule 1). WHY: the v1 score was the mean slot correctness, which gave
+"nothing found" everywhere 0.44, almost half the reference's 0.98 (audit MAJOR 1). The mean is kept as
+`details.slot_accuracy`, a diagnostic only. Details use the convention `slots: [{planted, correct, claimed}]`. The
+grader parses answers exactly like the format check (no bool, float or wrapped submissions; audit MINOR 7).
 
 **Tools** (generic primitives; latent indices are secretly **permuted per instance**, so Neuronpedia-style lookups fail):
 `task_info` (public slot list; one tool call, no forward units), `latent_activations(texts<=16, layer, latents<=8)` (per-token and max activations),
@@ -35,10 +43,18 @@ answer's sibling group, with noise. (2) *Number of slots* 3-5 (precedent: number
 curves). (3) *Forward budget* (precedent: Pando's query budget): T1/T2 1200 forward units, **T3 = close + 550**.
 (4) Null fraction (each slot is null with p = 0.4, independently, so the null pattern is random).
 
-**Null design / no fingerprinting.** Planted and null slots use the same menu procedure around an anchor concept,
-which is drawn the same way for both. public.json has identical keys and shapes, and tools behave identically.
-Measured: a gradient-boosted classifier on public menu structure predicts null vs planted at CV AUROC 0.50 (T1) and
-0.58-0.60 (T2). The residual T2 signal is a known weakness (see NOTES).
+**Null design / no fingerprinting.** Planted and null slots share the latent pool, the anchor distribution, the
+exclusion set and the menu procedure. The ONLY difference is whether c\* is on the menu, and there is no rejection step
+that depends on the slot kind. public.json has identical keys and shapes, and tools behave identically (they read only
+the permutation seed and public.json). WHY (audit MAJOR 2): v1 also used "off-universe" nulls, latents not selective
+for any concept. Their firing statistics on generic text were different, so measuring a latent on 64 fixed texts told
+null from planted with AUROC 0.70-0.80, without thinking about any option. Now no statistic of the latent alone can
+separate them; you have to test the options. WHY the latent-level name filter (audit MAJOR 3): v1 rejected a planted
+menu when the answer's name was the TOP name-probe activation, which pushed the answer's name to exactly rank 2 in
+36-44% of cases (a learnable artifact) and was applied to planted slots only. WHY the per-layer menu universe:
+distractors come only from concepts that can be an answer at that layer, so no label can be ruled out by a prior.
+Measured on v2 (numbers and run dirs in Gates below): menu-structure CV AUROC 0.49 / 0.54 / 0.54 (v1: 0.54 / 0.60 /
+0.60); "any option name fires" 0.14 on null vs 0.15 on planted slots; the answer's own name never fires.
 
 **Containment:** honor-system with auditing (Tier B).
 

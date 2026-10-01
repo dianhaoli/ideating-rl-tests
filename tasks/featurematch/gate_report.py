@@ -17,9 +17,9 @@ Gate rules: reference best-of-5 >= 95% on kept instances (one-shot also reported
 Writes:
   runs/featurematch/<out-prefix>_gates_public.json  aggregates only (no per-instance data; safe to commit, D6)
   tasks/featurematch/instances_manifest.json        `kept` flags (reference best-of-5 passed in either source)
-  tasks/featurematch/smoke_plan.json                (--smoke) 3 instances per tier that the reference passed on its
-                                                    first try, not already seen by any LLM probe (--exclude), together
-                                                    holding >= 1 null and >= 1 planted slot per tier
+  tasks/featurematch/smoke_plan.json                (--smoke) 3 kept instances per tier (random, seeded), not
+                                                    already seen by any LLM probe (--exclude), together holding >= 1
+                                                    null and >= 1 planted slot per tier
 Run: $PY -m tasks.featurematch.gate_report --harness R1 R2 R3 --inproc D --out-prefix <ts> [--smoke --exclude ids]
 """
 import argparse
@@ -62,7 +62,8 @@ def load_harness(dirs):
                 infra[lab] += 1
             else:
                 eps.append({"solver": lab, "instance_id": h["instance_id"], "tier": h["tier"], "pass": bool(g["pass"]),
-                            "slots": g["details"]["slots"], "t": ep.get("created_at") or 0})
+                            "score": float(g["score"]), "slots": g["details"]["slots"],
+                            "t": ep.get("created_at") or 0})
     return sorted(eps, key=lambda e: e["t"]), dict(invalid), dict(infra)
 
 
@@ -94,6 +95,7 @@ def block(eps):
             else:
                 k = sum(e["pass"] for e in es)
                 out[s][t] = dict(ci(k, len(es)), **slot_rates([e["slots"] for e in es]),
+                                 mean_score=round(sum(e.get("score", 0.0) for e in es) / len(es), 4) if es else None,
                                  gate_ok=(k / len(es) <= GATE_MAX) if es else None)
     return dict(out)
 
@@ -157,12 +159,13 @@ def main():
         rng = random.Random(20261001)
         tier_of = {m["instance_id"]: m["tier"] for m in man["instances"]}
         plan = {"tiers": {}, "profile": "full",
-                "note": "3 instances per tier that the reference solver passed on its first try (in-process gate "
-                        "run), excluding instances already used by LLM probes; together they hold at least one null "
-                        "and one planted slot per tier. Chosen by gate_report.py (seeded)."}
+                "note": "3 instances per tier drawn at random (seeded) from ALL kept instances (reference best-of-5 "
+                        "passed), excluding instances already used by LLM probes; together they hold at least one "
+                        "null and one planted slot per tier. Not restricted to the reference's first-try passes, so "
+                        "the smoke set is not easier than the pool (audit MINOR 8). Chosen by gate_report.py."}
         for t in sorted(set(tier_of.values())):
             cands = sorted(i for i, e in first_ref.items()
-                           if tier_of[i] == t and e["pass"] and i not in set(a.exclude) and i not in dropped)
+                           if tier_of[i] == t and ref_pass[i] and i not in set(a.exclude) and i not in dropped)
             for _ in range(1000):
                 pick = sorted(rng.sample(cands, 3))
                 sl = [s for i in pick for s in first_ref[i]["slots"]]
