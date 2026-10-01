@@ -36,7 +36,9 @@ Hardening from the 2026-10-01 review (docs/HARNESS_VERIFICATION.md section 2):
    prefix (or prints only the id) still leaks private data.
 8. `private_strings` (set by `sandbox.prepare`: the instance directory, the repo path, the
    instance id, the task codename) are leaks anywhere, never exempt: an agent has no
-   legitimate way to know them, and they point straight at the answer key.
+   legitimate way to know them, and they point straight at the answer key. Word-like ones
+   (codename, instance id) are matched with whitespace kept (substring match), so
+   ordinary prose ("this feature matches ...") does not trip the codename "featurematch".
 9. The agent-text exemption is COUNT-based: a leak string is exempt only if the response does
    not contain it more often than the agent's own request did. Otherwise an agent could put
    every candidate answer into one request and switch the leak scan off for that call.
@@ -52,6 +54,29 @@ CANARY_TAIL_MIN = 12
 
 def norm(s):
     return _WS.sub("", unicodedata.normalize("NFKC", str(s)).casefold())
+
+
+def norm_keep_ws(s):
+    return unicodedata.normalize("NFKC", str(s)).casefold()
+
+
+def _raw_texts(o):
+    """Like _texts, but whitespace is kept (for word-like private strings such as the task codename)."""
+    return [norm_keep_ws(_render(o)), "\x00".join(norm_keep_ws(x) for x in _leaves(o, []))]
+
+
+def _private_hit(s, texts, raw_texts):
+    """Is private string s present? Word-like strings (no '/' and no whitespace: the codename variants, the instance
+    id) are matched as substrings of whitespace-PRESERVING text, so an agent's own phrase such as
+    "this feature matches Spanish" is not read as the codename "featurematch" (2026-10-01 false positive reported by
+    the FeatureMatch integrator). Path-like strings keep the whitespace-insensitive substring match."""
+    n = norm(s)
+    if len(n) < MIN_LEN:
+        return False
+    if "/" not in str(s) and not re.search(r"\s", str(s)):
+        k = norm_keep_ws(s)
+        return any(k in t for t in raw_texts)
+    return any(n in t for t in texts)
 
 
 def canary_needles(canary):
@@ -164,8 +189,9 @@ def scan(obj, canary=None, leak_strings=(), model_output_fields=(), agent_text=N
     reasons = []
     if any(n in t for n in canary_needles(canary) for t in full_ts):
         reasons.append("canary")
+    raw_ts = _raw_texts(obj)
     for i, s in enumerate(private_strings or ()):
-        if isinstance(s, str) and len(norm(s)) >= MIN_LEN and any(norm(s) in t for t in full_ts):
+        if isinstance(s, str) and _private_hit(s, full_ts, raw_ts):
             reasons.append(f"private_string[{i}]")
     exposure = 0
     for i, s in enumerate(leak_strings or ()):
@@ -190,6 +216,7 @@ def scan_text(text, canary=None, leak_strings=(), private_strings=()):
     for i, s in enumerate(leak_strings or ()):
         if isinstance(s, str) and len(norm(s)) >= MIN_LEN and _needle_rx(s).search(t):
             hits.append(i)
+    raw = [norm_keep_ws(text)]
     priv = [i for i, s in enumerate(private_strings or ())
-            if isinstance(s, str) and len(norm(s)) >= MIN_LEN and norm(s) in t]
+            if isinstance(s, str) and _private_hit(s, [t], raw)]
     return {"canary": any(n in t for n in canary_needles(canary)), "leak_strings": hits, "private": priv}

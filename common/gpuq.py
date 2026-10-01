@@ -50,6 +50,7 @@ PHYS_GB = 23.0
 MAX_JOBS = int(os.environ.get("GPUQ_MAX_JOBS", "7"))
 MAX_HEAVY = int(os.environ.get("GPUQ_MAX_HEAVY", "2"))
 POLL_S = 3.0
+AGE_S = float(os.environ.get("GPUQ_AGE_S", "300"))   # waiters older than this get space reserved (anti-starvation)
 
 
 def _alive(pid):
@@ -107,6 +108,25 @@ def _try_admit(pid, gb, heavy, label):
             mine = any(j["heavy"] and _task_key(j.get("label")) == key for j in jobs.values())
             others_waiting = any(w["heavy"] and w["key"] != key for k, w in waiting.items() if k != str(pid))
             blocked = mine and others_waiting
+        if not blocked:
+            # Aging (2026-10-01, reported by the featurematch and latentdiff builders): big light jobs (6-7 GB tool
+            # servers) starved for 30+ min because 2-5 GB jobs kept slipping into every gap. A waiter that has waited
+            # longer than AGE_S, and is older than this request, gets its memory and a job slot reserved: this request
+            # is admitted only if it still fits next to that reservation. Aged heavy waiters reserve only when a heavy
+            # slot is actually free (otherwise they could not start anyway).
+            me = waiting.get(str(pid))
+            my_since = me["since"] if me else time.time()
+            now = time.time()
+            reserve_gb, reserve_n = 0.0, 0
+            for k, w in waiting.items():
+                if k == str(pid) or now - w["since"] < AGE_S or w["since"] >= my_since:
+                    continue
+                if w["heavy"] and n_heavy >= MAX_HEAVY:
+                    continue
+                reserve_gb += w["gb"]
+                reserve_n += 1
+            if reserve_n and (used + gb + reserve_gb > TOTAL_GB or len(jobs) + 1 + reserve_n > MAX_JOBS):
+                blocked = True
         if blocked:
             waiting.setdefault(str(pid), {"key": key, "heavy": heavy, "gb": gb, "label": label, "since": time.time()})
             return False

@@ -125,3 +125,21 @@ events, orchestration decisions and gate summaries, with links.
     the broker's privileged episode record.
   - epf7e00255e5: valid, 2/3 slots, FAIL. $0.053, 8 turns. (FreqHunt T1 is cheap for Sonnet: about $0.04-0.05 per episode.)
 - Verified on _demo (runs/_demo/*_apisnapshot): snapshot path recorded, episode valid. 190 harness tests pass.
+
+## 2026-10-01 18:10 UTC: harness fixes from builder reports (GPU starvation, codename false positive), plus a coordination slip
+- **GPU starvation** (reported by the featurematch integrator and the latentdiff builder): 6.5-7 GB tool servers waited
+  30+ min while 2-5 GB jobs took every gap. Added aging to gpuq: a waiter older than AGE_S (300 s), and older than the
+  requester, gets its memory and job slot reserved. Aged heavy waiters reserve only while a heavy slot is free.
+  Simulated the reported scenario (big waiter is admitted once memory drains, small requests are held back). 190 tests pass.
+- **Codename false positive** (featurematch integrator): the leak scan matched private strings with whitespace removed,
+  so an agent's note "this feature matches Spanish" equalled the codename "featurematch" and would invalidate the
+  episode. Word-like private strings (codename variants, instance id) are now matched with whitespace kept. Paths keep
+  the whitespace-insensitive match. Verified: prose is clean, "FeatureMatch" and an embedded codename are still flagged.
+- **Coordination slip (mine):** at 16:52 I replied by SendMessage to the editfind science agent, which was a workflow
+  subagent. The send *resumed* it as a separate agent, so two builders worked in ~/wt/editfind from ~17:35 (that agent
+  and the workflow's integrate:editfind). The resumed agent noticed, stopped editing, cancelled its duplicate gate job
+  and handed off (stage-1 design summary preserved in this log's source thread). Rule from now on: do not SendMessage
+  workflow agents; relay information through files (BUILDER_GUIDE / LOG).
+- EditFind status from that handoff: the recipe gate passes (constant "nothing found" 1/36 T2, others 0/72). The
+  reference gate is FAILING so far (prelim v2 3/11). It finds the edited subjects every time (rank 1 of 3000) but
+  mis-picks the relation or new answer, or a decoy is not silent on unseen wordings. The integrator owns the fix.
