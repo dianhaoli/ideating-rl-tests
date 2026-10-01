@@ -147,3 +147,23 @@
 - The one-shot reference drops from 100% to 95% to 78% across T1, T2, T3. Two dials (closeness, then budget) each make
   the same probing method less reliable, which is the intended behaviour of a difficulty dial. T3 slot-level reference:
   planted 0.93, near-miss null 0.95, null false-positive rate 3%.
+
+## 2026-10-01 16:42 UTC — style-transfer check (style_check.py): the main validity risk
+- Question: latents are selected on DBPedia abstracts and language-ID sentences/reviews. Do they also respond to probe
+  text written in a different style, like an agent would write? I hand-wrote 4 probes for each of 12 concepts (6
+  languages, 6 topics: everyday sentences / short encyclopedic sentences in my own words). For every planted-eligible
+  latent of those concepts (307 latents, all layers), I counted it "recovered" if its own concept has the best AUROC
+  among the 12 on my probes and AUROC >= 0.75. Log: runs/featurematch/style_check.log (not committed; small, regenerable).
+- Result: **153/307 latents recovered (50%); median per concept 70%.** Spanish 88%, Swahili 93%, chess player 76%,
+  volcano 71%, swimmer 70%, German 67%, video game 55%, Japanese 34%, insect 25%, **airport 11%** (airport latents
+  presumably key on DBPedia-specific patterns such as IATA/ICAO codes and runway tables).
+- Interpretation: with only 4 short probes this is a pessimistic estimate. It still says that about half of the latents
+  respond to the dataset's style of text, not just to the topic, and an agent that writes generic probes will see weak
+  activation and may answer "nothing found" on a planted slot. That would show up as mid-band difficulty that comes from
+  probe design, which is a real interpretability skill (matching the distribution a feature was found on), but it
+  could also be an unfair trap. Mitigation done now: agent_prompt.md defines what the concept labels mean ("article
+  about a X" = encyclopedia-style article about such an entity; "text written in L" = everyday sentences / short reviews).
+  It describes the data, not a method. **Recommended next step (not done, time-box):** add a style-robustness
+  filter. Keep a planted slot only if the latent also fires on an independent, differently-styled probe set for its
+  concept (templated sentences or a second corpus, e.g. Wikipedia lead sentences rephrased), and measure the smoke-run
+  agents' planted-slot "nothing found" rate as a fairness check.
