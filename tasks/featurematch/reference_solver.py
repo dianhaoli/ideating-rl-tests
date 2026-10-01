@@ -12,7 +12,8 @@ It never reads instance files. Everything comes through `call(tool_name, **args)
 This automates the standard human practice of explaining an SAE latent by checking its activation on concept probes
 (SAEBench / auto-interp "detection" scoring), with a calibrated "none of these".
 
-Harness entry point: main() uses common.toolclient.Client(os.environ["RL_EPISODE"]).call.
+Harness entry point: `python -m common.sandbox run-scripted --solver tasks/featurematch/reference_solver.py ...`;
+main() takes the episode id (--episode E or RL_EPISODE) and talks to the broker via common.toolclient.Client.
 """
 import json
 import os
@@ -120,16 +121,36 @@ def solve(call, seed=0, corpus=None, **kw):
     rng = random.Random(seed)
     info = call("task_info")
     if not kw:     # adapt the probing depth to the forward budget (read via the built-in `budget` tool)
-        b = call("budget")
-        fwd = b.get("forward", b.get("remaining", {}).get("forward", 0)) if isinstance(b, dict) else 0
-        kw = params_for(fwd / max(1, len(info["slots"])))
+        kw = params_for(remaining_forward(call("budget")) / max(1, len(info["slots"])))
     answers, diag = [], []
     for s in info["slots"]:
         choice, aucs = solve_slot(lambda t: probe(call, s["layer"], s["latent"], t), s["options"], corpus, rng, **kw)
         answers.append({"slot": s["slot"], "choice": choice})
         diag.append({"slot": s["slot"], "choice": choice, "best_auc": round(max(aucs), 3)})
-    call("submit", answer={"answers": answers})
+    call("submit", answers=answers)        # the submission object is the args: {"answers": [...]}
     return {"answers": answers, "diag": diag}
+
+
+def remaining_forward(b):
+    """Remaining forward units from the `budget` built-in. The broker returns
+    {"forward": {"used", "cap", "remaining"}, ...}; older shapes {"forward": n} / {"remaining": {"forward": n}}
+    are accepted too."""
+    if not isinstance(b, dict):
+        return 0
+    f = b.get("forward")
+    if isinstance(f, dict):
+        return f.get("remaining", 0)
+    if isinstance(f, (int, float)):
+        return f
+    return (b.get("remaining") or {}).get("forward", 0)
+
+
+def episode_seed(episode):
+    """Per-episode probe seed. RL_SEED overrides; otherwise derived from the episode id, so `--repeats 5` gives
+    five different probe-text draws (best-of-5) instead of five identical runs."""
+    if os.environ.get("RL_SEED"):
+        return int(os.environ["RL_SEED"])
+    return int(str(episode)[2:], 16) if str(episode).startswith("ep") else 0
 
 
 def unwrap(call):
@@ -145,9 +166,10 @@ def unwrap(call):
 
 
 def main():
-    from common.toolclient import Client
-    c = Client(os.environ["RL_EPISODE"])
-    print(json.dumps(solve(unwrap(c.call), seed=int(os.environ.get("RL_SEED", "0")))))
+    from common.toolclient import Client, episode_from_argv
+    ep = episode_from_argv()
+    c = Client(ep)
+    print(json.dumps(solve(unwrap(c.call), seed=episode_seed(ep))))
 
 
 if __name__ == "__main__":

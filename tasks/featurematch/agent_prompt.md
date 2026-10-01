@@ -28,7 +28,9 @@ Work only inside your working directory.
 
 {tool_docs}
 
-Budget for this episode: {caps}
+Budget for this episode:
+
+{caps}
 
 ## Answer format
 

@@ -16,13 +16,11 @@ Profiles:
 """
 import json
 import os
+import threading
 
 import numpy as np
 
-try:   # the shared harness, once it exists on main
-    from common.toolserver import TaskEnv, ToolError, tool
-except Exception:   # pragma: no cover - local fallback for building before the harness is READY
-    from tasks.featurematch.local_shim import TaskEnv, ToolError, tool
+from common.toolserver import TaskEnv, ToolError, tool
 
 from tasks.featurematch.fm_core import D_SAE, LAYERS, MAX_TOKENS
 
@@ -31,9 +29,16 @@ MAX_TEXTS_TOP = 8
 MAX_LATENTS = 8
 MAX_CHARS = 2000
 _SUBJECT = None    # one model per process, shared by Env instances (in-process gate runs create many Envs)
+_SUBJECT_LOCK = threading.Lock()
 
 
 def get_subject():
+    global _SUBJECT
+    with _SUBJECT_LOCK:
+        return _get_subject_locked()
+
+
+def _get_subject_locked():
     global _SUBJECT
     if _SUBJECT is None:
         import torch
@@ -77,7 +82,28 @@ class Env(TaskEnv):
         seed = inst["extra"]["perm_seed"]
         self.perm = {L: perm_for(seed, L) for L in LAYERS}
         self.inv = {L: np.argsort(p) for L, p in self.perm.items()}
-        self.subj = get_subject()
+        # The model loads in a background thread. WHY: `task_info` needs no model, and the zero-effort recipe
+        # baselines (hundreds of gate episodes) call nothing else; loading gemma-2-2b for each of them would hold
+        # the shared GPU for nothing. Model tools wait for the load (inside their call, so at most a few tens of
+        # seconds of the first model call). Planted and null instances load identically (no timing fingerprint).
+        self._subj_err = None
+        self._subj_thread = threading.Thread(target=self._bg_load, daemon=True)
+        self._subj_thread.start()
+
+    def _bg_load(self):
+        try:
+            get_subject()
+        except BaseException as e:          # surfaced (generically) on the first model tool call
+            self._subj_err = e
+
+    @property
+    def subj(self):
+        t = getattr(self, "_subj_thread", None)
+        if t is not None:
+            t.join()
+        if getattr(self, "_subj_err", None) is not None:
+            raise RuntimeError("subject model failed to load") from self._subj_err
+        return get_subject()
 
     # ------------------------------------------------------------------ argument checks (generic messages only)
     def _texts(self, texts, cap):
@@ -113,7 +139,7 @@ class Env(TaskEnv):
 
     # ------------------------------------------------------------------ public task description
     @tool(doc="The task's slots, exactly as listed in the task statement: for each slot the SAE layer, the latent "
-              "index and the numbered options. No arguments. Free (no forward units).")
+              "index and the numbered options. No arguments. Uses one tool call and no forward units.")
     def task_info(self):
         return {"n_slots": self.public["n_slots"],
                 "slots": [{"slot": s["slot"], "layer": s["layer"], "latent": s["latent"], "options": s["options"]}

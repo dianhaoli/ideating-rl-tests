@@ -1,6 +1,9 @@
 """Zero-effort and fixed-recipe baselines for FeatureMatch. Each must pass <= 10% of episodes.
 
-Usage (harness): RL_EPISODE=<E> python tasks/featurematch/recipe_baseline.py <variant>
+Usage (harness): RL_RECIPE=<variant> python -m common.sandbox run-scripted --solver tasks/featurematch/recipe_baseline.py
+                 --solver-label recipe_<variant> ...   (run-scripted passes only --episode E, so the variant comes
+                 from the RL_RECIPE environment variable, which the solver subprocess inherits)
+       direct:   python tasks/featurematch/recipe_baseline.py --episode E <variant>
 Variants:
   nothing          "nothing found" on every slot (the null action)
   always_claim     option 1 on every slot (submit-something-everywhere; options are shuffled, so any fixed number
@@ -85,16 +88,19 @@ def solve(call, variant, seed=0):
         else:
             raise SystemExit(f"unknown variant {variant}; choose from {VARIANTS}")
         answers.append({"slot": s["slot"], "choice": c})
-    call("submit", answer={"answers": answers})
+    call("submit", answers=answers)
     return {"answers": answers}
 
 
 def main():
-    from common.toolclient import Client
-    from tasks.featurematch.reference_solver import unwrap
-    variant = sys.argv[1] if len(sys.argv) > 1 else "nothing"
-    c = Client(os.environ["RL_EPISODE"])
-    print(json.dumps(solve(unwrap(c.call), variant, seed=int(os.environ.get("RL_SEED", "0")))))
+    from common.toolclient import Client, episode_from_argv
+    from tasks.featurematch.reference_solver import episode_seed, unwrap
+    ep = episode_from_argv()
+    args = [a for i, a in enumerate(sys.argv[1:], 1) if a != "--episode" and sys.argv[i - 1] != "--episode"]
+    variant = args[0] if args else os.environ.get("RL_RECIPE", "")
+    if variant not in VARIANTS:
+        raise SystemExit(f"unknown recipe variant {variant!r}; set RL_RECIPE to one of {VARIANTS}")
+    print(json.dumps(solve(unwrap(Client(ep).call), variant, seed=episode_seed(ep))))
 
 
 if __name__ == "__main__":

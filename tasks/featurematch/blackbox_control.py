@@ -29,15 +29,15 @@ def solve(call, seed=0):
                     choice = int(t)
                 break
         answers.append({"slot": s["slot"], "choice": choice})
-    call("submit", answer={"answers": answers})
+    call("submit", answers=answers)
     return {"answers": answers}
 
 
 def main():
-    from common.toolclient import Client
-    from tasks.featurematch.reference_solver import unwrap
-    c = Client(os.environ["RL_EPISODE"])
-    print(json.dumps(solve(unwrap(c.call), seed=int(os.environ.get("RL_SEED", "0")))))
+    from common.toolclient import Client, episode_from_argv
+    from tasks.featurematch.reference_solver import episode_seed, unwrap
+    ep = episode_from_argv()
+    print(json.dumps(solve(unwrap(Client(ep).call), seed=episode_seed(ep))))
 
 
 if __name__ == "__main__":
