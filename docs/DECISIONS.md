@@ -80,3 +80,12 @@ Format: decision | alternatives | why | what the original plan said.
 - Key storage: Dan's key sits in the gitignored repo `.env` as `ANT_KEY`, quoted. I chmod-ed that file to 600 because
   it was 644 and also holds the HF token. The runner reads an unquoted copy at `~/.anthropic_env` (mode 600, outside
   the repo).
+
+## D10. One machine-wide GPU-queue ledger and episode registry, anchored on the main checkout (2026-10-01, harness)
+- **Problem found**: `common/gpuq.py` put its ledger at `<this checkout>/runs/.gpuq`. Every task worktree in `~/wt/`
+  therefore had its *own* ledger, so jobs from different builders never saw each other and the 21 GB limit was not
+  enforced machine-wide.
+- **Chosen**: `common/paths.py` finds the main checkout from git's common directory (a worktree's `.git` file points
+  into `<main>/.git/worktrees/<name>`). The ledger (`runs/.gpuq/`) and the harness episode registry (`runs/.episodes/`)
+  always live in the main checkout. Overridable with `GPUQ_DIR` / `RL_EPISODES_DIR` (tests use this).
+- **Action for builders**: `git merge main` as soon as possible so your jobs join the shared ledger.
