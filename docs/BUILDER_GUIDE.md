@@ -137,3 +137,9 @@ Read the transcript. Did the agent understand the task? Was it trivially easy? D
 interpretability, or because of an environment problem? Tweak, then probe again. **Budget: the per-task cap in runs/api_budget/task_caps.json (default $1.20) is enforced by api_agent, so plan
 about 2 episodes at --max-usd 0.6. `--task` is required.** The ledger is shared by all tasks and hard-stops at $16 overall. Never print the key.
 For more episodes use free fresh Claude Code subagents (the orchestrator runs those).
+
+## GPU queue update (2026-10-01 16:50)
+Run `git merge main` at your next convenient point. It brings heavy-slot fairness to gpuq: one task cannot hold both heavy
+slots while another task waits. Always launch GPU work through `python -m common.gpuq run ...` from a checkout that has
+`common/paths.py`; jobs outside the queue cause OOMs for everyone. Give every job a label that starts with your task
+name (e.g. `--label editfind-gates`). Fairness is keyed on that prefix.
