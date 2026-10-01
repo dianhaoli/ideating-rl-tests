@@ -28,7 +28,8 @@
 - `_demo/`: GPU-free harness fixture and worked example of every required task file (not a research task).
 
 ## ideation/
-(filled in by Phase 0)
+- `CANDIDATES.md`: Phase-0 ideation: 41 scored candidates, Wave-2 selection (6 build briefs), runners-up.
+- `research_raw.json`: merged candidate research (raw). `scores_raw.json`: the two independent scorings (raw).
 
 ## runs/
 (one directory per run: runs/<task>/<timestamp>_<label>/)
