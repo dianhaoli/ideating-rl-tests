@@ -33,14 +33,15 @@ DESIGN RULES, BASELINES, PREDICTIONS), `docs/HARNESS_API.md` (the interface to c
 - RAM: the default cap is 8 GB per job. The machine has 30 GB shared by everything.
 - Check the queue with `$PY -m common.gpuq status`. If you wait more than 15 minutes, do CPU work meanwhile.
 
-## The harness (common/) is being built concurrently
-- `common/gpuq.py` exists now. The broker, sandbox, toolclient, leak scanner and transcript audit are being
-  written on `main` right now. When `~/ideating-rl-tests/common/READY` exists, run `git merge main` in your
-  worktree to pick them up.
-- Until then, build the science: generator, planted artifacts, Env class in tools.py (test it by importing
-  and calling its methods directly), the grader, and the reference-solver logic. Write the reference
-  solver as a function that takes a `call(tool_name, **args)` callable. It then runs unchanged against
-  the real client later: `Client(ep).call`.
+## The harness (common/) is READY (2026-10-01)
+- Run `git merge main` in your worktree now. Besides the harness, this fixes the GPU queue: before, each worktree
+  had its own queue ledger, so jobs from different builders did not see each other (docs/DECISIONS.md D11).
+- Contract and builder-facing API: docs/HARNESS_API.md, especially section 10 (implementation notes) and section 9
+  (how to run an LLM test-agent episode). Worked example of every required file: `tasks/_demo/`.
+- Test your Env in-process with `make_local_call(env, caps)`; write the reference solver as a function taking a
+  `call(tool_name, **args)` callable, then run it unchanged through `Client(episode_from_argv()).call`.
+- `validate_submission` must work without `load()` (it runs in a separate short-lived process).
+- Final gates go through `python -m common.sandbox run-scripted` (it records config, logs and summary in the run dir).
 
 ## Required files: tasks/<name>/
 `generate.py, tools.py, grader.py, reference_solver.py, blackbox_control.py, recipe_baseline.py,
@@ -120,3 +121,19 @@ If your task cannot be multi-slot, explain why in SPEC.md and propose another fi
 - **Framing.** This is defensive interpretability research on small open models. Planted behaviours (edits, triggers,
   circuits) exist only as known answers for grading auditing methods. Keep planted behaviours harmless (e.g. a
   marker string or a changed fact) and describe them neutrally in all docs and prompts.
+
+## Fast difficulty probes with the Claude API (D10). Wave-2 builders must use this.
+Build a minimal working version first: generator + Env + grader + a reference solver that passes a few instances.
+Then measure difficulty with 1-2 real agent episodes BEFORE polishing:
+```
+E=$($PY -m common.sandbox prepare --task T --instance-dir D --profile full --run-dir runs/T/<ts>_apiprobe --solver-label api-opus | head -1)
+$PY -m common.api_agent run --episode $E --task T --prompt-file runs/T/<ts>_apiprobe/episodes/$E/agent_prompt.txt \
+    --out runs/T/<ts>_apiprobe/episodes/$E --model claude-opus-5-5 --effort medium --max-usd 1.0 --max-turns 35
+$PY -m common.sandbox finish --episode $E --transcript runs/T/<ts>_apiprobe/episodes/$E/api_transcript.jsonl --agent-model api:claude-opus-5-5:medium
+$PY -m common.api_agent spent
+```
+(Check `docs/HARNESS_API.md` for exact flags. The prepare output format may differ slightly.)
+Read the transcript. Did the agent understand the task? Was it trivially easy? Did it fail for a reason that is about
+interpretability, or because of an environment problem? Tweak, then probe again. **Budget: the per-task cap in runs/api_budget/task_caps.json (default $1.20) is enforced by api_agent, so plan
+about 2 episodes at --max-usd 0.6. `--task` is required.** The ledger is shared by all tasks and hard-stops at $16 overall. Never print the key.
+For more episodes use free fresh Claude Code subagents (the orchestrator runs those).

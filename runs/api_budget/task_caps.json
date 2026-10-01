@@ -1,0 +1,2 @@
+{"default": 1.2, "_demo": 0.1, "freqhunt": 1.0, "editfind": 1.0, "featurematch": 1.0,
+ "boolintermediates": 1.2, "silentpathway": 1.2, "latentdiff": 1.2, "residualrecall": 1.2, "shifthunt": 1.2, "t2ravel": 1.2}

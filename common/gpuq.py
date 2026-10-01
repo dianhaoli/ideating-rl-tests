@@ -8,7 +8,7 @@ are limited to MAX_HEAVY at once (the plan's "at most 2 GPU jobs" rule applied t
 compute-heavy work); "light" jobs (per-episode tool servers doing small
 inference) are limited by memory and MAX_JOBS. See docs/DECISIONS.md.
 
-State lives in runs/.gpuq/ledger.json guarded by an fcntl lock. Entries whose pid
+State lives in <main repo>/runs/.gpuq/ledger.json (shared by all worktrees) guarded by an fcntl lock. Entries whose pid
 is dead are garbage-collected on every check, so a crashed job never leaks a slot.
 
 CLI (blocks until admitted, then runs the command and releases on exit):
@@ -32,8 +32,15 @@ import subprocess
 import sys
 import time
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QDIR = os.path.join(REPO, "runs", ".gpuq")
+try:
+    from common.paths import gpuq_dir as _gpuq_dir
+except ImportError:  # imported without the repo on sys.path
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from common.paths import gpuq_dir as _gpuq_dir
+
+# One ledger for the whole machine: anchored on the MAIN checkout even when this file is
+# imported from a task worktree (see common/paths.py and docs/DECISIONS.md D11).
+QDIR = _gpuq_dir()
 LEDGER = os.path.join(QDIR, "ledger.json")
 LOCK = os.path.join(QDIR, "ledger.lock")
 

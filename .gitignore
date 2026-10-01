@@ -57,3 +57,6 @@ venv/
 
 # ---- instance answer keys: regenerable from seeds; committed only after their episodes finish (docs/DECISIONS.md D6) ----
 tasks/*/instances/
+
+# ---- harness privileged state (episode records, tool logs, broker log) ----
+runs/.episodes/

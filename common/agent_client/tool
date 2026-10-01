@@ -1,0 +1,117 @@
+#!/usr/bin/python3
+"""Tool client for one episode sandbox. Usage (run from the sandbox directory):
+
+    ./tool help                              list the tools and how to call them
+    ./tool budget                            remaining budget
+    ./tool <name> '<json object of args>'    e.g. ./tool logits '{"prompts": ["Hello"], "top_k": 5}'
+    ./tool <name> key=value key2='[1,2]'     values are parsed as JSON when possible, else strings
+    ./tool submit '<json answer>'            final answer; one accepted submission ends the episode
+
+Prints the JSON response. Responses larger than 30 KB are saved to out/resp_<n>.json and only
+the path and a preview are printed. The first call of an episode may wait for compute; the
+client then prints "waiting for compute..." (on stderr) and keeps waiting up to 15 minutes.
+If your shell times out while waiting, just run the same command again.
+"""
+import json
+import os
+import socket
+import sys
+import time
+
+MAX_PRINT = 30 * 1024
+WAIT_LIMIT_S = 15 * 60
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def parse_args(argv):
+    if not argv:
+        return {}
+    if len(argv) == 1 and argv[0].strip()[:1] in "{[":
+        try:
+            v = json.loads(argv[0])
+        except ValueError as e:
+            sys.exit("could not parse JSON arguments: %s" % e)
+        if not isinstance(v, dict):
+            sys.exit("arguments must be a JSON object, e.g. '{\"x\": 1}'")
+        return v
+    out = {}
+    for a in argv:
+        if "=" not in a:
+            sys.exit("arguments must be one JSON object or key=value pairs (got %r)" % a)
+        k, v = a.split("=", 1)
+        try:
+            out[k] = json.loads(v)
+        except ValueError:
+            out[k] = v
+    return out
+
+
+def main():
+    with open(os.path.join(HERE, ".episode")) as f:
+        episode = f.read().strip()
+    sock_path = os.environ.get("RL_BROKER_SOCK") or os.path.join(os.path.dirname(HERE), ".broker.sock")
+    name = sys.argv[1] if len(sys.argv) > 1 else "help"
+    if name in ("-h", "--help"):
+        print(__doc__)
+        return 0
+    args = parse_args(sys.argv[2:])
+    req = json.dumps({"episode": episode, "tool": name, "args": args}) + "\n"
+    try:
+        s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        s.connect(sock_path)
+    except OSError:
+        print(json.dumps({"ok": False, "error": "tool service unavailable; try again in a minute"}))
+        return 1
+    s.settimeout(WAIT_LIMIT_S + 600)
+    s.sendall(req.encode())
+    f = s.makefile("rb")
+    t0 = time.time()
+    last_note = 0.0
+    resp_line = None
+    while True:
+        try:
+            line = f.readline()
+        except socket.timeout:
+            line = b""
+        if not line:
+            break
+        msg = json.loads(line)
+        if "status" in msg and "ok" not in msg:
+            if msg["status"] == "waiting" and time.time() - last_note > 25:
+                sys.stderr.write("waiting for compute...\n")
+                sys.stderr.flush()
+                last_note = time.time()
+            if time.time() - t0 > WAIT_LIMIT_S:
+                print(json.dumps({"ok": False, "error": "still waiting for compute after 15 minutes; try again later"}))
+                return 1
+            continue
+        resp_line = line.decode()
+        break
+    s.close()
+    if resp_line is None:
+        print(json.dumps({"ok": False, "error": "no response from tool service; try again"}))
+        return 1
+    text = resp_line.strip()
+    try:
+        ok = json.loads(text).get("ok", False)
+    except ValueError:
+        ok = False
+    if len(text.encode()) > MAX_PRINT:
+        out_dir = os.path.join(HERE, "out")
+        if not os.path.isdir(out_dir):
+            os.makedirs(out_dir)
+        n = 1
+        while os.path.exists(os.path.join(out_dir, "resp_%d.json" % n)):
+            n += 1
+        rel = "out/resp_%d.json" % n
+        with open(os.path.join(HERE, rel), "w") as g:
+            g.write(text + "\n")
+        print(json.dumps({"ok": ok, "saved_to": rel, "bytes": len(text.encode()),
+                          "preview": text[:1500]}))
+    else:
+        print(text)
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
