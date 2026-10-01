@@ -1,6 +1,6 @@
 # OPEN QUESTIONS: uncertainties and assumptions made while Dan was away
 
-1. **GitHub push credentials are missing.** The machine has no gh CLI, no credential helper and no SSH key. All
+1. **[RESOLVED 2026-10-01 14:43] GitHub push credentials were missing.** Dan configured a credential helper; push works. The machine has no gh CLI, no credential helper and no SSH key. All
    work is committed locally. Dan can provide a fine-grained PAT with contents read/write on ideating-rl-tests,
    or configure a credential helper. Retry at every checkpoint.
 2. **Tier A containment** needs Dan's approval. It would add a custom Claude Code agent type,

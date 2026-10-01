@@ -107,3 +107,16 @@ The fix we use everywhere is the **multi-slot episode**:
 - Draw the slot count and the null pattern from a distribution, so the number of nulls cannot be inferred.
   Never fix it at exactly k.
 If your task cannot be multi-slot, explain why in SPEC.md and propose another fix.
+
+## Plan v2 additions (2026-10-01; see docs/PLAN_V2_DELTA.md). These are binding.
+- **Product rewards.** The null action, flip-everything and constant answers must each score about 0 under the reward.
+  Where the score has several conjuncts (cause AND isolation AND ...), multiply them; do not average them.
+- **Behaviour validation.** Before an entity, fact or prompt template is used in an instance, check that the clean
+  model actually exhibits the behaviour the instance relies on. Drop items that fail. Check for prompt-format
+  artifacts, such as copying the last few-shot demo. Log the per-entity and per-template pass/drop counts in NOTES.md.
+- **Training caps.** Any tool that trains something in-episode (probes, DAS rotations, steering-vector optimisation)
+  must cap the steps and the wall-clock per call. Its total use must also be capped per episode
+  (`gradient` units), so one episode cannot hold the GPU for long.
+- **Framing.** This is defensive interpretability research on small open models. Planted behaviours (edits, triggers,
+  circuits) exist only as known answers for grading auditing methods. Keep planted behaviours harmless (e.g. a
+  marker string or a changed fact) and describe them neutrally in all docs and prompts.

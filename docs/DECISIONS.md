@@ -46,3 +46,17 @@ Format: decision | alternatives | why | what the original plan said.
   answers pass rarely. The continuous score is the mean slot score. The slot-level null FP rate is reported.
 - **Alternative**: count nulls separately and gate the recipe only on planted instances. Rejected, because a
   GRPO policy would still collect reward from a constant answer.
+
+## D8. T2-RAVEL is built from scratch as a Wave-2 candidate (2026-10-01, plan v2)
+- **Chosen**: the EditHunt repo is still absent, so T2-RAVEL (Dan's plan-v2 spec, docs/PLAN_V2_DELTA.md) is not
+  a Wave-1 port. It enters Phase-0 scoring as a from-scratch candidate on Qwen2.5-1.5B with a new US-city geography
+  set validated per entity. Phase-0 selection decides whether it is built.
+- **Why**: Dan made it conditional on EditHunt being present. But his detailed v2 spec says he values it, and the
+  geography setup is cheap to rebuild. Building it from scratch keeps to the spirit without pretending to reuse
+  EditHunt's infrastructure.
+
+## D9. TriggerHunt deferred to a separate later pass (plan v2 allows this)
+- **Chosen**: Wave 1 builds FreqHunt, EditFind and FeatureMatch first. TriggerHunt (a harmless marker-string LoRA on
+  Qwen2.5-0.5B) runs as a separate pass once the harness and these three are through their gates.
+- **Why**: the plan marks it optional. It also needs a LoRA bank trained up front (GPU-heavy), which would compete with
+  the other builders for the single L4.

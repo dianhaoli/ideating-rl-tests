@@ -21,3 +21,11 @@ events, orchestration decisions and gate summaries, with links.
   enable Tier A later (see OPEN_QUESTIONS).
 - Started the background model/SAE download (common/download_models.py, log ~/hf_home/download.log).
 - Wrote common/gpuq.py (GPU admission queue), docs/HARNESS_API.md (harness contract) and docs/BUILDER_GUIDE.md.
+
+## 2026-10-01 14:53 UTC: session 2 (plan v2) starts
+- The previous session stopped after the scaffold. Its workflow launch was halted by a safety classifier. The four task
+  worktrees in ~/wt exist, but nothing has been built in them yet. Push works now (Dan set up a credential helper).
+- Dan re-sent the plan as v2: a purpose statement, product rewards, behaviour validation, in-episode training caps,
+  and the T2-RAVEL spec. Saved the differences in docs/PLAN_V2_DELTA.md and appended the new rules to BUILDER_GUIDE.
+  Decisions D8 (T2-RAVEL from scratch as a Wave-2 candidate) and D9 (TriggerHunt deferred).
+- The machine is still the L4. Plan: build the harness in parallel with the three Wave-1 builders and the Phase-0 ideation.
