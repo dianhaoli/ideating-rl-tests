@@ -130,3 +130,9 @@ Full list with before/after in docs/HARNESS_VERIFICATION.md. The ones Dan might 
   and home-directory access from Python, `cd -` or a bare `cd`, and decode-and-run (R9). It tracks `cd` inside
   a command, so `cd scratch && ls ..` is valid. The agent prompt states the new rules.
 - **A symlink in the sandbox pointing outside makes the episode INVALID** at finish.
+- **D10 amendment (2026-10-01 17:20, Dan): no Opus for probes.** Probes use `claude-sonnet-5-5` (the default) or
+  `claude-haiku-4-5`. api_agent enforces this through `allowed_models` in runs/api_budget/task_caps.json, and
+  `--allow-any-model` is reserved for the orchestrator. Main-vs-small separation becomes Sonnet vs Haiku on the API, with
+  free Claude Code subagents (Opus-class) as the frontier proxy. Two in-flight Opus FeatureMatch probes were stopped
+  after 3 turns ($0.12) and are re-run on Sonnet. A LatentDiff builder probe already in flight on Opus (old worktree
+  code) was left to finish, since stopping it would waste what it had already spent.

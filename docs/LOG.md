@@ -79,3 +79,24 @@ events, orchestration decisions and gate summaries, with links.
 - Fix: the canonical ledger is now ~/.rl_api/ledger.jsonl, outside every checkout. The global and per-task totals read that
   file plus every legacy per-worktree ledger, deduplicated. Caps are read from the main repo. `spent --snapshot`
   writes runs/api_budget/ledger_snapshot.jsonl for git.
+
+## 2026-10-01 16:50 UTC: GPU queue fairness (report from the EditFind builder)
+- Report: a FeatureMatch gate run (pid 161609, ~6.7 GB) was using the GPU but was missing from the shared ledger, and
+  EditFind's admitted jobs hit physical CUDA OOMs twice. Separately, FreqHunt's chained heavy jobs held both heavy
+  slots for 30+ min while EditFind's heavy job waited.
+- Ledger: the per-worktree ledger bug was already fixed on main (common/paths.py, 9e71e2d). Every worktree except
+  editfind/triggerhunt has merged it. EditFind launches through the main checkout's module. At 16:45 every process
+  on the GPU was in the shared ledger. The rogue process had exited, probably launched before its worktree merged main.
+- Fairness: added to gpuq. A task (label prefix) that already holds a heavy slot cannot take a second while a heavy job
+  from a different task is waiting. Waiters register in the ledger and are shown by `gpuq status`. Unit-simulated, and
+  the harness tests pass (190). Caveat: worktrees run their own copy of gpuq.py, so the rule binds a task only after
+  it merges main. Running builders are told via the builder guide.
+
+## 2026-10-01 17:00 UTC: api_agent budget guard was far too pessimistic (environment fault in a probe)
+- BoolIntermediates probe 3 (runs/boolintermediates/20261001-161311_apiprobe3, worktree) was stopped at $0.28 of its
+  $0.60 per-episode cap before submitting, and scored as a fail. The guard priced the next turn as "whole context
+  re-written to cache plus max_tokens of output" (about $0.49), while real Opus turns cost about $0.03. **That probe's
+  failure is an environment fault, not an agent fault.**
+- Fix: the estimate is now cache-read context + ~4k new tokens + 1.5x the largest output seen so far. When the
+  episode nears its cap (or its turn limit), the agent gets a "[budget notice] submit now" text with its tool results
+  and two more turns, before any hard stop. Verified on _demo (runs/_demo/*_apiwarn: warned, submitted, pass, $0.015).

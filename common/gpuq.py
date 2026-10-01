@@ -27,6 +27,7 @@ import contextlib
 import fcntl
 import json
 import os
+import re
 import signal
 import subprocess
 import sys
@@ -73,6 +74,7 @@ def _locked():
             except (FileNotFoundError, json.JSONDecodeError):
                 led = {"jobs": {}}
             led["jobs"] = {k: v for k, v in led["jobs"].items() if _alive(int(k))}
+            led["waiting"] = {k: v for k, v in led.get("waiting", {}).items() if _alive(int(k))}
             yield led
             tmp = LEDGER + ".tmp"
             with open(tmp, "w") as f:
@@ -82,15 +84,33 @@ def _locked():
             fcntl.flock(lf, fcntl.LOCK_UN)
 
 
+def _task_key(label):
+    """Task a job belongs to, from its label prefix ("freqhunt-train-g97" -> "freqhunt"; "sp-gen" -> "sp")."""
+    return re.split(r"[-:_ ]", label or "?", maxsplit=1)[0].lower()
+
+
 def _try_admit(pid, gb, heavy, label):
+    """Admit if memory/job limits allow. Heavy-slot fairness (added 2026-10-01 after one task held both heavy
+    slots for 30+ min while another task's heavy job waited): a task that already holds a heavy slot cannot take a
+    second one while a heavy job from a DIFFERENT task is waiting. Waiters register in led["waiting"]."""
     with _locked() as led:
         jobs = led["jobs"]
+        waiting = led.setdefault("waiting", {})
         used = sum(j["gb"] for j in jobs.values())
         n_heavy = sum(1 for j in jobs.values() if j["heavy"])
         if str(pid) in jobs:
+            waiting.pop(str(pid), None)
             return True
-        if used + gb > TOTAL_GB or len(jobs) >= MAX_JOBS or (heavy and n_heavy >= MAX_HEAVY):
+        key = _task_key(label)
+        blocked = used + gb > TOTAL_GB or len(jobs) >= MAX_JOBS or (heavy and n_heavy >= MAX_HEAVY)
+        if heavy and not blocked:
+            mine = any(j["heavy"] and _task_key(j.get("label")) == key for j in jobs.values())
+            others_waiting = any(w["heavy"] and w["key"] != key for k, w in waiting.items() if k != str(pid))
+            blocked = mine and others_waiting
+        if blocked:
+            waiting.setdefault(str(pid), {"key": key, "heavy": heavy, "gb": gb, "label": label, "since": time.time()})
             return False
+        waiting.pop(str(pid), None)
         jobs[str(pid)] = {"gb": gb, "heavy": heavy, "label": label, "since": time.time()}
         return True
 
@@ -160,10 +180,13 @@ def _tree_rss_gb(pid):
 def status():
     with _locked() as led:
         jobs = led["jobs"]
+        waiting = dict(led.get("waiting", {}))
     used = sum(j["gb"] for j in jobs.values())
     print(f"admitted {len(jobs)} jobs, {used:.1f}/{TOTAL_GB} GB, heavy {sum(1 for j in jobs.values() if j['heavy'])}/{MAX_HEAVY}")
     for pid, j in jobs.items():
         print(f"  pid={pid} gb={j['gb']} heavy={j['heavy']} label={j['label']} age={time.time()-j['since']:.0f}s")
+    for pid, w in waiting.items():
+        print(f"  WAITING pid={pid} gb={w['gb']} heavy={w['heavy']} label={w['label']} waited={time.time()-w['since']:.0f}s")
 
 
 def main():

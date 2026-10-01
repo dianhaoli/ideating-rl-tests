@@ -162,10 +162,12 @@ def _task_cap(task):
     return float(caps.get(task, caps.get("default", 1.2)))
 
 
-def _est_next(model, ctx_tokens, max_out):
-    """Pessimistic next-request cost: whole context as a cache write, plus max_out output tokens."""
-    pin, pout, _ = PRICES[model]
-    return (ctx_tokens * pin * 1.25 + max_out * pout) / 1e6
+def _est_next(model, ctx_tokens, out_guess):
+    """Realistic-high next-request cost: prior context read from cache, ~4k new tokens written, out_guess output.
+    (The first version charged the whole context as a cache write plus max_tokens of output, ~15x the real turn cost,
+    and it stopped a BoolIntermediates probe at $0.28 of a $0.60 cap before the agent could submit.)"""
+    pin, pout, pread = PRICES[model]
+    return (ctx_tokens * pread + 4000 * pin * 1.25 + out_guess * pout) / 1e6
 
 
 def _run_bash(cmd, sbx, episode):
@@ -195,6 +197,13 @@ def run(args):
         raise SystemExit("--task is required (per-task API caps are enforced)")
     if model not in PRICES:
         raise SystemExit(f"unknown model {model}; known: {list(PRICES)}")
+    try:
+        allowed = json.load(open(CAPS_FILE)).get("allowed_models")
+    except Exception:
+        allowed = None
+    if allowed and model not in allowed and not args.allow_any_model:
+        raise SystemExit(f"model {model} is not allowed for probes (Dan, 2026-10-01: Opus is too expensive). "
+                         f"Use one of {allowed}, e.g. --model claude-sonnet-5-5 (default) or claude-haiku-4-5.")
     sbx = os.path.join(SBX_ROOT, args.episode)
     if not os.path.isdir(sbx):
         raise SystemExit(f"sandbox {sbx} not found (run common.sandbox prepare first)")
@@ -218,15 +227,20 @@ def run(args):
     t0 = time.time()
     submitted = False
     nudged = False
-    while turns < args.max_turns:
-        est = _est_next(model, ctx_tokens + 2000, args.max_tokens)
+    warned = False
+    max_out_seen = 0
+    WARN = ("[budget notice from the environment] You are close to this episode's compute limit. Submit your best "
+            "answer now with ./tool submit (use the exact answer format in TASK.md); you have at most two more turns.")
+    while turns < args.max_turns + (2 if warned else 0):
+        out_guess = min(args.max_tokens, max(3000, int(1.5 * max_out_seen)))
+        est = _est_next(model, ctx_tokens, out_guess)
         if _ledger_total() + est > GLOBAL_CAP_USD:
             stop = "global_budget"
             break
         if _task_total(args.task) + est > _task_cap(args.task):
             stop = "task_budget"
             break
-        if spent + est > args.max_usd:
+        if spent + est > args.max_usd * (1.15 if warned else 1.0):
             stop = "episode_budget"
             break
         kw = dict(model=model, max_tokens=args.max_tokens, system=SYSTEM, tools=[BASH_TOOL], messages=messages,
@@ -254,6 +268,7 @@ def run(args):
         for k in usage_tot:
             usage_tot[k] += u[k]
         ctx_tokens = u["input"] + u["cache_write"] + u["cache_read"] + u["output"]
+        max_out_seen = max(max_out_seen, u["output"])
         _ledger_append({"t": time.time(), "episode": args.episode, "task": args.task, "model": model,
                         "effort": args.effort, "turn": turns, "usd": round(usd, 6), **u})
         content = [b.model_dump() for b in resp.content]
@@ -287,13 +302,17 @@ def run(args):
             results.append({"type": "tool_result", "tool_use_id": b.id, "content": out})
             tlog({"type": "user", "message": {"role": "user", "content": [
                 {"type": "tool_result", "tool_use_id": b.id, "content": out}]}, "blocked": was_blocked})
+        if not submitted and not warned and (spent + 3 * est > args.max_usd or turns >= args.max_turns - 2):
+            warned = True
+            results.append({"type": "text", "text": WARN})
+            tlog({"type": "user", "message": {"role": "user", "content": WARN}, "budget_warning": True})
         messages.append({"role": "user", "content": results})
         if submitted:
             stop = "submitted"
             break
     tfile.close()
     meta = {"episode": args.episode, "task": args.task, "model": model, "effort": args.effort, "turns": turns,
-            "stop": stop, "usd": round(spent, 4), "usage": usage_tot, "blocked_commands": blocked,
+            "stop": stop, "budget_warned": warned, "usd": round(spent, 4), "usage": usage_tot, "blocked_commands": blocked,
             "wall_s": round(time.time() - t0, 1), "ledger_total_usd": round(_ledger_total(), 4),
             "global_cap_usd": GLOBAL_CAP_USD, "anthropic_sdk": anthropic.__version__}
     json.dump(meta, open(mpath, "w"), indent=1)
@@ -328,8 +347,9 @@ def main():
     r.add_argument("--prompt-file", required=True)
     r.add_argument("--out", required=True)
     r.add_argument("--task", default="")
-    r.add_argument("--model", default="claude-opus-5-5")
+    r.add_argument("--model", default="claude-sonnet-5-5")
     r.add_argument("--effort", default="medium")
+    r.add_argument("--allow-any-model", action="store_true", help="orchestrator only: bypass allowed_models")
     r.add_argument("--max-turns", type=int, default=40)
     r.add_argument("--max-tokens", type=int, default=12000)
     r.add_argument("--max-usd", type=float, default=1.25)
