@@ -12,6 +12,8 @@ Variants:
   name_probe       the naive token-identity recipe (shortcut warning 3): run each option's bare name through the
                    latent and claim the max
   name_probe_thr   as name_probe, but "nothing found" if no name activates the latent at all
+  vocab_match      fixed logit-lens recipe: project the latent's decoder direction to the vocabulary and claim the option
+                   whose name words share a stem with the top tokens; "nothing found" if none does
 """
 import json
 import os
@@ -19,7 +21,18 @@ import random
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-VARIANTS = ["nothing", "always_claim", "prior", "prior_or_none", "random", "name_probe", "name_probe_thr"]
+VARIANTS = ["nothing", "always_claim", "prior", "prior_or_none", "random", "name_probe", "name_probe_thr",
+            "vocab_match"]
+STOP = {"article", "about", "text", "written", "the", "and", "for", "player", "team", "season", "event"}
+
+
+def stems(label):
+    return [w[:5] for w in bare(label).lower().replace("/", " ").split() if len(w) >= 3 and w not in STOP]
+
+
+def vocab_score(label, tokens):
+    toks = [t.strip().lower() for t in tokens if len(t.strip()) >= 3]
+    return sum(any(t.startswith(st) or (len(t) >= 4 and st.startswith(t[:5])) for t in toks) for st in stems(label))
 
 
 def bare(label):
@@ -64,6 +77,11 @@ def solve(call, variant, seed=0):
             c = best + 1
             if variant == "name_probe_thr" and v[best] <= 0:
                 c = "nothing found"
+        elif variant == "vocab_match":
+            r = call("vocab_projection", layer=s["layer"], latent=s["latent"], k=25)
+            sc = [vocab_score(o, r["top_tokens"]) for o in opts]
+            best = max(range(len(opts)), key=lambda i: sc[i])
+            c = best + 1 if sc[best] > 0 else "nothing found"
         else:
             raise SystemExit(f"unknown variant {variant}; choose from {VARIANTS}")
         answers.append({"slot": s["slot"], "choice": c})

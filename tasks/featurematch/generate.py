@@ -46,6 +46,7 @@ P_THR, P_THR_B, N_THR, MARGIN, FIRE_MIN = 0.90, 0.85, 0.65, 0.10, 0.5
 MARGIN_B, N_THR_B = 0.08, 0.72   # the same verdict must hold on the independent split B (robust ground truth)
 MAX_SPECIFIC = 3          # at most this many concepts within MARGIN of the best (otherwise the latent is generic)
 N_OPT = 20
+NOISE = 1.5               # close tier: random jitter added to taxonomy closeness (levels) when ranking menu candidates
 P_NULL = 0.4              # per-slot null probability (independent per slot => randomised null pattern)
 P_NEAR_MISS = 0.6         # share of null slots that are near-miss (rest off-universe)
 TIERS = {
@@ -113,40 +114,54 @@ class Tables:
             picks.append(menu[int(s.argmax())] if s.max() > 0 else None)
         return picks
 
-    def menu_around(self, rng, anchor, exclude, closeness, k):
+    def center_for(self, rng, anchor):
+        """Menu centre: a random eligible concept from the anchor's sibling group (same DBPedia l2 class / same
+        language family), possibly the anchor itself. WHY: if the menu were always centred on the answer, a planted
+        menu would contain its centre and a null menu would not, which a learned policy can detect (measured:
+        cross-validated AUROC 0.74 for predicting null from menu structure alone in the close tier, see NOTES)."""
+        depth = len(self.paths[anchor]) - 1
+        sib = [c for c in range(self.n_c) if self.eligible[c] and self.close[anchor, c] >= depth]
+        return int(rng.choice(sib)) if sib else anchor
+
+    def menu_around(self, rng, center, exclude, closeness, k):
         pool = np.array([c for c in range(self.n_c) if c not in exclude and self.eligible[c]])
         if closeness == "far":
             return [int(x) for x in rng.choice(pool, size=k, replace=False)]
-        key = -self.close[anchor, pool] + rng.random(len(pool)) * 0.5   # closest first, random tie-break
+        # closest to the centre first, with noise so that sibling groups are sometimes incomplete in BOTH planted and
+        # null menus (a missing sibling must not signal "the answer was removed")
+        key = -self.close[center, pool] + rng.random(len(pool)) * NOISE
         return [int(x) for x in pool[np.argsort(key)[:k]]]
 
 
 def make_slot(T, rng, closeness, null, used):
+    """Draw the layer, then the anchor CONCEPT (uniform over concepts that own a selective latent at that layer, for
+    planted AND null slots alike, so the anchor distribution carries no planted/null signal), then the slot kind,
+    then retry latents for that same anchor; only if that fails repeatedly is a new anchor drawn."""
     L = int(rng.choice(LAYERS))
-    for _ in range(500):
-        if not null or rng.random() < P_NEAR_MISS:
-            byc = T.planted_by_c[L]
-            cstar = sorted(byc)[int(rng.integers(len(byc)))]
-            j = byc[cstar][int(rng.integers(len(byc[cstar])))]
-            kind = "planted" if not null else "near_miss"
-        else:
+    byc = T.planted_by_c[L]
+    keys = sorted(byc)
+    kind = "planted" if not null else ("near_miss" if rng.random() < P_NEAR_MISS else "off_universe")
+    for attempt in range(2000):
+        if attempt % 200 == 0:
+            cstar = keys[int(rng.integers(len(keys)))]
+        if kind == "off_universe":
             j = T.offu[L][int(rng.integers(len(T.offu[L])))]
-            cstar = int(rng.choice(np.nonzero(T.eligible)[0]))
-            kind = "off_universe"
+        else:
+            j = byc[cstar][int(rng.integers(len(byc[cstar])))]
         if (L, j) in used:
             continue
         A = T.aA[L][j]
         Bv = T.aB[L][j]
         if kind == "planted":
             excl = set(np.nonzero(A >= A[cstar] - MARGIN)[0].tolist())
-            menu = [cstar] + T.menu_around(rng, cstar, excl | {cstar}, closeness, N_OPT - 1)
+            menu = [cstar] + T.menu_around(rng, T.center_for(rng, cstar), excl | {cstar}, closeness, N_OPT - 1)
             if any(p == cstar for p in T.naive_pick(L, j, menu)):
                 continue                                   # token-identity shortcut works here: reject
             if max(Bv[c] for c in menu[1:]) > Bv[cstar] - MARGIN_B:
                 continue                                   # verdict not robust on split B: reject
         else:
             excl = set(np.nonzero(A >= N_THR)[0].tolist()) | {cstar}
-            menu = T.menu_around(rng, cstar, excl, closeness, N_OPT)
+            menu = T.menu_around(rng, T.center_for(rng, cstar), excl, closeness, N_OPT)
             if max(Bv[c] for c in menu) >= N_THR_B:
                 continue                                   # some option looks selective on split B: ambiguous null
         menu = [menu[i] for i in rng.permutation(len(menu))]
