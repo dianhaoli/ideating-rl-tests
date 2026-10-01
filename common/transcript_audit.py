@@ -159,10 +159,16 @@ def dotdot_violations(text, base, sandbox):
     return out
 
 
+SED_EXPR_RX = re.compile(r"(?<![\w/.~-])[sy]([/|#])(?:\\.|(?!\1).)*?\1(?:\\.|(?!\1).)*?\1[gIimpe0-9]*")
+
+
 def path_violations(text, sandbox, cwd=None, dotdot=True):
     """Paths in free text that point outside the sandbox. '..' is resolved against cwd (default: sandbox root)."""
     out = []
-    for m in PATH_RX.finditer(text):
+    # sed substitution/transliteration expressions (s/old/new/flags, y/abc/xyz/) are not paths. A real path given to
+    # sed as a file argument stays outside the expression and is still checked.
+    text_paths = SED_EXPR_RX.sub(" ", text)
+    for m in PATH_RX.finditer(text_paths):
         raw = m.group(1).rstrip(".,:")
         p = _expand(raw)
         if not p.startswith("/"):

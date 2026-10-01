@@ -1,0 +1,43 @@
+{
+ "episode": "ep82b070bf9b",
+ "task": "_demo",
+ "instance_id": "dm-42485e3a",
+ "tier": "T1",
+ "profile": "full",
+ "solver_label": "api-haiku",
+ "agent_model": "api:claude-haiku-4-5",
+ "sandbox": "/home/ec2-user/rlsbx/ep82b070bf9b",
+ "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e65d0b11f19a/dm-42485e3a",
+ "caps": {
+  "tool_calls": 20,
+  "forward": 40,
+  "generate": 0,
+  "gradient": 0,
+  "wall_clock_s": 600,
+  "call_timeout_s": 30
+ },
+ "counters": {
+  "tool_calls": 1,
+  "forward": 0,
+  "generate": 0,
+  "gradient": 0
+ },
+ "tools": [
+  "query",
+  "weights"
+ ],
+ "gpu_gb": 0.0,
+ "status": "closed",
+ "created_at": 1790875977.8994055,
+ "started_at": 1790875985.7341044,
+ "submitted_at": null,
+ "closed_at": 1790875997.3481925,
+ "wait_s": 0.3986353874206543,
+ "leak_detected": false,
+ "behavioral_exposure": 0,
+ "git_sha": "296e05cde5bb103df37fccfb70e6cd49103501bf",
+ "git_dirty": true,
+ "n_leak_events": 0,
+ "cross_episode_access": false,
+ "finished_at": 1790875997.5345273
+}

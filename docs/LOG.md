@@ -100,3 +100,28 @@ events, orchestration decisions and gate summaries, with links.
 - Fix: the estimate is now cache-read context + ~4k new tokens + 1.5x the largest output seen so far. When the
   episode nears its cap (or its turn limit), the agent gets a "[budget notice] submit now" text with its tool results
   and two more turns, before any hard stop. Verified on _demo (runs/_demo/*_apiwarn: warned, submitted, pass, $0.015).
+
+## 2026-10-01 17:30 UTC: first Wave-1 probes (FeatureMatch, Sonnet), plus a transcript-audit false positive
+- FeatureMatch probes (runs/featurematch/20261001-171048_apiprobe_sonnet in the featurematch worktree), Sonnet 5.5
+  at medium effort:
+  - T2, 5 slots: 4/5 correct. It answered "nothing found" on one planted slot, so it FAILED the all-slots rule. $0.152, 9 turns.
+  - T3, 4 slots: 2/4 correct. It claimed the wrong sibling twice and used only 103 of 550 forward units. FAIL. $0.087, 7 turns.
+  - Two earlier Opus probes were aborted at turn 3 on Dan's instruction (runs/.../20261001-165348_apiprobe_orch,
+    marked ABORTED, excluded).
+- The T2 episode was flagged INVALID by the transcript audit. A false positive: the audit read the sed expression
+  `s/a=list.*/.../` as the path "/a=list". Fixed: sed s///, y/// expressions are removed before path scanning, and
+  real file arguments to sed are still checked. 156 audit and verification tests pass. Re-audit: audit_rerun_sedfix.json (valid).
+- Reading: neither failure is an environment fault. The near-miss slots (sibling confusion, a planted latent read
+  as dead) are the difficulty the builder predicted. Sonnet costs about $0.09-0.15 per episode on this task.
+
+## 2026-10-01 17:45 UTC: FreqHunt probes found two environment faults; both fixed in the harness
+- FreqHunt Sonnet probes (freqhunt worktree, runs/freqhunt/20261001-172719_apiprobe_sonnet_orch):
+  - ep440f6b9bf4: INVALID, environment fault. The builder regenerated instance fh-t1-0fe4eff6 (same id, files rewritten
+    at 17:28) while the episode ran. The submission failed validation as "malformed" and the grader crashed. **Fix:**
+    `sandbox prepare` now snapshots the instance into runs/.episodes/snap/<rand>/<id> (a copy if <= 300 MB, else
+    hard links). The tool server and grader use the snapshot, and the record keeps `instance_dir_source`.
+  - The same episode exposed an api_agent bug. The agent chained a rejected `./tool submit` with `./tool help`, and the
+    runner saw '"ok": true' in the output and stopped the episode as "submitted". **Fix:** submission is now read from
+    the broker's privileged episode record.
+  - epf7e00255e5: valid, 2/3 slots, FAIL. $0.053, 8 turns. (FreqHunt T1 is cheap for Sonnet: about $0.04-0.05 per episode.)
+- Verified on _demo (runs/_demo/*_apisnapshot): snapshot path recorded, episode valid. 190 harness tests pass.

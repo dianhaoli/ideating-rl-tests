@@ -213,12 +213,41 @@ def setup():
 
 
 # ---------------------------------------------------------------------------------------------- prepare
+SNAPSHOT_COPY_MAX_BYTES = 300 * 1024 * 1024
+
+
+def _snapshot_instance(src):
+    """Copy (or hard-link, if large) an instance dir to <episodes dir>/snap/<random>/<basename>; return the copy."""
+    if not os.path.isfile(os.path.join(src, "instance.json")):
+        return src  # let the caller raise its usual error
+    total = 0
+    for root, _dirs, files in os.walk(src):
+        for fn in files:
+            try:
+                total += os.path.getsize(os.path.join(root, fn))
+            except OSError:
+                pass
+    dst = os.path.join(paths.episodes_dir(), "snap", secrets.token_hex(6), os.path.basename(src.rstrip("/")))
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    if total <= SNAPSHOT_COPY_MAX_BYTES:
+        shutil.copytree(src, dst, symlinks=True)
+    else:
+        shutil.copytree(src, dst, symlinks=True, copy_function=os.link)
+    return dst
+
+
 def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=None, agent_model=None,
             start_broker=True):
     task_root = os.path.abspath(tasks_root or HARNESS_ROOT)
     instance_dir = os.path.abspath(instance_dir)
     run_dir = os.path.abspath(run_dir)
     tdir = os.path.join(task_root, "tasks", task)
+    # Snapshot the instance into a private per-episode copy (2026-10-01): a builder regenerated an instance with the
+    # same id while an episode was running on it, so the tool server and the grader saw different files. Everything
+    # below (tool server, grader) uses the snapshot. Small instances are copied; large ones are hard-linked, which
+    # still protects against the usual atomic-replace rewrites.
+    instance_src = instance_dir
+    instance_dir = _snapshot_instance(instance_src)
     inst = _load_json(os.path.join(instance_dir, "instance.json"))
     if inst is None:
         raise FileNotFoundError(f"{instance_dir}/instance.json missing or unreadable")
@@ -262,6 +291,7 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     sha, dirty = _git_sha(task_root)
     now = time.time()
     rec = {"episode": eid, "task": task, "task_root": task_root, "instance_dir": instance_dir,
+           "instance_dir_source": instance_src,
            "instance_id": inst.get("instance_id"), "tier": inst.get("tier"), "profile": profile,
            "sandbox": sbx, "run_dir": run_dir, "solver_label": solver_label, "agent_model": agent_model,
            "caps": caps, "counters": {k: 0 for k in broker.counter_kinds(caps)},
