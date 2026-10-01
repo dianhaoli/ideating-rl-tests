@@ -16,7 +16,7 @@ import numpy as np
 from tasks.featurematch import concepts as C
 from tasks.featurematch.fm_core import LAYERS
 from tasks.featurematch.grader import grade
-from tasks.featurematch.reference_solver import solve_slot
+from tasks.featurematch.reference_solver import params_for, solve_slot
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -49,7 +49,8 @@ def sim_ref(inst, pub, D, kw, seed):
             nonlocal used
             used += len(texts)
             return [float(accB[L][rowsB[c][t], j]) for c, t in texts]
-        ch, _ = solve_slot(measure, s["options"], corpus_t, rng, **kw)
+        kwi = kw or params_for(inst["caps"]["forward"] / len(pub["slots"]))
+        ch, _ = solve_slot(measure, s["options"], corpus_t, rng, **kwi)
         answers.append({"slot": s["slot"], "choice": ch})
     return {"answers": answers}, used
 
@@ -64,10 +65,13 @@ def main():
     ap.add_argument("--tau", type=float, default=0.78)
     ap.add_argument("--gap", type=float, default=0.0)
     ap.add_argument("--bg_only", type=int, default=1)
+    ap.add_argument("--adaptive", type=int, default=1, help="1: budget-adaptive params like the solver (ignores k/bg args)")
     ap.add_argument("--seeds", type=int, default=5)
     a = ap.parse_args()
     D = load()
     kw = {k: v for k, v in vars(a).items() if k in ('k1', 'k2', 'top', 'bg1', 'bg2', 'tau', 'gap', 'bg_only')}
+    if a.adaptive:
+        kw = {}       # pick per instance from the forward cap, exactly like the real solver
     res = defaultdict(lambda: defaultdict(list))
     slot_acc = defaultdict(list)
     for d in sorted(glob.glob(os.path.join(HERE, "instances", "*"))):

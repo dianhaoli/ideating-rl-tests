@@ -101,10 +101,28 @@ def solve_slot(measure, opts, corpus, rng, k1=K1, k2=K2, top=TOP, bg1=BG, bg2=BG
     return decide(acts, bg, tau, gap, bg_only)
 
 
+BUDGET_PROFILES = [  # (min forward units per slot, params); the solver picks the richest profile it can afford
+    (209, dict(k1=5, k2=15, top=3, bg1=32, bg2=32)),     # costs 209 forward units per slot
+    (124, dict(k1=3, k2=12, top=2, bg1=24, bg2=16)),     # costs 124
+    (0, dict(k1=3, k2=9, top=2, bg1=16, bg2=16)),        # costs 110
+]
+
+
+def params_for(per_slot):
+    for need, p in BUDGET_PROFILES:
+        if per_slot >= need:
+            return p
+    return BUDGET_PROFILES[-1][1]
+
+
 def solve(call, seed=0, corpus=None, **kw):
     corpus = corpus or load_corpus()
     rng = random.Random(seed)
     info = call("task_info")
+    if not kw:     # adapt the probing depth to the forward budget (read via the built-in `budget` tool)
+        b = call("budget")
+        fwd = b.get("forward", b.get("remaining", {}).get("forward", 0)) if isinstance(b, dict) else 0
+        kw = params_for(fwd / max(1, len(info["slots"])))
     answers, diag = [], []
     for s in info["slots"]:
         choice, aucs = solve_slot(lambda t: probe(call, s["layer"], s["latent"], t), s["options"], corpus, rng, **kw)

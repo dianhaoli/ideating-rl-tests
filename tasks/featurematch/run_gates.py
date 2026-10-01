@@ -60,8 +60,11 @@ def main():
     ap.add_argument("--instances", nargs="*", default=None)
     ap.add_argument("--solvers", default="reference,blackbox," + ",".join(recipe_baseline.VARIANTS))
     ap.add_argument("--max", type=int, default=0)
+    ap.add_argument("--tiers", default="", help="comma list, e.g. T3 (default: all)")
     a = ap.parse_args()
     dirs = a.instances or sorted(glob.glob(os.path.join(HERE, "instances", "*")))
+    if a.tiers:
+        dirs = [d for d in dirs if os.path.basename(d).split("-")[1].upper() in a.tiers.split(",")]
     if a.max:
         dirs = dirs[:a.max]
     ts = time.strftime("%Y%m%d-%H%M%S", time.gmtime())

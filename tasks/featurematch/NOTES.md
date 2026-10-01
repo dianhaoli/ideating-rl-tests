@@ -73,3 +73,15 @@
   * residual signal: near-miss null menus contain fewer languages (a language latent's relatives often clear the
     0.65 null threshold and must be excluded). Documented as a known weakness: it can only shift the null/planted
     prior per slot; it never says WHICH option is right, and pass needs all slots right.
+
+## 2026-10-01 15:33 UTC — rabbit-hole check at ~70% of the time box
+1. *Still on the path to a validated, verifiable task?* Yes. Ground truth is a fixed, held-out AUROC computation. The
+   grader is exact match. Offline the reference is at ~0.98 (T1) / ~0.92 (T2) one-shot, and every zero-effort recipe
+   is <= 3.3%. The in-process gate run through the real tools is under way (prelim_v2).
+2. *Polishing something that does not change the conclusion?* Partly risky: the remaining T2 menu fingerprint
+   (CV AUROC ~0.6) could absorb hours. It cannot by itself pass an episode, so I am stopping on it and documenting it.
+3. *Cheapest way to find out whether this works?* The open question is not the gates, which look fine. It is whether
+   latents chosen on Wikipedia-style abstracts also fire on the agent's OWN probe texts (different style). The
+   cheapest test is the smoke run with a real agent, or a templated-probe reference variant (not done; see weaknesses).
+4. *What would I lose by abandoning now?* A working generator, tools, grader and baselines for a lane-(a)/(c) task with
+   cheap procedural generation (~7.3k selective latents x 232 concepts). Little reason to abandon.

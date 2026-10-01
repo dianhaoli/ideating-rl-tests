@@ -52,6 +52,8 @@ P_NEAR_MISS = 0.6         # share of null slots that are near-miss (rest off-uni
 TIERS = {
     "T1": {"closeness": "far", "caps": {"tool_calls": 150, "forward": 1200, "generate": 40, "gradient": 0}},
     "T2": {"closeness": "close", "caps": {"tool_calls": 150, "forward": 1200, "generate": 40, "gradient": 0}},
+    # T3: close distractors AND a tight forward budget (Pando-style query budget dial): ~110 probe texts per slot
+    "T3": {"closeness": "close", "caps": {"tool_calls": 150, "forward": 550, "generate": 40, "gradient": 0}},
 }
 
 
@@ -259,7 +261,7 @@ def main():
         from collections import Counter
         cnt = Counter()
         for k in range(a.prior):
-            for tier in TIERS:
+            for tier in ("T1", "T2"):
                 _, inst, public = make_instance(T, 900000 + k, tier)
                 for s, pub in zip(inst["answer"]["slots"], public["slots"]):
                     if s["planted"]:
@@ -273,14 +275,19 @@ def main():
     if a.clean and os.path.exists(INST):
         shutil.rmtree(INST)
     man = []
-    for ti, tier in enumerate(a.tiers.split(",")):
+    mpath = os.path.join(HERE, "instances_manifest.json")
+    tiers = a.tiers.split(",")
+    if not a.clean and os.path.exists(mpath):      # keep manifest entries of tiers not regenerated now
+        man = [m for m in json.load(open(mpath))["instances"] if m["tier"] not in tiers]
+    for tier in tiers:
+        ti = sorted(TIERS).index(tier)
         for k in range(a.n_per_tier):
             seed = a.start_seed + 100000 * ti + k
             iid, inst, public = make_instance(T, seed, tier)
             d = write(iid, inst, public)
             man.append({"instance_id": iid, "tier": tier, "seed": seed, "dial": inst["dial"],
                         "files": {f: sha(os.path.join(d, f)) for f in ("instance.json", "public.json")}})
-    with open(os.path.join(HERE, "instances_manifest.json"), "w") as f:
+    with open(mpath, "w") as f:
         json.dump({"generator": "tasks/featurematch/generate.py",
                    "concepts_sha256": json.load(open(os.path.join(C.CACHE, "concepts_validation.json")))["sha256"],
                    "instances": man}, f, indent=1)
