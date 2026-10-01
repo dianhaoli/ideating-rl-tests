@@ -143,3 +143,13 @@ events, orchestration decisions and gate summaries, with links.
 - EditFind status from that handoff: the recipe gate passes (constant "nothing found" 1/36 T2, others 0/72). The
   reference gate is FAILING so far (prelim v2 3/11). It finds the edited subjects every time (rank 1 of 3000) but
   mis-picks the relation or new answer, or a decoy is not silent on unseen wordings. The integrator owns the fix.
+
+## 2026-10-01 18:45 UTC: EditFind status (relayed) and the duplicate-agent question
+- The editfind agent (a7c9e3b, which my 16:52 SendMessage had resumed) reported its grading redesign. Accepted answers
+  are recorded per edit, related-name claims are credited, and reference v4 plus the blackbox gates run unattended until about 19:20+.
+  Full relay: ~/wt/editfind/tasks/editfind/ORCH_RELAY.md (uncommitted file in that worktree).
+- I did NOT stop the resumed copy. The Wave-1 workflow journal shows science:editfind has not returned yet, and I
+  could not rule out that the resumed copy and the workflow's agent are the same agent. Stopping it might have killed
+  the workflow stage. It is idle except for its own background gate jobs.
+- Risk flagged for the integrator and auditor: the grader is now looser and some accepted answers are junk, which can
+  raise recipe/black-box pass rates. Those gates must be re-run after augmentation.
