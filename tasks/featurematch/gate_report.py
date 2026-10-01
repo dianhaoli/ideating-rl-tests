@@ -4,7 +4,9 @@ Reads every episodes/*/grade.json under the given run dirs and computes, per tie
   reference one-shot  = the reference's FIRST episode on each instance passed
   reference best-of-5 = any of the reference's first 5 episodes passed (retries are only run after a failure)
   every other solver label (blackbox, recipe_<variant>): pass rate over valid episodes
-with Wilson 95% intervals (common.sandbox.wilson). An instance is DROPPED when the reference failed all 5 attempts
+with Wilson 95% intervals (common.sandbox.wilson). Scripted solvers always submit unless they crash, so an episode
+with NO submission is an infrastructure failure (e.g. the solver gave up waiting for the shared GPU): it is counted
+under infrastructure_failures_excluded and left out of the rates instead of being scored as a fail. An instance is DROPPED when the reference failed all 5 attempts
 (builder guide rule 8); one that failed one-shot and has < 5 attempts is PENDING (run more repeats on it).
 
 Writes:
@@ -67,6 +69,7 @@ def main():
 
     ref = defaultdict(list)
     invalid = defaultdict(int)
+    infra = defaultdict(int)
     tier_of, inst_dir = {}, {}
     for g in episodes(a.reference):
         h = g["harness"]
@@ -74,6 +77,9 @@ def main():
             continue
         if not h["valid"]:
             invalid["reference"] += 1
+            continue
+        if not h.get("submitted"):          # scripted solvers always submit unless they crashed (infrastructure)
+            infra["reference"] += 1
             continue
         ref[h["instance_id"]].append(g)
         tier_of[h["instance_id"]] = h["tier"]
@@ -92,10 +98,12 @@ def main():
             status[iid] = "dropped"
         else:
             status[iid] = "pending"
-    if a.pending:
+    if a.pending:      # "<instance dir> <attempts still needed>": failed one-shot (up to 5) or no graded attempt yet
         for iid, s in sorted(status.items()):
             if s == "pending":
                 print(inst_dir[iid], 5 - len(ref[iid]))
+        for iid in sorted(set(inst_dir) - set(ref)):
+            print(inst_dir[iid], 1)
         return
 
     kept = {i for i, s in status.items() if s == "kept"}
@@ -119,10 +127,14 @@ def main():
             if not h["valid"]:
                 invalid[lab] += 1
                 continue
+            if not h.get("submitted"):
+                infra[lab] += 1
+                continue
             if h["instance_id"] in kept:
                 others[lab][h["tier"]].append(g)
                 priv["others"].setdefault(lab, {})[h["instance_id"]] = bool(g["pass"])
     pub["invalid_episodes"] = dict(invalid)
+    pub["infrastructure_failures_excluded"] = dict(infra)
 
     def block(tier_filter):
         ks = [i for i in kept if tier_filter(tier_of[i])]

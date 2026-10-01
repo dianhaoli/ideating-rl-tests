@@ -34,10 +34,10 @@ def solve(call, seed=0):
 
 
 def main():
-    from common.toolclient import Client, episode_from_argv
-    from tasks.featurematch.reference_solver import episode_seed, unwrap
+    from common.toolclient import episode_from_argv
+    from tasks.featurematch.reference_solver import client, episode_seed, unwrap
     ep = episode_from_argv()
-    print(json.dumps(solve(unwrap(Client(ep).call), seed=episode_seed(ep))))
+    print(json.dumps(solve(unwrap(client(ep).call), seed=episode_seed(ep))))
 
 
 if __name__ == "__main__":

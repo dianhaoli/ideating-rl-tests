@@ -23,9 +23,12 @@ import os
 import random
 import sys
 
+from tasks.featurematch.reference_solver import slots_from_task_md
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 VARIANTS = ["nothing", "always_claim", "prior", "prior_or_none", "random", "name_probe", "name_probe_thr",
             "vocab_match"]
+MODEL_FREE = {"nothing", "always_claim", "prior", "prior_or_none", "random"}
 STOP = {"article", "about", "text", "written", "the", "and", "for", "player", "team", "season", "event"}
 
 
@@ -52,7 +55,9 @@ def load_prior():
 
 def solve(call, variant, seed=0):
     rng = random.Random(seed)
-    info = call("task_info")
+    # Model-free variants read the slots from TASK.md (exactly what an agent is shown) so they never start a tool
+    # server; the others need the model anyway and use task_info.
+    info = (slots_from_task_md() if variant in MODEL_FREE else None) or call("task_info")
     prior = load_prior() if variant.startswith("prior") else {}
     med = sorted(prior.values())[len(prior) // 2] if prior else 0
     answers = []
@@ -93,14 +98,14 @@ def solve(call, variant, seed=0):
 
 
 def main():
-    from common.toolclient import Client, episode_from_argv
-    from tasks.featurematch.reference_solver import episode_seed, unwrap
+    from common.toolclient import episode_from_argv
+    from tasks.featurematch.reference_solver import client, episode_seed, unwrap
     ep = episode_from_argv()
     args = [a for i, a in enumerate(sys.argv[1:], 1) if a != "--episode" and sys.argv[i - 1] != "--episode"]
     variant = args[0] if args else os.environ.get("RL_RECIPE", "")
     if variant not in VARIANTS:
         raise SystemExit(f"unknown recipe variant {variant!r}; set RL_RECIPE to one of {VARIANTS}")
-    print(json.dumps(solve(unwrap(Client(ep).call), variant, seed=episode_seed(ep))))
+    print(json.dumps(solve(unwrap(client(ep).call), variant, seed=episode_seed(ep))))
 
 
 if __name__ == "__main__":

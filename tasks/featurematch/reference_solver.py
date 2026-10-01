@@ -165,10 +165,47 @@ def unwrap(call):
     return f
 
 
+WAIT_LIMIT_S = float(os.environ.get("RL_WAIT_LIMIT_S", "21600"))
+
+
+def client(ep):
+    """Broker client that waits up to RL_WAIT_LIMIT_S (default 6 h) for GPU admission. WHY: the shared GPU queue
+    admits greedily by memory, so a 7 GB tool server can wait a long time behind smaller jobs; with the client's
+    30-minute default the solver crashed without submitting, and the harness graded that as a valid FAIL, which
+    would bias every gate (reference down, baselines down)."""
+    from common.toolclient import Client
+    return Client(ep, wait_limit_s=WAIT_LIMIT_S)
+
+
+def slots_from_task_md(path="TASK.md"):
+    """Parse the public slot list from the episode's TASK.md (the text the test agent reads). Lets model-free
+    baselines run without starting a tool server (no GPU). Returns the same shape as the task_info tool, or None."""
+    import re
+    try:
+        lines = open(path).read().splitlines()
+    except OSError:
+        return None
+    slots, cur = [], None
+    for ln in lines:
+        m = re.match(r"^Slot (\d+): layer (\d+), latent (\d+)\s*$", ln)
+        if m:
+            cur = {"slot": int(m.group(1)), "layer": int(m.group(2)), "latent": int(m.group(3)), "options": []}
+            slots.append(cur)
+            continue
+        m = re.match(r"^\s+(\d+)\. (.+?)\s*$", ln)
+        if cur is not None and m and int(m.group(1)) == len(cur["options"]) + 1:
+            cur["options"].append(m.group(2))
+        elif cur is not None and ln.strip() and not m:
+            cur = None
+    if not slots or any(len(s["options"]) != 20 for s in slots):
+        return None
+    return {"n_slots": len(slots), "slots": slots}
+
+
 def main():
-    from common.toolclient import Client, episode_from_argv
+    from common.toolclient import episode_from_argv
     ep = episode_from_argv()
-    c = Client(ep)
+    c = client(ep)
     print(json.dumps(solve(unwrap(c.call), seed=episode_seed(ep))))
 
 
