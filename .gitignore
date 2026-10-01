@@ -1,0 +1,59 @@
+# ---- secrets (never commit) ----
+.env
+.env.*
+*.env
+.hf_env
+hf_env
+*.pem
+*.key
+*credentials*
+*secret*
+!**/secret_scan*
+.git-credentials
+token.txt
+*token*.txt
+
+# ---- weights / checkpoints / large artifacts (regenerate from scripts + seeds; see MANIFEST files) ----
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.gguf
+*.onnx
+*.h5
+*.pkl
+*.pickle
+checkpoints/
+weights/
+models/
+**/lora_bank/
+**/model_bank/
+hf_home/
+.cache/
+
+# ---- runs: keep small JSON/CSV/transcripts/plots; drop big binaries ----
+runs/**/*.pt
+runs/**/*.bin
+runs/**/*.safetensors
+runs/**/*.npy
+runs/**/*.npz
+runs/**/activations/
+runs/**/cache/
+runs/.gpuq/
+runs/**/*.sock
+
+# ---- python / tooling ----
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+
+# ---- instance answer keys: regenerable from seeds; committed only after their episodes finish (docs/DECISIONS.md D6) ----
+tasks/*/instances/
