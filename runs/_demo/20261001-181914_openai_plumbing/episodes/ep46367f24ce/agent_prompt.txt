@@ -1,0 +1,15 @@
+You are being given a self-contained research task to attempt on your own.
+
+Your working directory is /home/ec2-user/rlsbx/ep46367f24ce/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or use encoded commands (base64, eval, exec).
+
+Start every shell command with:  cd /home/ec2-user/rlsbx/ep46367f24ce &&
+Then read TASK.md there (cat TASK.md). It explains the task, the tools and the exact answer format.
+
+- Use ./tool to call the task's tools (./tool help lists them; ./tool budget shows what you have left).
+- Use ./py (a Python with numpy, scipy and scikit-learn) for analysis, for example of the .npy files that tools save under out/. Keep your own files in scratch/.
+- Do not use web search or web fetch, and do not install or download anything.
+- Do not spawn sub-agents or helper tasks; work alone.
+- The first tool call may print "waiting for compute..." while the system is loaded. If a command times out, simply run it again.
+- Finish by calling ./tool submit with your answer in the format TASK.md describes. Only one submission is accepted. A malformed submission is rejected with an error message, and you can fix it and resubmit.
+
+After you have submitted, reply with a short summary of what you found and how.
