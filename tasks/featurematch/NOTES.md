@@ -239,3 +239,21 @@
   T2 fm-t2-08a4773087: score 0.8, one PLANTED slot answered "nothing found", episode INVALID (transcript audit).
   T3 fm-t3-025fcaa85e: score 0.5, two wrong claims on planted slots, used only 103 of 550 forward units. n=2: not a
   measurement. Both instances are excluded from the smoke plan because an agent has already seen them.
+
+## 2026-10-01 18:12 UTC — GPU-queue starvation slows the harness gates
+- Each harness episode starts its own tool server, and each server asks the shared queue (common/gpuq.py) for 7 GB.
+  Admission is greedy polling with no ordering for light jobs. With ~6 other tasks running their own gates, a
+  free gap of 7 GB almost never stays open: 2-4 GB servers from other tasks are admitted within seconds while a
+  7 GB request waits (latentdiff's 6.5 GB requests starved the same way). Measured: the first GPU reference
+  episode of the relaunch took 2256 s end to end, almost all of it admission wait. At that rate the ~300 GPU gate
+  episodes would take ~45 h. Reported to the orchestrator (fairness fix = aging/FIFO for light waiters on main).
+- What is NOT affected: the five model-free recipe variants (360 episodes) read TASK.md and never queue; they are done.
+- Considered and rejected: running a batch of episodes behind one queue admission with a private broker. It would
+  sidestep the shared queue's per-server accounting, which is the rule that keeps 6 tasks on one L4 safe, so it is
+  not done.
+- Plan: GPU gates stay on the normal path and are ordered so partial results stay balanced across tiers: the
+  reference on 20 instances per tier interleaved T1/T2/T3 (then the remaining 12), and in a second stream blackbox
+  then name_probe_thr, name_probe and vocab_match on the same 60. Two crashed or killed episodes per stream are in the
+  run dirs without submissions; gate_report.py counts them as infrastructure failures, not fails.
+- GPU_GB stays 7: weights 5.23 GB + SAEs 0.68 GB + activations put the peak around 6.3 GB, and the server's allocator
+  cap is set from GPU_GB, so lowering it to win admission would risk OOM inside agent tool calls.
