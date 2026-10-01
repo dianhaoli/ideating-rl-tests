@@ -1,0 +1,86 @@
+{
+ "config": {
+  "n_train": 1200,
+  "n_test": 400,
+  "out": "runs/featurematch/20261001-191842_audit_offline/ablate_names",
+  "save_model": "",
+  "only_latent": true,
+  "tiers": "T1,T2,T3",
+  "feats": "names"
+ },
+ "n_pool": 72,
+ "latent_stats": {
+  "T1": {
+   "heldout_inmemory": {
+    "T1": {
+     "episodes": 400,
+     "pass": 24,
+     "pass_rate": 0.06,
+     "mean_score": 0.4427,
+     "planted_slot_acc": 0.1135,
+     "null_slot_acc": 0.982
+    },
+    "null_auroc": 0.5549
+   },
+   "pool72": {
+    "T1": {
+     "episodes": 24,
+     "pass": 1,
+     "pass_rate": 0.0417,
+     "mean_score": 0.5153,
+     "planted_slot_acc": 0.087,
+     "null_slot_acc": 0.9574
+    },
+    "null_auroc": 0.4903
+   }
+  },
+  "T2": {
+   "heldout_inmemory": {
+    "T2": {
+     "episodes": 400,
+     "pass": 25,
+     "pass_rate": 0.0625,
+     "mean_score": 0.4449,
+     "planted_slot_acc": 0.1453,
+     "null_slot_acc": 0.9045
+    },
+    "null_auroc": 0.6723
+   },
+   "pool72": {
+    "T2": {
+     "episodes": 24,
+     "pass": 2,
+     "pass_rate": 0.0833,
+     "mean_score": 0.4895,
+     "planted_slot_acc": 0.2143,
+     "null_slot_acc": 0.9231
+    },
+    "null_auroc": 0.745
+   }
+  },
+  "T3": {
+   "heldout_inmemory": {
+    "T3": {
+     "episodes": 400,
+     "pass": 18,
+     "pass_rate": 0.045,
+     "mean_score": 0.4398,
+     "planted_slot_acc": 0.1256,
+     "null_slot_acc": 0.9151
+    },
+    "null_auroc": 0.6383
+   },
+   "pool72": {
+    "T3": {
+     "episodes": 24,
+     "pass": 1,
+     "pass_rate": 0.0417,
+     "mean_score": 0.3645,
+     "planted_slot_acc": 0.0545,
+     "null_slot_acc": 0.825
+    },
+    "null_auroc": 0.5368
+   }
+  }
+ }
+}

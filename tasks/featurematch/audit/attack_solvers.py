@@ -19,6 +19,12 @@ are the same (or generated the same way) for every instance, and it uses no priv
                   the template texts; otherwise the template_probe pick. WHY: tests whether nulls are detectable
                   from latent statistics alone (no concept reasoning).
 
+  name_rank2      Exploits the generator's ASYMMETRIC name filter: a planted slot is rejected when the answer's own name
+                  is the top name-probe activation, so among kept planted slots the answer is often the SECOND-highest
+                  (offline: rank 2 in 44% (T1) / 36% (T2) of planted slots where any name fires). Recipe: run the 3
+                  surface variants of each option name (label, bare name, "This is about <name>."), take each option's
+                  max, claim the rank-2 option if >= 2 options fire, else "nothing found".
+
 Harness: RL_ATTACK=<variant> python -m common.sandbox run-scripted --task featurematch \
              --solver tasks/featurematch/audit/attack_solvers.py --solver-label audit_<variant> ...
 """
@@ -31,7 +37,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(HERE))))   # worktree root (run-scripted cwd = sandbox)
 
-VARIANTS = ["template_probe", "self_probe", "density_null"]
+VARIANTS = ["template_probe", "self_probe", "density_null", "name_rank2"]
 TAU = 0.78
 BATCH = 16
 
@@ -150,8 +156,25 @@ def pick(option_vals, bg):
     return order, aucs
 
 
+def solve_name_rank2(call, info):
+    answers = []
+    for s in info["slots"]:
+        texts = []
+        for o in s["options"]:
+            x, _ = bare(o)
+            texts += [o, x, f"This is about {x}."]
+        v = measure(call, s["layer"], s["latent"], texts)
+        m = np.array([max(v[3 * i:3 * i + 3]) for i in range(len(s["options"]))])
+        o = np.argsort(-m, kind="stable")
+        answers.append({"slot": s["slot"], "choice": int(o[1]) + 1 if (m > 0).sum() >= 2 else "nothing found"})
+    call("submit", answers=answers)
+    return {"answers": answers}
+
+
 def solve(call, variant, seed=0):
     info = call("task_info")
+    if variant == "name_rank2":
+        return solve_name_rank2(call, info)
     answers, diag = [], []
     for s in info["slots"]:
         L, lat, opts = s["layer"], s["latent"], s["options"]

@@ -1,0 +1,103 @@
+{
+ "note": "T1/T2 of the first full run (the background job was stopped by the 30-min shell limit before T3; T3 is in T3/). Parsed from offline_T1T2.log.",
+ "learned_prior": {
+  "T1": {
+   "heldout_inmemory": {
+    "T1": {
+     "episodes": 400,
+     "pass": 13,
+     "pass_rate": 0.0325,
+     "mean_score": 0.3816,
+     "planted_slot_acc": 0.003,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.5107
+   },
+   "pool72": {
+    "T1": {
+     "episodes": 24,
+     "pass": 1,
+     "pass_rate": 0.0417,
+     "mean_score": 0.4896,
+     "planted_slot_acc": 0.0,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.5009
+   }
+  },
+  "T2": {
+   "heldout_inmemory": {
+    "T2": {
+     "episodes": 400,
+     "pass": 19,
+     "pass_rate": 0.0475,
+     "mean_score": 0.4111,
+     "planted_slot_acc": 0.0853,
+     "null_slot_acc": 0.9094
+    },
+    "null_auroc": 0.6414
+   },
+   "pool72": {
+    "T2": {
+     "episodes": 24,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "mean_score": 0.4701,
+     "planted_slot_acc": 0.1071,
+     "null_slot_acc": 1.0
+    },
+    "null_auroc": 0.7326
+   }
+  }
+ },
+ "latent_stats": {
+  "T1": {
+   "heldout_inmemory": {
+    "T1": {
+     "episodes": 400,
+     "pass": 25,
+     "pass_rate": 0.0625,
+     "mean_score": 0.443,
+     "planted_slot_acc": 0.1155,
+     "null_slot_acc": 0.9788
+    },
+    "null_auroc": 0.7007
+   },
+   "pool72": {
+    "T1": {
+     "episodes": 24,
+     "pass": 2,
+     "pass_rate": 0.0833,
+     "mean_score": 0.5375,
+     "planted_slot_acc": 0.1087,
+     "null_slot_acc": 0.9787
+    },
+    "null_auroc": 0.7576
+   }
+  },
+  "T2": {
+   "heldout_inmemory": {
+    "T2": {
+     "episodes": 400,
+     "pass": 30,
+     "pass_rate": 0.075,
+     "mean_score": 0.4728,
+     "planted_slot_acc": 0.1726,
+     "null_slot_acc": 0.9401
+    },
+    "null_auroc": 0.8027
+   },
+   "pool72": {
+    "T2": {
+     "episodes": 24,
+     "pass": 2,
+     "pass_rate": 0.0833,
+     "mean_score": 0.5208,
+     "planted_slot_acc": 0.25,
+     "null_slot_acc": 0.9231
+    },
+    "null_auroc": 0.7921
+   }
+  }
+ }
+}

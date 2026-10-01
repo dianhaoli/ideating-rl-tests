@@ -1,0 +1,65 @@
+{
+ "mode": "in-process complement (NOT through the broker); see tasks/featurematch/inproc_gates.py",
+ "instances_file": "runs/featurematch/20261001-204214_audit_inproc_namerank2/instances.txt",
+ "n_instances": 72,
+ "results": {
+  "audit_name_rank2": {
+   "T1": {
+    "k": 2,
+    "n": 24,
+    "rate": 0.0833,
+    "wilson95": [
+     0.0232,
+     0.2585
+    ],
+    "mean_score": 0.5208,
+    "planted_slot_accuracy": 0.087,
+    "planted_slot_nothing_rate": 0.8478,
+    "null_slot_false_claim_rate": 0.0426,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "mean_score": 0.4146,
+    "planted_slot_accuracy": 0.0893,
+    "planted_slot_nothing_rate": 0.7679,
+    "null_slot_false_claim_rate": 0.1026,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "mean_score": 0.4111,
+    "planted_slot_accuracy": 0.0545,
+    "planted_slot_nothing_rate": 0.8545,
+    "null_slot_false_claim_rate": 0.075,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 4,
+    "n": 72,
+    "rate": 0.0556,
+    "wilson95": [
+     0.0218,
+     0.1343
+    ],
+    "mean_score": 0.4488,
+    "planted_slot_accuracy": 0.0764,
+    "planted_slot_nothing_rate": 0.8217,
+    "null_slot_false_claim_rate": 0.0714,
+    "n_crashed": 0
+   }
+  }
+ }
+}

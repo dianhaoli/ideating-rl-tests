@@ -1,0 +1,9 @@
+('T1', 'near_miss') slots 283 any name fires 0.23
+('T1', 'off_universe') slots 191 any name fires 0.03
+('T1', 'planted') slots 729 any name fires 0.27
+('T2', 'near_miss') slots 292 any name fires 0.18
+('T2', 'off_universe') slots 212 any name fires 0.05
+('T2', 'planted') slots 708 any name fires 0.22
+[(('T1', '4+'), 15), (('T1', 'zero'), 85), (('T1', 2), 88), (('T1', 3), 12), (('T2', '4+'), 11), (('T2', 'zero'), 86), (('T2', 2), 56), (('T2', 3), 4)]
+
+[exited with code 0]
