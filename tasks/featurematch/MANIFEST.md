@@ -1,4 +1,4 @@
-# FeatureMatch MANIFEST: regenerable artifacts (NOT committed; all under tasks/featurematch/cache/ or instances/)
+# FeatureMatch MANIFEST: regenerable artifacts (NOT committed; under tasks/featurematch/cache/, instances/, instances_prelim/)
 
 Nothing below is in git (weights, activations and answer keys are gitignored; D6). Each can be regenerated
 deterministically with the commands at the bottom. Sizes are bytes; sha256 is truncated to 16 hex chars.
@@ -38,7 +38,9 @@ Upstream inputs (downloaded into HF_HOME by huggingface_hub, never copied into t
 | cache/gemma-2-2b-bf16/model-00001-of-00003.safetensors | 2496293600 | 1d004ad59e8c6e3f |
 | cache/gemma-2-2b-bf16/model-00002-of-00003.safetensors | 2491732040 | c16bb6a23fd40215 |
 | cache/gemma-2-2b-bf16/model-00003-of-00003.safetensors | 240691728 | c627b42b163313dd |
-| instances/<id>/{instance.json, public.json} (120 dirs, ~10 KB each) | - | per-file hashes in instances_manifest.json (committed) |
+| instances/<id>/{instance.json, public.json} (72 dirs, ~10 KB each; the gate + agent pool, seeds 5000+, 105000+, 205000+) | - | per-file hashes and `kept` flags in instances_manifest.json (committed) |
+| instances_prelim/<id>/... (180 dirs; stage-1 prelim pool, seeds 1000+, 101000+, 201000+; GATE-ONLY, its null pattern was committed in ac29984) | - | instances_manifest_prelim.json (committed) |
+| runs/featurematch/<ts>_gate_*/episodes/, summary.* (harness gate run dirs for the current pool) | ~1-3 MB per run dir | held back by runs/featurematch/.gitignore until the smoke run on this pool is finished (D6); aggregates in <ts>_gates_public.json (committed) |
 
 ## Regeneration (from the worktree root, after `source common/env.sh`)
 ```
@@ -46,7 +48,8 @@ $PY -m tasks.featurematch.concepts                       # cache/concepts.json (
 $PY -m tasks.featurematch.convert_bf16                   # cache/gemma-2-2b-bf16; CPU, ~1 min, ~7.8 GB peak RSS
 $PY -m common.gpuq run --gb 8 --heavy --label fm-precompute -- $PY -m tasks.featurematch.precompute   # ~6 min on an L4
 $PY -m tasks.featurematch.auroc                          # cache/auroc_*, fire_*; CPU, ~1 min
-$PY -m tasks.featurematch.generate --n-per-tier 60 --clean   # instances/ + instances_manifest.json; <1 s
+$PY -m tasks.featurematch.generate --n-per-tier 24 --start-seed 5000 --tiers T1,T2,T3 --clean   # instances/ + instances_manifest.json (current pool); <1 s
+# (the stage-1 prelim pool was: --n-per-tier 60 --tiers T1,T2,T3 with the default --start-seed 1000, then moved to instances_prelim/)
 $PY -m tasks.featurematch.generate --prior 300           # prior.json (committed; seeds 900000+, disjoint)
 ```
 fp16 activations are deterministic up to GPU kernel nondeterminism; regenerated AUROC tables may differ in the 4th
