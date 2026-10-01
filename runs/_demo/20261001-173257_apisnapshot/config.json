@@ -1,0 +1,32 @@
+{
+ "task": "_demo",
+ "created_at": "2026-10-01T17:32:57Z",
+ "git_sha": "296e05cde5bb103df37fccfb70e6cd49103501bf",
+ "git_dirty": true,
+ "task_root": "/home/ec2-user/ideating-rl-tests",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "full"
+ ],
+ "solver_labels": [
+  "api-haiku"
+ ],
+ "agent_models": [],
+ "instances": {
+  "dm-42485e3a": {
+   "seed": 0,
+   "tier": "T1",
+   "dial": {
+    "P": 211
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/e65d0b11f19a/dm-42485e3a"
+  }
+ }
+}

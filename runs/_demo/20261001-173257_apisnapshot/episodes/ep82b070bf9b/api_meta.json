@@ -1,0 +1,21 @@
+{
+ "episode": "ep82b070bf9b",
+ "task": "_demo",
+ "model": "claude-haiku-4-5",
+ "effort": "medium",
+ "turns": 5,
+ "stop": "episode_budget",
+ "budget_warned": true,
+ "usd": 0.017,
+ "usage": {
+  "input": 9985,
+  "cache_write": 0,
+  "cache_read": 0,
+  "output": 1409
+ },
+ "blocked_commands": 0,
+ "wall_s": 15.2,
+ "ledger_total_usd": 2.5995,
+ "global_cap_usd": 16.0,
+ "anthropic_sdk": "1.11.0"
+}

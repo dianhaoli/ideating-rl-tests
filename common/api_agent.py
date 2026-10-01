@@ -170,6 +170,17 @@ def _est_next(model, ctx_tokens, out_guess):
     return (ctx_tokens * pread + 4000 * pin * 1.25 + out_guess * pout) / 1e6
 
 
+def _episode_submitted(episode):
+    """Ask the harness's privileged episode record whether a submission was accepted. (The first version grepped the
+    command output for '"ok": true', which misfired when an agent chained a REJECTED submit with another tool call.)"""
+    try:
+        from common import paths
+        rec = json.load(open(os.path.join(paths.episodes_dir(), episode + ".json")))
+    except Exception:
+        return False
+    return rec.get("submission") is not None or rec.get("status") in ("submitted", "finished")
+
+
 def _run_bash(cmd, sbx, episode):
     # The only allowed absolute reference into /home is this episode's own sandbox.
     stripped = cmd.replace(sbx + "/", "./").replace(sbx, ".")
@@ -297,7 +308,7 @@ def run(args):
             cmd = (b.input or {}).get("command", "")
             out, was_blocked = _run_bash(cmd, sbx, args.episode)
             blocked += int(was_blocked)
-            if re.search(r"\./tool\s+submit\b", cmd) and '"ok": true' in out.replace("'", '"'):
+            if re.search(r"\./tool\s+submit\b", cmd) and _episode_submitted(args.episode):
                 submitted = True
             results.append({"type": "tool_result", "tool_use_id": b.id, "content": out})
             tlog({"type": "user", "message": {"role": "user", "content": [
