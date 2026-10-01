@@ -1,3 +1,7 @@
+# per-slot planted/null detail is part of the answer key (DECISIONS D6): never commit
+**/episodes_private.jsonl
+*.log
+
 # D6: harness gate run dirs for the CURRENT agent pool (tasks/featurematch/instances/) hold per-slot truth
 # (grade.json details.slots) and the reference solver's submissions (effectively the answer key), and summary.*
 # list per-instance passes. Keep them local until the smoke episodes on that pool are finished; commit only the
