@@ -93,3 +93,17 @@ run_agent.py, agent_prompt.md, SPEC.md, PREDICTIONS.md, NOTES.md, MANIFEST.md, s
 ## Final report (your last message)
 Return JSON: status (`ready_for_smoke` | `needs_work` | `drop`), branch, gates (numbers + run dirs),
 smoke_plan path, GPU_GB, a 5-line summary, open issues.
+
+## Reconciling "30-50% nulls" with "recipe baseline ≤ 10%" (DECISIONS D7, read this)
+Suppose each episode is a single yes/no-style question and 30-50% of episodes are null. Then the constant answer
+"nothing found" passes 30-50% of episodes and the recipe gate cannot pass. The plan's two rules conflict.
+The fix we use everywhere is the **multi-slot episode**:
+- An episode contains several independent *slots*: several candidate updates, latents or models. Each slot is
+  planted or null, and **30-50% of slots are null**. The answer gives one verdict per slot: the finding, or "nothing found".
+- The continuous score is the mean slot score. Over-claiming on a null slot scores 0 for that slot.
+- **Pass** = every slot correct (or a stated high threshold). The constant "nothing found" passes only when every
+  slot is null, and "always submit something" only when no slot is null. With 3-4 slots and a 40% null rate, both
+  stay well under 10%. Report the slot-level null false-positive rate separately.
+- Draw the slot count and the null pattern from a distribution, so the number of nulls cannot be inferred.
+  Never fix it at exactly k.
+If your task cannot be multi-slot, explain why in SPEC.md and propose another fix.

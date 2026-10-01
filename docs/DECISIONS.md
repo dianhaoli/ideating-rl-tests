@@ -38,3 +38,11 @@ Format: decision | alternatives | why | what the original plan said.
 ## D6. Instances and answer keys are gitignored until used
 - The repo is public, and test agents have network access in Tier B. Instance answer keys stay out of git until the
   episodes that use them are done. Generators, seeds and manifests are committed. Answer keys are reproducible from seeds.
+
+## D7. Multi-slot episodes reconcile the null rule with the recipe gate
+- **Problem**: with 30-50% null instances, the constant answer "nothing found" passes 30-50% of single-question
+  episodes. The recipe gate (≤ 10%) could then never pass. The plan's two rules conflict.
+- **Chosen**: each episode holds several slots. 30-50% of slots are null, and pass = all slots correct, so constant
+  answers pass rarely. The continuous score is the mean slot score. The slot-level null FP rate is reported.
+- **Alternative**: count nulls separately and gate the recipe only on planted instances. Rejected, because a
+  GRPO policy would still collect reward from a constant answer.
