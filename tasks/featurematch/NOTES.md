@@ -167,3 +167,12 @@
   filter. Keep a planted slot only if the latent also fires on an independent, differently-styled probe set for its
   concept (templated sentences or a second corpus, e.g. Wikipedia lead sentences rephrased), and measure the smoke-run
   agents' planted-slot "nothing found" rate as a fairness check.
+
+## 2026-10-01 16:42 UTC — status at end of stage 1
+- Status: **ready for harness integration**, with one open validity risk (style dependence, above). Not DROP: all
+  preliminary gates pass in all three tiers with wide margins, and the reference's one-shot rate falls with each dial.
+- Not done (by instruction): PREDICTIONS.md, any LLM agent run, run_agent.py (needs common.sandbox).
+- Integrator checklist: see the handoff text (also summarised in SPEC.md); key items: per-worktree gpuq ledger bug,
+  bf16 model copy required (RAM cap), agent_prompt.md contains literal JSON braces (do not render it with str.format),
+  `task_info` tool supplies the public slots to scripted solvers, solvers' `unwrap()` accepts raw results or the
+  {"ok","result"} envelope, prelim pool is gate-only (per-slot kinds were committed once).

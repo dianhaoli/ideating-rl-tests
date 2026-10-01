@@ -53,8 +53,11 @@ Measured: a gradient-boosted classifier on public menu structure predicts null v
 - *Logit-lens string match* (`vocab_match` recipe): measured in the gates.
 - *Lookup*: the per-instance permutation defeats public explanation databases.
 - *Grading-data access*: no tool reads splits A or B.
-Remaining honest weaknesses: the residual menu fingerprint in T2, and the concept universe is public (an agent could
-guess that the labels come from DBPedia).
+Remaining honest weaknesses: (1) **style dependence**: on 4 hand-written probes per concept, only ~50% of selected
+latents (median per concept 70%; airports 11%) prefer their own concept, so some latents key on dataset-specific
+text style. The prompt therefore defines each concept's text style, and a style-robustness filter is the recommended
+next step. (2) The residual menu fingerprint in T2 (CV AUROC ~0.6). (3) The concept universe is public: an agent could
+guess that the labels come from DBPedia.
 
 **Transfer.** Explaining and verifying SAE latents is a daily task in interpretability work: auditing feature labels,
 choosing features for steering or circuit analysis, and SAEBench-style evaluation. The skill is to design probe texts,
