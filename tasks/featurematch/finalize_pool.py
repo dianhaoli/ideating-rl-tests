@@ -1,6 +1,6 @@
 """Apply the "drop instances the reference cannot solve" rule to a gate run, and record the result.
 
-Reads runs/featurematch/<run>/episodes.jsonl (from run_gates.py), marks every instance whose reference best-of-5
+Reads runs/featurematch/<run>/episodes_private.jsonl (from run_gates.py; per-slot detail, gitignored), marks every instance whose reference best-of-5
 failed as dropped, writes `kept` flags into instances_manifest.json (no answers), and writes smoke_plan.json
 (3 kept instances per tier, each containing at least one null slot; the first also has at least one planted slot).
 Also recomputes every gate on the KEPT instances only and writes kept_summary.json into the run dir.
@@ -18,7 +18,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 def main():
     recs = []
     for rd in sys.argv[1:]:
-        recs += [dict(json.loads(l), _run=rd) for l in open(os.path.join(rd, "episodes.jsonl"))]
+        f = os.path.join(rd, "episodes_private.jsonl")
+        recs += [dict(json.loads(l), _run=rd) for l in open(f)]
     ref = {r["instance"]: r for r in recs if r["solver"] == "reference"}
     dropped = sorted(i for i, r in ref.items() if not r["best_of_5"])
     mpath = os.path.join(HERE, "instances_manifest.json")

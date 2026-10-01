@@ -39,6 +39,14 @@ def wilson(k, n, z=1.96):
     return (round((c - h) / d, 3), round((c + h) / d, 3))
 
 
+def redact(rec):
+    """Drop everything slot-level (which slots are null/planted is part of the answer key)."""
+    keep = {k: v for k, v in rec.items() if k not in ("kinds", "slots", "tries", "submission")}
+    if "tries" in rec:
+        keep["tries"] = [{k: v for k, v in t.items() if k != "slots"} for t in rec["tries"]]
+    return keep
+
+
 def episode(d, profile, fn):
     ep = LocalEpisode(Env(), d, profile)
     t0 = time.time()
@@ -79,7 +87,10 @@ def main():
                "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
                "model": "google/gemma-2-2b (bf16 local copy)", "sae": "google/gemma-scope-2b-pt-res width_16k L6/12/18"},
               open(os.path.join(rd, "config.json"), "w"), indent=1)
-    out = open(os.path.join(rd, "episodes.jsonl"), "w")
+    # episodes_private.jsonl has per-slot planted/null detail (a partial answer key; gitignored, D6).
+    # episodes.jsonl is the redacted, committable version (episode-level outcomes only).
+    out = open(os.path.join(rd, "episodes_private.jsonl"), "w")
+    pub_out = open(os.path.join(rd, "episodes.jsonl"), "w")
     stats = defaultdict(lambda: defaultdict(list))
     slot_stats = defaultdict(lambda: defaultdict(list))
     for d in dirs:
@@ -118,6 +129,8 @@ def main():
                        "error": r["error"], "slots": r["grade"]["details"]["slots"]}
             out.write(json.dumps(rec) + "\n")
             out.flush()
+            pub_out.write(json.dumps(redact(rec)) + "\n")
+            pub_out.flush()
         print(os.path.basename(d), {s: (v[-1] if v else None) for s, v in stats[tier].items()}, flush=True)
     summ = {}
     for tier, st in stats.items():
