@@ -611,7 +611,7 @@ def main():
         if a.json:
             print(json.dumps({k: ep[k] for k in ("episode", "sandbox", "prompt")}))
         else:
-            print(f"EPISODE {ep['episode']}")
+            print(ep["episode"])                      # first line = bare id, so E=$(prepare ... | head -1) works
             print(f"SANDBOX {ep['sandbox']}")
             print("----- TEST-AGENT PROMPT (give this, and nothing else, to a fresh subagent) -----")
             print(ep["prompt"])

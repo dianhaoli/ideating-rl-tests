@@ -2,7 +2,7 @@
 
 Status: IMPLEMENTED (2026-10-01). `common/` implements this document; tests in `common/tests/`
 (`/opt/pytorch/bin/python -m pytest -q common/tests`). Where the implementation had to refine
-the original spec, the change is listed in section 10 and logged in docs/DECISIONS.md (D10, D11).
+the original spec, the change is listed in section 10 and logged in docs/DECISIONS.md (D11, D12).
 If you must change the contract, edit this file in the same commit and log the change in
 docs/DECISIONS.md. A complete worked example of a task is `tasks/_demo/` (no GPU).
 
@@ -164,7 +164,8 @@ The broker starts automatically on the first `prepare`; `python -m common.broker
 source ~/ideating-rl-tests/common/env.sh          # from the checkout that holds tasks/<T>/
 $PY -m common.sandbox prepare --task T --instance-dir tasks/T/instances/<id> --profile full \
      --run-dir runs/T/$(date -u +%Y%m%d-%H%M%S)_smoke --solver-label opus
-#   prints EPISODE <E>, SANDBOX ~/rlsbx/<E>, then the exact test-agent prompt between two marker lines
+#   prints <E> alone on the first line (E=$(... | head -1) works), then SANDBOX ~/rlsbx/<E>, then the exact
+#   test-agent prompt between two marker lines; --json prints {episode, sandbox, prompt} instead
 #   (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
 ```
 1. Give the printed prompt, and nothing else, to a FRESH subagent (no context, no repo access hints).
@@ -221,7 +222,7 @@ Refinements to the spec above:
   At finish: canary anywhere in the sandbox => leak; leak strings in harness-written files (TASK.md, tool) => leak;
   leak strings in the agent's own files are expected when it found the answer, so they are only counted.
 - **Episode records** live in the MAIN checkout's `runs/.episodes/` even when `prepare` runs in a worktree
-  (one broker serves all worktrees); the GPU-queue ledger likewise (D10). Episode ids are `ep` + 10 hex chars.
+  (one broker serves all worktrees); the GPU-queue ledger likewise (D11). Episode ids are `ep` + 10 hex chars.
   `prepare --tasks-root DIR` uses tasks from another checkout.
 - **Tool servers run with `HF_HUB_OFFLINE=1`** (cached models only, no downloads mid-episode), the RAM cap
   `GPUQ_RAM_GB` (8 GB) enforced by the broker, and stdout redirected to a per-episode server log.

@@ -35,7 +35,7 @@ DESIGN RULES, BASELINES, PREDICTIONS), `docs/HARNESS_API.md` (the interface to c
 
 ## The harness (common/) is READY (2026-10-01)
 - Run `git merge main` in your worktree now. Besides the harness, this fixes the GPU queue: before, each worktree
-  had its own queue ledger, so jobs from different builders did not see each other (docs/DECISIONS.md D10).
+  had its own queue ledger, so jobs from different builders did not see each other (docs/DECISIONS.md D11).
 - Contract and builder-facing API: docs/HARNESS_API.md, especially section 10 (implementation notes) and section 9
   (how to run an LLM test-agent episode). Worked example of every required file: `tasks/_demo/`.
 - Test your Env in-process with `make_local_call(env, caps)`; write the reference solver as a function taking a

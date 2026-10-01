@@ -39,7 +39,7 @@ except ImportError:  # imported without the repo on sys.path
     from common.paths import gpuq_dir as _gpuq_dir
 
 # One ledger for the whole machine: anchored on the MAIN checkout even when this file is
-# imported from a task worktree (see common/paths.py and docs/DECISIONS.md D10).
+# imported from a task worktree (see common/paths.py and docs/DECISIONS.md D11).
 QDIR = _gpuq_dir()
 LEDGER = os.path.join(QDIR, "ledger.json")
 LOCK = os.path.join(QDIR, "ledger.lock")

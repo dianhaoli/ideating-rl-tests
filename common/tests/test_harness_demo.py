@@ -348,3 +348,15 @@ def test_agent_client_prints_waiting_for_compute(tmp_path):
     srv.close()
     assert "waiting for compute..." in r.stderr
     assert json.loads(r.stdout) == {"ok": True, "result": {"x": 1}} and r.returncode == 0
+
+
+def test_prepare_cli_first_line_is_episode_id(hx):
+    """Builders/scripts do E=$(python -m common.sandbox prepare ... | head -1)."""
+    r = subprocess.run([PY, "-m", "common.sandbox", "prepare", "--task", "_demo", "--instance-dir", hx.insts["null"][0],
+                        "--profile", "full", "--run-dir", hx.run_dir], cwd=REPO, capture_output=True, text=True,
+                       timeout=120)
+    assert r.returncode == 0, r.stderr
+    lines = r.stdout.splitlines()
+    assert broker.EPISODE_RX.match(lines[0]) and lines[1].startswith("SANDBOX ")
+    assert "Your working directory is" in r.stdout
+    assert open(os.path.join(hx.run_dir, "episodes", lines[0], "agent_prompt.txt")).read().strip() in r.stdout

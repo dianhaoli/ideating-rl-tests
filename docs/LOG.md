@@ -38,8 +38,8 @@ events, orchestration decisions and gate summaries, with links.
   `common/sandbox.py` (setup/prepare/finish/run-scripted/summarize), `common/transcript_audit.py`, `common/paths.py`.
 - Demo task `tasks/_demo/` (no GPU; hidden table with one edited entry or none) used by the tests and as a worked example.
 - **Bug found and fixed**: `common/gpuq.py` kept its ledger per checkout, so every task worktree had its own GPU queue
-  (D10). The ledger and the episode registry now live in the main checkout. Builders must `git merge main`.
-- **Contract refinements** (D11, HARNESS_API section 10): free built-ins, wall-clock cap excluding queue time,
+  (D11). The ledger and the episode registry now live in the main checkout. Builders must `git merge main`.
+- **Contract refinements** (D12, HARNESS_API section 10): free built-ins, wall-clock cap excluding queue time,
   agent-text exemption in the leak scan, ./py wrapper instead of symlink, stricter/more precise transcript audit.
 - Tests: `/opt/pytorch/bin/python -m pytest -q common/tests` (unit + end-to-end on _demo + transcript-audit rules with
   false-positive checks + GPU smoke on Qwen2.5-0.5B through the queue with eviction). Results in the READY commit message.
