@@ -1,0 +1,30 @@
+{"case": "all correct", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "option numbers as strings", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "'nothing found' case/space variants", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "slot ids as strings, shuffled order", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "all 'nothing found' (null action)", "valid": true, "validator_error": null, "pass": false, "score": 0.5, "null_fp": 0}
+{"case": "always claim option 1", "valid": true, "validator_error": null, "pass": false, "score": 0.25, "null_fp": 2}
+{"case": "claim on a null slot", "valid": true, "validator_error": null, "pass": false, "score": 0.75, "null_fp": 1}
+{"case": "'nothing found' on a planted slot", "valid": true, "validator_error": null, "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "wrong option on planted", "valid": true, "validator_error": null, "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "missing a slot", "valid": false, "validator_error": "give exactly one answer for each of the 4 slots", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "duplicate slot, conflicting", "valid": false, "validator_error": "slots must be distinct integers in 0..3", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "slot out of range", "valid": false, "validator_error": "slots must be distinct integers in 0..3", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice 0", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice 21", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice True (bool)", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "choice 7.0 (float)", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "choice '7.0' (string)", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice null", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice 'none'", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice option LABEL text", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "choice list [7, 8] (hedging)", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "slot 0.9 (float, truncates to 0)", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "fullwidth digit '７'", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "nbsp inside 'nothing found'", "valid": false, "validator_error": "choice must be an option number 1-20 or \"nothing found\"", "pass": false, "score": 0.75, "null_fp": 0}
+{"case": "empty answers", "valid": false, "validator_error": "give exactly one answer for each of the 4 slots", "pass": false, "score": 0.0, "null_fp": 0}
+{"case": "wrapped {'answer': {...}}", "valid": false, "validator_error": "submission must be a JSON object {\"answers\": [...]}", "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "not an object", "valid": false, "validator_error": "submission must be a JSON object {\"answers\": [...]}", "pass": false, "score": 0.0, "null_fp": 0}
+{"case": "extra keys per answer", "valid": true, "validator_error": null, "pass": true, "score": 1.0, "null_fp": 0}
+{"case": "no submission file", "valid": null, "pass": false, "score": 0.0}
+PROBLEMS: none
