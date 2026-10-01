@@ -1,0 +1,44 @@
+{
+ "task": "featurematch",
+ "created_at": "2026-10-01T17:39:13Z",
+ "git_sha": "d838c29ebeb2a8c0193c4f1344adc41835c28a01",
+ "git_dirty": false,
+ "task_root": "/home/ec2-user/wt/featurematch",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "blackbox"
+ ],
+ "solver_labels": [
+  "blackbox"
+ ],
+ "agent_models": [],
+ "instances": {
+  "fm-t1-683b61583f": {
+   "seed": 5000,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/824aaff71664/fm-t1-683b61583f"
+  },
+  "fm-t2-dcf333f8bc": {
+   "seed": 105000,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/be6cb82bacf2/fm-t2-dcf333f8bc"
+  }
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "task": "featurematch",
+ "created_at": "2026-10-01T17:27:17Z",
+ "git_sha": "2f7c799c0f9e263d6dfad78b94e32282e4782790",
+ "git_dirty": false,
+ "task_root": "/home/ec2-user/wt/featurematch",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "full"
+ ],
+ "solver_labels": [
+  "reference"
+ ],
+ "agent_models": [],
+ "instances": {
+  "fm-t1-07e0a3cb3f": {
+   "seed": 5009,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-07e0a3cb3f"
+  },
+  "fm-t1-1c0cd1d5ed": {
+   "seed": 5008,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-1c0cd1d5ed"
+  },
+  "fm-t1-683b61583f": {
+   "seed": 5000,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/56d077ad5b3d/fm-t1-683b61583f"
+  },
+  "fm-t2-dcf333f8bc": {
+   "seed": 105000,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/3d6a78844dc0/fm-t2-dcf333f8bc"
+  },
+  "fm-t3-7e335c2340": {
+   "seed": 205000,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/16cb25d3abb2/fm-t3-7e335c2340"
+  }
+ }
+}

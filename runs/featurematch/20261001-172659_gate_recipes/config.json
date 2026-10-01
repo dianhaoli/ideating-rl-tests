@@ -1,0 +1,749 @@
+{
+ "task": "featurematch",
+ "created_at": "2026-10-01T17:27:17Z",
+ "git_sha": "2f7c799c0f9e263d6dfad78b94e32282e4782790",
+ "git_dirty": false,
+ "task_root": "/home/ec2-user/wt/featurematch",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "full"
+ ],
+ "solver_labels": [
+  "recipe_nothing",
+  "recipe_always_claim",
+  "recipe_prior",
+  "recipe_prior_or_none",
+  "recipe_random",
+  "recipe_name_probe"
+ ],
+ "agent_models": [],
+ "instances": {
+  "fm-t1-07e0a3cb3f": {
+   "seed": 5009,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/95a064daf988/fm-t1-07e0a3cb3f"
+  },
+  "fm-t1-1c0cd1d5ed": {
+   "seed": 5008,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-1c0cd1d5ed"
+  },
+  "fm-t1-243d62887a": {
+   "seed": 5018,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-243d62887a"
+  },
+  "fm-t1-29f1aef970": {
+   "seed": 5006,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-29f1aef970"
+  },
+  "fm-t1-385b4cde6f": {
+   "seed": 5005,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-385b4cde6f"
+  },
+  "fm-t1-3a6443abb7": {
+   "seed": 5014,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-3a6443abb7"
+  },
+  "fm-t1-3c515b99a6": {
+   "seed": 5012,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-3c515b99a6"
+  },
+  "fm-t1-48c9b85687": {
+   "seed": 5015,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-48c9b85687"
+  },
+  "fm-t1-5e33776213": {
+   "seed": 5022,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-5e33776213"
+  },
+  "fm-t1-683b61583f": {
+   "seed": 5000,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-683b61583f"
+  },
+  "fm-t1-7336320fe7": {
+   "seed": 5010,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-7336320fe7"
+  },
+  "fm-t1-7c2699b0ad": {
+   "seed": 5001,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-7c2699b0ad"
+  },
+  "fm-t1-89cae67800": {
+   "seed": 5004,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-89cae67800"
+  },
+  "fm-t1-aee3f9b22d": {
+   "seed": 5017,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-aee3f9b22d"
+  },
+  "fm-t1-b3daf56703": {
+   "seed": 5023,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-b3daf56703"
+  },
+  "fm-t1-bad8fea09f": {
+   "seed": 5007,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-bad8fea09f"
+  },
+  "fm-t1-bf27a4ab2c": {
+   "seed": 5013,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-bf27a4ab2c"
+  },
+  "fm-t1-d757115148": {
+   "seed": 5002,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-d757115148"
+  },
+  "fm-t1-ddefee841b": {
+   "seed": 5003,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-ddefee841b"
+  },
+  "fm-t1-e3489ce375": {
+   "seed": 5011,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-e3489ce375"
+  },
+  "fm-t1-f491d6db33": {
+   "seed": 5016,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-f491d6db33"
+  },
+  "fm-t1-f7f20e93d2": {
+   "seed": 5019,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-f7f20e93d2"
+  },
+  "fm-t1-f98b8f50b3": {
+   "seed": 5021,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-f98b8f50b3"
+  },
+  "fm-t1-fc6f6d61a2": {
+   "seed": 5020,
+   "tier": "T1",
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t1-fc6f6d61a2"
+  },
+  "fm-t2-08a4773087": {
+   "seed": 105022,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-08a4773087"
+  },
+  "fm-t2-0b1b5c8b61": {
+   "seed": 105018,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-0b1b5c8b61"
+  },
+  "fm-t2-18d866dedf": {
+   "seed": 105021,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-18d866dedf"
+  },
+  "fm-t2-1e88f74c7b": {
+   "seed": 105005,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-1e88f74c7b"
+  },
+  "fm-t2-22a847f996": {
+   "seed": 105023,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-22a847f996"
+  },
+  "fm-t2-278783937f": {
+   "seed": 105001,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-278783937f"
+  },
+  "fm-t2-2a8ba6c60f": {
+   "seed": 105006,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-2a8ba6c60f"
+  },
+  "fm-t2-3873e2258c": {
+   "seed": 105007,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-3873e2258c"
+  },
+  "fm-t2-5556fb6d2d": {
+   "seed": 105003,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-5556fb6d2d"
+  },
+  "fm-t2-61a345cf58": {
+   "seed": 105004,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-61a345cf58"
+  },
+  "fm-t2-7fcbed7ec0": {
+   "seed": 105019,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-7fcbed7ec0"
+  },
+  "fm-t2-8892de8911": {
+   "seed": 105002,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-8892de8911"
+  },
+  "fm-t2-8bec41690e": {
+   "seed": 105012,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-8bec41690e"
+  },
+  "fm-t2-a3ce4600b2": {
+   "seed": 105013,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-a3ce4600b2"
+  },
+  "fm-t2-a95b8cd6f4": {
+   "seed": 105008,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-a95b8cd6f4"
+  },
+  "fm-t2-b9ef35417e": {
+   "seed": 105017,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-b9ef35417e"
+  },
+  "fm-t2-ce893caa60": {
+   "seed": 105014,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-ce893caa60"
+  },
+  "fm-t2-d4517f279a": {
+   "seed": 105011,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-d4517f279a"
+  },
+  "fm-t2-d8c89f35e9": {
+   "seed": 105020,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-d8c89f35e9"
+  },
+  "fm-t2-dcf333f8bc": {
+   "seed": 105000,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-dcf333f8bc"
+  },
+  "fm-t2-de837644c7": {
+   "seed": 105016,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-de837644c7"
+  },
+  "fm-t2-e7b435bfe8": {
+   "seed": 105010,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-e7b435bfe8"
+  },
+  "fm-t2-eb91d05cb0": {
+   "seed": 105009,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-eb91d05cb0"
+  },
+  "fm-t2-f8b4fddaa6": {
+   "seed": 105015,
+   "tier": "T2",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t2-f8b4fddaa6"
+  },
+  "fm-t3-025fcaa85e": {
+   "seed": 205004,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-025fcaa85e"
+  },
+  "fm-t3-0ad5ad6daf": {
+   "seed": 205008,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-0ad5ad6daf"
+  },
+  "fm-t3-158eeee570": {
+   "seed": 205009,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-158eeee570"
+  },
+  "fm-t3-166da72e67": {
+   "seed": 205020,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-166da72e67"
+  },
+  "fm-t3-2f10e80afa": {
+   "seed": 205010,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-2f10e80afa"
+  },
+  "fm-t3-440b4a9595": {
+   "seed": 205011,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-440b4a9595"
+  },
+  "fm-t3-4d644ef0b8": {
+   "seed": 205022,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-4d644ef0b8"
+  },
+  "fm-t3-4e8d2a06c9": {
+   "seed": 205006,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-4e8d2a06c9"
+  },
+  "fm-t3-51df00ca7e": {
+   "seed": 205007,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-51df00ca7e"
+  },
+  "fm-t3-54a29708fb": {
+   "seed": 205019,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-54a29708fb"
+  },
+  "fm-t3-559934cf66": {
+   "seed": 205023,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-559934cf66"
+  },
+  "fm-t3-5ae5375486": {
+   "seed": 205016,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-5ae5375486"
+  },
+  "fm-t3-679256e915": {
+   "seed": 205001,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-679256e915"
+  },
+  "fm-t3-731d134906": {
+   "seed": 205014,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-731d134906"
+  },
+  "fm-t3-7e335c2340": {
+   "seed": 205000,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-7e335c2340"
+  },
+  "fm-t3-9442c26d1b": {
+   "seed": 205003,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-9442c26d1b"
+  },
+  "fm-t3-9b88613bd3": {
+   "seed": 205002,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-9b88613bd3"
+  },
+  "fm-t3-ad1a01b3a4": {
+   "seed": 205012,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-ad1a01b3a4"
+  },
+  "fm-t3-cf9547f73d": {
+   "seed": 205021,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-cf9547f73d"
+  },
+  "fm-t3-d300e01abd": {
+   "seed": 205017,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-d300e01abd"
+  },
+  "fm-t3-e8efa83fe0": {
+   "seed": 205013,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-e8efa83fe0"
+  },
+  "fm-t3-f63d9b8210": {
+   "seed": 205018,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-f63d9b8210"
+  },
+  "fm-t3-fc7f5a638b": {
+   "seed": 205015,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-fc7f5a638b"
+  },
+  "fm-t3-fddef20379": {
+   "seed": 205005,
+   "tier": "T3",
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "instance_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances/fm-t3-fddef20379"
+  }
+ }
+}

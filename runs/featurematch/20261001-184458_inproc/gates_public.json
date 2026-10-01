@@ -1,0 +1,503 @@
+{
+ "mode": "in-process complement (NOT through the broker); see docstring",
+ "instances_file": "/tmp/fm_pool.txt",
+ "n_instances": 72,
+ "results": {
+  "blackbox": {
+   "T1": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 2,
+    "n": 72,
+    "rate": 0.0278,
+    "wilson95": [
+     0.0077,
+     0.0957
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   }
+  },
+  "recipe_always_claim": {
+   "T1": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0507
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   }
+  },
+  "recipe_name_probe": {
+   "T1": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0507
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   }
+  },
+  "recipe_name_probe_thr": {
+   "T1": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0851,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.1282,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.175,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 1,
+    "n": 72,
+    "rate": 0.0139,
+    "wilson95": [
+     0.0025,
+     0.0746
+    ],
+    "null_slot_false_claim_rate": 0.127,
+    "n_crashed": 0
+   }
+  },
+  "recipe_nothing": {
+   "T1": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 2,
+    "n": 72,
+    "rate": 0.0278,
+    "wilson95": [
+     0.0077,
+     0.0957
+    ],
+    "null_slot_false_claim_rate": 0.0,
+    "n_crashed": 0
+   }
+  },
+  "recipe_prior": {
+   "T1": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0507
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   }
+  },
+  "recipe_prior_or_none": {
+   "T1": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 1.0,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.975,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0507
+    ],
+    "null_slot_false_claim_rate": 0.9921,
+    "n_crashed": 0
+   }
+  },
+  "recipe_random": {
+   "T1": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.4255,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.5385,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.35,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 0,
+    "n": 72,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0507
+    ],
+    "null_slot_false_claim_rate": 0.4365,
+    "n_crashed": 0
+   }
+  },
+  "recipe_vocab_match": {
+   "T1": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.0638,
+    "n_crashed": 0
+   },
+   "T2": {
+    "k": 0,
+    "n": 24,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.138
+    ],
+    "null_slot_false_claim_rate": 0.0513,
+    "n_crashed": 0
+   },
+   "T3": {
+    "k": 1,
+    "n": 24,
+    "rate": 0.0417,
+    "wilson95": [
+     0.0074,
+     0.2024
+    ],
+    "null_slot_false_claim_rate": 0.05,
+    "n_crashed": 0
+   },
+   "all": {
+    "k": 2,
+    "n": 72,
+    "rate": 0.0278,
+    "wilson95": [
+     0.0077,
+     0.0957
+    ],
+    "null_slot_false_claim_rate": 0.0556,
+    "n_crashed": 0
+   }
+  },
+  "reference": {
+   "T1": {
+    "one_shot": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "wilson95": [
+      0.862,
+      1.0
+     ]
+    },
+    "best_of_5": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "wilson95": [
+      0.862,
+      1.0
+     ]
+    }
+   },
+   "T2": {
+    "one_shot": {
+     "k": 23,
+     "n": 24,
+     "rate": 0.9583,
+     "wilson95": [
+      0.7976,
+      0.9926
+     ]
+    },
+    "best_of_5": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "wilson95": [
+      0.862,
+      1.0
+     ]
+    }
+   },
+   "T3": {
+    "one_shot": {
+     "k": 21,
+     "n": 24,
+     "rate": 0.875,
+     "wilson95": [
+      0.69,
+      0.9566
+     ]
+    },
+    "best_of_5": {
+     "k": 24,
+     "n": 24,
+     "rate": 1.0,
+     "wilson95": [
+      0.862,
+      1.0
+     ]
+    }
+   },
+   "all": {
+    "one_shot": {
+     "k": 68,
+     "n": 72,
+     "rate": 0.9444,
+     "wilson95": [
+      0.8657,
+      0.9782
+     ]
+    },
+    "best_of_5": {
+     "k": 72,
+     "n": 72,
+     "rate": 1.0,
+     "wilson95": [
+      0.9493,
+      1.0
+     ]
+    }
+   }
+  }
+ }
+}

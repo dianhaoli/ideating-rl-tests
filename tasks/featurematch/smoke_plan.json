@@ -1,20 +1,21 @@
 {
  "tiers": {
   "T1": [
-   "tasks/featurematch/instances/fm-t1-049d9a0c10",
-   "tasks/featurematch/instances/fm-t1-07219be43d",
-   "tasks/featurematch/instances/fm-t1-0e18320b9f"
+   "tasks/featurematch/instances/fm-t1-48c9b85687",
+   "tasks/featurematch/instances/fm-t1-7336320fe7",
+   "tasks/featurematch/instances/fm-t1-7c2699b0ad"
   ],
   "T2": [
-   "tasks/featurematch/instances/fm-t2-00072ec9fb",
-   "tasks/featurematch/instances/fm-t2-019253c041",
-   "tasks/featurematch/instances/fm-t2-07850b389f"
+   "tasks/featurematch/instances/fm-t2-b9ef35417e",
+   "tasks/featurematch/instances/fm-t2-dcf333f8bc",
+   "tasks/featurematch/instances/fm-t2-e7b435bfe8"
   ],
   "T3": [
-   "tasks/featurematch/instances/fm-t3-01cec963d9",
-   "tasks/featurematch/instances/fm-t3-0537b81aed",
-   "tasks/featurematch/instances/fm-t3-0738a34cf8"
+   "tasks/featurematch/instances/fm-t3-440b4a9595",
+   "tasks/featurematch/instances/fm-t3-4e8d2a06c9",
+   "tasks/featurematch/instances/fm-t3-54a29708fb"
   ]
  },
- "profile": "full"
+ "profile": "full",
+ "note": "3 instances per tier that the reference solver passed on its first try (in-process gate run), excluding instances already used by LLM probes; together they hold at least one null and one planted slot per tier. Chosen by gate_report.py (seeded)."
 }

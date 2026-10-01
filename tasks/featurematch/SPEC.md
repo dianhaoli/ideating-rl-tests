@@ -22,11 +22,12 @@ null slot is a scored failure (`null_fp`). score = mean slot correctness. **pass
 D7). Details use the convention `slots: [{planted, correct, claimed}]`.
 
 **Tools** (generic primitives; latent indices are secretly **permuted per instance**, so Neuronpedia-style lookups fail):
-`task_info` (public slot list), `latent_activations(texts<=16, layer, latents<=8)` (per-token and max activations),
+`task_info` (public slot list; one tool call, no forward units), `latent_activations(texts<=16, layer, latents<=8)` (per-token and max activations),
 `top_latents(texts<=8, layer, k)`, `vocab_projection(layer, latent)` (decoder direction times unembedding),
 `generate`, `next_token_logits`. Profiles: `full` = all tools; `blackbox` = task_info + generate + next_token_logits.
 No tool takes or returns a concept name, the menu-to-truth map or held-out text.
-**Caps:** tool_calls 150, forward 1200, generate 40, gradient 0 (no in-episode training).
+**Caps:** tool_calls 150, forward 1200 (T3: 550), generate 40, gradient 0 (no in-episode training); harness defaults
+wall clock 60 min and 180 s per call.
 
 **Dials.** (1) *Distractor closeness* (**EXPERIMENTAL**, no direct precedent found). T1 "far": 19 distractors are drawn
 uniformly from the universe. T2 "close": distractors are taxonomy siblings, ranked by closeness to a random member of the
@@ -53,7 +54,9 @@ Measured: a gradient-boosted classifier on public menu structure predicts null v
 - *Logit-lens string match* (`vocab_match` recipe): measured in the gates.
 - *Lookup*: the per-instance permutation defeats public explanation databases.
 - *Grading-data access*: no tool reads splits A or B.
-Remaining honest weaknesses: (1) **style dependence**: on 4 hand-written probes per concept, only ~50% of selected
+Remaining honest weaknesses: (0) **harness codename check**: the leak scan treats the codename "featurematch" as a
+never-exempt private string after removing whitespace, so an agent note like "this feature matches Spanish" in its own
+scratch file makes the episode INVALID. Fix belongs in common/ (reported). (1) **style dependence**: on 4 hand-written probes per concept, only ~50% of selected
 latents (median per concept 70%; airports 11%) prefer their own concept, so some latents key on dataset-specific
 text style. The prompt therefore defines each concept's text style, and a style-robustness filter is the recommended
 next step. (2) The residual menu fingerprint in T2 (CV AUROC ~0.6). (3) The concept universe is public: an agent could
@@ -64,14 +67,29 @@ choosing features for steering or circuit analysis, and SAEBench-style evaluatio
 read activations and decide calibrated "none of these" verdicts. The same skill is what an auditor needs to check a
 claimed feature explanation (compare the seed candidate "ClaimCheck").
 
-**Gates** (preliminary, IN-PROCESS through the real Env and caps; the harness is not READY). Run dirs
-`runs/featurematch/20261001-153149_prelim_v2` and `runs/featurematch/20261001-160933_prelim_v2b` (kept_summary.json).
-180 generated, 5 dropped (reference best-of-5 failed), 175 kept.
+**Gates** (stage 2, 2026-10-01; fresh pool of 72 instances, 24 per tier, seeds 5000+/105000+/205000+; nothing
+dropped, so "kept" = all 72). Two sources, never pooled:
+*harness* = `common.sandbox run-scripted` (broker, leak scan, out-of-process grader), run dirs
+`runs/featurematch/20261001-172659_gate_{reference,blackbox,recipes}`;
+*in-process* = `inproc_gates.py`, the same solvers, Env, caps and out-of-process grader as one queued GPU job,
+run dir `runs/featurematch/20261001-184458_inproc`. The in-process complement exists because the shared GPU queue made
+each harness GPU episode wait 15-40 min (NOTES). On the same (solver, instance), the two sources agree slot for slot
+on every deterministic solver (291/291 episodes compared). Aggregates: `runs/featurematch/20261001-172659_gates_public.json`.
 
-| tier | n | reference one-shot | best-of-5 | black box | worst recipe |
-|---|---|---|---|---|---|
-| T1 far / 1200 | 59 | 100% | 100% | 3.4% | 3.4% (nothing; = all-null episodes) |
-| T2 close / 1200 | 58 | 94.8% | 100% | 3.4% | 3.4% |
-| T3 close / 550 | 58 | 77.6% | 100% | 1.7% | 1.7% |
+| tier | ref one-shot | ref best-of-5 | black box | worst recipe |
+|---|---|---|---|---|
+| T1 far / 1200 | 24/24 (100%) | 24/24 | 1/24 (4.2%) | 1/24 (nothing, name_probe_thr, vocab_match) |
+| T2 close / 1200 | 23/24 (95.8%) | 24/24 | 0/24 | 0/24 |
+| T3 close / 550 | 21/24 (87.5%) | 24/24 | 1/24 (4.2%) | 1/24 (nothing, vocab_match) |
+| all | 68/72 (94.4%, CI 0.87-0.98) | 72/72 (CI 0.95-1.0) | 2/72 (2.8%, CI 0.008-0.096) | 2/72 (2.8%, CI 0.008-0.096) |
 
-Recipes: nothing, always_claim, prior, prior_or_none, random, name_probe, name_probe_thr, vocab_match.
+Reference and black box and the three model-using recipes (name_probe, name_probe_thr, vocab_match) are in-process
+numbers; the five model-free recipes (nothing, always_claim, prior, prior_or_none, random) ran through the harness on all
+72 (their in-process numbers are identical, random aside, which uses different seeds). Harness GPU episodes completed so
+far: reference 3/3 pass, black box 1 (score 0.67, fail). Every non-reference pass is an all-null episode answered
+"nothing found" everywhere. Planted-slot accuracy of the name-probe recipe is 0.051 (chance = 0.05); of vocab_match
+0.013; of the popular-concept prior 0.13. The reference never claims on a null slot (null FP 0/all tiers).
+**All gates PASS in every tier.** Stage-1 preliminary numbers (in-process, 175 kept prelim instances) agree; they are in NOTES.
+
+**Smoke plan** (`smoke_plan.json`): 3 instances per tier that the reference passed on its first try, excluding the 4
+instances already used by orchestrator LLM probes; together they hold >= 1 null and >= 1 planted slot per tier.

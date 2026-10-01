@@ -257,3 +257,32 @@
   run dirs without submissions; gate_report.py counts them as infrastructure failures, not fails.
 - GPU_GB stays 7: weights 5.23 GB + SAEs 0.68 GB + activations put the peak around 6.3 GB, and the server's allocator
   cap is set from GPU_GB, so lowering it to win admission would risk OOM inside agent tool calls.
+
+## 2026-10-01 19:11 UTC — stage-2 gate results: ALL PASS (harness + in-process complement)
+- Pool: 72 fresh instances (24 per tier). Reference best-of-5 passed all 72, so nothing was dropped (kept = 72).
+- **Harness** (`common.sandbox run-scripted`, run dirs `runs/featurematch/20261001-172659_gate_*`): the five model-free
+  recipes on all 72 instances each (360 episodes, all VALID): nothing 1/0/1 of 24 (T1/T2/T3), always_claim, prior,
+  prior_or_none and random 0/24 everywhere. GPU episodes completed so far: reference 3/3 pass; black box 1 (fail).
+  Infrastructure failures excluded (killed while waiting for the GPU): reference 1, black box 2, name_probe 1.
+- **In-process complement** (`inproc_gates.py` as ONE normally queued 7 GB job: admitted after ~11 min, ran 13 min;
+  run dir `runs/featurematch/20261001-184458_inproc`): every solver on all 72.
+  | tier | ref one-shot | ref best-of-5 | blackbox | nothing | always_claim | prior | prior_or_none | random | name_probe | name_probe_thr | vocab_match |
+  |---|---|---|---|---|---|---|---|---|---|---|---|
+  | T1 | 24/24 | 24/24 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+  | T2 | 23/24 | 24/24 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+  | T3 | 21/24 | 24/24 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+  Overall: reference one-shot 68/72 = 94.4% (Wilson 0.87-0.98), best-of-5 72/72 (0.95-1.0); black box 2/72 = 2.8%
+  (0.008-0.096); worst recipes (nothing, vocab_match) 2/72 = 2.8% (0.008-0.096), at most 1/24 = 4.2% in any tier.
+  Gates: reference >= 95% best-of-5 PASS; blackbox <= 10% PASS; every recipe <= 10% PASS, in every tier.
+- **Cross-check of the two paths:** on the same (solver, instance) the per-slot outcomes agree exactly for every
+  deterministic solver: 72/72 for each of nothing, always_claim, prior and prior_or_none, 3/3 reference, 1/1 black
+  box. random differs by design (harness seeds come from the episode id). So the in-process numbers are what the
+  harness would have produced, minus the queue wait.
+- Slot level (in-process): reference null-slot false claims 0 in every tier; planted-slot accuracy 1.00 / 0.98 / 0.93.
+  The reference one-shot falls 100% -> 96% -> 88% across T1 -> T2 -> T3, as in stage 1 (100 / 95 / 78). Name-probe
+  planted accuracy 0.051 (chance 0.05; the generator's filter works), vocab_match 0.013, popular-concept prior 0.13.
+  Every non-reference pass is an all-null episode (2 of 72 pool episodes are all-null) answered "nothing found" everywhere.
+- **Smoke plan** written by `gate_report.py --smoke`: 3 per tier, reference passed first try, excluding the 4 instances
+  the orchestrator's LLM probes already used (fm-t2-08a4773087, fm-t3-025fcaa85e, fm-t2-0b1b5c8b61, fm-t2-18d866dedf).
+- Rendered TASK.md for all 72 instances passes the harness's own check_task_md (codename, canary, leak strings,
+  private paths): 0 problems. The prompt names no method, layer hint, dataset name or grading term.
