@@ -31,7 +31,7 @@ No tool takes or returns a concept name, the menu-to-truth map or held-out text.
 **Dials.** (1) *Distractor closeness* (**EXPERIMENTAL**, no direct precedent found). T1 "far": 19 distractors are drawn
 uniformly from the universe. T2 "close": distractors are taxonomy siblings, ranked by closeness to a random member of the
 answer's sibling group, with noise. (2) *Number of slots* 3-5 (precedent: number of simultaneous targets, MEMIT scaling
-curves). (3) *Forward budget* (precedent: Pando's query budget; the plumbing exists, and every tier is currently 1200).
+curves). (3) *Forward budget* (precedent: Pando's query budget): T1/T2 1200 forward units, **T3 = close + 550**.
 (4) Null fraction (each slot is null with p = 0.4, independently, so the null pattern is random).
 
 **Null design / no fingerprinting.** Planted and null slots use the same menu procedure around an anchor concept,
@@ -61,4 +61,14 @@ choosing features for steering or circuit analysis, and SAEBench-style evaluatio
 read activations and decide calibrated "none of these" verdicts. The same skill is what an auditor needs to check a
 claimed feature explanation (compare the seed candidate "ClaimCheck").
 
-**Gates** (preliminary, in-process, harness not READY). See NOTES.md and `runs/featurematch/<ts>_prelim_v2/`.
+**Gates** (preliminary, IN-PROCESS through the real Env and caps; the harness is not READY). Run dirs
+`runs/featurematch/20261001-153149_prelim_v2` and `runs/featurematch/20261001-160933_prelim_v2b` (kept_summary.json).
+180 generated, 5 dropped (reference best-of-5 failed), 175 kept.
+
+| tier | n | reference one-shot | best-of-5 | black box | worst recipe |
+|---|---|---|---|---|---|
+| T1 far / 1200 | 59 | 100% | 100% | 3.4% | 3.4% (nothing; = all-null episodes) |
+| T2 close / 1200 | 58 | 94.8% | 100% | 3.4% | 3.4% |
+| T3 close / 550 | 58 | 77.6% | 100% | 1.7% | 1.7% |
+
+Recipes: nothing, always_claim, prior, prior_or_none, random, name_probe, name_probe_thr, vocab_match.

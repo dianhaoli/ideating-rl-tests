@@ -9,6 +9,11 @@
    "tasks/featurematch/instances/fm-t2-00072ec9fb",
    "tasks/featurematch/instances/fm-t2-019253c041",
    "tasks/featurematch/instances/fm-t2-07850b389f"
+  ],
+  "T3": [
+   "tasks/featurematch/instances/fm-t3-01cec963d9",
+   "tasks/featurematch/instances/fm-t3-0537b81aed",
+   "tasks/featurematch/instances/fm-t3-0738a34cf8"
   ]
  },
  "profile": "full"

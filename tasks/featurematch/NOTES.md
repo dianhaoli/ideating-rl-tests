@@ -118,3 +118,32 @@
   common/gpuq.py puts its ledger at <repo>/runs/.gpuq, and REPO is the directory of the checkout the module was
   imported from, so every worktree (~/wt/<task>) has its OWN ledger. Not my file to fix (common/); reported in the
   handoff. Workaround here: before launching, wait until nvidia-smi shows >= 9 GB free, then go through gpuq as usual.
+
+## 2026-10-01 16:06 UTC — answer-key hygiene slip, fixed forward
+- Commit ac29984 committed runs/.../prelim_v2/episodes.jsonl with per-slot "kinds" (planted / near_miss /
+  off_universe) for the 116 prelim instances. That is a partial answer key: it shows which slots are null. Fixed in
+  the next commit: run_gates now writes the per-slot detail to episodes_private.jsonl (gitignored), and the committed
+  episodes.jsonl holds episode-level outcomes only. History was NOT rewritten (hard rule), so **the prelim pool (seeds
+  1000+, 101000+, 201000+) must be treated as gate-only. Generate agent-episode instances from fresh seeds**
+  (`generate.py --start-seed <new>`). Answer keys are reproducible from public seeds anyway (D6), but that takes the
+  datasets plus GPU time; the committed kinds took none.
+
+## 2026-10-01 16:32 UTC — T3 (tight budget) + remaining T2 gates; final preliminary gate table
+- Run dir: runs/featurematch/20261001-160933_prelim_v2b (4 leftover T2 + 60 T3). Its first launch OOMed because
+  other builders' jobs held 18 GB (the per-worktree ledger issue above). Relaunched after waiting for free memory.
+- T3 = close distractors + forward cap 550 (vs 1200). The reference adapts its probing depth to the budget (reads the
+  `budget` tool): 209 / 124 / 110 forward units per slot.
+- Drop rule over all 180 generated instances: **5 dropped, 175 kept**: fm-t1-6f07d71392, fm-t2-5588e6d7cd,
+  fm-t2-f463eca9f0, fm-t3-62c04099d8, fm-t3-8b6030d1bb. kept_summary.json in both run dirs; `kept` flags are in
+  instances_manifest.json.
+- **Preliminary gates on kept instances (in-process, real tools and caps, NOT yet through the harness):**
+  | tier | n | ref one-shot | ref best-of-5 | blackbox | nothing | always_claim | prior | prior_or_none | random | name_probe | name_probe_thr | vocab_match |
+  |---|---|---|---|---|---|---|---|---|---|---|---|---|
+  | T1 far, 1200 | 59 | 59 (100%) | 59 | 2 (3.4%) | 2 | 0 | 0 | 0 | 0 | 0 | 2 | 2 |
+  | T2 close, 1200 | 58 | 55 (94.8%) | 58 | 2 (3.4%) | 2 | 0 | 0 | 0 | 0 | 0 | 2 | 1 |
+  | T3 close, 550 | 58 | 45 (77.6%) | 58 | 1 (1.7%) | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+  Gates: reference >= 95% best-of-5 (100% on kept, by the drop rule; one-shot recorded above); blackbox <= 10%;
+  every recipe <= 10% in every tier. **PASS.**
+- The one-shot reference drops from 100% to 95% to 78% across T1, T2, T3. Two dials (closeness, then budget) each make
+  the same probing method less reliable, which is the intended behaviour of a difficulty dial. T3 slot-level reference:
+  planted 0.93, near-miss null 0.95, null false-positive rate 3%.
