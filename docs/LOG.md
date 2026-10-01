@@ -179,3 +179,11 @@ events, orchestration decisions and gate summaries, with links.
   LoRAs validated for specificity). This is a transfer-relevant lesson for auditing benchmarks.
 - Coordination: copies of the resumed agent committed concurrently (16b627d, 6bcf82b, 84149f1). One used a lock file
   to prevent a duplicate rebuild. The SendMessage-resumes-workflow-agent problem cost real confusion; see 18:10 entry.
+
+## 2026-10-01 20:05 UTC: FeatureMatch OpenAI probes, and GPU congestion now blocks agent measurement
+- 20261001-182038_openai_probe_orch (featurematch worktree): gpt-6-luna 0/3 and 3/4 slots (both FAIL; small-model signal is consistent).
+  Both gpt-6.1-sol episodes were starved by the GPU queue (5 tool calls in 90 min) and are excluded as an environment fault.
+- Lesson: with ~9 builders running gates, agent episodes on GPU-heavy tasks (7 GB tool servers) cannot be measured
+  reliably. Agent-measurement batches should run when builder load drops (after the build workflows finish), or in
+  dedicated windows. An overcommit change to gpuq that would have helped was denied by the permission classifier
+  (it touches a shared resource), so I left it alone and noted it for Dan.
