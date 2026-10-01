@@ -153,3 +153,14 @@ events, orchestration decisions and gate summaries, with links.
   the workflow stage. It is idle except for its own background gate jobs.
 - Risk flagged for the integrator and auditor: the grader is now looser and some accepted answers are junk, which can
   raise recipe/black-box pass rates. Those gates must be re-run after augmentation.
+
+## 2026-10-01 19:20 UTC: EditFind decision: rebuild the edit bank for specificity (last attempt before DROP)
+- Reference v4 on the final grader: T1 8/16 (Wilson 0.28-0.72), T2 9/16 (0.33-0.77). Null-slot FP 0.00. Recipes 0/36 except
+  "nothing found" T2 1/36 (runs/editfind/20261001-190458_prelim_reference_v4, ..._190457_prelim_recipes_cpu, editfind worktree).
+- Root cause (agent's analysis): the planted ground truth is under-specified. A ROME edit also moves same-named
+  neighbours (iPhone XS along with Lexus NX), its side effects depend on wording, and some edits barely move on new wordings.
+  A correct auditor's answer is therefore graded wrong about half the time. That is a task bug, not difficulty.
+- Decision (mine): rebuild the bank, keeping only *specific* edits (key-scan neighbours move <= 1 nat; only the edited
+  relation moves, to the target, on held-out wordings). Log per-relation survival and check the filter does not leave
+  only "easy" edits. Enlarge the pool >= 2x (memorisation risk). Time-box 1.5 h. If the reference is still < 95% after
+  this, editfind is DROP / "explored, not validated" (second gate failure for the same root cause).
