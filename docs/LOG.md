@@ -45,3 +45,12 @@ events, orchestration decisions and gate summaries, with links.
   false-positive checks + GPU smoke on Qwen2.5-0.5B through the queue with eviction). Results in the READY commit message.
 - Not yet exercised: a real LLM subagent episode end to end (the builder of this harness could not spawn subagents).
   The audit was checked to parse a real Claude Code subagent transcript from this machine.
+
+## 2026-10-01 ~16:10 UTC: harness READY, API runner verified, Phase 0 done, Wave 2 launching
+- The harness (common/) is READY. Independent verification is still running in the build workflow.
+- API runner verified end to end on _demo: Haiku, valid audit, pass, $0.028 (runs/_demo/20261001-152109_apiplumbing).
+  Per-task API caps now in runs/api_budget/task_caps.json (Wave-1 $1.00 each, Wave-2 $1.20 each). Global hard stop $16.
+- Phase 0 ideation (ideation/CANDIDATES.md): 41 candidates scored by two independent harsh scorers. Wave 2 = C02
+  BoolIntermediates (a), C03 SilentPathway (a), C20 LatentDiff (b), C13 ResidualRecall (b), C27 ShiftHunt (c),
+  C37 T2-RAVEL from scratch (c). T2-RAVEL scored only 28/45 (weak nulls, mid-band doubts). It is built anyway because Dan
+  asked for it explicitly. The builder must make the null design honest or report that it cannot.

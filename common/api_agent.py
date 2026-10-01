@@ -122,6 +122,29 @@ def _ledger_append(rec):
             fcntl.flock(lf, fcntl.LOCK_UN)
 
 
+def _task_total(task):
+    tot = 0.0
+    if os.path.exists(LEDGER):
+        with open(LEDGER) as f:
+            for line in f:
+                try:
+                    r = json.loads(line)
+                except Exception:
+                    continue
+                if r.get("task") == task:
+                    tot += r["usd"]
+    return tot
+
+
+def _task_cap(task):
+    """Per-task cap from runs/api_budget/task_caps.json ({"default": x, "<task>": y}); orchestrator-owned."""
+    try:
+        caps = json.load(open(os.path.join(LEDGER_DIR, "task_caps.json")))
+    except Exception:
+        caps = {}
+    return float(caps.get(task, caps.get("default", 1.2)))
+
+
 def _est_next(model, ctx_tokens, max_out):
     """Pessimistic next-request cost: whole context as a cache write, plus max_out output tokens."""
     pin, pout, _ = PRICES[model]
@@ -151,6 +174,8 @@ def run(args):
     import anthropic
 
     model = args.model
+    if not args.task:
+        raise SystemExit("--task is required (per-task API caps are enforced)")
     if model not in PRICES:
         raise SystemExit(f"unknown model {model}; known: {list(PRICES)}")
     sbx = os.path.join(SBX_ROOT, args.episode)
@@ -180,6 +205,9 @@ def run(args):
         est = _est_next(model, ctx_tokens + 2000, args.max_tokens)
         if _ledger_total() + est > GLOBAL_CAP_USD:
             stop = "global_budget"
+            break
+        if _task_total(args.task) + est > _task_cap(args.task):
+            stop = "task_budget"
             break
         if spent + est > args.max_usd:
             stop = "episode_budget"
@@ -263,7 +291,12 @@ def spent(_args):
             for k in (("model", r["model"]), ("task", r.get("task") or "?")):
                 by.setdefault(k, 0.0)
                 by[k] += r["usd"]
-    print(json.dumps({"total_usd": round(_ledger_total(), 4), "cap_usd": GLOBAL_CAP_USD,
+    caps = {}
+    try:
+        caps = json.load(open(os.path.join(LEDGER_DIR, "task_caps.json")))
+    except Exception:
+        pass
+    print(json.dumps({"total_usd": round(_ledger_total(), 4), "cap_usd": GLOBAL_CAP_USD, "task_caps": caps,
                       "breakdown": {f"{a}={b}": round(v, 4) for (a, b), v in sorted(by.items())}}, indent=1))
 
 

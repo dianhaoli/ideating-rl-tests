@@ -134,6 +134,6 @@ $PY -m common.api_agent spent
 ```
 (Check `docs/HARNESS_API.md` for exact flags. The prepare output format may differ slightly.)
 Read the transcript. Did the agent understand the task? Was it trivially easy? Did it fail for a reason that is about
-interpretability, or because of an environment problem? Tweak, then probe again. **Budget: at most $1.50 of API spend per
-task in total, at most 3 episodes.** The ledger is shared by all tasks and hard-stops at $16 overall. Never print the key.
+interpretability, or because of an environment problem? Tweak, then probe again. **Budget: the per-task cap in runs/api_budget/task_caps.json (default $1.20) is enforced by api_agent, so plan
+about 2 episodes at --max-usd 0.6. `--task` is required.** The ledger is shared by all tasks and hard-stops at $16 overall. Never print the key.
 For more episodes use free fresh Claude Code subagents (the orchestrator runs those).
