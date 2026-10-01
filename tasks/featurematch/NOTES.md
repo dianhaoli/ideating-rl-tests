@@ -220,3 +220,22 @@
 - Gates launched through `common.sandbox run-scripted` at 16:51 UTC, prefix `runs/featurematch/20261001-165118_gate_*`:
   reference (one attempt per instance first; best-of-5 retries only on failures), blackbox, and all 8 recipes, on all
   72 instances. The GPU was full (21/21 GB admitted to other builders), so they started queued.
+
+## 2026-10-01 17:27 UTC — first gate launch lost to the GPU queue; fixed and relaunched
+- The first launch (`runs/featurematch/20261001-165118_gate_*`, renamed `..._ABORTED`) waited 30 min for GPU
+  admission: the queue admits greedily by memory, and smaller jobs from other builders kept filling every gap before
+  a 7 GB request fit. The scripted client's default admission wait is 30 min, so both first solvers exited WITHOUT
+  submitting, and the harness graded that as a VALID fail (score 0). Left alone, this would have pushed the
+  reference's rate down and the baselines' rates down (making the ≤10% gates look safer than they are).
+- Fixes: (1) solvers use `Client(ep, wait_limit_s=RL_WAIT_LIMIT_S)` (default 6 h); (2) the five model-free recipe
+  variants read the slot list from the sandbox's TASK.md (exactly what an agent sees) instead of calling `task_info`,
+  so they never start a tool server or touch the GPU queue (parser checked against public.json on all 72
+  instances: 0 mismatches); (3) `gate_report.py` counts an episode with no submission as an infrastructure failure,
+  reports the count, and leaves it out of the rates (scripted solvers always submit unless they crash).
+- Relaunched as `runs/featurematch/<ts>_gate_{reference,recipes,blackbox}` (ts = 20261001-172659
+  ).
+- Seen while relaunching: the orchestrator ran two API probes on this pool (`20261001-171048_apiprobe_sonnet`,
+  Sonnet, after PREDICTIONS.md was committed; an earlier Opus attempt `..._165348_apiprobe_orch` was aborted at turn 3).
+  T2 fm-t2-08a4773087: score 0.8, one PLANTED slot answered "nothing found", episode INVALID (transcript audit).
+  T3 fm-t3-025fcaa85e: score 0.5, two wrong claims on planted slots, used only 103 of 550 forward units. n=2: not a
+  measurement. Both instances are excluded from the smoke plan because an agent has already seen them.
