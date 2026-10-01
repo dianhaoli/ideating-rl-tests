@@ -1,0 +1,53 @@
+{
+ "score": 1.0,
+ "pass": true,
+ "details": {
+  "slots": [
+   {
+    "planted": false,
+    "correct": true,
+    "claimed": false
+   }
+  ],
+  "submitted": true,
+  "grader_pid": 382770
+ },
+ "harness": {
+  "episode": "ep46367f24ce",
+  "task": "_demo",
+  "instance_id": "dm-5eb561a4",
+  "tier": "T1",
+  "profile": "full",
+  "solver_label": "openai-gpt-6.1-sol",
+  "agent_model": "openai:gpt-6.1-sol:medium",
+  "submitted": true,
+  "status": "submitted",
+  "counters": {
+   "tool_calls": 1,
+   "forward": 0,
+   "generate": 0,
+   "gradient": 0
+  },
+  "caps": {
+   "tool_calls": 20,
+   "forward": 40,
+   "generate": 0,
+   "gradient": 0,
+   "wall_clock_s": 600,
+   "call_timeout_s": 30
+  },
+  "behavioral_exposure": 0,
+  "leak_detected": false,
+  "leak_reasons": [],
+  "agent_files_with_leak_strings": 0,
+  "symlinks_outside": [],
+  "cross_episode_access": false,
+  "audit_valid": true,
+  "audit_skipped": null,
+  "n_audit_violations": 0,
+  "valid": true,
+  "invalid_reasons": [],
+  "elapsed_s": 4.5,
+  "wait_s": 0.5
+ }
+}

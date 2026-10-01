@@ -136,3 +136,20 @@ Full list with before/after in docs/HARNESS_VERIFICATION.md. The ones Dan might 
   free Claude Code subagents (Opus-class) as the frontier proxy. Two in-flight Opus FeatureMatch probes were stopped
   after 3 turns ($0.12) and are re-run on Sonnet. A LatentDiff builder probe already in flight on Opus (old worktree
   code) was left to finish, since stopping it would waste what it had already spent.
+
+## D13. OpenAI test agent, $60 budget (Dan, 2026-10-01 ~18:30 UTC)
+- **Change**: Dan added an OpenAI key, with $60 to "use when necessary, no need to ration". Models available include
+  gpt-6.1-sol / gpt-6-sol ($2 in, $10 out per 1M tokens; cached input $0.10 / $0.20) and gpt-6-luna ($0.10 / $0.50). Prices
+  were read from developers.openai.com/api/docs/pricing on 2026-10-01.
+- **Mechanism**: `common/openai_agent.py` has the same containment, transcript shape and audit as api_agent (shared
+  `_run_bash` guard, scrubbed environment, submission read from the episode record). It uses the Responses API, because
+  chat completions reject function tools combined with reasoning effort for these models. Ledger
+  `~/.rl_api/openai_ledger.jsonl`, global hard stop $57; per-task cap `task_caps.json["openai"]` (default $4);
+  per-episode --max-usd (default $0.50).
+- **Roles**: gpt-6.1-sol is the second-family frontier-ish probe agent. gpt-6-luna is the cheap small model for capability
+  separation (about $0.001 per demo episode). Claude (Sonnet/Haiku via API, Opus-class via free subagents) stays the main
+  family. Every number carries its provider:model:effort label.
+- **When to use**: a difficulty probe that should not be Claude-specific, the small-vs-large separation, and scale-up
+  measurements on the validated task. Not for routine bug-finding (free subagents do that).
+- Plumbing verified on _demo (runs/_demo/*_openai_plumbing): luna and 6.1-sol both valid, passed, $0.0007 and $0.008.
+- Key storage: `.env` key OPENAI_KEY (quoted). The runner reads an unquoted copy at ~/.openai_env (mode 600, outside the repo).

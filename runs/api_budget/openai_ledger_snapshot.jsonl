@@ -1,0 +1,8 @@
+{"t": 1790878763.025724, "episode": "ep3c8a6bc117", "task": "_demo", "model": "gpt-6-luna", "effort": "medium", "turn": 1, "usd": 7.4e-05, "input": 541, "cached": 0, "output": 40, "reasoning": 0}
+{"t": 1790878765.0043058, "episode": "ep3c8a6bc117", "task": "_demo", "model": "gpt-6-luna", "effort": "medium", "turn": 2, "usd": 0.000145, "input": 1066, "cached": 0, "output": 77, "reasoning": 27}
+{"t": 1790878770.2581778, "episode": "ep3c8a6bc117", "task": "_demo", "model": "gpt-6-luna", "effort": "medium", "turn": 3, "usd": 0.00012, "input": 1556, "cached": 1063, "output": 121, "reasoning": 47}
+{"t": 1790878774.6083934, "episode": "ep3c8a6bc117", "task": "_demo", "model": "gpt-6-luna", "effort": "medium", "turn": 4, "usd": 0.000227, "input": 2228, "cached": 1553, "output": 287, "reasoning": 142}
+{"t": 1790878781.097589, "episode": "ep3c8a6bc117", "task": "_demo", "model": "gpt-6-luna", "effort": "medium", "turn": 5, "usd": 0.000143, "input": 2532, "cached": 2225, "output": 181, "reasoning": 132}
+{"t": 1790878791.8876138, "episode": "ep46367f24ce", "task": "_demo", "model": "gpt-6.1-sol", "effort": "medium", "turn": 1, "usd": 0.001454, "input": 537, "cached": 0, "output": 38, "reasoning": 0}
+{"t": 1790878797.1959772, "episode": "ep46367f24ce", "task": "_demo", "model": "gpt-6.1-sol", "effort": "medium", "turn": 2, "usd": 0.004226, "input": 1108, "cached": 0, "output": 201, "reasoning": 0}
+{"t": 1790878800.945043, "episode": "ep46367f24ce", "task": "_demo", "model": "gpt-6.1-sol", "effort": "medium", "turn": 3, "usd": 0.002462, "input": 2056, "cached": 1105, "output": 45, "reasoning": 0}

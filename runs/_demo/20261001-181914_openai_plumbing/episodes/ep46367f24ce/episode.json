@@ -1,0 +1,43 @@
+{
+ "episode": "ep46367f24ce",
+ "task": "_demo",
+ "instance_id": "dm-5eb561a4",
+ "tier": "T1",
+ "profile": "full",
+ "solver_label": "openai-gpt-6.1-sol",
+ "agent_model": "openai:gpt-6.1-sol:medium",
+ "sandbox": "/home/ec2-user/rlsbx/ep46367f24ce",
+ "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/d3ffcbb33aec/dm-5eb561a4",
+ "caps": {
+  "tool_calls": 20,
+  "forward": 40,
+  "generate": 0,
+  "gradient": 0,
+  "wall_clock_s": 600,
+  "call_timeout_s": 30
+ },
+ "counters": {
+  "tool_calls": 1,
+  "forward": 0,
+  "generate": 0,
+  "gradient": 0
+ },
+ "tools": [
+  "query",
+  "weights"
+ ],
+ "gpu_gb": 0.0,
+ "status": "submitted",
+ "created_at": 1790878783.8958497,
+ "started_at": 1790878797.3242612,
+ "submitted_at": 1790878801.8362849,
+ "closed_at": 1790878802.915159,
+ "wait_s": 0.5110571384429932,
+ "leak_detected": false,
+ "behavioral_exposure": 0,
+ "git_sha": "7ace2d437eb904980fb579eea61108be32e43b18",
+ "git_dirty": true,
+ "n_leak_events": 0,
+ "cross_episode_access": false,
+ "finished_at": 1790878803.1145592
+}

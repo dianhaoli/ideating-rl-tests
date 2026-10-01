@@ -1,0 +1,22 @@
+{
+ "episode": "ep3c8a6bc117",
+ "task": "_demo",
+ "provider": "openai",
+ "model": "gpt-6-luna",
+ "effort": "medium",
+ "turns": 5,
+ "stop": "submitted",
+ "budget_warned": false,
+ "usd": 0.0007,
+ "usage": {
+  "input": 7923,
+  "cached": 4841,
+  "output": 706,
+  "reasoning": 348
+ },
+ "blocked_commands": 0,
+ "wall_s": 22.7,
+ "openai_ledger_total_usd": 0.0007,
+ "global_cap_usd": 57.0,
+ "openai_sdk": "3.22.1"
+}

@@ -1,0 +1,22 @@
+{
+ "episode": "ep46367f24ce",
+ "task": "_demo",
+ "provider": "openai",
+ "model": "gpt-6.1-sol",
+ "effort": "medium",
+ "turns": 3,
+ "stop": "submitted",
+ "budget_warned": true,
+ "usd": 0.0081,
+ "usage": {
+  "input": 3701,
+  "cached": 1105,
+  "output": 284,
+  "reasoning": 0
+ },
+ "blocked_commands": 0,
+ "wall_s": 14.8,
+ "openai_ledger_total_usd": 0.0089,
+ "global_cap_usd": 57.0,
+ "openai_sdk": "3.22.1"
+}

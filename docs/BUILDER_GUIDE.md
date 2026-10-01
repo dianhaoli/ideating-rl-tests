@@ -149,3 +149,7 @@ name (e.g. `--label editfind-gates`). Fairness is keyed on that prefix.
 - **2026-10-01 17:20: probes use Sonnet or Haiku, NOT Opus (Dan: Opus is too expensive).** api_agent now refuses
   `claude-opus-5-5` (allowed: `claude-sonnet-5-5` (default), `claude-haiku-4-5`). Sonnet 5.5 costs half as much as Opus 5.5
   per token. A task that Sonnet solves trivially is too easy for Opus as well. Label runs `api-sonnet` / `api-haiku`.
+- **2026-10-01 18:35: OpenAI probes are available (D13).** `python -m common.openai_agent run --episode E --task T
+  --prompt-file ... --out ... --model gpt-6.1-sol` (or `gpt-6-luna` as the small model). It uses the same sandbox, audit
+  and finish flow (`--agent-model openai:gpt-6.1-sol:medium`). Per-task OpenAI cap $4. Use it when a second model
+  family matters (difficulty that should not be Claude-specific, small-vs-large separation), not for routine debugging.

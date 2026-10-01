@@ -13,5 +13,9 @@
  "allowed_models": [
   "claude-sonnet-5-5",
   "claude-haiku-4-5"
- ]
+ ],
+ "openai": {
+  "default": 4.0,
+  "_demo": 0.2
+ }
 }
