@@ -9,8 +9,10 @@ scrubbed environment (no HF token, no API key, HOME = sandbox).
 
 Budget safety (hard rules):
   * Every request's cost is computed from response.usage at list prices and
-    appended to runs/api_budget/ledger.jsonl (flock-guarded). Committed to git,
-    so every dollar traces to an episode.
+    appended to the machine-wide ledger ~/.rl_api/ledger.jsonl (flock-guarded,
+    outside every checkout, so all worktrees share one budget). `spent --snapshot`
+    copies the deduplicated ledger to runs/api_budget/ledger_snapshot.jsonl in the
+    main repo for git, so every dollar traces to an episode.
   * GLOBAL_CAP_USD (default 16.0, leaving $1 of slack under Dan's $17) is checked
     before every request, using a pessimistic estimate of the next request's cost.
     If the estimate would cross the cap, the episode stops without calling the API.
@@ -37,9 +39,18 @@ import sys
 import time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LEDGER_DIR = os.path.join(REPO, "runs", "api_budget")
+try:
+    from common.paths import MAIN_REPO
+except Exception:  # pragma: no cover
+    MAIN_REPO = REPO
+# The canonical ledger lives OUTSIDE every checkout so all worktrees share one budget. Code before 2026-10-01 16:30
+# wrote per-worktree ledgers at <checkout>/runs/api_budget/ledger.jsonl; those are still read (deduplicated) so the
+# global total counts every dollar wherever it was spent.
+LEDGER_DIR = os.path.expanduser(os.environ.get("RL_API_LEDGER_DIR", "~/.rl_api"))
 LEDGER = os.path.join(LEDGER_DIR, "ledger.jsonl")
 LOCK = os.path.join(LEDGER_DIR, ".lock")
+CAPS_FILE = os.path.join(MAIN_REPO, "runs", "api_budget", "task_caps.json")
+SNAPSHOT = os.path.join(MAIN_REPO, "runs", "api_budget", "ledger_snapshot.jsonl")
 GLOBAL_CAP_USD = float(os.environ.get("API_GLOBAL_CAP_USD", "16.0"))
 KEY_FILE = os.path.expanduser("~/.anthropic_env")
 SBX_ROOT = os.path.expanduser("~/rlsbx")
@@ -99,16 +110,32 @@ def _cost(model, usage):
     return (inp * pin + cw * pin * 1.25 + cr * pread + out * pout) / 1e6, dict(input=inp, cache_write=cw, cache_read=cr, output=out)
 
 
-def _ledger_total():
-    tot = 0.0
-    if os.path.exists(LEDGER):
-        with open(LEDGER) as f:
+def _ledger_files():
+    import glob
+    files = [LEDGER, os.path.join(MAIN_REPO, "runs", "api_budget", "ledger.jsonl")]
+    files += sorted(glob.glob(os.path.expanduser("~/wt/*/runs/api_budget/ledger.jsonl")))
+    return [f for f in files if os.path.exists(f)]
+
+
+def _records():
+    """Every ledger record from every known ledger file, deduplicated (worktrees copied main's committed lines)."""
+    seen, out = set(), []
+    for fpath in _ledger_files():
+        with open(fpath) as f:
             for line in f:
                 try:
-                    tot += json.loads(line)["usd"]
+                    r = json.loads(line)
                 except Exception:
-                    pass
-    return tot
+                    continue
+                k = (r.get("t"), r.get("episode"), r.get("turn"), r.get("model"))
+                if k not in seen:
+                    seen.add(k)
+                    out.append(r)
+    return out
+
+
+def _ledger_total():
+    return sum(r.get("usd", 0.0) for r in _records())
 
 
 def _ledger_append(rec):
@@ -123,23 +150,13 @@ def _ledger_append(rec):
 
 
 def _task_total(task):
-    tot = 0.0
-    if os.path.exists(LEDGER):
-        with open(LEDGER) as f:
-            for line in f:
-                try:
-                    r = json.loads(line)
-                except Exception:
-                    continue
-                if r.get("task") == task:
-                    tot += r["usd"]
-    return tot
+    return sum(r.get("usd", 0.0) for r in _records() if r.get("task") == task)
 
 
 def _task_cap(task):
-    """Per-task cap from runs/api_budget/task_caps.json ({"default": x, "<task>": y}); orchestrator-owned."""
+    """Per-task cap from <main repo>/runs/api_budget/task_caps.json ({"default": x, "<task>": y}); orchestrator-owned."""
     try:
-        caps = json.load(open(os.path.join(LEDGER_DIR, "task_caps.json")))
+        caps = json.load(open(CAPS_FILE))
     except Exception:
         caps = {}
     return float(caps.get(task, caps.get("default", 1.2)))
@@ -283,21 +300,24 @@ def run(args):
     print(json.dumps(meta))
 
 
-def spent(_args):
+def spent(args):
+    recs = sorted(_records(), key=lambda r: r.get("t", 0))
     by = {}
-    if os.path.exists(LEDGER):
-        for line in open(LEDGER):
-            r = json.loads(line)
-            for k in (("model", r["model"]), ("task", r.get("task") or "?")):
-                by.setdefault(k, 0.0)
-                by[k] += r["usd"]
+    for r in recs:
+        for k in (("model", r.get("model")), ("task", r.get("task") or "?")):
+            by[k] = by.get(k, 0.0) + r.get("usd", 0.0)
     caps = {}
     try:
-        caps = json.load(open(os.path.join(LEDGER_DIR, "task_caps.json")))
+        caps = json.load(open(CAPS_FILE))
     except Exception:
         pass
-    print(json.dumps({"total_usd": round(_ledger_total(), 4), "cap_usd": GLOBAL_CAP_USD, "task_caps": caps,
-                      "breakdown": {f"{a}={b}": round(v, 4) for (a, b), v in sorted(by.items())}}, indent=1))
+    if getattr(args, "snapshot", False):
+        with open(SNAPSHOT, "w") as f:
+            for r in recs:
+                f.write(json.dumps(r) + "\n")
+    print(json.dumps({"total_usd": round(sum(r.get("usd", 0.0) for r in recs), 4), "cap_usd": GLOBAL_CAP_USD,
+                      "task_caps": caps, "n_requests": len(recs), "ledger_files": _ledger_files(),
+                      "breakdown": {f"{a}={b}": round(v, 4) for (a, b), v in sorted(by.items(), key=str)}}, indent=1))
 
 
 def main():
@@ -313,7 +333,8 @@ def main():
     r.add_argument("--max-turns", type=int, default=40)
     r.add_argument("--max-tokens", type=int, default=12000)
     r.add_argument("--max-usd", type=float, default=1.25)
-    sub.add_parser("spent")
+    sp = sub.add_parser("spent")
+    sp.add_argument("--snapshot", action="store_true", help="also write the deduplicated ledger into the main repo")
     a = ap.parse_args()
     {"run": run, "spent": spent}[a.cmd](a)
 

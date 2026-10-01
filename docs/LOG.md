@@ -68,3 +68,14 @@ events, orchestration decisions and gate summaries, with links.
 - All fixed (D13); details and remaining risks in docs/HARNESS_VERIFICATION.md. Full suite: see the commit message.
 - The real API-agent episode (runs/_demo/20261001-152109_apiplumbing) is still VALID under the new audit.
 - Action: the live broker must be restarted to load the fixes (done if no episode was open). Builders: `git merge main`.
+
+## 2026-10-01 16:35 UTC: API ledger bug (per-worktree ledgers) found and fixed
+- Symptom: BoolIntermediates and SilentPathway ran API probes, but the main ledger did not show them. Cause: the same
+  bug class the harness builder hit with gpuq. api_agent anchored its ledger on "the checkout this file lives in",
+  so every worktree had its own ledger, and the $16 global stop only saw that worktree's spend.
+- Impact: none so far. Per-task caps were still enforced correctly, because each task only runs from its own worktree.
+  The per-task caps sum to about $10.3 (< $16), so the global budget was bounded anyway. Real total at fix time: $0.708 over 43
+  requests (boolintermediates $0.465, silentpathway $0.215, demo $0.028).
+- Fix: the canonical ledger is now ~/.rl_api/ledger.jsonl, outside every checkout. The global and per-task totals read that
+  file plus every legacy per-worktree ledger, deduplicated. Caps are read from the main repo. `spent --snapshot`
+  writes runs/api_budget/ledger_snapshot.jsonl for git.
