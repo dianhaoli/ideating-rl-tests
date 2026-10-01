@@ -4,25 +4,35 @@ An instance (= one episode) has 3-5 SLOTS. Each slot names one SAE latent (layer
 20 candidate concepts; the agent answers one option or "nothing found" per slot.
 
 Ground truth per slot (computed here from the HELD-OUT split A, which no tool can read):
-  * planted slot: the menu contains the latent's best concept c*, with held-out AUROC(c*) >= P_THR, the latent fires
-    on >= FIRE_MIN of c*'s held-out texts, the association replicates on the independent probe split B
-    (AUROC_B(c*) >= P_THR_B; this is the per-entity behaviour validation of plan v2), and every other menu option
-    is at least MARGIN below c*. Answer = c*.
-  * null slot: every menu option has held-out AUROC < N_THR. Answer = "nothing found". Two kinds, mixed:
-      - near-miss: a concept-selective latent whose own concept (and anything else >= N_THR) is left OUT of a menu
-        built around that concept's taxonomy neighbourhood (e.g. a Spanish latent with Portuguese/Italian/... but
-        no Spanish). WHY: forces the agent to check that an option really explains the latent, not just that it is
-        the best of the menu.
-      - off-universe: a live latent that is not selective for any of the 232 concepts (e.g. a syntax feature),
-        with a menu built around a random anchor concept.
-  The gap between N_THR and P_THR keeps both answers unambiguous (shortcut warning 4).
-Planted and null slots are built by the SAME menu procedure around an anchor concept, so menus look alike.
-
-Shortcut filter (warning 3): a planted slot is rejected if the naive recipe "encode each option's name, pick the
-max activation" picks c* under ANY of three surface variants (menu label, bare name, "This is about <name>.").
+  Every slot, planted or null, starts the same way: draw a layer, draw an ANCHOR concept c* uniformly from the
+  concepts that own at least one pooled latent at that layer, and draw one of c*'s pooled latents. The latent pool
+  (Tables.pools) holds latents that are selective for one concept: held-out AUROC(c*) >= P_THR, fires on >= FIRE_MIN
+  of c*'s held-out texts, replicates on the independent probe split B (AUROC_B >= P_THR_B; the per-entity behaviour
+  validation of plan v2), at most MAX_SPECIFIC concepts within MARGIN of the best, and the latent does NOT fire on
+  any of the 3 surface variants of c*'s own name (token-identity filter, see below).
+  Both kinds then remove the same "confusable" set X = {c : AUROC_A(c) >= N_THR or AUROC_B(c) >= N_THR_B} (this
+  includes c*) from the distractor candidates, and build the menu by the same procedure around a centre drawn from
+  c*'s sibling group:
+  * planted slot: menu = c* + 19 distractors. Answer = c*. Every distractor is < N_THR on A and < N_THR_B on B, so
+    the answer wins by >= P_THR - N_THR = 0.25 on A and >= 0.13 on B.
+  * null slot ("near-miss"): menu = 20 distractors (c* left out). Answer = "nothing found". The latent is selective
+    for a concept, but not for any option (e.g. a Spanish latent offered Portuguese, Italian ... but not Spanish).
+  WHY one pool and one exclusion set (audit MAJOR 2, 2026-10-01): the earlier design also used "off-universe" nulls
+  (live latents not selective for any concept). Their firing statistics on generic text differed from the
+  concept-selective latents, so "measure the latent on 64 random texts" separated null from planted slots
+  (AUROC 0.70-0.80) without any concept reasoning. Now the latent of a null slot is drawn from exactly the same
+  distribution as the latent of a planted slot, so no statistic of the latent alone can tell them apart; only
+  testing the OPTIONS can. The planted/null difference in the menu is only "c* is present or not".
+Token-identity filter (warning 3; audit MAJOR 3): the old generator rejected a planted MENU when the answer's name was
+the top name-probe activation in that menu. That removed only rank 1, so the answer's name was often exactly rank 2,
+a learnable artifact, and it was applied to planted slots only. Now the filter acts on LATENTS, for every slot kind:
+a latent that fires on any of its own concept's 3 name variants (menu label, bare name, "This is about <name>.") never
+enters the pool. On every slot the answer's name is therefore silent, like most distractor names.
+Menu universe per layer: distractors are drawn only from the concepts that own a pooled latent at that layer (the
+"answerable" set). WHY: otherwise a learned policy could rule out labels that can never be the answer at that layer.
 
 Dials (recorded per instance under "dial"):
-  closeness  "far" (T1): 19 distractors uniform from the universe; "close" (T2): taxonomy siblings first (same
+  closeness  "far" (T1): 19 distractors uniform from the layer's answerable set; "close" (T2): taxonomy siblings first (same
              DBPedia l2 class / same language family, then same l1, then the rest). EXPERIMENTAL dial.
   n_slots    3-5 (drawn per instance; precedent: number of simultaneous targets, MEMIT-style scaling).
   forward cap  per-tier forward-pass budget (precedent: Pando query budget).
@@ -44,11 +54,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 INST = os.path.join(HERE, "instances")
 P_THR, P_THR_B, N_THR, MARGIN, FIRE_MIN = 0.90, 0.85, 0.65, 0.10, 0.5
 MARGIN_B, N_THR_B = 0.08, 0.72   # the same verdict must hold on the independent split B (robust ground truth)
+GEN_VERSION = 2           # 2 = audit fixes (one latent pool for planted and null, latent-level name filter, symmetric
+                          # exclusion set, per-layer menu universe); 1 = stage-1/2 design (git history <= 6847c88)
 MAX_SPECIFIC = 3          # at most this many concepts within MARGIN of the best (otherwise the latent is generic)
 N_OPT = 20
 NOISE = 1.5               # close tier: random jitter added to taxonomy closeness (levels) when ranking menu candidates
 P_NULL = 0.4              # per-slot null probability (independent per slot => randomised null pattern)
-P_NEAR_MISS = 0.6         # share of null slots that are near-miss (rest off-universe)
 TIERS = {
     "T1": {"closeness": "far", "caps": {"tool_calls": 150, "forward": 1200, "generate": 40, "gradient": 0}},
     "T2": {"closeness": "close", "caps": {"tool_calls": 150, "forward": 1200, "generate": 40, "gradient": 0}},
@@ -87,7 +98,8 @@ class Tables:
         return n
 
     def pools(self):
-        self.planted, self.offu = {}, {}
+        """Latent pool per layer, shared by planted AND null slots (see module docstring)."""
+        self.planted, self.planted_by_c, self.answerable, self.pool_stats = {}, {}, {}, {}
         for L in LAYERS:
             A, B, F = self.aA[L], self.aB[L], self.fire[L]
             best = A.argmax(1)
@@ -96,6 +108,11 @@ class Tables:
             bF = F[np.arange(len(F)), best]
             n_near = (A >= (bA - MARGIN)[:, None]).sum(1)
             ok = (bA >= P_THR) & (bB >= P_THR_B) & (bF >= FIRE_MIN) & (n_near <= MAX_SPECIFIC) & self.eligible[best]
+            # latent-level token-identity filter: the latent must stay silent on all 3 variants of its own concept's name
+            own_name = self.names[L].reshape(self.n_c, 3, -1)[best, :, np.arange(len(best))].max(1)
+            name_ok = own_name <= 0
+            self.pool_stats[L] = {"selective": int(ok.sum()), "kept_after_name_filter": int((ok & name_ok).sum())}
+            ok &= name_ok
             self.planted[L] = [(int(j), int(best[j])) for j in np.nonzero(ok)[0]]
             # index by concept: slots sample a CONCEPT uniformly first, then one of its latents. WHY: some concepts
             # own hundreds of selective latents (formulaic texts such as solar-eclipse articles own >2000), so
@@ -103,10 +120,10 @@ class Tables:
             byc = {}
             for j, c in self.planted[L]:
                 byc.setdefault(c, []).append(j)
-            self.planted_by_c = getattr(self, "planted_by_c", {})
             self.planted_by_c[L] = byc
-            off = (A.max(1) < N_THR) & (B.max(1) < N_THR + 0.05) & (self.rate[L] >= 0.01)
-            self.offu[L] = [int(j) for j in np.nonzero(off)[0]]
+            # menu universe at this layer = concepts that can be the answer here (all eligible by construction)
+            self.answerable[L] = np.array(sorted(byc))
+            self.pool_stats[L]["answerable_concepts"] = len(byc)
 
     def naive_pick(self, L, j, menu):
         """Option the naive name-probe recipe would pick under each surface variant (None if all zero)."""
@@ -116,17 +133,17 @@ class Tables:
             picks.append(menu[int(s.argmax())] if s.max() > 0 else None)
         return picks
 
-    def center_for(self, rng, anchor):
+    def center_for(self, rng, anchor, L):
         """Menu centre: a random eligible concept from the anchor's sibling group (same DBPedia l2 class / same
         language family), possibly the anchor itself. WHY: if the menu were always centred on the answer, a planted
         menu would contain its centre and a null menu would not, which a learned policy can detect (measured:
         cross-validated AUROC 0.74 for predicting null from menu structure alone in the close tier, see NOTES)."""
         depth = len(self.paths[anchor]) - 1
-        sib = [c for c in range(self.n_c) if self.eligible[c] and self.close[anchor, c] >= depth]
+        sib = [int(c) for c in self.answerable[L] if self.close[anchor, c] >= depth]
         return int(rng.choice(sib)) if sib else anchor
 
-    def menu_around(self, rng, center, exclude, closeness, k):
-        pool = np.array([c for c in range(self.n_c) if c not in exclude and self.eligible[c]])
+    def menu_around(self, rng, center, exclude, closeness, k, L):
+        pool = np.array([c for c in self.answerable[L] if c not in exclude])
         if closeness == "far":
             return [int(x) for x in rng.choice(pool, size=k, replace=False)]
         # closest to the centre first, with noise so that sibling groups are sometimes incomplete in BOTH planted and
@@ -136,44 +153,35 @@ class Tables:
 
 
 def make_slot(T, rng, closeness, null, used):
-    """Draw the layer, then the anchor CONCEPT (uniform over concepts that own a selective latent at that layer, for
-    planted AND null slots alike, so the anchor distribution carries no planted/null signal), then the slot kind,
-    then retry latents for that same anchor; only if that fails repeatedly is a new anchor drawn."""
+    """Draw the layer, then the anchor CONCEPT c* uniformly over the layer's answerable concepts, then one of c*'s
+    pooled latents. Planted and null slots share every step; they differ only in whether c* is put in the menu.
+    There is no rejection step that depends on the slot kind, so no selection bias separates the two kinds."""
     L = int(rng.choice(LAYERS))
     byc = T.planted_by_c[L]
     keys = sorted(byc)
-    kind = "planted" if not null else ("near_miss" if rng.random() < P_NEAR_MISS else "off_universe")
-    for attempt in range(2000):
-        if attempt % 200 == 0:
-            cstar = keys[int(rng.integers(len(keys)))]
-        if kind == "off_universe":
-            j = T.offu[L][int(rng.integers(len(T.offu[L])))]
-        else:
-            j = byc[cstar][int(rng.integers(len(byc[cstar])))]
+    kind = "near_miss" if null else "planted"
+    for attempt in range(200):
+        cstar = keys[int(rng.integers(len(keys)))]
+        j = byc[cstar][int(rng.integers(len(byc[cstar])))]
         if (L, j) in used:
             continue
         A = T.aA[L][j]
         Bv = T.aB[L][j]
+        excl = set(np.nonzero((A >= N_THR) | (Bv >= N_THR_B))[0].tolist()) | {cstar}
+        center = T.center_for(rng, cstar, L)
         if kind == "planted":
-            excl = set(np.nonzero(A >= A[cstar] - MARGIN)[0].tolist())
-            menu = [cstar] + T.menu_around(rng, T.center_for(rng, cstar), excl | {cstar}, closeness, N_OPT - 1)
-            if any(p == cstar for p in T.naive_pick(L, j, menu)):
-                continue                                   # token-identity shortcut works here: reject
-            if max(Bv[c] for c in menu[1:]) > Bv[cstar] - MARGIN_B:
-                continue                                   # verdict not robust on split B: reject
+            menu = [cstar] + T.menu_around(rng, center, excl, closeness, N_OPT - 1, L)
         else:
-            excl = set(np.nonzero(A >= N_THR)[0].tolist()) | {cstar}
-            menu = T.menu_around(rng, T.center_for(rng, cstar), excl, closeness, N_OPT)
-            if max(Bv[c] for c in menu) >= N_THR_B:
-                continue                                   # some option looks selective on split B: ambiguous null
+            menu = T.menu_around(rng, center, excl, closeness, N_OPT, L)
         menu = [menu[i] for i in rng.permutation(len(menu))]
         aucs = [float(A[c]) for c in menu]
         srt = sorted(aucs, reverse=True)
         if kind == "planted":
-            assert menu[int(np.argmax(aucs))] == cstar and srt[0] - srt[1] >= MARGIN - 1e-6
+            assert menu[int(np.argmax(aucs))] == cstar and srt[0] >= P_THR and srt[1] < N_THR
+            assert max(Bv[c] for c in menu if c != cstar) < N_THR_B <= P_THR_B <= Bv[cstar]
             choice = menu.index(cstar) + 1
         else:
-            assert srt[0] < N_THR
+            assert srt[0] < N_THR and max(Bv[c] for c in menu) < N_THR_B
             choice = "nothing found"
         used.add((L, j))
         return {"layer": L, "real_latent": j, "kind": kind, "anchor": T.cs[cstar]["cid"], "menu": menu,
@@ -217,7 +225,8 @@ def make_instance(T, seed, tier):
                   "slots": [{k: (s[k] if k != "menu" else [T.cs[c]["cid"] for c in s["menu"]]) for k in s}
                             for s in slots],
                   "thresholds": {"P_THR": P_THR, "P_THR_B": P_THR_B, "N_THR": N_THR, "MARGIN": MARGIN,
-                                 "FIRE_MIN": FIRE_MIN, "MARGIN_B": MARGIN_B, "N_THR_B": N_THR_B}},
+                                 "FIRE_MIN": FIRE_MIN, "MARGIN_B": MARGIN_B, "N_THR_B": N_THR_B},
+                  "gen_version": GEN_VERSION},
     }
     return iid, inst, public
 
@@ -271,7 +280,7 @@ def main():
                   indent=0)
         print("prior over", tot, "planted slots; top:", cnt.most_common(5))
         return
-    print({L: (len(T.planted[L]), len(T.offu[L])) for L in LAYERS})
+    print(json.dumps(T.pool_stats))
     if a.clean and os.path.exists(INST):
         shutil.rmtree(INST)
     man = []
@@ -288,7 +297,7 @@ def main():
             man.append({"instance_id": iid, "tier": tier, "seed": seed, "dial": inst["dial"],
                         "files": {f: sha(os.path.join(d, f)) for f in ("instance.json", "public.json")}})
     with open(mpath, "w") as f:
-        json.dump({"generator": "tasks/featurematch/generate.py",
+        json.dump({"generator": "tasks/featurematch/generate.py", "gen_version": GEN_VERSION,
                    "concepts_sha256": json.load(open(os.path.join(C.CACHE, "concepts_validation.json")))["sha256"],
                    "instances": man}, f, indent=1)
     print("wrote", len(man), "instances")

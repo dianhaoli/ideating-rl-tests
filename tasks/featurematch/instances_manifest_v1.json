@@ -1,0 +1,1518 @@
+{
+ "generator": "tasks/featurematch/generate.py",
+ "concepts_sha256": "cf52ab631f1c31c7c5fb25637b4b44d8976b13cf4f02ee5ca38d0c0a688e25e8",
+ "instances": [
+  {
+   "instance_id": "fm-t1-683b61583f",
+   "tier": "T1",
+   "seed": 5000,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "284351d069dc5142877ad18f5475c1a48517cd586a250244ac90fe78809961cd",
+    "public.json": "067fc53a2243f6f5e4da84f8365b5d2cac9ff9d7690b4a81162c6b4475897045"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-7c2699b0ad",
+   "tier": "T1",
+   "seed": 5001,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "eb1c8392a6790a3e28c746b13e3fde3ac6c11791f57e8705dd849c989d13394f",
+    "public.json": "3c64a5c95cb83e70b6c6fd777dc65dd594715109d0d95d8a91bd6e991e64e716"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-d757115148",
+   "tier": "T1",
+   "seed": 5002,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "86b46cb52f5e0ff3f8ca52d8207760974a17ce6268cc0908b1226d96dfbe992f",
+    "public.json": "f005c82ae2a9467639e9a5dd3fb6982e3d2ec40fc9332326188f2daebf246ef9"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-ddefee841b",
+   "tier": "T1",
+   "seed": 5003,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "92bef936cce6fc13cbc885d3bfb8c0b6f0261baea6a5fc60997a550b0bbee84f",
+    "public.json": "98a5fa3a50e83233555801e1735898eb8f675daf9276a1252bb0b553580035ef"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-89cae67800",
+   "tier": "T1",
+   "seed": 5004,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "0b4ea1629ae66dc6c2ad562c100bb29a5233fbe2e8a29037f57b6b099ad92077",
+    "public.json": "4d1c8ad790481a6dc8060d7e9d64abdae72461e9150ec01039717f2769c3446f"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-385b4cde6f",
+   "tier": "T1",
+   "seed": 5005,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "28fa8eed87fee3f189a5d935a193fbcd77c3490df10db505b218434897125592",
+    "public.json": "1936d445bcc692fe7707d73f93908873deffd69254204fa49cef821e3e46748f"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-29f1aef970",
+   "tier": "T1",
+   "seed": 5006,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "bb002c2f96141408e8585725f4beb0a272b22123ebdd4ff7c154d8783e50778b",
+    "public.json": "578788d2989783d4134f0029d03438ae76a2b088d8a57c45f7adbd7cf628f2c7"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-bad8fea09f",
+   "tier": "T1",
+   "seed": 5007,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "baa2f29addc1debf702e1454d0875dfc7fda52b6d11667b2148d67120d804b23",
+    "public.json": "74256d84ac7409e51118e383fcb465cfa87245391e7b0bd22cc86213fbb9282d"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-1c0cd1d5ed",
+   "tier": "T1",
+   "seed": 5008,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "cf9c247b4ee369315727c5db74f0b743987b402120608d1723fa60298d1b9c58",
+    "public.json": "a9e5b1f8a6989c1f8fec538e7b0d68442371e4721ff1c916a4629412e22a92cf"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-07e0a3cb3f",
+   "tier": "T1",
+   "seed": 5009,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3f1e2cc6d6982fb09ab8aa20bc15066cb50021232fed3662ec6401caec11a305",
+    "public.json": "f12e983a7d96f8cfb5938f24348f157c85a494792eca100d760a4eb3ffd334aa"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-7336320fe7",
+   "tier": "T1",
+   "seed": 5010,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "fdee3ce3effad1b6f559a9c190e5c4b66bad3bd62f03cac997c893ca8d3492e2",
+    "public.json": "544193fa3531b9895b4e6212b99c7d2a64643c497420ba3dee7f5f32cd33b907"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-e3489ce375",
+   "tier": "T1",
+   "seed": 5011,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9bece8800d0d81a903395600019145ad8a06d87548816cef275a7de8cfc47197",
+    "public.json": "b6b90fe2b5d836b056f854aca368567f60ad18e8398a385961f1f26fb2397e17"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-3c515b99a6",
+   "tier": "T1",
+   "seed": 5012,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "61ed8f3a1d9d1030b5de77093831ac8de239d9ff175f7b0ba09300d792608566",
+    "public.json": "c8905b18bbe9e7fcc299030a0616b8fb62588a22370b7725aa9bc2734f9c68f5"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-bf27a4ab2c",
+   "tier": "T1",
+   "seed": 5013,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "20b4ce17e63c5af96b20a61638b8f179be552a5f619aa964d6940da37f41ff01",
+    "public.json": "981536fe5d01d8886ab1c7abed391e297c4740d569a3e5e6801878aa21f27be5"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-3a6443abb7",
+   "tier": "T1",
+   "seed": 5014,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "68b9a964749db52ec8c7997cbab126187f17dd0e827fdd33d42da64bbe6e0897",
+    "public.json": "6a6ad97b541d231d5c0f95496886177c9ddd45e35415937bb4b964b02b1a0f59"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-48c9b85687",
+   "tier": "T1",
+   "seed": 5015,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "021af5941266b6b97ab9a9f7a59e71e0e3f915e7b9539fa8c0ba467465a2cbd0",
+    "public.json": "d436dbfd301ac5fd743782a06034ce0ace449e1579e906d4fa236504670c2747"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-f491d6db33",
+   "tier": "T1",
+   "seed": 5016,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "94131877eaa27b9f278597deb0bd34b518993096db2958f153eb499bc956b976",
+    "public.json": "f9a2bc8158db35e44e8e7409d16e1b4974818b70bf85eb00660d4ca74c8d05f9"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-aee3f9b22d",
+   "tier": "T1",
+   "seed": 5017,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3f73a037abe1a73007c8fa9b5de8f3df0414f6c300920e5cee33fbdbd07a454c",
+    "public.json": "60d3429bf9126c76d7c08fcbc34d48b0889e855dfdb130133a812179c31085bb"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-243d62887a",
+   "tier": "T1",
+   "seed": 5018,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "50b7e35cf2a21d8d46ca8edf050dfa2e175b4a68df5086f55ffbf6630c68076b",
+    "public.json": "29efd0403f765489a4e82e7c730c609bdab6dbd4e115ea983391057bcf2e973e"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-f7f20e93d2",
+   "tier": "T1",
+   "seed": 5019,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7aedabb82c6fbe48c25f2a313f65b9fa73309e90d775ebb3f1aa56ab134871ac",
+    "public.json": "aa8441c7f08c9023362947fb7fb2c5519e32bbf29b3bce5e3af6716d27c792a1"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-fc6f6d61a2",
+   "tier": "T1",
+   "seed": 5020,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "afd4369e4eef03339514ccd81980211117d90488aa145f55c5692bf2e4fa67e6",
+    "public.json": "54439e2ead0527cce6edff40dc3ec47586d67a18e9d5b195e1e713eb634dbbd3"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-f98b8f50b3",
+   "tier": "T1",
+   "seed": 5021,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "713dda0e1e8a25cd57f66c1761a5c5fc5787ee29030d92f2911c15fa83eaf4b5",
+    "public.json": "69d46d77573bf12fd83b5c9c8beea611346ccbaa24bc8d1248f8dead02fed241"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-5e33776213",
+   "tier": "T1",
+   "seed": 5022,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "23df716bbb815a8abdb68d613c09f0d4e9882ddad84f1b8b23939bd0ecaf5128",
+    "public.json": "6ee34f2568bbdb745df075a1c9bdecdf870d4a6d327f4bf683b28f1360703c74"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t1-b3daf56703",
+   "tier": "T1",
+   "seed": 5023,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8c321872c2171922654218b0b5419ff727ad4c5c88a00d1a1d792c1dc344e5d1",
+    "public.json": "0fff6e2834537a9929f5aecbc20d98e17869129d730ae07c50c62c802f2e56ac"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-dcf333f8bc",
+   "tier": "T2",
+   "seed": 105000,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9a5c8ddbbdb0a934fd03280050bae083b8787d246ddff775d1ad4ba0ac8f1ec2",
+    "public.json": "2ce8342e43eab6761e3431ac9ddda05f49b8d6c13da1b85ba611a7ec4ede5914"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-278783937f",
+   "tier": "T2",
+   "seed": 105001,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "21b90faf383de2b19da814eca0bd1cab76c4daa8574cc43992d77c6ea711b4ce",
+    "public.json": "c8012812443d065f9756bbbffe04814e71d488d50335e0fcb25afd1a078ee0a6"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-8892de8911",
+   "tier": "T2",
+   "seed": 105002,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "59e8277c99c56eb4aa5a302c2cd89d551ffcc32c837874e36dbf9a6d430968b1",
+    "public.json": "ac98c7de648d890bb26e00c4a53e38b2faaf504120f16d7f48d48cb32af51d35"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-5556fb6d2d",
+   "tier": "T2",
+   "seed": 105003,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9f25cf8c38ffa9f270f6dc983ae8f2c40ffcb71b4898af61ca25aaa8113d1dd2",
+    "public.json": "e020276e9f1c3dac83533b0ca6e63d80c0f6114ef3d97f5068517892a15012a7"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-61a345cf58",
+   "tier": "T2",
+   "seed": 105004,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "f9f549d5795996055a272c01bd7fe8b20f5f7d6dd70cb807e8b961f950c47a11",
+    "public.json": "49ee51ce92861fd06cf43ad95248a33494f6d438b0c555748947a0eee4ad3df5"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-1e88f74c7b",
+   "tier": "T2",
+   "seed": 105005,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "75fa7d2dd8efe304cfd81f6118fd0d154ad586256e25337cd3b54b789c4470ee",
+    "public.json": "bb58593ac5b6f210b190398f12bb3fc7ea639fbf1581d1db93cbd53ee740a990"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-2a8ba6c60f",
+   "tier": "T2",
+   "seed": 105006,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "fb75b2597a6f02fe26f9082543ab66f9e0577306e81926ee0ec5fc46dd254904",
+    "public.json": "76184044b5d90360917eae71c13ce57e3a4b8887d23fa04ad20461f8f2652720"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-3873e2258c",
+   "tier": "T2",
+   "seed": 105007,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7718c104c16a39db57b88f1973e4c1d482d83b9efa3411df5a23682906143704",
+    "public.json": "f3a1a74ac9347e7928ab7548a3cc9a1e8664ad414ded5350462b34fb865c624c"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-a95b8cd6f4",
+   "tier": "T2",
+   "seed": 105008,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7d5092c513f15c618332ab253658560ee92e4a3c4e9f7e03187c42a544639e3a",
+    "public.json": "56298ca0fa3bd925b0fb15a65be6bab732d05d3040181a271ea29c0f93c64765"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-eb91d05cb0",
+   "tier": "T2",
+   "seed": 105009,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "0f365284658bf3b0728d53e32d57fc2c61a3208b29904481f4a063e07b2ebfc0",
+    "public.json": "a396aa3af8c40cd5f5a84ee7703977431f352348441f372c39b88759392d2561"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-e7b435bfe8",
+   "tier": "T2",
+   "seed": 105010,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "5de7cbd4ce53e3b9fceeb69521cab6a45b55cc2a46ab5282fbe870e85c05f92a",
+    "public.json": "0c5f32ce52d335243d75e0fece552f8e05b28eb7bc12eb7eafbfc829645e7009"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-d4517f279a",
+   "tier": "T2",
+   "seed": 105011,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b8caa3c8e7579c1fed56fba9b3849ce2745b75740f910cb4750d1317556bcd03",
+    "public.json": "6a695409b13fd6a16ea21299b9941defb36e058d5a16998ed70e4357d19a1249"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-8bec41690e",
+   "tier": "T2",
+   "seed": 105012,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "809380144cb99d1dedb8b22f7a7320d2e401390deb6eb4675c7c406e808b81ba",
+    "public.json": "1e6145ae759677bad4218fd55bf54bc698d3703d041608e681ef1f95fc1f7bab"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-a3ce4600b2",
+   "tier": "T2",
+   "seed": 105013,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "477a05a19dea345229123ae97d616a990acdbf143ce3c7249453a9f329ee4440",
+    "public.json": "cecced93d12d1ac168eb58fcdc9932effe092bcf5bcbb3d75ba34e3a32760970"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-ce893caa60",
+   "tier": "T2",
+   "seed": 105014,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "efb641544014d38b93d7cf11749e64e363a069287d1f5e71038930162557e49f",
+    "public.json": "52e760fc2e12bcd3bda91d11d846b43f242aa74af1c5d7d625ad174198313ada"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-f8b4fddaa6",
+   "tier": "T2",
+   "seed": 105015,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8931fa88a97d397d961847427e3db0ad9746ad2a022daa69238131cfb9e43ae7",
+    "public.json": "fedf377fc2b6ab20fa27bda276637135e722e1bedf7f65225d4b9cffd9aac96b"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-de837644c7",
+   "tier": "T2",
+   "seed": 105016,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "ca469bb31aa5b6a481d21abed6b4512f8ae3e1fa7eee5f19bf867b7206796573",
+    "public.json": "24859bcf0f427a624a0053d8ca22156803690f860ff9650e1825a97b996213e1"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-b9ef35417e",
+   "tier": "T2",
+   "seed": 105017,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c9751290a4da53012a7dd8187ad42450203606beca6367e45c2b0893b50645a7",
+    "public.json": "c6f998364a3d52e109d59b985a72f668e7e21b98609c2b14239f5bf850f10054"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-0b1b5c8b61",
+   "tier": "T2",
+   "seed": 105018,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "55c55ad40290e4d859c9327f1080eab7c561937dedfcfc2e7d5d11f78e2bd3f1",
+    "public.json": "cf9621a3100a8456f3719210d2e0a29cc10dd1f11a14830f9d5766d590ffe68f"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-7fcbed7ec0",
+   "tier": "T2",
+   "seed": 105019,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b7e6e3342103e28a6030b84b70e580be0b34073eab036f077e4b638ed03fde65",
+    "public.json": "889d53a4b986ac51b815bce6ef4d32da5ce296e90c0f176d1274e509c3b52040"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-d8c89f35e9",
+   "tier": "T2",
+   "seed": 105020,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "46551eb7b40a659cdf2417171e8c4d20bcf8a97e83ad29b36750bf270682f5f7",
+    "public.json": "a11032de55ad12c93f3a681b58fcd124f749ea0c1e881ace048aa9ed93f5f25d"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-18d866dedf",
+   "tier": "T2",
+   "seed": 105021,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "fc5001f6d0271a025c3a28bb7fcab612f9a6193bdccd29e8a95edc5e57500b59",
+    "public.json": "eace3841185b01d22eff874413c5dd2ffb922d03cdffe81b0f99cb8e9814bfdf"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-08a4773087",
+   "tier": "T2",
+   "seed": 105022,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4180c804571283266972be7ccb24f9251a1773e084948eca2d73055bc373485d",
+    "public.json": "100d33e398f36507e4d8b32fdb5388333ce8547b604e381b6527ed041372af25"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t2-22a847f996",
+   "tier": "T2",
+   "seed": 105023,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "90b2b0a334300135728fa2a7f692e28611ca1a1b6773bcae75412278e9c2edc3",
+    "public.json": "91c2701dd497553c96503d2ce934654ccc7c3d1a7cd7a326c2d19fa31a017c20"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-7e335c2340",
+   "tier": "T3",
+   "seed": 205000,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "3fb16c908252aa934fc1aa888e596ae8bef9b3cd77fd29c3285fbbfbcd625c6c",
+    "public.json": "8d364d86ea34b277da3896858c6e2e9efaf718ad667b74227fff95037d677261"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-679256e915",
+   "tier": "T3",
+   "seed": 205001,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "77aa14431c02658b97685dce63a0516e643c3326c4e69f67b94b29a727d73a6e",
+    "public.json": "c4c68a77620da03d8eadb9f7a1ef06210144dfb80f2eb783de19f7ada4277e55"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-9b88613bd3",
+   "tier": "T3",
+   "seed": 205002,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "f279ae6687d66ddbedc24a3b37152372bf40b445b17adcf3cf38af13b8538f4e",
+    "public.json": "18f9134f126f9523ff0dd4bb8a90da01e2e36aef126c3956ff4765fad2a5bb88"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-9442c26d1b",
+   "tier": "T3",
+   "seed": 205003,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "328703e1bfd796379142fe4443791d8d0ca0665cbb272f1984ced1ec7ef4baca",
+    "public.json": "774b192bc394fcbe821b5d337b9b014049b59559fc99da9e7356a04ab1579373"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-025fcaa85e",
+   "tier": "T3",
+   "seed": 205004,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "1df29d092c9ebe10c96ecea7dba807a443a53258cf9684fdd635e85b822deed1",
+    "public.json": "0a88f818fbd4618a64da9331448eaee260327159fcd4327b76edd7da13491835"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-fddef20379",
+   "tier": "T3",
+   "seed": 205005,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "02b5acea3ca7161ad35125778c5a3371f32d91d8bb9c18e5fc61a892a8405d5b",
+    "public.json": "6a965da510da021c9dbf2dd2d26b80d96ab4f03abec024659af35012fe9ef06e"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-4e8d2a06c9",
+   "tier": "T3",
+   "seed": 205006,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "5ce0a34caa3eed185f28dc61c8ac6a0c186372e95fcc6314ea6440b925a35a87",
+    "public.json": "683e7fa0872f05276ecc2c947d59a484d80a4dfa83b392f6a561424a1b8c14c3"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-51df00ca7e",
+   "tier": "T3",
+   "seed": 205007,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "3fee44156cfd54860e6b85151c29b079a844f60961791f012fe295ae4c2eda91",
+    "public.json": "5b8ce4283b5497df4dabbbc823e89dc9095929a403aea3738fb4ddd24a995b14"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-0ad5ad6daf",
+   "tier": "T3",
+   "seed": 205008,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "7a43d412c7761e093bd08b761c025fa5d3e89cc552e4fb4f6b3bcb463e32df3e",
+    "public.json": "99658d3d528b4b4aad00aad4d80c77fcae63b0d94774310063141fd5177a18b6"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-158eeee570",
+   "tier": "T3",
+   "seed": 205009,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "132251c472e0aa0e9b94a7c109009d4d18355af639d9913a1e1cc58c6ee29485",
+    "public.json": "19cefe7892b90daa1f0bd8c775898c3b3c5f5ba980f55e4182a3bf4d26b0bdee"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-2f10e80afa",
+   "tier": "T3",
+   "seed": 205010,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "5b240311cdade212d222db7c8b121da76e4d7d4b1b576f2aa71802b9ccbb91dd",
+    "public.json": "e2739ef825f078288695890b21ae2a2f0e5f3024562896fee35a6ffc38e2feaa"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-440b4a9595",
+   "tier": "T3",
+   "seed": 205011,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "4580829ca4722574e2d03aeec2f9a981fd58efb0bf211fc5a2f009169dad33bc",
+    "public.json": "66cc67e6ec9933379b2018862d510ebc8dc3f91db71ecf61c3aa49428efdf3d5"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-ad1a01b3a4",
+   "tier": "T3",
+   "seed": 205012,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "f8d205cb4787d2f6670a08e0a388bf1a7fe2c9bbd2549f42683781a8c6ad0ae4",
+    "public.json": "902b6e699aa379edca005dc9f53cbd6643a244cff4c231b010f30f21f7e8f44f"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-e8efa83fe0",
+   "tier": "T3",
+   "seed": 205013,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "1c3cc7b6897e94a671c2f3ca68a52177681f3ca9e83a6ceaddf81f7f679f0ddb",
+    "public.json": "e3f25060f175c98674825d6cc5842765994b76e991dc58b2ced50fbcda04040a"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-731d134906",
+   "tier": "T3",
+   "seed": 205014,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "1621281f34aea6d377267f834874b60a71b1a62d4471da5e0101e6a9747263e0",
+    "public.json": "fbd247c742d9d67b356c3901e18f4524b12a45be501bf053c464ca26130e5083"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-fc7f5a638b",
+   "tier": "T3",
+   "seed": 205015,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "c0903304626a3525d50c9e2cf28d3e020b4633eca5f29d71cb03c2f274f7c940",
+    "public.json": "66c5a30f165654a76b971f57e5cc0beb64f9046e25397e7cf771867c283bb112"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-5ae5375486",
+   "tier": "T3",
+   "seed": 205016,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "d8f42fd7aa0c689ca484c1559b2c99849868f7057bb954cbe3475b42a148d01a",
+    "public.json": "1d613d9c0f630fe1cb8db014d8214522bcbb802f20191e088e8bb3c9a36a6ff4"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-d300e01abd",
+   "tier": "T3",
+   "seed": 205017,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "44955d8e2bea55dcb4af7570f49cb8954bc44e7a827535d94c09a53e638d02d8",
+    "public.json": "b749b62450a0d1e0b98a034444865bc381ba27a594ce1f08f16ff0184371aecf"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-f63d9b8210",
+   "tier": "T3",
+   "seed": 205018,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "528fa25e878c2b582b7f89ed1a92aa6eb10aaed5dd4432b8bb82aca9e9d85b3f",
+    "public.json": "876cdce9d82a6c242d1a41c9db343ea1a91f4154a634164adc7e09cbaa555fb7"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-54a29708fb",
+   "tier": "T3",
+   "seed": 205019,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "f5796fe2616f59c0de509896b6741514241991baf8f89c5afb8f71dda2545b23",
+    "public.json": "fb85e4b103cc2f5fda42ee941d8db1d8e04e3090291836a1cfffc398202059aa"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-166da72e67",
+   "tier": "T3",
+   "seed": 205020,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "c7c8b7c4c0a0df7538f77766bfd5f1e6ceeb45284970f11db437e08bed1ef833",
+    "public.json": "044ba5e36374af5fca59f45f17e2ba09701b1b54010835b337d3c696c3031b79"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-cf9547f73d",
+   "tier": "T3",
+   "seed": 205021,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "b7858f5ae7c28c7fa1fc84ae02fd33c355031e30e69e0ee52f85569a1a946321",
+    "public.json": "7072b7fc0a60ff16bd07f3fd3a2a88e2f7a90e7d68f6a070595690ee2833a9f7"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-4d644ef0b8",
+   "tier": "T3",
+   "seed": 205022,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "51925ae381ad81915d56eae88253c57325a9bbd14ac5df7411c9c4e7c5d4a689",
+    "public.json": "3247c54d9efe5997296ab1d6964c3df79e3d5a2074d912a076643710bede351c"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  },
+  {
+   "instance_id": "fm-t3-559934cf66",
+   "tier": "T3",
+   "seed": 205023,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "6c32e6bd0af3f255d2e32ff35b65d1e2f47e8507de35f7330b0c751ccea9c198",
+    "public.json": "198477988b66951887169ffa2747fc6a767a96cf1ca9fa7bdb7598c7abe83a43"
+   },
+   "kept": true,
+   "gate_runs": [
+    "20261001-184458_inproc",
+    "20261001-172659_gate_reference",
+    "20261001-172659_gate_blackbox",
+    "20261001-172659_gate_recipes"
+   ]
+  }
+ ]
+}

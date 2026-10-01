@@ -60,6 +60,13 @@ CASES = [  # (name, submission, expected_valid, expected_pass_if_graded, expecte
 ]
 
 
+# Fix stage (2026-10-01, after this audit): score is now planted_acc x null_acc and the grader/validator reject bool
+# and float choices and slot ids and the {"answer": ...} wrapper. The table above records the audit-time
+# expectations (mean score, lenient grader); EXPECTED_V2 overrides them for the current grader.
+EXPECTED_V2 = {'all correct': (True, True, 1.0), 'option numbers as strings': (True, True, 1.0), "'nothing found' case/space variants": (True, True, 1.0), 'slot ids as strings, shuffled order': (True, True, 1.0), "all 'nothing found' (null action)": (True, False, 0.0), 'always claim option 1': (True, False, 0.0), 'claim on a null slot': (True, False, 0.5), "'nothing found' on a planted slot": (True, False, 0.5), 'wrong option on planted': (True, False, 0.5), 'missing a slot': (False, False, 0.5), 'duplicate slot, conflicting': (False, False, 0.5), 'slot out of range': (False, False, 0.5), 'choice 0': (False, False, 0.5), 'choice 21': (False, False, 0.5), 'choice True (bool)': (False, False, 0.5), 'choice 7.0 (float)': (False, False, 0.5), "choice '7.0' (string)": (False, False, 0.5), 'choice null': (False, False, 0.5), "choice 'none'": (False, False, 0.5), 'choice option LABEL text': (False, False, 0.5), 'choice list [7, 8] (hedging)': (False, False, 0.5), 'slot 0.9 (float, truncates to 0)': (False, False, 0.5), "fullwidth digit '７'": (True, True, 1.0), "nbsp inside 'nothing\xa0found'": (False, False, 0.5), 'empty answers': (False, False, 0.0), "wrapped {'answer': {...}}": (False, False, 0.0), 'not an object': (False, False, 0.0), 'extra keys per answer': (True, True, 1.0)}
+CASES = [(n, s, *EXPECTED_V2[n]) for n, s, *_ in CASES]
+
+
 def main():
     from tasks.featurematch.tools import Env
     problems, rows = [], []

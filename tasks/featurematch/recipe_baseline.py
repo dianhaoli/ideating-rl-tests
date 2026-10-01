@@ -17,6 +17,16 @@ Variants:
   name_probe_thr   as name_probe, but "nothing found" if no name activates the latent at all
   vocab_match      fixed logit-lens recipe: project the latent's decoder direction to the vocabulary and claim the option
                    whose name words share a stem with the top tokens; "nothing found" if none does
+  Added after the independent audit (2026-10-01; code in audit/attack_solvers.py, docs there):
+  template_probe   fixed encyclopedia templates per option + a fixed 19-language sentence bank, AUROC vs a fixed
+                   background, claim if >= 0.78
+  self_probe       template shortlist of 3, then the SUBJECT MODEL writes the probe texts (`generate`) and the decision
+                   is re-made on them. WHY it is a gate now (audit MAJOR 4): it needs no knowledge of the concepts and
+                   passed 16.7% of T1 episodes on the stage-2 design.
+  density_null     "nothing found" if the latent is dense on generic text, else the template pick (tests whether
+                   null slots are detectable from latent statistics alone)
+  name_rank2       claim the option whose name is the SECOND-highest name-probe activation (tests the old generator's
+                   name-filter artifact, audit MAJOR 3)
 """
 import json
 import os
@@ -28,6 +38,8 @@ from tasks.featurematch.reference_solver import slots_from_task_md
 HERE = os.path.dirname(os.path.abspath(__file__))
 VARIANTS = ["nothing", "always_claim", "prior", "prior_or_none", "random", "name_probe", "name_probe_thr",
             "vocab_match"]
+ATTACK_VARIANTS = ["template_probe", "self_probe", "density_null", "name_rank2"]   # audit/attack_solvers.py
+VARIANTS += ATTACK_VARIANTS
 MODEL_FREE = {"nothing", "always_claim", "prior", "prior_or_none", "random"}
 STOP = {"article", "about", "text", "written", "the", "and", "for", "player", "team", "season", "event"}
 
@@ -54,6 +66,9 @@ def load_prior():
 
 
 def solve(call, variant, seed=0):
+    if variant in ATTACK_VARIANTS:
+        from tasks.featurematch.audit import attack_solvers
+        return attack_solvers.solve(call, variant, seed=seed)
     rng = random.Random(seed)
     # Model-free variants read the slots from TASK.md (exactly what an agent is shown) so they never start a tool
     # server; the others need the model anyway and use task_info.

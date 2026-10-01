@@ -12,3 +12,9 @@
 *_gate_*/summary.md
 *_gate_*/gate_private.json
 *_gate_*/.config.lock
+
+# Orchestrator LLM-probe dirs (API / OpenAI agents) on a pool: their grade.json holds per-slot planted/null flags
+# (audit MINOR 8). Keep the episode dirs local; a careless `git add runs/` must not commit part of an answer key.
+*_apiprobe_*/episodes/
+*_openai_probe_*/episodes/
+*_probe_*/episodes/

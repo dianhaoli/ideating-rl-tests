@@ -279,6 +279,8 @@ class Env(TaskEnv):
             if not isinstance(a, dict) or "slot" not in a or "choice" not in a:
                 return 'each answer must be {"slot": <int>, "choice": <option number or "nothing found">}'
             try:
+                if isinstance(a["slot"], (bool, float)):
+                    raise ValueError
                 s = int(a["slot"])
             except Exception:
                 return "slot must be an integer"
