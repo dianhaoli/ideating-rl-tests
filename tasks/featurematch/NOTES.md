@@ -85,3 +85,36 @@
    cheapest test is the smoke run with a real agent, or a templated-probe reference variant (not done; see weaknesses).
 4. *What would I lose by abandoning now?* A working generator, tools, grader and baselines for a lane-(a)/(c) task with
    cheap procedural generation (~7.3k selective latents x 232 concepts). Little reason to abandon.
+
+## 2026-10-01 16:05 UTC — in-process gate run prelim_v2 (T1, T2), through the real Env + caps (local_shim)
+- Run dir: runs/featurematch/20261001-153149_prelim_v2 (git sha in config.json). The background job hit the 30-min
+  background-shell limit after 116/120 instances. I removed the partial records of the instance in flight from
+  episodes.jsonl (only complete 10-solver records kept). The 4 missing T2 instances are re-run in prelim_v2b with T3.
+- Reference drop rule (best-of-5 fails -> drop): 3/116 dropped (fm-t1-6f07d71392, fm-t2-5588e6d7cd,
+  fm-t2-f463eca9f0). On kept instances (kept_summary.json):
+  | tier | reference one-shot | ref best-of-5 | blackbox | nothing | always_claim | prior | prior_or_none | random | name_probe | name_probe_thr | vocab_match |
+  |---|---|---|---|---|---|---|---|---|---|---|---|
+  | T1 (n=59) | 59/59 | 59/59 | 2/59 | 2/59 | 0 | 0 | 0 | 0 | 0 | 2/59 | 2/59 |
+  | T2 (n=54) | 51/54 | 54/54 | 2/54 | 2/54 | 0 | 0 | 0 | 0 | 0 | 2/54 | 1/54 |
+  Every non-reference pass is an all-null episode (3.4-3.7% of episodes are all-null). Every gate passes.
+- Slot level (first reference try): reference planted 1.00/0.98, near-miss 1.00/0.98, off-universe 1.00/1.00, null false
+  positives 0/1.1%. Popular-concept prior: planted-slot hit rate 11%/10% (about 2x chance, 0 episodes).
+  **vocab_match (decoder logit-lens + name stem match) hits only 0.7%/2.3% of planted slots.** The selected latents are
+  context features whose decoder directions do not promote the concept's name tokens (partly by construction: the naive
+  name filter removes latents that fire on their own name).
+- The black-box control asked the subject model to pick an option. It was never confident (top option probability
+  < 0.15), so it behaved like the null action. A smarter black-box policy can do no better than the zero-effort
+  recipes: the latent index carries no information without activations.
+- Concept coverage (per-entity validation): concepts with >= 1 planted-eligible latent: L6 174, L12 178, L18 190 of 220
+  menu-eligible; 200 at some layer. 20 eligible concepts never qualify at any layer (e.g. President, PrimeMinister,
+  Mayor, OfficeHolder, Reptile, Mountain). Those are broad politician/geography classes whose latents are shared with
+  siblings, so they fail the <= 3-within-0.10 specificity rule. They still appear as distractors.
+- Pool composition (180 instances incl. T3): slot kinds T1 154 planted / 57 near-miss / 32 off-universe; T2 150/61/36;
+  T3 143/61/40. n_slots 3/4/5 roughly uniform. Mean null fraction per episode 0.394.
+
+## 2026-10-01 16:06 UTC — harness issue: the GPU queue ledger is per-worktree, not machine-wide
+- prelim_v2b crashed at model load with CUDA OOM: 18 GB were physically in use by other builders' jobs
+  (residualrecall, t2ravel, shifthunt, freqhunt), while my `gpuq status` showed 0 admitted jobs. Cause:
+  common/gpuq.py puts its ledger at <repo>/runs/.gpuq, and REPO is the directory of the checkout the module was
+  imported from, so every worktree (~/wt/<task>) has its OWN ledger. Not my file to fix (common/); reported in the
+  handoff. Workaround here: before launching, wait until nvidia-smi shows >= 9 GB free, then go through gpuq as usual.

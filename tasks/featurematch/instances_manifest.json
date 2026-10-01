@@ -14,7 +14,9 @@
    "files": {
     "instance.json": "b88b9b744f8e1154bebcbe0922ae641701dbd1709fcc20ab90a6a6b5ccbbe776",
     "public.json": "f0c5dcd2ec90e5e9ec269900be4674dc2c3b761af558d629c1fcdd7fa4143364"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-e3bdd41b4c",
@@ -28,7 +30,9 @@
    "files": {
     "instance.json": "ed4bae5cb8dcb9d33545ec2d871d9b593b9186968231797f9e8bf47adff9cc08",
     "public.json": "d0e6ac6183c0ad9c615b73cca7bb15a54a9a46a89648b501173a3725c3aa0498"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-67cd1d8f87",
@@ -42,7 +46,9 @@
    "files": {
     "instance.json": "04045292c905e81c00af48eefe0e1900103d27344edca253304f9bac804fff67",
     "public.json": "b97204d286286cb05d8ae3cbfc4983b8d2768e76fff587b21c00a7298183ef71"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-59570c5036",
@@ -56,7 +62,9 @@
    "files": {
     "instance.json": "88e773b111a5abb5b26e754aac3d43278ca2171eb171c3ef13093df4154bb2d9",
     "public.json": "270614a2e7cc8bfa37021c528a8077e51c5515ef72cbf7601128560187f26770"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-13a2b4e014",
@@ -70,7 +78,9 @@
    "files": {
     "instance.json": "92275d272cca7685bd5a9bf8454aa1efdb943c2aef70301aca36c3b32f0f63f5",
     "public.json": "a26ebc88ec458b64d8fcbbb884e0ee16cb6af14993048d3eb324e90be4a96288"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-3fc30d67f7",
@@ -84,7 +94,9 @@
    "files": {
     "instance.json": "aa5ae0b4ea5e6b9b80b4f52156677288dba565c3fd4b3f949f8d28a0c8c77957",
     "public.json": "bf8181d80a8e9c69c1eb28391381e90b75b923416636b039180aa1146ff132db"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-847394cdbd",
@@ -98,7 +110,9 @@
    "files": {
     "instance.json": "817db98317b023930953a17425fa7e52ecb68fd0b7bd72a27e2eb04713f0be2c",
     "public.json": "2ed6edc2e35a67e78f2113f5ab65ab4a82f78d668a00bca90846dc53432f0601"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-3d98f902db",
@@ -112,7 +126,9 @@
    "files": {
     "instance.json": "8dff053864ba528262c64bf7821730519f11ec441f28538d9f02dcf6814da53d",
     "public.json": "378dc075f9dfedd3353a742cec12898123ea89b8ab43f746bf5410553d0234f2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-29db797ccc",
@@ -126,7 +142,9 @@
    "files": {
     "instance.json": "80bc5ca8ef12de4238d0181a8b2e8005313b8475c6e3da3bd242007070c97163",
     "public.json": "61e6ed6aa12e86f37377ecd4265e2383564e18b28382e2eed90aa0551ea40001"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-c0fd3d4153",
@@ -140,7 +158,9 @@
    "files": {
     "instance.json": "9f2c18278d25510414389bdb463b7f403a6f0d78823321a1a5e1cb3239b44d00",
     "public.json": "f4093d9aed22aff6f6a6a82a3f9d3765816037fc6f2be93782458706d032efea"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-4275fc4d78",
@@ -154,7 +174,9 @@
    "files": {
     "instance.json": "2ee255d1edfc9f20e569cc092a204b2eecf1849da38a26744bf976a9c8d44f97",
     "public.json": "4564930c3c16fe3f611a97a34c8706bcbc6068c22ac8ed12057668ccdd709d5a"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-b260ab9d0b",
@@ -168,7 +190,9 @@
    "files": {
     "instance.json": "3d08d5e47c41ed33e846044b46a2bc3aac72d3ebe8f6553aaafa760787c7ea30",
     "public.json": "a58df05b42a3da79c488891617869a62d79d984bf4438ad3471b11a87bc85026"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-90d7ae54fb",
@@ -182,7 +206,9 @@
    "files": {
     "instance.json": "5bcfe0adda80f30eb3612ddd9ebb439590de011f256b2bae1ec394106af47888",
     "public.json": "df0716e37c48d645be29486fa875b760228e90595941c12d5b7d566077ae2bf2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-938e5d347d",
@@ -196,7 +222,9 @@
    "files": {
     "instance.json": "72a8b052f945d8701ad8ae03c2a6e83e15f0137e4c4379bc33e54c4ffe3fcfc1",
     "public.json": "82287fe695c50ebcb9ca88ea3f0534481380e187472fcfe7b47096a824dd6b65"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-e2d559d1a5",
@@ -210,7 +238,9 @@
    "files": {
     "instance.json": "f0158961f7acf4db9254755a2e923b3a30137eda3e1a42ddd1049310205a8e44",
     "public.json": "ca4d82b85e4867ff150e6156ab357541758f3035b91b44410f0ce5063438c5f2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-38ca4d2cc1",
@@ -224,7 +254,9 @@
    "files": {
     "instance.json": "f2b869dd6c882a5e2d4c755a3b4fbbe57707f4cd6434b2f5cc4bd2ab502e8ebf",
     "public.json": "3db0dabb4c9ce0825790fc16dc7322daaec96a41de8fdd009a3f786ebaa90768"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-049d9a0c10",
@@ -238,7 +270,9 @@
    "files": {
     "instance.json": "78ebeaf851be3802a9b53b30e4c8f0a8ec4664f5ea2123e9ef56aed3c21db82e",
     "public.json": "6ed9e45570245465b38593b4a39bfe0853fab54ba65f7f02c899a2c00d0518e1"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-ace48bc36e",
@@ -252,7 +286,9 @@
    "files": {
     "instance.json": "20ece6f21c56ab1ca2521637aebc3500cc6de9e21e4eabe813181dbac4aa49fc",
     "public.json": "9fdc6994279a4aebb26e885a4137a1b70f35b72713f72f175b46ecdc27059c7f"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-5c8d3627ae",
@@ -266,7 +302,9 @@
    "files": {
     "instance.json": "95e49291ad971bdfdfbf7245f89747b548ea85840b33c7404c60208dce04c08e",
     "public.json": "bf72f946f65d7435796458a607369249d8670a20a3989688f13870fe58b99804"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-924e53fde0",
@@ -280,7 +318,9 @@
    "files": {
     "instance.json": "01ea5b7e46d586957310ac612c3ce8ed1ca9651d18d143f04e3a529a536e8fac",
     "public.json": "d973135555d1b4e865debb7dcce10fc02e3f156a36b27219cc31d36656ba666e"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-2bdd5a2a9b",
@@ -294,7 +334,9 @@
    "files": {
     "instance.json": "bbb10f67cbb566c5d33ddf2b80719c607dbf78901eae42eff77f13d8ef98330c",
     "public.json": "ac1672bc2dd6160e7dff4473cda848e2fca4457794fa1cf6400a22fde247e16e"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-540a1fa466",
@@ -308,7 +350,9 @@
    "files": {
     "instance.json": "70e190042f34333f0a18b3c2f6fcf544959f295b04bf1c5e18d472dc61e6585f",
     "public.json": "c77a6c3089a70199c35c476f42eea38614cac8c1c3a139cfe3f48d8b271869b2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-dfa271b082",
@@ -322,7 +366,9 @@
    "files": {
     "instance.json": "9eb0353bc407fcbfc14619bd2b76d0945b7c9239c092fabfa617a8d218bbe31b",
     "public.json": "98a565c18de366a97cd3cc49e99af142fe57e3f9f7cfc81d183340fd7e60adc9"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-0e18320b9f",
@@ -336,7 +382,9 @@
    "files": {
     "instance.json": "694e3e029dff93aea07283a5cd968641a6b7a4425286089e5885e25eaf7d7696",
     "public.json": "319c7b5f6892b24b46d44786e4e8a22667844e344bf730e2c9a7c541eb98140e"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-8348d2e812",
@@ -350,7 +398,9 @@
    "files": {
     "instance.json": "295a24b90c60511e4271ea669f41060a02d30696b4e35cf06ca702a0b7d958c2",
     "public.json": "47e721ccfbb8f7d0f3495aa66c369c78e40143e9612640e096a47dc8a1bdffdc"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-92c847c2df",
@@ -364,7 +414,9 @@
    "files": {
     "instance.json": "52a87f2977313df0d8661d7d9d3f597458cbbd80eda6983cb31f57c4bc2e779b",
     "public.json": "7fbd819de0c00cb61e89a9406bf13986dd1a5300e2a0f058b7eef67fcd0a9207"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-33ad6aa8b0",
@@ -378,7 +430,9 @@
    "files": {
     "instance.json": "ec86d7a80ea6e73d47c0d7485255908c1be983679618954bbdfaa93d250bd7b9",
     "public.json": "7c1f6d470a87ef6db625d1853b9faa1c40b2aececf34b8adf139da87096b157f"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-7a8753a959",
@@ -392,7 +446,9 @@
    "files": {
     "instance.json": "649862917625403fd019165ee9735951b25ddd2d1a08044b46a5b028b83632c6",
     "public.json": "d8d8c01f2f6a50f020e4c8047760c3a104a70ac3575372b151f17f45afe72413"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-e6208fb3ba",
@@ -406,7 +462,9 @@
    "files": {
     "instance.json": "b76f39bcd3cc262b9d1d619f6fd4d5fe113d6c4824c39846dcdfaf5c426205c7",
     "public.json": "3b631b84ec3747080d04b6323866d4e2f7f06bac96835403bc0f561782c50b2d"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-ff0c8f9b6c",
@@ -420,7 +478,9 @@
    "files": {
     "instance.json": "0c58d03a8fa056ea8b5e2084be79241bec92753fb09d1eb34a34af005461be7f",
     "public.json": "4303b0222bbbb2355da63345e2ddaff902a06263ceab4fbca7051528acfc8cce"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-31fb9e2664",
@@ -434,7 +494,9 @@
    "files": {
     "instance.json": "0cac6c2f8c7d2d9c2a569826e996332f5eb4e653284e6914b5872f894c0e2dc9",
     "public.json": "c72511acbad1b50601935fbce3dcb233252e895a0c500a8c49770b66b9522654"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-a9590777ea",
@@ -448,7 +510,9 @@
    "files": {
     "instance.json": "a53fb4e7b3ca601531922768b08b73610c48725e9ad3d071d24bd4b8f8041a77",
     "public.json": "c0d40509a0816f0a79f60ecc42dbc8d75aa956b4ccdb8b617d58083c414d9fa2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-2535aff5ea",
@@ -462,7 +526,9 @@
    "files": {
     "instance.json": "badcd030fc88b9b4e24bc1134d9f4e2a46a030c4719a6b03b57e89cda9b19c5a",
     "public.json": "6518c08e7ee0c48a9a09d5b75dad1e2a0fbd151b2c2ec3f4717ac8cbd4dea343"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-fc421885a1",
@@ -476,7 +542,9 @@
    "files": {
     "instance.json": "53afff5ed503393408e8878c05c1f60bfc1641f6a52322c972d40231775f3b79",
     "public.json": "25c0478e8a99775ce3e8c15ef5203232d21de42db28a04519bad296a7e4affba"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-dcd852ce7a",
@@ -490,7 +558,9 @@
    "files": {
     "instance.json": "0420accb188cf873813b65d149d930d79877250918c86f9ee784f291d80caa1e",
     "public.json": "c92833bb2be851b7fb8606cb74bbaefc79f6d50a3849e5f2359e22dbab482033"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-71bf39e6b9",
@@ -504,7 +574,9 @@
    "files": {
     "instance.json": "d7d4ecee5a66e54cf0905b4d77c67fef3794825fe901bc75bb682119b66b892a",
     "public.json": "7fe66839a0fbba99f7a3aba7375c726a73748feff28a71ff8955ca19890ff3d7"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-656f7ebdb8",
@@ -518,7 +590,9 @@
    "files": {
     "instance.json": "d0bed10d5dbe967ffe92c0b6af66eb94178fa4bc31277c10920a526026f31101",
     "public.json": "d943935243c785fcf908f221c2007530dc6f605470984352b6556f2d9f2d0137"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-5ba2e739b7",
@@ -532,7 +606,9 @@
    "files": {
     "instance.json": "fb19e26efa399609081bbbb5f2bb8409fed1d7b48b43c1c76f7c813a723ff149",
     "public.json": "41c4e0cb959421c547c16525f3798cd5b76f42553b5f1155b39fc5ce8c679b90"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-fd1acbccd9",
@@ -546,7 +622,9 @@
    "files": {
     "instance.json": "5dbf8b2be80cc54c55bab9b41f0b54811e61577d3e23cea5c38abcfc664f4c4f",
     "public.json": "41bd4a4e83e06c87d48c6428808d0c840ab3608baacf9e8e0e644e6b95585cdd"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-c5d03756b4",
@@ -560,7 +638,9 @@
    "files": {
     "instance.json": "c82a72ecc3ff4fd3e995515a6e7ebd6898ee69a88de57c68e809628756f7b149",
     "public.json": "af520ed1b101c3740b6afbe5fdbdbb9a81dbc1bb40f14f920e01a139d9b9665c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-a5baa2233b",
@@ -574,7 +654,9 @@
    "files": {
     "instance.json": "47024fafe7c9e5c1bbd861d7307cf705eee55b00d68da6458e494592fd1ddde0",
     "public.json": "e9f564771dd9a4c8bc998e66bc2aa9cb8f5a5f0c3b2edec3bba3b4e138e6c0aa"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-6f07d71392",
@@ -588,7 +670,9 @@
    "files": {
     "instance.json": "87d9e2bbf0774a2043ae016d694ad0631b0136e1b9f7ad6209ba10da1bd45911",
     "public.json": "898e370c1d76d61c3ece356b7cac2fa0e9e1cd86d8d04ac9bcfe2c6cf06209dc"
-   }
+   },
+   "kept": false,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-2a4c0aa664",
@@ -602,7 +686,9 @@
    "files": {
     "instance.json": "c514cd57ccf37201a3d1ce44440dbdaea5e915f2abe2594804fef1140406c93f",
     "public.json": "b875b73b3bfcda813652ccdb46ac9591e360975c24db4d0c07ebd7c1a67c506a"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-9b4400c9cf",
@@ -616,7 +702,9 @@
    "files": {
     "instance.json": "539ed6f9c667cbc0bba09603a131e34feb33cc08049a5b25a67bc75b3c1150c6",
     "public.json": "74037fe9a2eec49390852bee65e4329df465ec928417b4510681e38b81362964"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-9a6c67125a",
@@ -630,7 +718,9 @@
    "files": {
     "instance.json": "dea34ded5b4e5594084fa6dd6847e53cb0c39c1b8b9e0173975a64c0787485c9",
     "public.json": "07148986c10e4e488c95b4009e2f5f8505239f8d4bbfc5dc3f0a3aca55c90351"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-7344e1e1c1",
@@ -644,7 +734,9 @@
    "files": {
     "instance.json": "eda4e0a5efaacda653ad74512372db8e34cc61fadd3874a46257fa0ce8983dd8",
     "public.json": "69e76f0aaf4fd3375d9ec0bae2691076892d306fa3f0580331d4e05cd6adf877"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-8e58c71a81",
@@ -658,7 +750,9 @@
    "files": {
     "instance.json": "aaa1e3634f1ac2755196044032675f877fa74a09d76e01ca05dc3b3532db7a2c",
     "public.json": "f58a3db3aa8e9843550013226740e0ee51d8da46b66078a85adc5a698ded740d"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-aa8f03ae9c",
@@ -672,7 +766,9 @@
    "files": {
     "instance.json": "1e95d404da76e2fdbbe56f76d17dcb8815c8f948c4fef16e4401c108c653f28c",
     "public.json": "12d4f52f6b53c1833479ec471a5f57489a280e56eb18271dcb942166ba54631f"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-1c9224aa4b",
@@ -686,7 +782,9 @@
    "files": {
     "instance.json": "d39b2f67d8d3c2bb26edccf64acc5b8997db72b76946986dbb7869f8e0c07bf0",
     "public.json": "8fb0197f2b56a89e5f38031ddb072d1f1de56da6a877f33232a8d2bcc6a8dce0"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-9ffbe0ec03",
@@ -700,7 +798,9 @@
    "files": {
     "instance.json": "245b971fb7dcb111f649b0b07c2c5f0c9a510c045dee82bea0c18e453ba1b824",
     "public.json": "96203adedcdc827dc7ffa750dd48b4e289a49115bb04e9b185ec66d16b42c8b1"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-6700ed5ef9",
@@ -714,7 +814,9 @@
    "files": {
     "instance.json": "22fb35e044cbb8f9927c61352b9ffa5ade6bd02285fd40c52f2f0d24c860a25c",
     "public.json": "2653489fe3acdda5a63308255a1b3c082e6d0135db64e79b7562c840b7fd3769"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-baf51abdb1",
@@ -728,7 +830,9 @@
    "files": {
     "instance.json": "f07ddbbdedce931e7f69002caabacd394db73518f79eedb4fb9f0ddd73370d9f",
     "public.json": "917724c8729c8c15f76ad2c51bbd286338cfbcfcba7daaf99eb2e1be589fedc6"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-a48f5589b1",
@@ -742,7 +846,9 @@
    "files": {
     "instance.json": "50510845bb2fdc62096b724dd5c3c5ebbce8fe11ef00862e65eb762651bd470b",
     "public.json": "bf1db4e0d41e919e638fdc405682f4bb55d8c96fcfd269a62f8bf0768c1ac6e5"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-07219be43d",
@@ -756,7 +862,9 @@
    "files": {
     "instance.json": "94bb5972fcb82ff7026a9c277a85f3ffab50119b8470741f687f52441f33b563",
     "public.json": "7c85bcf5afe794c23a8b12b61b2a1f6472d21e4a3b4e458694725ef17ba9e542"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-dd1578dd01",
@@ -770,7 +878,9 @@
    "files": {
     "instance.json": "c49f981ba53ec2b0eddaae4678c3614d4199f9fd246ac9079ec85bffcf96a225",
     "public.json": "f6b9642bfeaa9a12ccdc701d9ac3f6236d761770635d80cbf18db2f2dd0eaf3d"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-f300d5de31",
@@ -784,7 +894,9 @@
    "files": {
     "instance.json": "c4bc29986560475bd55c753bc86a0bb0ca4e51931695939713e5442e9acc8140",
     "public.json": "6be679fc8b0fbd884ad6f8922b4286133661ec4a10d2d3455007c89873fa4488"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-c7fd3e573e",
@@ -798,7 +910,9 @@
    "files": {
     "instance.json": "dbdcde85956b455ca023dff0cc60b21298d0943254db7c77322d02c3217ef03a",
     "public.json": "9f70bbc3f99eda868c35da995949c33ec6372caebe1fa475553dacf2fb2c64a0"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-c1a18cce6c",
@@ -812,7 +926,9 @@
    "files": {
     "instance.json": "38f9ccac185dbc3eaa355ad6749624779eb6a5094e855d5f89c0797083f88b4b",
     "public.json": "0fb181e742d8724d5039005d388b8eb63fbffb7ff7688c58310aea9c046b370d"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-8b74bd2991",
@@ -826,7 +942,9 @@
    "files": {
     "instance.json": "11e488a37b44e99047bb5e03fdd1962bcbcefea6ae647d0512f8f5df897f0a78",
     "public.json": "ad314a502cf0bed16cb42179020bc60499cc3bbcbbe80b7d3911106168e7d7fa"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t1-aee50bed22",
@@ -840,7 +958,9 @@
    "files": {
     "instance.json": "72bd766ee2c8eec71dc62b1f18b6964fdabd2d2bdeb7fce16149dbe6018ed6cd",
     "public.json": "16a6375b1badbba97cc6a206c0e911f7d05f40fb40901937f4e0bda6f4d12ce8"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-6272b86657",
@@ -854,7 +974,9 @@
    "files": {
     "instance.json": "bf4687e66e2c21c33aeb1676e8240350bdaf562dd5eae3a7089066205e08596b",
     "public.json": "0c8fb5e639aafcd90d6632dd616d5a31264739d71121260ab919e4b4fe0e57fa"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-3745e670cd",
@@ -868,7 +990,9 @@
    "files": {
     "instance.json": "51ac7ef9d323a1039776eeef9ffc69e49c1cf8b3fc5485971755c7dbc44149a9",
     "public.json": "f14499f8c77aa258f5639eb9656478b69934d200a82630c5dcf78538d98eb852"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-87c9767bff",
@@ -882,7 +1006,9 @@
    "files": {
     "instance.json": "47ef99f6a9d3c0c50648c658954aebe69f7a4a9c7d231a9283835c703e1a1013",
     "public.json": "1531ef5c959c7ba33ce0fe1c0fc6b11dfd8576d05320ad0e92923d6fb7ad7dd3"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-defcd62e75",
@@ -896,7 +1022,9 @@
    "files": {
     "instance.json": "4290751c83a155074d9da23b688b09cbfe5842b748a003bf2e9729913b32a1cb",
     "public.json": "55741030a13fb98004627d3af538d7fb6b7bdbbf4d997f4963add9d865faf572"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-1577097131",
@@ -910,7 +1038,9 @@
    "files": {
     "instance.json": "307e3aad2dc328222d9f4276b8b158aa9654d0db2100cc46042a8812714143ca",
     "public.json": "4ac08d1bf6fbd3979bed15fe2bb306af60700847609232fc2cc0f59eb287876a"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-fc62bdd0f9",
@@ -938,7 +1068,9 @@
    "files": {
     "instance.json": "3469f7befdcb932accbdf1c56c987732dcebea812af04e0f273e67b2700a5a0a",
     "public.json": "35613b95b4e955e84b7b126594f04ab227b3bfd504f143ed615ff6ce3ed1fe89"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-560165141d",
@@ -952,7 +1084,9 @@
    "files": {
     "instance.json": "449cb1dba029a95b2b064a640cb0f2572c217f0c34ee8486d496f0a43a5cf29c",
     "public.json": "1343d36b71b3faee40eb330b6ed08ccbf947230bac670e4fdc8b73fa66a85559"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-4f924cbe89",
@@ -966,7 +1100,9 @@
    "files": {
     "instance.json": "b3396a4db5c58c47e7754b7d6710c9a755d73a4d2ad33d0008b055c200f7d917",
     "public.json": "05a948b8280e6ec44521211a3c23c464152ed56629b8ec2ad7b8ee7723c9ead3"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-cccdf4e498",
@@ -980,7 +1116,9 @@
    "files": {
     "instance.json": "7782bbed0fc64f942a9b69324dd240fe402e366cab35383c60d8b5f1d64de8be",
     "public.json": "3dda35881a649e6247d6e2902b7be1f2ac33aa4be568562e728dc2ba0fb188e6"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-4ed26e98e9",
@@ -994,7 +1132,9 @@
    "files": {
     "instance.json": "69580273ea46559825f580aa122aa04dc11827a2b6400227e511fdb1bc40a3bf",
     "public.json": "94efcfd46ae53d254d1181b61cfaf7a2a483208a1695f50044880c5d8b2a1738"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-3e427db9bf",
@@ -1008,7 +1148,9 @@
    "files": {
     "instance.json": "f00aa2daf909a9875209c09290cd20f972dc552693d1ee24d24be09c23512697",
     "public.json": "389be2639bb0d627f2c9d40b987793698ad5d72618d9c337f7812cd251662dee"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-0e6a7f36ab",
@@ -1022,7 +1164,9 @@
    "files": {
     "instance.json": "5c22652bb280849bddde4cf5190ff33feff6e806cafb222268b446940d3502e0",
     "public.json": "43de380fe4acdb14d7d9ba89793fa08623a626ab5f0e3761f85720d867539a3b"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-36adb9169a",
@@ -1036,7 +1180,9 @@
    "files": {
     "instance.json": "b97fe0ebded13a87f550aa0aa23e105af63ca8715c45e3a6b547dce833bc1cef",
     "public.json": "aa86de0731e933996afc79467af42c1550b254d5ef1267690dde9f52c1787459"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-1f38372ab6",
@@ -1050,7 +1196,9 @@
    "files": {
     "instance.json": "00eecd1d18430c5e2ac6f67f7d84b4bbdce4e5b216f74dfba35cdcb922a4a2e1",
     "public.json": "b9d23b6ec3e8aa36841857d1b1577c11497bc05cf59039542fd133519065c7b1"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-bc16875bae",
@@ -1064,7 +1212,9 @@
    "files": {
     "instance.json": "d843d6f75b95cde4e712830c95817b27d373346be245d72166d5db02a4ec37bc",
     "public.json": "a76612da54ef74a1cca1c19d74126a3b961e7ea5f29e1a55d79f447bdd487647"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-d83cd83388",
@@ -1078,7 +1228,9 @@
    "files": {
     "instance.json": "ed7449c09fc133de44d22c0eaff5c8463061cf4579d08ab97d10188b7496f271",
     "public.json": "362491329f0f5e691c9386eb1dca9e4658287a25def6c02c4111ebc9873b05db"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-a47ee12ab1",
@@ -1092,7 +1244,9 @@
    "files": {
     "instance.json": "09054cced47384c5db969e917029a2aee6adafe50aed37e95fe5a16bae13ecb3",
     "public.json": "f404001368dcdb4329d8a37ca7d05e01c7f0e20bf33b2ad86dd513b6387c7779"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-85f808d6d9",
@@ -1106,7 +1260,9 @@
    "files": {
     "instance.json": "8c53aca9ffeaa9e400fcfb885ddcfeed8b06d799a738bb63e03eddfeabb02950",
     "public.json": "6f8c2e12c2338aa91ae2c57988c538807b39ac59506ae5f6931803e74b90bb74"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-f3fc6dd430",
@@ -1120,7 +1276,9 @@
    "files": {
     "instance.json": "1fc05e798f2e94d023881874c4a00009a40912eb96a24a4544a8dffa35b40d4f",
     "public.json": "1de66a2281f0c32ae4edee3c971901090974d48aaf523d0ced9036d981ddeaba"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-d22defbc42",
@@ -1134,7 +1292,9 @@
    "files": {
     "instance.json": "700a01599297c267882fa802ceaf2f9f636a7447ec3867b42846422cd5d7fd56",
     "public.json": "0910320f35a01ab6669eedb6120455c0495625f5efdd7b1a85cf1c385b8d47b7"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-b134dbd54a",
@@ -1148,7 +1308,9 @@
    "files": {
     "instance.json": "4517d071ade6685af1451ba0b2275cdb95ddf92975a45a4f0a6c7a78ddec6f23",
     "public.json": "eda02a2dacc02b8a806566bab40053f7e16076d1736831b6733974a29c669584"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-a926c1dc50",
@@ -1162,7 +1324,9 @@
    "files": {
     "instance.json": "9cfad8de4c35064eaff4aa068aedbf0fd0b213aa6a4fe781d34c54ab237eea24",
     "public.json": "5dd5071c2162a5d8e954ee5b1103704b7c6411afff62b9b5bc9723ec4be32911"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-305940cc7d",
@@ -1176,7 +1340,9 @@
    "files": {
     "instance.json": "9757866b7ce3995134152456e6936eb29fc8db3dbaa884d2b4b67c1b008ce921",
     "public.json": "198724157dddf41c45bf68e4558171a4dacf8fb4da7394904544de2690237f1e"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-d8ba998e04",
@@ -1190,7 +1356,9 @@
    "files": {
     "instance.json": "cb2e3d6692312bb156a0cf7bada08e1f211ece4f24ea0d3b24d5a542361bd85b",
     "public.json": "9bd36a645cef9f448a73c295062812b2f00e60767c22cc9c0b916c8cfd641523"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-2a7f2c3c66",
@@ -1204,7 +1372,9 @@
    "files": {
     "instance.json": "6f1c610a22b9dfeb20aa063c6d37c5baa13280692459e366fb2f2c85f5b5c8db",
     "public.json": "751260c6ba7c10cef63e105382af019d2bc94abbc077674ea2a426c4c71cd419"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-e2ec3e9e97",
@@ -1218,7 +1388,9 @@
    "files": {
     "instance.json": "4b3e4b52714c8a0e770f0cba2b95e84c82ddff95d34630755a02ffd18f781fcf",
     "public.json": "3182df88ee5fb8144b6a41af5a8a97674bdefdfd3cb0dd5bbde8b09694a07add"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-07850b389f",
@@ -1232,7 +1404,9 @@
    "files": {
     "instance.json": "bf80d79e5fad7f2c70fad643d0cd07ed986a732d6398eab84f673176953e5a43",
     "public.json": "22af11e2696065b2a5e246e201a9913274dfa001cf68615da1e9c3da10e10af4"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-d1f1dbed95",
@@ -1246,7 +1420,9 @@
    "files": {
     "instance.json": "b7062708737d45ef550ac1f32e034a81dc1f1cbb6f01d638a9cfc71fccc8e2ae",
     "public.json": "89bf3208602a8d8ca0b3006ba3ac7382f1842c8f07e0c540a95cc7b5eb7f0a76"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-3526ca242b",
@@ -1260,7 +1436,9 @@
    "files": {
     "instance.json": "ec1ce2329d7bb56e4a9552fb167e915b8cdc910ee1fbbb066e117260c73be08d",
     "public.json": "e8f10d73d181f6bee2c654019e3c5d77c04bd990c2a9d3691de3ec960b42b4cb"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-61f37e8dff",
@@ -1274,7 +1452,9 @@
    "files": {
     "instance.json": "1f690cd4abfc7cb73a8b515dea9d0e2110db0b2a5ace9874fa8932867ddf4bbe",
     "public.json": "ebceb8f3a7f78f5355ea9ab73c9110a7219dbe5b41eb48b5697d7a30a22ace6c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-5588e6d7cd",
@@ -1288,7 +1468,9 @@
    "files": {
     "instance.json": "6f62f68741c8aa2ae89e299349ce649987fc669fc3692c9e1c285bdcfc06592b",
     "public.json": "f65d0a3152475018d00d49c715a2b7970547db8b1a7da963793f4e499ba5536e"
-   }
+   },
+   "kept": false,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-0fc05c5621",
@@ -1302,7 +1484,9 @@
    "files": {
     "instance.json": "7c380bc53d2f9f4ddebdad367a43096bfb648b838f1b4cb10b7ea6c353f51f66",
     "public.json": "b25fc1d98cfff4016461f43d7355564fd9ae312b3c8126b0fd0c241b1ec42d3c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-e2b3f825ce",
@@ -1316,7 +1500,9 @@
    "files": {
     "instance.json": "4e820628fdd41b162da033e22cf71d36e926d3fa01ff17670e043c5a76891047",
     "public.json": "c0f1d104f98c64930c7e6cb531fa64f842050be138d554c591dc714829b337a0"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-ae0a8698a9",
@@ -1330,7 +1516,9 @@
    "files": {
     "instance.json": "584b135bfdbd0c3c2d41f1fb0fcc8da1e0d43d36bc950e956affb5cbbf022501",
     "public.json": "43888a993a523a3d16fd74ea2304d178c125b33be32f4f7206aabfe72180f132"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-1948e697a6",
@@ -1344,7 +1532,9 @@
    "files": {
     "instance.json": "af61f2525b3a633b407d54a7c7f8778ffd3c0b623b6c11d0fbcfdd7adf4b5a6e",
     "public.json": "67b4a7fef3189b7c0dfe16cc6e6286fedc9580ea6e437323a2d707f9f0628094"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-230b2e01a3",
@@ -1358,7 +1548,9 @@
    "files": {
     "instance.json": "7bc2ec2d5d1d9e3e93785f52c40c3d6594e5a8b1a023a81f21f04588e0f3eeb3",
     "public.json": "dfe65364b7989d36569efa091a84637dadf43bcafad535cfe71f32c7acf1dec0"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-3def66df88",
@@ -1372,7 +1564,9 @@
    "files": {
     "instance.json": "f29946b147ca2c8608ba24326b75e538985d746f123f21a3a5df2cae1312d90d",
     "public.json": "23bf35fbe01bc87b6ba0449868089373810f5332675822ce69b235e697c373cf"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-f49acfe5d4",
@@ -1400,7 +1594,9 @@
    "files": {
     "instance.json": "1160ffa92de2f8658eae190ceffcc06060772d077f18078cdebd0a9c5aaaae9c",
     "public.json": "a7443a49588f440da5c30d1ad607b65548bb344b51a15d63b4e55ae9ad82a0df"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-cd6b1ccacf",
@@ -1414,7 +1610,9 @@
    "files": {
     "instance.json": "0e4ce0889b9e109aa46f1dfe39cbf74d6f04e56bae24b6b69986fab84d643739",
     "public.json": "da8cd1fad316f5eceb1e5963661c92a9396f8ea35b9b4aa2ab43a4a2e568a316"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-8f7a32c1d4",
@@ -1428,7 +1626,9 @@
    "files": {
     "instance.json": "e75072be2753ed161cc408a2bfb1b1297fd837be615f4334d56631062a04cf37",
     "public.json": "5e238242b4466d19205ed4773b2a8b062b4d684789d5ceae60a8f5f46462842a"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-c8f5967014",
@@ -1442,7 +1642,9 @@
    "files": {
     "instance.json": "b5b15b23f2f23fbb13376b9fe7e85d7051f9c55c7abcc3e5a363209830a2b2e8",
     "public.json": "39f4f406e8caeb0ace005fd9a7dd9f4209be8d82a81ba54059e5b570b7509e89"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-3a7680e213",
@@ -1456,7 +1658,9 @@
    "files": {
     "instance.json": "db61fba2c3e0403ae8df87d3687a76489d7d22d2aa3e3a1ad52ea52e036c6299",
     "public.json": "15afb4a5c203f1f5fd1c9372f45d0fe1820f2ce51958286d63a9a7b88fc2c0a8"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-ee8971c009",
@@ -1470,7 +1674,9 @@
    "files": {
     "instance.json": "0d4d02f0343cc6a4052f6ba28526c02a9915be61c4878da81131e7840de23c13",
     "public.json": "4f63a821fb6e2e3bd3bfd71e5134462015352db3ea24b8a4ad5300fe3f8d6cee"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-9db5ff2d8e",
@@ -1484,7 +1690,9 @@
    "files": {
     "instance.json": "b182e1c2ec7ef9618e937610d351e4d0071fd4d4e6aa3387d098d31738aeb41d",
     "public.json": "f75184536898f17a13b7a50fbaa46030fa774c703d610701fd8847c063ab37de"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-019253c041",
@@ -1498,7 +1706,9 @@
    "files": {
     "instance.json": "6332f4312f3f766a55b708cfff74071a21769b4c0175c572a23b9f37406da266",
     "public.json": "c33b47e7f751c206909173688ec089bde0ed04a1b019af7378f375bc2eb7e16c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-8a6e0a62c1",
@@ -1512,7 +1722,9 @@
    "files": {
     "instance.json": "fd7e1edd72f1e88e7922fd3c444dbc0c63a581538ee64e986aa5123979540543",
     "public.json": "d8d044d45687ca77dbb41f6ce1a66793b3d8cce789cec197365f9857602ecdd6"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-f463eca9f0",
@@ -1526,7 +1738,9 @@
    "files": {
     "instance.json": "821de46045139e140ba74a54706207b5dbf33c5062637211b0479766f0deff03",
     "public.json": "1abde8a3bc5a686afa87d65733a8bbc590aa5f6fee36acfe81ee7370e2afb36c"
-   }
+   },
+   "kept": false,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-ad152ff545",
@@ -1540,7 +1754,9 @@
    "files": {
     "instance.json": "7e6c36f4d49b625d6d61bbedccc33ca86659a6fe55717c9d2e7ea0b88ca9ddf7",
     "public.json": "13053a1fecc5905562cecb9b2fc5e14fe00e8be3a5ac4fb775b6096c3bd5bed5"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-a9b84e0373",
@@ -1554,7 +1770,9 @@
    "files": {
     "instance.json": "d995fb2065945a960ef675155a227d2188d7e97100b0b2da90859cee38950f6b",
     "public.json": "16189c449c9ef53b4531d53e19e51344cd6b66163a9bdfc5224fc02acaa073f3"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-8811fd0b9e",
@@ -1568,7 +1786,9 @@
    "files": {
     "instance.json": "77ad391953c18324711b17a6bf5db67743562bd4be493f59b9872eb878b17d2f",
     "public.json": "cdf1029d11da461e04ed4ac5ea4bfffbd275358220664a6ed2a78a6e47e348c4"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-870191f43e",
@@ -1582,7 +1802,9 @@
    "files": {
     "instance.json": "282dff321a96e2ba59fdbb79e3b669ab582436228d10d6fd0076107b4b8eb1ff",
     "public.json": "cc4bc766cd39188d4a685a73f9f11b6bf23912f332c87d91bcc7ea59b42509ba"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-910072a8aa",
@@ -1596,7 +1818,9 @@
    "files": {
     "instance.json": "730954ca1cf97025060722b505b09ab3918a80d7d02581aa75d427421d1f4163",
     "public.json": "5dca723057a0cd97a801d3dd646bfefb23e6b744a64b7678ba840fc71144cab2"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-2e8855726a",
@@ -1610,7 +1834,9 @@
    "files": {
     "instance.json": "6dded383b199fc1537e800a67884ba62a103bd7335ff3e86cd0143c90a8553c6",
     "public.json": "372687e57ccda1b1cf2c925ed9bfc7d83d9fa1abc07c2cf52e63b0d3f6210825"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-fb3577138b",
@@ -1638,7 +1864,9 @@
    "files": {
     "instance.json": "e7f96cf3512e4305b8f86fd40ca9fc56116f2644497efef0ac12eacaffe01f1b",
     "public.json": "d27c3c4fafd4619a405d3cc437bfe71d6853632c8b964f931d59546a6ae2f57c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-fabe5cd21e",
@@ -1666,7 +1894,9 @@
    "files": {
     "instance.json": "802d6c97956fababa44ed169439a2509bf06533b66161cb7adda1685fa0af76a",
     "public.json": "3a57fa0708c71bc95e08c0a110d295668c11dbacc4bc7689c0a18ba1df08066c"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t2-72024da2c0",
@@ -1680,7 +1910,9 @@
    "files": {
     "instance.json": "2f578ec6051489e7273a963df87aab6c40996a0687a428f0af1b8663ad7be8dc",
     "public.json": "bbe57505455c982845e8382d1749f42f38cad002ad9346a37abe90147071f57a"
-   }
+   },
+   "kept": true,
+   "gate_run": "20261001-153149_prelim_v2"
   },
   {
    "instance_id": "fm-t3-822ec88f0b",

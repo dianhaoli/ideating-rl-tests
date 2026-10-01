@@ -1,0 +1,15 @@
+{
+ "tiers": {
+  "T1": [
+   "tasks/featurematch/instances/fm-t1-049d9a0c10",
+   "tasks/featurematch/instances/fm-t1-07219be43d",
+   "tasks/featurematch/instances/fm-t1-0e18320b9f"
+  ],
+  "T2": [
+   "tasks/featurematch/instances/fm-t2-00072ec9fb",
+   "tasks/featurematch/instances/fm-t2-019253c041",
+   "tasks/featurematch/instances/fm-t2-07850b389f"
+  ]
+ },
+ "profile": "full"
+}

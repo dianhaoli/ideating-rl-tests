@@ -1,0 +1,211 @@
+{
+ "dropped": [
+  "fm-t1-6f07d71392",
+  "fm-t2-5588e6d7cd",
+  "fm-t2-f463eca9f0"
+ ],
+ "n_ref_instances": 116,
+ "n_kept": 113,
+ "by_tier": {
+  "T1": {
+   "reference_one_shot": {
+    "k": 59,
+    "n": 59,
+    "rate": 1.0
+   },
+   "reference_best_of_5": {
+    "k": 59,
+    "n": 59,
+    "rate": 1.0
+   },
+   "blackbox": {
+    "k": 2,
+    "n": 59,
+    "rate": 0.034
+   },
+   "nothing": {
+    "k": 2,
+    "n": 59,
+    "rate": 0.034
+   },
+   "always_claim": {
+    "k": 0,
+    "n": 59,
+    "rate": 0.0
+   },
+   "prior": {
+    "k": 0,
+    "n": 59,
+    "rate": 0.0
+   },
+   "prior_or_none": {
+    "k": 0,
+    "n": 59,
+    "rate": 0.0
+   },
+   "random": {
+    "k": 0,
+    "n": 59,
+    "rate": 0.0
+   },
+   "name_probe": {
+    "k": 0,
+    "n": 59,
+    "rate": 0.0
+   },
+   "name_probe_thr": {
+    "k": 2,
+    "n": 59,
+    "rate": 0.034
+   },
+   "vocab_match": {
+    "k": 2,
+    "n": 59,
+    "rate": 0.034
+   }
+  },
+  "T2": {
+   "reference_one_shot": {
+    "k": 51,
+    "n": 54,
+    "rate": 0.944
+   },
+   "reference_best_of_5": {
+    "k": 54,
+    "n": 54,
+    "rate": 1.0
+   },
+   "blackbox": {
+    "k": 2,
+    "n": 54,
+    "rate": 0.037
+   },
+   "nothing": {
+    "k": 2,
+    "n": 54,
+    "rate": 0.037
+   },
+   "always_claim": {
+    "k": 0,
+    "n": 54,
+    "rate": 0.0
+   },
+   "prior": {
+    "k": 0,
+    "n": 54,
+    "rate": 0.0
+   },
+   "prior_or_none": {
+    "k": 0,
+    "n": 54,
+    "rate": 0.0
+   },
+   "random": {
+    "k": 0,
+    "n": 54,
+    "rate": 0.0
+   },
+   "name_probe": {
+    "k": 0,
+    "n": 54,
+    "rate": 0.0
+   },
+   "name_probe_thr": {
+    "k": 2,
+    "n": 54,
+    "rate": 0.037
+   },
+   "vocab_match": {
+    "k": 1,
+    "n": 54,
+    "rate": 0.019
+   }
+  }
+ },
+ "slot_rates": {
+  "T1": {
+   "always_claim/near_miss": 0.0,
+   "always_claim/null_fp": 1.0,
+   "always_claim/off_universe": 0.0,
+   "always_claim/planted": 0.066,
+   "blackbox/near_miss": 1.0,
+   "blackbox/null_fp": 0.0,
+   "blackbox/off_universe": 1.0,
+   "blackbox/planted": 0.0,
+   "name_probe/near_miss": 0.0,
+   "name_probe/null_fp": 1.0,
+   "name_probe/off_universe": 0.0,
+   "name_probe/planted": 0.053,
+   "name_probe_thr/near_miss": 0.93,
+   "name_probe_thr/null_fp": 0.045,
+   "name_probe_thr/off_universe": 1.0,
+   "name_probe_thr/planted": 0.0,
+   "nothing/near_miss": 1.0,
+   "nothing/null_fp": 0.0,
+   "nothing/off_universe": 1.0,
+   "nothing/planted": 0.0,
+   "prior/near_miss": 0.0,
+   "prior/null_fp": 1.0,
+   "prior/off_universe": 0.0,
+   "prior/planted": 0.113,
+   "prior_or_none/near_miss": 0.0,
+   "prior_or_none/null_fp": 1.0,
+   "prior_or_none/off_universe": 0.0,
+   "prior_or_none/planted": 0.113,
+   "random/near_miss": 0.211,
+   "random/null_fp": 0.764,
+   "random/off_universe": 0.281,
+   "random/planted": 0.053,
+   "reference/near_miss": 1.0,
+   "reference/null_fp": 0.0,
+   "reference/off_universe": 1.0,
+   "reference/planted": 1.0,
+   "vocab_match/near_miss": 1.0,
+   "vocab_match/null_fp": 0.0,
+   "vocab_match/off_universe": 1.0,
+   "vocab_match/planted": 0.007
+  },
+  "T2": {
+   "always_claim/near_miss": 0.0,
+   "always_claim/null_fp": 1.0,
+   "always_claim/off_universe": 0.0,
+   "always_claim/planted": 0.047,
+   "blackbox/near_miss": 1.0,
+   "blackbox/null_fp": 0.0,
+   "blackbox/off_universe": 1.0,
+   "blackbox/planted": 0.0,
+   "name_probe/near_miss": 0.0,
+   "name_probe/null_fp": 1.0,
+   "name_probe/off_universe": 0.0,
+   "name_probe/planted": 0.031,
+   "name_probe_thr/near_miss": 0.862,
+   "name_probe_thr/null_fp": 0.087,
+   "name_probe_thr/off_universe": 1.0,
+   "name_probe_thr/planted": 0.0,
+   "nothing/near_miss": 1.0,
+   "nothing/null_fp": 0.0,
+   "nothing/off_universe": 1.0,
+   "nothing/planted": 0.0,
+   "prior/near_miss": 0.0,
+   "prior/null_fp": 1.0,
+   "prior/off_universe": 0.0,
+   "prior/planted": 0.101,
+   "prior_or_none/near_miss": 0.0,
+   "prior_or_none/null_fp": 1.0,
+   "prior_or_none/off_universe": 0.0,
+   "prior_or_none/planted": 0.101,
+   "random/near_miss": 0.293,
+   "random/null_fp": 0.739,
+   "random/off_universe": 0.206,
+   "random/planted": 0.039,
+   "reference/near_miss": 0.983,
+   "reference/null_fp": 0.011,
+   "reference/off_universe": 1.0,
+   "reference/planted": 0.984,
+   "vocab_match/near_miss": 0.931,
+   "vocab_match/null_fp": 0.065,
+   "vocab_match/off_universe": 0.941,
+   "vocab_match/planted": 0.023
+  }
+ }
+}
