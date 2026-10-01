@@ -91,3 +91,12 @@ events, orchestration decisions and gate summaries, with links.
   from a different task is waiting. Waiters register in the ledger and are shown by `gpuq status`. Unit-simulated, and
   the harness tests pass (190). Caveat: worktrees run their own copy of gpuq.py, so the rule binds a task only after
   it merges main. Running builders are told via the builder guide.
+
+## 2026-10-01 17:00 UTC: api_agent budget guard was far too pessimistic (environment fault in a probe)
+- BoolIntermediates probe 3 (runs/boolintermediates/20261001-161311_apiprobe3, worktree) was stopped at $0.28 of its
+  $0.60 per-episode cap before submitting, and scored as a fail. The guard priced the next turn as "whole context
+  re-written to cache plus max_tokens of output" (about $0.49), while real Opus turns cost about $0.03. **That probe's
+  failure is an environment fault, not an agent fault.**
+- Fix: the estimate is now cache-read context + ~4k new tokens + 1.5x the largest output seen so far. When the
+  episode nears its cap (or its turn limit), the agent gets a "[budget notice] submit now" text with its tool results
+  and two more turns, before any hard stop. Verified on _demo (runs/_demo/*_apiwarn: warned, submitted, pass, $0.015).

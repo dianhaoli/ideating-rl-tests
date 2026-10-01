@@ -143,3 +143,5 @@ Run `git merge main` at your next convenient point. It brings heavy-slot fairnes
 slots while another task waits. Always launch GPU work through `python -m common.gpuq run ...` from a checkout that has
 `common/paths.py`; jobs outside the queue cause OOMs for everyone. Give every job a label that starts with your task
 name (e.g. `--label editfind-gates`). Fairness is keyed on that prefix.
+- **2026-10-01 17:00: `git merge main` before your next API probe.** The old api_agent stopped episodes far too early
+  (a pessimistic budget guard). The new one warns the agent to submit before stopping.
