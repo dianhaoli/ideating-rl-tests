@@ -153,3 +153,12 @@ name (e.g. `--label editfind-gates`). Fairness is keyed on that prefix.
   --prompt-file ... --out ... --model gpt-6.1-sol` (or `gpt-6-luna` as the small model). It uses the same sandbox, audit
   and finish flow (`--agent-model openai:gpt-6.1-sol:medium`). Per-task OpenAI cap $4. Use it when a second model
   family matters (difficulty that should not be Claude-specific, small-vs-large separation), not for routine debugging.
+
+## Memory (added 2026-10-02 after an OOM crash)
+The machine has 30 GB RAM + 16 GB swap. All of user 1000's processes are capped at 26 GB (MemoryHigh 24G).
+At 03:10 UTC on 2026-10-02 one python analysis job reached 19.5 GB and the box went down.
+- Run every CPU-heavy analysis under its own cap:
+  `systemd-run --user --scope -p MemoryMax=10G -p MemorySwapMax=2G -- $PY -m ...`
+- Open large .npy caches with `np.load(path, mmap_mode='r')`. Slice only the columns you need, stay in
+  float32 or smaller, and never build dense [n_texts, 16384] float64 arrays.
+- Run only one heavy CPU job at a time across all builders. Report peak RSS (`/usr/bin/time -v`) in your notes.

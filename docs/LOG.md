@@ -255,3 +255,11 @@ events, orchestration decisions and gate summaries, with links.
 - No baseline or agent has used the pool, so making the code follow the pre-registered rule is a conformance fix, not a
   deviation. One builder agent fixes step 2 (CPU only, cached activations). A second agent implements the step-3 style-robust
   recipe (SR-max / SR-thr from cached bank-R activations) in separate files.
+
+## 2026-10-02 03:55 UTC: OOM crash at 03:10, memory guards added
+- Kernel log, previous boot: a python process (most likely the step-2 style_filter analyze) reached 19.5 GB RSS and
+  was OOM-killed at 03:10. The machine went down at ~03:22 and rebooted at 03:39. That ended the previous orchestrator session and its
+  workflows (committed outputs are intact).
+- Guards: 16 GB swap (/swapfile, in fstab); user-1000.slice MemoryHigh=24G, MemoryMax=26G (persistent), so a
+  runaway job is killed inside the slice instead of taking the system down; per-job caps via systemd-run scopes;
+  rules in BUILDER_GUIDE "Memory". Disk is now 86% used (swap file takes 16 GB).
