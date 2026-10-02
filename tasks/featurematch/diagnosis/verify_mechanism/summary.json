@@ -1,0 +1,1896 @@
+{
+ "consistency_gpu_vs_cache": {
+  "n_pairs": 1725,
+  "pearson_r": 0.99995,
+  "max_abs_diff": 5.788,
+  "median_abs_diff": 0.0501,
+  "fire_agreement": 0.9988
+ },
+ "dropped": {
+  "n_latents": 30,
+  "scripted_type": {
+   "keyword": [
+    9,
+    [
+     0.167,
+     0.479
+    ]
+   ],
+   "format": [
+    9,
+    [
+     0.167,
+     0.479
+    ]
+   ],
+   "mixed": [
+    6,
+    [
+     0.095,
+     0.373
+    ]
+   ],
+   "name": [
+    3,
+    [
+     0.035,
+     0.256
+    ]
+   ],
+   "other": [
+    3,
+    [
+     0.035,
+     0.256
+    ]
+   ]
+  },
+  "manual_category": {
+   "format": [
+    18,
+    [
+     0.423,
+     0.754
+    ]
+   ],
+   "name_entity": [
+    6,
+    [
+     0.095,
+     0.373
+    ]
+   ],
+   "topic": [
+    5,
+    [
+     0.073,
+     0.336
+    ]
+   ],
+   "other": [
+    1,
+    [
+     0.006,
+     0.167
+    ]
+   ]
+  },
+  "fire_A40_cached_mean_boot95": [
+   0.945,
+   [
+    0.928,
+    0.962
+   ]
+  ],
+  "fire_F20_cached_mean_boot95": [
+   0.253,
+   [
+    0.185,
+    0.325
+   ]
+  ],
+  "auroc_F2_cstar_mean_boot95": [
+   0.582,
+   [
+    0.545,
+    0.621
+   ]
+  ],
+  "generic_fire_rate_median": 0.0962,
+  "A_peaks_pooled": {
+   "n": 280,
+   "keyword": [
+    105,
+    0.375,
+    [
+     0.32,
+     0.433
+    ]
+   ],
+   "format": [
+    78,
+    0.279,
+    [
+     0.229,
+     0.334
+    ]
+   ],
+   "name": [
+    54,
+    0.193,
+    [
+     0.151,
+     0.243
+    ]
+   ],
+   "other": [
+    43,
+    0.154,
+    [
+     0.116,
+     0.2
+    ]
+   ]
+  },
+  "F_peaks_pooled": {
+   "n": 68,
+   "other": [
+    23,
+    0.338,
+    [
+     0.237,
+     0.457
+    ]
+   ],
+   "format": [
+    19,
+    0.279,
+    [
+     0.187,
+     0.396
+    ]
+   ],
+   "keyword": [
+    15,
+    0.221,
+    [
+     0.138,
+     0.333
+    ]
+   ],
+   "name": [
+    11,
+    0.162,
+    [
+     0.093,
+     0.267
+    ]
+   ]
+  },
+  "median_peak_pos_A": 22.0,
+  "word_transfer_F2": {
+   "latents_with_content_peak_words": 27,
+   "latents_whose_peak_word_occurs_in_F2": 18,
+   "occurrences": 46,
+   "fired": 15,
+   "rate": 0.326,
+   "wilson95_occurrence_level(ignores_clustering)": [
+    0.209,
+    0.47
+   ],
+   "per_latent_rate_mean_boot95": [
+    0.375,
+    [
+     0.219,
+     0.546
+    ]
+   ]
+  },
+  "by_manual_category": {
+   "name_entity": {
+    "n": 6,
+    "fire_F20_mean": 0.35,
+    "auroc_F2_mean": 0.637,
+    "latents": [
+     "CyclingTeam L12/4070",
+     "Publisher L12/7989",
+     "Skater L18/801",
+     "BusCompany L6/13638",
+     "Entomologist L18/6384",
+     "AustralianFootballTeam L12/14152"
+    ]
+   },
+   "format": {
+    "n": 18,
+    "fire_F20_mean": 0.144,
+    "auroc_F2_mean": 0.517,
+    "latents": [
+     "Conifer L6/4409",
+     "NCAATeamSeason L6/4197",
+     "MountainPass L18/9912",
+     "Bird L12/15507",
+     "TennisPlayer L6/9095",
+     "Magazine L12/2360",
+     "HollywoodCartoon L18/16258",
+     "SquashPlayer L12/6003",
+     "Airport L18/7934",
+     "Musical L12/4762",
+     "WomensTennisAssociationTournament L18/10779",
+     "Historian L18/11943",
+     "HandballPlayer L18/587",
+     "OlympicEvent L18/10163",
+     "Manga L6/6666",
+     "SoccerPlayer L18/5273",
+     "RugbyPlayer L18/133",
+     "SoapCharacter L12/11051"
+    ]
+   },
+   "other": {
+    "n": 1,
+    "fire_F20_mean": 0.2,
+    "auroc_F2_mean": 0.627,
+    "latents": [
+     "HockeyTeam L18/14712"
+    ]
+   },
+   "topic": {
+    "n": 5,
+    "fire_F20_mean": 0.54,
+    "auroc_F2_mean": 0.742,
+    "latents": [
+     "Architect L18/10635",
+     "University L12/2190",
+     "Airline L18/2202",
+     "Canal L18/4548",
+     "AutomobileEngine L12/4183"
+    ]
+   }
+  }
+ },
+ "kept": {
+  "n_latents": 15,
+  "scripted_type": {
+   "format": [
+    8,
+    [
+     0.301,
+     0.752
+    ]
+   ],
+   "keyword": [
+    6,
+    [
+     0.198,
+     0.643
+    ]
+   ],
+   "mixed": [
+    1,
+    [
+     0.012,
+     0.298
+    ]
+   ]
+  },
+  "manual_category": {
+   "topic": [
+    13,
+    [
+     0.621,
+     0.963
+    ]
+   ],
+   "name_entity": [
+    2,
+    [
+     0.037,
+     0.379
+    ]
+   ]
+  },
+  "fire_A40_cached_mean_boot95": [
+   0.96,
+   [
+    0.932,
+    0.983
+   ]
+  ],
+  "fire_F20_cached_mean_boot95": [
+   0.817,
+   [
+    0.76,
+    0.87
+   ]
+  ],
+  "auroc_F2_cstar_mean_boot95": [
+   0.913,
+   [
+    0.894,
+    0.933
+   ]
+  ],
+  "generic_fire_rate_median": 0.0772,
+  "A_peaks_pooled": {
+   "n": 141,
+   "format": [
+    59,
+    0.418,
+    [
+     0.34,
+     0.501
+    ]
+   ],
+   "keyword": [
+    55,
+    0.39,
+    [
+     0.313,
+     0.472
+    ]
+   ],
+   "other": [
+    16,
+    0.113,
+    [
+     0.071,
+     0.176
+    ]
+   ],
+   "name": [
+    11,
+    0.078,
+    [
+     0.044,
+     0.134
+    ]
+   ]
+  },
+  "F_peaks_pooled": {
+   "n": 131,
+   "other": [
+    42,
+    0.321,
+    [
+     0.247,
+     0.405
+    ]
+   ],
+   "format": [
+    36,
+    0.275,
+    [
+     0.206,
+     0.357
+    ]
+   ],
+   "name": [
+    29,
+    0.221,
+    [
+     0.159,
+     0.3
+    ]
+   ],
+   "keyword": [
+    24,
+    0.183,
+    [
+     0.126,
+     0.258
+    ]
+   ]
+  },
+  "median_peak_pos_A": 25.0,
+  "word_transfer_F2": {
+   "latents_with_content_peak_words": 14,
+   "latents_whose_peak_word_occurs_in_F2": 8,
+   "occurrences": 28,
+   "fired": 22,
+   "rate": 0.786,
+   "wilson95_occurrence_level(ignores_clustering)": [
+    0.605,
+    0.898
+   ],
+   "per_latent_rate_mean_boot95": [
+    0.738,
+    [
+     0.488,
+     0.946
+    ]
+   ]
+  },
+  "by_manual_category": {
+   "topic": {
+    "n": 13,
+    "fire_F20_mean": 0.808,
+    "auroc_F2_mean": 0.905,
+    "latents": [
+     "Ambassador L18/8304",
+     "Dam L18/2686",
+     "Earthquake L18/15958",
+     "GrandPrix L18/2332",
+     "Noble L18/12795",
+     "RaceHorse L12/5748",
+     "SolarEclipse L6/8133",
+     "EurovisionSongContestEntry L12/13605",
+     "Judge L12/7032",
+     "Magazine L18/3835",
+     "ClassicalMusicComposition L18/6289",
+     "RadioStation L6/346",
+     "Model L12/5992"
+    ]
+   },
+   "name_entity": {
+    "n": 2,
+    "fire_F20_mean": 0.875,
+    "auroc_F2_mean": 0.967,
+    "latents": [
+     "School L6/1044",
+     "LawFirm L18/13808"
+    ]
+   }
+  }
+ },
+ "dropped_vs_kept_fisher": {
+  "format": {
+   "dropped": [
+    18,
+    30
+   ],
+   "kept": [
+    0,
+    15
+   ],
+   "p_two_sided": 5.936966637347125e-05
+  },
+  "name_entity": {
+   "dropped": [
+    6,
+    30
+   ],
+   "kept": [
+    2,
+    15
+   ],
+   "p_two_sided": 0.6991915151153292
+  },
+  "other": {
+   "dropped": [
+    1,
+    30
+   ],
+   "kept": [
+    0,
+    15
+   ],
+   "p_two_sided": 1.0
+  },
+  "topic": {
+   "dropped": [
+    5,
+    30
+   ],
+   "kept": [
+    13,
+    15
+   ],
+   "p_two_sided": 8.9622961483417e-06
+  }
+ },
+ "scripted_vs_manual": {
+  "n": 45,
+  "pairs": [
+   [
+    "keyword->format",
+    7
+   ],
+   [
+    "format->topic",
+    7
+   ],
+   [
+    "format->format",
+    6
+   ],
+   [
+    "keyword->topic",
+    6
+   ],
+   [
+    "mixed->topic",
+    4
+   ],
+   [
+    "format->name_entity",
+    3
+   ],
+   [
+    "name->name_entity",
+    2
+   ],
+   [
+    "other->format",
+    2
+   ],
+   [
+    "mixed->format",
+    2
+   ],
+   [
+    "keyword->name_entity",
+    2
+   ],
+   [
+    "name->format",
+    1
+   ],
+   [
+    "format->other",
+    1
+   ],
+   [
+    "mixed->name_entity",
+    1
+   ],
+   [
+    "other->topic",
+    1
+   ]
+  ]
+ },
+ "q2_exemplars": {
+  "n": 30,
+  "scripted_type": {
+   "name": 2,
+   "keyword": 17,
+   "format": 8,
+   "mixed": 2,
+   "other": 1
+  },
+  "fires_on_own_name": [
+   29,
+   30
+  ],
+  "in_pool": 0,
+  "A_peak_types": {
+   "name": 37,
+   "keyword": 153,
+   "format": 75,
+   "other": 35
+  },
+  "F_peak_types": {
+   "format": 72,
+   "name": 71,
+   "other": 111,
+   "keyword": 44
+  },
+  "n_A10_firing_mean": 10.0,
+  "n_F10_firing_mean": 9.93
+ },
+ "q2_sample30": {
+  "n_concepts": 30,
+  "with_robust_latent": [
+   30,
+   [
+    0.886,
+    1.0
+   ]
+  ],
+  "with_robust_latent_anchored_c": [
+   29,
+   [
+    0.833,
+    0.994
+   ]
+  ],
+  "with_robust_latent_in_pool_as_c": [
+   8,
+   [
+    0.142,
+    0.444
+   ]
+  ],
+  "with_robust_latent_kept_A11": [
+   8,
+   [
+    0.142,
+    0.444
+   ]
+  ],
+  "latent_totals": {
+   "robust": 999,
+   "anchored_c": 292,
+   "in_pool_anchored_c": 44,
+   "kept": 42,
+   "anchored_elsewhere": 707,
+   "elsewhere_sibling": 134,
+   "fire_on_own_name": 647,
+   "why:name_filter+not_specific": 114,
+   "why:not_specific_only": 48,
+   "why:name_filter_only": 75,
+   "why:other:auroc_B>=0.85+specific(<=3 within 0.10)": 2,
+   "why:other:auroc_A>=0.90": 1,
+   "why:other:auroc_A>=0.90+auroc_B>=0.85": 1,
+   "why:other:auroc_A>=0.90+specific(<=3 within 0.10)": 3,
+   "why:other:auroc_A>=0.90+own_name_silent+specific(<=3 within 0.10)": 2,
+   "why:other:auroc_B>=0.85": 2
+  }
+ },
+ "q2_sample30_per_concept": {
+  "topic:CyclingTeam": {
+   "label": "article about a cycling team",
+   "n_robust": 46,
+   "by_layer": {
+    "6": 12,
+    "12": 18,
+    "18": 16
+   },
+   "best_min_auroc_C_F2": 0.9979,
+   "n_anchored_c": 3,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 43,
+   "n_elsewhere_sibling": 1,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Cyclist",
+     3
+    ],
+    [
+     "topic:CyclingRace",
+     3
+    ],
+    [
+     "topic:EurovisionSongContestEntry",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 2,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 29
+  },
+  "topic:Conifer": {
+   "label": "article about a conifer",
+   "n_robust": 31,
+   "by_layer": {
+    "6": 16,
+    "12": 7,
+    "18": 8
+   },
+   "best_min_auroc_C_F2": 0.9982,
+   "n_anchored_c": 11,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 20,
+   "n_elsewhere_sibling": 8,
+   "elsewhere_top_anchors": [
+    [
+     "topic:CultivatedVariety",
+     4
+    ],
+    [
+     "topic:Fern",
+     2
+    ],
+    [
+     "topic:Glacier",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 8,
+    "name_filter_only": 3
+   },
+   "n_fire_on_own_name": 30
+  },
+  "topic:NCAATeamSeason": {
+   "label": "article about a NCAA team season",
+   "n_robust": 94,
+   "by_layer": {
+    "6": 28,
+    "12": 30,
+    "18": 36
+   },
+   "best_min_auroc_C_F2": 0.9982,
+   "n_anchored_c": 31,
+   "n_in_pool_anchored_c": 6,
+   "n_kept_A11": 5,
+   "n_anchored_elsewhere": 63,
+   "n_elsewhere_sibling": 9,
+   "elsewhere_top_anchors": [
+    [
+     "topic:NationalFootballLeagueSeason",
+     8
+    ],
+    [
+     "topic:TennisTournament",
+     7
+    ],
+    [
+     "topic:SoccerClubSeason",
+     5
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 13,
+    "name_filter_only": 3,
+    "not_specific_only": 7,
+    "other:auroc_B>=0.85+specific(<=3 within 0.10)": 1,
+    "other:auroc_A>=0.90": 1
+   },
+   "n_fire_on_own_name": 47
+  },
+  "topic:Publisher": {
+   "label": "article about a publisher",
+   "n_robust": 29,
+   "by_layer": {
+    "6": 6,
+    "12": 9,
+    "18": 14
+   },
+   "best_min_auroc_C_F2": 0.992,
+   "n_anchored_c": 6,
+   "n_in_pool_anchored_c": 1,
+   "n_kept_A11": 1,
+   "n_anchored_elsewhere": 23,
+   "n_elsewhere_sibling": 5,
+   "elsewhere_top_anchors": [
+    [
+     "topic:RecordLabel",
+     4
+    ],
+    [
+     "topic:Library",
+     3
+    ],
+    [
+     "topic:Newspaper",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 1,
+    "not_specific_only": 2,
+    "name_filter+not_specific": 1,
+    "other:auroc_A>=0.90+auroc_B>=0.85": 1
+   },
+   "n_fire_on_own_name": 19
+  },
+  "topic:MountainPass": {
+   "label": "article about a mountain pass",
+   "n_robust": 62,
+   "by_layer": {
+    "6": 17,
+    "12": 22,
+    "18": 23
+   },
+   "best_min_auroc_C_F2": 0.9899,
+   "n_anchored_c": 15,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 47,
+   "n_elsewhere_sibling": 15,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Road",
+     10
+    ],
+    [
+     "topic:MountainRange",
+     8
+    ],
+    [
+     "topic:Lake",
+     4
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 15
+   },
+   "n_fire_on_own_name": 52
+  },
+  "topic:Bird": {
+   "label": "article about a bird",
+   "n_robust": 33,
+   "by_layer": {
+    "6": 13,
+    "12": 9,
+    "18": 11
+   },
+   "best_min_auroc_C_F2": 0.9971,
+   "n_anchored_c": 13,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 20,
+   "n_elsewhere_sibling": 12,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Amphibian",
+     5
+    ],
+    [
+     "topic:Insect",
+     4
+    ],
+    [
+     "topic:Grape",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 4,
+    "name_filter_only": 3,
+    "not_specific_only": 5,
+    "other:auroc_A>=0.90+specific(<=3 within 0.10)": 1
+   },
+   "n_fire_on_own_name": 17
+  },
+  "topic:TennisPlayer": {
+   "label": "article about a tennis player",
+   "n_robust": 9,
+   "by_layer": {
+    "6": 2,
+    "12": 3,
+    "18": 4
+   },
+   "best_min_auroc_C_F2": 0.994,
+   "n_anchored_c": 1,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 8,
+   "n_elsewhere_sibling": 2,
+   "elsewhere_top_anchors": [
+    [
+     "topic:WomensTennisAssociationTournament",
+     2
+    ],
+    [
+     "topic:TennisTournament",
+     1
+    ],
+    [
+     "topic:GolfCourse",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 1
+   },
+   "n_fire_on_own_name": 8
+  },
+  "topic:Magazine": {
+   "label": "article about a magazine",
+   "n_robust": 21,
+   "by_layer": {
+    "6": 4,
+    "12": 6,
+    "18": 11
+   },
+   "best_min_auroc_C_F2": 0.9962,
+   "n_anchored_c": 3,
+   "n_in_pool_anchored_c": 1,
+   "n_kept_A11": 1,
+   "n_anchored_elsewhere": 18,
+   "n_elsewhere_sibling": 9,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Newspaper",
+     7
+    ],
+    [
+     "topic:ComicStrip",
+     3
+    ],
+    [
+     "topic:AcademicJournal",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 2
+   },
+   "n_fire_on_own_name": 16
+  },
+  "topic:HollywoodCartoon": {
+   "label": "article about a Hollywood cartoon",
+   "n_robust": 72,
+   "by_layer": {
+    "6": 27,
+    "12": 23,
+    "18": 22
+   },
+   "best_min_auroc_C_F2": 0.9987,
+   "n_anchored_c": 24,
+   "n_in_pool_anchored_c": 5,
+   "n_kept_A11": 4,
+   "n_anchored_elsewhere": 48,
+   "n_elsewhere_sibling": 2,
+   "elsewhere_top_anchors": [
+    [
+     "topic:SoapCharacter",
+     8
+    ],
+    [
+     "topic:ComicStrip",
+     6
+    ],
+    [
+     "topic:VideoGame",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 7,
+    "name_filter_only": 5,
+    "not_specific_only": 6,
+    "other:auroc_A>=0.90+specific(<=3 within 0.10)": 1
+   },
+   "n_fire_on_own_name": 37
+  },
+  "topic:SquashPlayer": {
+   "label": "article about a squash player",
+   "n_robust": 9,
+   "by_layer": {
+    "6": 3,
+    "12": 1,
+    "18": 5
+   },
+   "best_min_auroc_C_F2": 0.9332,
+   "n_anchored_c": 1,
+   "n_in_pool_anchored_c": 1,
+   "n_kept_A11": 1,
+   "n_anchored_elsewhere": 8,
+   "n_elsewhere_sibling": 3,
+   "elsewhere_top_anchors": [
+    [
+     "topic:WomensTennisAssociationTournament",
+     1
+    ],
+    [
+     "topic:TennisTournament",
+     1
+    ],
+    [
+     "topic:TennisPlayer",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {},
+   "n_fire_on_own_name": 8
+  },
+  "topic:HockeyTeam": {
+   "label": "article about a hockey team",
+   "n_robust": 22,
+   "by_layer": {
+    "6": 5,
+    "12": 7,
+    "18": 10
+   },
+   "best_min_auroc_C_F2": 0.9885,
+   "n_anchored_c": 2,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 20,
+   "n_elsewhere_sibling": 2,
+   "elsewhere_top_anchors": [
+    [
+     "topic:NCAATeamSeason",
+     3
+    ],
+    [
+     "topic:IceHockeyPlayer",
+     2
+    ],
+    [
+     "topic:BasketballTeam",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 1,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 14
+  },
+  "topic:Airport": {
+   "label": "article about an airport",
+   "n_robust": 14,
+   "by_layer": {
+    "6": 3,
+    "12": 4,
+    "18": 7
+   },
+   "best_min_auroc_C_F2": 0.9973,
+   "n_anchored_c": 6,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 8,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Airline",
+     5
+    ],
+    [
+     "topic:MountainRange",
+     1
+    ],
+    [
+     "topic:ShoppingMall",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 5,
+    "name_filter_only": 1
+   },
+   "n_fire_on_own_name": 14
+  },
+  "topic:Skater": {
+   "label": "article about a skater",
+   "n_robust": 22,
+   "by_layer": {
+    "6": 9,
+    "12": 6,
+    "18": 7
+   },
+   "best_min_auroc_C_F2": 0.978,
+   "n_anchored_c": 4,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 18,
+   "n_elsewhere_sibling": 2,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Swimmer",
+     3
+    ],
+    [
+     "topic:AmateurBoxer",
+     3
+    ],
+    [
+     "topic:Canoeist",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "not_specific_only": 2,
+    "name_filter+not_specific": 2
+   },
+   "n_fire_on_own_name": 11
+  },
+  "topic:Musical": {
+   "label": "article about a musical",
+   "n_robust": 48,
+   "by_layer": {
+    "6": 19,
+    "12": 15,
+    "18": 14
+   },
+   "best_min_auroc_C_F2": 0.9998,
+   "n_anchored_c": 5,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 43,
+   "n_elsewhere_sibling": 9,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Play",
+     8
+    ],
+    [
+     "topic:SoapCharacter",
+     6
+    ],
+    [
+     "topic:EurovisionSongContestEntry",
+     4
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 2,
+    "name_filter+not_specific": 1,
+    "other:auroc_A>=0.90+own_name_silent+specific(<=3 within 0.10)": 1,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 25
+  },
+  "topic:BusCompany": {
+   "label": "article about a bus company",
+   "n_robust": 23,
+   "by_layer": {
+    "6": 7,
+    "12": 8,
+    "18": 8
+   },
+   "best_min_auroc_C_F2": 0.9987,
+   "n_anchored_c": 11,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 12,
+   "n_elsewhere_sibling": 7,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Airline",
+     5
+    ],
+    [
+     "topic:RailwayLine",
+     1
+    ],
+    [
+     "topic:RailwayStation",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 8,
+    "name_filter_only": 3
+   },
+   "n_fire_on_own_name": 21
+  },
+  "topic:WomensTennisAssociationTournament": {
+   "label": "article about a WTA tennis tournament",
+   "n_robust": 36,
+   "by_layer": {
+    "6": 14,
+    "12": 13,
+    "18": 9
+   },
+   "best_min_auroc_C_F2": 0.9963,
+   "n_anchored_c": 4,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 32,
+   "n_elsewhere_sibling": 13,
+   "elsewhere_top_anchors": [
+    [
+     "topic:TennisTournament",
+     9
+    ],
+    [
+     "topic:SoccerTournament",
+     4
+    ],
+    [
+     "topic:HorseRace",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 4
+   },
+   "n_fire_on_own_name": 29
+  },
+  "topic:Entomologist": {
+   "label": "article about an entomologist",
+   "n_robust": 32,
+   "by_layer": {
+    "6": 10,
+    "12": 9,
+    "18": 13
+   },
+   "best_min_auroc_C_F2": 0.9953,
+   "n_anchored_c": 11,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 21,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Insect",
+     5
+    ],
+    [
+     "topic:AcademicJournal",
+     3
+    ],
+    [
+     "topic:Mollusca",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 5,
+    "name_filter_only": 6
+   },
+   "n_fire_on_own_name": 29
+  },
+  "topic:Historian": {
+   "label": "article about a historian",
+   "n_robust": 14,
+   "by_layer": {
+    "6": 4,
+    "12": 3,
+    "18": 7
+   },
+   "best_min_auroc_C_F2": 0.9692,
+   "n_anchored_c": 8,
+   "n_in_pool_anchored_c": 1,
+   "n_kept_A11": 1,
+   "n_anchored_elsewhere": 6,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Economist",
+     2
+    ],
+    [
+     "topic:AcademicJournal",
+     1
+    ],
+    [
+     "topic:Entomologist",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 2,
+    "name_filter_only": 4,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 11
+  },
+  "topic:Architect": {
+   "label": "article about an architect",
+   "n_robust": 19,
+   "by_layer": {
+    "6": 8,
+    "12": 6,
+    "18": 5
+   },
+   "best_min_auroc_C_F2": 0.9997,
+   "n_anchored_c": 10,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 9,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Painter",
+     2
+    ],
+    [
+     "topic:FashionDesigner",
+     1
+    ],
+    [
+     "topic:Castle",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 8,
+    "name_filter+not_specific": 2
+   },
+   "n_fire_on_own_name": 16
+  },
+  "topic:HandballPlayer": {
+   "label": "article about a handball player",
+   "n_robust": 5,
+   "by_layer": {
+    "6": 3,
+    "12": 0,
+    "18": 2
+   },
+   "best_min_auroc_C_F2": 0.8855,
+   "n_anchored_c": 0,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 5,
+   "n_elsewhere_sibling": 4,
+   "elsewhere_top_anchors": [
+    [
+     "topic:SoccerPlayer",
+     2
+    ],
+    [
+     "topic:BasketballPlayer",
+     1
+    ],
+    [
+     "topic:VoiceActor",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {},
+   "n_fire_on_own_name": 4
+  },
+  "topic:University": {
+   "label": "article about a university",
+   "n_robust": 10,
+   "by_layer": {
+    "6": 4,
+    "12": 3,
+    "18": 3
+   },
+   "best_min_auroc_C_F2": 0.9958,
+   "n_anchored_c": 5,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 5,
+   "n_elsewhere_sibling": 1,
+   "elsewhere_top_anchors": [
+    [
+     "topic:NCAATeamSeason",
+     3
+    ],
+    [
+     "topic:School",
+     1
+    ],
+    [
+     "topic:FilmFestival",
+     1
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 3,
+    "not_specific_only": 1,
+    "name_filter_only": 1
+   },
+   "n_fire_on_own_name": 8
+  },
+  "topic:AustralianFootballTeam": {
+   "label": "article about an Australian football team",
+   "n_robust": 40,
+   "by_layer": {
+    "6": 12,
+    "12": 14,
+    "18": 14
+   },
+   "best_min_auroc_C_F2": 0.9935,
+   "n_anchored_c": 1,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 39,
+   "n_elsewhere_sibling": 3,
+   "elsewhere_top_anchors": [
+    [
+     "topic:AustralianRulesFootballPlayer",
+     14
+    ],
+    [
+     "topic:AmericanFootballPlayer",
+     3
+    ],
+    [
+     "topic:NCAATeamSeason",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 1
+   },
+   "n_fire_on_own_name": 30
+  },
+  "topic:Airline": {
+   "label": "article about an airline",
+   "n_robust": 28,
+   "by_layer": {
+    "6": 10,
+    "12": 7,
+    "18": 11
+   },
+   "best_min_auroc_C_F2": 0.9997,
+   "n_anchored_c": 7,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 21,
+   "n_elsewhere_sibling": 9,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Airport",
+     4
+    ],
+    [
+     "topic:BusCompany",
+     4
+    ],
+    [
+     "topic:Bank",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 5,
+    "name_filter_only": 2
+   },
+   "n_fire_on_own_name": 17
+  },
+  "topic:OlympicEvent": {
+   "label": "article about an olympic event",
+   "n_robust": 37,
+   "by_layer": {
+    "6": 14,
+    "12": 12,
+    "18": 11
+   },
+   "best_min_auroc_C_F2": 0.988,
+   "n_anchored_c": 4,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 33,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Canoeist",
+     6
+    ],
+    [
+     "topic:AmateurBoxer",
+     4
+    ],
+    [
+     "topic:Skater",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "not_specific_only": 2,
+    "other:auroc_B>=0.85+specific(<=3 within 0.10)": 1,
+    "other:auroc_A>=0.90+specific(<=3 within 0.10)": 1
+   },
+   "n_fire_on_own_name": 22
+  },
+  "topic:Canal": {
+   "label": "article about a canal",
+   "n_robust": 30,
+   "by_layer": {
+    "6": 8,
+    "12": 13,
+    "18": 9
+   },
+   "best_min_auroc_C_F2": 0.9783,
+   "n_anchored_c": 5,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 25,
+   "n_elsewhere_sibling": 3,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Lake",
+     3
+    ],
+    [
+     "topic:RailwayLine",
+     3
+    ],
+    [
+     "topic:River",
+     3
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 4,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 24
+  },
+  "topic:Manga": {
+   "label": "article about a manga",
+   "n_robust": 56,
+   "by_layer": {
+    "6": 23,
+    "12": 15,
+    "18": 18
+   },
+   "best_min_auroc_C_F2": 0.9949,
+   "n_anchored_c": 6,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 50,
+   "n_elsewhere_sibling": 5,
+   "elsewhere_top_anchors": [
+    [
+     "topic:SoapCharacter",
+     9
+    ],
+    [
+     "topic:VoiceActor",
+     5
+    ],
+    [
+     "topic:ComicStrip",
+     5
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 1,
+    "name_filter+not_specific": 4,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 32
+  },
+  "topic:SoccerPlayer": {
+   "label": "article about a soccer player",
+   "n_robust": 5,
+   "by_layer": {
+    "6": 1,
+    "12": 1,
+    "18": 3
+   },
+   "best_min_auroc_C_F2": 0.9877,
+   "n_anchored_c": 5,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 0,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 4,
+    "not_specific_only": 1
+   },
+   "n_fire_on_own_name": 4
+  },
+  "topic:RugbyPlayer": {
+   "label": "article about a rugby player",
+   "n_robust": 18,
+   "by_layer": {
+    "6": 4,
+    "12": 6,
+    "18": 8
+   },
+   "best_min_auroc_C_F2": 0.9783,
+   "n_anchored_c": 1,
+   "n_in_pool_anchored_c": 0,
+   "n_kept_A11": 0,
+   "n_anchored_elsewhere": 17,
+   "n_elsewhere_sibling": 10,
+   "elsewhere_top_anchors": [
+    [
+     "topic:SoccerPlayer",
+     4
+    ],
+    [
+     "topic:Cricketer",
+     2
+    ],
+    [
+     "topic:AmericanFootballPlayer",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter+not_specific": 1
+   },
+   "n_fire_on_own_name": 14
+  },
+  "topic:SoapCharacter": {
+   "label": "article about a soap character",
+   "n_robust": 55,
+   "by_layer": {
+    "6": 17,
+    "12": 24,
+    "18": 14
+   },
+   "best_min_auroc_C_F2": 0.9997,
+   "n_anchored_c": 34,
+   "n_in_pool_anchored_c": 6,
+   "n_kept_A11": 6,
+   "n_anchored_elsewhere": 21,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:Play",
+     3
+    ],
+    [
+     "topic:HollywoodCartoon",
+     3
+    ],
+    [
+     "topic:VoiceActor",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 10,
+    "name_filter+not_specific": 9,
+    "not_specific_only": 8,
+    "other:auroc_A>=0.90+own_name_silent+specific(<=3 within 0.10)": 1
+   },
+   "n_fire_on_own_name": 28
+  },
+  "topic:AutomobileEngine": {
+   "label": "article about an automobile engine",
+   "n_robust": 79,
+   "by_layer": {
+    "6": 32,
+    "12": 22,
+    "18": 25
+   },
+   "best_min_auroc_C_F2": 1.0,
+   "n_anchored_c": 55,
+   "n_in_pool_anchored_c": 23,
+   "n_kept_A11": 23,
+   "n_anchored_elsewhere": 24,
+   "n_elsewhere_sibling": 0,
+   "elsewhere_top_anchors": [
+    [
+     "topic:FormulaOneRacer",
+     2
+    ],
+    [
+     "topic:RaceHorse",
+     2
+    ],
+    [
+     "topic:Canoeist",
+     2
+    ]
+   ],
+   "anchored_c_not_in_pool_why": {
+    "name_filter_only": 18,
+    "name_filter+not_specific": 4,
+    "not_specific_only": 8,
+    "other:auroc_B>=0.85": 2
+   },
+   "n_fire_on_own_name": 31
+  }
+ },
+ "q2_all_topic": {
+  "n_concepts": 201,
+  "with_robust_latent": [
+   201,
+   [
+    0.981,
+    1.0
+   ]
+  ],
+  "with_robust_latent_anchored_c": [
+   188,
+   [
+    0.893,
+    0.962
+   ]
+  ],
+  "with_robust_latent_in_pool_as_c": [
+   66,
+   [
+    0.267,
+    0.396
+   ]
+  ],
+  "with_robust_latent_kept_A11": [
+   57,
+   [
+    0.226,
+    0.35
+   ]
+  ],
+  "latent_totals": {
+   "robust": 6015,
+   "anchored_c": 1807,
+   "in_pool_anchored_c": 226,
+   "kept": 191,
+   "anchored_elsewhere": 4208,
+   "elsewhere_sibling": 884,
+   "fire_on_own_name": 4097,
+   "why:name_filter_only": 556,
+   "why:name_filter+not_specific": 706,
+   "why:not_specific_only": 203,
+   "why:other:auroc_B>=0.85": 7,
+   "why:other:auroc_B>=0.85+own_name_silent": 5,
+   "why:other:auroc_A>=0.90+own_name_silent": 11,
+   "why:other:auroc_A>=0.90+auroc_B>=0.85+specific(<=3 within 0.10)": 5,
+   "why:other:auroc_A>=0.90+auroc_B>=0.85+own_name_silent": 19,
+   "why:other:auroc_A>=0.90+auroc_B>=0.85": 6,
+   "why:other:auroc_A>=0.90+auroc_B>=0.85+own_name_silent+specific(<=3 within 0.10)": 6,
+   "why:other:auroc_A>=0.90": 18,
+   "why:other:auroc_A>=0.90+specific(<=3 within 0.10)": 17,
+   "why:other:auroc_A>=0.90+own_name_silent+specific(<=3 within 0.10)": 15,
+   "why:other:auroc_B>=0.85+specific(<=3 within 0.10)": 4,
+   "why:other:auroc_B>=0.85+own_name_silent+specific(<=3 within 0.10)": 3
+  }
+ },
+ "name_filter_crosstab": {
+  "topic": {
+   "name_fires_excluded": {
+    "robust": 556,
+    "n": 2261,
+    "rate": 0.246,
+    "wilson95": [
+     0.229,
+     0.264
+    ]
+   },
+   "name_fires_excluded_L6": {
+    "robust": 156,
+    "n": 774,
+    "rate": 0.202,
+    "wilson95": [
+     0.175,
+     0.231
+    ]
+   },
+   "name_silent_pooled": {
+    "robust": 226,
+    "n": 4741,
+    "rate": 0.048,
+    "wilson95": [
+     0.042,
+     0.054
+    ]
+   },
+   "name_silent_pooled_L6": {
+    "robust": 70,
+    "n": 1337,
+    "rate": 0.052,
+    "wilson95": [
+     0.042,
+     0.066
+    ]
+   },
+   "name_fires_excluded_L12": {
+    "robust": 157,
+    "n": 754,
+    "rate": 0.208,
+    "wilson95": [
+     0.181,
+     0.239
+    ]
+   },
+   "name_silent_pooled_L12": {
+    "robust": 64,
+    "n": 1804,
+    "rate": 0.035,
+    "wilson95": [
+     0.028,
+     0.045
+    ]
+   },
+   "name_fires_excluded_L18": {
+    "robust": 243,
+    "n": 733,
+    "rate": 0.332,
+    "wilson95": [
+     0.298,
+     0.366
+    ]
+   },
+   "name_silent_pooled_L18": {
+    "robust": 92,
+    "n": 1600,
+    "rate": 0.058,
+    "wilson95": [
+     0.047,
+     0.07
+    ]
+   },
+   "median_auroc_F2_anchor": {
+    "name_fires_excluded": 0.698,
+    "name_silent_pooled": 0.538
+   }
+  },
+  "language": {
+   "name_fires_excluded": {
+    "robust": 64,
+    "n": 71,
+    "rate": 0.901,
+    "wilson95": [
+     0.81,
+     0.951
+    ]
+   },
+   "name_fires_excluded_L6": {
+    "robust": 19,
+    "n": 23,
+    "rate": 0.826,
+    "wilson95": [
+     0.629,
+     0.93
+    ]
+   },
+   "name_silent_pooled": {
+    "robust": 182,
+    "n": 276,
+    "rate": 0.659,
+    "wilson95": [
+     0.602,
+     0.713
+    ]
+   },
+   "name_silent_pooled_L6": {
+    "robust": 50,
+    "n": 76,
+    "rate": 0.658,
+    "wilson95": [
+     0.546,
+     0.755
+    ]
+   },
+   "name_fires_excluded_L12": {
+    "robust": 21,
+    "n": 22,
+    "rate": 0.955,
+    "wilson95": [
+     0.782,
+     0.992
+    ]
+   },
+   "name_silent_pooled_L12": {
+    "robust": 30,
+    "n": 51,
+    "rate": 0.588,
+    "wilson95": [
+     0.452,
+     0.712
+    ]
+   },
+   "name_fires_excluded_L18": {
+    "robust": 24,
+    "n": 26,
+    "rate": 0.923,
+    "wilson95": [
+     0.759,
+     0.979
+    ]
+   },
+   "name_silent_pooled_L18": {
+    "robust": 102,
+    "n": 149,
+    "rate": 0.685,
+    "wilson95": [
+     0.606,
+     0.754
+    ]
+   },
+   "median_auroc_F2_anchor": {
+    "name_fires_excluded": 0.997,
+    "name_silent_pooled": 0.942
+   }
+  },
+  "topic_2x2_specificity_x_name": {
+   "specific&name_silent": {
+    "robust": 226,
+    "n": 4741,
+    "rate": 0.048,
+    "wilson95": [
+     0.042,
+     0.054
+    ]
+   },
+   "specific&name_fires": {
+    "robust": 556,
+    "n": 2261,
+    "rate": 0.246,
+    "wilson95": [
+     0.229,
+     0.264
+    ]
+   },
+   "not_specific&name_silent": {
+    "robust": 203,
+    "n": 2064,
+    "rate": 0.098,
+    "wilson95": [
+     0.086,
+     0.112
+    ]
+   },
+   "not_specific&name_fires": {
+    "robust": 706,
+    "n": 1532,
+    "rate": 0.461,
+    "wilson95": [
+     0.436,
+     0.486
+    ]
+   },
+   "all_four_cells": {
+    "robust": 1691,
+    "n": 10598,
+    "rate": 0.16,
+    "wilson95": [
+     0.153,
+     0.167
+    ]
+   },
+   "note": "cell specific&name_silent is exactly generator v2's topic pool"
+  }
+ }
+}

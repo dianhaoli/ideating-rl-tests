@@ -1,0 +1,184 @@
+{
+ "_rules": "Manual category per sampled latent, assigned by reading the per-token peaks (10 split-A texts, 10 bank-F2 texts, 5 top non-c* split-A texts) in q1_latents.jsonl. format = the peak sits on a structural cue of encyclopedia text (birth-date parentheses, codes, units, dates, the 'X is a ... Y' definition, credit lines such as 'directed by' / 'book by', CV or template boilerplate); the topic word may be the peak token, but only inside that frame. name_entity = the peak sits on a proper name or a piece of one (a person, place, organisation, acronym, title of a work), not on the subject matter. topic = the peak sits on content words of the subject, wherever they occur, and it also fires on on-topic texts in other styles. other = none of these fits clearly.",
+ "L12/4070": {
+  "category": "name_entity",
+  "evidence": "CyclingTeam: 10/10 split-A peaks on the acronym 'UCI' ('(UCI Team Code: ...)', 'a UCI Continental team'); in bank F it fires on 'UCI' only in the encyclopedia-style text; its strongest dataset hits are 'Kit' (Kittilä, kit foxes)."
+ },
+ "L6/4409": {
+  "category": "format",
+  "evidence": "Conifer: peaks on the species-range sentence: 'endemic to', 'found only in', 'native to'; top dataset hits are 'found exclusively in' for spiders and fish. Bank F: 1/10 (weak, 'needle')."
+ },
+ "L6/4197": {
+  "category": "format",
+  "evidence": "NCAATeamSeason: 10/10 peaks on 'during'/'in' in the template 'represented the University of X during the 19xx season'. Bank F: 0/10."
+ },
+ "L12/7989": {
+  "category": "name_entity",
+  "evidence": "Publisher: peaks on publishing-house names ('Norton', 'Nelson', 'House of Anansi', the comma after 'Simon & Schuster'); in bank F it fires on house names in other styles too (Gallimard, O'Reilly Media, Coffee House Press; 5/10)."
+ },
+ "L18/9912": {
+  "category": "format",
+  "evidence": "MountainPass: peaks on the unit after an elevation figure ('2044 m', '9,938 ft', '1,541 metres'); top dataset hits are '15 cm', '3 inches' in other concepts. Bank F fires only where a height in metres is given (2/10)."
+ },
+ "L12/15507": {
+  "category": "format",
+  "evidence": "Bird: peaks on the Latin binomial in parentheses after a common name ('flycatcher (Cyornis rubeculo[ides])'); top dataset hits are parenthesised years '(1785-1866)'. Dense (fires on 56% of all texts). Bank F: 0/10."
+ },
+ "L6/9095": {
+  "category": "format",
+  "evidence": "TennisPlayer: peaks on 'player' in the opening '(born ... 1978) is an American former tennis player'. Bank F: 0/10, including the news text 'Tennis player Elena Petrova...' and the encyclopedia-style 'Yuki Sato is a Japanese tennis player' (no birth parenthesis before it)."
+ },
+ "L12/2360": {
+  "category": "format",
+  "evidence": "Magazine: peaks on 'magazine'/'journal'/'weekly' in the definition 'X is a Portuguese news magazine published weekly'. Bank F fires only on the encyclopedia-style 'is a magazine founded in' (and weakly once on 'subscribing')."
+ },
+ "L18/16258": {
+  "category": "format",
+  "evidence": "HollywoodCartoon: peaks on credit-line words ('produced by', 'directed by Bob Clampett,', 'as part of the Merrie Melodies') and the year. Bank F fires on '1941 animation', 'film by Winsor McCay' (3/10, weak)."
+ },
+ "L12/6003": {
+  "category": "format",
+  "evidence": "SquashPlayer: peaks on the birthplace inside the birth parenthesis '(born 16, 1996 in Barcelona) is a professional'; top dataset hits are the same slot in figure-skater and NASCAR bios. Bank F: 0/10."
+ },
+ "L18/14712": {
+  "category": "other",
+  "evidence": "HockeyTeam: peaks on sentence ends after a location ('based in Cleveland, Ohio, United States.'), on team nicknames ('The Wild', 'Hawks') and on relocation narration ('moved and became'); top dataset hits are 'moved venues', 'has changed' in tournament texts. No single cue."
+ },
+ "L18/7934": {
+  "category": "format",
+  "evidence": "Airport: peaks on the code block '(IATA: HIO, ICAO: ...', 'FAA LID:'; top dataset hits are acronyms in parentheses. Bank F: 0/20 texts."
+ },
+ "L18/801": {
+  "category": "name_entity",
+  "evidence": "Skater: strongest peaks on 'Netherlands'/'Dutch' (41-61), weaker on 'speed skater'; top dataset hits are 'the Netherlands', 'Dutch province'. Its held-out key is Dutch (lang:nl)."
+ },
+ "L12/4762": {
+  "category": "format",
+  "evidence": "Musical: peaks on 'book'/'music'/'lyrics' in the credit line 'a musical with book by X, music by Y'. Bank F fires weakly on 'songs', 'opening number' (3/10)."
+ },
+ "L6/13638": {
+  "category": "name_entity",
+  "evidence": "BusCompany: peaks on regional place names inside transit-authority names ('Winnebago County', 'Pee Dee Regional', 'Greater Attleboro'); top dataset hits are 'Hampton Roads', 'South Bay', 'Ark-La-Tex'. Dense (44%)."
+ },
+ "L18/10779": {
+  "category": "format",
+  "evidence": "WTA tournament: peaks on event-description phrasing ('played on outdoor hard courts', 'was held in Bogotá', 'part of the Grand Prix circuit'). Bank F fires only on the encyclopedia-style 'tournament held at' (1/10)."
+ },
+ "L18/6384": {
+  "category": "name_entity",
+  "evidence": "Entomologist: strongest peaks on titles of old scholarly works ('Magazin der Entomologie', 'Catalogus coleopterorum'), plus death dates; top dataset hits are journal and play titles ('Annals and Magazine of', 'Thomaso, or The Wanderer')."
+ },
+ "L18/11943": {
+  "category": "format",
+  "evidence": "Historian: peaks on CV statements ('received a bachelor's degree from', 'PhD in Modern European History', 'Professor of History'); top dataset hits are 'degree in economics', 'B.A. in classics' in other bios. Bank F: 1/10."
+ },
+ "L18/10635": {
+  "category": "topic",
+  "evidence": "Architect: peaks on 'building(s)'/'architect(ural)'; fires on 'building' in casual, podcast and essay texts too (up to 81); top dataset hits are 'Building' anywhere. Dropped because it is a word detector: AUROC_F2 0.737."
+ },
+ "L18/587": {
+  "category": "format",
+  "evidence": "HandballPlayer: 10/10 peaks on the last digit of the birth year in '(born 17 September 1982)'; top dataset hits are the same digit in golf, badminton and gymnast bios. Bank F: 0/20."
+ },
+ "L12/2190": {
+  "category": "topic",
+  "evidence": "University: activation spread over the text ('University', 'private', 'Higher Education'); in bank F it fires on 'students', 'tuition', 'campus' in 7/10. AUROC_F2 0.841, just under the 0.85 bar."
+ },
+ "L12/14152": {
+  "category": "name_entity",
+  "evidence": "AustralianFootballTeam: peaks on 'Club' in club names ('The Kyneton Football Club'); bank F fires only on 'The Subiaco Football Club is an Australian rules football...' (1/10)."
+ },
+ "L18/2202": {
+  "category": "topic",
+  "evidence": "Airline: peaks on aviation operations ('passenger and cargo carrier', 'Aero', 'Airlines'); top dataset hits are 'medical evacuations by helicopter', 'unmanned aircraft'. A broad aviation latent; bank F 2/10."
+ },
+ "L18/10163": {
+  "category": "format",
+  "evidence": "OlympicEvent: peaks on date phrases ('was held on 16 February', 'took place on 1-2 August'); top dataset hits are the date ranges of tennis tournaments. Bank F: 0/10."
+ },
+ "L18/4548": {
+  "category": "topic",
+  "evidence": "Canal: activation spread over canal descriptions ('Canal', 'water supply', 'connects', 'locks'); bank F fires on 'locks', 'windlass', 'waterway' (5/10); top dataset hits are 'water supply' for lakes and dams. AUROC_F2 0.732."
+ },
+ "L6/6666": {
+  "category": "format",
+  "evidence": "Manga: peaks on 'by'/'written'/'series' in 'is a Japanese manga series written and illustrated by'; top dataset hits are 'a comedy-drama play by Neil Simon'. Bank F: only the encyclopedia-style 'is a shojo manga by' (1/10)."
+ },
+ "L18/5273": {
+  "category": "format",
+  "evidence": "SoccerPlayer: peaks on 'as'/'played' in 'is a Brazilian footballer who plays as a goalkeeper'. Bank F: only the encyclopedia-style 'footballer who plays as a forward' (1/10)."
+ },
+ "L18/133": {
+  "category": "format",
+  "evidence": "RugbyPlayer: peaks on 'rugby' but only in the definition 'is a Welsh international rugby union player'. Bank F: only the encyclopedia-style 'is a Tongan rugby union player' (1/10); silent on 'World Rugby Player of the Year' in the news text."
+ },
+ "L12/11051": {
+  "category": "format",
+  "evidence": "SoapCharacter: peaks on 'played'/'portrayed' in 'a fictional character from the soap opera EastEnders, played by X'. Bank F: only the encyclopedia-style 'portrayed by Susan Lucci' (1/10)."
+ },
+ "L12/4183": {
+  "category": "topic",
+  "evidence": "AutomobileEngine: activation spread over engine-technology words ('engines', 'automotive', 're-engineered'); fires on 7/10 bank-F texts ('Wankel rotary', 'petrol motor'). AUROC_F2 0.837, just under the bar."
+ },
+ "L18/8304": {
+  "category": "topic",
+  "evidence": "Ambassador (kept): fires over whole diplomatic-career passages ('Ambassador to Poland', 'Foreign Service'); bank F 8/10 on 'envoy', 'ambassador', 'embassy'."
+ },
+ "L18/2686": {
+  "category": "topic",
+  "evidence": "Dam (kept): fires over dam/hydropower text; bank F 9/10 on 'spillway', 'weir', 'flood release', 'reservoir'."
+ },
+ "L18/15958": {
+  "category": "topic",
+  "evidence": "Earthquake (kept): fires over disaster narration; bank F 10/10 ('quake', 'tremor hit', 'what happened in Niigata'); top dataset hits are other disasters (Challenger, fires)."
+ },
+ "L18/2332": {
+  "category": "topic",
+  "evidence": "GrandPrix (kept): split-A peaks on venue phrasing ('held at the Circuit'), but bank F fires 9/10 on racing words ('pit stops', 'Turn 11', 'chicane', 'tyre change')."
+ },
+ "L18/12795": {
+  "category": "topic",
+  "evidence": "Noble (kept): fires on aristocratic titles and the names that follow them ('Prince Wladyslaw', 'Duchess of Alba', 'Count Andrey') in every style; bank F 8/10."
+ },
+ "L12/5748": {
+  "category": "topic",
+  "evidence": "RaceHorse (kept): fires on 'foaled' and on pronouns that refer to a horse ('He was trained by'); bank F 8/10 ('her trainer', 'paddock', 'nuzzled')."
+ },
+ "L6/8133": {
+  "category": "topic",
+  "evidence": "SolarEclipse (kept): fires on the word 'eclipse'/'totality' in every style (bank F 8/10)."
+ },
+ "L12/13605": {
+  "category": "topic",
+  "evidence": "Eurovision entry (kept): peaks on 'entry' in 'was the Austrian entry in the Eurovision'; bank F 9/10 ('Måneskin's entry', 'represented Norway')."
+ },
+ "L12/7032": {
+  "category": "topic",
+  "evidence": "Judge (kept): peaks on 'Judge'/'Justice' titles; bank F 8/10 ('Judge Halloran', 'presiding', 'ruling he wrote')."
+ },
+ "L18/3835": {
+  "category": "topic",
+  "evidence": "Magazine (kept): fires over sentences about publications; bank F 9/10 ('subscription', 'pages', 'every issue', 'cover story')."
+ },
+ "L6/1044": {
+  "category": "name_entity",
+  "evidence": "School (kept): peaks on the school-type word inside school names ('Maryvale High School'); bank F 10/10, because styled school texts also name schools ('Bronx Science', 'Westbrook Middle')."
+ },
+ "L18/6289": {
+  "category": "topic",
+  "evidence": "ClassicalMusicComposition (kept): fires over descriptions of musical works; bank F 10/10 ('thirty variations', 'Adagio for Strings', 'Unfinished Symphony')."
+ },
+ "L6/346": {
+  "category": "topic",
+  "evidence": "RadioStation (kept): peaks on 'broadcasting'/'airs'/'serving'; bank F 8/10 ('broadcaster', 'on air', 'keeps broadcasting')."
+ },
+ "L18/13808": {
+  "category": "name_entity",
+  "evidence": "LawFirm (kept): peaks on '&'/'and' inside partnership names ('Fenwick & West LLP'); bank F 9/10 ('Ruiz & Patel', 'Cravath, Swaine & Moore'); top dataset hits are '& Co.' in other firms."
+ },
+ "L12/5992": {
+  "category": "topic",
+  "evidence": "Model (kept): peaks on 'model' in 'is an American fashion model'; bank F 8/10 on fashion words ('editorial', 'campaigns', 'photo shoots')."
+ },
+ "_count_note": "'Bank F k/10' counts are the per-token runs on the 10 F2 texts (n_F10_firing in q1_latents.jsonl); 'k/20' counts are the cached max-pooled values on all 20 bank-F texts."
+}
