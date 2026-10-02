@@ -153,3 +153,9 @@ Full list with before/after in docs/HARNESS_VERIFICATION.md. The ones Dan might 
   measurements on the validated task. Not for routine bug-finding (free subagents do that).
 - Plumbing verified on _demo (runs/_demo/*_openai_plumbing): luna and 6.1-sol both valid, passed, $0.0007 and $0.008.
 - Key storage: `.env` key OPENAI_KEY (quoted). The runner reads an unquoted copy at ~/.openai_env (mode 600, outside the repo).
+
+## D14. FeatureMatch diagnosis study (Dan's brief, 2026-10-02 ~01:10 UTC)
+Plan and operational decisions: tasks/featurematch/diagnosis/PLAN.md on branch diag/featurematch (worktree
+~/wt/fmdiag). Key choices: a shared FeatureMatch model service so the study stays at <= 2 GPU jobs; harness `prepare`
+options --prompt-template, --min-submit-frac, --extra-file (generic, no daemon restart needed); two independent style
+banks (filter vs recipe) to avoid circularity; fresh Claude Code subagents only (no hosted API for this study).
