@@ -463,3 +463,46 @@ All are **guesses** unless a basis is given. None can be checked against data ye
 | P44 | Q_SR (planted accuracy) and pa(SR-max)/pa(ref) | Q_SR = (0.75 − 0.00) / (0.65 − 0.00) = **1.15**; pa(SR-max)/pa(ref) = 0.75 / 0.97 = 0.77 | P11, P15, P7, P8 |
 | P45 | Q_D (planted accuracy) | (0.82 − 0.65) / (0.97 − 0.65) = **0.53** (borderline; CI wide) | P21, P15, P7 |
 | P46 | **The plain-language rule fires** ("FeatureMatch is mostly measuring style, not interpretability") | **yes, probability about 0.75**, mostly through Q_SR or the stop rule (P13, p ~0.7); Q_D alone would trigger it with p ~0.5 | P44, P45 |
+
+---
+
+## Amendment 2 (2026-10-02 ~04:20 UTC, before any result on the filtered pool)
+
+**State at the time of writing.** (a) The step-2 code written in phase A did not implement A1.1: it pooled A+F1 for the
+multi-style key instead of weighting 0.5/0.5, it thresholded pooled C+F2 instead of AUROC_F2 >= 0.85 AND AUROC_C >= 0.85,
+it split F1/F2 at random instead of first/second text per style, it redrew slots in place instead of regenerating, and it did not
+write key_check.jsonl or slot_disagreements.jsonl. Its numbers (STYLE_FILTER.md, "CF2" rule) are superseded. A builder is
+making the code match A1.1 exactly. No filtered pool built under A1.1 exists yet. (b) The style-robust recipe is
+implemented (`sr_recipe.py`, commit 18d49dd1). The orchestrator HAS SEEN its dry run on the **unfiltered** v2 pool, which
+is not a pre-registered quantity: SR-max planted accuracy 0.520 [0.473, 0.567], SR-thr 0.258. Across 42 alternative
+6-text selections SR-max ranges 0.473-0.582 (median 0.530). This is disclosed because the amendment below was written
+after seeing it. No baseline, recipe or agent result exists on the filtered pool.
+
+### A2.1 Which 6 bank-R texts SR uses (step 3; PREREG said only "6 texts per option, one per style")
+Styles = `random.Random(20261002).sample(sorted(styles), 6)`, the same 6 for every concept (how-to tip, trivia
+question, personal anecdote told aloud, interview Q&A, sports-radio commentary, text message). Text = the first one
+listed for each chosen style (the A1.1 convention). This fixed selection is the **primary** SR-max / SR-thr and is the
+one the stop rule uses.
+
+### A2.2 Text-selection sensitivity (reported with the stop rule; does not change the rule itself)
+Step 3 also reports SR-max and SR-thr planted accuracy under the 42 alternative selections (21 seeds x first/second
+text) as min / 10th pct / median / 90th pct / max, plus SR-max-all20 and SR-thr-all20 (all 20 texts; over budget, so
+descriptive only). If the 10th-90th percentile range of either variant straddles 0.50, the stop-rule outcome carries the
+label **"text-selection-sensitive"**, in addition to "borderline" if that applies. The rule still fires or not on the
+primary selection. RESULTS.md and VERDICT.md must show the spread next to the primary number.
+
+### A2.3 Forward budget on T3
+PREREG step 3 allows up to 600 units per 5-slot episode, but the T3 cap is 550. Primary: uncapped (6 texts per
+option on every slot, as written in step 3). Secondary: a capped variant in which the episode's texts are consumed in
+slot order and the last slot(s) use only the texts that fit under the tier cap. The number of over-cap episodes is
+reported.
+
+### A2.4 SR-thr's AUROC
+As step 3 words it, the negatives are the other options' bank-R texts (the same 6 per option). This differs from the
+reference solver's background sample, so the 0.78 threshold is applied to a slightly different quantity. This is noted in
+RESULTS.md, with no other change.
+
+### A2.5 Uncertainty for planted accuracy
+In addition to the pre-registered Wilson interval (which treats slots as independent), report an instance-clustered
+bootstrap 95% CI (10,000 resamples by instance, `random.Random(20261002)`). The "borderline" label of the stop rule
+stays defined by the Wilson CI, as pre-registered. The clustered CI is reported next to it.
