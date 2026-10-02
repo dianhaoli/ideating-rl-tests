@@ -1,0 +1,107 @@
+{
+ "what": "label-only kNN answer accuracy on planted slots, seen vs held-out latents / anchor concepts",
+ "git": "30da4211b24ec1ed0de5476e41bb353f694048b4",
+ "v2f_current": {
+  "latent_seen_half": {
+   "n": 3589,
+   "accuracy": 0.676,
+   "wilson95": [
+    0.6605,
+    0.6911
+   ]
+  },
+  "latent_held_out_half": {
+   "n": 3553,
+   "accuracy": 0.0566,
+   "wilson95": [
+    0.0494,
+    0.0647
+   ]
+  },
+  "anchor_concept_seen_half": {
+   "n": 2745,
+   "accuracy": 0.6856,
+   "wilson95": [
+    0.668,
+    0.7027
+   ]
+  },
+  "anchor_concept_held_out_half": {
+   "n": 4397,
+   "accuracy": 0.0005,
+   "wilson95": [
+    0.0001,
+    0.0017
+   ]
+  }
+ },
+ "v2f_swap_nn": {
+  "latent_seen_half": {
+   "n": 3589,
+   "accuracy": 0.669,
+   "wilson95": [
+    0.6534,
+    0.6842
+   ]
+  },
+  "latent_held_out_half": {
+   "n": 3553,
+   "accuracy": 0.0704,
+   "wilson95": [
+    0.0624,
+    0.0792
+   ]
+  },
+  "anchor_concept_seen_half": {
+   "n": 2745,
+   "accuracy": 0.7304,
+   "wilson95": [
+    0.7135,
+    0.7467
+   ]
+  },
+  "anchor_concept_held_out_half": {
+   "n": 4397,
+   "accuracy": 0.0,
+   "wilson95": [
+    0.0,
+    0.0009
+   ]
+  }
+ },
+ "v2_current": {
+  "latent_seen_half": {
+   "n": 3278,
+   "accuracy": 0.4103,
+   "wilson95": [
+    0.3936,
+    0.4272
+   ]
+  },
+  "latent_held_out_half": {
+   "n": 3864,
+   "accuracy": 0.0748,
+   "wilson95": [
+    0.0669,
+    0.0835
+   ]
+  },
+  "anchor_concept_seen_half": {
+   "n": 3361,
+   "accuracy": 0.4472,
+   "wilson95": [
+    0.4304,
+    0.464
+   ]
+  },
+  "anchor_concept_held_out_half": {
+   "n": 3781,
+   "accuracy": 0.0005,
+   "wilson95": [
+    0.0001,
+    0.0019
+   ]
+  }
+ },
+ "seconds": 61.8
+}

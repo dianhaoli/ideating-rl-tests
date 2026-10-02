@@ -1,0 +1,242 @@
+{
+ "variant": "swap_fam",
+ "git": "30da4211b24ec1ed0de5476e41bb353f694048b4",
+ "p6_exact_protocol_T2": {
+  "seeds_500000": {
+   "n_slots": 2415,
+   "null_frac": 0.397,
+   "cv_auroc": 0.581,
+   "cv_auroc_sd": 0.028,
+   "failed_draws": 0
+  },
+  "seeds_1600000": {
+   "n_slots": 2394,
+   "null_frac": 0.41,
+   "cv_auroc": 0.643,
+   "cv_auroc_sd": 0.012,
+   "failed_draws": 0
+  }
+ },
+ "draw_failures": {
+  "train": 0,
+  "test": 0
+ },
+ "held_out_recipes": {
+  "lang_gbm": {
+   "auroc": 0.4923,
+   "ci95": [
+    0.4821,
+    0.5027
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "extremes": {
+    "top_1pct": {
+     "n": 120,
+     "planted_rate": 0.6,
+     "wilson95": [
+      0.5106,
+      0.6832
+     ]
+    },
+    "bottom_1pct": {
+     "n": 120,
+     "planted_rate": 0.6667,
+     "wilson95": [
+      0.5783,
+      0.7447
+     ]
+    },
+    "top_5pct": {
+     "n": 599,
+     "planted_rate": 0.5659,
+     "wilson95": [
+      0.526,
+      0.6051
+     ]
+    },
+    "bottom_5pct": {
+     "n": 599,
+     "planted_rate": 0.6127,
+     "wilson95": [
+      0.5731,
+      0.6509
+     ]
+    },
+    "top_10pct": {
+     "n": 1198,
+     "planted_rate": 0.581,
+     "wilson95": [
+      0.5528,
+      0.6086
+     ]
+    },
+    "bottom_10pct": {
+     "n": 1198,
+     "planted_rate": 0.586,
+     "wilson95": [
+      0.5579,
+      0.6136
+     ]
+    },
+    "base_planted_rate": 0.5961
+   }
+  },
+  "str_gbm": {
+   "auroc": 0.4946,
+   "ci95": [
+    0.484,
+    0.5056
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "extremes": {
+    "top_1pct": {
+     "n": 120,
+     "planted_rate": 0.5583,
+     "wilson95": [
+      0.469,
+      0.644
+     ]
+    },
+    "bottom_1pct": {
+     "n": 120,
+     "planted_rate": 0.6167,
+     "wilson95": [
+      0.5273,
+      0.6988
+     ]
+    },
+    "top_5pct": {
+     "n": 599,
+     "planted_rate": 0.5543,
+     "wilson95": [
+      0.5142,
+      0.5936
+     ]
+    },
+    "bottom_5pct": {
+     "n": 599,
+     "planted_rate": 0.6127,
+     "wilson95": [
+      0.5731,
+      0.6509
+     ]
+    },
+    "top_10pct": {
+     "n": 1198,
+     "planted_rate": 0.5701,
+     "wilson95": [
+      0.5419,
+      0.5979
+     ]
+    },
+    "bottom_10pct": {
+     "n": 1198,
+     "planted_rate": 0.6043,
+     "wilson95": [
+      0.5764,
+      0.6317
+     ]
+    },
+    "base_planted_rate": 0.5961
+   }
+  },
+  "menu_gbm": {
+   "auroc": 0.6558,
+   "ci95": [
+    0.6459,
+    0.6654
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "extremes": {
+    "top_1pct": {
+     "n": 120,
+     "planted_rate": 1.0,
+     "wilson95": [
+      0.969,
+      1.0
+     ]
+    },
+    "bottom_1pct": {
+     "n": 120,
+     "planted_rate": 0.2583,
+     "wilson95": [
+      0.1884,
+      0.3433
+     ]
+    },
+    "top_5pct": {
+     "n": 599,
+     "planted_rate": 0.9783,
+     "wilson95": [
+      0.9632,
+      0.9873
+     ]
+    },
+    "bottom_5pct": {
+     "n": 599,
+     "planted_rate": 0.3172,
+     "wilson95": [
+      0.2812,
+      0.3555
+     ]
+    },
+    "top_10pct": {
+     "n": 1198,
+     "planted_rate": 0.8765,
+     "wilson95": [
+      0.8566,
+      0.8939
+     ]
+    },
+    "bottom_10pct": {
+     "n": 1198,
+     "planted_rate": 0.3631,
+     "wilson95": [
+      0.3364,
+      0.3907
+     ]
+    },
+    "base_planted_rate": 0.5961
+   }
+  }
+ },
+ "side_effects_T2_test": {
+  "n_slots": 11982,
+  "null_fraction": 0.4039,
+  "null_wilson95": [
+   0.3952,
+   0.4128
+  ],
+  "planted_dis_C_median": 0.6123,
+  "planted_dis_C_mean": 0.6115,
+  "planted_dis_C_tertiles(<0.578, 0.578-0.635, >=0.635)": [
+   0.326,
+   0.3359,
+   0.3381
+  ],
+  "planted_dis_A_median": 0.5947,
+  "planted_siblings_of_anchor_among_distractors_mean": 0.472,
+  "planted_share_with_>=1_sibling_distractor": 0.2912,
+  "planted_same_family_distractors_mean": 14.941,
+  "null_max_option_auroc_C_median": 0.6132,
+  "null_siblings_of_anchor_on_menu_mean": 0.459,
+  "n_planted": 7142,
+  "n_null": 4840
+ },
+ "seconds": 60.3
+}

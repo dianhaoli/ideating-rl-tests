@@ -1,0 +1,190 @@
+{
+ "what": "PREREG P6 reproduction (write_v2f.fingerprint generator_in_memory protocol)",
+ "git": "fc81eff962d92e732d9a37169ed69689b37be380",
+ "p6_exact": {
+  "v2f": {
+   "T1": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.499,
+    "cv_auroc_sd": 0.014,
+    "failed_draws": 0
+   },
+   "T2": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.616,
+    "cv_auroc_sd": 0.014,
+    "failed_draws": 0
+   },
+   "T3": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.616,
+    "cv_auroc_sd": 0.014,
+    "failed_draws": 0
+   }
+  },
+  "v2": {
+   "T1": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.482,
+    "cv_auroc_sd": 0.019,
+    "failed_draws": 0
+   },
+   "T2": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.531,
+    "cv_auroc_sd": 0.024,
+    "failed_draws": 0
+   },
+   "T3": {
+    "n_slots": 2415,
+    "null_frac": 0.397,
+    "cv_auroc": 0.531,
+    "cv_auroc_sd": 0.024,
+    "failed_draws": 0
+   }
+  }
+ },
+ "T2_T3_in_memory_identical": {
+  "identical": true,
+  "why": "generate.make_instance seeds its rng with [seed, 7] only; T2 and T3 differ only in the forward cap, so the same seed gives the same slots. P6's T3 number is the T2 number again, not a second measurement."
+ },
+ "seed_blocks_10x600": {
+  "v2f_T1": {
+   "cv_auroc_per_block": [
+    0.558,
+    0.531,
+    0.489,
+    0.524,
+    0.52,
+    0.531,
+    0.492,
+    0.532,
+    0.539,
+    0.526
+   ],
+   "mean": 0.5242,
+   "min": 0.489,
+   "max": 0.558,
+   "n_blocks_over_0.60": 0
+  },
+  "v2f_T2": {
+   "cv_auroc_per_block": [
+    0.623,
+    0.648,
+    0.638,
+    0.619,
+    0.658,
+    0.623,
+    0.652,
+    0.65,
+    0.646,
+    0.619
+   ],
+   "mean": 0.6376,
+   "min": 0.619,
+   "max": 0.658,
+   "n_blocks_over_0.60": 10
+  },
+  "v2_T1": {
+   "cv_auroc_per_block": [
+    0.5,
+    0.5,
+    0.494,
+    0.504,
+    0.525,
+    0.491,
+    0.502,
+    0.499,
+    0.506,
+    0.49
+   ],
+   "mean": 0.5011,
+   "min": 0.49,
+   "max": 0.525,
+   "n_blocks_over_0.60": 0
+  },
+  "v2_T2": {
+   "cv_auroc_per_block": [
+    0.547,
+    0.564,
+    0.509,
+    0.531,
+    0.534,
+    0.55,
+    0.528,
+    0.558,
+    0.538,
+    0.52
+   ],
+   "mean": 0.5379,
+   "min": 0.509,
+   "max": 0.564,
+   "n_blocks_over_0.60": 0
+  }
+ },
+ "held_out_menu_gbm": {
+  "v2f_T1": {
+   "auroc": 0.548,
+   "ci95": [
+    0.5375,
+    0.5582
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "draw_failures": 0
+  },
+  "v2f_T2": {
+   "auroc": 0.6833,
+   "ci95": [
+    0.6742,
+    0.6932
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "draw_failures": 0
+  },
+  "v2_T1": {
+   "auroc": 0.5153,
+   "ci95": [
+    0.5047,
+    0.5258
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "draw_failures": 0
+  },
+  "v2_T2": {
+   "auroc": 0.5698,
+   "ci95": [
+    0.5597,
+    0.5805
+   ],
+   "n_slots": 11982,
+   "n_instances": 3000,
+   "n_planted": 7142,
+   "n_null": 4840,
+   "n_train_instances": 5000,
+   "n_train_slots": 20051,
+   "draw_failures": 0
+  }
+ },
+ "note_written_pool": "The written instances_v2f pool (about 240 slots per tier) gave T2 0.612 (sd 0.086) and T3 0.586 (v2f_summary.json): consistent with the generator value, but far noisier.",
+ "seconds": 373.9
+}
