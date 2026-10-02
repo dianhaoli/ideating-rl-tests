@@ -148,6 +148,8 @@ Gate verdict: reference meets its bar; recipes failing the gate: self_probe, tem
   0.50). So A3.2's "fires pooled but not on topic slots" sentence does not apply.
 - Labels: `["fires"]`; valid as the step-3 outcome (run on `instances_v2f`, pool sha256 below).
 - P6: the filtered pool failed P6 at 0.616 (close tiers). This cannot have raised a scripted recipe's accuracy (A3.1).
+- A2.4: SR-thr's AUROC uses the other options' bank-R texts as negatives, while the reference uses a background
+  sample, so the shared 0.78 threshold is applied to slightly different quantities. Noted only.
 
 **A1.5 in the stop-rule case** (the numbers RESULTS.md and VERDICT.md use for the plain-language rule): pa(SR-max) /
 pa(reference) = 0.873 / 1.000 = **0.873**, paired instance bootstrap 95% [0.840, 0.903]; pa(SR-thr) / pa(reference) =
