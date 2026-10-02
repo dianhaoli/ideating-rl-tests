@@ -24,3 +24,22 @@ only the queue-wait line, and there are no output files. So no model output had 
   most-active latents are predicted to score ~0. A plain steering vector (not submittable) is about as good as the SAE reference.
 - Style-varied held-out prompts are predicted to lower R by about 20% (relative). The SAE error term is not predicted to carry most of the behaviour.
 - The decision rule (GO / ADJUST / NO-GO, with numbers) is in section 6 of that file. No job was run for this step (no RSS to report).
+
+## 2026-10-02T06:30Z Precedent survey written (PRECEDENT.md), no GPU, no model run
+What I did: I read the published work on switching off or steering with SAE latents, compared with simple baselines,
+and how such tasks are scored, and I wrote what each finding predicts for this task (`PRECEDENT.md`, with URLs; preprint numbers are tagged).
+Main lessons in plain words:
+- In almost every head-to-head test, SAE latents lose to a simple "difference of means" direction or to a supervised
+  method: AxBench steering 0.239 (difference of means) vs 0.165 (SAE); RAVEL disentangle 48.6 (SAE) vs 60.1 (MDAS); in MIB,
+  SAE features are no better than plain neurons. So restricting the agent to SAE latents is a handicap. The task must say
+  this, and must measure it with a dense comparator that cannot be submitted.
+- The usual way to choose latents (rank by attribution or probe weight, take the top 20: SAEBench SCR/TPP, Marks et al.)
+  is exactly the recipe this task must not reward. It becomes a gate.
+- Simply zeroing a few latents often barely changes the model; unlearning work needed negative clamping (Farrell et al.).
+  Feasibility should test both.
+- Absorption (a "Texas" latent that stays silent on some Texas cities) shows up in every SAE tested. Held-out-entity
+  grading measures exactly this, and that is a real interpretability skill.
+- Agents using SAEs do worst on the causal step (SAEScientist-Bench: 31 vs 58 for experts) and fall for formatting or
+  substring latents. Mid-band difficulty is plausible if the recipe gate holds.
+The 8 design implications are in section 5 of PRECEDENT.md. Section 4 compares the literature with the frozen feasibility predictions; the riskiest one
+is "the SAE error term is not dominant". CPU only; peak RSS is negligible (web reading, no heavy job).
