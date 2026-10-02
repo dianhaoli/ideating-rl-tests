@@ -3,7 +3,7 @@
  "instances_dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances",
  "n_instances": 180,
  "pool_sha256": "5baa3c2aa97869fb1e125ad0dc46120ac1be11ef6a380068facc82385ef9555c",
- "git_sha": "827191afd6165a796cb86bdd8b73c6e535b5e2f7",
+ "git_sha": "72c1c1b3e82975da7d6e2dbefe2838b5ea570863",
  "bank": "R",
  "bank_texts_sha256": "79cdbc740f6460145348e044cc14f1572036a04ffd57fdc200a27fab3140e2f0",
  "bank_check": {
@@ -54,6 +54,13 @@
   "tie_break": "lowest option number",
   "auroc": "reference_solver.auroc (ties 1/2), claimed option's texts vs the other options' texts"
  },
+ "capped_rule": "A2.3: texts consumed in slot order up to instance.json caps.forward; within a slot style-round-robin over options (menu order)",
+ "bootstrap": {
+  "n": 10000,
+  "seed": 20261002,
+  "unit": "instance",
+  "interval": "percentile 2.5/97.5"
+ },
  "variants": {
   "SR-max": {
    "selection": "sr6",
@@ -65,6 +72,16 @@
    "thresholded": true,
    "primary": true
   },
+  "SR-max-capped": {
+   "selection": "sr6cap",
+   "thresholded": false,
+   "primary": false
+  },
+  "SR-thr-capped": {
+   "selection": "sr6cap",
+   "thresholded": true,
+   "primary": false
+  },
   "SR-max-all20": {
    "selection": "all20",
    "thresholded": false,
@@ -75,6 +92,52 @@
    "thresholded": true,
    "primary": false
   }
+ },
+ "stop_rule": {
+  "valid_as_step3_outcome": false,
+  "rule": "fires if primary SR-max or SR-thr planted accuracy (all tiers pooled) > 0.5 with n_planted >= 100; borderline if every firing variant's Wilson 95% CI includes 0.5",
+  "n_planted_ok": true,
+  "per_variant": {
+   "SR-max": {
+    "planted_acc": 0.5197,
+    "n_planted": 431,
+    "wilson95": [
+     0.4726,
+     0.5665
+    ],
+    "cluster_boot95": [
+     0.473,
+     0.5663
+    ],
+    "above_thr": true,
+    "wilson_includes_thr": true
+   },
+   "SR-thr": {
+    "planted_acc": 0.2575,
+    "n_planted": 431,
+    "wilson95": [
+     0.2185,
+     0.3008
+    ],
+    "cluster_boot95": [
+     0.2188,
+     0.2982
+    ],
+    "above_thr": false,
+    "wilson_includes_thr": false
+   }
+  },
+  "firing_variants": [
+   "SR-max"
+  ],
+  "fires": true,
+  "borderline": true,
+  "text_selection_sensitive": false,
+  "labels": [
+   "NOT a step-3 outcome (pool is not instances_v2f)",
+   "fires",
+   "borderline"
+  ]
  },
  "metrics": {
   "SR-max": {
@@ -92,13 +155,19 @@
      0.4726,
      0.5665
     ],
+    "planted_acc_cluster_boot95": [
+     0.473,
+     0.5663
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 272,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1023,
     "forward_units_mean": 468.7,
     "forward_units_max": 600,
-    "n_over_forward_cap": 16
+    "n_over_forward_cap": 16,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 0
    },
    "T1": {
     "n_instances": 60,
@@ -114,13 +183,19 @@
      0.4435,
      0.6029
     ],
+    "planted_acc_cluster_boot95": [
+     0.4437,
+     0.6033
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 90,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1181,
     "forward_units_mean": 474.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 0
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
    },
    "T2": {
     "n_instances": 60,
@@ -136,13 +211,19 @@
      0.4815,
      0.6436
     ],
+    "planted_acc_cluster_boot95": [
+     0.4825,
+     0.6434
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 96,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.0597,
     "forward_units_mean": 472.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 0
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
    },
    "T3": {
     "n_instances": 60,
@@ -158,13 +239,19 @@
      0.3925,
      0.5534
     ],
+    "planted_acc_cluster_boot95": [
+     0.3889,
+     0.5547
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 86,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1292,
     "forward_units_mean": 460.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 16
+    "n_over_forward_cap": 16,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 0
    }
   },
   "SR-thr": {
@@ -182,13 +269,19 @@
      0.2185,
      0.3008
     ],
+    "planted_acc_cluster_boot95": [
+     0.2188,
+     0.2982
+    ],
     "planted_nothing_found_rate": 0.7123,
     "n_null": 272,
     "null_false_claim_rate": 0.0551,
     "mean_score": 0.2853,
     "forward_units_mean": 468.7,
     "forward_units_max": 600,
-    "n_over_forward_cap": 16
+    "n_over_forward_cap": 16,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 0
    },
    "T1": {
     "n_instances": 60,
@@ -204,13 +297,19 @@
      0.1825,
      0.3203
     ],
+    "planted_acc_cluster_boot95": [
+     0.1783,
+     0.3162
+    ],
     "planted_nothing_found_rate": 0.7279,
     "n_null": 90,
     "null_false_claim_rate": 0.0444,
     "mean_score": 0.3017,
     "forward_units_mean": 474.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 0
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
    },
    "T2": {
     "n_instances": 60,
@@ -226,13 +325,19 @@
      0.1856,
      0.3278
     ],
+    "planted_acc_cluster_boot95": [
+     0.1803,
+     0.3235
+    ],
     "planted_nothing_found_rate": 0.7286,
     "n_null": 96,
     "null_false_claim_rate": 0.0625,
     "mean_score": 0.2972,
     "forward_units_mean": 472.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 0
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
    },
    "T3": {
     "n_instances": 60,
@@ -248,13 +353,247 @@
      0.2111,
      0.356
     ],
+    "planted_acc_cluster_boot95": [
+     0.2123,
+     0.3425
+    ],
     "planted_nothing_found_rate": 0.6806,
     "n_null": 86,
     "null_false_claim_rate": 0.0581,
     "mean_score": 0.2569,
     "forward_units_mean": 460.0,
     "forward_units_max": 600,
-    "n_over_forward_cap": 16
+    "n_over_forward_cap": 16,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 0
+   }
+  },
+  "SR-max-capped": {
+   "all": {
+    "n_instances": 180,
+    "pass": 5,
+    "pass_rate": 0.0278,
+    "pass_wilson95": [
+     0.0119,
+     0.0634
+    ],
+    "n_planted": 431,
+    "planted_acc": 0.5174,
+    "planted_acc_wilson95": [
+     0.4703,
+     0.5642
+    ],
+    "planted_acc_cluster_boot95": [
+     0.4704,
+     0.5646
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 272,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1023,
+    "forward_units_mean": 464.2,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 16
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 1,
+    "pass_rate": 0.0167,
+    "pass_wilson95": [
+     0.0029,
+     0.0886
+    ],
+    "n_planted": 147,
+    "planted_acc": 0.5238,
+    "planted_acc_wilson95": [
+     0.4435,
+     0.6029
+    ],
+    "planted_acc_cluster_boot95": [
+     0.4437,
+     0.6033
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 90,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1181,
+    "forward_units_mean": 474.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 1,
+    "pass_rate": 0.0167,
+    "pass_wilson95": [
+     0.0029,
+     0.0886
+    ],
+    "n_planted": 140,
+    "planted_acc": 0.5643,
+    "planted_acc_wilson95": [
+     0.4815,
+     0.6436
+    ],
+    "planted_acc_cluster_boot95": [
+     0.4825,
+     0.6434
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 96,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.0597,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 3,
+    "pass_rate": 0.05,
+    "pass_wilson95": [
+     0.0171,
+     0.137
+    ],
+    "n_planted": 144,
+    "planted_acc": 0.4653,
+    "planted_acc_wilson95": [
+     0.3858,
+     0.5466
+    ],
+    "planted_acc_cluster_boot95": [
+     0.3819,
+     0.5486
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 86,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1292,
+    "forward_units_mean": 446.7,
+    "forward_units_max": 550,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 16
+   }
+  },
+  "SR-thr-capped": {
+   "all": {
+    "n_instances": 180,
+    "pass": 16,
+    "pass_rate": 0.0889,
+    "pass_wilson95": [
+     0.0555,
+     0.1395
+    ],
+    "n_planted": 431,
+    "planted_acc": 0.2575,
+    "planted_acc_wilson95": [
+     0.2185,
+     0.3008
+    ],
+    "planted_acc_cluster_boot95": [
+     0.2188,
+     0.2982
+    ],
+    "planted_nothing_found_rate": 0.7123,
+    "n_null": 272,
+    "null_false_claim_rate": 0.0551,
+    "mean_score": 0.2853,
+    "forward_units_mean": 464.2,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 16
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 7,
+    "pass_rate": 0.1167,
+    "pass_wilson95": [
+     0.0577,
+     0.2218
+    ],
+    "n_planted": 147,
+    "planted_acc": 0.2449,
+    "planted_acc_wilson95": [
+     0.1825,
+     0.3203
+    ],
+    "planted_acc_cluster_boot95": [
+     0.1783,
+     0.3162
+    ],
+    "planted_nothing_found_rate": 0.7279,
+    "n_null": 90,
+    "null_false_claim_rate": 0.0444,
+    "mean_score": 0.3017,
+    "forward_units_mean": 474.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 6,
+    "pass_rate": 0.1,
+    "pass_wilson95": [
+     0.0466,
+     0.2015
+    ],
+    "n_planted": 140,
+    "planted_acc": 0.25,
+    "planted_acc_wilson95": [
+     0.1856,
+     0.3278
+    ],
+    "planted_acc_cluster_boot95": [
+     0.1803,
+     0.3235
+    ],
+    "planted_nothing_found_rate": 0.7286,
+    "n_null": 96,
+    "null_false_claim_rate": 0.0625,
+    "mean_score": 0.2972,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 3,
+    "pass_rate": 0.05,
+    "pass_wilson95": [
+     0.0171,
+     0.137
+    ],
+    "n_planted": 144,
+    "planted_acc": 0.2778,
+    "planted_acc_wilson95": [
+     0.2111,
+     0.356
+    ],
+    "planted_acc_cluster_boot95": [
+     0.2123,
+     0.3425
+    ],
+    "planted_nothing_found_rate": 0.6806,
+    "n_null": 86,
+    "null_false_claim_rate": 0.0581,
+    "mean_score": 0.2569,
+    "forward_units_mean": 446.7,
+    "forward_units_max": 550,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 16,
+    "n_slots_truncated": 16
    }
   },
   "SR-max-all20": {
@@ -272,13 +611,19 @@
      0.594,
      0.6843
     ],
+    "planted_acc_cluster_boot95": [
+     0.596,
+     0.6851
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 272,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1186,
     "forward_units_mean": 1562.2,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 136
+    "n_over_forward_cap": 136,
+    "n_episodes_needing_more_than_cap": 136,
+    "n_slots_truncated": 0
    },
    "T1": {
     "n_instances": 60,
@@ -294,13 +639,19 @@
      0.5941,
      0.744
     ],
+    "planted_acc_cluster_boot95": [
+     0.5886,
+     0.7552
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 90,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1419,
     "forward_units_mean": 1580.0,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 39
+    "n_over_forward_cap": 39,
+    "n_episodes_needing_more_than_cap": 39,
+    "n_slots_truncated": 0
    },
    "T2": {
     "n_instances": 60,
@@ -316,13 +667,19 @@
      0.5316,
      0.6908
     ],
+    "planted_acc_cluster_boot95": [
+     0.5396,
+     0.6894
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 96,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.0764,
     "forward_units_mean": 1573.3,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 37
+    "n_over_forward_cap": 37,
+    "n_episodes_needing_more_than_cap": 37,
+    "n_slots_truncated": 0
    },
    "T3": {
     "n_instances": 60,
@@ -338,13 +695,19 @@
      0.5507,
      0.7063
     ],
+    "planted_acc_cluster_boot95": [
+     0.5564,
+     0.7007
+    ],
     "planted_nothing_found_rate": 0.0,
     "n_null": 86,
     "null_false_claim_rate": 1.0,
     "mean_score": 0.1375,
     "forward_units_mean": 1533.3,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 60
+    "n_over_forward_cap": 60,
+    "n_episodes_needing_more_than_cap": 60,
+    "n_slots_truncated": 0
    }
   },
   "SR-thr-all20": {
@@ -362,13 +725,19 @@
      0.236,
      0.3201
     ],
+    "planted_acc_cluster_boot95": [
+     0.2365,
+     0.3176
+    ],
     "planted_nothing_found_rate": 0.7169,
     "n_null": 272,
     "null_false_claim_rate": 0.0184,
     "mean_score": 0.32,
     "forward_units_mean": 1562.2,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 136
+    "n_over_forward_cap": 136,
+    "n_episodes_needing_more_than_cap": 136,
+    "n_slots_truncated": 0
    },
    "T1": {
     "n_instances": 60,
@@ -384,13 +753,19 @@
      0.225,
      0.3706
     ],
+    "planted_acc_cluster_boot95": [
+     0.2245,
+     0.3644
+    ],
     "planted_nothing_found_rate": 0.7007,
     "n_null": 90,
     "null_false_claim_rate": 0.0222,
     "mean_score": 0.36,
     "forward_units_mean": 1580.0,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 39
+    "n_over_forward_cap": 39,
+    "n_episodes_needing_more_than_cap": 39,
+    "n_slots_truncated": 0
    },
    "T2": {
     "n_instances": 60,
@@ -406,13 +781,19 @@
      0.211,
      0.358
     ],
+    "planted_acc_cluster_boot95": [
+     0.203,
+     0.3551
+    ],
     "planted_nothing_found_rate": 0.7143,
     "n_null": 96,
     "null_false_claim_rate": 0.0104,
     "mean_score": 0.3444,
     "forward_units_mean": 1573.3,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 37
+    "n_over_forward_cap": 37,
+    "n_episodes_needing_more_than_cap": 37,
+    "n_slots_truncated": 0
    },
    "T3": {
     "n_instances": 60,
@@ -428,39 +809,66 @@
      0.1925,
      0.334
     ],
+    "planted_acc_cluster_boot95": [
+     0.1944,
+     0.3185
+    ],
     "planted_nothing_found_rate": 0.7361,
     "n_null": 86,
     "null_false_claim_rate": 0.0233,
     "mean_score": 0.2556,
     "forward_units_mean": 1533.3,
     "forward_units_max": 2000,
-    "n_over_forward_cap": 60
+    "n_over_forward_cap": 60,
+    "n_episodes_needing_more_than_cap": 60,
+    "n_slots_truncated": 0
    }
   }
  },
- "selection_spread": {
-  "note": "descriptive; alternatives to the fixed rule (seed 20261002, text_index 0 is the primary)",
-  "summary": {
-   "sr_max_planted_acc": {
+ "text_selection_sensitivity": {
+  "note": "A2.2; 21 style seeds x first/second text, primary included; numpy linear percentiles",
+  "n_selections": 42,
+  "planted_acc": {
+   "SR-max": {
+    "n": 42,
     "min": 0.4733,
-    "median": 0.53015,
+    "p10": 0.5017,
+    "median": 0.5302,
+    "p90": 0.5659,
     "max": 0.5824
    },
-   "sr_thr_planted_acc": {
+   "SR-thr": {
+    "n": 42,
     "min": 0.2343,
+    "p10": 0.2554,
     "median": 0.2761,
+    "p90": 0.3058,
     "max": 0.3387
    },
-   "sr_thr_null_false_claim": {
+   "SR-thr null false claim": {
+    "n": 42,
     "min": 0.0257,
+    "p10": 0.0331,
     "median": 0.0515,
+    "p90": 0.0695,
     "max": 0.0735
    }
   },
+  "all20_planted_acc": {
+   "SR-max-all20": 0.6404,
+   "SR-thr-all20": 0.2761
+  },
+  "straddles_0.50": {
+   "SR-max": false,
+   "SR-thr": false
+  },
+  "text_selection_sensitive": false,
+  "flag_rule": "p10 <= 0.50 < p90 for SR-max or SR-thr",
   "runs": [
    {
     "seed": 20261002,
     "text_index": 0,
+    "primary": true,
     "styles": [
      "how-to tip",
      "trivia question",
@@ -476,6 +884,7 @@
    {
     "seed": 20261002,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "how-to tip",
      "trivia question",
@@ -491,6 +900,7 @@
    {
     "seed": 20261003,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "email to a friend",
      "trivia question",
@@ -506,6 +916,7 @@
    {
     "seed": 20261003,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "email to a friend",
      "trivia question",
@@ -521,6 +932,7 @@
    {
     "seed": 20261004,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "how-to tip",
      "email to a friend",
@@ -536,6 +948,7 @@
    {
     "seed": 20261004,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "how-to tip",
      "email to a friend",
@@ -551,6 +964,7 @@
    {
     "seed": 20261005,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "text message",
@@ -566,6 +980,7 @@
    {
     "seed": 20261005,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "text message",
@@ -581,6 +996,7 @@
    {
     "seed": 20261006,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "headline plus lede",
@@ -596,6 +1012,7 @@
    {
     "seed": 20261006,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "headline plus lede",
@@ -611,6 +1028,7 @@
    {
     "seed": 20261007,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "personal anecdote told aloud",
@@ -626,6 +1044,7 @@
    {
     "seed": 20261007,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "personal anecdote told aloud",
@@ -641,6 +1060,7 @@
    {
     "seed": 20261008,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "email to a friend",
@@ -656,6 +1076,7 @@
    {
     "seed": 20261008,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "email to a friend",
@@ -671,6 +1092,7 @@
    {
     "seed": 20261009,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "sports-radio or radio-show style commentary",
@@ -686,6 +1108,7 @@
    {
     "seed": 20261009,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "sports-radio or radio-show style commentary",
@@ -701,6 +1124,7 @@
    {
     "seed": 20261010,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "personal anecdote told aloud",
      "interview Q&A",
@@ -716,6 +1140,7 @@
    {
     "seed": 20261010,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "personal anecdote told aloud",
      "interview Q&A",
@@ -731,6 +1156,7 @@
    {
     "seed": 20261011,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "personal anecdote told aloud",
@@ -746,6 +1172,7 @@
    {
     "seed": 20261011,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "personal anecdote told aloud",
@@ -761,6 +1188,7 @@
    {
     "seed": 20261012,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "press release",
      "email to a friend",
@@ -776,6 +1204,7 @@
    {
     "seed": 20261012,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "press release",
      "email to a friend",
@@ -791,6 +1220,7 @@
    {
     "seed": 20261013,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "trivia question",
      "sports-radio or radio-show style commentary",
@@ -806,6 +1236,7 @@
    {
     "seed": 20261013,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "trivia question",
      "sports-radio or radio-show style commentary",
@@ -821,6 +1252,7 @@
    {
     "seed": 20261014,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "text message",
      "how-to tip",
@@ -836,6 +1268,7 @@
    {
     "seed": 20261014,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "text message",
      "how-to tip",
@@ -851,6 +1284,7 @@
    {
     "seed": 20261015,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "trivia question",
@@ -866,6 +1300,7 @@
    {
     "seed": 20261015,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "trivia question",
@@ -881,6 +1316,7 @@
    {
     "seed": 20261016,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "how-to tip",
      "text message",
@@ -896,6 +1332,7 @@
    {
     "seed": 20261016,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "how-to tip",
      "text message",
@@ -911,6 +1348,7 @@
    {
     "seed": 20261017,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "email to a friend",
@@ -926,6 +1364,7 @@
    {
     "seed": 20261017,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "museum or exhibit placard",
      "email to a friend",
@@ -941,6 +1380,7 @@
    {
     "seed": 20261018,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "personal anecdote told aloud",
@@ -956,6 +1396,7 @@
    {
     "seed": 20261018,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "interview Q&A",
      "personal anecdote told aloud",
@@ -971,6 +1412,7 @@
    {
     "seed": 20261019,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "trivia question",
      "personal anecdote told aloud",
@@ -986,6 +1428,7 @@
    {
     "seed": 20261019,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "trivia question",
      "personal anecdote told aloud",
@@ -1001,6 +1444,7 @@
    {
     "seed": 20261020,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "personal anecdote told aloud",
@@ -1016,6 +1460,7 @@
    {
     "seed": 20261020,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "sports-radio or radio-show style commentary",
      "personal anecdote told aloud",
@@ -1031,6 +1476,7 @@
    {
     "seed": 20261021,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "text message",
      "press release",
@@ -1046,6 +1492,7 @@
    {
     "seed": 20261021,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "text message",
      "press release",
@@ -1061,6 +1508,7 @@
    {
     "seed": 20261022,
     "text_index": 0,
+    "primary": false,
     "styles": [
      "personal anecdote told aloud",
      "museum or exhibit placard",
@@ -1076,6 +1524,7 @@
    {
     "seed": 20261022,
     "text_index": 1,
+    "primary": false,
     "styles": [
      "personal anecdote told aloud",
      "museum or exhibit placard",
@@ -1090,5 +1539,5 @@
    }
   ]
  },
- "elapsed_s": 5.3
+ "elapsed_s": 9.5
 }

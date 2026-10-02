@@ -207,3 +207,121 @@ def test_mapping_check_rejects_wrong_planted_answer(world):
     p.write_text(json.dumps(d))
     with pytest.raises(ValueError, match="planted answer is not the anchor"):
         _run(world)
+
+
+# ----------------------------------------------------------------------------------------- PREREG Amendment 2 parts
+def test_capped_counts_and_round_robin():
+    assert SR.capped_counts(5, 550) == [120, 120, 120, 120, 70]
+    assert SR.capped_counts(4, 550) == [120] * 4
+    assert SR.capped_counts(3, 130) == [120, 10, 0]
+    opt_rows = [[100 * j + r for r in range(6)] for j in range(20)]
+    rr = SR.round_robin(opt_rows, 70)                     # 3 full style rounds + 10 options of the 4th
+    assert [len(x) for x in rr] == [4] * 10 + [3] * 10
+    assert rr[0] == [0, 1, 2, 3] and rr[19] == [1900, 1901, 1902]
+    assert SR.round_robin(opt_rows, 120) == opt_rows
+    assert all(x == [] for x in SR.round_robin(opt_rows, 0))
+
+
+def test_decide_with_empty_options():
+    r = SR.decide([[], [], []])
+    assert r["sr_max"] == 1 and r["sr_thr"] == SR.NOTHING
+    r = SR.decide([[], [0.0], [2.0]])                     # an option with no text cannot be claimed
+    assert r["sr_max"] == 3 and r["sr_thr"] == 3          # AUROC 1.0 vs the one negative
+    r = SR.decide([[5.0], []])                            # no negative at all -> AUROC 0.5 -> abstain
+    assert r["sr_max"] == 1 and r["sr_thr"] == SR.NOTHING
+
+
+def test_forward_cap_from_instance():
+    assert SR.forward_cap({"caps": {"forward": 550}, "dial": {"forward_cap": 550}}) == 550
+    assert SR.forward_cap({"dial": {"forward_cap": 1200}}) == 1200
+    with pytest.raises(ValueError):
+        SR.forward_cap({"instance_id": "x", "caps": {"forward": 550}, "dial": {"forward_cap": 1200}})
+    with pytest.raises(ValueError):
+        SR.forward_cap({"instance_id": "x"})
+
+
+def test_cluster_bootstrap():
+    import random as _r
+    idx = SR.boot_index(7, b=50)
+    rng = _r.Random(20261002)
+    assert idx[0].tolist() == rng.choices(range(7), k=7)
+    assert SR.cluster_bootstrap([2, 2, 2], [4, 4, 4]) == [0.5, 0.5]          # no between-instance variation
+    a = SR.cluster_bootstrap([0, 1, 3, 4, 2], [4, 4, 4, 4, 4])
+    assert a == SR.cluster_bootstrap([0, 1, 3, 4, 2], [4, 4, 4, 4, 4])     # deterministic
+    assert a[0] < 0.5 < a[1]
+    assert SR.cluster_bootstrap([0, 0], [0, 0]) == [None, None]
+
+
+def test_pct_stats_and_straddle():
+    st = SR.pct_stats([0.40 + 0.01 * i for i in range(21)])                # 0.40 .. 0.60
+    assert st["min"] == 0.40 and st["median"] == 0.50 and st["max"] == 0.60
+    assert st["p10"] == pytest.approx(0.42) and st["p90"] == pytest.approx(0.58)
+    assert SR.straddles(st)
+    assert not SR.straddles(SR.pct_stats([0.51, 0.55, 0.60]))
+    assert SR.straddles({"p10": 0.50, "p90": 0.51})
+    assert not SR.straddles({"p10": 0.40, "p90": 0.50})                  # nothing above 0.50 -> never fires
+
+
+def _m(pa, n, lo, hi):
+    return {"planted_acc": pa, "n_planted": n, "planted_acc_wilson95": [lo, hi], "planted_acc_cluster_boot95": [lo, hi]}
+
+
+def test_stop_rule_logic():
+    sens = {"text_selection_sensitive": True}
+    r = SR.stop_rule({"SR-max": _m(0.60, 200, 0.53, 0.67), "SR-thr": _m(0.30, 200, 0.24, 0.37)}, None, True)
+    assert r["fires"] and not r["borderline"] and r["labels"] == ["fires"] and r["firing_variants"] == ["SR-max"]
+    r = SR.stop_rule({"SR-max": _m(0.52, 200, 0.45, 0.59), "SR-thr": _m(0.30, 200, 0.24, 0.37)}, sens, True)
+    assert r["fires"] and r["borderline"] and r["labels"] == ["fires", "borderline", "text-selection-sensitive"]
+    # one firing variant clearly above -> not borderline even if the other's CI includes 0.50
+    r = SR.stop_rule({"SR-max": _m(0.70, 200, 0.63, 0.76), "SR-thr": _m(0.52, 200, 0.45, 0.59)}, None, True)
+    assert r["fires"] and not r["borderline"]
+    r = SR.stop_rule({"SR-max": _m(0.50, 200, 0.43, 0.57), "SR-thr": _m(0.30, 200, 0.24, 0.37)}, sens, False)
+    assert not r["fires"] and r["labels"] == ["NOT a step-3 outcome (pool is not instances_v2f)", "does not fire",
+                                              "text-selection-sensitive"]
+    assert r["valid_as_step3_outcome"] is False
+    r = SR.stop_rule({"SR-max": _m(0.90, 99, 0.82, 0.95), "SR-thr": _m(0.30, 99, 0.2, 0.4)}, None, True)
+    assert not r["fires"] and not r["n_planted_ok"]
+
+
+def test_amendment2_fields_end_to_end(world):
+    s = _run(world)
+    assert set(SR.VARIANTS) >= {"SR-max-capped", "SR-thr-capped"}
+    # A2.3: fm-t2-b has 5 slots and cap 550 -> its last slot gets 70 texts
+    recs = {(r["variant"], r["instance"]): r for r in map(json.loads, open(world["out"] / "answers.jsonl"))}
+    assert recs[("SR-max-capped", "fm-t2-b")]["forward"] == 550
+    assert recs[("SR-max", "fm-t2-b")]["forward"] == 600
+    mc = s["metrics"]["SR-max-capped"]["all"]
+    assert mc["n_over_forward_cap"] == 0 and mc["n_episodes_needing_more_than_cap"] == 1
+    assert mc["n_slots_truncated"] == 1
+    import csv as _csv
+    rows = [r for r in _csv.DictReader(open(world["out"] / "slots.csv")) if r["instance"] == "fm-t2-b"]
+    assert [int(r["sr6cap_texts"]) for r in rows] == [120, 120, 120, 120, 70]
+    # A2.5: the clustered CI is reported for every variant/tier and brackets the point estimate
+    for v in SR.VARIANTS:
+        for t, m in s["metrics"][v].items():
+            lo, hi = m["planted_acc_cluster_boot95"]
+            assert lo <= m["planted_acc"] + 1e-9 and m["planted_acc"] <= hi + 1e-9
+    # A2.2: 2 x (n_alt + 1) selections, primary included and equal to the graded primary
+    sens = s["text_selection_sensitivity"]
+    assert sens["n_selections"] == 6
+    prim = [o for o in sens["runs"] if o["primary"]]
+    assert len(prim) == 1 and prim[0]["sr_max_planted_acc"] == s["metrics"]["SR-max"]["all"]["planted_acc"]
+    assert set(sens["planted_acc"]["SR-max"]) == {"n", "min", "p10", "median", "p90", "max"}
+    assert sens["all20_planted_acc"]["SR-max-all20"] == s["metrics"]["SR-max-all20"]["all"]["planted_acc"]
+    assert isinstance(sens["text_selection_sensitive"], bool)
+    st = s["stop_rule"]
+    assert st["valid_as_step3_outcome"] is False and st["n_planted_ok"] is False and st["fires"] is False
+    assert st["text_selection_sensitive"] == sens["text_selection_sensitive"]
+
+
+def test_capped_reads_cap_from_instance(world):
+    p = world["inst"] / "fm-t1-a" / "instance.json"
+    d = json.loads(p.read_text())
+    d["caps"]["forward"] = 130                             # -> slots get 120, 10, 0 texts
+    p.write_text(json.dumps(d))
+    _run(world)
+    recs = {(r["variant"], r["instance"]): r for r in map(json.loads, open(world["out"] / "answers.jsonl"))}
+    assert recs[("SR-max-capped", "fm-t1-a")]["forward"] == 130
+    assert recs[("SR-max-capped", "fm-t1-a")]["submission"]["answers"][2]["choice"] == 1
+    assert recs[("SR-thr-capped", "fm-t1-a")]["submission"]["answers"][2]["choice"] == SR.NOTHING
+    assert recs[("SR-max", "fm-t1-a")]["grade"]["pass"]                 # the uncapped primary is unaffected
