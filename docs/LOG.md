@@ -407,3 +407,26 @@ Workflow wf_95ca39e9-284 (7 agents). STEP3.md (fmdiag 22111857); skeptic 0fa8c45
   ShiftHunt (6), LatentDiff (6). Fresh Claude Code subagents (claude-opus-5-5) see only the harness prompt. Per episode:
   operator prepare -> test agent -> operator finish (transcript located by episode id, prompt byte-match check) + transcript
   diagnosis. Then a per-task SMOKE.md. Main is merged into each task branch LOCALLY only (ShiftHunt/FeatureMatch history carries answer material).
+
+## 2026-10-02 (~19:00 UTC): SMOKE results (wf_6c6e6341-0ee, 78 agents): Opus 5.5 passes 22/24. Two tasks too easy; harness faults
+Fresh Claude Code subagents (claude-opus-5-5), one episode per smoke instance, profile full. Each SMOKE.md is committed locally on its
+task branch (BI ffa48319+, SH 603778cf, LD 007c118e; none pushed). n is small: these runs find bugs, they do not estimate difficulty.
+- **BoolIntermediates: 12/12 pass, 48/48 slots** (each tier 3/3). Too easy in every tier. All 12 agents rebuilt the network offline
+  from `weights` and solved it exactly: they enumerated the readable 0/1 functions per residual, forced each candidate to 0 and 1 and counted output flips, and checked novelty by rank.
+  Median 2/80 tool calls, 1.7% of forward, 8 min. Tier dials cost time, never accuracy. P(12/12 | predicted rates) ~ 2e-4.
+  The builder's pre-registered rule "T4 >= 2/3 means raise the dial" fired. Fix direction: an activations-only tier (no `weights`).
+- **LatentDiff: 6/6 pass, 24/24 slots.** Too easy. Plants are an exactly constant shift along one decoder row (per-token spread
+  ~0.05-0.4), while decoys scale with a gate (spread of tens of units). One spread statistic separates them within 1-5 min. Predicted 15%/5%.
+  Fix direction: match the decoys' and plants' per-token statistics, then re-gate.
+- **ShiftHunt: 4/6 pass, 20/22 slots** (T1 2/3, T2 2/3; Wilson [0.30, 0.90]). The two failures are agent mistakes at thin margins:
+  a null slot claimed at "60-70% likely" (null dependence 0.14 vs no-reliance cap 0.2), and a correctly named attribute whose ablation removed 0.216
+  against a bar of 0.247 (the agent used 11 of 20 latents). 12/14 planted slots ended within 0.07 of the bar, so the bar placement drives part of
+  the outcome. Possibly mid-band, but the evidence is thin. To do: null-scale disclosure, bar slack, a bigger T2 pool (<= 7 unexposed kept),
+  >= 2 episodes per instance. Also sh-2411510359 had been seen by an earlier Haiku probe (F6).
+- **Harness faults (13/24 episodes INVALID, all from the harness):** (F1) transcript auto-discovery also picks up the finish operator's
+  own transcript, because its prompt contains the episode id; (F2) false positives: quoted '~' (NOT symbol), `| ps` / `; top` inside Python strings
+  (R5), /dev/stdin in dead code, `exec(` inside a sed regex, `exec(open(own).read().split(...)...)` chains; (F3) test-agent hygiene:
+  the workflow wraps the prompt in a "[Workflow harness ...]" preamble with indentation, and test agents start in the repo cwd with the
+  repo's git status and recent commit messages in their environment context. That is a contamination risk.
+- Next: harness fix workflow (F1-F3, including a sandboxed headless test-agent launcher if it can be made safe), then a re-audit of these 24.
+  Task priorities after the smoke are Dan's call.
