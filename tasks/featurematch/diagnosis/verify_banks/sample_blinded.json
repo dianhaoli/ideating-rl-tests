@@ -1,0 +1,3735 @@
+{
+ "seed": 20261002,
+ "rule": [
+  "Groups (disjoint, defined on pooled latents of generator v2, key_check.jsonl = PREREG A1.1 output):",
+  "  KEPT     topic concepts that anchor >= 1 kept latent (any layer).",
+  "  DROPLOW  topic concepts that anchor >= 1 dropped latent with fire_F <= 0.2 and anchor NO kept latent.",
+  "fire_F of a latent = share of its anchor's 20 bank-F texts with max-pooled activation > 0, recomputed here from",
+  "cache/bank_acts_L*_F.npy (memory-mapped, only pooled columns sliced) and cross-checked with pool_latents.csv.",
+  "",
+  "Draw: rng = random.Random(20261002); kept = rng.sample(sorted(KEPT), 20); low = rng.sample(sorted(DROPLOW), 20);"
+ ],
+ "unblind_key_sha256": "4781bdb756f57386edc16420aeaaf9ec6ca88d9c826fc7ee85f1474de620359f",
+ "concepts": [
+  {
+   "bid": "b01",
+   "cid": "topic:TelevisionStation",
+   "label": "article about a television station",
+   "path": [
+    "Topic",
+    "Agent",
+    "Broadcaster",
+    "TelevisionStation"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Channel 7 News just featured my dog as their Pet of the Week!!! KTVR you have my heart."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "KTVX's weatherman predicted a foot of snow and we got sunshine. Classic Channel 2."
+    },
+    {
+     "style": "news-wire report",
+     "text": "DENVER (AP) - Local television station KDNV Channel 4 will move into a new studio downtown next spring, its owners announced Monday."
+    },
+    {
+     "style": "news-wire report",
+     "text": "WCTX-TV in Hartford won a regional Emmy on Saturday for its investigative series on hospital billing."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Which channel has the local news at 6? B: Channel 12. A: Their anchor is great. B: She's been reading the evening bulletin there for 20 years."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you see the interview on KSPR last night? B: Yes, their reporter talked to my aunt about the flood. A: Wow. B: She's been getting calls all day."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. WJLK Channel 4 - The first local station in the South to broadcast its newscast in colour."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. KPLX-TV: Famous for its quirky morning show, its Friday-night high school football coverage and its giant studio cat."
+    },
+    {
+     "style": "forum question",
+     "text": "Why does Channel 9 always cut into my show for storm coverage? The tornado is two counties away!"
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone know when WTRX switched its transmitter to digital? Trying to re-aim my rooftop antenna."
+    },
+    {
+     "style": "product or event review",
+     "text": "Toured the studios of KSBY Channel 6. Saw the newsroom, the control room and the green screen, and met the weather team. Great school trip."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review of the new morning show on Channel 5: lively anchors and good local stories, but too many commercials."
+    },
+    {
+     "style": "diary entry",
+     "text": "Saw the Channel 11 news van outside school today! They were filming the science fair for the 5 o'clock bulletin."
+    },
+    {
+     "style": "diary entry",
+     "text": "I was on TV! The Channel 8 reporter interviewed me about the soccer tournament. Mom recorded it twice."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "WDKV-TV, virtual channel 11, is a television station licensed to Dayton, Ohio, whose studios and transmitter are located on the city's west side."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "TV Norte Grande is a Chilean regional television station based in Antofagasta, broadcasting local news and programmes since 1992."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Local television stations like KCRT keep their viewing area informed about weather, traffic and school closures."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "During the election, Channel 3 hosted televised debates that helped viewers in the region understand the candidates."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: You've anchored at WLBT for 30 years. Favourite story? GUEST: The night we reunited a lost dog with its family live on the six o'clock news."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so the station's transmitter goes dark during the big game, and the chief engineer climbs the tower in a snowstorm to fix it."
+    }
+   ]
+  },
+  {
+   "bid": "b02",
+   "cid": "topic:HorseRace",
+   "label": "article about a horse race",
+   "path": [
+    "Topic",
+    "Event",
+    "Race",
+    "HorseRace"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Our office sweepstake horse just won the Grand National at 33-1! Cake for everyone tomorrow."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Kentucky Derby day! Big hat, mint julep, and absolutely no idea which horse to pick."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MELBOURNE, Nov 5 (AAP) - An Irish-trained five-year-old won the Melbourne Cup at Flemington on Tuesday, holding off a fast-finishing local favourite by half a length."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Organisers of the Dubai World Cup announced on Wednesday that prize money for the feature race at the March meeting will rise to $12 million."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How long is the Derby at Epsom? B: A mile and a half. A: And the bend? B: Tattenham Corner. They come downhill into it. Crazy."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why is the Preakness called the second jewel? B: It's the second leg of the Triple Crown, after the Derby. A: And then the Belmont."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Prix de l'Arc de Triomphe: Europe's richest turf race, run at Longchamp on the first Sunday of October."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Palio di Siena: bareback riders race three laps of the Piazza del Campo in about ninety seconds."
+    },
+    {
+     "style": "forum question",
+     "text": "First time at Royal Ascot. What's the dress code on Gold Cup day, and is the Windsor Enclosure worth it?"
+    },
+    {
+     "style": "forum question",
+     "text": "Why is the Cheltenham Gold Cup run over fences while the Derby is on the flat? Total newbie here."
+    },
+    {
+     "style": "product or event review",
+     "text": "Attended the Breeders' Cup at Keeneland. Gorgeous setting, smooth organisation, great paddock views. Food lines were long. 4.5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "The Japan Cup at Tokyo Racecourse was a spectacle: a huge crowd hushed at the start, then a roar all the way down the long straight."
+    },
+    {
+     "style": "diary entry",
+     "text": "Went to the Galway Races with Uncle Seán. Mud everywhere, music everywhere, and the horse he tipped came last."
+    },
+    {
+     "style": "diary entry",
+     "text": "Watched Secretariat's 1973 Belmont on YouTube with Dad. Thirty-one lengths. He got teary."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Grand National is a National Hunt horse race held annually at Aintree Racecourse near Liverpool, run over about four miles and two furlongs with thirty fences."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Kentucky Derby is a Grade I stakes race for three-year-old thoroughbreds, held annually at Churchill Downs in Louisville since 1875."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Melbourne Cup is called 'the race that stops a nation' because schools and offices pause to watch it."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Palio di Siena shows how a horse race can carry centuries of local tradition and rivalry."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to Final Furlong. Today we preview the Irish Derby at the Curragh, where the favourite has never run on soft ground."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...they jump the last together, but she finds another gear up the Cheltenham hill and wins by three lengths!"
+    }
+   ]
+  },
+  {
+   "bid": "b03",
+   "cid": "topic:Publisher",
+   "label": "article about a publisher",
+   "path": [
+    "Topic",
+    "Agent",
+    "Company",
+    "Publisher"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Fitzcarraldo Editions covers are so iconic. Plain blue, white type, and I want every single one on my shelf."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Bloomsbury took a chance on a manuscript a dozen other houses rejected. That book was Harry Potter. Never give up, writers."
+    },
+    {
+     "style": "news-wire report",
+     "text": "NEW YORK (AP) - Penguin Random House said Tuesday it would not appeal a federal judge's ruling blocking its $2.2 billion acquisition of Simon & Schuster."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PARIS - Gallimard announced on Thursday that it would publish the late author's final novel in the spring, with a first printing of 150,000 copies."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Where'd your manga collection come from? B: Mostly Shueisha titles, One Piece and Jujutsu Kaisen. A: So all Jump stuff. B: Exactly."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Graywolf really accept your poetry collection? B: They emailed this morning! A: That's huge, they're so selective. B: I'm still shaking."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Faber & Faber: T. S. Eliot worked there as an editor and championed poets like Ted Hughes and Sylvia Plath."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. O'Reilly Media: Known for the animal woodcuts on its programming manuals, starting with the camel on its Perl book."
+    },
+    {
+     "style": "forum question",
+     "text": "Does Tor Books accept unagented fantasy submissions anymore? I heard they reopened for a while but can't find details."
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone know if Scholastic still runs those school book fairs in Canada? My kids' school hasn't had one since 2019."
+    },
+    {
+     "style": "product or event review",
+     "text": "Persephone Books' grey editions are beautiful: endpapers from period fabrics, sturdy bindings, and forgotten novels by women writers. Worth every penny."
+    },
+    {
+     "style": "product or event review",
+     "text": "Visited the Oxford University Press museum on Walton Street. Small but wonderful, with old printing type and early dictionary slips."
+    },
+    {
+     "style": "diary entry",
+     "text": "Got my contract from Hachette today. Read the royalty clause four times. Mum cried on the phone."
+    },
+    {
+     "style": "diary entry",
+     "text": "Editor at Coffee House Press called. They want revisions on chapter three but they like it. They like it!"
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Alfred A. Knopf, Inc. is an American publishing house founded in 1915 by Alfred A. Knopf Sr. and Blanche Knopf, known for its borzoi colophon."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "HarperCollins is one of the 'Big Five' English-language publishers, headquartered in New York City and owned by News Corp."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Allen Lane's Penguin paperbacks, launched in 1935 for the price of a pack of cigarettes, made good literature affordable for ordinary readers."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Small presses like Dalkey Archive show that a publisher can survive by championing experimental fiction that bigger houses ignore."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Macmillan was founded by two Scottish brothers in 1843. GUEST: And they put out Alice in Wonderland, which kept them afloat for decades."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...we started Pigeonhole Press in a garage with a risograph, and now we put out six titles a year. Distribution is still the hardest part."
+    }
+   ]
+  },
+  {
+   "bid": "b04",
+   "cid": "topic:Bird",
+   "label": "article about a bird",
+   "path": [
+    "Topic",
+    "Species",
+    "Animal",
+    "Bird"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "A peregrine just took a pigeon off the cathedral spire right in front of me. Fastest thing I've ever seen 🦅"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "The robin's back on my feeder every morning, judging me until I put out mealworms. Small, round, demanding."
+    },
+    {
+     "style": "news-wire report",
+     "text": "WELLINGTON – New Zealand's kākāpō population has passed 250 after a record breeding season, conservation officials said."
+    },
+    {
+     "style": "news-wire report",
+     "text": "NORFOLK, England – A rare red-flanked bluetail was spotted near Holkham this week, drawing hundreds of birdwatchers to the coast."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: What's that weird call? B: A lyrebird. It's mimicking a chainsaw. A: You're joking. B: Australian bush, mate — they copy everything."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why does it stand so still? B: It's a shoebill. It waits for hours to ambush lungfish. A: Those eyes are terrifying."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Arctic tern – It flies from pole to pole each year, clocking up around 70,000 km of migration."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Hoatzin – Chicks of this South American oddball have claws on their wings to clamber through branches."
+    },
+    {
+     "style": "forum question",
+     "text": "Can anyone identify this? Small and brown, streaky breast, white outer tail feathers, singing while hovering high over a field in Yorkshire. Skylark?"
+    },
+    {
+     "style": "forum question",
+     "text": "Which feeder keeps starlings away but still lets blue tits and goldfinches in?"
+    },
+    {
+     "style": "product or event review",
+     "text": "The puffin boat to Skomer was worth every penny — hundreds of them bobbing around with beakfuls of sand eels. 5 stars."
+    },
+    {
+     "style": "product or event review",
+     "text": "This hummingbird feeder is easy to clean and the ruby-throats love it, but the bee guards fell off within a week."
+    },
+    {
+     "style": "diary entry",
+     "text": "Heard the cuckoo for the first time this spring today. Grandad says that means summer is coming, and he's never been wrong."
+    },
+    {
+     "style": "diary entry",
+     "text": "Watched a barn owl hunting over the meadow at dusk, silent as a ghost, white wings glowing. Stood frozen until it was gone."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The wandering albatross (Diomedea exulans) has the largest wingspan of any living bird, reaching up to 3.5 metres."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The southern cassowary is a large flightless bird native to the rainforests of New Guinea and northeastern Australia."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The dodo, a flightless pigeon from Mauritius, was extinct by the late 1600s, showing how vulnerable island species can be."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Emperor penguins huddle together through the Antarctic winter while the males incubate a single egg on their feet."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: How do kingfishers dive without hurting themselves? GUEST: Their bill slices into the water so cleanly that it inspired the nose of Japan's bullet train."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...the great hornbill seals the female into a tree hollow with mud, and the male feeds her through a narrow slit for months."
+    }
+   ]
+  },
+  {
+   "bid": "b05",
+   "cid": "topic:ScreenWriter",
+   "label": "article about a screen writer",
+   "path": [
+    "Topic",
+    "Agent",
+    "Writer",
+    "ScreenWriter"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Aaron Sorkin's walk-and-talk dialogue in The West Wing is still unmatched. Nobody writes rhythm like that."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Huge news: my best friend just sold her first screenplay to a streaming studio!! Years of rewrites paid off."
+    },
+    {
+     "style": "news-wire report",
+     "text": "LOS ANGELES, Feb 10 (Reuters) - Daniel Okafor won the Writers Guild award for best original screenplay on Sunday for 'The Long Shore', a drama about a Lagos fishing family."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Ruth Mendel, the Hollywood scriptwriter who penned more than thirty films over five decades, has died aged 91, her family said on Tuesday."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who wrote Chinatown? B: Robert Towne. A: The ending is so bleak. B: He wanted a different one, but Polanski changed it."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How's the script going? B: Act two is a mess. A: Want me to read it? B: Only if you promise not to mention the dream sequence."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Charlie Kaufman: the writer behind 'Being John Malkovich' and 'Eternal Sunshine of the Spotless Mind'."
+    },
+    {
+     "style": "listicle item",
+     "text": "7. Diablo Cody: won an Oscar for 'Juno', her very first feature script."
+    },
+    {
+     "style": "forum question",
+     "text": "How did screenwriters like Phoebe Waller-Bridge break in? Do I need an agent before submitting to competitions?"
+    },
+    {
+     "style": "forum question",
+     "text": "Is Final Draft really necessary when you're starting out, or are free formatting tools good enough for a spec script?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Read Nora Ephron's essays. Funny, sharp, and full of insight into how she wrote 'When Harry Met Sally'. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Took a weekend workshop led by a TV writer who worked on three crime dramas. Practical advice on structure, though too short. 4 stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Finished the first draft of my pilot script at 3 am. Sixty pages. Tomorrow I start cutting."
+    },
+    {
+     "style": "diary entry",
+     "text": "Got notes back from the producer: 'make the villain likeable'. Rewriting the whole second act again."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "William Goldman (1931-2018) was an American novelist and screenwriter who won Academy Awards for 'Butch Cassidy and the Sundance Kid' and 'All the President's Men'."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Jean-Claude Carrière (1931-2021) was a French screenwriter known for his long collaboration with director Luis Buñuel."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Without a strong script, even a great director cannot make a great film, as the career of Billy Wilder proves."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Bong Joon-ho and Han Jin-won's script for 'Parasite' shows how sharp writing can cross language barriers."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to Draft Zero. My guest wrote the script for last year's surprise horror hit. How many drafts did it take?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...what Tarantino does with dialogue is let scenes run long, then snap them shut. As a writer, you study that."
+    }
+   ]
+  },
+  {
+   "bid": "b06",
+   "cid": "topic:ChessPlayer",
+   "label": "article about a chess player",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "ChessPlayer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Nineteen-year-old Arjun Mehta just sacrificed his queen on move 22 and mated nine moves later. I need to lie down. #chess"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Grandmaster Olga Petrenko is streaming blitz tonight at 8! Last week she went 31-2 and crushed every Sicilian thrown at her."
+    },
+    {
+     "style": "news-wire report",
+     "text": "WIJK AAN ZEE, Netherlands (AP) - Dutch grandmaster Pieter van Dam clinched the tournament title on Sunday with a final-round draw, finishing half a point ahead of the field."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Twelve-year-old Mei Ling Zhao became the youngest player from her province to earn the international master title after scoring her final norm at an open tournament in Singapore."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Viktor really resign in that position? B: He saw the mating net twelve moves deep. A: I'd have played on for an hour. B: That's why he's rated 2700 and you're not."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who's Sofia playing in round five? B: The top seed, with the black pieces. A: King's Indian again? B: She's been preparing a new line all week, so probably."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Ruben Castellano - His endgame technique earned him the nickname 'The Surgeon', and he once converted a rook-and-pawn ending after 140 moves."
+    },
+    {
+     "style": "listicle item",
+     "text": "9. Hana Novotna: The first woman from her country to pass 2600 Elo, famous for sharp attacking games in the Najdorf."
+    },
+    {
+     "style": "forum question",
+     "text": "Why did Bogdan Ilic play 14...h5 against Kramer at the Olympiad? Engines hate it, but he went on to win. Was it purely psychological?"
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone have Imre Farkas's annotated games collection? I want to study how he handles isolated queen pawn positions."
+    },
+    {
+     "style": "product or event review",
+     "text": "Watched the candidates match live in Madrid. Tomasz Kowal's time-scramble win in game six had the whole hall gasping. Commentary booth was excellent. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Book review: 'My Sixty Openings' by Grandmaster Elif Arslan is a gem; her notes on the Catalan are clear enough for ordinary club players."
+    },
+    {
+     "style": "diary entry",
+     "text": "Played Mr. Okonkwo in the simul today. He walked between thirty boards and beat everyone except me. I got a draw! He shook my hand and said nice defence."
+    },
+    {
+     "style": "diary entry",
+     "text": "Lost again in round three. I had a winning knight fork but missed it in time trouble. Coach says I play too fast. Tomorrow I'm black against the Scandinavian kid."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Anatol Varga (1921-1988) was a Hungarian chess player and theoretician who won his national championship five times and contributed to the theory of the Grunfeld Defence."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Priya Raman is an Indian grandmaster who won the World Junior Championship in 2009 and later represented India at four Olympiads."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The life of chess player Henrique Duarte shows that patience and calculation can lift a poor child from a fishing village onto the world stage."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Grandmasters like Yuki Tanaka study openings for hours every day, which shows that success over the board demands as much work as any physical sport."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Mattias, you're the new national champion. What was the hardest game? MATTIAS: Round seven, definitely. I was a pawn down for fifty moves and just tried to build a fortress."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so Lena Fischer decides to play a joke opening in an elimination game, against a 2650, on a live broadcast, and she wins. That's the episode. That's the whole story."
+    }
+   ]
+  },
+  {
+   "bid": "b07",
+   "cid": "topic:Galaxy",
+   "label": "article about a galaxy",
+   "path": [
+    "Topic",
+    "Place",
+    "CelestialBody",
+    "Galaxy"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Got my first photo of the Andromeda galaxy through my backyard telescope tonight! 2.5 million light-years away and still a fuzzy smudge 🌌"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "JWST just dropped an image of NGC 1300, its spiral arms full of glowing star nurseries. Space is beautiful."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PASADENA (AP) - Astronomers announced Wednesday the discovery of the most distant galaxy yet confirmed, seen as it was just 300 million years after the Big Bang."
+    },
+    {
+     "style": "news-wire report",
+     "text": "A team using the ALMA telescope said on Monday that a dwarf galaxy orbiting the Milky Way contains far more dark matter than expected."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is that blur Andromeda? B: Yeah, the whole thing's huge, wider than the moon in the sky. A: Can we see its arms? B: Not without long exposure."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: What's the Whirlpool? B: A spiral galaxy interacting with a smaller companion. A: Is it close? B: About 23 million light-years."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. The Sombrero Galaxy - A bright core and a dark dust lane make it look like a wide-brimmed hat."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. The Large Magellanic Cloud - A satellite of the Milky Way visible to the naked eye from the Southern Hemisphere."
+    },
+    {
+     "style": "forum question",
+     "text": "Can I see the Triangulum galaxy with 10x50 binoculars from a dark site? Or do I need a proper telescope?"
+    },
+    {
+     "style": "forum question",
+     "text": "Why does M87 have so few new stars compared to the Whirlpool? Trying to understand star formation in giant ellipticals."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: the planetarium's new show on colliding galaxies is stunning. The simulation of the Milky Way merging with Andromeda was the highlight. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Bought a deep-sky imaging kit last month. Captured M81 and M82 in one frame on my second night. 4/5, steep learning curve."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dear diary, I stayed up past midnight at the observatory and the astronomer showed me M81 on the screen. Billions of stars in one smudge."
+    },
+    {
+     "style": "diary entry",
+     "text": "Camping, new moon. The Milky Way stretched across the whole sky. I can't believe we're inside that spiral."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Andromeda Galaxy (M31) is a barred spiral galaxy about 2.5 million light-years from Earth and the nearest large galaxy to the Milky Way."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Cartwheel Galaxy is a lenticular and ring galaxy about 500 million light-years away in the constellation Sculptor."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Milky Way is our home galaxy, a barred spiral containing the Sun and hundreds of billions of other stars."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Hubble's 1924 study of the Andromeda nebula proved it was a separate star system far beyond our own."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: How many stars are in a typical spiral? GUEST: Hundreds of billions, and a supermassive black hole at the centre holding it all together."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and in about four billion years, Andromeda will collide with our Milky Way, and the two spirals will merge into one giant elliptical."
+    }
+   ]
+  },
+  {
+   "bid": "b08",
+   "cid": "topic:Mollusca",
+   "label": "article about a mollusc",
+   "path": [
+    "Topic",
+    "Species",
+    "Animal",
+    "Mollusca"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "A giant Pacific octopus at the aquarium unscrewed a jar to get a crab and then stared at me like 'what?' 🐙"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Banana slug on the trail today. Bright yellow, 20 cm long, absolutely thriving in the redwood drizzle."
+    },
+    {
+     "style": "news-wire report",
+     "text": "WELLINGTON – Fishermen hauled in a colossal squid weighing nearly 500 kilograms from the Ross Sea, scientists said, one of the largest ever examined."
+    },
+    {
+     "style": "news-wire report",
+     "text": "DULUTH – Zebra mussels have been found in another inland lake in Minnesota, officials said, urging boaters to clean and drain their hulls."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why's the cuttlefish changing colour? B: It's flashing patterns to hypnotise its prey. A: That's rude. B: That's dinner."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Don't touch that pretty little octopus! B: Why? A: Blue rings mean venom. Seriously, leave it in the rock pool."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Chambered nautilus – Its spiral shell design has been around, essentially unchanged, for hundreds of millions of years."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Giant clam – It can weigh over 200 kg and hosts tiny sun-loving partners inside its colourful mantle."
+    },
+    {
+     "style": "forum question",
+     "text": "Snails are destroying my hostas. Any non-toxic way to keep them off — copper tape, beer traps?"
+    },
+    {
+     "style": "forum question",
+     "text": "Is the Spanish shawl nudibranch I photographed in La Jolla poisonous to touch?"
+    },
+    {
+     "style": "product or event review",
+     "text": "The oyster bar at Kumamoto Cove served Pacific oysters shucked to order — briny, creamy, perfect with lemon. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "The snail-racing kit for kids is cute, but the snails needed more leaves than the tiny tank could hold. 3/5."
+    },
+    {
+     "style": "diary entry",
+     "text": "Found a cowrie shell on the beach in Zanzibar today, smooth and spotted like a tiny leopard. Keeping it forever."
+    },
+    {
+     "style": "diary entry",
+     "text": "The scallops we dived for this morning had dozens of little blue eyes along their shell edges. Felt bad eating them. Slightly."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The giant squid (Architeuthis dux) is a deep-ocean cephalopod that can reach 12–13 metres in length and has some of the largest eyes in the animal kingdom."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The queen conch is a large sea snail of the Caribbean, prized for its meat and its pink-lipped shell."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Octopuses are invertebrates with remarkable intelligence that can solve puzzles and escape from tanks."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Cone snails hunt with a harpoon-like tooth, and their venom is being studied to develop new painkillers."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Wait, the sea hare is a slug? GUEST: A big sea slug, yes — it squirts purple ink when disturbed and helped neuroscientists understand memory."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and the Roman snail was actually farmed by the Romans, fattened on milk before being cooked."
+    }
+   ]
+  },
+  {
+   "bid": "b09",
+   "cid": "topic:Earthquake",
+   "label": "article about an earthquake",
+   "path": [
+    "Topic",
+    "Event",
+    "NaturalEvent",
+    "Earthquake"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just felt the whole apartment shake for like twenty seconds in Tokyo. Everyone ok? The alert said magnitude 5.8."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Ten years since the Nepal quake today. Thinking of the families in Kathmandu and the villages that are still rebuilding."
+    },
+    {
+     "style": "news-wire report",
+     "text": "ANKARA, Feb 6 (Reuters) - A magnitude 7.8 quake struck southern Turkey near the Syrian border before dawn on Monday, toppling thousands of buildings, officials said."
+    },
+    {
+     "style": "news-wire report",
+     "text": "A magnitude 6.1 tremor hit central Chile late on Sunday, the national seismological centre said, cutting power in several towns, with no immediate reports of casualties."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you feel that? B: The glasses rattled. A: Should we get under the table? B: It's stopped. Probably just an aftershock."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Grandpa, were you in San Francisco in 1989? B: I was at Candlestick for the World Series. The stands swayed, then the power went out."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Valdivia, Chile, 1960: magnitude 9.5, the most powerful earthquake ever recorded, with a tsunami that reached Hawaii and Japan."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Lisbon, 1755: struck on All Saints' Day, followed by a tsunami and fires that destroyed much of the city."
+    },
+    {
+     "style": "forum question",
+     "text": "How far did the shaking from the 2011 Tōhoku quake reach? I've read Tokyo skyscrapers swayed for minutes."
+    },
+    {
+     "style": "forum question",
+     "text": "Was the 2023 Al Haouz earthquake in Morocco on a known fault? I didn't think that region was very active."
+    },
+    {
+     "style": "product or event review",
+     "text": "Visited the museum about the 1995 Kobe quake. The shaking simulation is intense and the survivor testimonies are moving. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Watched the documentary on the 2010 Haiti disaster. Heartbreaking footage, but it explained the fault rupture clearly."
+    },
+    {
+     "style": "diary entry",
+     "text": "Woke at 3 am to the bed sliding across the floor. We ran outside in pyjamas and stood in the street with the neighbours until sunrise."
+    },
+    {
+     "style": "diary entry",
+     "text": "Day four after the tremor. School is closed because of cracks in the walls. Mum says we'll sleep in the car one more night."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 1906 San Francisco earthquake struck Northern California on April 18 with an estimated magnitude of 7.9, and the fires that followed destroyed much of the city."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 2004 Indian Ocean earthquake, magnitude 9.1, triggered tsunamis that killed more than 225,000 people in fourteen countries."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The 1923 Great Kantō earthquake led Japan to rebuild Tokyo with wider streets and stricter building rules."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Christchurch quake of 2011 showed that even a moderate tremor can be deadly when it strikes directly beneath a city."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Today we talk to a seismologist who was in Anchorage during the 2018 quake. What did the first five seconds feel like?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...the ground liquefied, basically turned to soup, and whole apartment blocks tipped over intact. That's what happened in Niigata in 1964."
+    }
+   ]
+  },
+  {
+   "bid": "b10",
+   "cid": "topic:RollerCoaster",
+   "label": "article about a roller coaster",
+   "path": [
+    "Topic",
+    "Place",
+    "AmusementParkAttraction",
+    "RollerCoaster"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just rode the Thunderhawk three times in a row. 90-metre drop, four inversions, and I screamed so loud my throat hurts 🎢😂"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Two-hour queue for Velocity Storm but that launch from 0 to 120 km/h in two seconds was worth every minute."
+    },
+    {
+     "style": "news-wire report",
+     "text": "SANDUSKY, Ohio (AP) - A new steel coaster opening this summer will be the tallest in North America at 125 metres, park officials announced Thursday."
+    },
+    {
+     "style": "news-wire report",
+     "text": "A wooden coaster at a seaside park in Blackpool was closed Monday for inspection after riders reported unusual vibrations on the first drop, operators said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Front row or back row? B: Back. You get yanked over the top of the lift hill. A: I'm holding my glasses. B: Good idea, that airtime is no joke."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is the Viper still closed for maintenance? B: Reopens Saturday. A: The one with the zero-g roll? B: Yeah, and the loop right after the station."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Steel Fury - A 1990s hypercoaster with a 70-metre first hill and more airtime moments than any other ride in Europe."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. The Wildcat - A compact wooden coaster from 1923 that still rattles riders through tight turns at a family park."
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone know if the new launched coaster at Silver Cove has a height requirement over 140 cm? My son is 138 and desperate to ride."
+    },
+    {
+     "style": "forum question",
+     "text": "Which is more intense: the inverted ride at Parque Nova or the wing coaster at Thrillworld? Trying to plan a trip around the best one."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: Dragon Ascent is smooth as butter. The vertical lift is terrifying, the drop is beyond vertical, and the helix at the end is perfect. 9/10."
+    },
+    {
+     "style": "product or event review",
+     "text": "Rode the old woodie at Lakemont Park this summer. Rough, loud, and absolutely brilliant. Bring a cushion for your back."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dear diary, today I finally rode the big coaster at the fair! I kept my eyes closed on the first drop but opened them for the loop."
+    },
+    {
+     "style": "diary entry",
+     "text": "Diary, Saturday: queued for an hour, got stuck on the lift hill for ten minutes when the ride stopped. Totally worth it when it started again."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Formula Rossa is a launched steel roller coaster at Ferrari World in Abu Dhabi, reaching a top speed of 240 km/h."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Beast is a wooden roller coaster at Kings Island in Ohio, opened in 1979 and known for its long track length."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Cyclone at Coney Island, opened in 1927, shows how a simple wooden ride can still thrill people almost a century later."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Kingda Ka's 139-metre top hat shows how potential energy turns into speed as riders plunge back toward the ground."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: We rode Titan's Fang this morning. GUEST: The first drop is 95 degrees, so it actually curls back under you. I lost my hat on the second inversion."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and here we go up the lift hill. Click, click, click. You can see the whole park from up here. Oh no, oh no, here comes the drop!"
+    }
+   ]
+  },
+  {
+   "bid": "b11",
+   "cid": "topic:Anime",
+   "label": "article about an anime",
+   "path": [
+    "Topic",
+    "Work",
+    "Cartoon",
+    "Anime"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just finished Fullmetal Alchemist: Brotherhood and I'm emotionally destroyed. Ed and Al deserved better."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Spy x Family episode 3 had me laughing so hard. Anya's faces are everything."
+    },
+    {
+     "style": "news-wire report",
+     "text": "TOKYO (Kyodo) - The animated film 'Demon Slayer: Mugen Train' became the highest-grossing film in Japanese box-office history, surpassing 'Spirited Away.'"
+    },
+    {
+     "style": "news-wire report",
+     "text": "Studio MAPPA announced Tuesday that the final season of the 'Attack on Titan' anime will conclude with a two-part television special."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is Cowboy Bebop worth watching? B: Absolutely. 26 episodes of space bounty hunters and an amazing jazz soundtrack by Yoko Kanno."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who's your favorite in Haikyu!!? B: Hinata, the short guy who can jump higher than anyone on the volleyball court."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Neon Genesis Evangelion - A giant-robot series that turns into a meditation on depression and loneliness."
+    },
+    {
+     "style": "listicle item",
+     "text": "9. Mob Psycho 100: A shy boy with psychic powers tries to live a normal middle-school life, with gorgeous animation by Studio Bones."
+    },
+    {
+     "style": "forum question",
+     "text": "Should I watch the Naruto filler episodes or skip them? Is there a good guide to which ones actually matter?"
+    },
+    {
+     "style": "forum question",
+     "text": "Is the English dub of Death Note any good, or should I watch it subbed?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Frieren: Beyond Journey's End is a quiet masterpiece. Slow pacing, beautiful animation, and an elf learning to grieve. 10/10."
+    },
+    {
+     "style": "product or event review",
+     "text": "The Chainsaw Man adaptation looks incredible, but the early episodes felt rushed. 7/10, still bingeing it."
+    },
+    {
+     "style": "diary entry",
+     "text": "Stayed up until 2 a.m. watching Your Lie in April. Cried at the last episode. I need to practice piano more."
+    },
+    {
+     "style": "diary entry",
+     "text": "Started One Piece today. Only about 1,100 more episodes to go."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Sailor Moon is a Japanese anime television series produced by Toei Animation, based on Naoko Takeuchi's comics, that aired from 1992 to 1997."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Akira is a 1988 Japanese animated cyberpunk film directed by Katsuhiro Otomo, set in a dystopian Neo-Tokyo."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Pokémon TV series, which premiered in Japan in 1997, introduced Japanese animation to millions of Western children."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Hayao Miyazaki's animated film 'Princess Mononoke' explores the conflict between industry and the natural world."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome back. This week we're ranking every opening theme from Jujutsu Kaisen, and yes, we will fight about it."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "What I love about the Steins;Gate anime is that the first half seems slow, and then episode twelve flips everything."
+    }
+   ]
+  },
+  {
+   "bid": "b12",
+   "cid": "topic:Magazine",
+   "label": "article about a magazine",
+   "path": [
+    "Topic",
+    "Work",
+    "PeriodicalLiterature",
+    "Magazine"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Found a stack of my mom's old Rolling Stone issues from the '70s. The covers are incredible."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "My New Yorker subscription is basically just for the cartoons and I'm not ashamed."
+    },
+    {
+     "style": "news-wire report",
+     "text": "WASHINGTON (AP) - National Geographic said it will stop selling print copies on U.S. newsstands next year, though subscribers will still receive the monthly."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Sports Illustrated named its Sportsperson of the Year in its December issue, released Thursday."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is Wired still in print? B: Yeah, monthly, and the feature stories on tech are great."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why is Vogue's September issue such a big deal? B: It's the biggest fashion issue of the year, sometimes over 800 pages."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. 'Mad' - The satirical humor magazine that taught generations of kids to mock everything."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. 'The Economist' - Calls itself a newspaper but comes out weekly, and its articles carry no bylines."
+    },
+    {
+     "style": "forum question",
+     "text": "Are back issues of 'Omni' available anywhere? I want to read the 1980s science fiction stories."
+    },
+    {
+     "style": "forum question",
+     "text": "Is 'Cook's Illustrated' worth subscribing to, or are all the recipes online anyway?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: The monthly's redesign looks gorgeous, but there are fewer long features now. 3/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Subscribed to 'Highlights' for my daughter. She loves the hidden pictures puzzle in every issue."
+    },
+    {
+     "style": "diary entry",
+     "text": "Got my first issue of 'Seventeen' in the mail today. Read it twice."
+    },
+    {
+     "style": "diary entry",
+     "text": "Bought a copy of 'Time' at the airport because the cover story was about robots."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "'Life' was an American magazine published weekly from 1936 to 1972, renowned for its photojournalism."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "'Popular Mechanics' is a magazine founded in 1902 that covers science, technology, and do-it-yourself projects."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Norman Rockwell's covers for 'The Saturday Evening Post' shaped how Americans pictured everyday life."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "'Ebony,' founded in 1945 by John H. Johnson, celebrated Black achievement at a time when mainstream publications ignored it."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "This week's guest was editor-in-chief of 'Esquire' in the '90s, and he has stories."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "What made 'Spin' different from 'Rolling Stone' was its focus on alternative and indie music in the late '80s."
+    }
+   ]
+  },
+  {
+   "bid": "b13",
+   "cid": "topic:Skater",
+   "label": "article about a skater",
+   "path": [
+    "Topic",
+    "Agent",
+    "WinterSportPlayer",
+    "Skater"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Irene Schouten just dominated the mass start again. Dutch speed skating is on another planet."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Cheering for my cousin Dani in the 500m short-track final tonight. Elbows out, girl!"
+    },
+    {
+     "style": "news-wire report",
+     "text": "HEERENVEEN, Nov 17 (ANP) - Dutch skater Sem van der Velde won the 10,000 metres at the World Cup opener on Saturday, finishing 3.2 seconds clear at Thialf."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Short-track skater Lee Seo-yeon of South Korea won the 1,500 metres at the world championships on Sunday, surging past two rivals on the final lap."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why do they swing their arms like that? B: Momentum on the straights. On long distances they tuck one arm behind the back. A: Looks exhausting."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you see him fall in the 1500? B: He clipped a block on the crossing straight. A: Four years of training gone in a second."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Eric Heiden: five individual gold medals at the 1980 Lake Placid Games, winning every distance from 500m to 10,000m."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Claudia Pechstein: the German long-track skater who competed at eight Winter Olympics."
+    },
+    {
+     "style": "forum question",
+     "text": "What clap skates do professional long-track skaters use? I'm switching from hockey skates and the blades confuse me."
+    },
+    {
+     "style": "forum question",
+     "text": "How does Sven Kramer's Olympic record in the 5000m hold up today? Has anyone come close?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Watched the documentary about Apolo Ohno's short-track career. Gripping race footage, a bit too much slow motion. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Read Bonnie Blair's biography. An inspiring story of a skater from a big family who went on to win five Olympic golds."
+    },
+    {
+     "style": "diary entry",
+     "text": "Morning ice at 5:30 again. Ten 400m laps at race pace. Coach says my corners are finally smooth."
+    },
+    {
+     "style": "diary entry",
+     "text": "Skated on the frozen canals with Opa today, following part of the old Elfstedentocht route. Forty kilometres, frozen toes, very happy."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Ireen Wüst (born 1986) is a Dutch former long-track speed skater who won thirteen Olympic medals, including six golds, across five Games."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Arianna Fontana (born 1990) is an Italian short-track speed skater and the most decorated Italian athlete in Winter Olympic history."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "A speed skater must balance raw leg power with perfect technique, because one slip in a corner can cost a whole season's work."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Dan Jansen's victory in his final Olympic race in 1994, after years of heartbreak, is one of the most touching stories in sport."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to Inner Lane. Our guest set a national junior record over 1500 metres last winter. What changed in your training?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and she's still two-tenths up at the 700 split, can she hold it? Yes! A new track record in Calgary!"
+    }
+   ]
+  },
+  {
+   "bid": "b14",
+   "cid": "topic:Grape",
+   "label": "article about a grape",
+   "path": [
+    "Topic",
+    "Species",
+    "FloweringPlant",
+    "Grape"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Shine Muscat from the Japanese market: ¥3,000 a bunch and honestly worth it. Crunchy, floral, no seeds 🍇"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Tasted a Carménère in Chile today and the guide said it was mistaken for Merlot for 150 years. Imposter syndrome, but make it wine."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MENDOZA – Growers expect a smaller Malbec harvest this year after late-spring frost damaged vineyards in the Uco Valley, the regional wine institute said."
+    },
+    {
+     "style": "news-wire report",
+     "text": "DAVIS, California – DNA profiling has confirmed that Zinfandel is genetically identical to Croatia's Crljenak Kaštelanski, university researchers said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why is Nebbiolo called that? B: From 'nebbia', fog — it ripens late, when mist rolls over the Langhe hills. A: Poetic."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Concord? Like the jelly? B: Exactly — that foxy flavour in every PB&J. A: I had no idea people made wine from it too."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Riesling – Thrives on steep slate slopes along the Mosel and can age for decades, from bone-dry to lusciously sweet."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Touriga Nacional – Portugal's star variety gives port its deep colour and violet aromas."
+    },
+    {
+     "style": "forum question",
+     "text": "Can I grow Pinot Noir vines in a cool UK garden, or is it only viable in the far south of England? Thinking of planting six."
+    },
+    {
+     "style": "forum question",
+     "text": "Why does Grüner Veltliner taste peppery? Is it the soil or the variety itself?"
+    },
+    {
+     "style": "product or event review",
+     "text": "This Albariño from Rías Baixas is zesty, saline and peachy — perfect with seafood. 4.5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "The Thompson Seedless at our grocer were crisp and sweet this week, though a few were soft at the stem. 4/5."
+    },
+    {
+     "style": "diary entry",
+     "text": "First day picking Tempranillo in Rioja. Hands sticky, back aching, but the bunches were so dark they looked almost black."
+    },
+    {
+     "style": "diary entry",
+     "text": "Nonna's Muscat vine over the pergola finally ripened. We ate them warm from the sun and she got teary about Sicily."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Sangiovese is a red Italian wine grape variety whose name is thought to derive from the Latin sanguis Jovis, 'the blood of Jupiter'."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Kyoho is a large, dark purple table grape developed in Japan in 1937 as a cross between Ishiharawase and Centennial."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Chardonnay is a versatile white variety that can taste of green apple in Chablis or of butter and vanilla when aged in oak."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The phylloxera epidemic of the 1800s destroyed most European vineyards until growers grafted their vines onto American rootstocks."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Shiraz and Syrah — same thing? GUEST: Same variety. Australians call it Shiraz and make it jammy; in the northern Rhône it's Syrah and peppery."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...Cabernet Sauvignon is actually a natural cross between Cabernet Franc and Sauvignon Blanc, confirmed by DNA testing in 1997."
+    }
+   ]
+  },
+  {
+   "bid": "b15",
+   "cid": "topic:Election",
+   "label": "article about an election",
+   "path": [
+    "Topic",
+    "Event",
+    "SocietalEvent",
+    "Election"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just voted! Queue was 40 minutes but the volunteers had coffee. Go vote, people!"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Can't believe the mayoral race came down to 212 votes. Recount starts Monday. My nerves can't take it."
+    },
+    {
+     "style": "news-wire report",
+     "text": "NEW DELHI, June 4 (Reuters) - Vote counting began on Tuesday in India's general election, the world's largest, in which more than 640 million people cast ballots over six weeks."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Voters in Iceland went to the polls on Saturday in a snap parliamentary vote called after the collapse of the governing coalition, with turnout reported at about 80 percent."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who are you voting for in the council race? B: Haven't decided. Both candidates promise to fix the potholes. A: They always do."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who's ahead? B: Exit polls say the opposition, but the postal ballots aren't counted yet. A: So we'll know by midnight? B: Maybe by breakfast."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. South Africa, 1994: the first general election in which citizens of all races could vote, bringing Nelson Mandela to power."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. The 2000 US presidential race: decided by 537 votes in Florida after weeks of recounts."
+    },
+    {
+     "style": "forum question",
+     "text": "How does voting for the Bundestag work? Why do Germans get two votes on the ballot, and what's the five percent threshold?"
+    },
+    {
+     "style": "forum question",
+     "text": "I'm moving to Canada. Can permanent residents vote in provincial elections, or only citizens?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Watched the BBC's results-night coverage until 5 am. Great graphics, too many pundits. 3.5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Read a book about the 1948 Truman-Dewey campaign. Brilliant on how the pollsters got it wrong. 4 stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Worked at the polling station from 7 am to 10 pm, then counted ballots by hand until midnight. Democracy is exhausting but beautiful."
+    },
+    {
+     "style": "diary entry",
+     "text": "First time voting today! Mum took a photo of me outside the school gym holding my polling card."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 2019 Indian general election was held in seven phases from 11 April to 19 May 2019 to constitute the 17th Lok Sabha."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 1983 United Kingdom general election was held on 9 June 1983 and gave the Conservative Party under Margaret Thatcher a landslide majority."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The July 1932 Reichstag election shows how economic crisis can push voters toward extremist parties."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Free and fair elections are the foundation of democracy because they let citizens change their leaders peacefully."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to Swing State. Today: why did turnout among young voters drop in last month's provincial vote?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so the governing party lost six seats, but thanks to the coalition maths they actually stay in power. Proportional representation, folks."
+    }
+   ]
+  },
+  {
+   "bid": "b16",
+   "cid": "topic:AustralianFootballTeam",
+   "label": "article about an Australian football team",
+   "path": [
+    "Topic",
+    "Agent",
+    "SportsTeam",
+    "AustralianFootballTeam"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Mighty Magpies! Collingwood by 12 points in front of 90,000 at the MCG. Best Saturday arvo of the year."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Mum's a Bulldogs fan, Dad goes for the Cats, and I've picked the Dockers just to annoy them both. Footy season at our house is chaos."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MELBOURNE, Aug 30 (AAP) - Carlton secured a top-four finish on Saturday with a 34-point win over Gold Coast, setting up a qualifying final against the Brisbane Lions."
+    },
+    {
+     "style": "news-wire report",
+     "text": "The Tasmania Devils will enter the AFL in 2028 after the club unveiled its first senior coach and confirmed plans for a new stadium in Hobart, officials announced today."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who do you barrack for? B: Sydney Swans, mate, since the '05 flag. A: Brave thing to say in Melbourne. B: Red and white till I die."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Norwood win the SANFL grand final? B: Yep, beat Glenelg at Adelaide Oval. A: That's another premiership for the Redlegs, then."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. West Coast Eagles: the first club from Western Australia to win a VFL/AFL premiership, taking the 1992 flag at the MCG."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Hawthorn: four premierships between 2008 and 2015 and a famously precise kicking game built under Alastair Clarkson."
+    },
+    {
+     "style": "forum question",
+     "text": "Moving to Perth next month. Should I follow Fremantle or West Coast? Which footy club has the better members' culture for newcomers?"
+    },
+    {
+     "style": "forum question",
+     "text": "How many players does an Aussie rules side have on the ground? I count 18 a side plus interchange. Is that the same for state-league clubs too?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Joined the Richmond Tigers as a three-game member this year. Seats were decent, the club newsletter is great, and the Dreamtime match was unforgettable. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to a Williamstown VFL game for $15. Grassy hill, good pies, passionate locals, and the Seagulls won by 40. Better value than any AFL match."
+    },
+    {
+     "style": "diary entry",
+     "text": "Got my first Essendon guernsey today, number 5. Wore it to school under my jumper and nobody noticed. Bombers play Saturday night."
+    },
+    {
+     "style": "diary entry",
+     "text": "Footy training with the Port Adelaide juniors tonight. Coach said if I keep my handballs clean I might make the under-16s."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Geelong Football Club, nicknamed the Cats, is a professional Australian rules football club based in Geelong, Victoria, playing home games at Kardinia Park."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Subiaco Football Club is an Australian rules football club competing in the West Australian Football League, with home matches at Leederville Oval."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Brisbane Lions show how an Australian football club can thrive outside Victoria, winning three straight premierships from 2001 to 2003."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Country footy clubs in Victoria often hold small towns together, giving young people a reason to stay and a place to belong."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to the Kick-to-Kick podcast. This week: is the Giants' young midfield finally ready to deliver a premiership to Western Sydney?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and North Melbourne have won three of their last four, which for Kangaroos fans feels like a miracle after years at the bottom of the ladder."
+    }
+   ]
+  },
+  {
+   "bid": "b17",
+   "cid": "topic:Canoeist",
+   "label": "article about a canoeist",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "Canoeist"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Shoutout to Freya Lindgren who just cleared the whole slalom course at Lee Valley without touching a single gate!! Paddling like the white water is her first language."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Watching Tomas Herrera power through the last 200 m of the C1 final. Kid is 19 and already beating Olympians. Kneeling, one blade, pure grit."
+    },
+    {
+     "style": "news-wire report",
+     "text": "SZEGED, Hungary (Reuters) - Hungary's Dora Kiss won the women's C1 200 metres at the World Cup on Sunday, crossing the line 0.4 seconds ahead of her Canadian rival."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Canoeist Jonah Whitaker completed a solo paddle down the length of the Mississippi River on Tuesday, finishing 87 days after setting off from Lake Itasca."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is Mateo racing kayak or canoe this weekend? B: Canoe. Single blade, kneeling the whole way. A: My knees hurt just hearing that. B: He trains four hours a day on the lake, he's used to it."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Ines make the final? B: She missed gate 14 upstream and took a fifty-second penalty. A: Ouch. B: She'll be back. Her run before that was the fastest of the day."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Petra Novak - The Czech slalom star has nine world medals and is famous for threading the upstream gates on Prague's Troja course without losing speed."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Callum Reid: He paddled the Devizes to Westminster race four times before turning twenty, setting a junior record that still stands."
+    },
+    {
+     "style": "forum question",
+     "text": "How does Anton Vasiliev get such a clean catch? Watching his C1 videos frame by frame and his blade goes in with barely a splash. Any coaches here know the trick?"
+    },
+    {
+     "style": "forum question",
+     "text": "Is it true Lucy Tran trained on a flooded quarry before her national team call-up? Heard it at my paddling club and it sounds like a legend."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the sprint regatta at Duisburg. Highlight was Ole Brandt's comeback in the C2 1000 m: he and his partner were fifth at halfway and won by a bow. Great atmosphere, terrible parking."
+    },
+    {
+     "style": "product or event review",
+     "text": "Book review: 'Against the Current' is Marta Silva's memoir of paddling from source to sea on the Amazon. Honest about fear, rapids and loneliness. Four stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Paddled with Henrik on the river today. He showed me how to lean the boat into an eddy turn. I flipped twice and he never even got his hair wet."
+    },
+    {
+     "style": "diary entry",
+     "text": "Race day. Arms shaking at the start line. I kept the boat straight through the rapids and finished third in the junior C1. Mum cried at the finish."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Gregor Wenzel (born 1984) is a German sprint canoeist who won two Olympic medals in the C2 1000 metres."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Elena Moraru is a Romanian slalom canoeist who competed at three Olympic Games and won the 2011 European title in the C1 class."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The canoeist Aiyana Redcloud inspired me because she revived old birchbark paddling routes while also winning modern races."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "By kneeling in a narrow boat for a thousand metres, athletes like Dmitri Sokolov show remarkable balance as well as endurance."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: So Liam, you were twelve when you first sat in a racing canoe? LIAM: Yeah, and I fell in about forty times that summer. My coach said if I could stay upright, I could do anything."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...we're joined by Sophie Blanchard, fresh off a silver at the slalom worlds. Sophie, what went through your head at that upstream gate where everyone was struggling?"
+    }
+   ]
+  },
+  {
+   "bid": "b18",
+   "cid": "topic:HandballPlayer",
+   "label": "article about a handball player",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "HandballPlayer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Mikkel Sorensen with 12 goals tonight, including that spin shot from the wing! Denmark looking unstoppable."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Our goalie Ida made 19 saves in the derby. Nineteen! The Bundesliga clubs better come calling."
+    },
+    {
+     "style": "news-wire report",
+     "text": "COLOGNE (dpa) - Left back Jonas Brenner scored nine times as Germany beat Spain 31-27 in the European Handball Championship semi-final on Friday."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Norwegian handball player Kari Halvorsen has signed a three-year deal with Hungarian club Gyor, the champions said on Wednesday."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Nikola take the seven-metre throw? B: Yeah, chipped it right over the keeper's head. A: Cheeky. B: He does it every time and keepers still fall for it."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why was Elena suspended for two minutes? B: She grabbed the pivot's arm. A: Harsh. B: Well, the pivot was about to score."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Luka Horvat - The Croatian playmaker's no-look passes and jump shots made him the most-watched centre back of his generation."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Camille Martin: The French right wing scored 1,000 club goals and won two Champions League titles with Metz."
+    },
+    {
+     "style": "forum question",
+     "text": "How does Anders Lund get so much height on his jump shots? He's only 1.85 m but he shoots over the block every time."
+    },
+    {
+     "style": "forum question",
+     "text": "Does Rasmus Kjaer play pivot or left back for the national team now? The coach keeps switching him."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the Final4 in Cologne. Watching Filip Novak's fast breaks live was incredible and the arena was louder than any football match. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: the indoor court shoe signed by Sara Lindholm has great grip on sprung floors and enough ankle support for sharp cuts toward the six-metre line."
+    },
+    {
+     "style": "diary entry",
+     "text": "School tournament today. I scored three goals from the wing! Our keeper Lina made a crazy save at the end to win by one."
+    },
+    {
+     "style": "diary entry",
+     "text": "Practice was hard. Coach made us do resin drills and my hands are still sticky, but my passes are getting better."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Per Gustafsson (born 1975) is a Swedish former handball player who played as a goalkeeper and won two European championships."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Dragana Petrovic is a Serbian handball player who plays as a pivot for her club in Podgorica and for the Serbian national team."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Handball players like Omar Haddad from Egypt show that the sport is growing quickly outside Europe."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Through her speed on the counter-attack, Maja Kovac helped her small club reach a European cup final."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Tomas, final seconds, one-goal game, you're at the seven-metre line. TOMAS: I saw the keeper leaning right, so I bounced it into the left corner."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so Henrik switches from football to the indoor game at seventeen, and within two years he's the league's top scorer. Crazy story."
+    }
+   ]
+  },
+  {
+   "bid": "b19",
+   "cid": "topic:Astronaut",
+   "label": "article about an astronaut",
+   "path": [
+    "Topic",
+    "Agent",
+    "Person",
+    "Astronaut"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Chris Hadfield singing Space Oddity on the ISS still gives me chills over a decade later."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Thomas Pesquet's photos of the Alps from orbit are my new wallpaper. Snow and clouds and tiny towns."
+    },
+    {
+     "style": "news-wire report",
+     "text": "HOUSTON (AP) - Sunita Williams and Butch Wilmore returned to Earth on Tuesday aboard a SpaceX capsule after an unplanned nine-month stay on the space station."
+    },
+    {
+     "style": "news-wire report",
+     "text": "COLOGNE - Samantha Cristoforetti took command of the International Space Station on Wednesday, becoming the first European woman to hold the post."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Gagarin really say 'Poyekhali!' at launch? B: 'Let's go!' Yes. A: And he was only 27? B: And a hero to the whole world by lunchtime."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How long was Scott Kelly up there? B: 340 days. A: And his twin stayed on Earth for the study? B: Mark, yes. Science's favorite twins."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Valentina Tereshkova: A textile worker and amateur parachutist, she became the first woman in space in 1963 aboard Vostok 6."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Mae Jemison: Doctor, dancer, and the first African American woman to fly in space, aboard Endeavour in 1992."
+    },
+    {
+     "style": "forum question",
+     "text": "Did Buzz Aldrin really take communion on the Moon before walking outside? Trying to confirm for a church newsletter."
+    },
+    {
+     "style": "forum question",
+     "text": "How did Peggy Whitson rack up more than 600 days in space? Is that still the American record?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Tim Peake's book about his six months in orbit is fun and full of practical details, like how toothpaste behaves in microgravity. 4 stars."
+    },
+    {
+     "style": "product or event review",
+     "text": "Saw Sally Ride's flight suit at the Smithsonian. The exhibit about the first American woman in space was short but moving."
+    },
+    {
+     "style": "diary entry",
+     "text": "Met Christina Koch at the science fair today. She spent almost a year on the station and said the hardest part was missing her dog. I want her job."
+    },
+    {
+     "style": "diary entry",
+     "text": "Grandpa told me again how he watched Armstrong step off the ladder on a neighbor's TV. He still says 'one small step' every time we look at the Moon."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Yang Liwei is a Chinese military pilot who, aboard Shenzhou 5 in 2003, became the first person sent into space by China."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Rakesh Sharma is a former Indian Air Force pilot who flew aboard Soyuz T-11 in 1984, becoming the first Indian citizen in space."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "John Glenn's return to space at 77 aboard the shuttle Discovery proved that age need not end a career of exploration."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Neil Armstrong's quiet personality after Apollo 11 shows that being a hero does not require seeking attention."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: What's the first thing you wanted after landing? GUEST: A shower. Six months of wet wipes. Then a salad. Fresh lettuce is the dream up there."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...the Emirati astronaut Sultan Al Neyadi did a six-month mission and posted daily photos of the Gulf from the station."
+    }
+   ]
+  },
+  {
+   "bid": "b20",
+   "cid": "topic:Historian",
+   "label": "article about a historian",
+   "path": [
+    "Topic",
+    "Agent",
+    "Writer",
+    "Historian"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just finished Mary Beard's SPQR. How can a book on ancient Rome be this funny? She should design every school curriculum."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "My grandma was a local historian who spent forty years cataloguing parish records. Today the town library named its archive room after her."
+    },
+    {
+     "style": "news-wire report",
+     "text": "LONDON, Oct 5 (PA) - Cambridge historian Dr Helen Ashworth has won this year's Wolfson History Prize for her study of famine relief in 1840s Ireland, judges announced on Thursday."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Andrzej Kowalczyk, whose research reshaped understanding of medieval trade in the Baltic, has died aged 89, his university said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who wrote that book on the late Ottoman Empire? B: Professor Halil Demir. He spent ten years in the Istanbul archives. A: Sounds like a heavy read."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you go to the lecture on Viking coins? B: Dr Lindqvist's? Yes, he argued trade routes went much further east than we thought."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Eric Hobsbawm: his four 'Age of' volumes covered modern history from 1789 to 1991 and shaped generations of students."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. Barbara Tuchman: a two-time Pulitzer winner whose 'The Guns of August' is still read by military leaders."
+    },
+    {
+     "style": "forum question",
+     "text": "Which historians should I read to understand the causes of the First World War? I've heard Christopher Clark's 'The Sleepwalkers' is a good start."
+    },
+    {
+     "style": "forum question",
+     "text": "Is Herodotus considered a reliable source, or more of a storyteller? Doing a project on the 'father of history'."
+    },
+    {
+     "style": "product or event review",
+     "text": "Read Simon Schama's book on the Dutch Golden Age. Rich detail and wonderful prose, though the footnotes are exhausting. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Attended a talk by Professor Nkem Obi on pre-colonial West African kingdoms. An engaging speaker who used old maps brilliantly. Five stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Spent all day in the county archive transcribing 18th-century court records for my thesis. My supervisor says I'm becoming a real historian."
+    },
+    {
+     "style": "diary entry",
+     "text": "Met Dr Ruth Calloway at the conference. She wrote the book that made me choose this field, and she remembered my question from her lecture!"
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Fernand Braudel (1902-1985) was a French historian and leader of the Annales school, best known for his study of the Mediterranean world."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Romila Thapar (born 1931) is an Indian historian whose research focuses on ancient India."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Thucydides wrote about the Peloponnesian War as an eyewitness, which makes his account valuable but also biased."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "A good scholar of the past, like Marc Bloch, questions every source instead of simply repeating it."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "My guest has spent thirty years studying the Silk Road. Professor Wei, what first drew you to the manuscripts of Dunhuang?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and that's what makes Edward Gibbon so fascinating. He partly blamed Christianity for Rome's fall, and scholars have argued about it ever since."
+    }
+   ]
+  },
+  {
+   "bid": "b21",
+   "cid": "topic:Insect",
+   "label": "article about an insect",
+   "path": [
+    "Topic",
+    "Species",
+    "Animal",
+    "Insect"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "The 17-year cicadas are out and my whole street sounds like a spaceship landing. Billions of red-eyed bugs everywhere 🦗"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "A stag beetle landed on my shoulder in the pub garden and everyone screamed. He was very polite about it."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MEXICO CITY – The area occupied by monarch butterflies overwintering in central Mexico fell 22% this year to just 1.8 hectares of forest, conservationists said."
+    },
+    {
+     "style": "news-wire report",
+     "text": "AUCKLAND – A giant weta weighing 71 grams was found on Little Barrier Island, among the heaviest ever recorded, researchers said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why's the ladybird on your hand? B: I'm moving it to the roses. They eat aphids. A: So it's basically a tiny bodyguard."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: What's hovering at the lavender? B: A hummingbird hawk-moth. A: It has a little tongue like a straw! B: A proboscis, yes."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Atlas moth – With wings up to 25 cm across, its wingtips mimic a predator's head to scare off attackers."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Bullet ant – Its sting tops the Schmidt pain index and is said to feel like being shot."
+    },
+    {
+     "style": "forum question",
+     "text": "Found a bright green praying mantis on my tomato plants. Should I leave it, or will it eat the bees?"
+    },
+    {
+     "style": "forum question",
+     "text": "What's eating my lily leaves? Little bright red beetles with black heads. UK garden."
+    },
+    {
+     "style": "product or event review",
+     "text": "The butterfly house was hot and humid but magical — blue morphos landed on my sleeve twice. Gift shop overpriced. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "This mosquito net is light, packs small and kept every bite away on our jungle trip. 5 stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Fireflies came out over the field tonight, blinking in waves. Lily caught one in a jar and we let it go before bed."
+    },
+    {
+     "style": "diary entry",
+     "text": "Watched a dung beetle roll a ball three times its size across the track for twenty minutes. I've never cheered for a bug before."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Goliathus is a genus of large scarab beetles from tropical Africa whose larvae can weigh up to 100 grams."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The emperor dragonfly (Anax imperator) is a large hawker found across Europe, Africa and Asia, often patrolling ponds in summer."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Honeybees tell their hive-mates where to find flowers by performing a 'waggle dance'."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Adult mayflies live only a day or so, and many species have no working mouthparts at all."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Leafcutter ants don't actually eat the leaves? GUEST: No, they chew them into mulch to grow their food in underground gardens."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and the Lord Howe Island stick insect was thought extinct for 80 years until a few were found clinging to a sea stack."
+    }
+   ]
+  },
+  {
+   "bid": "b22",
+   "cid": "topic:FormulaOneRacer",
+   "label": "article about a Formula One racer",
+   "path": [
+    "Topic",
+    "Agent",
+    "RacingDriver",
+    "FormulaOneRacer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Lewis Hamilton passing three cars on the last lap at Silverstone 🔥🏎️ I was screaming at the TV."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "My kid met Lando Norris in the Austin paddock and he signed her cap. She's not taking it off ever again."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MONZA (Wire) - Ferrari driver Carlos Sainz took pole position for the Italian Grand Prix on Saturday, edging his teammate by 0.08 seconds."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MONACO - Dutch driver Max Verstappen won the Monaco Grand Prix on Sunday, extending his lead in the world championship to 41 points."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you watch qualifying? B: Leclerc crashed at the swimming pool chicane again. A: Poor guy can't catch a break at home. B: He'll start from the back tomorrow."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "\"Who's the new driver at Williams?\" \"Some 19-year-old from Argentina who won Formula 2 last year. Apparently he's super quick in the wet.\""
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Ayrton Senna — Three-time world champion whose rain-soaked drive at Donington in 1993 is still called the greatest opening lap ever."
+    },
+    {
+     "style": "listicle item",
+     "text": "#4 Niki Lauda: returned to racing just six weeks after a near-fatal crash at the Nürburgring in 1976."
+    },
+    {
+     "style": "forum question",
+     "text": "Was Michael Schumacher really the best ever or did Ferrari just give him the best car? Seven titles is a lot either way."
+    },
+    {
+     "style": "forum question",
+     "text": "How does Fernando Alonso keep his reflexes sharp past 40? Does he follow a special training routine between Grands Prix?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: The doc on Kimi Räikkönen's Lotus years is hilarious. His radio messages alone ('Leave me alone, I know what I'm doing') deserve an award."
+    },
+    {
+     "style": "product or event review",
+     "text": "The film 'Rush' nails the rivalry between James Hunt and Niki Lauda in the 1976 title fight. Great racing scenes. 4.5/5."
+    },
+    {
+     "style": "diary entry",
+     "text": "Silverstone! Watched the grid from the grandstand and saw Russell's Mercedes fire up. The noise went straight through my chest."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dad finally took me to the Belgian Grand Prix. Our favorite driver qualified sixth and finished on the podium after the rain came. Best day ever."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Juan Manuel Fangio (1911–1995) was an Argentine racing driver who won the Formula One World Drivers' Championship five times in the 1950s."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Valtteri Bottas (born 1989) is a Finnish racing driver who competed in Formula One for Williams, Mercedes and Sauber, winning ten Grands Prix."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Jackie Stewart used his fame as a Formula One champion to campaign for safer tracks, better helmets and proper medical care."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Lella Lombardi remains the only woman to score championship points in a Formula One race, at the 1975 Spanish Grand Prix."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: You drove for Minardi in 2003. What was it like being at the back? GUEST: You're racing your teammate and the blue flags. Every lap a leader is coming up behind you."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...Jenson Button's win in Canada in 2011 — six pit stops, a drive-through penalty, dead last, and he still takes the lead on the final lap."
+    }
+   ]
+  },
+  {
+   "bid": "b23",
+   "cid": "topic:Fungus",
+   "label": "article about a fungus",
+   "path": [
+    "Topic",
+    "Species",
+    "Eukaryote",
+    "Fungus"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Found a giant puffball the size of a football in the park! Sliced it into 'steaks' and fried it in butter 🍄"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Ghost mushrooms glowing green on a log at night in the Aussie bush. Like something out of Avatar."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PÉRIGUEUX – Prices for black Périgord truffles reached €1,200 a kilo at this week's market as dry weather cut harvests, traders said."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PORTLAND, Oregon – A single honey fungus colony in the Malheur National Forest covers nearly 10 square kilometres and may be thousands of years old, researchers said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is that a chanterelle? B: Ridges not gills, apricot smell — yes. A: Can we cook it? B: Tonight, with garlic."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: That red one with white spots is cute. B: Fly agaric. Pretty, but toxic. A: Like a fairy tale. B: Exactly, leave it."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Lion's mane – This shaggy white mushroom hangs from hardwood trees like an icicle beard and tastes a bit like crab."
+    },
+    {
+     "style": "listicle item",
+     "text": "7. Ophiocordyceps – This 'zombie-ant' parasite takes over its host and sprouts a stalk out of its head."
+    },
+    {
+     "style": "forum question",
+     "text": "Found bright orange shelves on an oak — chicken of the woods? Is it safe to eat if it's growing on oak rather than yew?"
+    },
+    {
+     "style": "forum question",
+     "text": "Are morels ever found in the UK, or only in the US? Where should I look in April?"
+    },
+    {
+     "style": "product or event review",
+     "text": "This shiitake grow kit fruited in ten days and gave three flushes. Instructions were clear. 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "The guided foraging walk was great — porcini, hedgehog mushrooms, and a stinkhorn we smelled before we saw. The guide knew everything."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dad and I went foraging after the rain. Found turkey tail on a stump — rings of brown and cream like a fan."
+    },
+    {
+     "style": "diary entry",
+     "text": "The bread didn't rise. Mrs. Patel says the yeast was dead. Who knew a tiny living thing could ruin a whole Saturday?"
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The death cap (Amanita phalloides) is a deadly poisonous basidiomycete fungus responsible for most fatal mushroom poisonings worldwide."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Penicillium chrysogenum is a mould species widely used in the industrial production of the antibiotic penicillin."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Alexander Fleming noticed in 1928 that a mould had killed the bacteria in one of his dishes, which led to penicillin."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Mycorrhizal fungi wrap around tree roots and trade nutrients for sugars, linking forests together underground."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: So the 'humongous fungus' is mostly underground? GUEST: Right, the mushrooms are just the fruit; the real organism is miles of threads in the soil."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...brewer's yeast, Saccharomyces cerevisiae, has been domesticated for so long it's practically our oldest pet."
+    }
+   ]
+  },
+  {
+   "bid": "b24",
+   "cid": "topic:Saint",
+   "label": "article about a saint",
+   "path": [
+    "Topic",
+    "Agent",
+    "Cleric",
+    "Saint"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Happy feast day to Brigid of Kildare! Made my rush cross this morning just like Gran taught me."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Fun fact: the real Nicholas of Myra supposedly tossed bags of gold through a window so three poor girls could marry. That's where the stocking thing comes from."
+    },
+    {
+     "style": "news-wire report",
+     "text": "VATICAN CITY - Carlo Acutis, the Italian teenager who built websites cataloguing Eucharistic miracles, was canonized on Sunday, becoming the Church's first millennial saint."
+    },
+    {
+     "style": "news-wire report",
+     "text": "ASSISI, Italy - Pilgrims filled the basilica on Saturday for the feast of Francis of Assisi, the 13th-century friar remembered for renouncing wealth and preaching to birds."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who's the patron of lost things again? B: Anthony of Padua. A: So I pray to him for my car keys? B: My grandmother swears it works every time."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Was Joan of Arc really burned at nineteen? B: Yes, in 1431 at Rouen. A: And then canonized? B: In 1920, almost five centuries later."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Kateri Tekakwitha: The Mohawk-Algonquin woman known as the 'Lily of the Mohawks' became the first Native American to be canonized, in 2012."
+    },
+    {
+     "style": "listicle item",
+     "text": "9. Columba of Iona: This Irish monk founded the abbey on Iona in 563 and is credited with the first recorded sighting of the Loch Ness monster."
+    },
+    {
+     "style": "forum question",
+     "text": "How did Therese of Lisieux become a Doctor of the Church when she died at 24 and wrote only one memoir? Genuinely curious about the criteria."
+    },
+    {
+     "style": "forum question",
+     "text": "Is there any historical evidence that Patrick actually drove snakes out of Ireland, or is that purely legend? Ireland apparently never had snakes."
+    },
+    {
+     "style": "product or event review",
+     "text": "The documentary on Hildegard of Bingen was gorgeous: her chants, her herbal remedies, her visions. Wish it spent more time on her letters to emperors."
+    },
+    {
+     "style": "product or event review",
+     "text": "Toured the basilica in Tours last week. The crypt with the tomb of Martin, the soldier who cut his cloak in half for a beggar, was very moving."
+    },
+    {
+     "style": "diary entry",
+     "text": "Lit a candle for Saint Jude today, patron of hopeless cases. Mom's surgery is Thursday. Feels right."
+    },
+    {
+     "style": "diary entry",
+     "text": "Finished Teresa of Avila's Interior Castle tonight. Her image of the soul as a castle of many rooms stays with me."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Catherine of Siena (1347-1380) was a Dominican tertiary and mystic who persuaded the papal court to return from Avignon to Rome."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Saint Cuthbert (c. 634-687) was a monk and bishop of Lindisfarne whose incorrupt body became the focus of a major cult in Durham."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Thomas Becket's murder in Canterbury Cathedral in 1170 turned an archbishop into a martyr and made his shrine a destination for pilgrims for centuries."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Mother Teresa, canonized in 2016 as Saint Teresa of Calcutta, is admired for her work with the dying, though some critics question the care in her homes."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: So Ignatius of Loyola is a soldier, gets his leg smashed by a cannonball, and during recovery reads lives of holy men. GUEST: And that's the start of the Jesuits."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and every December 13 in Sweden, girls wear candle crowns for Lucia, a young martyr from Syracuse. It's a fascinating crossover of Sicilian and Nordic tradition."
+    }
+   ]
+  },
+  {
+   "bid": "b25",
+   "cid": "topic:Curler",
+   "label": "article about a curler",
+   "path": [
+    "Topic",
+    "Agent",
+    "WinterSportPlayer",
+    "Curler"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Rewatching Eve Muirhead's Olympic gold run from 2022. That last shot in the final still gives me chills. Scotland's greatest skip."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Our club's own Jenna Morrow is off to the junior worlds as third for Team Canada! So proud of this kid. #curling"
+    },
+    {
+     "style": "news-wire report",
+     "text": "LAUSANNE, March 20 (Reuters) - Swedish skip Anders Lindqvist won his third world title on Sunday, drawing to the button with his last stone to beat Canada 6-5."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Mara Thibault, 24, has been named the youngest skip ever to represent Manitoba at the Scotties Tournament of Hearts, provincial officials said on Tuesday."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who's the guy yelling 'hurry hard'? B: That's Kevin Lund, the skip. He wants his sweepers to brush faster. A: He looks furious. B: He always does."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How long has your uncle been curling? B: Forty years. He threw lead for a rink that won the provincial seniors twice."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Rachel Homan: a multiple Canadian champion skip known for aggressive shot-making and fearless double takeouts."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. Bruce Mouat: the Scottish skip whose calm delivery and precise draws earned him Olympic silver in Beijing."
+    },
+    {
+     "style": "forum question",
+     "text": "My daughter wants to become a competitive curler. At what age do most elite players start throwing stones, and how many hours a week do they practise?"
+    },
+    {
+     "style": "forum question",
+     "text": "Does anyone know if the Norwegian team's famous patterned trousers from Thomas Ulsrud's era are still on sale anywhere? Want a pair for our bonspiel."
+    },
+    {
+     "style": "product or event review",
+     "text": "Read 'Hurry Hard', the memoir of a Saskatchewan curler who played thirty seasons. Charming stories about small-town rinks and bonspiel road trips. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Took a learn-to-curl session taught by former national champion Ingrid Halvorsen. Patient and funny, and I finally slid without falling. Five stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Played second for Grandpa's team at the club bonspiel today. Swept so hard my arms are jelly, but we won the C event!"
+    },
+    {
+     "style": "diary entry",
+     "text": "Met Jennifer Jones at the rink today! She watched our junior practice and told me to keep my head up on the slide."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Anna Hasselborg (born 1989) is a Swedish curler who skipped her team to the Olympic gold medal at the 2018 Winter Games in Pyeongchang."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Stefan Moser (born 1984) is a Swiss curler from Bern who played lead on four national championship teams and competed at two world championships."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "A skilled curler must read the ice the way a chess player reads a board, planning several stones ahead."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "John Shuster's comeback to win Olympic gold in 2018 shows that persistence matters as much as talent."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to The Hack. Our guest threw lead stones at three Olympics. What does a lead actually do that fans never notice?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and then she just slides out, calm as anything, and draws to the four-foot for two. Ice in her veins, that one."
+    }
+   ]
+  },
+  {
+   "bid": "b26",
+   "cid": "topic:NationalFootballLeagueSeason",
+   "label": "article about a NFL season",
+   "path": [
+    "Topic",
+    "SportsSeason",
+    "FootballLeagueSeason",
+    "NationalFootballLeagueSeason"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Can't believe the 2007 Patriots went 16-0 and then lost the Super Bowl to the Giants. That whole year still haunts me lol #NFL"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Hot take: the 1985 Bears defense was the scariest thing the league has ever seen. 15-1, a title, and a shuffle video. Iconic."
+    },
+    {
+     "style": "news-wire report",
+     "text": "NEW YORK (AP) - The NFL released its 2024 regular-season schedule Tuesday, with the defending champion Kansas City Chiefs opening at home against Baltimore on a Thursday night in Week 1."
+    },
+    {
+     "style": "news-wire report",
+     "text": "The league confirmed that the 2020 campaign would go ahead with no preseason games, expanded rosters, and mostly empty stadiums because of the pandemic."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Which NFL year was the wildest? B: 2011 for sure. Brees, Brady, and Stafford all threw for over 5,000 yards, and Tebow was somehow winning playoff games."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did the Lions really go 0-16 in 2008? B: Yep, first team ever to lose every game of a sixteen-game regular season."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. 1972: Miami finished 17-0, and that NFL season remains the only perfect run from opening Sunday through the Super Bowl."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. 2013 - Peyton Manning threw 55 touchdown passes, Denver scored a record 606 points, and then Seattle crushed them in the Super Bowl."
+    },
+    {
+     "style": "forum question",
+     "text": "Was the 1982 NFL season really cut to nine games because of the players' strike? How did they pick the playoff teams that year?"
+    },
+    {
+     "style": "forum question",
+     "text": "Question for the old-timers: when did the league go from a 14-game to a 16-game regular season? Was 1978 the first year?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Grading the 2021 NFL year overall: 8/10. The new 17-game schedule dragged in December, but the divisional playoff weekend was the best I've ever watched."
+    },
+    {
+     "style": "product or event review",
+     "text": "Had tickets to every Bills home game in 2022. The snow game in November was miserable and magnificent, but the playoff exit came way too early. 6/10."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dear diary, the Eagles clinched the division today. Week 16 and we're 13-2. Dad cried a little during the fourth quarter."
+    },
+    {
+     "style": "diary entry",
+     "text": "Sunday night. Fantasy draft for the new football year is next week and I still don't know who to take first overall."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 1994 NFL season was the 75th regular season of the National Football League and the first in which teams could attempt a two-point conversion."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The 2002 season saw the league realign into eight four-team divisions after the Houston Texans joined as the 32nd franchise."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The 1958 NFL season ended with a sudden-death championship game between the Colts and Giants, which helped make pro football a television sport."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "In 1967 the Packers closed out the year by winning the Ice Bowl at minus-thirteen degrees, which shows how weather can shape sports history."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome back to the show. Today we're grading every team's 2023 regular season, starting with the Texans, who went from the cellar to a division title."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "So, uh, what people forget about 1999 is the Rams lost their starting quarterback in August, handed the job to Kurt Warner, and won the whole thing."
+    }
+   ]
+  },
+  {
+   "bid": "b27",
+   "cid": "topic:FigureSkater",
+   "label": "article about a figure skater",
+   "path": [
+    "Topic",
+    "Agent",
+    "WinterSportPlayer",
+    "FigureSkater"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Yuzuru Hanyu skating to Seimei still lives rent-free in my head. That triple axel was pure poetry."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Our 12-year-old landed her first clean double axel at practice today!! Coach cried, I cried, the Zamboni driver clapped."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MILAN, March 22 (AP) - Japan's Kaori Sato won the women's world title on Saturday, landing a triple axel in her free skate to overtake the leader by 2.4 points."
+    },
+    {
+     "style": "news-wire report",
+     "text": "South Korean figure skater Park Ha-eun, 17, withdrew from the Grand Prix Final on Thursday with an ankle injury, her federation said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why does she spin so fast? B: She's pulling her arms in. It's called a scratch spin. A: How is she not dizzy? B: Years of practice."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Who are you rooting for in the ice dance? B: The French pair, Papadakis and Cizeron. Their choreography is unreal."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Katarina Witt: two Olympic golds for East Germany and a flair for performance that made her a global star."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Evgeni Plushenko: four Olympic medals and a quad-triple combination that defined men's skating in the 2000s."
+    },
+    {
+     "style": "forum question",
+     "text": "My son is 9 and wants to try competitive skating. How much does it cost per year to train as a figure skater at club level?"
+    },
+    {
+     "style": "forum question",
+     "text": "Can someone explain why Kim Yuna didn't get the 2014 Olympic gold? I keep reading about a judging controversy."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the Stars on Ice tour. Nathan Chen's exhibition skate was the highlight, but the group numbers felt underrehearsed. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Read Peggy Fleming's memoir. A lovely look at skating in the 1960s, though light on technical detail."
+    },
+    {
+     "style": "diary entry",
+     "text": "Fell on my lutz six times at the morning session. On the seventh it finally stuck. Coach Elena says my long programme is ready for regionals."
+    },
+    {
+     "style": "diary entry",
+     "text": "Watched Mao Asada's Sochi free skate again tonight. She fell in the short and still came back. I want to skate like that."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Michelle Kwan (born 1980) is an American former figure skater who won five World Championship titles and two Olympic medals."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Mikhail Orlov (born 1998) is a Russian figure skater who competes in men's singles and won bronze at the Junior Grand Prix Final."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Surya Bonaly's backflip at the 1998 Olympics was a bold act of rebellion against strict judging rules."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "A figure skater must combine the strength of an athlete with the grace of a dancer, as Javier Fernández showed throughout his career."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome to Edge Call. Today we're talking about the young Japanese skater who just landed a quad lutz in competition at fifteen."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...level four step sequence, level four spins, and the component scores were through the roof. That's how you win a short programme."
+    }
+   ]
+  },
+  {
+   "bid": "b28",
+   "cid": "topic:Hotel",
+   "label": "article about a hotel",
+   "path": [
+    "Topic",
+    "Place",
+    "Building",
+    "Hotel"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Checked in to The Ashby and the rooftop pool overlooks the whole skyline 😍 Free upgrade to a suite too!"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Room service at 2am, fluffy robes, and a concierge who got us dinner reservations nobody else could. Living my best life at the Grand Marlowe."
+    },
+    {
+     "style": "news-wire report",
+     "text": "DUBAI (Reuters) - A 75-storey luxury hotel opened on Thursday with 600 rooms, a sky-lobby restaurant and what its owners call the world's highest infinity pool."
+    },
+    {
+     "style": "news-wire report",
+     "text": "The historic Raffles-style hotel on the waterfront will close for two years from January for a renovation of its 180 guest rooms, the owners said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Do you have a reservation? B: Yes, under Patel, two nights. A: Your room is 412, breakfast is from seven. B: Is the gym open all night?"
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you book the place near the station? B: Yeah, four stars, late checkout. A: Parking? B: Valet only, thirty a night."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. The Savoy, London - Opened in 1889 by Richard D'Oyly Carte, it was the first luxury hotel in Britain with electric lights."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Hotel Il Pellicano - Clifftop rooms above the Tuscan coast and a terrace bar that has hosted film stars since the 1960s."
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone stayed at the Harborview Inn? Wondering if the sea-view rooms are worth the extra or if the noise from the port is bad."
+    },
+    {
+     "style": "forum question",
+     "text": "Which hotel near the convention centre has decent wifi and a quiet floor? Booking for a work trip next month."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: friendly front desk, spotless room, comfy bed, but the breakfast buffet ran out of eggs by 8:30. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Stayed three nights at the Lakeshore Lodge. Lobby gorgeous, staff lovely, but the air conditioning rattled all night. 3.5/5."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dear diary, we arrived at the hotel late tonight. The bellboy carried our bags and there was a chocolate on my pillow!"
+    },
+    {
+     "style": "diary entry",
+     "text": "Last night of the trip. Ordered room service, watched the city lights from bed, and hung the do-not-disturb sign on the door."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Waldorf Astoria New York is a luxury hotel on Park Avenue in Manhattan, opened at its current site in 1931."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Hotel Majestic is a historic hotel in Barcelona's Eixample district, with 275 rooms and a rooftop terrace."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Ritz in Paris shows how one grand building full of guest suites can become part of a city's identity."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "When the Chelsea Hotel rented rooms to writers and musicians, it became a home for New York's artists."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: You've run that boutique hotel for twenty years. GUEST: Every room has a different theme, and guests come back just to try the next one."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and the concierge said, 'Madam, we have a guest who has lived in suite 801 since 1974.' Can you imagine checking in and never checking out?"
+    }
+   ]
+  },
+  {
+   "bid": "b29",
+   "cid": "topic:MountainPass",
+   "label": "article about a mountain pass",
+   "path": [
+    "Topic",
+    "Place",
+    "NaturalPlace",
+    "MountainPass"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Drove the Stelvio this morning. 48 hairpins on the way up and the café at the top does great strudel 🚗⛰️"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Cycled over the Tourmalet today! 19 km climb, 2,115 m at the col, legs destroyed. #TourDeFrance vibes"
+    },
+    {
+     "style": "news-wire report",
+     "text": "GENEVA (AP) - The Great St Bernard road crossing reopened on Friday after snowfall closed the route between Switzerland and Italy for six months."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Authorities closed the Khyber crossing between Pakistan and Afghanistan on Monday after landslides blocked the highway near the summit."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is the col open yet? B: Not until June, still five metres of snow. A: So we take the tunnel? B: Yeah, 30 minutes longer."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How high is the saddle? B: 2,757 metres. A: Do we need chains? B: Not in August, but there might be fog on the switchbacks."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Furka Pass - The hairpin road in Switzerland that appeared in the Bond film Goldfinger."
+    },
+    {
+     "style": "listicle item",
+     "text": "7. Khardung La - A high crossing in Ladakh, once claimed as the world's highest motorable road."
+    },
+    {
+     "style": "forum question",
+     "text": "Is the Grossglockner road okay for a camper van? Worried about the hairpins and the toll."
+    },
+    {
+     "style": "forum question",
+     "text": "Has anyone hiked over the Cirque? Trying to find a route over the col between the two valleys without ropes."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: the ride over Trollstigen is spectacular, waterfalls everywhere, narrow hairpins, lots of tour buses. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Cycled the Col du Galibier this summer. Brutal final kilometres, cold at the top, but the views were worth every pedal stroke. 5/5."
+    },
+    {
+     "style": "diary entry",
+     "text": "Dear diary, we crossed the saddle between the two peaks on foot today. Snow at the top, flowers on the other side."
+    },
+    {
+     "style": "diary entry",
+     "text": "Bike trip day 6. Climbed the pass in the rain. At the summit sign we ate cold sandwiches and grinned like idiots."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Simplon Pass is a high mountain pass between the Pennine and Lepontine Alps in Switzerland, at an elevation of 2,005 metres."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Cajon Pass is a mountain pass between the San Bernardino and San Gabriel Mountains in southern California, crossed by Interstate 15."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Hannibal's crossing of an Alpine pass with elephants in 218 BC remains one of the most daring military feats in history."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The Khyber Pass has been a key trade and invasion route between Central Asia and the Indian subcontinent for centuries."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Why do so many cyclists love the Stelvio? GUEST: It's the hairpins. Forty-eight of them, each numbered, so you can count your suffering."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...the caravan reached the top of the pass at dusk, and the traders lit fires in the old stone shelter before descending the other side."
+    }
+   ]
+  },
+  {
+   "bid": "b30",
+   "cid": "topic:Monarch",
+   "label": "article about a monarch",
+   "path": [
+    "Topic",
+    "Agent",
+    "Person",
+    "Monarch"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just visited Versailles and honestly Louis XIV had the best interior designer in history. The Hall of Mirrors 😍👑"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Fun fact: King Harald of Norway is the first Norwegian-born king in over 500 years. Learned that on the ferry tour today 🇳🇴"
+    },
+    {
+     "style": "news-wire report",
+     "text": "THIMPHU (Wire) - Bhutan's king led celebrations on Sunday marking his birthday, with thousands gathering in the capital as he announced new land grants for farmers."
+    },
+    {
+     "style": "news-wire report",
+     "text": "BANGKOK - The Thai monarch presided over a royal barge procession on the Chao Phraya River on Thursday, the first held in five years."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Wait, who was Queen Christina? B: Sweden's queen in the 1600s. She gave up the throne and moved to Rome. A: She just quit? B: Yep, converted and left."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "\"Which emperor built that palace?\" \"Emperor Meiji. He moved the court from Kyoto to Tokyo after 1868.\""
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Mansa Musa — The 14th-century ruler of Mali whose pilgrimage to Mecca was so lavish it reportedly crashed the price of gold in Cairo."
+    },
+    {
+     "style": "listicle item",
+     "text": "#5 Catherine the Great: she seized the Russian throne from her husband and ruled for 34 years."
+    },
+    {
+     "style": "forum question",
+     "text": "Why did Henry VIII break with the Pope? Was it really just about the divorce or was there a financial motive too?"
+    },
+    {
+     "style": "forum question",
+     "text": "Who reigned over Hawaii before Liliuokalani? My textbook skips straight to her overthrow."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: 'Lion of Judah' is a strong biography of Emperor Haile Selassie that covers both his reforms and his blind spots. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "The exhibition on Queen Victoria's private letters was charming; you really get a sense of her grief after Albert died."
+    },
+    {
+     "style": "diary entry",
+     "text": "Saw the royal motorcade go past the market today. Everyone waved flags. His Majesty looked older than he does on the money."
+    },
+    {
+     "style": "diary entry",
+     "text": "Mrs. Patel made us memorize every Tudor ruler. Elizabeth I is still my favorite — she never married and reigned for 44 years."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Charlemagne (c. 747–814) was King of the Franks and, from 800, the first Holy Roman Emperor."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Sejong the Great (1397–1450) was the fourth king of the Joseon dynasty of Korea and oversaw the creation of the Hangul alphabet."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Louis XVI's weak leadership and the debts of the French crown helped spark the French Revolution."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Queen Isabella of Castile funded Columbus's voyage in 1492, which changed the history of two continents."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: So Akbar takes the throne at thirteen. GUEST: Thirteen! And within a few years he's ruling most of northern India and inviting scholars of every religion to debate in his court."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and that's how a sultan who inherited a bankrupt treasury ended up building the Blue Mosque. Next week: his son, and the palace intrigue that followed."
+    }
+   ]
+  },
+  {
+   "bid": "b31",
+   "cid": "topic:Model",
+   "label": "article about a model",
+   "path": [
+    "Topic",
+    "Agent",
+    "Person",
+    "Model"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Can we talk about how Adut Mabior closed the Valentino show in that red gown?! Walked like she owned the runway 🔥👗"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "My cousin just signed with an agency in Milan!!! Her first fashion editorial is out next month and she's already booked for two runway shows 😍"
+    },
+    {
+     "style": "news-wire report",
+     "text": "MILAN (Wire) - Brazilian supermodel Camila Rocha announced her retirement from the runway on Saturday after 20 years and more than 300 magazine covers."
+    },
+    {
+     "style": "news-wire report",
+     "text": "NEW YORK - Runway star Liam Hart, known for his Calvin Klein underwear campaigns, has signed a deal to become the new face of a Swiss watchmaker, his agency said."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is that the girl from the perfume ad? B: Yeah, Sasha Ivanova. She was scouted at a train station in Novosibirsk at fifteen. A: And now she's on every billboard."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "\"How many shows are you walking this week?\" \"Eleven. Prada, Fendi, and a bunch of smaller ones. My feet are already dead.\""
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Naomi Campbell — Discovered at 15 in London, she became the first Black model on the covers of French and British Vogue."
+    },
+    {
+     "style": "listicle item",
+     "text": "#6 Kenta Arai: the Tokyo runway star who became the first Japanese man to open a Paris menswear show."
+    },
+    {
+     "style": "forum question",
+     "text": "Does anyone know which agency represents Lucía Ferro now? She used to be with IMG and I haven't seen her in campaigns lately."
+    },
+    {
+     "style": "forum question",
+     "text": "How did Twiggy get so famous in the 60s? Was it just the haircut and the photo shoots or was there more to it?"
+    },
+    {
+     "style": "product or event review",
+     "text": "The documentary on Iman's career from Nairobi student to fashion icon to cosmetics founder was polished and inspiring. 4.5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the photo exhibit of 90s supermodel portraits. The Christy Turlington shots by Peter Lindbergh were the best thing there."
+    },
+    {
+     "style": "diary entry",
+     "text": "Third casting today. They measured my hips, took two polaroids, and said 'next.' Mama says even the famous girls got rejected a hundred times, so I'm not giving up."
+    },
+    {
+     "style": "diary entry",
+     "text": "Shot my first catalogue job! Eight outfits, six hours under the lights. The photographer said I have a 'great walk.'"
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Gisele Bündchen (born 1980) is a Brazilian model who topped lists of the highest-paid figures in fashion for fifteen years."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Anja Rubik (born 1983) is a Polish model and activist who has appeared on the covers of Vogue Paris and Elle."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Jean Shrimpton is often called one of the first supermodels, and her photographs defined the look of 1960s London."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Tyra Banks used her fame on the catwalk and in swimsuit magazines to build a career in television and business."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: You did your first Fashion Week at sixteen. GUEST: Yeah, I had no idea how to walk in those heels. The casting director basically taught me in the hallway."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...today I'm talking with Amara Diallo, who went from shooting swimwear campaigns in Dakar to walking for Chanel. Amara, what was the scariest runway?"
+    }
+   ]
+  },
+  {
+   "bid": "b32",
+   "cid": "topic:SquashPlayer",
+   "label": "article about a squash player",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "SquashPlayer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Omar Nassar's boast from the back corner was ridiculous. Glass court magic."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Watching Laura Grant in the British Open final, her drop shots are pure poetry."
+    },
+    {
+     "style": "news-wire report",
+     "text": "CAIRO (AP) - Egypt's Karim Hassan won the World Squash Championship on Saturday, beating his compatriot 3-1 in a 90-minute final."
+    },
+    {
+     "style": "news-wire report",
+     "text": "English squash player Emma Hughes rose to world No. 1 on Monday after winning three consecutive PSA titles."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How does Tarek move so fast on court? B: Ghosting drills since he was eight. A: That's dedication. B: And his volleys are brutal."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why did Lucy lose that rally? B: Hit the tin on a drop. A: Bad luck. B: She'll take the next game."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Imran Aziz - Unbeaten for five years in the 1980s, the Pakistani dominated the four walls like no one before him."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Nour Saleh: Known for deceptive drop shots, she won the British Open twice."
+    },
+    {
+     "style": "forum question",
+     "text": "How does Peter Collins hit such tight rails? His drives stay glued to the side wall."
+    },
+    {
+     "style": "forum question",
+     "text": "Was the let decision against Amir El-Sayed fair in the semi? Looked like clear interference to me."
+    },
+    {
+     "style": "product or event review",
+     "text": "Saw the Tournament of Champions at Grand Central. Watching Sarah Dawson play on the glass court in the station concourse was unforgettable."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review of the racquet Mark Ellis uses: head-light balance, powerful on drives, comfortable grip."
+    },
+    {
+     "style": "diary entry",
+     "text": "Played with Coach Ahmed today. He made me run every corner of the court. Legs are dead."
+    },
+    {
+     "style": "diary entry",
+     "text": "Beat my friend Tom for the first time! My backhand drop finally worked."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "David Laird (born 1970) is an Australian former squash player who reached world No. 2 in 1995."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Mona Farouk is an Egyptian professional squash player who won the World Junior Championship in 2014."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Squash players like Hamza Ali show how much stamina and quick thinking the sport requires."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Through years of practice, Claire Newman became one of the best women on the European tour."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Youssef, what's the secret to a great drop? YOUSSEF: Soft hands and disguise. Make them think you're going deep."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so Grace Liu, down two games to love, saves four match balls and wins the final 3-2. Incredible comeback."
+    }
+   ]
+  },
+  {
+   "bid": "b33",
+   "cid": "topic:BaseballPlayer",
+   "label": "article about a baseball player",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "BaseballPlayer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Diego Morales just hit his 40th homer of the season!! Dude is a monster at the plate ⚾🔥"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Can we talk about how Kenji Ito struck out 14 batters tonight? That splitter is filthy."
+    },
+    {
+     "style": "news-wire report",
+     "text": "BOSTON (AP) - Red Sox shortstop Carlos Vega went 4-for-5 with two RBIs on Tuesday, extending his hitting streak to 22 games."
+    },
+    {
+     "style": "news-wire report",
+     "text": "CHICAGO - Cubs pitcher Ryan Mitchell has been placed on the 15-day injured list with elbow inflammation, the team announced."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "- Did you see the catch Tyler Hayes made in center? - Crashed right into the wall and held on. Robbed a home run in the ninth."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "- Who's starting on the mound tonight? - Luis Ortega. His fastball's been sitting at ninety-eight lately."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Mike 'Hammer' Donnelly: the slugging first baseman who led the American League in RBIs three straight years."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. Shohei Tanaka: a two-way star who both pitches and bats cleanup for his team."
+    },
+    {
+     "style": "forum question",
+     "text": "Does anyone remember what Jimmy Rourke's batting average was in his rookie season with the Mets?"
+    },
+    {
+     "style": "forum question",
+     "text": "Is Marcus Bell going to the Hall of Fame on the first ballot? 500 homers and three Gold Gloves should be enough."
+    },
+    {
+     "style": "product or event review",
+     "text": "The biography of catcher Eddie Malone is a fun read, full of dugout stories from the 1970s, though it skips his later years. 4/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the Dodgers game. Andre Watkins pitched eight scoreless innings and the crowd gave him a standing ovation. Hot dogs were overpriced."
+    },
+    {
+     "style": "diary entry",
+     "text": "Aug 3. Took my son to see Josh Carter play. He signed his glove after batting practice. Kid hasn't stopped smiling."
+    },
+    {
+     "style": "diary entry",
+     "text": "Called up to triple-A today. Still can't believe it. Gotta work on hitting the curveball."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Henry 'Hank' Wallace (1915-1982) was an American professional baseball outfielder who played sixteen seasons in the major leagues."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Takashi Mori is a Japanese baseball pitcher who played for the Yomiuri Giants before signing with a Major League club."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The career of Roberto Díaz shows that a player can become a hero both on the field and in his community."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Jackie Moore broke barriers in baseball, proving that talent matters more than background."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Today we're joined by Gary Lopez, who spent fourteen years as a major league catcher. Gary, what was it like catching a no-hitter?"
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "- What's the hardest pitch you ever faced? - Nolan Pierce's slider. It looked like a strike and ended up in the dirt every time."
+    }
+   ]
+  },
+  {
+   "bid": "b34",
+   "cid": "topic:AcademicJournal",
+   "label": "article about an academic journal",
+   "path": [
+    "Topic",
+    "Work",
+    "PeriodicalLiterature",
+    "AcademicJournal"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "My first paper just got accepted in the Journal of Applied Ecology!! Three rounds of revisions but WE DID IT."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Reviewer 2 at Physical Review Letters wants me to rewrite the whole introduction. Classic."
+    },
+    {
+     "style": "news-wire report",
+     "text": "LONDON (Reuters) - The Lancet retracted a widely cited study on Thursday after the authors could not verify the underlying patient data."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Nature said it will publish peer-review reports alongside all newly submitted research papers, a change aimed at transparency."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Where should I submit my linguistics paper? B: Try 'Language,' the journal of the Linguistic Society of America."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: What's the impact factor of Cell? B: Around forty. It's one of the top venues in biology."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. 'The New England Journal of Medicine' - Founded in 1812, one of the oldest continuously published medical journals."
+    },
+    {
+     "style": "listicle item",
+     "text": "8. 'American Economic Review' - The flagship journal of the American Economic Association, publishing since 1911."
+    },
+    {
+     "style": "forum question",
+     "text": "Has anyone published in PLOS ONE recently? How long did peer review take for you?"
+    },
+    {
+     "style": "forum question",
+     "text": "Does 'The Journal of Philosophy' accept submissions from grad students, or should I aim for a smaller venue?"
+    },
+    {
+     "style": "product or event review",
+     "text": "Review of the journal's new manuscript system: much faster to navigate, but the submission portal still crashes on large PDFs. 3/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "As an author I rate the refereeing at 'Annals of Mathematics' the most rigorous I've experienced; my paper took two years."
+    },
+    {
+     "style": "diary entry",
+     "text": "Submitted my thesis chapter to the Journal of Fluid Mechanics today. Fingers crossed."
+    },
+    {
+     "style": "diary entry",
+     "text": "The rejection letter came from Science. Desk-rejected in four days."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "The Journal of the American Chemical Society is a weekly peer-reviewed scientific journal established in 1879 by the American Chemical Society."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "'Mind' is a quarterly peer-reviewed academic journal of philosophy published by Oxford University Press on behalf of the Mind Association."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The founding of 'Philosophical Transactions of the Royal Society' in 1665 marks the beginning of scientific publishing."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Peer-reviewed periodicals like 'The BMJ' help ensure that medical research is checked by experts before it reaches doctors."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "My guest edits 'The Journal of Neuroscience,' and today she explains how reviewers are chosen for each manuscript."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "So 'Physical Review' started at Cornell in 1893, and now there's a whole family of them, from A through X."
+    }
+   ]
+  },
+  {
+   "bid": "b35",
+   "cid": "topic:Cricketer",
+   "label": "article about a cricketer",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "Cricketer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Rahul Desai with 140 off 98 balls today, six sixes over midwicket. Absolute clinic. Give this man a Test cap already!"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Imran Qadir's yorkers at the death tonight were pure poetry. Three wickets in the 19th over and the whole stadium on its feet."
+    },
+    {
+     "style": "news-wire report",
+     "text": "ADELAIDE (Reuters) - Fast bowler Josh Kerrigan took five for 41 on the opening day of the second Test as England were bowled out for 212."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Former Sri Lanka captain Dinesh Perera announced his retirement from international cricket on Thursday after 17 years, 98 Tests and more than 7,000 runs."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is Shakil opening the batting tomorrow? B: No, they've moved him to number four. A: Good, he's shaky against the new ball. B: Against spin though, nobody in the side plays better."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How many did Ellie get? B: Seventy-three not out, and she took two catches at slip. A: Player of the match? B: Easily."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Vikram Rao - The wristy right-hander averaged 58 in Tests and once made a double century on a turning pitch in Chennai."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Jacques Botha: A leg-spinner who bamboozled batters with his googly, taking 300 Test wickets for South Africa."
+    },
+    {
+     "style": "forum question",
+     "text": "How did Kane Ashby get his T20 strike rate so high while still averaging 45 in first-class games? Is it technique or just mindset?"
+    },
+    {
+     "style": "forum question",
+     "text": "Was Mohammad Saleem's bowling action ever officially reported? My dad swears he was called for throwing in a county match in the 80s."
+    },
+    {
+     "style": "product or event review",
+     "text": "Attended the day-night Test at Eden Gardens. Watching Arjun Pillai bring up his hundred under lights with 60,000 chanting was unforgettable. Food stalls overpriced though."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review: 'Line and Length' is Graham Whitcombe's autobiography. Great stories from county seasons in the 1970s, less interesting once he moves into coaching."
+    },
+    {
+     "style": "diary entry",
+     "text": "Played my first proper match for the under-15s. Scored 23 before getting caught at long-on. Coach says my cover drive is the best in the team."
+    },
+    {
+     "style": "diary entry",
+     "text": "Met Kieran Joseph at the nets today. He bowled me three balls and I missed all three. He laughed and signed my bat anyway."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Thomas Ashworth (1889-1951) was an English cricketer who played 14 Test matches as a right-handed batsman and occasional off-break bowler."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Faisal Qureshi is a Pakistani cricketer who bowls left-arm fast for Sindh and has represented Pakistan in One Day Internationals."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Cricketer Nisha Patel shows that women's sport deserves as much attention as men's, since she broke batting records many people still do not know about."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Through calm captaincy and brave batting, Samuel Mensah lifted his struggling side into the top division of county cricket."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Ravi, take me back to the last over of the final. RAVI: Six needed off three, and I'm thinking just get bat on ball. Then it lands in my slot and I'm watching it sail over long-off."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and Mitch Holloway, eh, what a career. Two hundred Test wickets, a hat-trick at Lord's, and he still turns up to bowl in the club nets every Sunday."
+    }
+   ]
+  },
+  {
+   "bid": "b36",
+   "cid": "topic:AmateurBoxer",
+   "label": "article about an amateur boxer",
+   "path": [
+    "Topic",
+    "Agent",
+    "Boxer",
+    "AmateurBoxer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Our club's Kayla Brooks just won the regional Golden Gloves at 60 kg!! Three rounds, unanimous decision, grinning through her headguard."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Watching 17-year-old Dmitri Volkov box at the junior nationals. Jab like a piston. The pro promoters are going to be knocking on his door."
+    },
+    {
+     "style": "news-wire report",
+     "text": "CHICAGO (AP) - Southpaw Marcus Bell won the national Golden Gloves light heavyweight title on Saturday, earning a place at the Olympic trials."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Amateur boxer Aoife Kelly of Belfast took gold at the European Championships on Sunday, outpointing the Italian top seed 4-1."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Is Jamal turning pro after the Olympics? B: He wants one more world title in the vest first. A: He's had 140 bouts already. B: Exactly. He loves the three-round format."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: How did Priya do at the club show? B: Won on points. A: Her first ever bout? B: Yep, and she's already asking when the next card is."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Felix Ramirez - The Cuban heavyweight who won three Olympic golds and turned down every professional contract he was offered."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. Hannah Price: Won national ABA titles at three different weights before she turned twenty."
+    },
+    {
+     "style": "forum question",
+     "text": "How many amateur bouts did Liam Carter have before the Olympics? I heard over 200 but that seems crazy."
+    },
+    {
+     "style": "forum question",
+     "text": "Was Rico Alvarez robbed in the Olympic qualifier? He landed the cleaner shots in all three rounds and the judges gave it the other way."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the county championships at the leisure centre. Best bout was Shane Doherty against a lad from Leeds, nonstop for three rounds. Fiver entry, brilliant value."
+    },
+    {
+     "style": "product or event review",
+     "text": "Documentary review: 'Vest and Gloves' follows Samira Haddad from her first club bout to the national finals. Warm, gritty, worth it."
+    },
+    {
+     "style": "diary entry",
+     "text": "Sparred with Callum at the club tonight. He has a national title and I couldn't land a thing. Coach says I keep dropping my right hand."
+    },
+    {
+     "style": "diary entry",
+     "text": "First bout tomorrow. Made weight at 57 kg. Mum's coming even though she hates watching."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Viktor Petrov (born 1964) is a Bulgarian amateur boxer who won the world championship at bantamweight in 1986 and never fought professionally."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Grace Mwangi is a Kenyan boxer who competed at the 2020 Olympics in the women's flyweight division."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Young fighters like Tyrone Walsh learn discipline at local clubs, where coaches volunteer their evenings to keep kids off the streets."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "By winning a junior title in her first year at the gym, Leila Nasser proved that confidence can be built one round at a time."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Danny, you've had 90 bouts with the headguard on. Why not go pro? DANNY: Olympics first. My grandad watched every Games and I promised him."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so Ellie walks into the club at twelve, can't skip rope, can't throw a jab, and five years later she's boxing for the national team."
+    }
+   ]
+  },
+  {
+   "bid": "b37",
+   "cid": "topic:Pope",
+   "label": "article about a pope",
+   "path": [
+    "Topic",
+    "Agent",
+    "Cleric",
+    "Pope"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Just learned Celestine V quit the papacy after five months in 1294 because he missed his hermit cave. Honestly relatable. #history"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "Standing under the Sistine ceiling thinking about how Julius II basically bullied Michelangelo into painting it. Warrior pontiff energy."
+    },
+    {
+     "style": "news-wire report",
+     "text": "VATICAN CITY (AP) - Pope Leo XIV used his first Easter blessing on Sunday to call for ceasefires, addressing tens of thousands of pilgrims from the loggia of St. Peter's Basilica."
+    },
+    {
+     "style": "news-wire report",
+     "text": "ROME - Historians gathered Thursday to mark the anniversary of John XXIII's opening of the Second Vatican Council, which the pontiff convened in 1962 to modernize the Church."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Which pontiff called the First Crusade? B: Urban II, at the Council of Clermont in 1095. A: And the crowd shouted 'Deus vult'? B: That's the story."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Why is Gregory I called 'the Great'? B: He reorganized church charity in Rome and sent missionaries to England. A: Plus the chant named after him. B: Exactly."
+    },
+    {
+     "style": "listicle item",
+     "text": "4. Leo XIII (1878-1903): The first pope ever filmed on camera, he also wrote Rerum Novarum, the landmark encyclical on workers' rights."
+    },
+    {
+     "style": "listicle item",
+     "text": "7. Sixtus V: In just five years on the throne of Peter he rebuilt Rome's water supply, raised obelisks, and finished the dome of St. Peter's."
+    },
+    {
+     "style": "forum question",
+     "text": "Did Pius IX really lose the Papal States and then call himself a 'prisoner in the Vatican'? Trying to understand the timeline for my history class."
+    },
+    {
+     "style": "forum question",
+     "text": "Question for church history buffs: how did Innocent III manage to put England under interdict? Was King John really excommunicated by him?"
+    },
+    {
+     "style": "product or event review",
+     "text": "The new biography of Paul VI is excellent: it finally explains why he wrote Humanae Vitae and how lonely he felt afterward. Four stars."
+    },
+    {
+     "style": "product or event review",
+     "text": "Saw the exhibition on Benedict XIV in Bologna. Great letters on display showing his wit and his love of science; the audio guide was weak."
+    },
+    {
+     "style": "diary entry",
+     "text": "Visited Avignon today and stood in the palace where Clement VI held court. Hard to imagine the head of the Church living in France for decades."
+    },
+    {
+     "style": "diary entry",
+     "text": "Read about Gregory VII tonight, the one who made Emperor Henry IV wait barefoot in the snow at Canossa. What a power move."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Pope Boniface VIII (c. 1230-1303) issued the bull Unam Sanctam in 1302, asserting papal supremacy over secular rulers."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Alexander VI, born Rodrigo Borgia, reigned as Bishop of Rome from 1492 until his death in 1503."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "The papacy of Leo X shows how the sale of indulgences to fund St. Peter's Basilica helped spark Martin Luther's protest."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "In my opinion, John Paul II's many trips abroad made the pope a global figure in a way no earlier pontiff had been."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: So Francis picks his name after Francis of Assisi, first Jesuit, first from the Americas. GUEST: Right, and he moves into the guesthouse instead of the papal apartments."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...and that's when Formosus gets dug up, put on trial in his robes, and convicted. The Cadaver Synod, 897. Easily the weirdest episode in church history."
+    }
+   ]
+  },
+  {
+   "bid": "b38",
+   "cid": "topic:RadioStation",
+   "label": "article about a radio station",
+   "path": [
+    "Topic",
+    "Agent",
+    "Broadcaster",
+    "RadioStation"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Shoutout to 98.7 The River for playing three straight hours of 70s soul this morning. Best drive to work ever."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "WKLQ just played my request and said my name on air!!! I'm basically famous now."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PORTLAND, Maine (AP) - Community radio station WPMR-FM went silent on Friday after 52 years, citing rising tower rental costs and falling listener donations."
+    },
+    {
+     "style": "news-wire report",
+     "text": "Radio Lumiere, a Creole-language broadcaster in Port-au-Prince, returned to the airwaves on Tuesday after its damaged transmitter was repaired."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: What frequency is Jazz 102 on around here? B: 102.2 FM. A: Reception's terrible in the tunnel. B: Stream it on their app then."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did you call in to the breakfast show? B: Yeah, won concert tickets! A: Which station? B: Kiss 104. The DJ is hilarious."
+    },
+    {
+     "style": "listicle item",
+     "text": "2. KXRM 91.5 - A college station in Austin known for overnight punk shows and student DJs who play anything."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Radio Kesho: Broadcasts farming tips in Kikuyu every morning and reaches about two million listeners on FM."
+    },
+    {
+     "style": "forum question",
+     "text": "Why does WDRV switch to sports talk at night? I liked their classic rock playlist so much better."
+    },
+    {
+     "style": "forum question",
+     "text": "Anyone remember that pirate broadcaster on a ship in the North Sea in the 60s? My dad used to tune in under the covers."
+    },
+    {
+     "style": "product or event review",
+     "text": "Toured the studios of Capital Coast FM. Saw the on-air booth, the vintage microphones, and met the evening host. Fun for music nerds, 5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Review of the new breakfast show on Heart 95: upbeat hosts, good banter, decent playlist, but far too many ad breaks."
+    },
+    {
+     "style": "diary entry",
+     "text": "Had 88.1 on all afternoon while baking. They played my favourite song twice and read out the school closures."
+    },
+    {
+     "style": "diary entry",
+     "text": "First day volunteering at the community studio. I read the traffic report live on air and my hands were shaking."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "KZNB (1340 AM) is a commercial radio station licensed to Fairview, Nebraska, broadcasting a country music format."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Radio Sonora is a Mexican public broadcaster based in Hermosillo, airing news, music and cultural programmes on AM and FM since 1983."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Local stations like WBLK connect communities by sharing news, weather and music with everyone who tunes in."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "During the storm, Coastal 92.3 stayed on air for 72 hours straight, giving listeners life-saving updates."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: You've been on the mic at Magic 101 for 25 years. What's changed? GUEST: Everything's digital now, but listeners still call in like family."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so the station loses mains power during the hurricane, and the overnight DJ keeps broadcasting off a car battery. Legendary."
+    }
+   ]
+  },
+  {
+   "bid": "b39",
+   "cid": "topic:AustralianRulesFootballPlayer",
+   "label": "article about an Australian rules football player",
+   "path": [
+    "Topic",
+    "Agent",
+    "Athlete",
+    "AustralianRulesFootballPlayer"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Jack Doherty kicked six goals for the Bombers today!! Best game of his life and he's only 20 🔥 #AFL"
+    },
+    {
+     "style": "casual social-media post",
+     "text": "How good was that mark by Liam Tran in the last quarter? Flew right over the pack. Speccy of the year."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MELBOURNE (AAP) - Collingwood midfielder Sam Whitfield has won the Brownlow Medal, polling 31 votes in a record-breaking season."
+    },
+    {
+     "style": "news-wire report",
+     "text": "PERTH - West Coast Eagles ruckman Tom Barrett will miss six weeks with a knee injury sustained in Saturday's win over Fremantle."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "- Did you see Brodie Lawson's goal from the boundary? - Mate, from fifty metres on the run. The MCG crowd went nuts."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "- Who's playing full-forward for the Swans this week? - Ryan Kelly, he's back from his hamstring and kicked four in the twos."
+    },
+    {
+     "style": "listicle item",
+     "text": "3. Charlie Nguyen: the Hawthorn small forward who led the league in tackles inside fifty this season."
+    },
+    {
+     "style": "listicle item",
+     "text": "6. Mick O'Rourke: three-time premiership player and one of the toughest backmen to pull on the Geelong jumper."
+    },
+    {
+     "style": "forum question",
+     "text": "Does anyone know how many games Darcy Pike played for North Melbourne before the trade to Adelaide?"
+    },
+    {
+     "style": "forum question",
+     "text": "Was Lachie Grant drafted in the first round? I reckon he's the best young midfielder in the AFL right now."
+    },
+    {
+     "style": "product or event review",
+     "text": "Ben Maddox's footy biography is a ripping read, especially the chapters on his grand final win with Richmond. 4.5/5."
+    },
+    {
+     "style": "product or event review",
+     "text": "Went to the Saints game. Josh Wells was everywhere: thirty-two disposals, two goals and a smother on the siren. Shame about the result."
+    },
+    {
+     "style": "diary entry",
+     "text": "Sat 14 Aug. Watched our Josh play his first senior game for the Dockers. Kicked a goal with his first touch. I cried in the stands."
+    },
+    {
+     "style": "diary entry",
+     "text": "Training was hard today. Coach said if I keep my kicking up I might get a debut against Carlton next month."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Ron Harley (1938-2015) was an Australian rules footballer who played 240 games for the Melbourne Football Club in the VFL."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Jessica Stone is an Australian rules footballer who captains the Brisbane Lions in the AFL Women's competition."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Tom Carey showed that a ruckman could also be a match-winner, as he kicked forty goals in one season."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Playing footy taught Nathan Bruce leadership, which later helped him captain Essendon to a premiership."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "Welcome back to the footy pod. Joining us is Hayden Black, two hundred games for the Crows and still the best kick we've seen."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "- What was it like running out for your first grand final? - Honestly I couldn't hear anything. A hundred thousand people and it just went silent in my head."
+    }
+   ]
+  },
+  {
+   "bid": "b40",
+   "cid": "topic:BeautyQueen",
+   "label": "article about a beauty queen",
+   "path": [
+    "Topic",
+    "Agent",
+    "Person",
+    "BeautyQueen"
+   ],
+   "bankF": [
+    {
+     "style": "casual social-media post",
+     "text": "Catriona Gray's lava walk at Miss Universe 2018 is still the most iconic thing to happen in pageant history. Fight me."
+    },
+    {
+     "style": "casual social-media post",
+     "text": "My cousin just won Miss Riverside County!!! The sash, the crown, the happy tears. So proud of her community-garden platform."
+    },
+    {
+     "style": "news-wire report",
+     "text": "SAN SALVADOR (AP) - Sheynnis Palacios of Nicaragua was crowned Miss Universe on Saturday, the first woman from her country to win the title."
+    },
+    {
+     "style": "news-wire report",
+     "text": "MUMBAI - Krystyna Pyszkova of the Czech Republic won the 71st Miss World pageant on Saturday, organizers said, after a ceremony in Mumbai."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Wait, Vanessa Williams was Miss America? B: 1984, the first Black woman to win. A: Before 'Save the Best for Last'? B: Long before."
+    },
+    {
+     "style": "two-person dialogue",
+     "text": "A: Did Gal Gadot really compete in a pageant? B: Miss Israel 2004, then Miss Universe. A: She said she didn't love it. B: Acting worked out better."
+    },
+    {
+     "style": "listicle item",
+     "text": "1. Priyanka Chopra: Crowned Miss World in 2000 at 18, she went on to Bollywood and Hollywood stardom."
+    },
+    {
+     "style": "listicle item",
+     "text": "5. Zozibini Tunzi: The South African titleholder of 2019 used her final answer to argue that girls should be taught leadership."
+    },
+    {
+     "style": "forum question",
+     "text": "Does anyone know what platform Harnaaz Sandhu ran on when she won Miss Universe 2021? I'm prepping for my own pageant interview."
+    },
+    {
+     "style": "forum question",
+     "text": "How much training did Pia Wurtzbach do before her third try at the Philippine national title? Wondering how long prep takes."
+    },
+    {
+     "style": "product or event review",
+     "text": "Watched the documentary on Bess Myerson, the 1945 Miss America who faced antisemitism on her tour. Powerful and well researched."
+    },
+    {
+     "style": "product or event review",
+     "text": "The memoir by former Miss Teen USA titleholder Kara Lindell was surprisingly funny about hairspray and homesickness. Three stars."
+    },
+    {
+     "style": "diary entry",
+     "text": "Interview round tomorrow at Miss Ohio. Practiced my answer on literacy fifty times. Mom steamed my gown twice."
+    },
+    {
+     "style": "diary entry",
+     "text": "Gave back my crown tonight after a year as Strawberry Festival Queen. Cried more than when I won it."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Aishwarya Rai is an Indian actress and model who was crowned Miss World in 1994."
+    },
+    {
+     "style": "encyclopedia-style sentence",
+     "text": "Janelle Commissiong of Trinidad and Tobago became the first Black woman to be crowned Miss Universe, in 1977."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Lara Dutta's win as Miss Universe in 2000 made pageants a symbol of national pride in India."
+    },
+    {
+     "style": "school essay sentence",
+     "text": "Gloria Diaz, the Philippines' first Miss Universe in 1969, started a pageant tradition that her country still takes very seriously."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "HOST: Victoria Kjaer Theilvig, the first Danish Miss Universe, 2024. GUEST: And the platinum pixie cut! Everyone said that would never win."
+    },
+    {
+     "style": "podcast transcript snippet",
+     "text": "...so R'Bonney Gabriel designs her own gowns, and she won Miss Universe in a dress she made herself. A fashion designer as queen."
+    }
+   ]
+  }
+ ]
+}
