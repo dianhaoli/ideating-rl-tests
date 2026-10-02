@@ -111,3 +111,40 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
   R x P_keep >= 0.5. The latents that carry "Arizona" carry it for both questions (P_keep 0.07 for Arizona,
   0.12 for Georgia). A same-entity-contrast reference (rank latents by capital-attribution minus state-attribution on
   the same cities) is queued for L12 and L18.
+
+## 2026-10-02T07:33Z Layer 12 done (86 cells with L18); keep-state reference moved ahead of the other extras
+- L12 vs L18 (median R_S at k <= 5): 0.47 vs 0.52; feasible cells 0.47 vs 0.56. Pairs feasible at their best layer:
+  30 of 43 (0.70, Wilson 0.55-0.81). Athlete -> sport is the weak family (2 of 6 groups; soccer ~0 at every layer).
+- **The recipe picture changes with the layer.** At L12 the mean-difference cosine recipe collapses (median R_S near 0):
+  at L12 the group information still sits on the entity's own tokens, so the last-token mean difference does not
+  point at the right latents (consistent with EditHunt's "copied to the final token later" finding). But contrastive
+  top-5 attribution without any search step works at both layers: at least half of the reference's R on 0.89 of
+  feasible cells (Wilson 0.76-0.95); naive attribution 0.70; cosine 0.55. Every cheap ranking clears the 0.5 line, so
+  the pre-registered rule fires NO-GO-as-is (recipe).
+- Keep-state at L12 is worse than at L18: 0 of 12 groups reach R x P_keep >= 0.5 (the target-vs-sibling reference
+  keeps the state answer on a median 0.53 of the same cities).
+- Killed the chain shell again (the running L6 job continued) so that the same-entity-contrast keep-state reference
+  runs before the memorisation seed and country -> capital, since it decides the recommended design.
+
+## 2026-10-02T08:09Z Feasibility study finished: NO-GO-as-is (recipe); write-up in FEASIBILITY.md
+- All runs: runs/latentknockout/20261002T0642_sweep (106 group-level cells at L6/L12/L18, 24 country -> capital cells,
+  24 keep-state cells, 31 seed-1 cells, latent_report.json, tables.json/tables.md from analyze.py).
+- Pre-registered rule, in order: (1) NO-GO does not fire (p_pair 0.70, p_cell 0.42, median R(k<=10) at best layer 0.69);
+  (2) NO-GO-as-is fires: naive top-5 attribution reaches half the reference's R on 0.70 of feasible cells (CI 0.56-0.82)
+  and decoder cosine on 0.55 (CI 0.40-0.68). Contrastive top-5 (the reference's first step) on 0.89.
+- Keep-state variant: the target-vs-sibling reference, a same-entity-contrast reference (capital attribution minus state
+  attribution on the same cities) and the cheap rankings together reach R x P_keep >= 0.5 for 3 of 12 groups at L18
+  and 0 at L12. The state latents are the same latents in both relations (e.g. 13331 for Texas at L18).
+- Memorisation: a new example split picks the same first latent in 25 of 31 cells; different groups share almost no
+  latents (Jaccard 0.02). Permute IDs and hold out groups/families.
+- Country -> capital (single entity) is much harder than predicted: 1 of 12 at L18, 0 at L12 (two example prompts only;
+  at L12 nothing moves a single capital).
+- What the picks fire on: L12 reference picks are mostly entity-token latents (fire on "Dallas", "Tampa") or shared
+  task-word latents; L18 picks fire at the answer position ("Which US state is Killeen in?" -> "?"). High-frequency
+  format latents are <= 4% of reference picks (FeatureMatch-style concern threshold was 20%).
+- Peak RSS: every GPU job 6.28-6.38 GB (the memory-mapped bf16 model), under MemoryMax=9G; analyze.py 0.13 GB.
+  GPU peak 6.3 GB of the 8 GB requested; one job at a time through the queue; ~1h20m of GPU in total.
+- Recommendation: do not build LatentKnockout as Dan's validated environment. The closest variant ("LatentKnockout-Verify",
+  multi-slot with natural nulls, difficulty = verifying generalisation) is specified in FEASIBILITY.md section 14 with
+  two gates; my probability that it passes them is ~0.35. Scripted example-objective verifier already gets ~0.48 of
+  4-slot episodes, above the 10% recipe gate.

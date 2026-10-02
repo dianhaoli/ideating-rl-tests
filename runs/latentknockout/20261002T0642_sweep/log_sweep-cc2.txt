@@ -1,0 +1,50 @@
+Running scope as unit: run-r3e113d90a7ef4f53bf9bedb535bd62d0.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   6%|▌         | 16/288 [00:00<00:01, 159.50it/s]Loading weights:  32%|███▏      | 93/288 [00:00<00:00, 517.98it/s]Loading weights:  60%|██████    | 174/288 [00:00<00:00, 650.82it/s]Loading weights:  88%|████████▊ | 254/288 [00:00<00:00, 708.68it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 652.09it/s]
+08:02:27 country_capital France L18: 14.8s pool=16 ref5=[3533, 7533, 13527, 11695, 11572] J=[0.31, 0.4, 0.53, 0.54, 0.54, 0.54, 0.54, 0.54, 0.54, 0.54]
+08:02:41 country_capital Japan L18: 14.0s pool=14 ref5=[11803, 7533, 14224, 4118, 12049] J=[0.08, 0.18, 0.37, 0.38, 0.39, 0.4, 0.4, 0.4, 0.4, 0.39]
+08:02:55 country_capital Germany L18: 14.3s pool=15 ref5=[13527, 7533, 2805, 11803, 10907] J=[0.08, 0.16, 0.19, 0.32, 0.32, 0.34, 0.34, 0.32, 0.36, 0.33]
+08:03:09 country_capital Italy L18: 13.8s pool=15 ref5=[7533, 2515, 13527, 6780, 2099] J=[0.1, 0.17, 0.4, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.4]
+08:03:23 country_capital Egypt L18: 14.0s pool=14 ref5=[7533, 11803, 13779, 7901, 15079] J=[0.13, 0.22, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.39, 0.37]
+08:03:36 country_capital Russia L18: 13.0s pool=15 ref5=[11706, 7533, 13527, 8345, 7845] J=[0.17, 0.29, 0.48, 0.49, 0.49, 0.49, 0.49, 0.49, 0.48, 0.47]
+08:03:50 country_capital Spain L18: 13.9s pool=16 ref5=[7533, 6876, 13527, 14086, 1782] J=[0.12, 0.25, 0.47, 0.48, 0.48, 0.48, 0.48, 0.48, 0.47, 0.47]
+08:04:03 country_capital Greece L18: 13.2s pool=15 ref5=[882, 7533, 8946, 7901, 12485] J=[0.19, 0.49, 0.48, 0.5, 0.51, 0.51, 0.53, 0.53, 0.5, 0.48]
+08:04:16 country_capital Kenya L18: 13.1s pool=15 ref5=[12823, 3183, 12049] J=[0.69, 0.73, 0.98, 0.97, 0.96, 0.95, 0.94, 0.93, 0.92, 0.89]
+08:04:30 country_capital Peru L18: 13.5s pool=12 ref5=[7533, 13527, 11416, 13056, 967] J=[0.16, 0.38, 0.38, 0.39, 0.39, 0.4, 0.39, 0.38, 0.39, 0.38]
+08:04:43 country_capital Thailand L18: 12.5s pool=15 ref5=[7533, 11803, 8683] J=[0.1, 0.19, 0.34, 0.33, 0.33, 0.33, 0.33, 0.33, 0.32, 0.3]
+08:04:56 country_capital Norway L18: 13.0s pool=15 ref5=[3656, 7533, 14113] J=[0.7, 0.84, 0.94, 0.93, 0.93, 0.93, 0.92, 0.89, 0.85, 0.8]
+08:05:12 country_capital France L12: 16.5s pool=16 ref5=[3792, 4667, 2230, 4336] J=[0.03, 0.07, 0.11, 0.21, 0.21, 0.2, 0.2, 0.21, 0.19, 0.19]
+08:05:30 country_capital Japan L12: 17.6s pool=14 ref5=[10243, 11724, 6211, 6214, 3792] J=[0.05, 0.09, 0.11, 0.13, 0.14, 0.16, 0.17, 0.18, 0.19, 0.2]
+08:05:49 country_capital Germany L12: 18.6s pool=16 ref5=[10243, 4336, 2230, 11306, 10275] J=[0.04, 0.08, 0.09, 0.11, 0.11, 0.12, 0.12, 0.12, 0.12, 0.13]
+08:06:05 country_capital Italy L12: 16.8s pool=15 ref5=[2230, 13431, 6565, 2353, 8817] J=[0.06, 0.08, 0.09, 0.1, 0.1, 0.11, 0.12, 0.11, 0.11, 0.11]
+08:06:22 country_capital Egypt L12: 16.8s pool=13 ref5=[2230, 3792, 2353, 1170, 10243] J=[0.06, 0.11, 0.13, 0.15, 0.16, 0.17, 0.17, 0.17, 0.17, 0.16]
+08:06:39 country_capital Russia L12: 16.9s pool=12 ref5=[10243, 12279, 6214, 6211, 3140] J=[0.04, 0.05, 0.07, 0.08, 0.09, 0.1, 0.1, 0.12, 0.12, 0.14]
+08:06:57 country_capital Spain L12: 18.0s pool=15 ref5=[4336, 2230, 5057, 6565, 11306] J=[0.05, 0.1, 0.13, 0.14, 0.14, 0.23, 0.24, 0.24, 0.24, 0.24]
+08:07:14 country_capital Greece L12: 16.6s pool=13 ref5=[4336, 10243, 4667, 5057, 2230] J=[0.06, 0.1, 0.12, 0.15, 0.25, 0.27, 0.14, 0.25, 0.21, 0.21]
+08:07:31 country_capital Kenya L12: 17.4s pool=13 ref5=[12671, 11087, 13269, 15785, 5719] J=[0.04, 0.08, 0.1, 0.11, 0.13, 0.15, 0.16, 0.17, 0.19, 0.19]
+08:07:48 country_capital Peru L12: 17.1s pool=12 ref5=[3140, 10641, 11724, 2291, 13075] J=[0.05, 0.08, 0.12, 0.14, 0.16, 0.19, 0.18, 0.21, 0.23, 0.23]
+08:08:04 country_capital Thailand L12: 15.5s pool=12 ref5=[10243, 4336, 11724, 7498, 2620] J=[0.05, 0.09, 0.13, 0.15, 0.16, 0.17, 0.18, 0.18, 0.18, 0.18]
+08:08:22 country_capital Norway L12: 17.6s pool=14 ref5=[10243, 4336, 11333, 680, 3792] J=[0.04, 0.11, 0.13, 0.15, 0.15, 0.16, 0.16, 0.16, 0.17, 0.16]
+done 377s peak_gpu 6.40 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label latentknockout-sweep-cc2 -- /opt/pytorch/bin/python -m tasks.latentknockout.sweep runs/latentknockout/20261002T0642_sweep/../20261002T0636_validate2/validated.json runs/latentknockout/20261002T0642_sweep/cells --layers 18 12 --families country_capital --max_groups 12"
+	User time (seconds): 378.09
+	System time (seconds): 3.60
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:21.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 578594
+	Voluntary context switches: 10988
+	Involuntary context switches: 3539
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1960
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

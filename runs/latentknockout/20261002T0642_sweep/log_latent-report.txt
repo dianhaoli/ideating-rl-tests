@@ -1,0 +1,28 @@
+Running scope as unit: run-ra0ef2afa81ab43beb08137e523eb3055.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   0%|          | 1/288 [00:00<00:43,  6.61it/s]Loading weights:  25%|██▍       | 71/288 [00:00<00:00, 331.42it/s]Loading weights:  47%|████▋     | 136/288 [00:00<00:00, 459.04it/s]Loading weights:  69%|██████▉   | 200/288 [00:00<00:00, 524.61it/s]Loading weights:  97%|█████████▋| 278/288 [00:00<00:00, 605.84it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 498.58it/s]
+L12: 221 latents done
+L18: 207 latents done
+L6: 148 latents done
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label latentknockout-latent-report -- /opt/pytorch/bin/python -m tasks.latentknockout.latent_report /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0636_validate2/validated.json /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0642_sweep/cells /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0642_sweep/latent_report.json --max_cells 0"
+	User time (seconds): 32.28
+	System time (seconds): 2.33
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:34.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6380392
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 511525
+	Voluntary context switches: 3027
+	Involuntary context switches: 553
+	Swaps: 0
+	File system inputs: 256
+	File system outputs: 2728
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,17 @@
+[06:39:19] start sweep-L18
+[07:10:33] end sweep-L18 (chain restarted with reduced steps)
+[07:10:33] start sweep-L12
+[07:32:55] end sweep-L12 rc=0 peakRSS_kB=6281436
+[07:32:55] start sweep-L6
+[07:45:58] end sweep-L6 (chain restarted: ks first)
+[07:45:58] start sweep-ks
+[07:55:17] end sweep-ks rc=0 peakRSS_kB=6281280
+[07:55:17] start latent-report
+[07:55:51] end latent-report rc=0 peakRSS_kB=6380392
+[07:55:51] start sweep-seed1
+[08:00:28] end sweep-seed1 rc=0 peakRSS_kB=6281504
+[08:00:28] start sweep-cc
+[08:01:03] end sweep-cc rc=0 peakRSS_kB=6281404
+[08:01:03] chain done
+[08:02:03] start sweep-cc2 (single-entity examples use P3+Q1)
+[08:08:25] end sweep-cc2 rc=0 peakRSS_kB=6281444

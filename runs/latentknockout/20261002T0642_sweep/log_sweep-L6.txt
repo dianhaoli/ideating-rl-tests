@@ -1,0 +1,46 @@
+Running scope as unit: run-rc0177cbbe62347d580d8604012113a87.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   5%|▍         | 14/288 [00:00<00:01, 137.02it/s]Loading weights:  32%|███▏      | 92/288 [00:00<00:00, 503.63it/s]Loading weights:  59%|█████▊    | 169/288 [00:00<00:00, 620.10it/s]Loading weights:  86%|████████▌ | 247/288 [00:00<00:00, 672.89it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 632.00it/s]
+07:33:26 city_state Texas L6: 22.5s pool=12 ref5=[8718, 14114, 3386] J=[0.12, 0.13, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18]
+07:34:02 city_state California L6: 35.9s pool=15 ref5=[15880, 10344, 14840, 906] J=[0.23, 0.24, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.24]
+07:34:32 city_state Florida L6: 30.0s pool=13 ref5=[2592, 1507, 7189, 14349, 7700] J=[0.07, 0.11, 0.14, 0.16, 0.18, 0.19, 0.2, 0.23, 0.23, 0.23]
+07:34:57 city_state New York L6: 24.9s pool=12 ref5=[2090, 14135, 8378, 12954, 13902] J=[0.22, 0.36, 0.4, 0.41, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42]
+07:36:04 city_capital Texas L6: 66.7s pool=16 ref5=[13972, 6163, 6817, 8718, 11233] J=[0.11, 0.19, 0.21, 0.23, 0.28, 0.29, 0.34, 0.36, 0.34, 0.34]
+07:36:47 city_capital California L6: 43.3s pool=12 ref5=[15880, 1208, 1507, 15639, 1827] J=[0.27, 0.47, 0.5, 0.6, 0.61, 0.61, 0.59, 0.57, 0.54, 0.51]
+07:37:40 city_capital Florida L6: 53.1s pool=14 ref5=[2592, 14804, 14802, 2856, 13067] J=[0.24, 0.32, 0.4, 0.4, 0.4, 0.43, 0.44, 0.5, 0.5, 0.48]
+07:38:34 city_capital New York L6: 53.1s pool=13 ref5=[14135, 2090, 5583, 12954, 8378] J=[0.33, 0.51, 0.53, 0.55, 0.62, 0.67, 0.67, 0.73, 0.73, 0.72]
+07:39:04 country_lang Spanish L6: 30.0s pool=15 ref5=[12943, 6022, 1456, 15779, 7669] J=[0.19, 0.24, 0.25, 0.26, 0.27, 0.28, 0.31, 0.32, 0.32, 0.35]
+07:39:42 country_lang Arabic L6: 38.8s pool=15 ref5=[15779, 3257, 15446, 9212, 8768] J=[0.08, 0.12, 0.16, 0.19, 0.22, 0.25, 0.27, 0.32, 0.33, 0.34]
+07:40:06 country_lang French L6: 23.9s pool=12 ref5=[5673, 7192, 3257, 9212] J=[0.39, 0.53, 0.59, 0.64, 0.64, 0.64, 0.64, 0.63, 0.63, 0.62]
+07:40:42 country_lang Portuguese L6: 35.9s pool=12 ref5=[7279, 12943, 8197, 10746] J=[0.14, 0.34, 0.34, 0.35, 0.35, 0.36, 0.36, 0.36, 0.35, 0.35]
+07:41:13 athlete_sport basketball L6: 30.5s pool=13 ref5=[7803, 13328, 14265, 1820, 3990] J=[0.28, 0.34, 0.36, 0.4, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43]
+07:41:38 athlete_sport soccer L6: 25.3s pool=13 ref5=[13120, 9743, 14948, 1864, 13145] J=[0.07, 0.09, 0.11, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12]
+07:42:11 athlete_sport tennis L6: 32.9s pool=15 ref5=[9288, 13120, 8842, 11186, 10189] J=[0.24, 0.26, 0.27, 0.27, 0.27, 0.28, 0.28, 0.27, 0.27, 0.27]
+07:42:39 athlete_sport golf L6: 27.4s pool=15 ref5=[12678, 13145, 9967, 14948] J=[0.24, 0.25, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.26]
+07:43:34 langid French L6: 55.1s pool=16 ref5=[13057, 12379, 12405, 5788, 3081] J=[0.17, 0.21, 0.24, 0.29, 0.3, 0.32, 0.33, 0.35, 0.36, 0.33]
+07:44:20 langid Spanish L6: 45.7s pool=15 ref5=[12943, 14009, 5788, 7074] J=[0.38, 0.54, 0.57, 0.59, 0.59, 0.58, 0.58, 0.57, 0.56, 0.54]
+07:45:08 langid German L6: 47.9s pool=16 ref5=[4823, 5788, 12379, 10596, 11069] J=[0.32, 0.34, 0.4, 0.46, 0.48, 0.51, 0.56, 0.57, 0.64, 0.59]
+07:45:54 langid Italian L6: 46.0s pool=14 ref5=[9687, 10352, 8837, 7074, 6097] J=[0.1, 0.19, 0.25, 0.29, 0.32, 0.34, 0.34, 0.36, 0.34, 0.39]
+done 777s peak_gpu 7.43 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label latentknockout-sweep-L6 -- /opt/pytorch/bin/python -m tasks.latentknockout.sweep /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0636_validate2/validated.json /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0642_sweep/cells --layers 6 --max_groups 4"
+	User time (seconds): 714.26
+	System time (seconds): 67.29
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:00.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 581285
+	Voluntary context switches: 19338
+	Involuntary context switches: 4521
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2384
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

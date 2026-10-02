@@ -120,25 +120,28 @@ def main():
                 rng = random.Random(zlib.crc32(f'{fam}|{g}|{L}|{a.seed}'.encode()))
                 others = [h for h in F["groups"] if h != g]
                 # ---------------- example set (targets + controls)
-                ex_t = [(g, r) for r in V[g] if r[0] in ex_e[g] and r[1] in lk_data.EX_T]
-                ex_c = strat_sample([(h, r) for h in others for r in V[h] if r[0] in ex_e[h] and r[1] in lk_data.EX_T],
+                # single-entity family (country -> capital): its plain templates P1/P2 fail validation (" a"), so the
+                # examples use P3 + Q1 and the same-style held-out uses P1, P2, Q2
+                EX_T, HO_T = ([2, 3], [0, 1, 4]) if single else (lk_data.EX_T, lk_data.HO_T)
+                ex_t = [(g, r) for r in V[g] if r[0] in ex_e[g] and r[1] in EX_T]
+                ex_c = strat_sample([(h, r) for h in others for r in V[h] if r[0] in ex_e[h] and r[1] in EX_T],
                                     lambda x: x[0], 24, rng)
                 # ---------------- held-out set
-                ho_tT = [(g, r) for r in V[g] if r[0] in ho_e[g] and r[1] in lk_data.HO_T]
+                ho_tT = [(g, r) for r in V[g] if r[0] in ho_e[g] and r[1] in HO_T]
                 ho_tS = [(g, r) for r in V[g] if r[0] in ho_e[g] and r[1] in lk_data.HO_S]
                 rng.shuffle(ho_tT)
                 rng.shuffle(ho_tS)
                 ho_tT, ho_tS = ho_tT[:30], ho_tS[:80]
-                ho_sT = strat_sample([(h, r) for h in others for r in V[h] if r[0] in ho_e[h] and r[1] in lk_data.HO_T],
+                ho_sT = strat_sample([(h, r) for h in others for r in V[h] if r[0] in ho_e[h] and r[1] in HO_T],
                                      lambda x: x[0], 40, rng)
                 ho_sS = strat_sample([(h, r) for h in others for r in V[h] if r[0] in ho_e[h] and r[1] in lk_data.HO_S],
                                      lambda x: x[0], 100, rng)
                 ho_ks, ex_ks = [], []
                 if ks_items is not None:
-                    ho_ks = [(g, r) for r in ks_items.get(g, []) if r[0] in ho_e[g] and r[1] in lk_data.HO_T + lk_data.HO_S]
+                    ho_ks = [(g, r) for r in ks_items.get(g, []) if r[0] in ho_e[g] and r[1] in HO_T + lk_data.HO_S]
                     rng.shuffle(ho_ks)
                     ho_ks = ho_ks[:40]
-                    ex_ks = [(g, r) for r in ks_items.get(g, []) if r[0] in ex_e[g] and r[1] in lk_data.EX_T]
+                    ex_ks = [(g, r) for r in ks_items.get(g, []) if r[0] in ex_e[g] and r[1] in EX_T]
                 if len(ex_t) < 2:
                     json.dump(dict(family=fam, group=g, layer=L, seed=a.seed, skipped="fewer than 2 example items"),
                               open(fn, "w"))

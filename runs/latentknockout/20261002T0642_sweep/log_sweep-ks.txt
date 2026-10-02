@@ -1,0 +1,50 @@
+Running scope as unit: run-rac913ce70be2441fae93799a55e8dc68.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   6%|▌         | 16/288 [00:00<00:01, 158.10it/s]Loading weights:  33%|███▎      | 94/288 [00:00<00:00, 521.72it/s]Loading weights:  59%|█████▉    | 170/288 [00:00<00:00, 629.26it/s]Loading weights:  88%|████████▊ | 253/288 [00:00<00:00, 707.61it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 650.85it/s]
+07:46:33 city_capital Texas L12: 26.5s pool=14 ref5=[1114, 12132, 1776, 5704, 6211] J=[0.36, 0.55, 0.64, 0.67, 0.68, 0.68, 0.67, 0.63, 0.64, 0.62]
+07:47:05 city_capital California L12: 32.4s pool=14 ref5=[3449, 5215, 8806, 6211, 16187] J=[0.31, 0.64, 0.69, 0.69, 0.69, 0.71, 0.73, 0.73, 0.7, 0.64]
+07:47:39 city_capital Florida L12: 33.5s pool=14 ref5=[4939, 12314, 12554, 7493, 6211] J=[0.54, 0.61, 0.64, 0.66, 0.68, 0.67, 0.65, 0.67, 0.66, 0.64]
+07:48:06 city_capital New York L12: 27.1s pool=14 ref5=[10005, 7498, 12314, 10243, 8306] J=[0.42, 0.6, 0.65, 0.75, 0.77, 0.78, 0.79, 0.78, 0.76, 0.7]
+07:48:32 city_capital Ohio L12: 26.2s pool=13 ref5=[10641, 14721, 9701, 13186, 14850] J=[0.71, 0.84, 0.88, 0.94, 0.94, 0.91, 0.89, 0.85, 0.81, 0.78]
+07:49:00 city_capital Pennsylvania L12: 27.4s pool=13 ref5=[680, 15614, 2291, 6211] J=[0.66, 0.82, 0.84, 0.86, 0.85, 0.83, 0.83, 0.8, 0.72, 0.64]
+07:49:35 city_capital Michigan L12: 35.5s pool=14 ref5=[12132, 9701, 2877, 7498, 13819] J=[0.22, 0.26, 0.28, 0.29, 0.32, 0.35, 0.36, 0.37, 0.39, 0.36]
+07:49:52 city_capital Illinois L12: 16.6s pool=12 ref5=[9028] J=[0.99, 0.99, 0.98, 0.98, 0.97, 0.96, 0.95, 0.93, 0.9, 0.87]
+07:50:18 city_capital Georgia L12: 26.4s pool=13 ref5=[11127, 11993, 2694, 12554, 11724] J=[0.17, 0.61, 0.69, 0.71, 0.72, 0.73, 0.72, 0.71, 0.69, 0.65]
+07:50:45 city_capital Arizona L12: 26.5s pool=12 ref5=[3017, 15614, 5704, 11724, 2864] J=[0.44, 0.61, 0.74, 0.79, 0.84, 0.84, 0.86, 0.87, 0.86, 0.84]
+07:51:21 city_capital Washington L12: 35.9s pool=15 ref5=[12132, 12314, 11863, 11973, 2877] J=[0.09, 0.12, 0.16, 0.18, 0.2, 0.24, 0.25, 0.27, 0.27, 0.26]
+07:51:40 city_capital Massachusetts L12: 19.4s pool=13 ref5=[5758, 13969] J=[0.82, 0.98, 0.97, 0.97, 0.97, 0.96, 0.95, 0.92, 0.9, 0.87]
+07:51:55 city_capital Texas L18: 14.5s pool=12 ref5=[13331, 8037] J=[0.98, 0.99, 0.99, 0.96, 0.93, 0.89, 0.85, 0.78, 0.7, 0.46]
+07:52:11 city_capital California L18: 16.1s pool=13 ref5=[13527, 11513, 194, 9907] J=[0.31, 0.43, 0.46, 0.49, 0.49, 0.49, 0.48, 0.49, 0.45, 0.39]
+07:52:32 city_capital Florida L18: 20.3s pool=14 ref5=[15026, 16257, 9472, 9] J=[0.58, 0.6, 0.6, 0.61, 0.61, 0.61, 0.59, 0.58, 0.57, 0.53]
+07:52:52 city_capital New York L18: 20.8s pool=15 ref5=[7159, 15199, 4976, 15025, 8037] J=[0.52, 0.64, 0.73, 0.73, 0.74, 0.74, 0.74, 0.74, 0.74, 0.73]
+07:53:10 city_capital Ohio L18: 17.6s pool=14 ref5=[15214, 11416, 6723] J=[0.62, 0.93, 0.98, 0.98, 0.97, 0.97, 0.97, 0.97, 0.95, 0.89]
+07:53:31 city_capital Pennsylvania L18: 21.0s pool=13 ref5=[16257, 12097, 9864, 8298, 7373] J=[0.4, 0.49, 0.59, 0.62, 0.64, 0.65, 0.64, 0.62, 0.57, 0.5]
+07:53:53 city_capital Michigan L18: 21.6s pool=13 ref5=[14868, 6723, 9475, 6600, 12522] J=[0.55, 0.72, 0.81, 0.81, 0.87, 0.86, 0.83, 0.81, 0.77, 0.7]
+07:54:06 city_capital Illinois L18: 12.8s pool=13 ref5=[14792] J=[0.99, 0.99, 0.98, 0.97, 0.97, 0.96, 0.95, 0.89, 0.87, 0.77]
+07:54:21 city_capital Georgia L18: 15.5s pool=14 ref5=[5465, 5477, 1132] J=[0.91, 0.98, 0.98, 0.98, 0.98, 0.97, 0.97, 0.97, 0.96, 0.95]
+07:54:36 city_capital Arizona L18: 15.1s pool=13 ref5=[10472, 15025, 2099] J=[0.99, 0.99, 0.99, 0.99, 0.98, 0.98, 0.97, 0.96, 0.95, 0.92]
+07:55:01 city_capital Washington L18: 24.2s pool=14 ref5=[8019, 15931, 4400, 15025] J=[0.3, 0.62, 0.84, 0.88, 0.88, 0.87, 0.87, 0.87, 0.86, 0.81]
+07:55:14 city_capital Massachusetts L18: 13.9s pool=13 ref5=[16377, 11925] J=[0.82, 0.99, 0.99, 0.98, 0.97, 0.95, 0.93, 0.91, 0.88, 0.83]
+done 556s peak_gpu 6.63 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label latentknockout-sweep-ks -- /opt/pytorch/bin/python -m tasks.latentknockout.sweep /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0636_validate2/validated.json /home/ec2-user/wt/latentknockout/runs/latentknockout/20261002T0642_sweep/cells_ks --layers 12 18 --families city_capital --refonly --ks_contrast"
+	User time (seconds): 556.93
+	System time (seconds): 3.99
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:19.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281280
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 580499
+	Voluntary context switches: 14651
+	Involuntary context switches: 5945
+	Swaps: 0
+	File system inputs: 200
+	File system outputs: 3024
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
