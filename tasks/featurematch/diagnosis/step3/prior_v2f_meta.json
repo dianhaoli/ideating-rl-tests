@@ -1,0 +1,79 @@
+{
+ "what": "planted-answer label frequencies of the FILTERED generator (write_v2f restricted tables), disjoint seeds; same format as tasks/featurematch/prior.json",
+ "seeds": {
+  "T1": [
+   9000,
+   9299
+  ],
+  "T2": [
+   109000,
+   109299
+  ],
+  "T3": [
+   209000,
+   209299
+  ]
+ },
+ "eval_pool_seeds": {
+  "T1": [
+   8000,
+   8059
+  ],
+  "T2": [
+   108000,
+   108059
+  ],
+  "T3": [
+   208000,
+   208059
+  ]
+ },
+ "n_instances": 900,
+ "n_slots": 3585,
+ "n_planted_slots": 2164,
+ "n_labels": 74,
+ "draw_errors": {},
+ "key_check_sha256": "eba3fb4af79ef28ea3cde89c7a6099f94d37b53def1fdeccfb36f3ef82112ba4",
+ "top10": [
+  [
+   "text written in Thai",
+   66
+  ],
+  [
+   "article about a galaxy",
+   63
+  ],
+  [
+   "article about a soap character",
+   63
+  ],
+  [
+   "article about a baronet",
+   62
+  ],
+  [
+   "article about a US Supreme Court case",
+   60
+  ],
+  [
+   "text written in Swahili",
+   58
+  ],
+  [
+   "article about a cultivated plant variety",
+   57
+  ],
+  [
+   "article about a solar eclipse",
+   55
+  ],
+  [
+   "text written in German",
+   54
+  ],
+  [
+   "text written in Arabic",
+   53
+  ]
+ ]
+}

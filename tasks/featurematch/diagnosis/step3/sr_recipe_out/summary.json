@@ -1,0 +1,1542 @@
+{
+ "label": "filtered v2 pool (instances_v2f)",
+ "instances_dir": "/home/ec2-user/wt/fmdiag/tasks/featurematch/instances_v2f",
+ "n_instances": 180,
+ "pool_sha256": "b212728fc859866f1a5bb8578fd67bc1c5ebca015c98be5d27d436515dbc3dcb",
+ "git_sha": "3eaccce1b9cef89d1d1d85f06cd43dc35c489c90",
+ "bank": "R",
+ "bank_texts_sha256": "79cdbc740f6460145348e044cc14f1572036a04ffd57fdc200a27fab3140e2f0",
+ "bank_check": {
+  "n": 4640,
+  "texts_sha256_match": true,
+  "styles_match": true
+ },
+ "label_check": true,
+ "cache_files": {
+  "L18": {
+   "shape": [
+    4640,
+    16384
+   ],
+   "sha256": "70e1e5e89515d43ecd7662d11c83e68b4d6e0c54294404e83697ddf5d4f39f25",
+   "matches_cache_manifest": true
+  },
+  "L12": {
+   "shape": [
+    4640,
+    16384
+   ],
+   "sha256": "a6798d337c23e1acfe7edd4fc848845508e07b335bb500c8c3d2d35c501f4c9e",
+   "matches_cache_manifest": true
+  },
+  "L6": {
+   "shape": [
+    4640,
+    16384
+   ],
+   "sha256": "f35054c2203675af1f2ff3de5a61f0af7fe8656b551adabd8c4d95c162f8998b",
+   "matches_cache_manifest": true
+  }
+ },
+ "rule": {
+  "seed": 20261002,
+  "n_styles": 6,
+  "chosen_styles": [
+   "how-to tip",
+   "trivia question",
+   "personal anecdote told aloud",
+   "interview Q&A",
+   "sports-radio or radio-show style commentary",
+   "text message"
+  ],
+  "text_per_style": "first listed in the bank-R file",
+  "thr": 0.78,
+  "tie_break": "lowest option number",
+  "auroc": "reference_solver.auroc (ties 1/2), claimed option's texts vs the other options' texts"
+ },
+ "capped_rule": "A2.3: texts consumed in slot order up to instance.json caps.forward; within a slot style-round-robin over options (menu order)",
+ "bootstrap": {
+  "n": 10000,
+  "seed": 20261002,
+  "unit": "instance",
+  "interval": "percentile 2.5/97.5"
+ },
+ "variants": {
+  "SR-max": {
+   "selection": "sr6",
+   "thresholded": false,
+   "primary": true
+  },
+  "SR-thr": {
+   "selection": "sr6",
+   "thresholded": true,
+   "primary": true
+  },
+  "SR-max-capped": {
+   "selection": "sr6cap",
+   "thresholded": false,
+   "primary": false
+  },
+  "SR-thr-capped": {
+   "selection": "sr6cap",
+   "thresholded": true,
+   "primary": false
+  },
+  "SR-max-all20": {
+   "selection": "all20",
+   "thresholded": false,
+   "primary": false
+  },
+  "SR-thr-all20": {
+   "selection": "all20",
+   "thresholded": true,
+   "primary": false
+  }
+ },
+ "stop_rule": {
+  "valid_as_step3_outcome": true,
+  "rule": "fires if primary SR-max or SR-thr planted accuracy (all tiers pooled) > 0.5 with n_planted >= 100; borderline if every firing variant's Wilson 95% CI includes 0.5",
+  "n_planted_ok": true,
+  "per_variant": {
+   "SR-max": {
+    "planted_acc": 0.873,
+    "n_planted": 441,
+    "wilson95": [
+     0.8387,
+     0.9009
+    ],
+    "cluster_boot95": [
+     0.8398,
+     0.9035
+    ],
+    "above_thr": true,
+    "wilson_includes_thr": false
+   },
+   "SR-thr": {
+    "planted_acc": 0.7302,
+    "n_planted": 441,
+    "wilson95": [
+     0.6869,
+     0.7695
+    ],
+    "cluster_boot95": [
+     0.6884,
+     0.7706
+    ],
+    "above_thr": true,
+    "wilson_includes_thr": false
+   }
+  },
+  "firing_variants": [
+   "SR-max",
+   "SR-thr"
+  ],
+  "fires": true,
+  "borderline": false,
+  "text_selection_sensitive": false,
+  "labels": [
+   "fires"
+  ]
+ },
+ "metrics": {
+  "SR-max": {
+   "all": {
+    "n_instances": 180,
+    "pass": 17,
+    "pass_rate": 0.0944,
+    "pass_wilson95": [
+     0.0598,
+     0.146
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.873,
+    "planted_acc_wilson95": [
+     0.8387,
+     0.9009
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8398,
+     0.9035
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 284,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1567,
+    "forward_units_mean": 483.3,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 22,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 0
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 5,
+    "pass_rate": 0.0833,
+    "pass_wilson95": [
+     0.0361,
+     0.1807
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.8954,
+    "planted_acc_wilson95": [
+     0.8369,
+     0.9346
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8452,
+     0.9387
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 95,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1494,
+    "forward_units_mean": 496.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 9,
+    "pass_rate": 0.15,
+    "pass_wilson95": [
+     0.081,
+     0.2611
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.9128,
+    "planted_acc_wilson95": [
+     0.8565,
+     0.9483
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8623,
+     0.9551
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 87,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1944,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 3,
+    "pass_rate": 0.05,
+    "pass_wilson95": [
+     0.0171,
+     0.137
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.8058,
+    "planted_acc_wilson95": [
+     0.7321,
+     0.8629
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7372,
+     0.8705
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 102,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1261,
+    "forward_units_mean": 482.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 22,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 0
+   }
+  },
+  "SR-thr": {
+   "all": {
+    "n_instances": 180,
+    "pass": 68,
+    "pass_rate": 0.3778,
+    "pass_wilson95": [
+     0.3102,
+     0.4505
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.7302,
+    "planted_acc_wilson95": [
+     0.6869,
+     0.7695
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6884,
+     0.7706
+    ],
+    "planted_nothing_found_rate": 0.229,
+    "n_null": 284,
+    "null_false_claim_rate": 0.1303,
+    "mean_score": 0.6691,
+    "forward_units_mean": 483.3,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 22,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 0
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 18,
+    "pass_rate": 0.3,
+    "pass_wilson95": [
+     0.199,
+     0.4251
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.7255,
+    "planted_acc_wilson95": [
+     0.6499,
+     0.79
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6575,
+     0.7895
+    ],
+    "planted_nothing_found_rate": 0.2353,
+    "n_null": 95,
+    "null_false_claim_rate": 0.1263,
+    "mean_score": 0.6392,
+    "forward_units_mean": 496.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 27,
+    "pass_rate": 0.45,
+    "pass_wilson95": [
+     0.3309,
+     0.5751
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.7718,
+    "planted_acc_wilson95": [
+     0.6981,
+     0.8319
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6972,
+     0.8435
+    ],
+    "planted_nothing_found_rate": 0.2215,
+    "n_null": 87,
+    "null_false_claim_rate": 0.1034,
+    "mean_score": 0.7236,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 23,
+    "pass_rate": 0.3833,
+    "pass_wilson95": [
+     0.2709,
+     0.5098
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.6906,
+    "planted_acc_wilson95": [
+     0.6095,
+     0.7615
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6116,
+     0.7651
+    ],
+    "planted_nothing_found_rate": 0.2302,
+    "n_null": 102,
+    "null_false_claim_rate": 0.1569,
+    "mean_score": 0.6444,
+    "forward_units_mean": 482.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 22,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 0
+   }
+  },
+  "SR-max-capped": {
+   "all": {
+    "n_instances": 180,
+    "pass": 17,
+    "pass_rate": 0.0944,
+    "pass_wilson95": [
+     0.0598,
+     0.146
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.873,
+    "planted_acc_wilson95": [
+     0.8387,
+     0.9009
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8398,
+     0.9035
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 284,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1567,
+    "forward_units_mean": 477.2,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 22
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 5,
+    "pass_rate": 0.0833,
+    "pass_wilson95": [
+     0.0361,
+     0.1807
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.8954,
+    "planted_acc_wilson95": [
+     0.8369,
+     0.9346
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8452,
+     0.9387
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 95,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1494,
+    "forward_units_mean": 496.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 9,
+    "pass_rate": 0.15,
+    "pass_wilson95": [
+     0.081,
+     0.2611
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.9128,
+    "planted_acc_wilson95": [
+     0.8565,
+     0.9483
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8623,
+     0.9551
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 87,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1944,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 3,
+    "pass_rate": 0.05,
+    "pass_wilson95": [
+     0.0171,
+     0.137
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.8058,
+    "planted_acc_wilson95": [
+     0.7321,
+     0.8629
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7372,
+     0.8705
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 102,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1261,
+    "forward_units_mean": 463.7,
+    "forward_units_max": 550,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 22
+   }
+  },
+  "SR-thr-capped": {
+   "all": {
+    "n_instances": 180,
+    "pass": 68,
+    "pass_rate": 0.3778,
+    "pass_wilson95": [
+     0.3102,
+     0.4505
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.7324,
+    "planted_acc_wilson95": [
+     0.6892,
+     0.7716
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6911,
+     0.7719
+    ],
+    "planted_nothing_found_rate": 0.2245,
+    "n_null": 284,
+    "null_false_claim_rate": 0.1373,
+    "mean_score": 0.6672,
+    "forward_units_mean": 477.2,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 22
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 18,
+    "pass_rate": 0.3,
+    "pass_wilson95": [
+     0.199,
+     0.4251
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.7255,
+    "planted_acc_wilson95": [
+     0.6499,
+     0.79
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6575,
+     0.7895
+    ],
+    "planted_nothing_found_rate": 0.2353,
+    "n_null": 95,
+    "null_false_claim_rate": 0.1263,
+    "mean_score": 0.6392,
+    "forward_units_mean": 496.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 27,
+    "pass_rate": 0.45,
+    "pass_wilson95": [
+     0.3309,
+     0.5751
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.7718,
+    "planted_acc_wilson95": [
+     0.6981,
+     0.8319
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6972,
+     0.8435
+    ],
+    "planted_nothing_found_rate": 0.2215,
+    "n_null": 87,
+    "null_false_claim_rate": 0.1034,
+    "mean_score": 0.7236,
+    "forward_units_mean": 472.0,
+    "forward_units_max": 600,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 0,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 23,
+    "pass_rate": 0.3833,
+    "pass_wilson95": [
+     0.2709,
+     0.5098
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.6978,
+    "planted_acc_wilson95": [
+     0.617,
+     0.768
+    ],
+    "planted_acc_cluster_boot95": [
+     0.6212,
+     0.7692
+    ],
+    "planted_nothing_found_rate": 0.2158,
+    "n_null": 102,
+    "null_false_claim_rate": 0.1765,
+    "mean_score": 0.6389,
+    "forward_units_mean": 463.7,
+    "forward_units_max": 550,
+    "n_over_forward_cap": 0,
+    "n_episodes_needing_more_than_cap": 22,
+    "n_slots_truncated": 22
+   }
+  },
+  "SR-max-all20": {
+   "all": {
+    "n_instances": 180,
+    "pass": 28,
+    "pass_rate": 0.1556,
+    "pass_wilson95": [
+     0.1099,
+     0.2156
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.9637,
+    "planted_acc_wilson95": [
+     0.9419,
+     0.9775
+    ],
+    "planted_acc_cluster_boot95": [
+     0.9446,
+     0.9803
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 284,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1763,
+    "forward_units_mean": 1611.1,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 145,
+    "n_episodes_needing_more_than_cap": 145,
+    "n_slots_truncated": 0
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 10,
+    "pass_rate": 0.1667,
+    "pass_wilson95": [
+     0.0931,
+     0.2803
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.9804,
+    "planted_acc_wilson95": [
+     0.9439,
+     0.9933
+    ],
+    "planted_acc_cluster_boot95": [
+     0.9554,
+     1.0
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 95,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.18,
+    "forward_units_mean": 1653.3,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 46,
+    "n_episodes_needing_more_than_cap": 46,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 11,
+    "pass_rate": 0.1833,
+    "pass_wilson95": [
+     0.1056,
+     0.2992
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.9664,
+    "planted_acc_wilson95": [
+     0.9239,
+     0.9856
+    ],
+    "planted_acc_cluster_boot95": [
+     0.9353,
+     0.9932
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 87,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.2056,
+    "forward_units_mean": 1573.3,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 39,
+    "n_episodes_needing_more_than_cap": 39,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 7,
+    "pass_rate": 0.1167,
+    "pass_wilson95": [
+     0.0577,
+     0.2218
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.9424,
+    "planted_acc_wilson95": [
+     0.8905,
+     0.9706
+    ],
+    "planted_acc_cluster_boot95": [
+     0.8978,
+     0.9787
+    ],
+    "planted_nothing_found_rate": 0.0,
+    "n_null": 102,
+    "null_false_claim_rate": 1.0,
+    "mean_score": 0.1433,
+    "forward_units_mean": 1606.7,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 60,
+    "n_episodes_needing_more_than_cap": 60,
+    "n_slots_truncated": 0
+   }
+  },
+  "SR-thr-all20": {
+   "all": {
+    "n_instances": 180,
+    "pass": 104,
+    "pass_rate": 0.5778,
+    "pass_wilson95": [
+     0.5047,
+     0.6476
+    ],
+    "n_planted": 441,
+    "planted_acc": 0.8322,
+    "planted_acc_wilson95": [
+     0.7945,
+     0.8642
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7981,
+     0.8655
+    ],
+    "planted_nothing_found_rate": 0.1633,
+    "n_null": 284,
+    "null_false_claim_rate": 0.0739,
+    "mean_score": 0.8011,
+    "forward_units_mean": 1611.1,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 145,
+    "n_episodes_needing_more_than_cap": 145,
+    "n_slots_truncated": 0
+   },
+   "T1": {
+    "n_instances": 60,
+    "pass": 33,
+    "pass_rate": 0.55,
+    "pass_wilson95": [
+     0.4249,
+     0.6691
+    ],
+    "n_planted": 153,
+    "planted_acc": 0.8301,
+    "planted_acc_wilson95": [
+     0.7626,
+     0.8813
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7721,
+     0.8839
+    ],
+    "planted_nothing_found_rate": 0.1699,
+    "n_null": 95,
+    "null_false_claim_rate": 0.0632,
+    "mean_score": 0.7975,
+    "forward_units_mean": 1653.3,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 46,
+    "n_episodes_needing_more_than_cap": 46,
+    "n_slots_truncated": 0
+   },
+   "T2": {
+    "n_instances": 60,
+    "pass": 37,
+    "pass_rate": 0.6167,
+    "pass_wilson95": [
+     0.4902,
+     0.7291
+    ],
+    "n_planted": 149,
+    "planted_acc": 0.8523,
+    "planted_acc_wilson95": [
+     0.7866,
+     0.9004
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7895,
+     0.9085
+    ],
+    "planted_nothing_found_rate": 0.1409,
+    "n_null": 87,
+    "null_false_claim_rate": 0.0575,
+    "mean_score": 0.8111,
+    "forward_units_mean": 1573.3,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 39,
+    "n_episodes_needing_more_than_cap": 39,
+    "n_slots_truncated": 0
+   },
+   "T3": {
+    "n_instances": 60,
+    "pass": 34,
+    "pass_rate": 0.5667,
+    "pass_wilson95": [
+     0.441,
+     0.6843
+    ],
+    "n_planted": 139,
+    "planted_acc": 0.8129,
+    "planted_acc_wilson95": [
+     0.74,
+     0.869
+    ],
+    "planted_acc_cluster_boot95": [
+     0.7519,
+     0.8722
+    ],
+    "planted_nothing_found_rate": 0.1799,
+    "n_null": 102,
+    "null_false_claim_rate": 0.098,
+    "mean_score": 0.7947,
+    "forward_units_mean": 1606.7,
+    "forward_units_max": 2000,
+    "n_over_forward_cap": 60,
+    "n_episodes_needing_more_than_cap": 60,
+    "n_slots_truncated": 0
+   }
+  }
+ },
+ "text_selection_sensitivity": {
+  "note": "A2.2; 21 style seeds x first/second text, primary included; numpy linear percentiles",
+  "n_selections": 42,
+  "planted_acc": {
+   "SR-max": {
+    "n": 42,
+    "min": 0.8617,
+    "p10": 0.878,
+    "median": 0.907,
+    "p90": 0.9318,
+    "max": 0.9546
+   },
+   "SR-thr": {
+    "n": 42,
+    "min": 0.6893,
+    "p10": 0.7236,
+    "median": 0.7573,
+    "p90": 0.8182,
+    "max": 0.873
+   },
+   "SR-thr null false claim": {
+    "n": 42,
+    "min": 0.088,
+    "p10": 0.0989,
+    "median": 0.1321,
+    "p90": 0.1725,
+    "max": 0.1901
+   }
+  },
+  "all20_planted_acc": {
+   "SR-max-all20": 0.9637,
+   "SR-thr-all20": 0.8322
+  },
+  "straddles_0.50": {
+   "SR-max": false,
+   "SR-thr": false
+  },
+  "text_selection_sensitive": false,
+  "flag_rule": "p10 <= 0.50 < p90 for SR-max or SR-thr",
+  "runs": [
+   {
+    "seed": 20261002,
+    "text_index": 0,
+    "primary": true,
+    "styles": [
+     "how-to tip",
+     "trivia question",
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "sports-radio or radio-show style commentary",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.873,
+    "sr_thr_planted_acc": 0.7302,
+    "sr_thr_null_false_claim": 0.1303
+   },
+   {
+    "seed": 20261002,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "how-to tip",
+     "trivia question",
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "sports-radio or radio-show style commentary",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.8957,
+    "sr_thr_planted_acc": 0.6893,
+    "sr_thr_null_false_claim": 0.1232
+   },
+   {
+    "seed": 20261003,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "email to a friend",
+     "trivia question",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "interview Q&A",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.8957,
+    "sr_thr_planted_acc": 0.7619,
+    "sr_thr_null_false_claim": 0.1549
+   },
+   {
+    "seed": 20261003,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "email to a friend",
+     "trivia question",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "interview Q&A",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.8866,
+    "sr_thr_planted_acc": 0.7256,
+    "sr_thr_null_false_claim": 0.1197
+   },
+   {
+    "seed": 20261004,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "how-to tip",
+     "email to a friend",
+     "museum or exhibit placard",
+     "interview Q&A",
+     "trivia question",
+     "sports-radio or radio-show style commentary"
+    ],
+    "sr_max_planted_acc": 0.898,
+    "sr_thr_planted_acc": 0.7642,
+    "sr_thr_null_false_claim": 0.1585
+   },
+   {
+    "seed": 20261004,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "how-to tip",
+     "email to a friend",
+     "museum or exhibit placard",
+     "interview Q&A",
+     "trivia question",
+     "sports-radio or radio-show style commentary"
+    ],
+    "sr_max_planted_acc": 0.8844,
+    "sr_thr_planted_acc": 0.7415,
+    "sr_thr_null_false_claim": 0.0986
+   },
+   {
+    "seed": 20261005,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "text message",
+     "trivia question",
+     "interview Q&A",
+     "headline plus lede",
+     "email to a friend"
+    ],
+    "sr_max_planted_acc": 0.9184,
+    "sr_thr_planted_acc": 0.8186,
+    "sr_thr_null_false_claim": 0.1373
+   },
+   {
+    "seed": 20261005,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "text message",
+     "trivia question",
+     "interview Q&A",
+     "headline plus lede",
+     "email to a friend"
+    ],
+    "sr_max_planted_acc": 0.9274,
+    "sr_thr_planted_acc": 0.7506,
+    "sr_thr_null_false_claim": 0.088
+   },
+   {
+    "seed": 20261006,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "museum or exhibit placard",
+     "how-to tip",
+     "trivia question",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.9274,
+    "sr_thr_planted_acc": 0.7755,
+    "sr_thr_null_false_claim": 0.1232
+   },
+   {
+    "seed": 20261006,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "museum or exhibit placard",
+     "how-to tip",
+     "trivia question",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.898,
+    "sr_thr_planted_acc": 0.7483,
+    "sr_thr_null_false_claim": 0.0951
+   },
+   {
+    "seed": 20261007,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "how-to tip",
+     "museum or exhibit placard",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.898,
+    "sr_thr_planted_acc": 0.7528,
+    "sr_thr_null_false_claim": 0.1338
+   },
+   {
+    "seed": 20261007,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "how-to tip",
+     "museum or exhibit placard",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.8934,
+    "sr_thr_planted_acc": 0.7188,
+    "sr_thr_null_false_claim": 0.1303
+   },
+   {
+    "seed": 20261008,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "email to a friend",
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "press release",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.9546,
+    "sr_thr_planted_acc": 0.873,
+    "sr_thr_null_false_claim": 0.1479
+   },
+   {
+    "seed": 20261008,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "email to a friend",
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "press release",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.9161,
+    "sr_thr_planted_acc": 0.7891,
+    "sr_thr_null_false_claim": 0.1021
+   },
+   {
+    "seed": 20261009,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "sports-radio or radio-show style commentary",
+     "how-to tip",
+     "text message",
+     "email to a friend",
+     "headline plus lede"
+    ],
+    "sr_max_planted_acc": 0.9342,
+    "sr_thr_planted_acc": 0.7732,
+    "sr_thr_null_false_claim": 0.1725
+   },
+   {
+    "seed": 20261009,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "sports-radio or radio-show style commentary",
+     "how-to tip",
+     "text message",
+     "email to a friend",
+     "headline plus lede"
+    ],
+    "sr_max_planted_acc": 0.873,
+    "sr_thr_planted_acc": 0.7528,
+    "sr_thr_null_false_claim": 0.1162
+   },
+   {
+    "seed": 20261010,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "email to a friend",
+     "trivia question",
+     "how-to tip",
+     "press release"
+    ],
+    "sr_max_planted_acc": 0.8753,
+    "sr_thr_planted_acc": 0.7664,
+    "sr_thr_null_false_claim": 0.1725
+   },
+   {
+    "seed": 20261010,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "email to a friend",
+     "trivia question",
+     "how-to tip",
+     "press release"
+    ],
+    "sr_max_planted_acc": 0.907,
+    "sr_thr_planted_acc": 0.7438,
+    "sr_thr_null_false_claim": 0.0915
+   },
+   {
+    "seed": 20261011,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "personal anecdote told aloud",
+     "trivia question",
+     "how-to tip",
+     "press release",
+     "email to a friend"
+    ],
+    "sr_max_planted_acc": 0.9161,
+    "sr_thr_planted_acc": 0.8073,
+    "sr_thr_null_false_claim": 0.1444
+   },
+   {
+    "seed": 20261011,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "personal anecdote told aloud",
+     "trivia question",
+     "how-to tip",
+     "press release",
+     "email to a friend"
+    ],
+    "sr_max_planted_acc": 0.898,
+    "sr_thr_planted_acc": 0.746,
+    "sr_thr_null_false_claim": 0.0986
+   },
+   {
+    "seed": 20261012,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "press release",
+     "email to a friend",
+     "text message",
+     "sports-radio or radio-show style commentary",
+     "trivia question",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9297,
+    "sr_thr_planted_acc": 0.839,
+    "sr_thr_null_false_claim": 0.169
+   },
+   {
+    "seed": 20261012,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "press release",
+     "email to a friend",
+     "text message",
+     "sports-radio or radio-show style commentary",
+     "trivia question",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.932,
+    "sr_thr_planted_acc": 0.8141,
+    "sr_thr_null_false_claim": 0.1056
+   },
+   {
+    "seed": 20261013,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "trivia question",
+     "sports-radio or radio-show style commentary",
+     "interview Q&A",
+     "museum or exhibit placard",
+     "personal anecdote told aloud",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.9184,
+    "sr_thr_planted_acc": 0.7506,
+    "sr_thr_null_false_claim": 0.1444
+   },
+   {
+    "seed": 20261013,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "trivia question",
+     "sports-radio or radio-show style commentary",
+     "interview Q&A",
+     "museum or exhibit placard",
+     "personal anecdote told aloud",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.8617,
+    "sr_thr_planted_acc": 0.6984,
+    "sr_thr_null_false_claim": 0.1268
+   },
+   {
+    "seed": 20261014,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "text message",
+     "how-to tip",
+     "trivia question",
+     "press release",
+     "interview Q&A",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.8957,
+    "sr_thr_planted_acc": 0.7732,
+    "sr_thr_null_false_claim": 0.1479
+   },
+   {
+    "seed": 20261014,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "text message",
+     "how-to tip",
+     "trivia question",
+     "press release",
+     "interview Q&A",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9138,
+    "sr_thr_planted_acc": 0.746,
+    "sr_thr_null_false_claim": 0.1338
+   },
+   {
+    "seed": 20261015,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "trivia question",
+     "sports-radio or radio-show style commentary",
+     "text message",
+     "email to a friend",
+     "personal anecdote told aloud"
+    ],
+    "sr_max_planted_acc": 0.8821,
+    "sr_thr_planted_acc": 0.7302,
+    "sr_thr_null_false_claim": 0.1725
+   },
+   {
+    "seed": 20261015,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "trivia question",
+     "sports-radio or radio-show style commentary",
+     "text message",
+     "email to a friend",
+     "personal anecdote told aloud"
+    ],
+    "sr_max_planted_acc": 0.8912,
+    "sr_thr_planted_acc": 0.7234,
+    "sr_thr_null_false_claim": 0.1092
+   },
+   {
+    "seed": 20261016,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "how-to tip",
+     "text message",
+     "press release",
+     "museum or exhibit placard",
+     "trivia question",
+     "interview Q&A"
+    ],
+    "sr_max_planted_acc": 0.8957,
+    "sr_thr_planted_acc": 0.7732,
+    "sr_thr_null_false_claim": 0.1479
+   },
+   {
+    "seed": 20261016,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "how-to tip",
+     "text message",
+     "press release",
+     "museum or exhibit placard",
+     "trivia question",
+     "interview Q&A"
+    ],
+    "sr_max_planted_acc": 0.9138,
+    "sr_thr_planted_acc": 0.746,
+    "sr_thr_null_false_claim": 0.1338
+   },
+   {
+    "seed": 20261017,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "email to a friend",
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "personal anecdote told aloud",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.9229,
+    "sr_thr_planted_acc": 0.8073,
+    "sr_thr_null_false_claim": 0.1796
+   },
+   {
+    "seed": 20261017,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "museum or exhibit placard",
+     "email to a friend",
+     "sports-radio or radio-show style commentary",
+     "headline plus lede",
+     "personal anecdote told aloud",
+     "text message"
+    ],
+    "sr_max_planted_acc": 0.9138,
+    "sr_thr_planted_acc": 0.7279,
+    "sr_thr_null_false_claim": 0.1092
+   },
+   {
+    "seed": 20261018,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "press release",
+     "trivia question",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9229,
+    "sr_thr_planted_acc": 0.8277,
+    "sr_thr_null_false_claim": 0.1479
+   },
+   {
+    "seed": 20261018,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "interview Q&A",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "press release",
+     "trivia question",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9342,
+    "sr_thr_planted_acc": 0.805,
+    "sr_thr_null_false_claim": 0.1303
+   },
+   {
+    "seed": 20261019,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "trivia question",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "sports-radio or radio-show style commentary",
+     "interview Q&A",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9138,
+    "sr_thr_planted_acc": 0.7937,
+    "sr_thr_null_false_claim": 0.1901
+   },
+   {
+    "seed": 20261019,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "trivia question",
+     "personal anecdote told aloud",
+     "headline plus lede",
+     "sports-radio or radio-show style commentary",
+     "interview Q&A",
+     "museum or exhibit placard"
+    ],
+    "sr_max_planted_acc": 0.9093,
+    "sr_thr_planted_acc": 0.7483,
+    "sr_thr_null_false_claim": 0.1303
+   },
+   {
+    "seed": 20261020,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "trivia question",
+     "email to a friend",
+     "press release"
+    ],
+    "sr_max_planted_acc": 0.907,
+    "sr_thr_planted_acc": 0.7937,
+    "sr_thr_null_false_claim": 0.1725
+   },
+   {
+    "seed": 20261020,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "sports-radio or radio-show style commentary",
+     "personal anecdote told aloud",
+     "interview Q&A",
+     "trivia question",
+     "email to a friend",
+     "press release"
+    ],
+    "sr_max_planted_acc": 0.907,
+    "sr_thr_planted_acc": 0.7166,
+    "sr_thr_null_false_claim": 0.1092
+   },
+   {
+    "seed": 20261021,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "text message",
+     "press release",
+     "email to a friend",
+     "interview Q&A",
+     "trivia question",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.8957,
+    "sr_thr_planted_acc": 0.7823,
+    "sr_thr_null_false_claim": 0.169
+   },
+   {
+    "seed": 20261021,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "text message",
+     "press release",
+     "email to a friend",
+     "interview Q&A",
+     "trivia question",
+     "how-to tip"
+    ],
+    "sr_max_planted_acc": 0.9093,
+    "sr_thr_planted_acc": 0.7732,
+    "sr_thr_null_false_claim": 0.1021
+   },
+   {
+    "seed": 20261022,
+    "text_index": 0,
+    "primary": false,
+    "styles": [
+     "personal anecdote told aloud",
+     "museum or exhibit placard",
+     "how-to tip",
+     "email to a friend",
+     "headline plus lede",
+     "trivia question"
+    ],
+    "sr_max_planted_acc": 0.9342,
+    "sr_thr_planted_acc": 0.8231,
+    "sr_thr_null_false_claim": 0.1514
+   },
+   {
+    "seed": 20261022,
+    "text_index": 1,
+    "primary": false,
+    "styles": [
+     "personal anecdote told aloud",
+     "museum or exhibit placard",
+     "how-to tip",
+     "email to a friend",
+     "headline plus lede",
+     "trivia question"
+    ],
+    "sr_max_planted_acc": 0.8776,
+    "sr_thr_planted_acc": 0.7302,
+    "sr_thr_null_false_claim": 0.1056
+   }
+  ]
+ },
+ "elapsed_s": 10.0
+}

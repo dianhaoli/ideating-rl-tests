@@ -1,0 +1,10 @@
+# Per-episode and per-slot outputs on the filtered pool hold per-slot planted/null truth and the solvers'
+# submissions (effectively the answer key; docs/DECISIONS.md D6). Never commit them. Only aggregates
+# (baselines_public.json, sr_recipe_out/summary.json, run_meta.json, BASELINES.md) are committed.
+*_private.jsonl
+**/episodes_private.jsonl
+sr_recipe_out/answers.jsonl
+sr_recipe_out/slots.csv
+*.log
+*.npy
+*.npz

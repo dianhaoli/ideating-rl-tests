@@ -1,0 +1,45 @@
+{
+ "label": "in-process (inproc_gates.py path via diagnosis/step3/inproc_step3.py; NOT through the broker)",
+ "pool": {
+  "n_instances": 180,
+  "manifest_sha256": "6a3cada6335736a6b3b0af8785dc95872823005cb3a221e6c2812e0341498b71",
+  "pool_sha256": "b212728fc859866f1a5bb8578fd67bc1c5ebca015c98be5d27d436515dbc3dcb",
+  "concepts_sha256": "cf52ab631f1c31c7c5fb25637b4b44d8976b13cf4f02ee5ca38d0c0a688e25e8",
+  "key_check_sha256": "eba3fb4af79ef28ea3cde89c7a6099f94d37b53def1fdeccfb36f3ef82112ba4"
+ },
+ "n_instances_run": 180,
+ "solvers": [
+  "recipe_nothing",
+  "recipe_always_claim",
+  "recipe_prior",
+  "recipe_prior_or_none",
+  "recipe_prior@v2f",
+  "recipe_prior_or_none@v2f",
+  "recipe_random",
+  "recipe_name_probe",
+  "recipe_name_probe_thr",
+  "recipe_vocab_match",
+  "blackbox",
+  "recipe_template_probe",
+  "reference",
+  "recipe_self_probe"
+ ],
+ "ref_tries": 5,
+ "seeds": "1000*k+7 (k=0 for every solver; reference k=0..4, stop at first pass)",
+ "model_service_socket": null,
+ "corpus": "/home/ec2-user/wt/featurematch/tasks/featurematch/cache/concepts.json (sha256 checked vs manifest concepts_sha256)",
+ "prior_v2f_sha256": "1fb89923eefca46521f31445ac5b090341950ef90de245ea892ef9359418d95f",
+ "prior_v1_sha256": "fa6ea4f10de21d5d26386fd56d438af65d3bf32ee6187015233607990609010b",
+ "generate_memo": {
+  "misses": 148,
+  "hits": 4202,
+  "verified": 25,
+  "mismatches": 0,
+  "distinct_prompts": 148,
+  "n_verify": 25
+ },
+ "n_episodes": 2523,
+ "n_crashed": 0,
+ "elapsed_s": 3354.9,
+ "git_sha": "e63f09a0b6829aa185ecdd985ccdccc2e69b3029"
+}
