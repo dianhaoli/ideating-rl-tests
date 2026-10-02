@@ -203,3 +203,12 @@ events, orchestration decisions and gate summaries, with links.
   recover their concept on independently written probe texts).
 - Also: docs/PLAN_PROMPT.md had been truncated to 0 bytes (uncommitted, cause unknown, probably a stray write by an
   agent). Restored from git.
+
+## 2026-10-02 01:25 UTC: FeatureMatch diagnosis study started (Dan's brief; D14)
+- Plan: tasks/featurematch/diagnosis/PLAN.md on branch diag/featurematch (worktree ~/wt/fmdiag).
+- Phase A workflow (wf_5412322c-af1) has started. It covers: PREREG.md (step 0), the tool/task clarity audit (step 1), and
+  infrastructure: harness prepare options (--prompt-template, --min-submit-frac, --extra-file) plus a shared FeatureMatch
+  model service so the study stays at <= 2 GPU jobs. It also covers two independently written style banks (F = filter,
+  R = style-robust recipe), 232 concepts x 20 texts each, with 8 writer agents per bank.
+- Nothing is measured until PREREG.md is committed. All agent experiments will use fresh Claude Code subagents only
+  (no hosted API, per Dan's brief).
