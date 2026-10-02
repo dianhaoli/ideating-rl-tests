@@ -344,3 +344,19 @@ Workflow wf_95ca39e9-284 (7 agents). STEP3.md (fmdiag 22111857); skeptic 0fa8c45
   **LatentKnockout feasibility relaunched** (wf_aec58fc3-341, D15 order): predictions committed first, feasibility (GPU),
   precedent survey, two skeptics (reproduction, shortcut hunt), synthesis with GO/ADJUST/NO-GO. The FeatureMatch lessons
   are built into the prompts.
+
+## 2026-10-02 (~07:40 UTC): FeatureMatch deliverables done; corrections to the 07:00 entry
+- RESULTS.md (12k words) and the one-page VERDICT.md are on diag/featurematch (5dc9fb88, revised 24c39b9b) after a numbers audit
+  (~600 numbers checked; 22 discrepancies, 2 material) and an overclaim review (18 findings). All were fixed and none rejected.
+- **Corrections to my 07:00 entry:**
+  - The "format cue" mechanism (18/30 vs 0/15) comes from one unblinded LLM reader, and a scripted check does not reproduce the split. Treat it as
+    suggestive. Better-supported numbers: dropped low-firing latents fire on 0.40 of encyclopedia-style bank texts vs 0.10 of
+    on-concept texts that name an instance.
+  - Name filter: 188/201 topic concepts have a style-robust latent anchored on them, and 57/201 have one kept. The name filter was
+    *involved* in 84% of the exclusions but was the *only* reason in 35%.
+  - The memorisation numbers come from a simulation with full answer labels (nearest-neighbour learner), not from RL training.
+- **New, strengthens the verdict:** even the ORIGINAL unfiltered v2 pool fails the recipe gate. A fixed script that writes one probe
+  per option with the task's own `generate` tool, within budget, gets 0.441 [0.395, 0.488] planted accuracy (gate 0.15).
+  The style filter made this worse (0.571) but did not create it.
+- FeatureMatch status: **explored, not validated** (diagnosis complete, verdict "Not interpretability"). The PLAN's 3
+  example transcripts do not exist on v2/v2f because no agent ran, so RESULTS points to the v1 forensics episodes, labelled v1.
