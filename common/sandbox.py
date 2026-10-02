@@ -550,9 +550,40 @@ def _run_grader(rec, sub_path, grade_path):
     return g
 
 
+# ---- task codename in the agent's OWN files (2026-10-02, FeatureMatch audit MINOR 8a).
+# The codename is a private string so that private task material copied into the sandbox is caught. But the codenames
+# are ordinary English compounds of the task's subject ("featurematch", "latentdiff", "freqhunt"), so an agent can
+# coin one by itself, e.g. by naming a script featurematching.py. That one word is not evidence of a leak, and it
+# made the episode INVALID. Rule now:
+# - harness-written files (TASK.md as written, tool, py, .episode, unedited extra files) and the names of tool-written
+#   arrays (out/*.npy): the bare codename is still a leak (harness text must never contain it);
+# - files the agent wrote (contents and names): the codename is a leak only in a form that names the privileged side,
+#   which an agent cannot coin: a repo path or module path (tasks/<codename>, runs/<codename>, wt/<codename>,
+#   tasks.<codename>) or the canary prefix (RLCANARY-<codename>). The bare word is only counted
+#   (grade.json harness.agent_files_with_codename) so a reviewer can look.
+# Every other private string (instance dir and id, repo paths, episode registry) stays a leak anywhere, and the
+# canary and its hex tail stay leaks anywhere. Reading the repo is caught by the transcript audit (R2/R3) in any case.
+def _codename_set(task):
+    return {v for v in codename_variants(task or "") if len(v) >= 6}
+
+
+def _codename_privileged_rx(codenames):
+    alts = "|".join(re.escape(c) for c in sorted(codenames, key=len, reverse=True))
+    return re.compile(r"(?<![a-z0-9_])(?:(?:tasks|runs|wt)[/\\.](?:" + alts + r")(?=$|[/\\.\s'\"`,;:)\]}])"
+                      r"|rlcanary-(?:" + alts + r"))")
+
+
+def _split_private_hits(hit_idx, private, codenames):
+    """Private-string hit indices -> (non-codename hits, codename hits)."""
+    other = [i for i in hit_idx if private[i] not in codenames]
+    return other, [i for i in hit_idx if private[i] in codenames]
+
+
 def _scan_sandbox(rec):
     """Scan the sandbox at finish (file contents AND file names):
-    - canary or a private string (instance path/id, repo path, codename) anywhere => leak;
+    - canary or a private string (instance path/id, repo path) anywhere => leak; the task codename => leak in
+      harness files and tool-written array names, but in the agent's own files only in a repo-path/canary form
+      (the bare word is counted in agent_files_with_codename; see the comment above _codename_set);
     - leak_strings in harness-written files (TASK.md as written, tool, py, .episode) or in the names of
       tool-written arrays (out/*.npy) => leak;
     - leak_strings in files the agent wrote are expected when it found the answer, so they are only
@@ -585,15 +616,26 @@ def _scan_sandbox(rec):
         except OSError:
             return False
 
-    res = {"leak": False, "reasons": [], "agent_files_with_leak_strings": 0, "n_files": 0, "symlinks_outside": []}
+    codenames = _codename_set(rec.get("task")) & set(private or [])
+    cn_rx = _codename_privileged_rx(codenames) if codenames else None
+    res = {"leak": False, "reasons": [], "agent_files_with_leak_strings": 0, "n_files": 0, "symlinks_outside": [],
+           "agent_files_with_codename": []}
+
+    def codename_is_leak(text):
+        return bool(cn_rx and cn_rx.search(leakscan.norm_keep_ws(text)))
+
     for dp, dns, fns in os.walk(sbx):
         for fn in sorted(fns + [d for d in dns if os.path.islink(os.path.join(dp, d))]):
             p = os.path.join(dp, fn)
             rel = os.path.relpath(p, sbx)
             name_hit = leakscan.scan_text(rel, canary, leaks, private)
-            if name_hit["canary"] or name_hit["private"]:
+            tool_array = rel.startswith("out" + os.sep) and rel.endswith(".npy")
+            n_other, n_cn = _split_private_hits(name_hit["private"], private, codenames)
+            if name_hit["canary"] or n_other or (n_cn and (tool_array or codename_is_leak(rel))):
                 res["leak"] = True
                 res["reasons"].append("canary or private string in a file name")
+            elif n_cn and rel not in res["agent_files_with_codename"]:
+                res["agent_files_with_codename"].append(rel)
             if name_hit["leak_strings"]:
                 if rel.startswith("out" + os.sep) and rel.endswith(".npy"):
                     res["leak"] = True
@@ -612,14 +654,21 @@ def _scan_sandbox(rec):
             except OSError:
                 continue
             hit = leakscan.scan_text(text, canary, leaks, private)
+            harness_file = (rel in ("TASK.md", "tool", "py", ".episode") or rel in extra_sha) and same_as_written(rel, p)
             if hit["canary"]:
                 res["leak"] = True
                 res["reasons"].append(f"canary in sandbox file {rel}")
-            if hit["private"]:
+            h_other, h_cn = _split_private_hits(hit["private"], private, codenames)
+            if h_other:
                 res["leak"] = True
                 res["reasons"].append(f"private string (instance path/id, repo path or codename) in sandbox file {rel}")
+            elif h_cn and (harness_file or codename_is_leak(text)):
+                res["leak"] = True
+                res["reasons"].append(f"task codename in a harness file or in a repo-path/canary form in sandbox file {rel}")
+            elif h_cn and rel not in res["agent_files_with_codename"]:
+                res["agent_files_with_codename"].append(rel)
             if hit["leak_strings"]:
-                if (rel in ("TASK.md", "tool", "py", ".episode") or rel in extra_sha) and same_as_written(rel, p):
+                if harness_file:
                     res["leak"] = True
                     res["reasons"].append(f"leak_string in harness file {rel}")
                 else:
@@ -659,7 +708,62 @@ def _scan_tool_log(rec, log_path):
     return res
 
 
-def finish(episode, transcripts=None, agent_model=None, search_root=None):
+# ---- infrastructure failures and broken scripted solvers (2026-10-02; LatentDiff audit MAJOR-2, FeatureMatch audit
+# MINOR 8b). WHY: an episode that never got compute, or whose tool server died and never came back, and that then
+# ended without a submission, was graded valid:true with score 0. Every reader (summaries, gates, RL rewards) then
+# counted an infrastructure problem as the solver failing the task, which biases every "must fail" gate toward
+# passing and every pass rate down. Such episodes are now INVALID with reason `infra_failure`.
+# Infrastructure-failure entries in the tool log (none of them can be produced by a tool's own error handling):
+#   - a response "tool server failed to start; try again later" (GPU-queue admission timeout, or the model load crashed);
+#   - the event client_disconnected_while_waiting (the client gave up, or was killed, while queued for compute);
+#   - the event server_stopped with reason "server died" or "found dead" (the tool-server process died: OOM, crash,
+#     RAM-cap kill; the in-flight call returned "tool failed (internal error)").
+# The episode is `infra_failure` only if it has no submission AND no successful task-tool call came after the last
+# such entry (it never recovered). An episode that recovered and then ran out of time is an ordinary fail.
+INFRA_ERROR_PREFIXES = ("tool server failed to start",)
+INFRA_EVENTS = ("client_disconnected_while_waiting",)
+INFRA_STOP_REASONS = ("server died", "found dead")
+BUILTIN_TOOLS = ("help", "budget", "submit")
+
+
+def tool_log_health(log_path):
+    """{"infra_failures": [{"n", "kind"}], "n_ok_task_calls": int, "recovered": bool} from a tool log."""
+    fails, n_ok, recovered = [], 0, True
+    try:
+        f = open(log_path)
+    except OSError:
+        return {"infra_failures": [], "n_ok_task_calls": 0, "recovered": True}
+    with f:
+        for line in f:
+            try:
+                e = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            kind = None
+            if e.get("event") in INFRA_EVENTS:
+                kind = e["event"]
+            elif e.get("event") == "server_stopped" and e.get("reason") in INFRA_STOP_REASONS:
+                kind = "server_" + e["reason"].replace(" ", "_")
+            elif e.get("event") is None and e.get("ok") is False:
+                try:
+                    err = str((json.loads(e.get("response") or "{}") or {}).get("error") or "")
+                except (json.JSONDecodeError, AttributeError):
+                    err = ""
+                if err.startswith(INFRA_ERROR_PREFIXES):
+                    kind = "server_failed_to_start"
+            if kind:
+                fails.append({"n": e.get("n"), "kind": kind})
+                recovered = False
+            elif e.get("event") is None and e.get("ok") is True and e.get("tool") not in BUILTIN_TOOLS:
+                n_ok += 1
+                recovered = True
+    return {"infra_failures": fails, "n_ok_task_calls": n_ok, "recovered": recovered}
+
+
+def finish(episode, transcripts=None, agent_model=None, search_root=None, solver_rc=None):
+    """Grade, scan and audit one episode. solver_rc: the scripted solver's exit code (run-scripted passes it; an int,
+    or "timeout"). With it, the episode is INVALID if rc != 0 (`solver_failed`) or if the solver made no successful
+    task-tool call and did not submit (`no_successful_call`)."""
     rp = broker.record_path(episode)
     rec = _load_json(rp)
     if rec is None:
@@ -719,6 +823,15 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
     msc = min_submit_check(rec)
     if msc and msc["bypassed"]:
         invalid.append("min_submit_bypassed")
+    submitted = rec.get("submission") is not None
+    health = tool_log_health(log_dst)
+    if not submitted and health["infra_failures"] and not health["recovered"]:
+        invalid.append("infra_failure")
+    if solver_rc is not None:
+        if solver_rc != 0:
+            invalid.append("solver_failed")
+        if not submitted and health["n_ok_task_calls"] == 0:
+            invalid.append("no_successful_call")
     end = rec.get("submitted_at") or rec.get("closed_at") or time.time()
     grade["harness"] = {
         "episode": episode, "task": rec["task"], "instance_id": rec.get("instance_id"), "tier": rec.get("tier"),
@@ -728,7 +841,10 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
         "leak_detected": leak, "leak_reasons": [r for e in rec.get("leak_events", []) for r in e["reasons"]]
         + sbx_scan["reasons"] + log_scan["reasons"],
         "agent_files_with_leak_strings": sbx_scan["agent_files_with_leak_strings"],
+        "agent_files_with_codename": sbx_scan["agent_files_with_codename"],
         "symlinks_outside": sbx_scan["symlinks_outside"],
+        "solver_rc": solver_rc, "infra_failures": health["infra_failures"],
+        "n_ok_task_calls": health["n_ok_task_calls"],
         "cross_episode_access": bool(rec.get("cross_episode_access")),
         "audit_valid": audit["valid"], "audit_skipped": audit.get("skipped"),
         "n_audit_violations": len(audit["violations"]),
@@ -804,7 +920,7 @@ def run_scripted(task, solver, instances, profile, run_dir, repeats=1, solver_la
                                         timeout=rec["caps"]["wall_clock_s"] + 1800).returncode
                 except subprocess.TimeoutExpired:
                     rc = "timeout"
-            g = finish(eid)
+            g = finish(eid, solver_rc=rc)
             h = g["harness"]
             row = {"episode": eid, "instance_id": h["instance_id"], "repeat": r, "solver_rc": rc,
                    "pass": bool(g.get("pass")), "score": g.get("score"), "valid": h["valid"],
@@ -951,6 +1067,8 @@ def main():
     f.add_argument("--transcript", nargs="*", default=None)
     f.add_argument("--agent-model", default=None)
     f.add_argument("--search-root", default=None)
+    f.add_argument("--solver-rc", default=None,
+                   help="scripted solver's exit code (or 'timeout'): rc != 0 or no successful call and no submit => INVALID")
     r = sub.add_parser("run-scripted")
     r.add_argument("--task", required=True)
     r.add_argument("--solver", required=True)
@@ -977,7 +1095,10 @@ def main():
             print(ep["prompt"])
             print("----- END PROMPT -----")
     elif a.cmd == "finish":
-        g = finish(a.episode, a.transcript, a.agent_model, a.search_root)
+        rc = a.solver_rc
+        if rc is not None and re.fullmatch(r"-?\d+", rc):
+            rc = int(rc)
+        g = finish(a.episode, a.transcript, a.agent_model, a.search_root, solver_rc=rc)
         h = g["harness"]
         print(json.dumps({"episode": a.episode, "pass": g.get("pass"), "score": g.get("score"), "valid": h["valid"],
                           "invalid_reasons": h["invalid_reasons"], "submitted": h["submitted"]}))

@@ -168,3 +168,58 @@ Through the broker, both kinds give byte-identical TASK.md, identical output sha
    are not listed in `leak_strings` are not detected.
 5. **Wall-clock includes the agent's own thinking time between calls.** This is by design, but it means an
    agent's model latency affects whether it hits the cap.
+
+## 9. Builder-reported false positives and validity gaps (2026-10-02)
+
+Builders reported episodes the transcript audit marked INVALID although the agent stayed inside its sandbox, and
+episodes graded valid that should not count. Each false positive was first reproduced by re-auditing the recorded
+transcript with the unchanged audit, then fixed with the narrowest rule change. Each fix has a WHY comment in the
+code and regression tests in `common/tests/test_audit_validity_fixes.py`: the cited command must now be VALID, and
+a twin that really reaches outside through the same construct must still be INVALID.
+
+| Item | Cited episode(s) | What fired | Change |
+|---|---|---|---|
+| a. R9 `exec()` | latentdiff probe 2 (epb7d011c482), silentpathway probe 2 (ep29ef1a245b); also boolintermediates probes 2-3 | `exec(open('scratch/an.py').read().split("...")[0])`: the agent reusing its own helper script | exec of a literal sandbox file (optionally split at a literal marker) is allowed; it runs what `./py file` runs. Computed paths, outside files, `..`, transformed or decoded text stay R9 |
+| b1. R2 sed | silentpathway probe 2 (ep29ef1a245b) | a sed script `s/...\/.../.../; /print(T('run'/d`: the `/regex/d` address read as the paths `/print`, `/d` | the regexes inside the script of a real top-level `sed` command are skipped by the path scan. Everything sed can read, write or execute stays visible. This replaces the 2026-10-01 rule that skipped every s///-shaped text anywhere, which was broader than needed |
+| b2. R2 "/ (filesystem root)" | silentpathway probe 4 (ep13c6a7b805) | `grad_path.split('/')[-1]` in a heredoc script: the quoted `'/'` | a quoted `'/'` that is the first argument of a splitting/trimming/testing string method is a separator. `'/'.join`, `os.path.join('/', ...)`, `os.listdir('/')` still fire |
+| c. R4 netcat | residualrecall probes 1 (ep0965d14ab3) and 3 (ep9e37e0db6f) | `...;nc=json.loads(...)`, `nc=14` at a line start: a Python variable | the client name must be used as a command (end of line, or an argument after whitespace) |
+| d. codename | featurematch audit MINOR 8a | the bare word "featurematch" in an agent's own file | see below |
+| e. scripted solver | latentdiff audit MAJOR-2 | crashed or starved scripted solvers graded valid, score 0 | `run-scripted` passes the rc to `finish`: rc != 0 => `solver_failed`; no successful task-tool call and no submission => `no_successful_call` |
+| f. infrastructure | featurematch audit MINOR 8b; latentdiff MAJOR-2 | queue timeout / tool-server death with no submission graded valid, score 0 | `infra_failure` (any solver): no submission, an infrastructure failure in the tool log, and no successful task-tool call after it |
+
+**d. The codename rule, and why.** Codename matching exists to catch private task material (spec, notes, generator,
+grader, instance files) copied into the sandbox. The premise was that an agent has no legitimate way to know the
+codename. That holds for paths and ids but not for the codenames: they are plain compounds of the task's subject
+("featurematch", "latentdiff", "freqhunt"), and an agent can coin one, e.g. by naming a script
+`featurematching.py`. So in files the agent wrote (contents and names), the bare word is now counted
+(`agent_files_with_codename`, for review) but not a leak. It is still a leak (INVALID) where it can only come from the
+privileged side: in harness-written files and tool-written array names, and in the agent's files in a repo-path,
+module-path or canary form (`tasks/<cn>`, `runs/<cn>`, `wt/<cn>`, `tasks.<cn>`, `RLCANARY-<cn>`). Instance paths and
+ids, repo paths and the canary (with its hex tail) remain leaks anywhere. Copied instance files carry the canary.
+Reading the repo at all is caught by the transcript audit (R2/R3), which is the primary control. What this gives up:
+a copy of task prose that mentions the codename only as a bare word is now counted rather than invalidated; the
+count is in `grade.json`, so a reviewer still sees it.
+
+**f. What counts as infrastructure.** Only log entries a tool's own code cannot produce: the broker's
+"tool server failed to start" response, the event `client_disconnected_while_waiting`, and `server_stopped` with
+reason `server died` / `found dead`. A tool's own exception ("tool failed (internal error)" with the server still
+up), a per-call timeout and idle eviction are not infrastructure. An episode that recovered (a successful task-tool
+call after the failure) and then did not submit stays an ordinary valid fail. Limitation: a broker or machine crash
+that writes no log entry is not detected for LLM episodes (for scripted ones the rc catches it).
+
+**Checks run.**
+- Re-audit of all 95 recorded LLM-agent transcripts (main repo and task worktrees; read-only): 10 INVALID before,
+  2 after. The 8 that changed are exactly the cited probes plus boolintermediates probes 2-3 (same exec pattern) and
+  t2ravel probe 1 (a quoted `/` inside a sed s///). No episode that was VALID changed. The 2 still INVALID: a real
+  absolute path outside the sandbox (shifthunt probe 4, `sys.path.insert(0, '/opt/python/...')`) and t2ravel probe 2
+  (`print(a, '/', b)`: a quoted `'/'` as a print argument; not fixed, because exempting it safely would need real
+  parsing of the enclosing call).
+- The new false-positive tests were run against the unchanged audit: 11 of 14 fire there (the other 3 are sed uses
+  the 2026-10-01 rule already allowed, kept as guards for the narrower sed rule). 20 of 21 twins fired there too; the
+  21st (s///-shaped text outside a sed command) fires only with the new rule.
+- Infrastructure rule on the cited run dirs (read-only): all 5 unsubmitted episodes in
+  featurematch `20261001-200623_audit_harness_density_null` and latentdiff `20261001-204812_audit_rarefreq` /
+  `20261001-220045_audit_rarefreq_harness` are `infra_failure`; their submitted episodes are unaffected. Over all
+  8,256 recorded episodes, 28 currently-valid unsubmitted episodes would become `infra_failure`; 1 that recovered
+  and then did not submit stays valid.
+- Full suite: 250 passed, 1 skipped (the GPU smoke test, RL_SKIP_GPU=1).

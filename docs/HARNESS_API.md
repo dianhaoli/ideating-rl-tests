@@ -177,6 +177,20 @@ searching `~/.claude/projects/` for the episode id. The episode is INVALID if an
 - (added after review, D13) reaches outside without a literal path: `ln`/symlinks, `cd -`, bare `cd`, `$OLDPWD`,
   `${PWD%...}`, `dirname`, Python `os.environ`/`getenv`/`expanduser`/`Path.home()`/`cwd().parent`; or runs
   decode-and-execute commands (`base64 -d`, `eval`, `exec(`, `b64decode`) (R9).
+- (2026-10-02, builder-reported false positives) NOT violations:
+  - `exec(open('scratch/x.py').read())` on the agent's own sandbox file named by a string literal (relative without
+    `..`, or absolute inside the sandbox), optionally `.split('<literal>')[i]` (run the part before a marker) and
+    `, globals()`. It runs what `./py scratch/x.py` runs. exec of a computed path, of a file outside the sandbox, of
+    transformed or decoded text, or of anything else is still R9.
+  - the regexes and replacement text inside the script of a `sed` command run by the top-level shell (`s/a\/b/c/`,
+    `/re/d` addresses). sed's file arguments, `-f` files, the files of `r R w W` and `s///w`, commands run by `e`
+    or `s///e`, and scripts with `$`/backtick expansion are still path-checked. s///-shaped text that is not a sed
+    script is path-checked too (before, any such text was skipped).
+  - a quoted `'/'` that is the first argument of `.split/.rsplit/.partition/.strip/.lstrip/.rstrip/.startswith/
+    .endswith/.count/.find/.index/.replace/.removeprefix/.removesuffix`. `'/'.join`, `os.path.join('/', ...)`,
+    `os.listdir('/')`, `Path('/')` are still the filesystem root.
+  - a Python variable named like a network client (`nc=json.loads(...)`, `nc = 5`, `A[:n+nc]`). The client name
+    must be followed by the end of the line or by an argument (`nc -zv host 80`, `| nc host 9000`) to fire R4.
 The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[]}`.
 
 ## 8. Run directories
@@ -287,6 +301,30 @@ Refinements to the spec above:
   a non-empty `grader_error` and INVALID.
 - New `grade.json` harness fields: `symlinks_outside`, `cross_episode_access`. New invalid reasons:
   `cross_episode_access`, `sandbox_symlink_outside`.
+
+### Validity fixes (2026-10-02; docs/HARNESS_VERIFICATION.md section 9)
+- **Infrastructure failures are INVALID** (reason `infra_failure`; every solver type): the episode has no
+  submission, its tool log records an infrastructure failure (a "tool server failed to start" response = GPU-queue
+  admission timeout or model-load crash; the event `client_disconnected_while_waiting` = the client gave up or was
+  killed while queued for compute; `server_stopped` with reason `server died`/`found dead` = the tool-server process
+  died), and no successful task-tool call came after the last such failure. An episode that recovered and then
+  ended without a submission is still an ordinary fail (valid, score 0). Not infrastructure: a tool's own error
+  (including "tool failed (internal error)" while the server stays up), a per-call timeout, idle eviction.
+  A broker or machine crash that leaves no log entry is not detected here (run-scripted catches it via the rc).
+- **Broken scripted solvers are INVALID**: `run-scripted` passes the solver's exit code to `finish` (also
+  `finish --solver-rc N`; Python `finish(..., solver_rc=N)`). rc != 0 or `"timeout"` => `solver_failed`; no
+  successful task-tool call (help/budget/submit do not count) and no submission => `no_successful_call`.
+- New `grade.json` harness fields: `solver_rc` (null unless given), `infra_failures` ([{n, kind}]),
+  `n_ok_task_calls`, `agent_files_with_codename`. New invalid reasons: `infra_failure`, `solver_failed`,
+  `no_successful_call`. Summaries already exclude INVALID episodes and count reasons in `invalid_reasons`.
+- **Task codename in the agent's own files** (finish-time sandbox scan): the bare codename word (e.g. a script the
+  agent named `featurematching.py`) is no longer a leak; it is counted in `agent_files_with_codename`. It is still
+  a leak in harness-written files (TASK.md as written, `tool`, `py`, `.episode`, unedited extra files) and in
+  tool-written array names (`out/*.npy`), and in the agent's files when it appears in a form that names the
+  privileged side: `tasks/<codename>`, `runs/<codename>`, `wt/<codename>`, `tasks.<codename>`, `RLCANARY-<codename>`.
+  All other private strings (instance dir and id, repo paths) and the canary stay leaks anywhere. The live
+  tool-response scan is unchanged (a tool must never emit the codename).
+  Tests: `common/tests/test_audit_validity_fixes.py`.
 
 ### prepare options (2026-10-02, D14)
 - `--prompt-template`, `--min-submit-frac`, `--extra-file`: see section 5. New `grade.json` harness fields:
