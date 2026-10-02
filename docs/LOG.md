@@ -322,3 +322,25 @@ wf_352c134a-502 (old session e4652089).
   dropped latents fire on and whether style-robust latents exist outside the pool; fingerprint mechanism and
   label-only exploitability), the step-3 baselines (in-process, one GPU job), a skeptic (re-grades and hunts new cheap
   recipes), and STEP3.md.
+
+## 2026-10-02 (~07:00 UTC): FeatureMatch diagnosis VERDICT: stop rule fired, "Not interpretability"; LatentKnockout resumed
+Workflow wf_95ca39e9-284 (7 agents). STEP3.md (fmdiag 22111857); skeptic 0fa8c454; re-implementation 3eaccce1.
+- **Stop rule fires, not borderline, not text-selection-sensitive.** On the filtered pool (180 episodes, 441 planted / 284
+  null slots), the style-robust recipe SR-max (6 styled texts per option, pick the max, no reasoning) gets planted accuracy
+  385/441 = **0.873** [0.839, 0.901]. Topic slots alone: 0.829 [0.785, 0.866]. SR-thr 0.730. Reference one-shot 441/441 = 1.000.
+  The pre-registered sentence applies: **"FeatureMatch is mostly measuring style, not interpretability"** (pa(SR-max)/pa(ref) = 0.873).
+  Step 4 (agent arms) does not run.
+- Robust to the method: the skeptic re-graded all 3,603 episodes (0 mismatches) and re-implemented SR (725/725 identical
+  decisions). Run through the live tool path, SR gets 0.875. Text selection spans 0.862-0.955. A script that uses only the task's own
+  `generate` tool within budget gets 0.571. Gates also fail on this pool: self_probe 0.204, template_probe 0.288 (bar 0.15).
+- Step 2 verified: an independent re-implementation matches 5017/5017 latents. Blind bank audit: 800/800 texts on-concept.
+  Mechanism: dropped topic latents mostly fire on encyclopedia formatting cues (18/30 vs 0/15 kept). Styled-text fire rate is 25% vs 82%.
+  **Every topic concept (201/201) has style-robust latents in the SAE, but the generator's name filter (an
+  anti-shortcut rule) was involved in excluding 84% of them.** That rule selected format-cue latents.
+- Fingerprint: 0.616 (P6 protocol), 0.683 on a larger held-out test. A memorising label-only policy passes 16.4% of
+  filtered episodes (planted accuracy 0.58; v2: 0.33). Evaluating on held-out latents removes it (0.057).
+- Predictions: many misses (we expected ~40% filter survival and got 7%; P11 predicted SR 0.75 and got 0.87).
+- Next: write-up workflow wf_7144a333-59e (RESULTS.md + one-page VERDICT.md, numbers audit, overclaim critic, revision).
+  **LatentKnockout feasibility relaunched** (wf_aec58fc3-341, D15 order): predictions committed first, feasibility (GPU),
+  precedent survey, two skeptics (reproduction, shortcut hunt), synthesis with GO/ADJUST/NO-GO. The FeatureMatch lessons
+  are built into the prompts.
