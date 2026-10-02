@@ -1,0 +1,108 @@
+{
+ "what": "FeatureMatch diagnosis step 2: max-pooled SAE activations of bank F/R texts",
+ "generator_summary": "tasks/featurematch/fm_core.py Subject.maxpool_acts",
+ "git_sha": "827191afd6165a796cb86bdd8b73c6e535b5e2f7",
+ "src_cache": "/home/ec2-user/wt/featurematch/tasks/featurematch/cache",
+ "consistency_vs_acts_A": {
+  "L6": {
+   "n_texts": 32,
+   "max_abs_diff": 0.0,
+   "frac_entries_equal": 1.0,
+   "frac_active_entries_equal": 1.0,
+   "jaccard_active_sets": 1.0,
+   "median_rel_diff_both_active": 0.0,
+   "pearson_r": 1.0,
+   "max_activation_ref": 72.125
+  },
+  "L12": {
+   "n_texts": 32,
+   "max_abs_diff": 0.0,
+   "frac_entries_equal": 1.0,
+   "frac_active_entries_equal": 1.0,
+   "jaccard_active_sets": 1.0,
+   "median_rel_diff_both_active": 0.0,
+   "pearson_r": 1.0,
+   "max_activation_ref": 375.0
+  },
+  "L18": {
+   "n_texts": 32,
+   "max_abs_diff": 0.0,
+   "frac_entries_equal": 1.0,
+   "frac_active_entries_equal": 1.0,
+   "jaccard_active_sets": 1.0,
+   "median_rel_diff_both_active": 0.0,
+   "pearson_r": 1.0,
+   "max_activation_ref": 112.75
+  }
+ },
+ "elapsed_s": 108.6,
+ "files": {
+  "bank_acts_L12_F.npy": {
+   "bytes": 152043648,
+   "sha256": "7cf9177eb5846da2be3e1968c408d8ff1eed8ebaa957094c8aebd48fda2a49f2",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_acts_L12_R.npy": {
+   "bytes": 152043648,
+   "sha256": "a6798d337c23e1acfe7edd4fc848845508e07b335bb500c8c3d2d35c501f4c9e",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_acts_L18_F.npy": {
+   "bytes": 152043648,
+   "sha256": "a688f907eef90b1d81933171c61d7fda1fc008a824b62827014c87f4e0c82cf1",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_acts_L18_R.npy": {
+   "bytes": 152043648,
+   "sha256": "70e1e5e89515d43ecd7662d11c83e68b4d6e0c54294404e83697ddf5d4f39f25",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_acts_L6_F.npy": {
+   "bytes": 152043648,
+   "sha256": "6b873af6950496e4301e41f98ce75e6332d56fc39cb833f75694f686beb8ff72",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_acts_L6_R.npy": {
+   "bytes": 152043648,
+   "sha256": "f35054c2203675af1f2ff3de5a61f0af7fe8656b551adabd8c4d95c162f8998b",
+   "shape": [
+    4640,
+    16384
+   ],
+   "dtype": "float16"
+  },
+  "bank_meta.json": {
+   "bytes": 450946,
+   "sha256": "e4869ed19191b41b8ed31a8fa278db75ae77dbd8c1d450611cf9c4c96b07dc37"
+  }
+ },
+ "dry_run": false,
+ "device": "cuda",
+ "torch": "2.13.0+cu130",
+ "model_path": "cache/gemma-2-2b-bf16",
+ "sae": {
+  "L6": "fd571b47c1c64851e9b1989792367b9babb4af63/layer_6/width_16k/average_l0_70/params.npz",
+  "L12": "fd571b47c1c64851e9b1989792367b9babb4af63/layer_12/width_16k/average_l0_82/params.npz",
+  "L18": "fd571b47c1c64851e9b1989792367b9babb4af63/layer_18/width_16k/average_l0_74/params.npz"
+ }
+}

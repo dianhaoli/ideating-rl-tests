@@ -1,0 +1,2530 @@
+{
+ "generator": "tasks/featurematch/generate.py (v2, pool restricted to A1.1-kept latents) via tasks/featurematch/diagnosis/write_v2f.py",
+ "filter_version": "v2f-A1.1",
+ "gen_version": 2,
+ "mode": "regenerate",
+ "key_check_sha256": "eba3fb4af79ef28ea3cde89c7a6099f94d37b53def1fdeccfb36f3ef82112ba4",
+ "concepts_sha256": "cf52ab631f1c31c7c5fb25637b4b44d8976b13cf4f02ee5ca38d0c0a688e25e8",
+ "instances": [
+  {
+   "instance_id": "fm-t1-779fde9d89",
+   "tier": "T1",
+   "seed": 8000,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7f170e4c7559fde3a09a21f314aa8c547ff7e2f5b364e2f8c22cc3f986ca15ca",
+    "public.json": "747f864c044996d3e9949f96ecdcd548c7fa4264c39896de6b8fe35c77be5bdb"
+   }
+  },
+  {
+   "instance_id": "fm-t1-51c9e6969a",
+   "tier": "T1",
+   "seed": 8001,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c78dded9f73487a2a883c22c2e28b005529d0bf4d00da5ce9f5ca215d0d24942",
+    "public.json": "856968b567edb26f129a5637baf2abdd50d88b0b450e9e665ce6d924caf39bfb"
+   }
+  },
+  {
+   "instance_id": "fm-t1-05e14b9b88",
+   "tier": "T1",
+   "seed": 8002,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "fc26bc3ce8da2cbbc0dbd0a01140d5cacbab8357829b35bcc3f6fd78deb9e54b",
+    "public.json": "6ebc297bf3c8e6d8b84355a94c3d8239feec16849eea313ff048dacd2f530764"
+   }
+  },
+  {
+   "instance_id": "fm-t1-d87553502d",
+   "tier": "T1",
+   "seed": 8003,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4a67af6ab01577b0de856d4567b593818ee5f8c067c301aaabab89ddecb97c71",
+    "public.json": "65350028276e3419d7a28663a60086356f1e58c2e5926122337a6859844b02ee"
+   }
+  },
+  {
+   "instance_id": "fm-t1-dc5c1e12a1",
+   "tier": "T1",
+   "seed": 8004,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "35df1c80700bb57dc5eb8dad5afa1a51094db738c0ef70bc43dc07b52ab557fb",
+    "public.json": "a96eabfc813701bad58a9ced920f467963fbfcd4d95d59d13b2251fb482bd1c8"
+   }
+  },
+  {
+   "instance_id": "fm-t1-ec4612a479",
+   "tier": "T1",
+   "seed": 8005,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "ddc79ebc60979ddae06c4d416784172dc6864061c0e0de626ed2b06966cd1c1c",
+    "public.json": "3633b2194d27f5616ac4bf60b276bc679d607e41ee2e4d2b16d518e323eb2eca"
+   }
+  },
+  {
+   "instance_id": "fm-t1-df2a66411d",
+   "tier": "T1",
+   "seed": 8006,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7d627624253a8bc9b2b8bac13427eb0ceeb7f69a7335dd561df84fc65741327e",
+    "public.json": "f57571f45b24947514385bf782d6e2b094f07c4f39068e9424de1ea7a075a30c"
+   }
+  },
+  {
+   "instance_id": "fm-t1-d0565b45ba",
+   "tier": "T1",
+   "seed": 8007,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "da2d9e65a6b4738b00454a49c56741cd7e0d17984afa7e0576ec07c4c757d8cb",
+    "public.json": "b94db24450a9149d8d7cd05300f7ec623426bb5a95456ac1bb6bf05304fb9b91"
+   }
+  },
+  {
+   "instance_id": "fm-t1-3872c047f5",
+   "tier": "T1",
+   "seed": 8008,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "833c46b97f7bf197865bcdca53e441a2ddfe619c62175f2654c8538b677e0a15",
+    "public.json": "eeca5d258c5f4c93d8ea38c409a43927afd868f0305e30aa20ca7b223d3bbc4d"
+   }
+  },
+  {
+   "instance_id": "fm-t1-11c5ba785c",
+   "tier": "T1",
+   "seed": 8009,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7354fdabdf1c3c58523a19874fe3257b6db2699ac842cbb0c4061c565af38e8a",
+    "public.json": "40617feed1cce5d62bc4309c0e92fce9044287cb6c469a5d3f03005e294a369c"
+   }
+  },
+  {
+   "instance_id": "fm-t1-51c07b8341",
+   "tier": "T1",
+   "seed": 8010,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c81652087c9b7990fdc02f742e024b9c5e2a10ec154feb7e7d5398bf6224e942",
+    "public.json": "d5430f403b9220b67af582b8bfed5f6327d3afbcb4142a13a3bb657919e516f7"
+   }
+  },
+  {
+   "instance_id": "fm-t1-f2e82a483d",
+   "tier": "T1",
+   "seed": 8011,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c641f4ec0e527cd72c93fda877a2e06ffa5f88505cde0ea82ba6434835df23ad",
+    "public.json": "c49e53ab3d902f4efda6abedeca9a300d8327c23419a99e17631bd3d6465c5ec"
+   }
+  },
+  {
+   "instance_id": "fm-t1-8df1f5e7c7",
+   "tier": "T1",
+   "seed": 8012,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "e6e84a8a9ba1723c34ac7811a5aedd6e4b1d986618b59edd351dbe53979e2c4c",
+    "public.json": "8a069a0861923fa3d0110f69edfa934a44d62222d38934eedb0fb795e774b7a7"
+   }
+  },
+  {
+   "instance_id": "fm-t1-1867f225f9",
+   "tier": "T1",
+   "seed": 8013,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8470a84176880ea1bcc025999b0f716ca64a635e643ace92782f186478dba636",
+    "public.json": "23a2fbe1bde597c62bb6c2cf4ab43d0faf6e5bddc8bef371fe5a0fabd1d89c33"
+   }
+  },
+  {
+   "instance_id": "fm-t1-d59016db9e",
+   "tier": "T1",
+   "seed": 8014,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4dba3426739c97f2080dd7bf299cb107f4c6ba97f05de0f4454a3ff27488407d",
+    "public.json": "44504ea213dadc1f12dda6046230bb75596d77fc94c2419f13fef24a00bd8bfa"
+   }
+  },
+  {
+   "instance_id": "fm-t1-c70a4dad4f",
+   "tier": "T1",
+   "seed": 8015,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "09408a1f0a22023880d5baaa08560d80ee96bc89c05f58ff607933fe0dc0828e",
+    "public.json": "deed6b62158ebbde8e4ab90172814929470b7e483543b399a7d476b6b2f15e9f"
+   }
+  },
+  {
+   "instance_id": "fm-t1-dfc3c5b9b0",
+   "tier": "T1",
+   "seed": 8016,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3497c6fcd7e46e7986b06e8a2326dd5f991e2c0f52c79beca24564fe44f2186e",
+    "public.json": "228c1b94dca2296d55e8319ad8bed0b03f2725d749cf5365e84c5760ed386191"
+   }
+  },
+  {
+   "instance_id": "fm-t1-07866e0ed6",
+   "tier": "T1",
+   "seed": 8017,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "6ad9349eee1f3496f158a03f396645afb6d6a53e7ab138d8c0e801ba71952bbf",
+    "public.json": "513d9168fdf825c3a019ce6e1cbdc9c297865ae35353d06023e81d4d2fe83723"
+   }
+  },
+  {
+   "instance_id": "fm-t1-edde548c98",
+   "tier": "T1",
+   "seed": 8018,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7af178639c615eb14e6e237b38303c94449e018ce5816446a25f6f2a6955541c",
+    "public.json": "f90c759574a2ae036bf74800699ded860c90875a2f2a6baeeaaed3dfdfa9f115"
+   }
+  },
+  {
+   "instance_id": "fm-t1-3db8d5a4b4",
+   "tier": "T1",
+   "seed": 8019,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d88821bd99bde37a3c7d3267c034247511fbedfc751375f1813e26c236235e8c",
+    "public.json": "c8cc932fdbb6ddfe5527417cc92b598fc384b5675795d2174a0f0d3a86d219b8"
+   }
+  },
+  {
+   "instance_id": "fm-t1-5a145d2828",
+   "tier": "T1",
+   "seed": 8020,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "a9500a7a4baeb462f2f1f4b618d3da82b54612559bb6110e1426adaf21f9b818",
+    "public.json": "9eaea468e6f54966e7433c206ec5a7a7a7afbba6910351f212e349e04f6d6c6e"
+   }
+  },
+  {
+   "instance_id": "fm-t1-a6459d55e3",
+   "tier": "T1",
+   "seed": 8021,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4cb6b2c2956236b8dff6996ad2e61a914de2f369a091505fec10444c602cd54a",
+    "public.json": "795d4dd63529264a0bf3dc6dd2c8d1c2236e9cafc45e671f81820a4434b306fb"
+   }
+  },
+  {
+   "instance_id": "fm-t1-097c92b056",
+   "tier": "T1",
+   "seed": 8022,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "0616d20f2fba402ec1df73dc670d16295671ef7f848e22e20c9d7cec9229d673",
+    "public.json": "645f24030eaebd92ecb5f367e004d0dbb8c74ff4471a9eafea97fca6ffa82c1f"
+   }
+  },
+  {
+   "instance_id": "fm-t1-5a30e64ddd",
+   "tier": "T1",
+   "seed": 8023,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "e62da03b90ba575534ff63ceb963b135788a416c5004c8c49312b31414edcbc4",
+    "public.json": "6645867cb70f4a7e4c1bf318d961c1c91098771fcb94913e5fb724d07147994b"
+   }
+  },
+  {
+   "instance_id": "fm-t1-9b7974fb5a",
+   "tier": "T1",
+   "seed": 8024,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "80b5ef6ff93622681e96c6e71310812d8e53c74f6ff3838ca18c776d4ba8a32c",
+    "public.json": "28a8f9c69bc8ada860ab774b7d90b9d5ed2008ab2aefc477604544f788d4ac69"
+   }
+  },
+  {
+   "instance_id": "fm-t1-361ee90f40",
+   "tier": "T1",
+   "seed": 8025,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "468f7e94c63bd3323ecb46db091769dabbf85bd46c00eed3bb4e64f3cfa1d896",
+    "public.json": "f27677d05fc70549f2f3dc57e43fa82744aa08386c937f16f031427b7cfbeb8d"
+   }
+  },
+  {
+   "instance_id": "fm-t1-5b8d362619",
+   "tier": "T1",
+   "seed": 8026,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c0c5b8de44c1369038f7af8d5793f33dbd5b3a0f2ddbe8975d4bc621cdd3d9f5",
+    "public.json": "4fb236779d50f05b5a26aee7de1fcd9d8b6ca040079fcbab2899ce693d931bfc"
+   }
+  },
+  {
+   "instance_id": "fm-t1-ca808609f2",
+   "tier": "T1",
+   "seed": 8027,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "658bbad833262fadfe7d8d8e20fbad529fd89f31a45190e8676937d2c454d748",
+    "public.json": "3341498ce3e564a17df939afbecaa95fa7a5ff396dc16020c7202440df0d82a1"
+   }
+  },
+  {
+   "instance_id": "fm-t1-f922e5f060",
+   "tier": "T1",
+   "seed": 8028,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "75c5722f1ead3a5fc8cbd25681afefbf2423a95767dc23b19161ef41051ddd35",
+    "public.json": "80ffa1d288e91412d3bac1b17debbd9981e821199fcbd5edd070ed20a8fe0e7b"
+   }
+  },
+  {
+   "instance_id": "fm-t1-80ac35e786",
+   "tier": "T1",
+   "seed": 8029,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4c706c99268690e4f64ad4b0be6039159e4169b0eaf9612ce3f0ed648dc9609d",
+    "public.json": "0e3467fc787ca8688aa44094bf0c0495c23743027e88580558ed1a00bf2ff324"
+   }
+  },
+  {
+   "instance_id": "fm-t1-673ba0a26f",
+   "tier": "T1",
+   "seed": 8030,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "774ed6d90707afa1c4380b31e01df6a3ff279b468b654c495b39eff61936c008",
+    "public.json": "419454f840fc3449f87cadf29b538c7328e2b5d1e32bd170107b22558721a31b"
+   }
+  },
+  {
+   "instance_id": "fm-t1-3ceb91d80c",
+   "tier": "T1",
+   "seed": 8031,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9b7c84c502a315ae12a91136c32276fc67240a43a8f4ef30a8733cbe0f6bce7b",
+    "public.json": "6dc9b662e02cb5e3fab8d02b4604d70d0c74cce9d4ddf5e16895bedbecac22fd"
+   }
+  },
+  {
+   "instance_id": "fm-t1-680210d6bb",
+   "tier": "T1",
+   "seed": 8032,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7e52b840b8168250d39e85ca8284a7b2ac6decc458b2383ed6079f3896ad0daf",
+    "public.json": "8ac9d8e2d17874cb7ef6d450e860b1bff55bcd0920293d7815963f27fc82e1ed"
+   }
+  },
+  {
+   "instance_id": "fm-t1-830bfc543d",
+   "tier": "T1",
+   "seed": 8033,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "5c9a06289fff0335e81602d33f14e5d5e225e578b645617fb3dce241988f532b",
+    "public.json": "2d982460c560ec98fc763c4230d8d595b08029f2c44d5767c5ae82ded45f70c3"
+   }
+  },
+  {
+   "instance_id": "fm-t1-639fcbb682",
+   "tier": "T1",
+   "seed": 8034,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8af40f25f2b4debecd7aac2e74b3d15549a9af63167d52e1e79db7d3f7736f9e",
+    "public.json": "92e1f0e0048073a2f6d8ac36bfd39e4a3dcb5729ef3a811186421c2199257153"
+   }
+  },
+  {
+   "instance_id": "fm-t1-7bd3fa67bc",
+   "tier": "T1",
+   "seed": 8035,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "88144281bf2e226cfd9fa39695cc4c5d7833d551fcb2f7bf22a79684ded1eaf4",
+    "public.json": "e42ee0944cfd04e401bdbf5d1c8088d7e4d9fb75dd8b58fb2d45b7eb4ceb8d51"
+   }
+  },
+  {
+   "instance_id": "fm-t1-81a2a3f4e4",
+   "tier": "T1",
+   "seed": 8036,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "bf6bb80de1aa9b4f7ab15782948518a5e28e7be449efdd80c02e4163ca9fb1b7",
+    "public.json": "34dcb75903de436bb1aa1d53535533342b5a03bde8846e74f7ddff9a79ce1a45"
+   }
+  },
+  {
+   "instance_id": "fm-t1-8a57f46e03",
+   "tier": "T1",
+   "seed": 8037,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "1513fe965894551ebbd54aaabc8659e06ec35405ae0242a48dbc166757ac2649",
+    "public.json": "eca43d4ea93c360008d679cc967ac0c51377d93eb789d7fe542d8a8b3204e502"
+   }
+  },
+  {
+   "instance_id": "fm-t1-53f24dae00",
+   "tier": "T1",
+   "seed": 8038,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d6331dbcbcb5a417fdb85a2f2411ed74fe9fba1a7df5c72054eb35319c61d2c3",
+    "public.json": "599b9282c3f663ac2d3b3394e540644cefe7f8eba6558382d759e84671627ee6"
+   }
+  },
+  {
+   "instance_id": "fm-t1-bc0fa683b9",
+   "tier": "T1",
+   "seed": 8039,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "604b433bd0ae1882c140b47ff66235393c2f109180e7c9bcc2008fdfc3d78c54",
+    "public.json": "7fd8eecc8f27520f45477f1d69637a51938d9bba0f2432242f675d5ea78174f0"
+   }
+  },
+  {
+   "instance_id": "fm-t1-ffcd02a3f2",
+   "tier": "T1",
+   "seed": 8040,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "5cde7ae6a1346f5f78547f6053bd48aa67610ec42ebe4bdb0feac331160e7eb0",
+    "public.json": "790d0eb9d3747ac13a9583a2b35e79b4eba6a521fbe7e35530ef46172ee4b5ef"
+   }
+  },
+  {
+   "instance_id": "fm-t1-f972c32052",
+   "tier": "T1",
+   "seed": 8041,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b544f1373fb1704c3bc30d05ea596cd9914a3cebfc44a4385ea06040a042a009",
+    "public.json": "dcfd0af1eb157239f08d95543af06949fe552e05101bdf718616c5bb630da39f"
+   }
+  },
+  {
+   "instance_id": "fm-t1-5cdf1ee5b5",
+   "tier": "T1",
+   "seed": 8042,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9979412d40ea4d9dae622b77d50892777c809b248b573dbfdb3cc8a9e01ee8c6",
+    "public.json": "b9eb75547b47979aac82424f376cb4ea2b453d1d01174ba2ee1ec21357c1ac1d"
+   }
+  },
+  {
+   "instance_id": "fm-t1-66ad82bbd6",
+   "tier": "T1",
+   "seed": 8043,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "63e0d1cd9d5e14a29b5fd39d3806a26d934ebaeec0d530b69db8a6a00f873449",
+    "public.json": "5b833760439011cf5a640a07df4d4ac863d3b0b15cb766161b32d75ebb47fe22"
+   }
+  },
+  {
+   "instance_id": "fm-t1-5ac1a01247",
+   "tier": "T1",
+   "seed": 8044,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "01b85583db64c0f0080a640e732c4467e9ed4d87b87fb1b457ac2ddfb7100755",
+    "public.json": "682013ead47dec659d40017ced97e2701b16e0a09a7f6e365984b0822ad157db"
+   }
+  },
+  {
+   "instance_id": "fm-t1-762d3a7dc4",
+   "tier": "T1",
+   "seed": 8045,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "dac4601053f893dcd108eea200140017469f42d36d355f9dceda2ad5f5a8653f",
+    "public.json": "9c8be0abf46c404eb9727947b8957604b839fdd2e8af1e180fab09f509bb857e"
+   }
+  },
+  {
+   "instance_id": "fm-t1-0be368a4ef",
+   "tier": "T1",
+   "seed": 8046,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b5c59c24ff36d3fb38cdcef012945e6e037ec5e8f35dbbf42b0a980073864418",
+    "public.json": "75d65d7eb30176320f931c428ca27c4063ae3917bcdf59d65f972a63363923ad"
+   }
+  },
+  {
+   "instance_id": "fm-t1-1d82ff6ac7",
+   "tier": "T1",
+   "seed": 8047,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "a489d1ddc3f779a82ea5f914842cc7b534c91b5f3939815b61c9ff7d7471f4dd",
+    "public.json": "bfbc87d725be3dc5ba78b8ed2a269eed8946be6efdaf82e753095b33878042ec"
+   }
+  },
+  {
+   "instance_id": "fm-t1-2e0ed1fd22",
+   "tier": "T1",
+   "seed": 8048,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4eaa225ae6545b8f1849a67eb5e7a893bfbdac24d97d068b2bdd8791de02f889",
+    "public.json": "db7068608455d8b8ef1010b1bdf4c2f2881fbfa44d2028f732f370bdde4f3e77"
+   }
+  },
+  {
+   "instance_id": "fm-t1-e3a00eb464",
+   "tier": "T1",
+   "seed": 8049,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3f4ebe96e2aad5261b46c4a4b5c57370ee9810ce21f4101ddf715a67eaf1096a",
+    "public.json": "b5b79b8793eaf8eaa813bd5f33da7d1a2ff899bcb826416048b4cac451a464ab"
+   }
+  },
+  {
+   "instance_id": "fm-t1-3fe414be2a",
+   "tier": "T1",
+   "seed": 8050,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "ca94655bb58ae3b7e910f0265dfa90bb73cd21a068bc077b8941652387220b34",
+    "public.json": "593c7bf6a6ae2ffa0e33edef0a106da620dd6b1a03ff03c4d2a491319c15fc45"
+   }
+  },
+  {
+   "instance_id": "fm-t1-d433585e0b",
+   "tier": "T1",
+   "seed": 8051,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "53d587394404f8eb79466b615510c6d606902ca98ea16e9b5176d3eeed66368a",
+    "public.json": "4afda0e565ea8af20216662f3a9171c3f39abd727cbde337cbc749e0aada1c77"
+   }
+  },
+  {
+   "instance_id": "fm-t1-277f05b832",
+   "tier": "T1",
+   "seed": 8052,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3fade3985f60b87d1b7b6d239627dfe5552c03af9c138232377b326d147693c5",
+    "public.json": "adbd52a358e147cbd8230042ce199cdc87901c05a08db3c75216619269ba6ff6"
+   }
+  },
+  {
+   "instance_id": "fm-t1-b686574f2d",
+   "tier": "T1",
+   "seed": 8053,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "73e806a045cb85f24ecdf3f58f950831086bf0cbf767ee68dbcfd728d709c86b",
+    "public.json": "6837d3377db7cbe7a446c9c3d8028900a5158716494dd305d06444717c0684bc"
+   }
+  },
+  {
+   "instance_id": "fm-t1-0ffcb8ffde",
+   "tier": "T1",
+   "seed": 8054,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9e912904f28caf9107bec81f0a2fb802120b02eceadf3738e3c0cef10b1b2c34",
+    "public.json": "2e14cdc42642a79030998aada1f2bdd82fec318c107b4e67b92ef7bfad2df620"
+   }
+  },
+  {
+   "instance_id": "fm-t1-1439d92b65",
+   "tier": "T1",
+   "seed": 8055,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7374a593255bc783e0003a56fb349630b6f55442f3efadd4a07f90dc06322396",
+    "public.json": "94dfc45fe3319047f18a2850929f9d71a5f1e4cb37b4f334fb25275fca7a254e"
+   }
+  },
+  {
+   "instance_id": "fm-t1-4e3758bee5",
+   "tier": "T1",
+   "seed": 8056,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7053b9b0ad93124de27fd4af46925ec5eb6e3798b1d1f34b4d579657875d948a",
+    "public.json": "efe93b78252f24bffbe23a160841a500d1a351f2205a9131bd446992e2776566"
+   }
+  },
+  {
+   "instance_id": "fm-t1-664d6e0435",
+   "tier": "T1",
+   "seed": 8057,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b68e0217c1108d25510cb2337a2a747b03ce1bcb1960040f628bbf1c64399576",
+    "public.json": "95f2ed313e36620b2d553e20d8ccbe1c713c4d50523a3022013f36cc3d0a5f5e"
+   }
+  },
+  {
+   "instance_id": "fm-t1-a56878984c",
+   "tier": "T1",
+   "seed": 8058,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "aaf54879e796e17c400a735ef3192d5091b3c9c9b92f43366808e1d277d73299",
+    "public.json": "c67003c85c41f63b758a048bbd90006f9ce048f3310fb58934498cc4b7b2e1a1"
+   }
+  },
+  {
+   "instance_id": "fm-t1-0fa8579554",
+   "tier": "T1",
+   "seed": 8059,
+   "dial": {
+    "closeness": "far",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "2f3b5081e4a2c5ed1d4c9ea164bb74997775a9f6f700a05d0a5a0c642609a949",
+    "public.json": "128bad57eb9b0b013bce504b0f152369b7c79dc9f9c8d9c590193f13ed6653eb"
+   }
+  },
+  {
+   "instance_id": "fm-t2-f89fd02202",
+   "tier": "T2",
+   "seed": 108000,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3dac2b7939dfd9d755dfc441e34fcd8920a1a70b2b579a362e06c621193add0c",
+    "public.json": "a508f60db8f9f0b7e364441efa95d90d09e015bde3adc79cd4fe3895bd86b0ef"
+   }
+  },
+  {
+   "instance_id": "fm-t2-05339b13d2",
+   "tier": "T2",
+   "seed": 108001,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7652065a396da69fe4d105c9e69e1b7329edf15aa164ace3c141c8ef4beafe4c",
+    "public.json": "72b02f2330f6b3b5f1835d5a4b6bf697e9eeee489f5a21579458f69f106837b9"
+   }
+  },
+  {
+   "instance_id": "fm-t2-ff7ae4a90c",
+   "tier": "T2",
+   "seed": 108002,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "a058c5838429dde47d1bae88af42c6766d3a564e2b791f85caf521b718fca47f",
+    "public.json": "5a1690bf07ca9e6e41b420d8c68468143010a73519c37268220e448336bd9ba7"
+   }
+  },
+  {
+   "instance_id": "fm-t2-58e24e2afc",
+   "tier": "T2",
+   "seed": 108003,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7d31f0b739b3c988096ec3698fff09a09e1f39258e133c84428a97d89f6a8026",
+    "public.json": "4fa9bbb452b0dee66958a37a4fdfb5a422eef84d61eccbb4b28cd8421f3803d0"
+   }
+  },
+  {
+   "instance_id": "fm-t2-5f31b892c0",
+   "tier": "T2",
+   "seed": 108004,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "ec5ad97bbb4c9071c4e605721fd154912e2ec743a69a2814becee63fbf2e9866",
+    "public.json": "7f04c849c544df30dfdb4332de1f8fcb8708859f4623c11a7ee20337f7994d4c"
+   }
+  },
+  {
+   "instance_id": "fm-t2-1ef6ac96b8",
+   "tier": "T2",
+   "seed": 108005,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d5b19da6577019adf4958495e9f660236bdacccdaf85311dfba2c1b6375647bf",
+    "public.json": "4312a86a700754ebada2cbddc2409dedbb4814e0df953cf6e12e21501348b09d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-c2719aa419",
+   "tier": "T2",
+   "seed": 108006,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c07773bda1a90d64ca58049f44a424d72b18ce334d5a2da1d6ae6631cfa54edb",
+    "public.json": "61ac2812b559167ef1656334c8d1f064cd81d805666533eece3ed0fcd6f16288"
+   }
+  },
+  {
+   "instance_id": "fm-t2-ef4d1e336a",
+   "tier": "T2",
+   "seed": 108007,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "6d19b230f8603ab2a08c1ad945b38c4114085b9cb7185df866f34353e7442956",
+    "public.json": "e8b578be847b6bc296fb40724094dfb11bb2124fb6cb52a92a348473099f96d0"
+   }
+  },
+  {
+   "instance_id": "fm-t2-ee0c0a3ad8",
+   "tier": "T2",
+   "seed": 108008,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c72a05b7625a3d4fea2d42d16280e6bbada08c4101e833a674ac473901cd91d9",
+    "public.json": "3df3c291eea3d382605b5de6809a137464c90e6f85813e190bd931ae4aa360fa"
+   }
+  },
+  {
+   "instance_id": "fm-t2-2881004e09",
+   "tier": "T2",
+   "seed": 108009,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "1783238d71ef4e1d16cdfe1af758fb853df62a6de4cfeb34f2d92bee3a9f9029",
+    "public.json": "44c123b7fcef8abb819b4279aab2314556147a44e832e7b49565544561ea2f2d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-2646ac5617",
+   "tier": "T2",
+   "seed": 108010,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "b4840fa1a455d58ff68b66b9f5a572bb93a1af01eeb5e7206db8c7fea80d7036",
+    "public.json": "3b412ed504440e2ea8cc809facb102f1e2510a03fedccdc947de335f8d0f326c"
+   }
+  },
+  {
+   "instance_id": "fm-t2-0cf3d4b1ed",
+   "tier": "T2",
+   "seed": 108011,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "66c4ea947bafa2277d9c9af5655fba051631c374947b60d6d31e8d1c4b6cd183",
+    "public.json": "919f72cd15b111ed0f2fc1e5d9e90bdd156aac809539649241816a12aa3feb5d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-d0fc253549",
+   "tier": "T2",
+   "seed": 108012,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "f159c4e0ef044d2595b64d9af9976f9ad50eceb9fc9ff192efa872447146ca6d",
+    "public.json": "046dddec69927ce15525c1554a830945028a57ed7995c921e715b5cfa4f1643b"
+   }
+  },
+  {
+   "instance_id": "fm-t2-94e6a98945",
+   "tier": "T2",
+   "seed": 108013,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d44ea8f5c331d7d3cd83d823649ca852871f54ccf0dd2ac7d7b22207c929a1af",
+    "public.json": "d38762d2a2bb874652a2033f3bcfc080cd47a7cf5b8daa11f0c39ac0c52e6ba0"
+   }
+  },
+  {
+   "instance_id": "fm-t2-79e82f4d7f",
+   "tier": "T2",
+   "seed": 108014,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d2a2bcf07db330fba22bfb21339f793fd2ee238f179a359eda75a0689d237de3",
+    "public.json": "27564af2ffbdd26cec097f8f716395dc3be94206865f17248a23259e9c1710f3"
+   }
+  },
+  {
+   "instance_id": "fm-t2-ce75555179",
+   "tier": "T2",
+   "seed": 108015,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "155108988db1f0c95efa2d8f7f0e047926bd836406c0469fd4cf78448e173a15",
+    "public.json": "f48ff145a914ed77072c27a6122420e051b55e95ebcb2ee9ff2d4ef1ac11523a"
+   }
+  },
+  {
+   "instance_id": "fm-t2-082e4a8162",
+   "tier": "T2",
+   "seed": 108016,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "2cac13c5f5420a11c4cb1896c65ea3d63a6bf666dd6e433fb537ac4c3f24f0d7",
+    "public.json": "20586c66672167fdf5abad9d17666c7754c4ef9f9ae9cdb71017079625d53c4c"
+   }
+  },
+  {
+   "instance_id": "fm-t2-6ac6fc5787",
+   "tier": "T2",
+   "seed": 108017,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "09123c2290c62f4c04a2b30d7ae266c5989fc033dcadc00880438e60c5fddc3d",
+    "public.json": "2c172944dc45cb53ddce7f3193d7d2e211524979fe16086f4c6124ffdda89d68"
+   }
+  },
+  {
+   "instance_id": "fm-t2-c26228bc21",
+   "tier": "T2",
+   "seed": 108018,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "5688e2a61aeba54f6a3d8795f7bdd7f41d6d25cd12266384ce4b556d4f032b31",
+    "public.json": "965fb7909cf06cb323831fa518f0e9d8e2c9207e11fc1b4307c4a250eef09ee0"
+   }
+  },
+  {
+   "instance_id": "fm-t2-809b514c4e",
+   "tier": "T2",
+   "seed": 108019,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d62a43c60bb37f2c8bffbfc8e6df116a97f108a03eb13778a5d2f7523be7aa82",
+    "public.json": "226ef1ea99a6daae0325bd3d2284387ebd996bad4c7d37f73e36126fd8c9f701"
+   }
+  },
+  {
+   "instance_id": "fm-t2-a7637ac91a",
+   "tier": "T2",
+   "seed": 108020,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "681aaf2f0bfffeccfaec1d3ee3d663b052f9c85ec4894a722ac069d0a5d42de5",
+    "public.json": "09202ca6c669f7fb53e5f35724715cac51545595c3d715ae238b114709e7668d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-f0aee7e6ac",
+   "tier": "T2",
+   "seed": 108021,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "71308fc181834f8d3df280747eacb83205981dd015524e3eea9a7ae95459c0c6",
+    "public.json": "48bbeb1a893958c96dc88a9796c38090ae3e090b8a90c378d6952dcc9b1b0760"
+   }
+  },
+  {
+   "instance_id": "fm-t2-3250e8e21f",
+   "tier": "T2",
+   "seed": 108022,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8ddeb2afe1446082e95fda06b001222e9b8d16d7426325bcb98fc61d46ca9598",
+    "public.json": "50e63fc43de78f2179671b4d6edee68f4481dea6ccdf178c67080096148052dc"
+   }
+  },
+  {
+   "instance_id": "fm-t2-bc8bd1562e",
+   "tier": "T2",
+   "seed": 108023,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "70bcea99df5f9b6a521538981850e9e5c889cfa84171f71cb1d62f18cab5ec66",
+    "public.json": "48c6798d68a1c5aadac334b32a3ae5d0fde86ff343de157cd52bd671a22d9144"
+   }
+  },
+  {
+   "instance_id": "fm-t2-f6fc1b3c6f",
+   "tier": "T2",
+   "seed": 108024,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c6da68ffd3784aba60de5a5caaac45fd2b65d068962ff00d7eed2b14a6eadb3c",
+    "public.json": "dc4e4c87fc6c87daf4472b9023aeae1a86fdac3888a69148cb8a05ba68bf0baa"
+   }
+  },
+  {
+   "instance_id": "fm-t2-1b0c407bc7",
+   "tier": "T2",
+   "seed": 108025,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4d23715758474958e13574c5ff2784515c5b673ebb1182d073932b658538a293",
+    "public.json": "66b130d5cbb80f2cb69ee940a406841caf2edfe5922bf95f8fd938d2085e9607"
+   }
+  },
+  {
+   "instance_id": "fm-t2-42d9f49bba",
+   "tier": "T2",
+   "seed": 108026,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "f849476ca3d2c5216ed3591f9fb702f940335d092a3c65f7d396b5483fdffc7a",
+    "public.json": "ca946edac359000897f9a33f38e528b614934f892b43be8589d735e405d8e64d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-a3113d47ee",
+   "tier": "T2",
+   "seed": 108027,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "289a8f108806656431c398ca6893bac217c02c07c977687dd44a7ff730ea6312",
+    "public.json": "efc7439093f1ae13094183b408249ca33a8b4648d50216a770acdbb6086c9470"
+   }
+  },
+  {
+   "instance_id": "fm-t2-71528df1f2",
+   "tier": "T2",
+   "seed": 108028,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "5dc170d6973a1b87af23bf35d9457f47a2b91edead5d248dbf4482364a1df0eb",
+    "public.json": "3ea053a7d0209177b3760d3763ba669dbff5a147cf55a7c6fc1d39abb31e5742"
+   }
+  },
+  {
+   "instance_id": "fm-t2-d4f100ce2b",
+   "tier": "T2",
+   "seed": 108029,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4771314046278b69e51f6e5e48ba2804ed9df34b4890f186dd94626042713395",
+    "public.json": "5e1d90f7bfbda8fd3b98083ffacb48dedf20d6205b0b56f9dc0af4b819008f19"
+   }
+  },
+  {
+   "instance_id": "fm-t2-acabbcd790",
+   "tier": "T2",
+   "seed": 108030,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "cb1e54715b43bf051b820b5ea3b7e919e1005148591811bde48a11e704683074",
+    "public.json": "247bac5c615955a471348325ddea8c9211c849201b3d68577ab57fc210228efa"
+   }
+  },
+  {
+   "instance_id": "fm-t2-cf8ff3a759",
+   "tier": "T2",
+   "seed": 108031,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "76bfdfabf7aeb203fb6c586a31aecab11d625a3960b826238db0e950330d3af9",
+    "public.json": "c6e100054d5b4685579917a079c6a3b2c1d8219c67ff975bb970be10a6025f3d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-f03a8d950d",
+   "tier": "T2",
+   "seed": 108032,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "bc28bf57b34f36515a27a23cb8a9dbc18f25ae5641cfb6120f25d41f3bd597a1",
+    "public.json": "ff5beba145b800f39f671be3cc9c8cc5c2296155f08bf0a33f527f5d11c2a657"
+   }
+  },
+  {
+   "instance_id": "fm-t2-5d92d91e16",
+   "tier": "T2",
+   "seed": 108033,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7b3c2db276fc8002af2c1280ec9175b51d3124011cd5ed01e1174ec9a2a04542",
+    "public.json": "be3bbde96915ba324941ca18c9f8b75834dff21399ac6cc41f8ff2009f3162b4"
+   }
+  },
+  {
+   "instance_id": "fm-t2-016e71a2e0",
+   "tier": "T2",
+   "seed": 108034,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "eb22b46874281165b19bc974140aabe545e416b253c8f934a844770a214df40f",
+    "public.json": "317e239fdfd2849046ef22a0bfd4854feaf3214977d52713a8a2cc6ac191c26d"
+   }
+  },
+  {
+   "instance_id": "fm-t2-344fc75a37",
+   "tier": "T2",
+   "seed": 108035,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "86d7da9d8e30aef5d8b9e83a81d863ccb295c2b890f502c6b22d74574bff53fc",
+    "public.json": "ad6a99b3dc22a85c849fcb174be79f3b1f4fa0c95d9b9b52a52fbac920eafd33"
+   }
+  },
+  {
+   "instance_id": "fm-t2-3c949fcb59",
+   "tier": "T2",
+   "seed": 108036,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "f7a9bf5d3cc8d8afab56d7e8d6da1acf09be0248d5127f21f3594c502456e04b",
+    "public.json": "b3c70196041ef80d524cc4a7ff2a99065d12252fa99e15d6cda6aa55f22fb38c"
+   }
+  },
+  {
+   "instance_id": "fm-t2-1ec8b49413",
+   "tier": "T2",
+   "seed": 108037,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "50f6febe8a2a3d6f8a3bf917c3a3460fc955a906d643ac94bb1619b0e1d8e20c",
+    "public.json": "665aea20b57d225b62417bdc93db1e7f8f030a3d0bb62f749c7ef0e4cd504bc8"
+   }
+  },
+  {
+   "instance_id": "fm-t2-24e88042a2",
+   "tier": "T2",
+   "seed": 108038,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "151a35f69dc165e4450d31767563a33117c9983467ab8161bdd619a1d256b03d",
+    "public.json": "2d965a2dbc411c4c7187ba7dcf73336285a3ef487c0c0523e333087abb2ab53f"
+   }
+  },
+  {
+   "instance_id": "fm-t2-338e2347c5",
+   "tier": "T2",
+   "seed": 108039,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "f4603fa1f745fd86594ec46712409cfef6b333850d24898a741a52d7a308dbbc",
+    "public.json": "92bf98c13da1d57d9e771ee225ab6cb7f5205249fab713552413237ec860128e"
+   }
+  },
+  {
+   "instance_id": "fm-t2-71671297b7",
+   "tier": "T2",
+   "seed": 108040,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "0c0f9f8d1f7ffa65deb84147090f00b1f9edb5328c6e77f04a32b4ee2d56eb16",
+    "public.json": "3bc128968c5b68c8f617d3e51cd33fa9a9f12b94dc64b6bd0e351d46ab202e3e"
+   }
+  },
+  {
+   "instance_id": "fm-t2-70d6a5202f",
+   "tier": "T2",
+   "seed": 108041,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "92e1cf458990bf8913b1b3e9fa70edb11011925b02a75473c1a01b1b2dd7a9a6",
+    "public.json": "8b186c15b6c2d626693f3b69634925b6a64db3ecdc32947fabd1579e5fff1b81"
+   }
+  },
+  {
+   "instance_id": "fm-t2-952058d20b",
+   "tier": "T2",
+   "seed": 108042,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "d1118dbf61004f5e61e7197ca051fd1811ebc412cf3d90ced012289d3e063f78",
+    "public.json": "96b265e832d7ee7ca7269a37a192cde004c25a801562363403e72aa60ba7488b"
+   }
+  },
+  {
+   "instance_id": "fm-t2-164ebf3a38",
+   "tier": "T2",
+   "seed": 108043,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "4ba0d0c9dbbe4bf4e858ba5335e4fd1d0438a5bc164c2cca968613d7b66b5da0",
+    "public.json": "f6ff6967235626dc705a42ecd99ae089743867f9fb48e604e92bec5fa248df3b"
+   }
+  },
+  {
+   "instance_id": "fm-t2-7eda591168",
+   "tier": "T2",
+   "seed": 108044,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "3b5045f2b6d8532cf003676245cdd994743f1af491fe0bd467046de7f6e40709",
+    "public.json": "f035875be6f7abdf3856daa0199f0c32b0b262a87f866dc5e124e9e0b26b46c3"
+   }
+  },
+  {
+   "instance_id": "fm-t2-337f255b12",
+   "tier": "T2",
+   "seed": 108045,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "cc3c08a1fe7ef0b6c265b35433c8273994b8691d95d3bc0ac6874510ce9941d7",
+    "public.json": "45fe720ac84b7e7dacc4784b35c7bd93ea51c167b424866cbd3300752efaa851"
+   }
+  },
+  {
+   "instance_id": "fm-t2-a7f20fc2a2",
+   "tier": "T2",
+   "seed": 108046,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "9d93ffc0635ffa8351ef1a4d703f9184d9d7277c6e1986832064851905d0170f",
+    "public.json": "aab7ba907ec53ab65f6f77e61969c1c86c88aa6a8c1d50bd114d0e36ab418de3"
+   }
+  },
+  {
+   "instance_id": "fm-t2-51245d4ae0",
+   "tier": "T2",
+   "seed": 108047,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "7cf015f1b3b7e1e824b09d8edb8932fe167c29b9f8ddb1c76fe3eea3ff577f9d",
+    "public.json": "a2ee17ef6b0be7ac749fdd618e93bd87cbe1d658166aa6b9dd07624a2d04cf54"
+   }
+  },
+  {
+   "instance_id": "fm-t2-f1ca7e2da6",
+   "tier": "T2",
+   "seed": 108048,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "575a8621619680d025a05a963e8c2978b77c665a05f266b9bf67678d653c041d",
+    "public.json": "30690ed81136202b140b1302fec535f5ec870943ff57e6ec9cfe99aa5bab70ff"
+   }
+  },
+  {
+   "instance_id": "fm-t2-45551e0956",
+   "tier": "T2",
+   "seed": 108049,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "e4aabe26954275671f945d4cd60a630c8c3a73f66541203b1d95bea2aadc127c",
+    "public.json": "6d75b4c1a43d39d7dee6de3d211a1fed602888e75c84c3b45716608edc7b250b"
+   }
+  },
+  {
+   "instance_id": "fm-t2-02ce72d037",
+   "tier": "T2",
+   "seed": 108050,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "25fca421b0af1e158a7f8b965ed526491e6152df921ffbfb8127145fcc319fa4",
+    "public.json": "12570ec3a1762f3dc900bcd2f971c4aa566443db210257ec24908b0b2032cfd0"
+   }
+  },
+  {
+   "instance_id": "fm-t2-acf505b2c1",
+   "tier": "T2",
+   "seed": 108051,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "8d351eceb0589a2f2f6ba8bbdc1e23216febe132ae815719fb5048d434ccf719",
+    "public.json": "896a08f088e3ab1f0738bb2295ac6bb47d152315c62c3ac7e79d90743a628656"
+   }
+  },
+  {
+   "instance_id": "fm-t2-1e61a1d677",
+   "tier": "T2",
+   "seed": 108052,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "aa7e7342a016b14c7cfefaebce096b52c14f40e8d96f147ebd4b28aeff7bf776",
+    "public.json": "5366d1e6372eff2c8e77288967d885641e7c05617aeb0f7594ecf2698409e7c8"
+   }
+  },
+  {
+   "instance_id": "fm-t2-6ed14465e4",
+   "tier": "T2",
+   "seed": 108053,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "29dbb3c95d0a3c74eac6bfa37af6c75cd3c0231811f3fbfe214407ec6dbc83e0",
+    "public.json": "d0f494c8d407fb64c5b6b06228ccba3f40ae9b277ea46079f20676bea33b4ce8"
+   }
+  },
+  {
+   "instance_id": "fm-t2-1a525012c5",
+   "tier": "T2",
+   "seed": 108054,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "175986f7fcb4cde91417d4f42e0cd88a857cd55eff19bae0f68b7ec198850617",
+    "public.json": "2fc5beea0d58ea0a494738d97d8857e66ca02c1158aef06918b0d68f19325788"
+   }
+  },
+  {
+   "instance_id": "fm-t2-189b2ccff6",
+   "tier": "T2",
+   "seed": 108055,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "19316bf0c3c7cf76c38cc82bcdd914fefbb74b763d93a06db984ab08d6565655",
+    "public.json": "3da7298be136017a54e3364dcfa0ecdf11b841ab05ac0640718c2768606e856f"
+   }
+  },
+  {
+   "instance_id": "fm-t2-941083efd5",
+   "tier": "T2",
+   "seed": 108056,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c158d9b5e45c1f3ab83ba0539442929fc1d46f8f90949f9a7f28b6ee12041876",
+    "public.json": "2a9a1495898f99a769393bb709f78d75fd1c48957e3bdface2ee81228dc28dba"
+   }
+  },
+  {
+   "instance_id": "fm-t2-a0d8f94e1d",
+   "tier": "T2",
+   "seed": 108057,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "c73dc5cce69bf22a80887e7fa610f60a9c4a369db3dd93fc6089c4d32bb0004b",
+    "public.json": "96f89335756caf3b201d16197bbd74eb13cd10bd8056a2afc2509adb1ff39cec"
+   }
+  },
+  {
+   "instance_id": "fm-t2-4cab007e8d",
+   "tier": "T2",
+   "seed": 108058,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "cb9114a911e56f2a9461631d43310460fd17a9f397244ef36cb7decc82caba1a",
+    "public.json": "c9df59e336e8c4b5cf8b954c5081f9a0aa30a192f900304e6c4ff9da86503c1f"
+   }
+  },
+  {
+   "instance_id": "fm-t2-6e2f4f5337",
+   "tier": "T2",
+   "seed": 108059,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 1200
+   },
+   "files": {
+    "instance.json": "2594e88651fe1d6abdd7724ca5e57ae48dc7b10c26f28539bee69fe1b978ef04",
+    "public.json": "c06fa9c0c099c967900599259534dd556b253a1ff04d4ced450d18d9eacff6b2"
+   }
+  },
+  {
+   "instance_id": "fm-t3-ac0312479d",
+   "tier": "T3",
+   "seed": 208000,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "a11dc4a52655812340f12fbd93dd531dfa2dc346181cfe6a3630bab143e4d58e",
+    "public.json": "8f727cc28e949cfa74b62eabb71af4d2a3057e05e3bf35116cdd1cbdaf9f536a"
+   }
+  },
+  {
+   "instance_id": "fm-t3-0cfc3a8982",
+   "tier": "T3",
+   "seed": 208001,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "cc2b9a52e42e7979290d308b933c8b196f44ca334bf7004373b6382369e363f6",
+    "public.json": "268d628e651a863133d528789da1a3ee03366cf90903101600927c38dd8340a8"
+   }
+  },
+  {
+   "instance_id": "fm-t3-f5b40e25e1",
+   "tier": "T3",
+   "seed": 208002,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "80ca8f8a8d98d28e5db9183f8c07ad5a4077dbc8c440bf2af14aca21358ea44b",
+    "public.json": "f245cff10a6dd51295ed77f9c3ebe398e3002086cefcdec7dabdc8549b025372"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3759653fed",
+   "tier": "T3",
+   "seed": 208003,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "d30472d646cdf582f52df9ac820661fc8f6a3a4592295bc56174331bd45369c1",
+    "public.json": "eaf699e49ce1f573cdeed827c196064280ed98e81ecad829a429018af85f9b10"
+   }
+  },
+  {
+   "instance_id": "fm-t3-939e55762a",
+   "tier": "T3",
+   "seed": 208004,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "e68c75cb1356e8d2a575ad6245bd844409b196a050dc47275a69fcbabbe3773b",
+    "public.json": "f1ff6b60551821fd4f25713df2dae8daa1470578c531f8da7b616dc1156493fd"
+   }
+  },
+  {
+   "instance_id": "fm-t3-26221fd9e9",
+   "tier": "T3",
+   "seed": 208005,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "502e5d4b6403e2015eec08f57711f747b48fcbe6d4052fb7b3ddc1e7db8c099c",
+    "public.json": "2865359a8f63242e046c4d11135a5c5c697971a2cf95e7d05aba21ab43db28e9"
+   }
+  },
+  {
+   "instance_id": "fm-t3-4547cd8e7f",
+   "tier": "T3",
+   "seed": 208006,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "f747e04c95fff5a954bf4f6ebcd97b0f13aea6927129c504a9da932a0eecd0c5",
+    "public.json": "a9da21ccdef73151ea66103ad33c3fb740b05ca55d165e497d954136066406c8"
+   }
+  },
+  {
+   "instance_id": "fm-t3-293bf36e5d",
+   "tier": "T3",
+   "seed": 208007,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "cf379c7ae85f5d54d249e9774af4ca800443afb77ae509fa50d4983618f1c7f9",
+    "public.json": "ef8988a302de35cd620f16eac55128dde5e4b3667777b1a729b3349871c64309"
+   }
+  },
+  {
+   "instance_id": "fm-t3-d64be80bed",
+   "tier": "T3",
+   "seed": 208008,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "6d54ea4cfed023bafc8ffdadb1f006374356f90a8afba9c83eef98ba7c83c3a2",
+    "public.json": "d8936bbc8ea99a06677af15318a97a1ae17310a3f7a4c6242b59cf2245491bee"
+   }
+  },
+  {
+   "instance_id": "fm-t3-375d295b0e",
+   "tier": "T3",
+   "seed": 208009,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "17f12ec4251828eca0c5c84aabba8ccf36e7e067524652d379799787507792b6",
+    "public.json": "8bc66c290b68dd40ed62e51c8bb837aaf9556a01d2c750c3a61f7e2c30069554"
+   }
+  },
+  {
+   "instance_id": "fm-t3-a80bccda3c",
+   "tier": "T3",
+   "seed": 208010,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "e33c3889dd631068fe5f473042008eac6448556f1fe54259f20e836d93a4468b",
+    "public.json": "0808ef25dd31e4edd005a83a766be869f3b6230fae3484746df33dd5aadc6554"
+   }
+  },
+  {
+   "instance_id": "fm-t3-11affb4ff0",
+   "tier": "T3",
+   "seed": 208011,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "bf4f4a92d0482dcb94c2bec1226dd30e4479c9a783ab1c1db1d50e54ef755331",
+    "public.json": "339524f6b4fddc7655f23353fbf539dc33a4e12eb873fdff6ca9d40486425d0e"
+   }
+  },
+  {
+   "instance_id": "fm-t3-dd9e38735d",
+   "tier": "T3",
+   "seed": 208012,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "c1adf18bbce5fc98e02f27c2a7d987c5544b11c13492d2d603601341f51474da",
+    "public.json": "c620d0e8ad49901ac233311bb05e14a22af04a99a3814e39128076c73f629c45"
+   }
+  },
+  {
+   "instance_id": "fm-t3-31bce24d13",
+   "tier": "T3",
+   "seed": 208013,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "d1dba051b601288ab635c481cd0a7912c70be96c9e5886a562ba41f15ec73e0c",
+    "public.json": "2769c9488e4a1c25ce0d6c57c15c3308fb56c30b71f703c43380d4197ef8df0f"
+   }
+  },
+  {
+   "instance_id": "fm-t3-73a7bd3b71",
+   "tier": "T3",
+   "seed": 208014,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "e6d869f1c9ae50c1eb182a8f6619750fda9b525319779f184f5137974bef9936",
+    "public.json": "15b3dfff68f05b388f4fbd59dfe5d5bed38f177d366b112e7df250429eb46a3f"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3fb605b282",
+   "tier": "T3",
+   "seed": 208015,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "661d064921325cf6b225baab4d9c0f2232255a2c9951cf29ad6ccdb6794781fe",
+    "public.json": "1c386bb9eea37271afefe22fe669c01e5c199412a15740e9fea2298e833493c0"
+   }
+  },
+  {
+   "instance_id": "fm-t3-c857e54dd6",
+   "tier": "T3",
+   "seed": 208016,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "b7f6ffb029d5e5218d981ddc40276f68da023c3d1af4683a99436266923bdc46",
+    "public.json": "2ab8aa26df5950bbaceeb50ce8d3ad3b3696669aa5048255e0342b0d84b391ce"
+   }
+  },
+  {
+   "instance_id": "fm-t3-fa9e31ae56",
+   "tier": "T3",
+   "seed": 208017,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "3c07baf92d7fb5e2af8141b54dcce602f9e65f8a8e45ce6ffa18081a748013a0",
+    "public.json": "4de64d80bdfb6937bfd0fb67903bd507bec62c39c13bab254f69d377635ec16c"
+   }
+  },
+  {
+   "instance_id": "fm-t3-e03b18cfd0",
+   "tier": "T3",
+   "seed": 208018,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "d56d9fb8b76258b009344817fff8c7cd9ce8aae6d88a3ca80d3f0378b5591f44",
+    "public.json": "5a5c60ba86b9e9d7a96c35fca901cb530ac5fbf75d0a9ba2692d9e23db1a06cd"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3da1ca40ec",
+   "tier": "T3",
+   "seed": 208019,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "f27d53b566faf5782140e27105412c65561feff91dc7717fd0a53f37df801b56",
+    "public.json": "2493cded5ce6f494eac6e2080fd674a5a1b5338c19628256ae8e6e395c121b4f"
+   }
+  },
+  {
+   "instance_id": "fm-t3-caebdf0e80",
+   "tier": "T3",
+   "seed": 208020,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "09c29c69e817c74993f5aac17956ae5ecf3a323f8215b74cd2be3afdaf33ddfc",
+    "public.json": "8154eccc63bee2491482a3469230e599354def72a05a94597b99d2ec102b6cb8"
+   }
+  },
+  {
+   "instance_id": "fm-t3-88cd31bb13",
+   "tier": "T3",
+   "seed": 208021,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "50df94d211d8cba5ba45f758696cad1e151612b86330a5508d52b85d75fd5ebb",
+    "public.json": "c704ef8abee2b6bd93511d4d7a41e75a9dd11dbeeeb65b5d361084040aa3be23"
+   }
+  },
+  {
+   "instance_id": "fm-t3-12fc15e23a",
+   "tier": "T3",
+   "seed": 208022,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "ed1285e90002891800f1ed571ab02657876dab80e7be20d9837c86529d6899c7",
+    "public.json": "6651e875b025d37fda4b7d22964c3e8995145cbffd554f52775d7821788567ff"
+   }
+  },
+  {
+   "instance_id": "fm-t3-f0e48d5ad9",
+   "tier": "T3",
+   "seed": 208023,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "e2237e094d94161a3aef2be362b40f6e3a9c1787fde17e89c8e63ab97121bef9",
+    "public.json": "bf627f62df7ed00e23b75bbc00eb11fff3768dceef2ea6a17ef402baa77d6592"
+   }
+  },
+  {
+   "instance_id": "fm-t3-c84574b92a",
+   "tier": "T3",
+   "seed": 208024,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "2343f03a40b434c35fbb8c03f60476fde53ec73094a9d5facf33df6ef746b152",
+    "public.json": "29f02f88b6bf1110db9dd9eeeb3da97aaeb6bf1c3f85bab58068c42f5fea1225"
+   }
+  },
+  {
+   "instance_id": "fm-t3-689201525d",
+   "tier": "T3",
+   "seed": 208025,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "be1ce447df7b878c73111b3c51d0eed5eeabc75c6205b7809ddeb987a12bc7bc",
+    "public.json": "4fa14dab743333e6aa535fc473a3d2e9a30e5ff3dd391b123b4e2f083e718fb8"
+   }
+  },
+  {
+   "instance_id": "fm-t3-dda46c6c23",
+   "tier": "T3",
+   "seed": 208026,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "e111b9af4af3d89d42a9c4f74e7df1ebba965b0a98ca699aea2ae8d5c217aaf2",
+    "public.json": "ffb83872d67c10fbae4ec3ffc116b70b0370ccea0802480e173304efafcf5d37"
+   }
+  },
+  {
+   "instance_id": "fm-t3-98cdbfc48b",
+   "tier": "T3",
+   "seed": 208027,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "04d57a7e593e3dff5bfb6ce1ce12e7b5906e9ddb726bb79cceec8f0f88d45991",
+    "public.json": "5abf5180cec8b3990ba8ffad6b3f2362a3c3a31ad9db787dd0127126559a6849"
+   }
+  },
+  {
+   "instance_id": "fm-t3-cff3d69ce7",
+   "tier": "T3",
+   "seed": 208028,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "deefb32fc3bb09a038288f7d97ceeb2b8497e794244097dad54b3d991c16493e",
+    "public.json": "9ba8416feafd2bb251ac804f4a0f585e901b6700922ff170411c7f060593641b"
+   }
+  },
+  {
+   "instance_id": "fm-t3-4b371a83fe",
+   "tier": "T3",
+   "seed": 208029,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "ee67c01cf66d37ca62ea04dbd286a18d5f769a743af48aef54282d20698d8955",
+    "public.json": "9867b3f6fbbb76ecd43e0e6062f0d8633171e8b2521ad8f2858c2268e7146da7"
+   }
+  },
+  {
+   "instance_id": "fm-t3-c4bffa8c8a",
+   "tier": "T3",
+   "seed": 208030,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "0c93b9a9a2f0b8dab936cd0073981a8530210d6d51091330f8e329d15acda27a",
+    "public.json": "d329c463c0eb04767b75e04544295d8eadf21063783d9f3be770c85456057260"
+   }
+  },
+  {
+   "instance_id": "fm-t3-a1b312665a",
+   "tier": "T3",
+   "seed": 208031,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "dae642ef4a011b3aa734ae2279e9584dcdcfd92aeb571180d0c5b231bde00783",
+    "public.json": "004d0f313652ac4135bcb6eb435a9c0f6bbf12305adaaeb949b9febdc090e957"
+   }
+  },
+  {
+   "instance_id": "fm-t3-539c61e997",
+   "tier": "T3",
+   "seed": 208032,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "19802ce02ba8ccadd81b460a567a54a5b1decdb58122b960774b8671af12696e",
+    "public.json": "e74856fe3af3f35d2c894009e08bf02b7a8b15ee50923209a388cf615818271c"
+   }
+  },
+  {
+   "instance_id": "fm-t3-914eb282e5",
+   "tier": "T3",
+   "seed": 208033,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "09d080cb9ca7325f946ebb3f052a602f20e2781a627926f1c4877290c7f5fec2",
+    "public.json": "4ccfb1cc707ca9173c2bcbc15f7356ce1e11ad6da55fd6737d1c348a8fa9e6a6"
+   }
+  },
+  {
+   "instance_id": "fm-t3-27a6385f5e",
+   "tier": "T3",
+   "seed": 208034,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "fca2ac8f50cc4917bd40d0cb028251850d2f45f9267e95e76de748a3a86bcac2",
+    "public.json": "2f50570914f0dea3a0a90322200588f109706d00bb5616f2236a0ea02a9fed4b"
+   }
+  },
+  {
+   "instance_id": "fm-t3-96d1b742c7",
+   "tier": "T3",
+   "seed": 208035,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "33018a8624d1ded069719da6df10bd1c4416b6f82a847e8078b00a0b36d5d22b",
+    "public.json": "9f6ceb4a88fe8d3ef4018008d58f28e3aa4f6927dd0b7d9eb97a31e89f19ad6e"
+   }
+  },
+  {
+   "instance_id": "fm-t3-42a1ca94a7",
+   "tier": "T3",
+   "seed": 208036,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "8e4da651a95b17ef62dc2d44c6b1e00141682787f8af477fa1670e683c4ddcd9",
+    "public.json": "b9e1e488a1f1a25d8ebf8fb2885deb7a49cd6c2abdaef489f71e7403927d75ef"
+   }
+  },
+  {
+   "instance_id": "fm-t3-6e3bf642e4",
+   "tier": "T3",
+   "seed": 208037,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "2d806402305d7eac7878a10e3cc1dd13187fc8aa229b2404ad7aaf44b61d51cc",
+    "public.json": "d162be1a28c634c1ddc4f54ff4169d8594846054d9429e9a3afdd87aa1f68758"
+   }
+  },
+  {
+   "instance_id": "fm-t3-d2b2e9f10a",
+   "tier": "T3",
+   "seed": 208038,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "2a72bfc446666171bfde44ead6831429ac8153449295fa85ecca7e5d8b5aca06",
+    "public.json": "1d8ef2d3cb6e6c1ed37b52b8cb6a0d3d59b446121b2224c90d25d96988c03c85"
+   }
+  },
+  {
+   "instance_id": "fm-t3-080e511679",
+   "tier": "T3",
+   "seed": 208039,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "62b214bcd20c0a7c856a59b4457e03c8589656e89d75a739acd2fb063770f4ec",
+    "public.json": "7e65beff03efc4e7f219f2983b5243c3d6b987065cda4c0e074f99f87c341e71"
+   }
+  },
+  {
+   "instance_id": "fm-t3-687dd5a299",
+   "tier": "T3",
+   "seed": 208040,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "c2f3915838abbb0d2669282222c6b3e41f7b803d18efbd49d0d616217ba1be88",
+    "public.json": "4428b9ce1e1a508433f975e5031fb3607626c9522cb7bba88442d53d12a22437"
+   }
+  },
+  {
+   "instance_id": "fm-t3-d58fc9b11d",
+   "tier": "T3",
+   "seed": 208041,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "b566ce4bae1591dadfe3a2a35dc5bc1241e09a21c32422029a570e5690e36998",
+    "public.json": "9ffeb5c4a6e4e4ce6be01be1450948fa8f7024353acabb0ba0a0085183c3d2e2"
+   }
+  },
+  {
+   "instance_id": "fm-t3-727700896e",
+   "tier": "T3",
+   "seed": 208042,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "442d944fe923bfc8de812687ab6005247afaff4c0b5267e09214e1c4da6f377c",
+    "public.json": "a7bc2d382b47c6733b91519a646c3f50596b7371e5756da2085a8802cc28925a"
+   }
+  },
+  {
+   "instance_id": "fm-t3-7712eff545",
+   "tier": "T3",
+   "seed": 208043,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "5b0485b44c2d0ef56297432ce301ce2c07a74b2ec9b4f896c0f4ca9a8ea7f696",
+    "public.json": "2dbbe9808baf39b3d5192836476dc14b671d9e8e8ec447d03ed073a91d7e9573"
+   }
+  },
+  {
+   "instance_id": "fm-t3-02fb7b7984",
+   "tier": "T3",
+   "seed": 208044,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "0b18a0307ee8063d0ba2be8a8ce4c4e2008322f0606207d95dc4a0c1843d54e6",
+    "public.json": "9b4ab1e0cbe1e28e6a8226262e19a4ccfbcb2581905d0ae9127b7fd8aa3f6759"
+   }
+  },
+  {
+   "instance_id": "fm-t3-0be7856115",
+   "tier": "T3",
+   "seed": 208045,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "d3ac977526dcdec6b51ff4033689bdcd69ed76060bfd2dde1652d406fbcef853",
+    "public.json": "a3dcc099242cb14a4cdf524fd64508e0c6b050365fba8b571b3941e34e6265e9"
+   }
+  },
+  {
+   "instance_id": "fm-t3-5f8341d265",
+   "tier": "T3",
+   "seed": 208046,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "287b2ac7ded11dd139534708fd4d0a1431c7b4408c468ac4019086e6b9a5a1c4",
+    "public.json": "c49e2f7e4215eb7f9283937f6a0f122b96559d166661162f3f53dd0f81bdbbaa"
+   }
+  },
+  {
+   "instance_id": "fm-t3-1ad1b7277a",
+   "tier": "T3",
+   "seed": 208047,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "76484ad1b5d603349bbf33c6b797f560ecc0fc5379eda073a769961b53855ad4",
+    "public.json": "87e4ce9358cd35db93158fec0170eba0397ae69243250c833c88c178467a7983"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3a824fe4eb",
+   "tier": "T3",
+   "seed": 208048,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "013b187cafb7e63f17385146de3381fbcee2c6f3692d4c5cfedd60f0b7eb9711",
+    "public.json": "309941ae125dde447c03808b749410fc9ef4bdee364c3943eccc2aaf07b02232"
+   }
+  },
+  {
+   "instance_id": "fm-t3-ffaf158751",
+   "tier": "T3",
+   "seed": 208049,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "ec2cf32cac33e3ef3674fa71b3a384e07911c41ce65e910b4fd1039b74eec3b0",
+    "public.json": "76223a6030c1ecb66235567b1105d7dd16511d77e1890509a47e5244d2dda6fb"
+   }
+  },
+  {
+   "instance_id": "fm-t3-39d7b17943",
+   "tier": "T3",
+   "seed": 208050,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "cc5c8852678cf19a6d94a410169393303c8a87cf240008ea8e1094bf9bfbb39f",
+    "public.json": "8d7bdffe775d53357c1296b93b748975b543d9829c8193da421e0062d9204f58"
+   }
+  },
+  {
+   "instance_id": "fm-t3-c09b4fe9aa",
+   "tier": "T3",
+   "seed": 208051,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "841980c8b2ae72e049e90187f996ddaa6b02db923c798353a4b0ef8f3650c59a",
+    "public.json": "c58232bd0259f35d52a8c64627f0f88ef7fea0ce54f4a2fa6547d301d139c54d"
+   }
+  },
+  {
+   "instance_id": "fm-t3-affb783d09",
+   "tier": "T3",
+   "seed": 208052,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "14e8b69043e57efd36c7dc9f0fad4d68c300864039c6144bacf949e09682481f",
+    "public.json": "b44c0a99d6f26e9a30ecb449b7fb451e62d3ea48e7fd3728a801c09e0e230d12"
+   }
+  },
+  {
+   "instance_id": "fm-t3-059bcfe59b",
+   "tier": "T3",
+   "seed": 208053,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "a4f91bf7c2b3870dc5f829b6331959f8088dbf8420ca91fa4837141f0c9b1e9d",
+    "public.json": "640dc0bce603b750d2c7f03ff470e324b39e0ed70691be1144723cbc3ff34359"
+   }
+  },
+  {
+   "instance_id": "fm-t3-2c35e91143",
+   "tier": "T3",
+   "seed": 208054,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 5,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "06695f0e35464858da9f3c211dde03492f5848070e28a01f3ef35bb39da01b0b",
+    "public.json": "388be463bdd5196e4e5a3a12d4bab1dde9987e4b6ad29f0199bb19d4cfa6257b"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3af8349b87",
+   "tier": "T3",
+   "seed": 208055,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "253529fa96ec72c51ce59dea6e671c0af1848dba73a1fbc687bdc8e327870e5f",
+    "public.json": "e63730bc46da281cbe6585a91b035920d123f52cf5f89779b5080f6d320740c4"
+   }
+  },
+  {
+   "instance_id": "fm-t3-0e47bd493d",
+   "tier": "T3",
+   "seed": 208056,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "8fe97e61b3e102590806da7e5ab2fbe1609b86f1d6c6e8a16debc4b850b99892",
+    "public.json": "fd955960dc6f4cc448e234e82504bef96ba8b591f1a97c7b301d0241d4b34cbf"
+   }
+  },
+  {
+   "instance_id": "fm-t3-3a0c011316",
+   "tier": "T3",
+   "seed": 208057,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "18433ef122330773680b27914d5180b3817f6607c2a8959119d3c3b7b78875bf",
+    "public.json": "a4c320cb64445602a942af686c602108bb11da6213e80236090a6f291f4b7876"
+   }
+  },
+  {
+   "instance_id": "fm-t3-6e85232da8",
+   "tier": "T3",
+   "seed": 208058,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 3,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "cffbba17d1be7594c57b7e510f5a6f96b0fcdd3a1f1ec48f7977ca88e0310188",
+    "public.json": "82ec5427c16725403747eb43a7909ae04c7f91f245970ed28d045e9f28a45c08"
+   }
+  },
+  {
+   "instance_id": "fm-t3-6939b41e41",
+   "tier": "T3",
+   "seed": 208059,
+   "dial": {
+    "closeness": "close",
+    "n_slots": 4,
+    "forward_cap": 550
+   },
+   "files": {
+    "instance.json": "9cfb788996fb0498a55366bdef636673f1595696830c541125fc1cf48b5bf46e",
+    "public.json": "63806ff84204f802c9063469e0e363003fd0297d67c2fd3cb929d57f2d107d4e"
+   }
+  }
+ ]
+}

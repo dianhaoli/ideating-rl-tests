@@ -5,11 +5,19 @@ real width 16384 and the real 3 layers), bank-F/R chunk files in the real format
 generator (generate.make_instance). Activations come from `World.row(text, layer)`, which a stub Subject also uses,
 so the compute path (batching, IO, manifest) and the analyze path see the same numbers.
 
-Latent types planted per concept and layer (ground truth for the tests):
-  R  robust:        fires on the concept's texts in every split and every style            -> must be KEPT
-  S  style-fragile: fires on dataset splits A/B/C and only the encyclopedia-style bank text -> must be DROPPED
-  P  rival:         like R, plus fires on the partner concept's split-C and bank texts (not A/B), so the partner
-                    passes the generator's menu exclusion yet separates on C+F2      -> null with partner on menu FLAGGED
+Latent types planted per concept and layer (ground truth for the tests; PREREG A1.1 keep rule):
+  R  robust:        fires on the concept's texts in every split and every style            -> KEPT
+  S  style-fragile: fires on dataset splits A/B/C and only the encyclopedia-style bank text -> not_style_robust
+  X  C-weak:        fires on A/B and all bank texts, but on only half of split-C texts: AUROC_C ~0.75 < 0.85 while
+                    AUROC_F2 ~0.97 (pooled C+F2 would pass 0.85; the two SEPARATE thresholds fail) -> not_style_robust
+  K  key-shift:     fires on the concept's dataset texts and only on the SECOND bank text of each style (F2); it also
+                    fires on the partner's FIRST bank text of each style (F1, strongly) and on 40% of the partner's
+                    A/B texts. Equal-weight M = 0.5 A + 0.5 F1 prefers the partner; pooling A (40 texts) with F1 (10)
+                    would still prefer c*. Exercises the equal weighting and the first/second F1/F2 split
+                                                                                         -> ms_key_differs only
+  P  rival:         like R, plus fires (more strongly) on the partner concept's split-C and bank texts (not A/B), so
+                    the partner passes the generator's menu exclusion and wins H = 0.5 C + 0.5 F2
+                                                                                         -> heldout_key_differs only
   N  name-firing:   like R but also fires on the concept's name probes (generator's name filter removes it)
   W  weak:          fires on 40% of the concept's texts (never pooled)
 """
@@ -28,11 +36,11 @@ ENC = STYLES_F.index("encyclopedia-style sentence")
 STYLES_R = ["text message", "press release", "interview Q&A", "how-to tip", "headline plus lede",
             "personal anecdote told aloud", "trivia question", "email to a friend", "museum or exhibit placard",
             "sports-radio commentary"]
-TYPES = ("R1", "R2", "S1", "S2", "P", "N", "W")
+TYPES = ("R1", "R2", "S1", "S2", "X", "K", "P", "N", "W")
 
 
 class World:
-    def __init__(self, n_lang=4, n_topic=20, nA=10, nB=8, nC=10, n_bg=300, seed=0):
+    def __init__(self, n_lang=4, n_topic=20, nA=40, nB=8, nC=10, n_bg=300, seed=0):
         self.cs = []
         for k in range(n_lang):
             self.cs.append({"cid": f"lang:l{k}", "label": f"text written in Lang{k}", "source": "language",
@@ -71,6 +79,7 @@ class World:
         assert p[0] == "SYN", text
         ci, split = int(p[1]), p[2]
         style = int(p[3]) if split in ("F", "R") else None
+        rep = int(p[4]) if split in ("F", "R") else None          # 0 = first text of the style (F1), 1 = second (F2)
         r = np.random.default_rng(int(hashlib.sha256(f"{L}|{text}".encode()).hexdigest()[:15], 16))
         v = np.zeros(D, dtype=np.float32)
         if split == "names":
@@ -85,16 +94,26 @@ class World:
         dataset = split in ("A", "B", "C")
         for ty in ("R1", "R2", "N"):
             put(ty, ci, 0.95)
-        put("P", ci, 0.95)
+        put("P", ci, 1.0)          # P must clear 0.85 on C and F2 although the partner's texts rank above it
         if dataset or (split == "F" and style == ENC):
             put("S1", ci, 0.95)
             put("S2", ci, 0.95)
+        if split != "C" or int(p[3]) % 2 == 0:               # X: only half of split C (deterministic)
+            put("X", ci, 1.0 if split == "C" else 0.95)
+        if dataset or rep == 1:
+            put("K", ci, 1.0)
         put("W", ci, 0.40)
-        # rival latents of the concepts whose partner is ci fire on ci's split-C and bank texts
-        if split in ("C", "F", "R"):
-            for k in range(self.n_c):
-                if self.partner(k) == ci and k != ci:
-                    put("P", k, 0.95)
+        # latents whose partner is ci: P fires strongly on ci's split-C and bank texts; K on half of ci's A/B texts
+        # and strongly on ci's FIRST bank text of each style
+        for k in range(self.n_c):
+            if self.partner(k) != ci or k == ci:
+                continue
+            if split in ("C", "F", "R"):
+                put("P", k, 1.0, 7.0, 9.0)
+            if split in ("A", "B"):
+                put("K", k, 0.4)
+            if split == "F" and rep == 0:
+                put("K", k, 1.0, 7.0, 9.0)
         return v
 
     def acts(self, texts, L):
