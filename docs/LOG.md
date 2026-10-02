@@ -384,3 +384,26 @@ Workflow wf_95ca39e9-284 (7 agents). STEP3.md (fmdiag 22111857); skeptic 0fa8c45
   still be flagged), then resolution.
 - Ready-for-smoke tasks are now BoolIntermediates, ShiftHunt and LatentDiff. Smoke order is Dan's call (D15 put
   BoolIntermediates after LatentKnockout).
+
+## 2026-10-02 (~11:30 UTC): harness audit hardening done; LatentKnockout NO-GO-as-is; agent smoke of 3 ready tasks started
+- **Harness (main 5d0f6fe1 + 1c5d13ba; 262 tests pass).** The 6 reported problems are fixed: R9 exec of the agent's own literal sandbox file;
+  R2 sed regex parts and quoted '/' separators; R4 `nc` as a Python name; bare codename in agent-written files is counted,
+  not a leak (path/module/canary forms still leak); run-scripted `solver_failed` / `no_successful_call`; `infra_failure`.
+  Replay of all 35 unique recorded LLM episodes, old vs new audit: 8 flagged -> clean, all genuine false positives; 0 clean -> flagged.
+  The replay verifier found 2 holes in the first fix, both closed in 1c5d13ba: (F1) the loosened R4 rule missed real
+  `ncat --exec` / `ssh in.example.com` forms, so R4 now fires by default and exempts only Python-name uses; (F2) an agent could
+  force `infra_failure` via `timeout N ./tool`, so client disconnect no longer counts as infra for LLM episodes. Still open: an
+  agent-induced "server died" still reads as infra.
+  **Gap:** the red-team stage did not run. That agent declined to write a corpus of breach transcripts. Coverage rests on the
+  fixer's must-still-flag twin tests and the replay verifier's diff review. Still open: t2ravel probe 2 `print(a, '/', b)` false positive.
+- **LatentKnockout feasibility: NO-GO-as-is (recipe)** (task/latentknockout 517e987f; FEASIBILITY_VERDICT.md). Small
+  latent sets exist (30/43 pairs feasible at the best layer; median reference R 0.686 with k <= 10), but naive top-5 attribution reaches
+  half the reference's R on 31/44 feasible cells (0.705) and decoder cosine with the mean difference on 24/44 (0.545). Skeptics: "top answer flipped"
+  mostly counts near-ties (median clean lead 1.75 logits); with a 0.5-logit effect margin, check 1 (nothing small works) fires instead.
+  The "Verify" variant fails its own recipe gate (a self-test script passes 0.76). Famous concepts (Texas, English, popular sports)
+  cannot be knocked out with 5 latents. A strict redesign (LatentKnockout-Strict) is specified with 3 stop gates (~4 h GPU); the synthesis puts
+  ~0.10 on it passing. Pitch findings: grading by rerunning the model removes the style problem; a top-1 flip metric counts near-ties; fame resists knockout.
+- **Smoke (Dan: after the LatentKnockout verdict): workflow wf_6c6e6341-0ee.** BoolIntermediates (12 instances, T1-T4),
+  ShiftHunt (6), LatentDiff (6). Fresh Claude Code subagents (claude-opus-5-5) see only the harness prompt. Per episode:
+  operator prepare -> test agent -> operator finish (transcript located by episode id, prompt byte-match check) + transcript
+  diagnosis. Then a per-task SMOKE.md. Main is merged into each task branch LOCALLY only (ShiftHunt/FeatureMatch history carries answer material).
