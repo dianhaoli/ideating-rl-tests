@@ -1,0 +1,145 @@
+{
+ "manifest_file_sha256": "6a3cada6335736a6b3b0af8785dc95872823005cb3a221e6c2812e0341498b71",
+ "manifest_entries_checked": 360,
+ "manifest_mismatches": [],
+ "n_instance_dirs": 180,
+ "pool_sha256_recomputed": "b212728fc859866f1a5bb8578fd67bc1c5ebca015c98be5d27d436515dbc3dcb"
+}
+{
+ "n_episodes": 3603,
+ "grader_fn_vs_stored_differences": 0,
+ "independent_rule_vs_grader_differences": 0,
+ "examples": []
+}
+sample: 30 match 30
+SR-max                       pass 17/180=0.0944 [0.0598, 0.146]  pa 385/441=0.873 W[0.8387, 0.9009] C[0.8398, 0.9035] Cown[0.8405, 0.9038] NF 0.0 FC 1.0 | topic 0.8293 lang 1.0
+SR-max-all20                 pass 28/180=0.1556 [0.1099, 0.2156]  pa 425/441=0.9637 W[0.9419, 0.9775] C[0.9446, 0.9803] Cown[0.9443, 0.9801] NF 0.0 FC 1.0 | topic 0.9604 lang 0.9735
+SR-max-capped                pass 17/180=0.0944 [0.0598, 0.146]  pa 385/441=0.873 W[0.8387, 0.9009] C[0.8398, 0.9035] Cown[0.8405, 0.9038] NF 0.0 FC 1.0 | topic 0.8293 lang 1.0
+SR-thr                       pass 68/180=0.3778 [0.3102, 0.4505]  pa 322/441=0.7302 W[0.6869, 0.7695] C[0.6884, 0.7706] Cown[0.6885, 0.7716] NF 0.229 FC 0.1303 | topic 0.6372 lang 1.0
+SR-thr-all20                 pass 104/180=0.5778 [0.5047, 0.6476]  pa 367/441=0.8322 W[0.7945, 0.8642] C[0.7981, 0.8655] Cown[0.7982, 0.8661] NF 0.1633 FC 0.0739 | topic 0.7835 lang 0.9735
+SR-thr-capped                pass 68/180=0.3778 [0.3102, 0.4505]  pa 323/441=0.7324 W[0.6892, 0.7716] C[0.6911, 0.7719] Cown[0.6911, 0.7734] NF 0.2245 FC 0.1373 | topic 0.6402 lang 1.0
+blackbox                     pass 7/180=0.0389 [0.019, 0.0781]  pa 0/441=0.0 W[0.0, 0.0086] C[0.0, 0.0] Cown[0.0, 0.0] NF 1.0 FC 0.0 | topic 0.0 lang 0.0
+recipe_always_claim          pass 0/180=0.0 [0.0, 0.0209]  pa 13/441=0.0295 W[0.0173, 0.0498] C[0.0138, 0.0466] Cown[0.0141, 0.0469] NF 0.0 FC 1.0 | topic 0.0335 lang 0.0177
+recipe_name_probe            pass 0/180=0.0 [0.0, 0.0209]  pa 13/441=0.0295 W[0.0173, 0.0498] C[0.0138, 0.0466] Cown[0.0141, 0.0469] NF 0.0 FC 1.0 | topic 0.0335 lang 0.0177
+recipe_name_probe_thr        pass 3/180=0.0167 [0.0057, 0.0478]  pa 0/441=0.0 W[0.0, 0.0086] C[0.0, 0.0] Cown[0.0, 0.0] NF 0.9274 FC 0.0951 | topic 0.0 lang 0.0
+recipe_nothing               pass 7/180=0.0389 [0.019, 0.0781]  pa 0/441=0.0 W[0.0, 0.0086] C[0.0, 0.0] Cown[0.0, 0.0] NF 1.0 FC 0.0 | topic 0.0 lang 0.0
+recipe_prior                 pass 0/180=0.0 [0.0, 0.0209]  pa 17/441=0.0385 W[0.0242, 0.0609] C[0.021, 0.0582] Cown[0.0208, 0.0583] NF 0.0 FC 1.0 | topic 0.0488 lang 0.0088
+recipe_prior@v2f             pass 0/180=0.0 [0.0, 0.0209]  pa 26/441=0.059 W[0.0405, 0.085] C[0.0383, 0.0808] Cown[0.0381, 0.0816] NF 0.0 FC 1.0 | topic 0.0518 lang 0.0796
+recipe_prior_or_none         pass 0/180=0.0 [0.0, 0.0209]  pa 17/441=0.0385 W[0.0242, 0.0609] C[0.021, 0.0582] Cown[0.0208, 0.0583] NF 0.0 FC 1.0 | topic 0.0488 lang 0.0088
+recipe_prior_or_none@v2f     pass 0/180=0.0 [0.0, 0.0209]  pa 26/441=0.059 W[0.0405, 0.085] C[0.0383, 0.0808] Cown[0.0381, 0.0816] NF 0.0 FC 1.0 | topic 0.0518 lang 0.0796
+recipe_random                pass 1/180=0.0056 [0.001, 0.0308]  pa 6/441=0.0136 W[0.0063, 0.0294] C[0.0045, 0.0252] Cown[0.0044, 0.0252] NF 0.5782 FC 0.4155 | topic 0.0152 lang 0.0088
+recipe_self_probe            pass 8/180=0.0444 [0.0227, 0.0852]  pa 90/441=0.2041 W[0.1691, 0.2442] C[0.1681, 0.2415] Cown[0.1679, 0.2412] NF 0.746 FC 0.0563 | topic 0.2226 lang 0.1504
+recipe_template_probe        pass 21/180=0.1167 [0.0776, 0.1718]  pa 127/441=0.288 W[0.2477, 0.3319] C[0.246, 0.3296] Cown[0.2461, 0.3304] NF 0.678 FC 0.0704 | topic 0.061 lang 0.9469
+recipe_vocab_match           pass 4/180=0.0222 [0.0087, 0.0557]  pa 23/441=0.0522 W[0.035, 0.077] C[0.0333, 0.0726] Cown[0.0333, 0.0726] NF 0.8753 FC 0.0563 | topic 0.0701 lang 0.0
+reference                    pass 178/180=0.9889 [0.9604, 0.9969]  pa 441/441=1.0 W[0.9914, 1.0] C[1.0, 1.0] Cown[1.0, 1.0] NF 0.0 FC 0.007 | topic 1.0 lang 1.0
+reference_best_of_5          pass 180/180=1.0 [0.9791, 1.0]  pa 441/441=1.0 W[0.9914, 1.0] C[1.0, 1.0] Cown[1.0, 1.0] NF 0.0 FC 0.0 | topic 1.0 lang 1.0
+{
+ "pooled": {
+  "per_variant": {
+   "SR-max": {
+    "planted_acc": 0.873,
+    "k": 385,
+    "n": 441,
+    "wilson95": [
+     0.8387,
+     0.9009
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   },
+   "SR-thr": {
+    "planted_acc": 0.7302,
+    "k": 322,
+    "n": 441,
+    "wilson95": [
+     0.6869,
+     0.7695
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   }
+  },
+  "fires": true,
+  "borderline": false
+ },
+ "topic_only": {
+  "per_variant": {
+   "SR-max": {
+    "planted_acc": 0.8293,
+    "k": 272,
+    "n": 328,
+    "wilson95": [
+     0.7848,
+     0.8661
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   },
+   "SR-thr": {
+    "planted_acc": 0.6372,
+    "k": 209,
+    "n": 328,
+    "wilson95": [
+     0.5839,
+     0.6874
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   }
+  },
+  "fires": true,
+  "borderline": false
+ },
+ "language_only": {
+  "per_variant": {
+   "SR-max": {
+    "planted_acc": 1.0,
+    "k": 113,
+    "n": 113,
+    "wilson95": [
+     0.9671,
+     1.0
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   },
+   "SR-thr": {
+    "planted_acc": 1.0,
+    "k": 113,
+    "n": 113,
+    "wilson95": [
+     0.9671,
+     1.0
+    ],
+    "above_0.50": true,
+    "wilson_includes_0.50": false
+   }
+  },
+  "fires": true,
+  "borderline": false
+ }
+}
+{'SR-max': 0.873, 'SR-thr': 0.7302} {'r_ref': 0.0, 'r_rec': 0.712} {1: 178, 3: 1, 2: 1}
+	Command being timed: "/opt/pytorch/bin/python tasks/featurematch/diagnosis/step3_skeptic/regrade.py"
+	User time (seconds): 4.20
+	System time (seconds): 0.36
+	Percent of CPU this job got: 111%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 124324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 103191
+	Voluntary context switches: 131
+	Involuntary context switches: 135
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 176
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

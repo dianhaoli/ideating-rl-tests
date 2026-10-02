@@ -1,0 +1,5 @@
+# Per-text activations of key latents (cache/) and per-episode rows reveal latent-concept pairs / truth: never commit.
+cache/
+*_private.json
+*_private.jsonl
+__pycache__/

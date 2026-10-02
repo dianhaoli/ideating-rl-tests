@@ -1,0 +1,155 @@
+{
+ "cache_rows_match_bank_files": {
+  "n": 4640,
+  "per_text_hash_equal": true,
+  "rows_equal": true,
+  "styles_equal": true
+ },
+ "primary_styles": [
+  "how-to tip",
+  "trivia question",
+  "personal anecdote told aloud",
+  "interview Q&A",
+  "sports-radio or radio-show style commentary",
+  "text message"
+ ],
+ "slot_agreement_with_builder": {
+  "n_slots": 725,
+  "SR-max_pick_equal": 725,
+  "SR-thr_choice_equal": 725
+ },
+ "primary": {
+  "pooled": {
+   "n_planted": 441,
+   "SR-max": [
+    385,
+    0.873,
+    [
+     0.8387,
+     0.9009
+    ]
+   ],
+   "SR-thr": [
+    322,
+    0.7302,
+    [
+     0.6869,
+     0.7695
+    ]
+   ]
+  },
+  "topic": {
+   "n_planted": 328,
+   "SR-max": [
+    272,
+    0.8293,
+    [
+     0.7848,
+     0.8661
+    ]
+   ],
+   "SR-thr": [
+    209,
+    0.6372,
+    [
+     0.5839,
+     0.6874
+    ]
+   ]
+  },
+  "language": {
+   "n_planted": 113,
+   "SR-max": [
+    113,
+    1.0,
+    [
+     0.9671,
+     1
+    ]
+   ],
+   "SR-thr": [
+    113,
+    1.0,
+    [
+     0.9671,
+     1
+    ]
+   ]
+  }
+ },
+ "topic_win_margins": {
+  "n": 272,
+  "median_rel_gap_top2": 0.724,
+  "share_rel_gap_lt_0.10": 0.015,
+  "median_auc_of_pick": 0.887
+ },
+ "selection_sensitivity_42": {
+  "pooled": {
+   "max": {
+    "min": 0.8617,
+    "p10": 0.878,
+    "median": 0.907,
+    "p90": 0.9317,
+    "max": 0.9546
+   },
+   "thr": {
+    "min": 0.6893,
+    "p10": 0.7236,
+    "median": 0.7574,
+    "p90": 0.8181,
+    "max": 0.873
+   }
+  },
+  "topic": {
+   "max": {
+    "min": 0.8293,
+    "p10": 0.8601,
+    "median": 0.8887,
+    "p90": 0.9226,
+    "max": 0.9421
+   },
+   "thr": {
+    "min": 0.6189,
+    "p10": 0.6503,
+    "median": 0.6936,
+    "p90": 0.771,
+    "max": 0.8323
+   }
+  },
+  "language": {
+   "max": {
+    "min": 0.9204,
+    "p10": 0.9292,
+    "median": 0.9469,
+    "p90": 1.0,
+    "max": 1.0
+   },
+   "thr": {
+    "min": 0.8938,
+    "p10": 0.9115,
+    "median": 0.9381,
+    "p90": 1.0,
+    "max": 1.0
+   }
+  }
+ },
+ "bank_F_vs_R_overlap": {
+  "exact_duplicate_texts": 0,
+  "max_char5_jaccard_R_vs_sameconcept_F": {
+   "median": 0.06,
+   "p90": 0.141,
+   "p99": 0.324,
+   "max": 0.748,
+   "n_ge_0.5": 13,
+   "n": 4640
+  }
+ },
+ "name_probe_offline": {
+  "n_slots": 725,
+  "offline_pick_equals_stored_name_probe": 724,
+  "planted_slots": 441,
+  "planted_any_bare_name_fires": 31,
+  "planted_true_bare_name_fires": 0,
+  "planted_true_name_is_top": 0
+ }
+}

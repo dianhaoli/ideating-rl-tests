@@ -1,0 +1,26 @@
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   1%|▏         | 4/288 [00:00<00:07, 38.82it/s]Loading weights:  16%|█▌        | 45/288 [00:00<00:01, 230.96it/s]Loading weights:  40%|███▉      | 115/288 [00:00<00:00, 425.61it/s]Loading weights:  63%|██████▎   | 181/288 [00:00<00:00, 508.61it/s]Loading weights:  85%|████████▌ | 246/288 [00:00<00:00, 554.34it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 490.09it/s]
+loaded {6: 1413, 12: 1855, 18: 1749} 7s
+done {6: {'tmpl_max_abs_diff': 0.0, 'gen_max_abs_diff': 0.0}, 12: {'tmpl_max_abs_diff': 0.0, 'gen_max_abs_diff': 0.0}, 18: {'tmpl_max_abs_diff': 0.0, 'gen_max_abs_diff': 0.0}} 26s peak cuda GB 6.07
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label fm-diag-step3-skeptic-v2cols -- /opt/pytorch/bin/python -m tasks.featurematch.diagnosis.step3_skeptic.gpu_probe2"
+	User time (seconds): 27.61
+	System time (seconds): 2.18
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 507308
+	Voluntary context switches: 3039
+	Involuntary context switches: 286
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 100376
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

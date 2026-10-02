@@ -1,0 +1,50 @@
+[gpuq] waiting for 8.0 GB (heavy) label=fm-diag-step3-skeptic
+[gpuq] admitted after 303s
+05:24:30 kept latents per layer {6: 102, 12: 78, 18: 174}
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   1%|          | 3/288 [00:00<00:09, 29.31it/s]Loading weights:  25%|██▌       | 72/288 [00:00<00:00, 410.31it/s]Loading weights:  47%|████▋     | 136/288 [00:00<00:00, 509.02it/s]Loading weights:  68%|██████▊   | 197/288 [00:00<00:00, 548.25it/s]Loading weights:  88%|████████▊ | 252/288 [00:00<00:00, 302.90it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 367.26it/s]
+05:24:37 model loaded 7s cuda mem GB 5.68
+05:24:56 templates 2093 25s
+05:24:59 generate 0 / 464
+05:27:26 generate 50 / 464
+05:29:53 generate 100 / 464
+05:32:20 generate 150 / 464
+05:34:45 generate 200 / 464
+05:37:10 generate 250 / 464
+05:39:36 generate 300 / 464
+05:42:03 generate 350 / 464
+05:44:30 generate 400 / 464
+05:46:55 generate 450 / 464
+05:47:39 generate done 1389s empty completions 0
+05:47:40 sr_live 0 / 725 1390s
+05:49:08 sr_live 100 / 725 1477s
+05:50:33 sr_live 200 / 725 1563s
+05:52:01 sr_live 300 / 725 1651s
+05:53:28 sr_live 400 / 725 1737s
+05:54:50 sr_live 500 / 725 1820s
+05:56:08 sr_live 600 / 725 1898s
+05:57:32 sr_live 700 / 725 1981s
+05:57:51 sr_live done 2001s
+05:58:14 all done 2024s peak cuda GB 6.07
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --heavy --label fm-diag-step3-skeptic -- /opt/pytorch/bin/python -m tasks.featurematch.diagnosis.step3_skeptic.gpu_probe"
+	User time (seconds): 2018.45
+	System time (seconds): 11.84
+	Percent of CPU this job got: 87%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 38:49.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6282432
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 14
+	Minor (reclaiming a frame) page faults: 532567
+	Voluntary context switches: 44815
+	Involuntary context switches: 7879
+	Swaps: 0
+	File system inputs: 163264
+	File system outputs: 9752
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

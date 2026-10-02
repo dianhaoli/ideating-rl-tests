@@ -1,0 +1,1368 @@
+{
+ "pool": {
+  "dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances",
+  "n_instances": 180,
+  "pool_sha256": "5baa3c2aa97869fb1e125ad0dc46120ac1be11ef6a380068facc82385ef9555c",
+  "same_pool_as_SR_dry_run": true
+ },
+ "consistency_with_gpu_probe": {
+  "6": {
+   "tmpl_max_abs_diff": 0.0,
+   "gen_max_abs_diff": 0.0
+  },
+  "12": {
+   "tmpl_max_abs_diff": 0.0,
+   "gen_max_abs_diff": 0.0
+  },
+  "18": {
+   "tmpl_max_abs_diff": 0.0,
+   "gen_max_abs_diff": 0.0
+  }
+ },
+ "recipes": {
+  "generic_label": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.0209
+     ],
+     "n_planted": 431,
+     "planted_correct": 30,
+     "planted_acc": 0.0696,
+     "planted_acc_wilson95": [
+      0.0492,
+      0.0976
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0468,
+      0.0939
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0465,
+      0.0951
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.021
+     ],
+     "n_planted": 391,
+     "planted_correct": 29,
+     "planted_acc": 0.0742,
+     "planted_acc_wilson95": [
+      0.0521,
+      0.1045
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0492,
+      0.1008
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0487,
+      0.1016
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 1,
+     "pass_rate": 0.0175,
+     "pass_wilson95": [
+      0.0031,
+      0.0929
+     ],
+     "n_planted": 40,
+     "planted_correct": 1,
+     "planted_acc": 0.025,
+     "planted_acc_wilson95": [
+      0.0044,
+      0.1288
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 11,
+     "pass_rate": 0.0611,
+     "pass_wilson95": [
+      0.0345,
+      0.1061
+     ],
+     "n_planted": 431,
+     "planted_correct": 9,
+     "planted_acc": 0.0209,
+     "planted_acc_wilson95": [
+      0.011,
+      0.0392
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.009,
+      0.035
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0091,
+      0.0354
+     ],
+     "planted_nf_rate": 0.942,
+     "n_null": 272,
+     "null_false_claim": 0.0515
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 12,
+     "pass_rate": 0.067,
+     "pass_wilson95": [
+      0.0388,
+      0.1135
+     ],
+     "n_planted": 391,
+     "planted_correct": 9,
+     "planted_acc": 0.023,
+     "planted_acc_wilson95": [
+      0.0122,
+      0.0432
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0101,
+      0.0383
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0099,
+      0.0387
+     ],
+     "planted_nf_rate": 0.9361,
+     "n_null": 247,
+     "null_false_claim": 0.0567
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 19,
+     "pass_rate": 0.3333,
+     "pass_wilson95": [
+      0.2249,
+      0.4628
+     ],
+     "n_planted": 40,
+     "planted_correct": 0,
+     "planted_acc": 0.0,
+     "planted_acc_wilson95": [
+      0.0,
+      0.0876
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_nf_rate": 1.0,
+     "n_null": 25,
+     "null_false_claim": 0.0
+    }
+   }
+  },
+  "generic_bare": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.0209
+     ],
+     "n_planted": 431,
+     "planted_correct": 36,
+     "planted_acc": 0.0835,
+     "planted_acc_wilson95": [
+      0.0609,
+      0.1135
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0583,
+      0.1098
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0587,
+      0.1114
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.021
+     ],
+     "n_planted": 391,
+     "planted_correct": 35,
+     "planted_acc": 0.0895,
+     "planted_acc_wilson95": [
+      0.0651,
+      0.1219
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0619,
+      0.1189
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0619,
+      0.1192
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 1,
+     "pass_rate": 0.0175,
+     "pass_wilson95": [
+      0.0031,
+      0.0929
+     ],
+     "n_planted": 40,
+     "planted_correct": 1,
+     "planted_acc": 0.025,
+     "planted_acc_wilson95": [
+      0.0044,
+      0.1288
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 11,
+     "pass_rate": 0.0611,
+     "pass_wilson95": [
+      0.0345,
+      0.1061
+     ],
+     "n_planted": 431,
+     "planted_correct": 16,
+     "planted_acc": 0.0371,
+     "planted_acc_wilson95": [
+      0.023,
+      0.0594
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0195,
+      0.0557
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0201,
+      0.0566
+     ],
+     "planted_nf_rate": 0.9211,
+     "n_null": 272,
+     "null_false_claim": 0.0588
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 12,
+     "pass_rate": 0.067,
+     "pass_wilson95": [
+      0.0388,
+      0.1135
+     ],
+     "n_planted": 391,
+     "planted_correct": 16,
+     "planted_acc": 0.0409,
+     "planted_acc_wilson95": [
+      0.0253,
+      0.0654
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.022,
+      0.062
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0223,
+      0.062
+     ],
+     "planted_nf_rate": 0.913,
+     "n_null": 247,
+     "null_false_claim": 0.0648
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 19,
+     "pass_rate": 0.3333,
+     "pass_wilson95": [
+      0.2249,
+      0.4628
+     ],
+     "n_planted": 40,
+     "planted_correct": 0,
+     "planted_acc": 0.0,
+     "planted_acc_wilson95": [
+      0.0,
+      0.0876
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_nf_rate": 1.0,
+     "n_null": 25,
+     "null_false_claim": 0.0
+    }
+   }
+  },
+  "style3": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.0209
+     ],
+     "n_planted": 431,
+     "planted_correct": 84,
+     "planted_acc": 0.1949,
+     "planted_acc_wilson95": [
+      0.1603,
+      0.2349
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.158,
+      0.2315
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.1587,
+      0.2331
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.021
+     ],
+     "n_planted": 391,
+     "planted_correct": 52,
+     "planted_acc": 0.133,
+     "planted_acc_wilson95": [
+      0.1029,
+      0.1702
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0997,
+      0.168
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0993,
+      0.1688
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 27,
+     "pass_rate": 0.4737,
+     "pass_wilson95": [
+      0.3499,
+      0.6008
+     ],
+     "n_planted": 40,
+     "planted_correct": 32,
+     "planted_acc": 0.8,
+     "planted_acc_wilson95": [
+      0.6524,
+      0.895
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.6744,
+      0.9143
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.6667,
+      0.9167
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 11,
+     "pass_rate": 0.0611,
+     "pass_wilson95": [
+      0.0345,
+      0.1061
+     ],
+     "n_planted": 431,
+     "planted_correct": 63,
+     "planted_acc": 0.1462,
+     "planted_acc_wilson95": [
+      0.1159,
+      0.1826
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.1119,
+      0.1808
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.113,
+      0.1808
+     ],
+     "planted_nf_rate": 0.7703,
+     "n_null": 272,
+     "null_false_claim": 0.0993
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 11,
+     "pass_rate": 0.0615,
+     "pass_wilson95": [
+      0.0347,
+      0.1067
+     ],
+     "n_planted": 391,
+     "planted_correct": 33,
+     "planted_acc": 0.0844,
+     "planted_acc_wilson95": [
+      0.0607,
+      0.1162
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0574,
+      0.1136
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0569,
+      0.1141
+     ],
+     "planted_nf_rate": 0.8235,
+     "n_null": 247,
+     "null_false_claim": 0.0931
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 44,
+     "pass_rate": 0.7719,
+     "pass_wilson95": [
+      0.6479,
+      0.8616
+     ],
+     "n_planted": 40,
+     "planted_correct": 30,
+     "planted_acc": 0.75,
+     "planted_acc_wilson95": [
+      0.5981,
+      0.8581
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.6111,
+      0.875
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.6098,
+      0.875
+     ],
+     "planted_nf_rate": 0.25,
+     "n_null": 25,
+     "null_false_claim": 0.16
+    }
+   }
+  },
+  "encyc4_max": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 1,
+     "pass_rate": 0.0056,
+     "pass_wilson95": [
+      0.001,
+      0.0308
+     ],
+     "n_planted": 431,
+     "planted_correct": 163,
+     "planted_acc": 0.3782,
+     "planted_acc_wilson95": [
+      0.3337,
+      0.4249
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.3289,
+      0.4282
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3296,
+      0.4276
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 2,
+     "pass_rate": 0.0112,
+     "pass_wilson95": [
+      0.0031,
+      0.0398
+     ],
+     "n_planted": 391,
+     "planted_correct": 129,
+     "planted_acc": 0.3299,
+     "planted_acc_wilson95": [
+      0.2852,
+      0.378
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.2781,
+      0.3831
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.2786,
+      0.3832
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 29,
+     "pass_rate": 0.5088,
+     "pass_wilson95": [
+      0.3826,
+      0.6338
+     ],
+     "n_planted": 40,
+     "planted_correct": 34,
+     "planted_acc": 0.85,
+     "planted_acc_wilson95": [
+      0.7093,
+      0.9294
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.7368,
+      0.95
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.7333,
+      0.95
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 18,
+     "pass_rate": 0.1,
+     "pass_wilson95": [
+      0.0642,
+      0.1525
+     ],
+     "n_planted": 431,
+     "planted_correct": 92,
+     "planted_acc": 0.2135,
+     "planted_acc_wilson95": [
+      0.1774,
+      0.2546
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.1751,
+      0.2518
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.1767,
+      0.2528
+     ],
+     "planted_nf_rate": 0.7355,
+     "n_null": 272,
+     "null_false_claim": 0.0515
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 17,
+     "pass_rate": 0.095,
+     "pass_wilson95": [
+      0.0601,
+      0.1468
+     ],
+     "n_planted": 391,
+     "planted_correct": 59,
+     "planted_acc": 0.1509,
+     "planted_acc_wilson95": [
+      0.1188,
+      0.1898
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.115,
+      0.1889
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.1151,
+      0.1887
+     ],
+     "planted_nf_rate": 0.7954,
+     "n_null": 247,
+     "null_false_claim": 0.0567
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 50,
+     "pass_rate": 0.8772,
+     "pass_wilson95": [
+      0.7675,
+      0.9392
+     ],
+     "n_planted": 40,
+     "planted_correct": 33,
+     "planted_acc": 0.825,
+     "planted_acc_wilson95": [
+      0.6805,
+      0.9125
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.7027,
+      0.9318
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.7027,
+      0.9318
+     ],
+     "planted_nf_rate": 0.15,
+     "n_null": 25,
+     "null_false_claim": 0.0
+    }
+   }
+  },
+  "gen_all": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 2,
+     "pass_rate": 0.0111,
+     "pass_wilson95": [
+      0.0031,
+      0.0396
+     ],
+     "n_planted": 431,
+     "planted_correct": 252,
+     "planted_acc": 0.5847,
+     "planted_acc_wilson95": [
+      0.5376,
+      0.6303
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.5427,
+      0.6273
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.5426,
+      0.6274
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 4,
+     "pass_rate": 0.0223,
+     "pass_wilson95": [
+      0.0087,
+      0.056
+     ],
+     "n_planted": 391,
+     "planted_correct": 230,
+     "planted_acc": 0.5882,
+     "planted_acc_wilson95": [
+      0.5388,
+      0.6359
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.5425,
+      0.6337
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.5424,
+      0.6339
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 17,
+     "pass_rate": 0.2982,
+     "pass_wilson95": [
+      0.1953,
+      0.4266
+     ],
+     "n_planted": 40,
+     "planted_correct": 22,
+     "planted_acc": 0.55,
+     "planted_acc_wilson95": [
+      0.3983,
+      0.6929
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.3871,
+      0.7073
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3846,
+      0.7105
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 16,
+     "pass_rate": 0.0889,
+     "pass_wilson95": [
+      0.0555,
+      0.1395
+     ],
+     "n_planted": 431,
+     "planted_correct": 200,
+     "planted_acc": 0.464,
+     "planted_acc_wilson95": [
+      0.4175,
+      0.5112
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.4185,
+      0.5103
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.4183,
+      0.5111
+     ],
+     "planted_nf_rate": 0.3875,
+     "n_null": 272,
+     "null_false_claim": 0.4007
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 18,
+     "pass_rate": 0.1006,
+     "pass_wilson95": [
+      0.0646,
+      0.1533
+     ],
+     "n_planted": 391,
+     "planted_correct": 180,
+     "planted_acc": 0.4604,
+     "planted_acc_wilson95": [
+      0.4116,
+      0.5099
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.4116,
+      0.5104
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.4122,
+      0.5098
+     ],
+     "planted_nf_rate": 0.3939,
+     "n_null": 247,
+     "null_false_claim": 0.413
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 33,
+     "pass_rate": 0.5789,
+     "pass_wilson95": [
+      0.4498,
+      0.6981
+     ],
+     "n_planted": 40,
+     "planted_correct": 20,
+     "planted_acc": 0.5,
+     "planted_acc_wilson95": [
+      0.352,
+      0.648
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.3428,
+      0.6579
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3415,
+      0.6522
+     ],
+     "planted_nf_rate": 0.325,
+     "n_null": 25,
+     "null_false_claim": 0.28
+    }
+   }
+  },
+  "gen1_cap": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 1,
+     "pass_rate": 0.0056,
+     "pass_wilson95": [
+      0.001,
+      0.0308
+     ],
+     "n_planted": 431,
+     "planted_correct": 190,
+     "planted_acc": 0.4408,
+     "planted_acc_wilson95": [
+      0.3947,
+      0.488
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.3972,
+      0.4854
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3972,
+      0.4867
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 1,
+     "pass_rate": 0.0056,
+     "pass_wilson95": [
+      0.001,
+      0.031
+     ],
+     "n_planted": 391,
+     "planted_correct": 178,
+     "planted_acc": 0.4552,
+     "planted_acc_wilson95": [
+      0.4066,
+      0.5048
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.4086,
+      0.5027
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.409,
+      0.5026
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 8,
+     "pass_rate": 0.1404,
+     "pass_wilson95": [
+      0.0729,
+      0.2532
+     ],
+     "n_planted": 40,
+     "planted_correct": 12,
+     "planted_acc": 0.3,
+     "planted_acc_wilson95": [
+      0.1807,
+      0.4543
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.1667,
+      0.4348
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.1667,
+      0.4359
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 20,
+     "pass_rate": 0.1111,
+     "pass_wilson95": [
+      0.0731,
+      0.1654
+     ],
+     "n_planted": 431,
+     "planted_correct": 146,
+     "planted_acc": 0.3387,
+     "planted_acc_wilson95": [
+      0.2957,
+      0.3847
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.2978,
+      0.3813
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.297,
+      0.3818
+     ],
+     "planted_nf_rate": 0.5012,
+     "n_null": 272,
+     "null_false_claim": 0.2721
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 23,
+     "pass_rate": 0.1285,
+     "pass_wilson95": [
+      0.0872,
+      0.1854
+     ],
+     "n_planted": 391,
+     "planted_correct": 136,
+     "planted_acc": 0.3478,
+     "planted_acc_wilson95": [
+      0.3023,
+      0.3963
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.305,
+      0.3918
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3055,
+      0.3911
+     ],
+     "planted_nf_rate": 0.4987,
+     "n_null": 247,
+     "null_false_claim": 0.2915
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 26,
+     "pass_rate": 0.4561,
+     "pass_wilson95": [
+      0.3337,
+      0.5841
+     ],
+     "n_planted": 40,
+     "planted_correct": 10,
+     "planted_acc": 0.25,
+     "planted_acc_wilson95": [
+      0.1419,
+      0.4019
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.125,
+      0.3846
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.122,
+      0.3889
+     ],
+     "planted_nf_rate": 0.525,
+     "n_null": 25,
+     "null_false_claim": 0.08
+    }
+   }
+  },
+  "name3": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.0209
+     ],
+     "n_planted": 431,
+     "planted_correct": 19,
+     "planted_acc": 0.0441,
+     "planted_acc_wilson95": [
+      0.0284,
+      0.0678
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0247,
+      0.0653
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0247,
+      0.0664
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 0,
+     "pass_rate": 0.0,
+     "pass_wilson95": [
+      0.0,
+      0.021
+     ],
+     "n_planted": 391,
+     "planted_correct": 18,
+     "planted_acc": 0.046,
+     "planted_acc_wilson95": [
+      0.0293,
+      0.0716
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0254,
+      0.0702
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0251,
+      0.0701
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 1,
+     "pass_rate": 0.0175,
+     "pass_wilson95": [
+      0.0031,
+      0.0929
+     ],
+     "n_planted": 40,
+     "planted_correct": 1,
+     "planted_acc": 0.025,
+     "planted_acc_wilson95": [
+      0.0044,
+      0.1288
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0833
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 10,
+     "pass_rate": 0.0556,
+     "pass_wilson95": [
+      0.0305,
+      0.0992
+     ],
+     "n_planted": 431,
+     "planted_correct": 0,
+     "planted_acc": 0.0,
+     "planted_acc_wilson95": [
+      0.0,
+      0.0088
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_nf_rate": 0.9211,
+     "n_null": 272,
+     "null_false_claim": 0.0809
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 11,
+     "pass_rate": 0.0615,
+     "pass_wilson95": [
+      0.0347,
+      0.1067
+     ],
+     "n_planted": 391,
+     "planted_correct": 0,
+     "planted_acc": 0.0,
+     "planted_acc_wilson95": [
+      0.0,
+      0.0097
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_nf_rate": 0.9156,
+     "n_null": 247,
+     "null_false_claim": 0.085
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 18,
+     "pass_rate": 0.3158,
+     "pass_wilson95": [
+      0.21,
+      0.4448
+     ],
+     "n_planted": 40,
+     "planted_correct": 0,
+     "planted_acc": 0.0,
+     "planted_acc_wilson95": [
+      0.0,
+      0.0876
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0,
+      0.0
+     ],
+     "planted_nf_rate": 0.975,
+     "n_null": 25,
+     "null_false_claim": 0.04
+    }
+   }
+  },
+  "tmpl7_posthoc": {
+   "max_pick": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 1,
+     "pass_rate": 0.0056,
+     "pass_wilson95": [
+      0.001,
+      0.0308
+     ],
+     "n_planted": 431,
+     "planted_correct": 171,
+     "planted_acc": 0.3968,
+     "planted_acc_wilson95": [
+      0.3517,
+      0.4437
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.3481,
+      0.4457
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.349,
+      0.4455
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 272,
+     "null_false_claim": 1.0
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 2,
+     "pass_rate": 0.0112,
+     "pass_wilson95": [
+      0.0031,
+      0.0398
+     ],
+     "n_planted": 391,
+     "planted_correct": 137,
+     "planted_acc": 0.3504,
+     "planted_acc_wilson95": [
+      0.3048,
+      0.3989
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.2995,
+      0.4016
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.3005,
+      0.4025
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 247,
+     "null_false_claim": 1.0
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 29,
+     "pass_rate": 0.5088,
+     "pass_wilson95": [
+      0.3826,
+      0.6338
+     ],
+     "n_planted": 40,
+     "planted_correct": 34,
+     "planted_acc": 0.85,
+     "planted_acc_wilson95": [
+      0.7093,
+      0.9294
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.7368,
+      0.95
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.7333,
+      0.95
+     ],
+     "planted_nf_rate": 0.0,
+     "n_null": 25,
+     "null_false_claim": 1.0
+    }
+   },
+   "calibrated_on_v2f_calpool": {
+    "pooled": {
+     "n_episodes": 180,
+     "pass": 16,
+     "pass_rate": 0.0889,
+     "pass_wilson95": [
+      0.0555,
+      0.1395
+     ],
+     "n_planted": 431,
+     "planted_correct": 54,
+     "planted_acc": 0.1253,
+     "planted_acc_wilson95": [
+      0.0973,
+      0.1599
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0935,
+      0.1575
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0942,
+      0.1589
+     ],
+     "planted_nf_rate": 0.8329,
+     "n_null": 272,
+     "null_false_claim": 0.0404
+    },
+    "topic": {
+     "n_episodes": 179,
+     "pass": 15,
+     "pass_rate": 0.0838,
+     "pass_wilson95": [
+      0.0514,
+      0.1336
+     ],
+     "n_planted": 391,
+     "planted_correct": 21,
+     "planted_acc": 0.0537,
+     "planted_acc_wilson95": [
+      0.0354,
+      0.0807
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.0308,
+      0.0795
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.0306,
+      0.0797
+     ],
+     "planted_nf_rate": 0.9028,
+     "n_null": 247,
+     "null_false_claim": 0.0445
+    },
+    "language": {
+     "n_episodes": 57,
+     "pass": 50,
+     "pass_rate": 0.8772,
+     "pass_wilson95": [
+      0.7675,
+      0.9392
+     ],
+     "n_planted": 40,
+     "planted_correct": 33,
+     "planted_acc": 0.825,
+     "planted_acc_wilson95": [
+      0.6805,
+      0.9125
+     ],
+     "planted_acc_cluster95_own_rng": [
+      0.7027,
+      0.9318
+     ],
+     "planted_acc_cluster95_A2.5_rng": [
+      0.7027,
+      0.9318
+     ],
+     "planted_nf_rate": 0.15,
+     "n_null": 25,
+     "null_false_claim": 0.0
+    }
+   }
+  }
+ }
+}

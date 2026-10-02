@@ -1,0 +1,32 @@
+generic_label  v2 max-pick pa 30/431=0.0696 W[0.0492, 0.0976] topic 0.0742 lang 0.025 | cal pa 0.0209 pass 0.0611
+generic_bare   v2 max-pick pa 36/431=0.0835 W[0.0609, 0.1135] topic 0.0895 lang 0.025 | cal pa 0.0371 pass 0.0611
+style3         v2 max-pick pa 84/431=0.1949 W[0.1603, 0.2349] topic 0.133 lang 0.8 | cal pa 0.1462 pass 0.0611
+encyc4_max     v2 max-pick pa 163/431=0.3782 W[0.3337, 0.4249] topic 0.3299 lang 0.85 | cal pa 0.2135 pass 0.1
+gen_all        v2 max-pick pa 252/431=0.5847 W[0.5376, 0.6303] topic 0.5882 lang 0.55 | cal pa 0.464 pass 0.0889
+gen1_cap       v2 max-pick pa 190/431=0.4408 W[0.3947, 0.488] topic 0.4552 lang 0.3 | cal pa 0.3387 pass 0.1111
+name3          v2 max-pick pa 19/431=0.0441 W[0.0284, 0.0678] topic 0.046 lang 0.025 | cal pa 0.0 pass 0.0556
+tmpl7_posthoc  v2 max-pick pa 171/431=0.3968 W[0.3517, 0.4437] topic 0.3504 lang 0.85 | cal pa 0.1253 pass 0.0889
+{"dir": "/home/ec2-user/wt/featurematch/tasks/featurematch/instances", "n_instances": 180, "pool_sha256": "5baa3c2aa97869fb1e125ad0dc46120ac1be11ef6a380068facc82385ef9555c", "same_pool_as_SR_dry_run": true} {"6": {"tmpl_max_abs_diff": 0.0, "gen_max_abs_diff": 0.0}, "12": {"tmpl_max_abs_diff": 0.0, "gen_max_abs_diff": 0.0}, "18": {"tmpl_max_abs_diff": 0.0, "gen_max_abs_diff": 0.0}}
+	Command being timed: "/opt/pytorch/bin/python tasks/featurematch/diagnosis/step3_skeptic/cheap_recipes_v2.py"
+	User time (seconds): 3.15
+	System time (seconds): 0.08
+	Percent of CPU this job got: 114%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 166960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35260
+	Voluntary context switches: 12
+	Involuntary context switches: 50
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 136
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
