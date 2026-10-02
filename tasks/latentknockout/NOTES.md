@@ -43,3 +43,53 @@ Main lessons in plain words:
   substring latents. Mid-band difficulty is plausible if the recipe gate holds.
 The 8 design implications are in section 5 of PRECEDENT.md. Section 4 compares the literature with the frozen feasibility predictions; the riskiest one
 is "the SAE error term is not dominant". CPU only; peak RSS is negligible (web reading, no heavy job).
+
+## 2026-10-02T06:31Z Feasibility study restarted (this agent); design of the measurement
+- Reused the WIP entity lists; rewrote the prompt families (lk_data.py) so that every family has 13 templates in
+  6 STYLES: plain completion (P), question/answer (Q), dialogue/chat (D), key-value record (K), news sentence (N) and
+  few-shot list (F; demo answers are never an answer of any group, so a "copy the demo" artefact is detectable).
+  The example prompts an agent would see use only P and Q styles (3 templates). Held-out prompts are of two kinds:
+  "T" = new entities and new templates in the SAME styles, "S" = new entities in the 4 NEW styles. Comparing R on T
+  and S measures whether a latent set found on one style still works on others (FeatureMatch lesson 1).
+- lk_core.py rewritten: the layer-L residual of each prompt is cached once and only blocks L+1..25 are rerun for each
+  candidate ablation (2-4x faster at layers 12/18). validate.py checks that this shortcut reproduces the full forward
+  pass, that "ablate nothing" is bit-identical to the clean model, and that SAE reconstruction + error term
+  reproduces the clean logits.
+- First two validation launches died of CUDA OOM inside the 9 GB cap (all-position logits over a 256k vocabulary
+  are ~0.3 GB per tensor; I kept too many alive). Fixed by comparing and freeing each tensor at once, and by applying
+  the logit soft-cap in place.
+- The GPU is busy (two latentdiff jobs hold 13 of 21 GB), so the job waits in the queue.
+
+## 2026-10-02T06:39Z Exactness, behaviour validation, SAE reconstruction (runs/latentknockout/20261002T0640_validate, ..._0636_validate2)
+**Exactness of the ablation machinery** (6 probe prompts incl. 2 wikitext snippets, all positions, all 256k logits):
+- "Ablate nothing" through the hook: max |change in any logit| = 0.0 at layers 6, 12 and 18 (bit-identical).
+- Running only blocks L+1.. from the cached layer-L residual: max |change| = 0.0 (bit-identical), so the fast path is safe.
+- SAE reconstruction + error term written out explicitly: 0.0 (bit-identical after the bf16 cast).
+- Two mathematically equal ways of ablating 3 latents (subtract f_i W_dec[i] vs rebuild x_hat with f_i = 0 and add the
+  error) differ by bf16 rounding: max 0.67 / 1.37 / 0.44 logits somewhere in the 256k vocabulary at L6/12/18, and the
+  top-1 token differs at some position. This is rounding, not a bug; the grader must fix ONE formula (we use the
+  subtraction form everywhere, which is deterministic for a given batch).
+- Batched (left-padded) vs one-at-a-time: last-token logits differ by <= 0.35, top-1 agrees on all probes.
+**Behaviour validation** (clean top-1 is an accepted answer; 13 templates per family). Second run accepts a capitalised
+answer too (" Basketball" after "A:"); the first run marked every athlete Q/A item wrong for that reason.
+| family | items | accuracy | weakest templates (why) |
+|---|---|---|---|
+| city_state | 2938 | 0.86 | dialogue D1 0.47 (" the"), record K1 0.79 (abbreviations " MA") |
+| city_capital | 2925 | 0.70 | few-shot F1 0.37 (answers a big city: " Seattle", " Chicago"), news N2 0.58 (" where"), plain P1 0.62 (" the") |
+| country_lang | 1066 | 0.85 | news N1 0.00 (" a"), few-shot F1 0.70 |
+| athlete_sport | 1300 | 0.86 | plain P2 0.19 (" called"), news N2 0.00 (" the"); 11 templates are 1.00 |
+| langid | 2496 | 0.56 | record K1 0.00 (opens a quote), dialogue D1 0.08 (" a"), plain P1 0.15 and few-shot F2 0.28 (" English": copies the demo; 136 copy artefacts) |
+| country_capital | 390 | 0.85 | plain P1/P2 0.17/0.27 (" a": "The capital of France is a ...") |
+Few-shot copy artefacts (top-1 = a demo answer): langid F2 136, city_state 7, city_capital 2; these items are dropped.
+No first-token collisions between groups' answers. Russian (2 countries) and German (3) are too small to be targets
+(kept as siblings); every other group has >= 8 entities.
+**SAE reconstruction test** (replace the residual by the SAE reconstruction, i.e. DROP the error term; 900 validated items):
+clean answer kept on 0.92 / 0.89 / 0.94 of items at L6 / L12 / L18; wikitext KL 0.11 / 0.14 / 0.22 nats.
+Weak spot: city_capital at L12 keeps only 0.60 (two-hop answer partly lives in the error term at L12), langid 0.83-0.85.
+**Peak memory**: validation job peak RSS 6.28 GB (the bf16 model is memory-mapped), peak GPU 8.25 GB.
+**Smoke sweep** (runs/latentknockout/20261002T0640_smoke, Texas at L18): one latent (13331) flips 59% of held-out
+Texas city -> capital prompts with 100% sibling preservation and KL ~0; but for city -> state it flips only 17% of
+held-out prompts although it flipped most of the example prompts (the greedy objective saw 0.68 on examples). The plain
+steering vector flips 79-94%. Naive top-5 attribution breaks the siblings too (Preserve 0.15): its latents fire on every
+"capital of the state" prompt, not on Texas. A first sign that small example sets overfit and that the error-term-free
+SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:42Z (runs/latentknockout/20261002T0642_sweep).

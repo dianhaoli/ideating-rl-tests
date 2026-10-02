@@ -1,0 +1,43 @@
+Running scope as unit: run-r9f807ba789a0436d8eea1deadd720e9e.scope
+[gpuq] waiting for 9.0 GB (light) label=latentknockout-validate
+[gpuq] admitted after 51s
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   5%|▌         | 15/288 [00:00<00:01, 148.46it/s]Loading weights:  29%|██▉       | 83/288 [00:00<00:00, 455.25it/s]Loading weights:  55%|█████▍    | 157/288 [00:00<00:00, 580.29it/s]Loading weights:  78%|███████▊  | 225/288 [00:00<00:00, 619.25it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 595.90it/s]
+loaded in 7s; mem 6.14 GB
+6 {'max_abs_dlogit_empty_set': 0.0, 'top1_agree_empty_set': True, 'kl_empty_set': 0.0, 'max_abs_dlogit_run_from_vs_full': 0.0, 'top1_agree_run_from_vs_full': True, 'kl_run_from_vs_full': 0.0, 'max_abs_dlogit_recon_plus_error': 0.0, 'top1_agree_recon_plus_error': True, 'kl_recon_plus_error': 0.0, 'max_abs_dlogit_recon_only_no_error': 20.235584259033203, 'top1_agree_recon_only_no_error': False, 'kl_recon_only_no_error': 0.08008226007223129, 'fast_vs_explicit_ablation_max_abs_dlogit': 0.6662018299102783, 'fast_vs_explicit_top1_agree': False, 'max_abs_dlogit_ablate_top3_vs_clean': 12.497514724731445, 'top1_agree_ablate_top3_vs_clean': False, 'kl_ablate_top3_vs_clean': 0.004366609267890453, 'ablated_top3_latents': [13460, 9743, 15079]}
+12 {'max_abs_dlogit_empty_set': 0.0, 'top1_agree_empty_set': True, 'kl_empty_set': 0.0, 'max_abs_dlogit_run_from_vs_full': 0.0, 'top1_agree_run_from_vs_full': True, 'kl_run_from_vs_full': 0.0, 'max_abs_dlogit_recon_plus_error': 0.0, 'top1_agree_recon_plus_error': True, 'kl_recon_plus_error': 0.0, 'max_abs_dlogit_recon_only_no_error': 24.933494567871094, 'top1_agree_recon_only_no_error': False, 'kl_recon_only_no_error': 0.12678445875644684, 'fast_vs_explicit_ablation_max_abs_dlogit': 1.3660497665405273, 'fast_vs_explicit_top1_agree': False, 'max_abs_dlogit_ablate_top3_vs_clean': 29.72200584411621, 'top1_agree_ablate_top3_vs_clean': False, 'kl_ablate_top3_vs_clean': 0.029052400961518288, 'ablated_top3_latents': [2620, 4667, 2291]}
+18 {'max_abs_dlogit_empty_set': 0.0, 'top1_agree_empty_set': True, 'kl_empty_set': 0.0, 'max_abs_dlogit_run_from_vs_full': 0.0, 'top1_agree_run_from_vs_full': True, 'kl_run_from_vs_full': 0.0, 'max_abs_dlogit_recon_plus_error': 0.0, 'top1_agree_recon_plus_error': True, 'kl_recon_plus_error': 0.0, 'max_abs_dlogit_recon_only_no_error': 15.324939727783203, 'top1_agree_recon_only_no_error': False, 'kl_recon_only_no_error': 0.14342620968818665, 'fast_vs_explicit_ablation_max_abs_dlogit': 0.4445561170578003, 'fast_vs_explicit_top1_agree': False, 'max_abs_dlogit_ablate_top3_vs_clean': 9.501340866088867, 'top1_agree_ablate_top3_vs_clean': False, 'kl_ablate_top3_vs_clean': 0.020008966326713562, 'ablated_top3_latents': [9392, 7373, 15394]}
+padding 0.3544590473175049 True
+city_state {"acc": 0.8624914908100749, "per_style": {"D": 0.697, "F": 0.903, "K": 0.847, "N": 0.887, "P": 0.917, "Q": 0.896}, "per_group": {"Texas": [233, 247, 0.943], "California": [254, 260, 0.977], "Florida": [226, 247, 0.915], "New York": [232, 260, 0.892], "Ohio": [177, 221, 0.801], "Pennsylvania": [224, 260, 0.862], "Michigan": [228, 247, 0.923], "Illinois": [196, 234, 0.838], "Georgia": [157, 208, 0.755], "Arizona": [227, 247, 0.919], "Washington": [214, 247, 0.866], "Massachusetts": [166, 260, 0.638]}}
+city_capital {"acc": 0.7005128205128205, "per_style": {"D": 0.851, "F": 0.48, "K": 0.82, "N": 0.727, "P": 0.67, "Q": 0.671}, "per_group": {"Texas": [204, 247, 0.826], "California": [215, 260, 0.827], "Florida": [191, 247, 0.773], "New York": [205, 260, 0.788], "Ohio": [131, 221, 0.593], "Pennsylvania": [204, 260, 0.785], "Michigan": [200, 247, 0.81], "Illinois": [133, 234, 0.568], "Georgia": [116, 208, 0.558], "Arizona": [179, 234, 0.765], "Washington": [166, 247, 0.672], "Massachusetts": [105, 260, 0.404]}}
+country_lang {"acc": 0.8527204502814258, "per_style": {"D": 0.933, "F": 0.787, "K": 0.963, "N": 0.457, "P": 0.959, "Q": 0.963}, "per_group": {"Spanish": [227, 247, 0.919], "Arabic": [213, 234, 0.91], "French": [168, 208, 0.808], "Portuguese": [85, 104, 0.817], "English": [166, 208, 0.798], "German": [36, 39, 0.923], "Russian": [14, 26, 0.538]}}
+athlete_sport {"acc": 0.63, "per_style": {"D": 1.0, "F": 1.0, "K": 0.5, "N": 0.5, "P": 0.73, "Q": 0.0}, "per_group": {"basketball": [155, 234, 0.662], "soccer": [144, 234, 0.615], "tennis": [136, 221, 0.615], "golf": [128, 208, 0.615], "baseball": [142, 221, 0.643], "hockey": [114, 182, 0.626]}}
+langid {"acc": 0.5625, "per_style": {"D": 0.479, "F": 0.57, "K": 0.068, "N": 0.88, "P": 0.609, "Q": 0.745}, "per_group": {"French": [199, 312, 0.638], "Spanish": [198, 312, 0.635], "German": [169, 312, 0.542], "Italian": [175, 312, 0.561], "Portuguese": [177, 312, 0.567], "Dutch": [185, 312, 0.593], "Polish": [152, 312, 0.487], "Turkish": [149, 312, 0.478]}}
+country_capital {"acc": 0.8487179487179487, "per_style": {"D": 0.983, "F": 0.967, "K": 0.983, "N": 0.917, "P": 0.467, "Q": 0.967}, "per_group": {"France": [11, 13, 0.846], "Japan": [11, 13, 0.846], "Germany": [11, 13, 0.846], "Italy": [11, 13, 0.846], "Egypt": [11, 13, 0.846], "Russia": [11, 13, 0.846], "Spain": [11, 13, 0.846], "Greece": [11, 13, 0.846], "Kenya": [13, 13, 1.0], "Peru": [13, 13, 1.0], "Thailand": [12, 13, 0.923], "Norway": [12, 13, 0.923], "Poland": [11, 13, 0.846], "Argentina": [12, 13, 0.923], "Austria": [11, 13, 0.846], "Portugal": [11, 13, 0.846], "Ireland": [12, 13, 0.923], "Cuba": [12, 13, 0.923], "Sweden": [10, 13, 0.769], "Turkey": [11, 13, 0.846], "Iran": [11, 13, 0.846], "Mexico": [9, 13, 0.692], "South Korea": [11, 13, 0.846], "China": [11, 13, 0.846], "India": [11, 13, 0.846], "Hungary": [13, 13, 1.0], "Denmark": [12, 13, 0.923], "Finland": [12, 13, 0.923], "Chile": [11, 13, 0.846], "Colombia": [2, 13, 0.154]}}
+recon 6 {'keep_clean_answer_all': 0.921, 'per_family': {'city_state': 0.953, 'city_capital': 0.807, 'country_lang': 0.98, 'athlete_sport': 1.0, 'langid': 0.807, 'country_capital': 0.98}, 'sanity_clean_all_valid': 0.997, 'kl_recon_only_wikitext': 0.1062} {'prompts': 900, 'edits': 2, 'seconds': 7.43}
+recon 12 {'keep_clean_answer_all': 0.89, 'per_family': {'city_state': 0.973, 'city_capital': 0.6, 'country_lang': 0.987, 'athlete_sport': 0.98, 'langid': 0.833, 'country_capital': 0.967}, 'sanity_clean_all_valid': 0.999, 'kl_recon_only_wikitext': 0.1393} {'prompts': 900, 'edits': 2, 'seconds': 5.34}
+recon 18 {'keep_clean_answer_all': 0.943, 'per_family': {'city_state': 0.887, 'city_capital': 0.96, 'country_lang': 0.953, 'athlete_sport': 0.973, 'langid': 0.92, 'country_capital': 0.967}, 'sanity_clean_all_valid': 0.999, 'kl_recon_only_wikitext': 0.2236} {'prompts': 900, 'edits': 2, 'seconds': 3.29}
+done {6: {'prompts': 900, 'edits': 2, 'seconds': 7.43}, 12: {'prompts': 900, 'edits': 2, 'seconds': 5.34}, 18: {'prompts': 900, 'edits': 2, 'seconds': 3.29}, 'peak_gpu_gb': 8.25, 'peak_rss_gb': 6.28, 'total_s': 135.4}
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 9 --label latentknockout-validate -- /opt/pytorch/bin/python -m tasks.latentknockout.validate runs/latentknockout/20261002T0640_validate"
+	User time (seconds): 135.70
+	System time (seconds): 3.87
+	Percent of CPU this job got: 73%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:09.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 22
+	Minor (reclaiming a frame) page faults: 583151
+	Voluntary context switches: 5601
+	Involuntary context switches: 1053
+	Swaps: 0
+	File system inputs: 3632
+	File system outputs: 4848
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

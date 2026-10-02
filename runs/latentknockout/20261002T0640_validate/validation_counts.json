@@ -1,0 +1,2214 @@
+{
+ "city_state": {
+  "n_items": 2938,
+  "n_valid": 2534,
+  "acc": 0.8624914908100749,
+  "per_template": {
+   "0P": [
+    204,
+    226,
+    0.903
+   ],
+   "1P": [
+    210,
+    226,
+    0.929
+   ],
+   "2P": [
+    208,
+    226,
+    0.92
+   ],
+   "3Q": [
+    203,
+    226,
+    0.898
+   ],
+   "4Q": [
+    202,
+    226,
+    0.894
+   ],
+   "5D": [
+    107,
+    226,
+    0.473
+   ],
+   "6D": [
+    208,
+    226,
+    0.92
+   ],
+   "7K": [
+    178,
+    226,
+    0.788
+   ],
+   "8K": [
+    205,
+    226,
+    0.907
+   ],
+   "9N": [
+    193,
+    226,
+    0.854
+   ],
+   "10N": [
+    208,
+    226,
+    0.92
+   ],
+   "11F": [
+    206,
+    226,
+    0.912
+   ],
+   "12F": [
+    202,
+    226,
+    0.894
+   ]
+  },
+  "per_style": {
+   "D": 0.697,
+   "F": 0.903,
+   "K": 0.847,
+   "N": 0.887,
+   "P": 0.917,
+   "Q": 0.896
+  },
+  "per_group": {
+   "Texas": [
+    233,
+    247,
+    0.943
+   ],
+   "California": [
+    254,
+    260,
+    0.977
+   ],
+   "Florida": [
+    226,
+    247,
+    0.915
+   ],
+   "New York": [
+    232,
+    260,
+    0.892
+   ],
+   "Ohio": [
+    177,
+    221,
+    0.801
+   ],
+   "Pennsylvania": [
+    224,
+    260,
+    0.862
+   ],
+   "Michigan": [
+    228,
+    247,
+    0.923
+   ],
+   "Illinois": [
+    196,
+    234,
+    0.838
+   ],
+   "Georgia": [
+    157,
+    208,
+    0.755
+   ],
+   "Arizona": [
+    227,
+    247,
+    0.919
+   ],
+   "Washington": [
+    214,
+    247,
+    0.866
+   ],
+   "Massachusetts": [
+    166,
+    260,
+    0.638
+   ]
+  },
+  "entities_total": 226,
+  "entities_all_templates": 93,
+  "entities_ge_half": 208,
+  "entities_zero": [
+   "Pennsylvania:Lebanon",
+   "Georgia:Albany",
+   "Washington:Auburn",
+   "Massachusetts:Springfield",
+   "Massachusetts:Lexington"
+  ],
+  "top_wrong_by_template": {
+   "0P": [
+    [
+     " New",
+     4
+    ],
+    [
+     " Alabama",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ],
+    [
+     " Victoria",
+     1
+    ]
+   ],
+   "1P": [
+    [
+     " New",
+     4
+    ],
+    [
+     " Alabama",
+     2
+    ],
+    [
+     " Maine",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ]
+   ],
+   "2P": [
+    [
+     " New",
+     3
+    ],
+    [
+     " Tennessee",
+     2
+    ],
+    [
+     " Victoria",
+     1
+    ],
+    [
+     " Peru",
+     1
+    ]
+   ],
+   "3Q": [
+    [
+     " New",
+     4
+    ],
+    [
+     " Illinois",
+     3
+    ],
+    [
+     " Virginia",
+     2
+    ],
+    [
+     " Alabama",
+     2
+    ]
+   ],
+   "4Q": [
+    [
+     " Italy",
+     3
+    ],
+    [
+     " New",
+     3
+    ],
+    [
+     " Alabama",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ]
+   ],
+   "5D": [
+    [
+     " the",
+     105
+    ],
+    [
+     " New",
+     4
+    ],
+    [
+     " Canada",
+     2
+    ],
+    [
+     " Italy",
+     2
+    ]
+   ],
+   "6D": [
+    [
+     " New",
+     7
+    ],
+    [
+     " Michigan",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ],
+    [
+     " Texas",
+     1
+    ]
+   ],
+   "7K": [
+    [
+     " MA",
+     9
+    ],
+    [
+     " NY",
+     6
+    ],
+    [
+     " AZ",
+     6
+    ],
+    [
+     " PA",
+     4
+    ]
+   ],
+   "8K": [
+    [
+     " Texas",
+     2
+    ],
+    [
+     " New",
+     2
+    ],
+    [
+     " California",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ]
+   ],
+   "9N": [
+    [
+     " the",
+     18
+    ],
+    [
+     " New",
+     4
+    ],
+    [
+     " Maine",
+     2
+    ],
+    [
+     " Illinois",
+     2
+    ]
+   ],
+   "10N": [
+    [
+     " Massachusetts",
+     4
+    ],
+    [
+     " California",
+     3
+    ],
+    [
+     " the",
+     2
+    ],
+    [
+     " New",
+     2
+    ]
+   ],
+   "11F": [
+    [
+     " New",
+     3
+    ],
+    [
+     " Alabama",
+     2
+    ],
+    [
+     " Texas",
+     2
+    ],
+    [
+     " Tennessee",
+     2
+    ]
+   ],
+   "12F": [
+    [
+     " Alabama",
+     2
+    ],
+    [
+     " Texas",
+     2
+    ],
+    [
+     " Tennessee",
+     2
+    ],
+    [
+     " New",
+     2
+    ]
+   ]
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 3,
+   "12F": 4
+  },
+  "answer_tokens": {
+   "Texas": [
+    " Texas"
+   ],
+   "California": [
+    " California"
+   ],
+   "Florida": [
+    " Florida"
+   ],
+   "New York": [
+    " New"
+   ],
+   "Ohio": [
+    " Ohio"
+   ],
+   "Pennsylvania": [
+    " Pennsylvania"
+   ],
+   "Michigan": [
+    " Michigan"
+   ],
+   "Illinois": [
+    " Illinois"
+   ],
+   "Georgia": [
+    " Georgia"
+   ],
+   "Arizona": [
+    " Arizona"
+   ],
+   "Washington": [
+    " Washington"
+   ],
+   "Massachusetts": [
+    " Massachusetts"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 2.5403285026550293
+ },
+ "city_capital": {
+  "n_items": 2925,
+  "n_valid": 2049,
+  "acc": 0.7005128205128205,
+  "per_template": {
+   "0P": [
+    140,
+    225,
+    0.622
+   ],
+   "1P": [
+    168,
+    225,
+    0.747
+   ],
+   "2P": [
+    144,
+    225,
+    0.64
+   ],
+   "3Q": [
+    121,
+    225,
+    0.538
+   ],
+   "4Q": [
+    181,
+    225,
+    0.804
+   ],
+   "5D": [
+    195,
+    225,
+    0.867
+   ],
+   "6D": [
+    188,
+    225,
+    0.836
+   ],
+   "7K": [
+    183,
+    225,
+    0.813
+   ],
+   "8K": [
+    186,
+    225,
+    0.827
+   ],
+   "9N": [
+    197,
+    225,
+    0.876
+   ],
+   "10N": [
+    130,
+    225,
+    0.578
+   ],
+   "11F": [
+    84,
+    225,
+    0.373
+   ],
+   "12F": [
+    132,
+    225,
+    0.587
+   ]
+  },
+  "per_style": {
+   "D": 0.851,
+   "F": 0.48,
+   "K": 0.82,
+   "N": 0.727,
+   "P": 0.67,
+   "Q": 0.671
+  },
+  "per_group": {
+   "Texas": [
+    204,
+    247,
+    0.826
+   ],
+   "California": [
+    215,
+    260,
+    0.827
+   ],
+   "Florida": [
+    191,
+    247,
+    0.773
+   ],
+   "New York": [
+    205,
+    260,
+    0.788
+   ],
+   "Ohio": [
+    131,
+    221,
+    0.593
+   ],
+   "Pennsylvania": [
+    204,
+    260,
+    0.785
+   ],
+   "Michigan": [
+    200,
+    247,
+    0.81
+   ],
+   "Illinois": [
+    133,
+    234,
+    0.568
+   ],
+   "Georgia": [
+    116,
+    208,
+    0.558
+   ],
+   "Arizona": [
+    179,
+    234,
+    0.765
+   ],
+   "Washington": [
+    166,
+    247,
+    0.672
+   ],
+   "Massachusetts": [
+    105,
+    260,
+    0.404
+   ]
+  },
+  "entities_total": 225,
+  "entities_all_templates": 34,
+  "entities_ge_half": 177,
+  "entities_zero": [
+   "Florida:Melbourne",
+   "Ohio:Hamilton",
+   "Ohio:Lima",
+   "Illinois:Bloomington",
+   "Illinois:Danville",
+   "Georgia:Albany",
+   "Georgia:Rome",
+   "Washington:Auburn",
+   "Massachusetts:Springfield",
+   "Massachusetts:Quincy",
+   "Massachusetts:Lexington",
+   "Massachusetts:Concord",
+   "Massachusetts:Pittsfield"
+  ],
+  "top_wrong_by_template": {
+   "0P": [
+    [
+     " the",
+     55
+    ],
+    [
+     " Santa",
+     1
+    ],
+    [
+     " Irvine",
+     1
+    ],
+    [
+     " Miami",
+     1
+    ]
+   ],
+   "1P": [
+    [
+     " ",
+     10
+    ],
+    [
+     " the",
+     8
+    ],
+    [
+     " Chicago",
+     5
+    ],
+    [
+     " Albany",
+     4
+    ]
+   ],
+   "2P": [
+    [
+     " the",
+     26
+    ],
+    [
+     " Chicago",
+     5
+    ],
+    [
+     " San",
+     3
+    ],
+    [
+     " Tucson",
+     3
+    ]
+   ],
+   "3Q": [
+    [
+     " New",
+     9
+    ],
+    [
+     " Illinois",
+     7
+    ],
+    [
+     " Arizona",
+     7
+    ],
+    [
+     " Texas",
+     6
+    ]
+   ],
+   "4Q": [
+    [
+     " Cleveland",
+     3
+    ],
+    [
+     " Chicago",
+     3
+    ],
+    [
+     " Richmond",
+     2
+    ],
+    [
+     " Washington",
+     2
+    ]
+   ],
+   "5D": [
+    [
+     " Harrisburg",
+     7
+    ],
+    [
+     " Albany",
+     4
+    ],
+    [
+     " Springfield",
+     3
+    ],
+    [
+     " Washington",
+     2
+    ]
+   ],
+   "6D": [
+    [
+     " in",
+     17
+    ],
+    [
+     " Springfield",
+     3
+    ],
+    [
+     " Austin",
+     2
+    ],
+    [
+     " Richmond",
+     2
+    ]
+   ],
+   "7K": [
+    [
+     " Lansing",
+     4
+    ],
+    [
+     " Albany",
+     3
+    ],
+    [
+     " Austin",
+     2
+    ],
+    [
+     " Richmond",
+     2
+    ]
+   ],
+   "8K": [
+    [
+     " Lansing",
+     7
+    ],
+    [
+     " Austin",
+     3
+    ],
+    [
+     " Richmond",
+     3
+    ],
+    [
+     " Springfield",
+     3
+    ]
+   ],
+   "9N": [
+    [
+     " Lansing",
+     3
+    ],
+    [
+     " Concord",
+     3
+    ],
+    [
+     " Richmond",
+     2
+    ],
+    [
+     " Hartford",
+     2
+    ]
+   ],
+   "10N": [
+    [
+     " where",
+     87
+    ],
+    [
+     " Springfield",
+     2
+    ],
+    [
+     " Austin",
+     1
+    ],
+    [
+     " Lansing",
+     1
+    ]
+   ],
+   "11F": [
+    [
+     " Seattle",
+     12
+    ],
+    [
+     " Chicago",
+     10
+    ],
+    [
+     " San",
+     8
+    ],
+    [
+     " Los",
+     8
+    ]
+   ],
+   "12F": [
+    [
+     " Chicago",
+     11
+    ],
+    [
+     " Los",
+     7
+    ],
+    [
+     " Cleveland",
+     7
+    ],
+    [
+     " New",
+     6
+    ]
+   ]
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 1,
+   "12F": 1
+  },
+  "answer_tokens": {
+   "Texas": [
+    " Austin"
+   ],
+   "California": [
+    " Sacramento"
+   ],
+   "Florida": [
+    " Tallahassee"
+   ],
+   "New York": [
+    " Albany"
+   ],
+   "Ohio": [
+    " Columbus"
+   ],
+   "Pennsylvania": [
+    " Harrisburg"
+   ],
+   "Michigan": [
+    " Lansing"
+   ],
+   "Illinois": [
+    " Springfield"
+   ],
+   "Georgia": [
+    " Atlanta"
+   ],
+   "Arizona": [
+    " Phoenix"
+   ],
+   "Washington": [
+    " Olympia"
+   ],
+   "Massachusetts": [
+    " Boston"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 1.591421127319336
+ },
+ "country_lang": {
+  "n_items": 1066,
+  "n_valid": 909,
+  "acc": 0.8527204502814258,
+  "per_template": {
+   "0P": [
+    80,
+    82,
+    0.976
+   ],
+   "1P": [
+    80,
+    82,
+    0.976
+   ],
+   "2P": [
+    76,
+    82,
+    0.927
+   ],
+   "3Q": [
+    77,
+    82,
+    0.939
+   ],
+   "4Q": [
+    81,
+    82,
+    0.988
+   ],
+   "5D": [
+    81,
+    82,
+    0.988
+   ],
+   "6D": [
+    72,
+    82,
+    0.878
+   ],
+   "7K": [
+    79,
+    82,
+    0.963
+   ],
+   "8K": [
+    79,
+    82,
+    0.963
+   ],
+   "9N": [
+    0,
+    82,
+    0.0
+   ],
+   "10N": [
+    75,
+    82,
+    0.915
+   ],
+   "11F": [
+    57,
+    82,
+    0.695
+   ],
+   "12F": [
+    72,
+    82,
+    0.878
+   ]
+  },
+  "per_style": {
+   "D": 0.933,
+   "F": 0.787,
+   "K": 0.963,
+   "N": 0.457,
+   "P": 0.959,
+   "Q": 0.963
+  },
+  "per_group": {
+   "Spanish": [
+    227,
+    247,
+    0.919
+   ],
+   "Arabic": [
+    213,
+    234,
+    0.91
+   ],
+   "French": [
+    168,
+    208,
+    0.808
+   ],
+   "Portuguese": [
+    85,
+    104,
+    0.817
+   ],
+   "English": [
+    166,
+    208,
+    0.798
+   ],
+   "German": [
+    36,
+    39,
+    0.923
+   ],
+   "Russian": [
+    14,
+    26,
+    0.538
+   ]
+  },
+  "entities_total": 82,
+  "entities_all_templates": 0,
+  "entities_ge_half": 79,
+  "entities_zero": [],
+  "top_wrong_by_template": {
+   "0P": [
+    [
+     " Tet",
+     1
+    ],
+    [
+     " Belarusian",
+     1
+    ]
+   ],
+   "1P": [
+    [
+     " Tet",
+     1
+    ],
+    [
+     " Belarusian",
+     1
+    ]
+   ],
+   "2P": [
+    [
+     " W",
+     1
+    ],
+    [
+     " Haitian",
+     1
+    ],
+    [
+     " Ling",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ]
+   ],
+   "3Q": [
+    [
+     " Ha",
+     1
+    ],
+    [
+     " French",
+     1
+    ],
+    [
+     " Haitian",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ]
+   ],
+   "4Q": [
+    [
+     " Belarusian",
+     1
+    ]
+   ],
+   "5D": [
+    [
+     " Spanish",
+     1
+    ]
+   ],
+   "6D": [
+    [
+     " Spanish",
+     3
+    ],
+    [
+     " Haitian",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ],
+    [
+     " Jamaican",
+     1
+    ]
+   ],
+   "7K": [
+    [
+     " Haitian",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ],
+    [
+     " Belarusian",
+     1
+    ]
+   ],
+   "8K": [
+    [
+     " Arabic",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ],
+    [
+     " Belarusian",
+     1
+    ]
+   ],
+   "9N": [
+    [
+     " a",
+     82
+    ]
+   ],
+   "10N": [
+    [
+     " English",
+     3
+    ],
+    [
+     " the",
+     2
+    ],
+    [
+     " Creole",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ]
+   ],
+   "11F": [
+    [
+     " Gu",
+     2
+    ],
+    [
+     " W",
+     1
+    ],
+    [
+     " Mal",
+     1
+    ],
+    [
+     " Niger",
+     1
+    ]
+   ],
+   "12F": [
+    [
+     " Ha",
+     1
+    ],
+    [
+     " Guinea",
+     1
+    ],
+    [
+     " Ling",
+     1
+    ],
+    [
+     " Tet",
+     1
+    ]
+   ]
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 0,
+   "12F": 0
+  },
+  "answer_tokens": {
+   "Spanish": [
+    " Spanish"
+   ],
+   "Arabic": [
+    " Arabic"
+   ],
+   "French": [
+    " French"
+   ],
+   "Portuguese": [
+    " Portuguese"
+   ],
+   "English": [
+    " English"
+   ],
+   "German": [
+    " German"
+   ],
+   "Russian": [
+    " Russian"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 2.8114166259765625
+ },
+ "athlete_sport": {
+  "n_items": 1300,
+  "n_valid": 819,
+  "acc": 0.63,
+  "per_template": {
+   "0P": [
+    100,
+    100,
+    1.0
+   ],
+   "1P": [
+    19,
+    100,
+    0.19
+   ],
+   "2P": [
+    100,
+    100,
+    1.0
+   ],
+   "3Q": [
+    0,
+    100,
+    0.0
+   ],
+   "4Q": [
+    0,
+    100,
+    0.0
+   ],
+   "5D": [
+    100,
+    100,
+    1.0
+   ],
+   "6D": [
+    100,
+    100,
+    1.0
+   ],
+   "7K": [
+    100,
+    100,
+    1.0
+   ],
+   "8K": [
+    0,
+    100,
+    0.0
+   ],
+   "9N": [
+    100,
+    100,
+    1.0
+   ],
+   "10N": [
+    0,
+    100,
+    0.0
+   ],
+   "11F": [
+    100,
+    100,
+    1.0
+   ],
+   "12F": [
+    100,
+    100,
+    1.0
+   ]
+  },
+  "per_style": {
+   "D": 1.0,
+   "F": 1.0,
+   "K": 0.5,
+   "N": 0.5,
+   "P": 0.73,
+   "Q": 0.0
+  },
+  "per_group": {
+   "basketball": [
+    155,
+    234,
+    0.662
+   ],
+   "soccer": [
+    144,
+    234,
+    0.615
+   ],
+   "tennis": [
+    136,
+    221,
+    0.615
+   ],
+   "golf": [
+    128,
+    208,
+    0.615
+   ],
+   "baseball": [
+    142,
+    221,
+    0.643
+   ],
+   "hockey": [
+    114,
+    182,
+    0.626
+   ]
+  },
+  "entities_total": 100,
+  "entities_all_templates": 0,
+  "entities_ge_half": 100,
+  "entities_zero": [],
+  "top_wrong_by_template": {
+   "0P": [],
+   "1P": [
+    [
+     " called",
+     40
+    ],
+    [
+     " not",
+     26
+    ],
+    [
+     " a",
+     13
+    ],
+    [
+     " now",
+     2
+    ]
+   ],
+   "2P": [],
+   "3Q": [
+    [
+     " Basketball",
+     18
+    ],
+    [
+     " Tennis",
+     17
+    ],
+    [
+     " Baseball",
+     17
+    ],
+    [
+     " Football",
+     16
+    ]
+   ],
+   "4Q": [
+    [
+     " Basketball",
+     18
+    ],
+    [
+     " Tennis",
+     17
+    ],
+    [
+     " Baseball",
+     17
+    ],
+    [
+     " Golf",
+     16
+    ]
+   ],
+   "5D": [],
+   "6D": [],
+   "7K": [],
+   "8K": [
+    [
+     " Basketball",
+     18
+    ],
+    [
+     " Football",
+     18
+    ],
+    [
+     " Tennis",
+     17
+    ],
+    [
+     " Baseball",
+     17
+    ]
+   ],
+   "9N": [],
+   "10N": [
+    [
+     " the",
+     100
+    ]
+   ],
+   "11F": [],
+   "12F": []
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 0,
+   "12F": 0
+  },
+  "answer_tokens": {
+   "basketball": [
+    " basketball"
+   ],
+   "soccer": [
+    " football",
+    " soccer",
+    " footballer"
+   ],
+   "tennis": [
+    " tennis"
+   ],
+   "golf": [
+    " golf",
+    " golfer"
+   ],
+   "baseball": [
+    " baseball"
+   ],
+   "hockey": [
+    " ice",
+    " hockey"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 2.9125518798828125
+ },
+ "langid": {
+  "n_items": 2496,
+  "n_valid": 1404,
+  "acc": 0.5625,
+  "per_template": {
+   "0P": [
+    29,
+    192,
+    0.151
+   ],
+   "1P": [
+    146,
+    192,
+    0.76
+   ],
+   "2P": [
+    176,
+    192,
+    0.917
+   ],
+   "3Q": [
+    115,
+    192,
+    0.599
+   ],
+   "4Q": [
+    171,
+    192,
+    0.891
+   ],
+   "5D": [
+    16,
+    192,
+    0.083
+   ],
+   "6D": [
+    168,
+    192,
+    0.875
+   ],
+   "7K": [
+    0,
+    192,
+    0.0
+   ],
+   "8K": [
+    26,
+    192,
+    0.135
+   ],
+   "9N": [
+    170,
+    192,
+    0.885
+   ],
+   "10N": [
+    168,
+    192,
+    0.875
+   ],
+   "11F": [
+    165,
+    192,
+    0.859
+   ],
+   "12F": [
+    54,
+    192,
+    0.281
+   ]
+  },
+  "per_style": {
+   "D": 0.479,
+   "F": 0.57,
+   "K": 0.068,
+   "N": 0.88,
+   "P": 0.609,
+   "Q": 0.745
+  },
+  "per_group": {
+   "French": [
+    199,
+    312,
+    0.638
+   ],
+   "Spanish": [
+    198,
+    312,
+    0.635
+   ],
+   "German": [
+    169,
+    312,
+    0.542
+   ],
+   "Italian": [
+    175,
+    312,
+    0.561
+   ],
+   "Portuguese": [
+    177,
+    312,
+    0.567
+   ],
+   "Dutch": [
+    185,
+    312,
+    0.593
+   ],
+   "Polish": [
+    152,
+    312,
+    0.487
+   ],
+   "Turkish": [
+    149,
+    312,
+    0.478
+   ]
+  },
+  "entities_total": 192,
+  "entities_all_templates": 0,
+  "entities_ge_half": 142,
+  "entities_zero": [
+   "Turkish:Bu \u0130sve\u00e7 kilisesi o \u0130sve\u00e7 kilisesinden epey farkl\u0131."
+  ],
+  "top_wrong_by_template": {
+   "0P": [
+    [
+     " English",
+     91
+    ],
+    [
+     " ",
+     24
+    ],
+    [
+     ":",
+     23
+    ],
+    [
+     " \"",
+     15
+    ]
+   ],
+   "1P": [
+    [
+     " the",
+     43
+    ],
+    [
+     " Spanish",
+     3
+    ]
+   ],
+   "2P": [
+    [
+     " the",
+     12
+    ],
+    [
+     " English",
+     2
+    ],
+    [
+     " Spanish",
+     1
+    ],
+    [
+     " Swedish",
+     1
+    ]
+   ],
+   "3Q": [
+    [
+     " English",
+     66
+    ],
+    [
+     " Spanish",
+     3
+    ],
+    [
+     " Japanese",
+     1
+    ],
+    [
+     " Hebrew",
+     1
+    ]
+   ],
+   "4Q": [
+    [
+     " English",
+     7
+    ],
+    [
+     " Arabic",
+     2
+    ],
+    [
+     " Spanish",
+     2
+    ],
+    [
+     " Japanese",
+     1
+    ]
+   ],
+   "5D": [
+    [
+     " a",
+     143
+    ],
+    [
+     " just",
+     11
+    ],
+    [
+     " easy",
+     8
+    ],
+    [
+     " because",
+     4
+    ]
+   ],
+   "6D": [
+    [
+     " English",
+     16
+    ],
+    [
+     " Spanish",
+     3
+    ],
+    [
+     " Chinese",
+     1
+    ],
+    [
+     " which",
+     1
+    ]
+   ],
+   "7K": [
+    [
+     " \"",
+     192
+    ]
+   ],
+   "8K": [
+    [
+     " English",
+     163
+    ],
+    [
+     " Nederlands",
+     2
+    ],
+    [
+     " Spanish",
+     1
+    ]
+   ],
+   "9N": [
+    [
+     " English",
+     11
+    ],
+    [
+     " a",
+     5
+    ],
+    [
+     " Spanish",
+     3
+    ],
+    [
+     " Afrikaans",
+     1
+    ]
+   ],
+   "10N": [
+    [
+     " a",
+     7
+    ],
+    [
+     " English",
+     6
+    ],
+    [
+     " Spanish",
+     2
+    ],
+    [
+     " both",
+     2
+    ]
+   ],
+   "11F": [
+    [
+     " Deutsch",
+     10
+    ],
+    [
+     " English",
+     10
+    ],
+    [
+     " Nederlands",
+     4
+    ],
+    [
+     " T\u00fcrk\u00e7e",
+     3
+    ]
+   ],
+   "12F": [
+    [
+     " English",
+     136
+    ],
+    [
+     " Portugu\u00eas",
+     1
+    ],
+    [
+     " T\u00fcrk\u00e7e",
+     1
+    ]
+   ]
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 10,
+   "12F": 136
+  },
+  "answer_tokens": {
+   "French": [
+    " French"
+   ],
+   "Spanish": [
+    " Spanish"
+   ],
+   "German": [
+    " German"
+   ],
+   "Italian": [
+    " Italian"
+   ],
+   "Portuguese": [
+    " Portuguese"
+   ],
+   "Dutch": [
+    " Dutch"
+   ],
+   "Polish": [
+    " Polish"
+   ],
+   "Turkish": [
+    " Turkish"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 0.9867029190063477
+ },
+ "country_capital": {
+  "n_items": 390,
+  "n_valid": 331,
+  "acc": 0.8487179487179487,
+  "per_template": {
+   "0P": [
+    5,
+    30,
+    0.167
+   ],
+   "1P": [
+    8,
+    30,
+    0.267
+   ],
+   "2P": [
+    29,
+    30,
+    0.967
+   ],
+   "3Q": [
+    29,
+    30,
+    0.967
+   ],
+   "4Q": [
+    29,
+    30,
+    0.967
+   ],
+   "5D": [
+    30,
+    30,
+    1.0
+   ],
+   "6D": [
+    29,
+    30,
+    0.967
+   ],
+   "7K": [
+    30,
+    30,
+    1.0
+   ],
+   "8K": [
+    29,
+    30,
+    0.967
+   ],
+   "9N": [
+    28,
+    30,
+    0.933
+   ],
+   "10N": [
+    27,
+    30,
+    0.9
+   ],
+   "11F": [
+    29,
+    30,
+    0.967
+   ],
+   "12F": [
+    29,
+    30,
+    0.967
+   ]
+  },
+  "per_style": {
+   "D": 0.983,
+   "F": 0.967,
+   "K": 0.983,
+   "N": 0.917,
+   "P": 0.467,
+   "Q": 0.967
+  },
+  "per_group": {
+   "France": [
+    11,
+    13,
+    0.846
+   ],
+   "Japan": [
+    11,
+    13,
+    0.846
+   ],
+   "Germany": [
+    11,
+    13,
+    0.846
+   ],
+   "Italy": [
+    11,
+    13,
+    0.846
+   ],
+   "Egypt": [
+    11,
+    13,
+    0.846
+   ],
+   "Russia": [
+    11,
+    13,
+    0.846
+   ],
+   "Spain": [
+    11,
+    13,
+    0.846
+   ],
+   "Greece": [
+    11,
+    13,
+    0.846
+   ],
+   "Kenya": [
+    13,
+    13,
+    1.0
+   ],
+   "Peru": [
+    13,
+    13,
+    1.0
+   ],
+   "Thailand": [
+    12,
+    13,
+    0.923
+   ],
+   "Norway": [
+    12,
+    13,
+    0.923
+   ],
+   "Poland": [
+    11,
+    13,
+    0.846
+   ],
+   "Argentina": [
+    12,
+    13,
+    0.923
+   ],
+   "Austria": [
+    11,
+    13,
+    0.846
+   ],
+   "Portugal": [
+    11,
+    13,
+    0.846
+   ],
+   "Ireland": [
+    12,
+    13,
+    0.923
+   ],
+   "Cuba": [
+    12,
+    13,
+    0.923
+   ],
+   "Sweden": [
+    10,
+    13,
+    0.769
+   ],
+   "Turkey": [
+    11,
+    13,
+    0.846
+   ],
+   "Iran": [
+    11,
+    13,
+    0.846
+   ],
+   "Mexico": [
+    9,
+    13,
+    0.692
+   ],
+   "South Korea": [
+    11,
+    13,
+    0.846
+   ],
+   "China": [
+    11,
+    13,
+    0.846
+   ],
+   "India": [
+    11,
+    13,
+    0.846
+   ],
+   "Hungary": [
+    13,
+    13,
+    1.0
+   ],
+   "Denmark": [
+    12,
+    13,
+    0.923
+   ],
+   "Finland": [
+    12,
+    13,
+    0.923
+   ],
+   "Chile": [
+    11,
+    13,
+    0.846
+   ],
+   "Colombia": [
+    2,
+    13,
+    0.154
+   ]
+  },
+  "entities_total": 30,
+  "entities_all_templates": 3,
+  "entities_ge_half": 29,
+  "entities_zero": [],
+  "top_wrong_by_template": {
+   "0P": [
+    [
+     " a",
+     25
+    ]
+   ],
+   "1P": [
+    [
+     " a",
+     22
+    ]
+   ],
+   "2P": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "3Q": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "4Q": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "5D": [],
+   "6D": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "7K": [],
+   "8K": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "9N": [
+    [
+     " the",
+     1
+    ],
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "10N": [
+    [
+     " where",
+     2
+    ],
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "11F": [
+    [
+     " Bogota",
+     1
+    ]
+   ],
+   "12F": [
+    [
+     " Bogota",
+     1
+    ]
+   ]
+  },
+  "fewshot_copy_artefacts": {
+   "11F": 0,
+   "12F": 0
+  },
+  "answer_tokens": {
+   "France": [
+    " Paris"
+   ],
+   "Japan": [
+    " Tokyo"
+   ],
+   "Germany": [
+    " Berlin"
+   ],
+   "Italy": [
+    " Rome"
+   ],
+   "Egypt": [
+    " Cairo"
+   ],
+   "Russia": [
+    " Moscow"
+   ],
+   "Spain": [
+    " Madrid"
+   ],
+   "Greece": [
+    " Athens"
+   ],
+   "Kenya": [
+    " Nairobi"
+   ],
+   "Peru": [
+    " Lima"
+   ],
+   "Thailand": [
+    " Bangkok"
+   ],
+   "Norway": [
+    " Oslo"
+   ],
+   "Poland": [
+    " Warsaw"
+   ],
+   "Argentina": [
+    " Buenos"
+   ],
+   "Austria": [
+    " Vienna"
+   ],
+   "Portugal": [
+    " Lisbon"
+   ],
+   "Ireland": [
+    " Dublin"
+   ],
+   "Cuba": [
+    " Havana"
+   ],
+   "Sweden": [
+    " Stockholm"
+   ],
+   "Turkey": [
+    " Ankara"
+   ],
+   "Iran": [
+    " Tehran"
+   ],
+   "Mexico": [
+    " Mexico"
+   ],
+   "South Korea": [
+    " Seoul"
+   ],
+   "China": [
+    " Beijing"
+   ],
+   "India": [
+    " New"
+   ],
+   "Hungary": [
+    " Budapest"
+   ],
+   "Denmark": [
+    " Copenhagen"
+   ],
+   "Finland": [
+    " Helsinki"
+   ],
+   "Chile": [
+    " Santiago"
+   ],
+   "Colombia": [
+    " Bogot\u00e1"
+   ]
+  },
+  "answer_token_collisions": {},
+  "median_margin_valid": 3.306974411010742
+ }
+}

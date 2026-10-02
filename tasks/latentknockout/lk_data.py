@@ -1,23 +1,23 @@
-"""Prompt families for LatentKnockout (feasibility study).
+"""Prompt families for LatentKnockout (feasibility study, rewritten 2026-10-02 06:30Z).
 
-A FAMILY is a relation with a one-token answer (we compare the FIRST answer token, with a leading space).
-Each family has GROUPS (the "concept" an instance targets: e.g. all Texas cities -> " Texas") and TEMPLATES.
-Every (entity, template) pair is validated against the clean model before use (see validate.py); only items whose
-clean top-1 next token is one of the entity's accepted answers are kept.
+A FAMILY is a relation with a one-token answer (we compare the FIRST token of the answer, with a leading space).
+Each family has GROUPS (the "concept" an instance targets: e.g. all Texas cities -> " Texas") and TEMPLATES in
+several STYLES (plain, Q/A, dialogue, key-value record, news, few-shot), so held-out prompts can differ from the
+examples in style, not just wording (FeatureMatch lesson 1). Every (entity, template) item is validated against the
+clean model before use (validate.py): only items whose clean top-1 next token is an accepted answer are kept.
 
 Families:
-  city_state     city -> its US state            (group = state)          "Dallas is a city in the state of" -> " Texas"
-  city_capital   city -> capital of its state    (group = state)          two-hop; EditHunt geography
-  country_lang   country -> official language    (group = language)       "The official language of Peru is" -> " Spanish"
-  athlete_sport  athlete -> sport                (group = sport)          "Roger Federer plays the sport of" -> " tennis"
-  langid         sentence -> its language        (group = language)       non-factual: language identification
-  country_capital country -> capital             (group = ONE country; held-out = new templates only)
+  city_state      city -> its US state           (group = state)     "Dallas is a city in the state of" -> " Texas"
+  city_capital    city -> capital of its state   (group = state)     two-hop; EditHunt geography
+  country_lang    country -> official language   (group = language)  "The official language of Peru is" -> " Spanish"
+  athlete_sport   athlete -> sport               (group = sport)     "Roger Federer plays the sport of" -> " tennis"
+  langid          sentence -> its language       (group = language)  non-factual: language identification
+  country_capital country -> capital             (group = ONE country; held-out = new templates/styles only)
 """
 import csv
 import glob
 import os
 
-# ----------------------------------------------------------------------------------------------- geography
 STATE_CITIES = {
     "Texas": ["Dallas", "Houston", "San Antonio", "El Paso", "Fort Worth", "Lubbock", "Amarillo", "Corpus Christi",
               "Laredo", "Waco", "Plano", "Galveston", "Abilene", "Midland", "Beaumont", "Brownsville", "Odessa",
@@ -60,22 +60,7 @@ STATE_CAPITAL = {"Texas": "Austin", "California": "Sacramento", "Florida": "Tall
                  "Ohio": "Columbus", "Pennsylvania": "Harrisburg", "Michigan": "Lansing", "Illinois": "Springfield",
                  "Georgia": "Atlanta", "Arizona": "Phoenix", "Washington": "Olympia", "Massachusetts": "Boston"}
 
-CITY_STATE_TEMPLATES = [
-    "{e} is a city in the state of",
-    "{e} is located in the US state of",
-    "The city of {e} lies in the state of",
-    "Q: Which US state is {e} in?\nA:",
-    "I flew into {e}, which is in the state of",
-]
-CITY_CAPITAL_TEMPLATES = [
-    "The state containing {e} has its capital in",
-    "{e} is in a state whose capital city is",
-    "The capital of the state where {e} is located is",
-    "Q: What is the capital of the state that {e} is in?\nA:",
-    "Driving from {e} to the capital of its state, you arrive in",
-]
 
-# ----------------------------------------------------------------------------------------------- countries
 LANG_COUNTRIES = {
     "Spanish": ["Mexico", "Argentina", "Colombia", "Peru", "Chile", "Venezuela", "Ecuador", "Bolivia", "Cuba",
                 "Uruguay", "Paraguay", "Guatemala", "Honduras", "Nicaragua", "Costa Rica", "Panama", "El Salvador",
@@ -93,13 +78,6 @@ LANG_COUNTRIES = {
     "German": ["Germany", "Austria", "Liechtenstein"],
     "Russian": ["Russia", "Belarus"],
 }
-COUNTRY_LANG_TEMPLATES = [
-    "The official language of {e} is",
-    "In {e}, the official language is",
-    "The main language spoken in {e} is",
-    "Q: What language do people speak in {e}?\nA:",
-    "Most people in {e} speak the language",
-]
 
 COUNTRY_CAPITAL = {"France": "Paris", "Japan": "Tokyo", "Germany": "Berlin", "Italy": "Rome", "Egypt": "Cairo",
                    "Russia": "Moscow", "Spain": "Madrid", "Greece": "Athens", "Kenya": "Nairobi", "Peru": "Lima",
@@ -108,20 +86,7 @@ COUNTRY_CAPITAL = {"France": "Paris", "Japan": "Tokyo", "Germany": "Berlin", "It
                    "Sweden": "Stockholm", "Turkey": "Ankara", "Iran": "Tehran", "Mexico": "Mexico City",
                    "South Korea": "Seoul", "China": "Beijing", "India": "New Delhi", "Hungary": "Budapest",
                    "Denmark": "Copenhagen", "Finland": "Helsinki", "Chile": "Santiago", "Colombia": "Bogot\u00e1"}
-COUNTRY_CAPITAL_TEMPLATES = [
-    "The capital of {e} is",
-    "The capital city of {e} is",
-    "Q: What is the capital of {e}?\nA:",
-    "{e} has its capital in",
-    "The seat of government of {e} is located in",
-    "In {e}, the capital is",
-    "If you travel to the capital of {e}, you will arrive in",
-    "The national capital of {e} is",
-    "Everyone knows that the capital of {e} is",
-    "Q: Name the capital city of {e}.\nA:",
-]
 
-# ----------------------------------------------------------------------------------------------- athletes
 SPORT_ATHLETES = {
     "basketball": ["Michael Jordan", "LeBron James", "Kobe Bryant", "Stephen Curry", "Shaquille O'Neal",
                    "Kevin Durant", "Larry Bird", "Magic Johnson", "Tim Duncan", "Dirk Nowitzki",
@@ -143,28 +108,151 @@ SPORT_ATHLETES = {
                "Connor McDavid", "Jaromir Jagr", "Mark Messier", "Maurice Richard", "Steve Yzerman",
                "Patrick Roy", "Martin Brodeur", "Bobby Hull"],
 }
-SPORT_ACCEPT = {"soccer": ["soccer", "football"], "hockey": ["hockey", "ice"]}
-ATHLETE_TEMPLATES = [
-    "{e} is famous for playing the sport of",
-    "The sport played by {e} is",
-    "Q: What sport does {e} play?\nA:",
-    "{e} became a legend in the sport of",
-    "Fans of {e} love watching professional",
-]
 
-# ----------------------------------------------------------------------------------------------- language id
 LANGID_CODES = {"French": "fr", "Spanish": "es", "German": "de", "Italian": "it", "Portuguese": "pt",
                 "Dutch": "nl", "Polish": "pl", "Turkish": "tr"}
-LANGID_DEMO = ('Text: "The weather is lovely today, so we are going to the park."\nLanguage: English\n'
-               'Text: "私は毎朝コーヒーを飲みます。"\n'
-               'Language: Japanese\n')
-LANGID_TEMPLATES = [
-    LANGID_DEMO + 'Text: "{e}"\nLanguage:',
-    '{e}\n\nThe sentence above is written in the language called',
-    'Sentence: "{e}"\nQ: Which language is this sentence written in?\nA:',
-    'Translate the following sentence into English. The original sentence, "{e}", is in',
-    'A tourist overheard someone say "{e}". The tourist realised the speaker was talking in',
+
+
+
+# ----------------------------------------------------------------------------------------------- templates
+# Every template is (style, text). Styles:
+#   P plain completion     Q question/answer     D dialogue / chat      K key-value record / form
+#   N news-like sentence   F few-shot list (demo answers are never answers of any group in the family)
+# Split used by the feasibility study (same for every family):
+#   example templates (what the agent/reference sees):   P1, P2, Q1          (indices 0, 1, 3)
+#   held-out T (new template, SAME styles as examples):   P3, Q2              (indices 2, 4)
+#   held-out S (new STYLES never in the examples):        D1 D2 K1 K2 N1 N2 F1 F2 (indices 5..12)
+EX_T, HO_T, HO_S = [0, 1, 3], [2, 4], [5, 6, 7, 8, 9, 10, 11, 12]
+
+CITY_STATE_TEMPLATES = [
+    ("P", "{e} is a city in the state of"),
+    ("P", "{e} is located in the US state of"),
+    ("P", "The city of {e} lies in the state of"),
+    ("Q", "Q: Which US state is {e} in?\nA:"),
+    ("Q", "Question: In which state is the city of {e}?\nAnswer:"),
+    ("D", "A: I just got back from a trip to {e}.\nB: Oh nice! Which state is that in?\nA: It's in"),
+    ("D", "User: Where is {e}?\nAssistant: {e} is a city in the US state of"),
+    ("K", "city: {e}\nstate:"),
+    ("K", "Location record\nCity name: {e}\nState name:"),
+    ("N", "Officials in {e} said on Tuesday that the governor of"),
+    ("N", "Residents of {e} voted on Tuesday in the statewide race for governor of"),
+    ("F", "Denver is in Colorado.\nPortland is in Oregon.\nNashville is in Tennessee.\n{e} is in"),
+    ("F", "Memphis, Tennessee\nDenver, Colorado\nBoise, Idaho\n{e},"),
 ]
+CITY_CAPITAL_TEMPLATES = [
+    ("P", "The state containing {e} has its capital in"),
+    ("P", "{e} is in a state whose capital city is"),
+    ("P", "The capital of the state where {e} is located is"),
+    ("Q", "Q: What is the capital of the state that {e} is in?\nA:"),
+    ("Q", "Question: What is the state capital for residents of {e}?\nAnswer:"),
+    ("D", "A: I live in {e}.\nB: Cool. So what's your state capital?\nA: It's"),
+    ("D", "User: I'm in {e}. Which city is my state's capital?\nAssistant: Your state capital is"),
+    ("K", "city: {e}\ncapital of its state:"),
+    ("K", "Record\nCity: {e}\nState capital:"),
+    ("N", "Lawmakers from {e} traveled to the state capital,"),
+    ("N", "After the flood in {e}, the governor held a press conference in the state capital,"),
+    ("F", "City -> capital of its state\nMemphis -> Nashville\nBoulder -> Denver\nEugene -> Salem\n{e} ->"),
+    ("F", "The state capital for Memphis is Nashville. The state capital for Boulder is Denver. "
+          "The state capital for {e} is"),
+]
+COUNTRY_LANG_TEMPLATES = [
+    ("P", "The official language of {e} is"),
+    ("P", "In {e}, the official language is"),
+    ("P", "The main language spoken in {e} is"),
+    ("Q", "Q: What language do people speak in {e}?\nA:"),
+    ("Q", "Question: What is the official language of {e}?\nAnswer:"),
+    ("D", "A: I'm moving to {e} next month.\nB: Exciting! What language do they speak there?\nA: Mostly"),
+    ("D", "User: I'm visiting {e}. What language should I learn?\nAssistant: You should learn"),
+    ("K", "country: {e}\nofficial language:"),
+    ("K", "Country profile\nName: {e}\nLanguage:"),
+    ("N", "The president of {e} addressed the nation on Monday in"),
+    ("N", "Schools in {e} teach most classes in"),
+    ("F", "Japan: Japanese\nItaly: Italian\nIran: Persian\n{e}:"),
+    ("F", "In Japan people speak Japanese. In Italy people speak Italian. In {e} people speak"),
+]
+ATHLETE_TEMPLATES = [
+    ("P", "{e} is famous for playing the sport of"),
+    ("P", "The sport played by {e} is"),
+    ("P", "{e} became a legend in the sport of"),
+    ("Q", "Q: What sport does {e} play?\nA:"),
+    ("Q", "Question: Which sport is {e} known for?\nAnswer:"),
+    ("D", "A: Did you see {e} play last night?\nB: No, I don't really follow"),
+    ("D", "User: Who is {e}?\nAssistant: {e} is a famous professional"),
+    ("K", "athlete: {e}\nsport:"),
+    ("K", "Player card\nName: {e}\nSport:"),
+    ("N", "In sports news, {e} made headlines again in the world of professional"),
+    ("N", "Sportswriters ranked {e} among the greatest ever to play"),
+    ("F", "Usain Bolt: sprinting\nMichael Phelps: swimming\nSimone Biles: gymnastics\n{e}:"),
+    ("F", "Sport of Michael Phelps: swimming\nSport of Simone Biles: gymnastics\nSport of {e}:"),
+]
+LANGID_TEMPLATES = [
+    ("P", "{e}\n\nThe sentence above is written in the language called"),
+    ("P", 'Translate the following sentence into English. The original sentence, "{e}", is in'),
+    ("P", 'The following text, "{e}", is written in'),
+    ("Q", 'Sentence: "{e}"\nQ: Which language is this sentence written in?\nA:'),
+    ("Q", 'Question: In what language is "{e}" written?\nAnswer:'),
+    ("D", 'A: My friend texted me "{e}" and I can\'t read it.\nB: Oh, that\'s'),
+    ("D", 'User: What language is this? "{e}"\nAssistant: That sentence is in'),
+    ("K", 'text: "{e}"\nlanguage:'),
+    ("K", "Sample\nText: {e}\nDetected language:"),
+    ("N", 'A tourist overheard someone say "{e}". The tourist realised the speaker was talking in'),
+    ("N", 'The sign at the station read "{e}", which was written in'),
+    ("F", 'Text: "The weather is lovely today."\nLanguage: English\nText: "私は毎朝コーヒーを'
+          '飲みます。"\nLanguage: Japanese\nText: "{e}"\nLanguage:'),
+    ("F", "Hello, how are you? -> English\nこんにちは -> Japanese\n{e} ->"),
+]
+COUNTRY_CAPITAL_TEMPLATES = [
+    ("P", "The capital of {e} is"),
+    ("P", "The capital city of {e} is"),
+    ("P", "{e} has its capital in"),
+    ("Q", "Q: What is the capital of {e}?\nA:"),
+    ("Q", "Question: Name the capital city of {e}.\nAnswer:"),
+    ("D", "A: I'm flying to {e} next week.\nB: Which city?\nA: The capital,"),
+    ("D", "User: What's the capital of {e}?\nAssistant: The capital of {e} is"),
+    ("K", "country: {e}\ncapital:"),
+    ("K", "Country profile\nName: {e}\nCapital city:"),
+    ("N", "Protesters gathered outside the parliament of {e} in"),
+    ("N", "Foreign ministers met on Friday in the capital of {e},"),
+    ("F", "Canada: Ottawa\nAustralia: Canberra\nVietnam: Hanoi\n{e}:"),
+    ("F", "The capital of Canada is Ottawa. The capital of Australia is Canberra. The capital of {e} is"),
+]
+# demo answers per family (a clean top-1 equal to one of these is a few-shot COPY artefact)
+FEWSHOT_DEMO_ANSWERS = {
+    "city_state": ["Colorado", "Oregon", "Tennessee", "Idaho"],
+    "city_capital": ["Nashville", "Denver", "Salem"],
+    "country_lang": ["Japanese", "Italian", "Persian"],
+    "athlete_sport": ["sprinting", "swimming", "gymnastics"],
+    "langid": ["English", "Japanese"],
+    "country_capital": ["Ottawa", "Canberra", "Hanoi"],
+}
+SPORT_ACCEPT = {"soccer": ["soccer", "football", "footballer"], "hockey": ["hockey", "ice"],
+                "golf": ["golf", "golfer"], "tennis": ["tennis"], "basketball": ["basketball"],
+                "baseball": ["baseball"]}
+
+
+def families():
+    """{family: dict(groups={group: [entities]}, answers={group: [accepted answer words]},
+    templates=[(style, text)], single_entity=bool)}. Answers are compared on the FIRST token of ' word'."""
+    from collections import Counter
+    fam = {}
+    cnt = Counter(c for v in STATE_CITIES.values() for c in v)
+    cities = {s: [c for c in v if cnt[c] == 1] for s, v in STATE_CITIES.items()}   # drop names shared by 2 states
+    fam["city_state"] = dict(groups=cities, answers={s: [s] for s in STATE_CITIES}, templates=CITY_STATE_TEMPLATES)
+    cap_cities = {s: [c for c in v if c != STATE_CAPITAL[s]] for s, v in cities.items()}   # Phoenix -> Phoenix is a copy
+    fam["city_capital"] = dict(groups=cap_cities, answers={s: [STATE_CAPITAL[s]] for s in STATE_CITIES},
+                               templates=CITY_CAPITAL_TEMPLATES)
+    fam["country_lang"] = dict(groups=LANG_COUNTRIES, answers={g: [g] for g in LANG_COUNTRIES},
+                               templates=COUNTRY_LANG_TEMPLATES)
+    fam["athlete_sport"] = dict(groups=SPORT_ATHLETES, answers={g: SPORT_ACCEPT[g] for g in SPORT_ATHLETES},
+                                templates=ATHLETE_TEMPLATES)
+    ls = langid_sentences()
+    fam["langid"] = dict(groups=ls, answers={g: [g] for g in ls}, templates=LANGID_TEMPLATES)
+    fam["country_capital"] = dict(groups={c: [c] for c in COUNTRY_CAPITAL},
+                                  answers={c: [COUNTRY_CAPITAL[c]] for c in COUNTRY_CAPITAL},
+                                  templates=COUNTRY_CAPITAL_TEMPLATES, single_entity=True)
+    for F in fam.values():
+        F.setdefault("single_entity", False)
+    return fam
 
 
 def langid_sentences(n_per_lang=24, max_words=14, min_words=5):
@@ -185,29 +273,6 @@ def langid_sentences(n_per_lang=24, max_words=14, min_words=5):
             out[lang].append(" ".join(w[:max_words]))
     return out
 
-
-def families():
-    """Return {family: dict(groups={group: [entities]}, answers={group: [accepted answer words]},
-    templates=[...], single_entity=bool)}"""
-    fam = {}
-    from collections import Counter
-    cnt = Counter(c for v in STATE_CITIES.values() for c in v)
-    cities = {s: [c for c in v if cnt[c] == 1] for s, v in STATE_CITIES.items()}   # drop names shared by 2 states
-    fam["city_state"] = dict(groups=cities, answers={s: [s.split()[0]] for s in STATE_CITIES},
-                             templates=CITY_STATE_TEMPLATES)
-    fam["city_capital"] = dict(groups=cities, answers={s: [STATE_CAPITAL[s]] for s in STATE_CITIES},
-                               templates=CITY_CAPITAL_TEMPLATES)
-    fam["country_lang"] = dict(groups=LANG_COUNTRIES, answers={g: [g] for g in LANG_COUNTRIES},
-                               templates=COUNTRY_LANG_TEMPLATES)
-    fam["athlete_sport"] = dict(groups=SPORT_ATHLETES,
-                                answers={g: SPORT_ACCEPT.get(g, [g]) for g in SPORT_ATHLETES},
-                                templates=ATHLETE_TEMPLATES)
-    ls = langid_sentences()
-    fam["langid"] = dict(groups=ls, answers={g: [g] for g in ls}, templates=LANGID_TEMPLATES)
-    fam["country_capital"] = dict(groups={c: [c] for c in COUNTRY_CAPITAL},
-                                  answers={c: [COUNTRY_CAPITAL[c]] for c in COUNTRY_CAPITAL},
-                                  templates=COUNTRY_CAPITAL_TEMPLATES, single_entity=True)
-    return fam
 
 
 def unrelated_texts(n=64, n_tokens_chars=260, seed=0):

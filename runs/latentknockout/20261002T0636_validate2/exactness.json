@@ -1,0 +1,76 @@
+{
+ "6": {
+  "max_abs_dlogit_empty_set": 0.0,
+  "top1_agree_empty_set": true,
+  "kl_empty_set": 0.0,
+  "max_abs_dlogit_run_from_vs_full": 0.0,
+  "top1_agree_run_from_vs_full": true,
+  "kl_run_from_vs_full": 0.0,
+  "max_abs_dlogit_recon_plus_error": 0.0,
+  "top1_agree_recon_plus_error": true,
+  "kl_recon_plus_error": 0.0,
+  "max_abs_dlogit_recon_only_no_error": 20.235584259033203,
+  "top1_agree_recon_only_no_error": false,
+  "kl_recon_only_no_error": 0.08008226007223129,
+  "fast_vs_explicit_ablation_max_abs_dlogit": 0.6662018299102783,
+  "fast_vs_explicit_top1_agree": false,
+  "max_abs_dlogit_ablate_top3_vs_clean": 12.497514724731445,
+  "top1_agree_ablate_top3_vs_clean": false,
+  "kl_ablate_top3_vs_clean": 0.004366609267890453,
+  "ablated_top3_latents": [
+   13460,
+   9743,
+   15079
+  ]
+ },
+ "12": {
+  "max_abs_dlogit_empty_set": 0.0,
+  "top1_agree_empty_set": true,
+  "kl_empty_set": 0.0,
+  "max_abs_dlogit_run_from_vs_full": 0.0,
+  "top1_agree_run_from_vs_full": true,
+  "kl_run_from_vs_full": 0.0,
+  "max_abs_dlogit_recon_plus_error": 0.0,
+  "top1_agree_recon_plus_error": true,
+  "kl_recon_plus_error": 0.0,
+  "max_abs_dlogit_recon_only_no_error": 24.933494567871094,
+  "top1_agree_recon_only_no_error": false,
+  "kl_recon_only_no_error": 0.12678445875644684,
+  "fast_vs_explicit_ablation_max_abs_dlogit": 1.3660497665405273,
+  "fast_vs_explicit_top1_agree": false,
+  "max_abs_dlogit_ablate_top3_vs_clean": 29.72200584411621,
+  "top1_agree_ablate_top3_vs_clean": false,
+  "kl_ablate_top3_vs_clean": 0.029052400961518288,
+  "ablated_top3_latents": [
+   2620,
+   4667,
+   2291
+  ]
+ },
+ "18": {
+  "max_abs_dlogit_empty_set": 0.0,
+  "top1_agree_empty_set": true,
+  "kl_empty_set": 0.0,
+  "max_abs_dlogit_run_from_vs_full": 0.0,
+  "top1_agree_run_from_vs_full": true,
+  "kl_run_from_vs_full": 0.0,
+  "max_abs_dlogit_recon_plus_error": 0.0,
+  "top1_agree_recon_plus_error": true,
+  "kl_recon_plus_error": 0.0,
+  "max_abs_dlogit_recon_only_no_error": 15.324939727783203,
+  "top1_agree_recon_only_no_error": false,
+  "kl_recon_only_no_error": 0.14342620968818665,
+  "fast_vs_explicit_ablation_max_abs_dlogit": 0.4445561170578003,
+  "fast_vs_explicit_top1_agree": false,
+  "max_abs_dlogit_ablate_top3_vs_clean": 9.501340866088867,
+  "top1_agree_ablate_top3_vs_clean": false,
+  "kl_ablate_top3_vs_clean": 0.020008966326713562,
+  "ablated_top3_latents": [
+   9392,
+   7373,
+   15394
+  ]
+ },
+ "padding_max_abs_dlogit_last_token": 0.3544590473175049,
+ "padding_top1_agree": true
+}

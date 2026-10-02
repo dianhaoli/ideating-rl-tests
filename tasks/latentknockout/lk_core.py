@@ -3,13 +3,16 @@
 Plain-language summary
 ----------------------
 * The residual stream at layer L is the model's running internal state after transformer block L
-  (HF hidden_states[L + 1]). A Gemma Scope SAE encodes it as f = JumpReLU(x @ W_enc + b_enc) (16384 latents, ~70
-  non-zero per token) and decodes x_hat = f @ W_dec + b_dec. The part it cannot explain is the error e = x - x_hat.
+  (HF hidden_states[L + 1]; Gemma Scope "layer_L" = blocks.L.hook_resid_post). A Gemma Scope SAE encodes it as
+  f = JumpReLU(x @ W_enc + b_enc) (16384 latents, ~70-80 non-zero per token) and decodes x_hat = f @ W_dec + b_dec.
+  The part it cannot explain is the error e = x - x_hat.
 * "Ablating" a set S of latents at layer L means x' = x - sum_{i in S} f_i(x) W_dec[i] at every token except BOS
-  (Gemma Scope was not trained on BOS). This equals x_hat(f with S zeroed) + e, i.e. we keep the error term, so with
-  S empty the model is bit-identical to the clean model.
-* Everything is batched with left padding and explicit position ids, and only the last-token logits are computed for
-  prompt sets (the 256k-vocab head is the expensive part); KL on unrelated text uses all positions.
+  (Gemma Scope was not trained on BOS). This equals x_hat(f with S zeroed) + e, i.e. the error term is kept, so with
+  S empty the model is bit-identical to the clean model (validate.py checks this and the other identities).
+* Speed: the edit only changes layers above L, so we cache the layer-L residual of every prompt once (PromptSet)
+  and rerun only blocks L+1..25 for each candidate edit (run_from). validate.py checks run_from == full forward.
+* Prompts are left-padded with explicit position ids; only last-token logits are computed for prompt sets (the
+  256k-vocab head is the expensive part); KL on unrelated text uses all non-BOS positions.
 """
 import glob
 import os
@@ -38,6 +41,33 @@ def sae_path(layer):
     return pats[0]
 
 
+class Edit:
+    """One intervention at layer L. kind: 'lat' (ablate latent ids), 'vec' (subtract vector), 'proj' (project out
+    unit vector), 'recon' (replace x by the SAE reconstruction: drops the error term), 'none'."""
+    __slots__ = ("kind", "ids", "vec")
+
+    def __init__(self, kind="none", ids=(), vec=None):
+        self.kind, self.ids, self.vec = kind, tuple(int(i) for i in ids), vec
+
+    @staticmethod
+    def lat(ids):
+        return Edit("lat" if len(ids) else "none", ids)
+
+
+class PromptSet:
+    """Prompts with their layer-L residuals cached in length-sorted chunks (bf16, on GPU)."""
+
+    def __init__(self, subj, L, texts, ans=None, chunk=64, max_len=128):
+        self.L, self.texts, self.n = L, list(texts), len(texts)
+        self.ans = ans
+        order = sorted(range(self.n), key=lambda i: len(texts[i]))
+        self.chunks = []
+        for c in range(0, self.n, chunk):
+            idx = order[c:c + chunk]
+            x, am, pos, nb = subj.resid([texts[i] for i in idx], L, max_len=max_len)
+            self.chunks.append((idx, x, am, pos, nb))
+
+
 class Subject:
     def __init__(self, layers=LAYERS, device="cuda"):
         import torch
@@ -50,7 +80,9 @@ class Subject:
                                                           attn_implementation="eager").eval()
         for p in self.model.parameters():
             p.requires_grad_(False)
-        self.softcap = getattr(self.model.config, "final_logit_softcapping", None)
+        self.cfg = self.model.config
+        self.nl = self.cfg.num_hidden_layers
+        self.softcap = getattr(self.cfg, "final_logit_softcapping", None)
         self.layers = tuple(layers)
         self.sae = {}
         for L in self.layers:
@@ -60,7 +92,7 @@ class Subject:
                                           ("W_dec", "W_dec"), ("b_dec", "b_dec")]}
 
     # ------------------------------------------------------------------ tokens
-    def enc(self, texts, max_len=96):
+    def enc(self, texts, max_len=128):
         torch = self.torch
         e = self.tok(list(texts), return_tensors="pt", padding=True, truncation=True, max_length=max_len)
         ids, am = e["input_ids"].to(self.device), e["attention_mask"].to(self.device)
@@ -83,21 +115,27 @@ class Subject:
         pre = x @ s["W_enc"][:, idx] + s["b_enc"][idx]
         return pre * (pre > s["thr"][idx])
 
-    # ------------------------------------------------------------------ forward with an edit at layer L
-    def _hook(self, L, edit, nonbos):
-        def hook(_m, _i, o):
-            x = o[0] if isinstance(o, tuple) else o
-            x2 = edit(x, nonbos)
-            if x2 is None:
-                return o
-            return (x2,) + tuple(o[1:]) if isinstance(o, tuple) else x2
-        return self.model.model.layers[L].register_forward_hook(hook)
+    def head(self, hid):
+        logits = self.model.lm_head(hid).float()
+        if self.softcap:
+            if logits.requires_grad:
+                logits = self.torch.tanh(logits / self.softcap) * self.softcap
+            else:
+                logits.div_(self.softcap).tanh_().mul_(self.softcap)   # in place: saves 2 copies of [B, 256k]
+        return logits
 
-    def run(self, texts, L=None, edit=None, all_pos=False):
-        """Return fp32 logits: [B, V] at the last token (default) or [B, T, V] (all_pos). edit(x_bf16, nonbos)->x'."""
+    # ------------------------------------------------------------------ full forward (with optional hook edit)
+    def run(self, texts, L=None, edits=None, all_pos=False, max_len=128):
+        """Full forward; edits (list of Edit, one per row, or None) applied by a hook on block L's output."""
         torch = self.torch
-        ids, am, pos, nonbos = self.enc(texts)
-        h = self._hook(L, edit, nonbos) if edit is not None else None
+        ids, am, pos, nonbos = self.enc(texts, max_len)
+        h = None
+        if edits is not None:
+            def hook(_m, _i, o):
+                x = o[0] if isinstance(o, tuple) else o
+                x2 = self.apply_edits(L, x, nonbos, edits)
+                return (x2,) + tuple(o[1:]) if isinstance(o, tuple) else x2
+            h = self.model.model.layers[L].register_forward_hook(hook)
         try:
             with torch.no_grad():
                 hid = self.model.model(input_ids=ids, attention_mask=am, position_ids=pos).last_hidden_state
@@ -105,42 +143,20 @@ class Subject:
             if h is not None:
                 h.remove()
         if not all_pos:
-            hid = hid[:, -1]
-        logits = self.model.lm_head(hid).float()
-        if self.softcap:
-            logits = torch.tanh(logits / self.softcap) * self.softcap
-        return (logits, am) if all_pos else logits
+            return self.head(hid[:, -1])
+        return self.head(hid), am, nonbos
 
-    def final_hidden(self, texts, L=None, edit=None):
+    def resid(self, texts, L, max_len=128):
+        """Residual after block L: (x [B,T,d] bf16, attention mask, position ids, nonbos mask). Stops after block L."""
         torch = self.torch
-        ids, am, pos, nonbos = self.enc(texts)
-        h = self._hook(L, edit, nonbos) if edit is not None else None
-        try:
-            with torch.no_grad():
-                hid = self.model.model(input_ids=ids, attention_mask=am, position_ids=pos).last_hidden_state
-        finally:
-            if h is not None:
-                h.remove()
-        return hid, nonbos
-
-    def logp_from_hidden(self, hid):
-        torch = self.torch
-        logits = self.model.lm_head(hid).float()
-        if self.softcap:
-            logits = torch.tanh(logits / self.softcap) * self.softcap
-        return torch.log_softmax(logits, -1)
-
-    def resid(self, texts, L):
-        """Residual after block L: ([B,T,d] fp32, nonbos mask, attention mask). Stops after block L."""
-        torch = self.torch
-        ids, am, pos, nonbos = self.enc(texts)
+        ids, am, pos, nonbos = self.enc(texts, max_len)
         box = {}
 
         class _Stop(Exception):
             pass
 
         def hook(_m, _i, o):
-            box["x"] = (o[0] if isinstance(o, tuple) else o).float()
+            box["x"] = (o[0] if isinstance(o, tuple) else o).detach()
             raise _Stop()
         h = self.model.model.layers[L].register_forward_hook(hook)
         try:
@@ -150,123 +166,195 @@ class Subject:
             pass
         finally:
             h.remove()
-        return box["x"], nonbos, am
+        return box["x"], am, pos, nonbos
+
+    def run_from(self, L, x, am, pos, last_only=True):
+        """Run blocks L+1..end + final norm from a (possibly edited) layer-L residual x. Returns normed hidden."""
+        from transformers.masking_utils import create_causal_mask, create_sliding_window_causal_mask
+        mm = self.model.model
+        kw = dict(config=self.cfg, inputs_embeds=x, attention_mask=am, past_key_values=None, position_ids=pos)
+        masks = {"full_attention": create_causal_mask(**kw), "sliding_attention": create_sliding_window_causal_mask(**kw)}
+        pe = mm.rotary_emb(x, pos)
+        h = x
+        for i in range(L + 1, self.nl):
+            h = mm.layers[i](h, attention_mask=masks[self.cfg.layer_types[i]], position_embeddings=pe,
+                             position_ids=pos)
+        if last_only:
+            h = h[:, -1]
+        return mm.norm(h)
 
     # ------------------------------------------------------------------ edits (all act at non-BOS positions)
-    def ablate_edit(self, L, row_sets):
-        """row_sets: list (len B) of lists of latent ids to ablate in that batch row."""
+    def apply_edits(self, L, x, nonbos, edits):
+        """x [B,T,d] (bf16); edits: list of B Edit objects. Returns edited x in x.dtype."""
         torch = self.torch
-        pool = sorted({i for s in row_sets for i in s})
-        if not pool:
-            return lambda x, nb: None
-        col = {i: j for j, i in enumerate(pool)}
-        M = torch.zeros(len(row_sets), len(pool), device=self.device)
-        for r, s in enumerate(row_sets):
-            for i in s:
-                M[r, col[i]] = 1.0
-        idx = torch.tensor(pool, device=self.device)
-        Wd = self.sae[L]["W_dec"][idx]
-
-        def edit(x, nonbos):
-            xf = x.float()
+        B = x.shape[0]
+        kinds = {e.kind for e in edits}
+        if kinds <= {"none"}:
+            return x
+        xf = x.float()
+        nb = nonbos[..., None].float()
+        out = xf
+        if "lat" in kinds:
+            pool = sorted({i for e in edits if e.kind == "lat" for i in e.ids})
+            col = {i: j for j, i in enumerate(pool)}
+            M = torch.zeros(B, len(pool), device=x.device)
+            for r, e in enumerate(edits):
+                if e.kind == "lat":
+                    M[r, [col[i] for i in e.ids]] = 1.0
+            idx = torch.tensor(pool, device=x.device)
             f = self.sae_encode(xf, L, idx) * M[:, None, :]
-            delta = (f @ Wd) * nonbos[..., None]
-            return (xf - delta).to(x.dtype)
-        return edit
+            out = out - (f @ self.sae[L]["W_dec"][idx]) * nb
+        if "vec" in kinds or "proj" in kinds:
+            V = torch.zeros(B, xf.shape[-1], device=x.device)
+            U = torch.zeros(B, xf.shape[-1], device=x.device)
+            for r, e in enumerate(edits):
+                if e.kind == "vec":
+                    V[r] = e.vec
+                elif e.kind == "proj":
+                    U[r] = e.vec
+            out = out - V[:, None, :] * nb
+            c = (xf * U[:, None, :]).sum(-1, keepdim=True)
+            out = out - c * U[:, None, :] * nb
+        if "recon" in kinds:
+            s = self.sae[L]
+            rows = [r for r, e in enumerate(edits) if e.kind == "recon"]
+            xr = xf[rows]
+            xhat = self.sae_encode(xr, L) @ s["W_dec"] + s["b_dec"]
+            m = nonbos[rows][..., None].bool()
+            out = out.clone()
+            out[rows] = torch.where(m, xhat, xr)
+        return out.to(x.dtype)
 
-    def recon_error_edit(self, L, zero_latents=()):
-        """Explicit x' = x_hat(f with zero_latents removed) + (x - x_hat(f)); used to verify exactness."""
-        s = self.sae[L]
-        z = list(zero_latents)
-
-        def edit(x, nonbos):
-            xf = x.float()
-            f = self.sae_encode(xf, L)
-            xhat = f @ s["W_dec"] + s["b_dec"]
-            err = xf - xhat
-            f2 = f.clone()
-            if z:
-                f2[..., z] = 0
-            x2 = f2 @ s["W_dec"] + s["b_dec"] + err
-            m = nonbos[..., None].bool()
-            return self.torch.where(m, x2, xf).to(x.dtype)
-        return edit
-
-    def recon_only_edit(self, L):
-        s = self.sae[L]
-
-        def edit(x, nonbos):
-            xf = x.float()
-            xhat = self.sae_encode(xf, L) @ s["W_dec"] + s["b_dec"]
-            m = nonbos[..., None].bool()
-            return self.torch.where(m, xhat, xf).to(x.dtype)
-        return edit
-
-    def steer_edit(self, row_vecs):
-        """row_vecs: [B, d] fp32 vector subtracted at every non-BOS position of that row."""
-        def edit(x, nonbos):
-            return (x.float() - row_vecs[:, None, :] * nonbos[..., None]).to(x.dtype)
-        return edit
-
-    def project_edit(self, row_units):
-        """row_units: [B, d] unit vectors (or zeros) projected out at every non-BOS position."""
-        def edit(x, nonbos):
-            xf = x.float()
-            c = (xf * row_units[:, None, :]).sum(-1, keepdim=True)
-            return (xf - c * row_units[:, None, :] * nonbos[..., None]).to(x.dtype)
-        return edit
-
-    # ------------------------------------------------------------------ attribution
-    def attribution(self, texts, ans_sets, L, chunk=16):
-        """Gradient x activation attribution of the answer log-prob to every SAE latent at layer L.
-        metric per prompt = logsumexp over accepted answer token ids of log_softmax(last logits).
-        Returns (attr [B, 16384] = sum_pos f_i * (W_dec[i] . dmetric/dx)  (estimated drop if ablated = attr),
-                 act_sum [B, 16384] sum over non-BOS positions, act_max [B, 16384])."""
+    # ------------------------------------------------------------------ batched evaluation on a PromptSet
+    def eval_last(self, ps, edits, rows_per_batch=256):
+        """For each edit (list of Edit) and each prompt in ps: margin of accepted answers and top-1 id.
+        Returns (margins [n_edits, n], top1 [n_edits, n]) as numpy. ps.ans: list of lists of accepted token ids."""
         torch = self.torch
+        E = len(edits)
+        marg = np.zeros((E, ps.n), np.float32)
+        top1 = np.zeros((E, ps.n), np.int64)
+        with torch.no_grad():
+            for idx, x, am, pos, nb in ps.chunks:
+                n = len(idx)
+                g = max(1, rows_per_batch // n)
+                A = max(len(ps.ans[i]) for i in idx)
+                ans = torch.tensor([ps.ans[i] + [ps.ans[i][0]] * (A - len(ps.ans[i])) for i in idx], device=x.device)
+                for e0 in range(0, E, g):
+                    eg = edits[e0:e0 + g]
+                    G = len(eg)
+                    xr = x.repeat(G, 1, 1)
+                    rows = [e for e in eg for _ in range(n)]
+                    xe = self.apply_edits(ps.L, xr, nb.repeat(G, 1), rows)
+                    h = self.run_from(ps.L, xe, am.repeat(G, 1), pos.repeat(G, 1))
+                    lg = self.head(h)
+                    ansr = ans.repeat(G, 1)
+                    acc = lg.gather(1, ansr).max(1).values
+                    tv, ti = lg.topk(A + 1, dim=1)
+                    isans = (ti[:, :, None] == ansr[:, None, :]).any(-1)
+                    tv = tv.masked_fill(isans, -1e9)
+                    other = tv.max(1).values
+                    m = (acc - other).view(G, n).cpu().numpy()
+                    t = ti[:, 0].view(G, n).cpu().numpy()
+                    for j in range(G):
+                        marg[e0 + j, idx] = m[j]
+                        top1[e0 + j, idx] = t[j]
+                    del xr, xe, h, lg
+        return marg, top1
+
+    def clean_hidden_all(self, ps):
+        """Cache clean final normed hidden at all positions for a KL PromptSet."""
+        torch = self.torch
+        out = []
+        with torch.no_grad():
+            for idx, x, am, pos, nb in ps.chunks:
+                out.append(self.run_from(ps.L, x, am, pos, last_only=False))
+        ps.clean_h = out
+
+    def eval_kl(self, ps, edits, rows_per_batch=32):
+        """Mean next-token KL(clean || edited) over non-BOS, non-pad positions, per edit and per text: [E, n]."""
+        torch = self.torch
+        if not hasattr(ps, "clean_h"):
+            self.clean_hidden_all(ps)
+        E = len(edits)
+        kl = np.zeros((E, ps.n), np.float32)
+        with torch.no_grad():
+            for (idx, x, am, pos, nb), ch in zip(ps.chunks, ps.clean_h):
+                n = len(idx)
+                g = max(1, rows_per_batch // n)
+                for e0 in range(0, E, g):
+                    eg = edits[e0:e0 + g]
+                    G = len(eg)
+                    rows = [e for e in eg for _ in range(n)]
+                    xe = self.apply_edits(ps.L, x.repeat(G, 1, 1), nb.repeat(G, 1), rows)
+                    h = self.run_from(ps.L, xe, am.repeat(G, 1), pos.repeat(G, 1), last_only=False)
+                    for j in range(G):
+                        for r in range(n):
+                            rr = j * n + r
+                            m = nb[r].bool()
+                            lp = torch.log_softmax(self.head(ch[r][m]), -1)
+                            lq = torch.log_softmax(self.head(h[rr][m]), -1)
+                            kl[e0 + j, idx[r]] = (lp.exp() * (lp - lq)).sum(-1).mean().item()
+                    del xe, h
+        return kl
+
+    # ------------------------------------------------------------------ attribution (gradient x activation)
+    def attribution(self, ps):
+        """Per prompt: attr [n, 16384] = sum_pos f_i * (W_dec[i] . d metric / d x): the first-order estimate of the drop
+        in metric if latent i is ablated; metric = logsumexp of log-probs of the accepted answer ids at the last token.
+        Also returns act_sum [n,16384] (summed activation over non-BOS positions) and err_attr [n] (the same estimate
+        for removing the SAE error term)."""
+        torch = self.torch
+        L = ps.L
         Wd = self.sae[L]["W_dec"]
-        A, S, Mx = [], [], []
-        for c0 in range(0, len(texts), chunk):
-            tx = texts[c0:c0 + chunk]
-            ids, am, pos, nonbos = self.enc(tx)
-            box = {}
-
-            def hook(_m, _i, o):
-                x = o[0] if isinstance(o, tuple) else o
-                xl = x.detach().float().requires_grad_(True)
-                box["x"] = xl
-                x2 = xl.to(x.dtype)
-                return (x2,) + tuple(o[1:]) if isinstance(o, tuple) else x2
-            h = self.model.model.layers[L].register_forward_hook(hook)
-            try:
+        s = self.sae[L]
+        attr = np.zeros((ps.n, D_SAE), np.float32)
+        acts = np.zeros((ps.n, D_SAE), np.float32)
+        err = np.zeros(ps.n, np.float32)
+        for idx, x, am, pos, nb in ps.chunks:
+            for c0 in range(0, len(idx), 16):
+                sl = slice(c0, c0 + 16)
+                ii = idx[sl]
+                xl = x[sl].float().clone().requires_grad_(True)
                 with torch.enable_grad():
-                    hid = self.model.model(input_ids=ids, attention_mask=am, position_ids=pos).last_hidden_state
-                    lp = self.logp_from_hidden(hid[:, -1])
-                    met = []
-                    for r, a in enumerate(ans_sets[c0:c0 + chunk]):
-                        met.append(torch.logsumexp(lp[r, a], 0))
-                    torch.stack(met).sum().backward()
-            finally:
-                h.remove()
-            x, g = box["x"].detach(), box["x"].grad.detach()
-            with torch.no_grad():
-                f = self.sae_encode(x, L) * nonbos[..., None]
-                gd = g @ Wd.T
-                A.append((f * gd).sum(1).cpu())
-                S.append(f.sum(1).cpu())
-                Mx.append(f.max(1).values.cpu())
-            del x, g, f, gd
-        return torch.cat(A).numpy(), torch.cat(S).numpy(), torch.cat(Mx).numpy()
+                    h = self.run_from(L, xl.to(x.dtype), am[sl], pos[sl])
+                    lp = torch.log_softmax(self.head(h), -1)
+                    met = torch.stack([torch.logsumexp(lp[r, ps.ans[i]], 0) for r, i in enumerate(ii)])
+                    met.sum().backward()
+                g = xl.grad.detach()
+                with torch.no_grad():
+                    xd = xl.detach()
+                    m = nb[sl][..., None].float()
+                    f = self.sae_encode(xd, L) * m
+                    gd = g @ Wd.T
+                    attr[ii] = (f * gd).sum(1).cpu().numpy()
+                    acts[ii] = f.sum(1).cpu().numpy()
+                    xhat = f @ Wd + s["b_dec"]
+                    err[ii] = (((xd - xhat) * m) * g).sum((1, 2)).cpu().numpy()
+                del xl, g, f, gd
+        return attr, acts, err
+
+    def mean_last(self, ps):
+        """Mean layer-L residual at the last token (fp32 [d])."""
+        tot = 0
+        for idx, x, am, pos, nb in ps.chunks:
+            tot = tot + x[:, -1].float().sum(0)
+        return tot / ps.n
+
+    def latent_acts(self, ps, ids):
+        """Activations of the given latents at every non-pad position: list per prompt of [T_i, len(ids)] numpy
+        (BOS row zeroed)."""
+        torch = self.torch
+        idx_t = torch.tensor(list(ids), device=self.device)
+        out = [None] * ps.n
+        with torch.no_grad():
+            for idx, x, am, pos, nb in ps.chunks:
+                f = self.sae_encode(x.float(), ps.L, idx_t) * nb[..., None]
+                for r, i in enumerate(idx):
+                    keep = am[r].bool()
+                    out[i] = f[r][keep].cpu().numpy()
+        return out
 
 
-# ---------------------------------------------------------------------------------------------- metrics
-def margins(logits, ans_sets):
-    """margin = max logit over accepted answers - max logit over everything else; top1 id."""
-    import torch
-    out = []
-    for r, a in enumerate(ans_sets):
-        row = logits[r]
-        acc = row[a].max()
-        tmp = row.clone()
-        tmp[a] = -1e9
-        out.append((acc - tmp.max()).item())
-    return np.array(out), logits.argmax(-1).cpu().numpy()
+def ids_for(subj, words):
+    """Accepted answer token ids: first token of ' word' and of ' Word' (Q/A and record styles capitalise answers)."""
+    return sorted({subj.first_token_id(v) for w in words for v in (w, w[:1].upper() + w[1:])})

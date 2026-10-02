@@ -1,0 +1,41 @@
+{
+ "6": {
+  "keep_clean_answer_all": 0.922,
+  "per_family": {
+   "city_state": 0.953,
+   "city_capital": 0.813,
+   "country_lang": 0.98,
+   "athlete_sport": 0.993,
+   "langid": 0.827,
+   "country_capital": 0.967
+  },
+  "sanity_clean_all_valid": 0.996,
+  "kl_recon_only_wikitext": 0.1062
+ },
+ "12": {
+  "keep_clean_answer_all": 0.887,
+  "per_family": {
+   "city_state": 0.973,
+   "city_capital": 0.6,
+   "country_lang": 0.987,
+   "athlete_sport": 0.967,
+   "langid": 0.847,
+   "country_capital": 0.947
+  },
+  "sanity_clean_all_valid": 0.997,
+  "kl_recon_only_wikitext": 0.1393
+ },
+ "18": {
+  "keep_clean_answer_all": 0.937,
+  "per_family": {
+   "city_state": 0.887,
+   "city_capital": 0.96,
+   "country_lang": 0.953,
+   "athlete_sport": 0.973,
+   "langid": 0.913,
+   "country_capital": 0.933
+  },
+  "sanity_clean_all_valid": 0.997,
+  "kl_recon_only_wikitext": 0.2236
+ }
+}
