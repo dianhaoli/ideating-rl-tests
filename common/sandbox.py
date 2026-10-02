@@ -2,7 +2,8 @@
 
     python -m common.sandbox setup        # once per machine: analysis venv for ./py (numpy, scipy, sklearn; NO torch)
     python -m common.sandbox prepare --task T --instance-dir D --profile full|blackbox \
-           --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus] [--json]
+           --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus] [--json] \
+           [--prompt-template FILE] [--min-submit-frac forward=0.6] [--extra-file SRC:DST ...]
     python -m common.sandbox finish --episode E [--transcript PATH ...] [--agent-model MODEL]
     python -m common.sandbox run-scripted --task T --solver tasks/T/reference_solver.py \
            --instances D1 D2 ... --profile full --run-dir R [--repeats 5] [--solver-label reference]
@@ -17,6 +18,7 @@ See docs/HARNESS_API.md for the contract.
 import argparse
 import fcntl
 import glob
+import hashlib
 import json
 import math
 import os
@@ -99,9 +101,10 @@ def _update_config(run_dir, task, task_root, **add):
             cfg = {"task": task, "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                    "git_sha": sha, "git_dirty": dirty, "task_root": task_root, "versions": _versions(),
                    "profiles": [], "solver_labels": [], "agent_models": [], "instances": {}}
-        for k in ("profiles", "solver_labels", "agent_models"):
+        for k in ("profiles", "solver_labels", "agent_models", "prompt_templates", "min_submit_fracs",
+                  "extra_files"):
             v = add.get(k)
-            if v and v not in cfg[k]:
+            if v and v not in cfg.setdefault(k, []):
                 cfg[k].append(v)
         if add.get("instance_id"):
             cfg["instances"][add["instance_id"]] = {"seed": add.get("seed"), "tier": add.get("tier"),
@@ -198,6 +201,138 @@ def check_task_md(text, task, canary, leak_strings, private_strings=()):
     return problems
 
 
+def _sha256_file(p):
+    h = hashlib.sha256()
+    with open(p, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+# ---- prepare options: --min-submit-frac (persistence requirement enforced by the sandbox's ./tool client)
+CLIENT_POLICY_LINE = "MIN_SUBMIT_FRAC = {}  # set by common.sandbox prepare --min-submit-frac"
+BUDGET_KEYS_EXTRA = ("wall_clock_s",)
+
+
+def parse_min_submit_frac(spec, caps):
+    """'forward=0.6' or 'forward=0.6,generate=0.3' (or a list of such strings) -> {"forward": 0.6, ...}.
+    Keys must be budget names this episode has (counter kinds such as forward/generate/tool_calls, or
+    wall_clock_s); fractions must be in (0, 1]."""
+    if not spec:
+        return {}
+    items = [spec] if isinstance(spec, str) else list(spec)
+    out = {}
+    allowed = list(broker.counter_kinds(caps)) + list(BUDGET_KEYS_EXTRA)
+    for item in items:
+        for part in str(item).split(","):
+            part = part.strip()
+            if not part:
+                continue
+            if "=" not in part:
+                raise ValueError(f"--min-submit-frac: expected key=fraction, got {part!r}")
+            k, v = (x.strip() for x in part.split("=", 1))
+            if k not in allowed:
+                raise ValueError(f"--min-submit-frac: unknown budget {k!r} (this episode has: {', '.join(allowed)})")
+            try:
+                fv = float(v)
+            except ValueError:
+                raise ValueError(f"--min-submit-frac: {k}={v!r} is not a number")
+            if not (0 < fv <= 1) or not math.isfinite(fv):
+                raise ValueError(f"--min-submit-frac: {k}={fv} must be a fraction in (0, 1]")
+            out[k] = fv
+    return out
+
+
+def _budget_label(k):
+    return {"wall_clock_s": "time", "tool_calls": "tool-call"}.get(k, k)
+
+
+def render_min_submit_note(policy):
+    """The one-line TASK.md note that tells the agent about the submission requirement."""
+    parts = [f"{int(round(v * 100))}% of your {_budget_label(k)} budget" for k, v in sorted(policy.items())]
+    return ("Note: `./tool submit` is accepted only after you have used at least " + " and ".join(parts)
+            + " (or once your time or one of your budgets has run out). `./tool budget` shows what you have used.")
+
+
+def render_client(policy=None):
+    """The ./tool client as written into a sandbox: the stdlib client with the episode's submit policy baked in."""
+    with open(CLIENT_SRC) as f:
+        src = f.read()
+    if CLIENT_POLICY_LINE not in src:
+        raise RuntimeError("agent client is missing its MIN_SUBMIT_FRAC line")
+    if policy:
+        src = src.replace(CLIENT_POLICY_LINE,
+                          f"MIN_SUBMIT_FRAC = {json.dumps(policy, sort_keys=True)}  "
+                          "# set by common.sandbox prepare --min-submit-frac", 1)
+    return src
+
+
+def min_submit_check(rec):
+    """Was the submit policy satisfied when the episode was submitted? (The client enforces it; this catches a
+    submission that bypassed the client.) Exempt when the time cap or any counter cap had run out."""
+    policy = rec.get("min_submit_frac") or {}
+    if not policy:
+        return None
+    caps, counters = rec.get("caps") or {}, rec.get("counters") or {}
+    used = {}
+    for k in policy:
+        if k == "wall_clock_s":
+            if rec.get("started_at") and rec.get("submitted_at"):
+                el = rec["submitted_at"] - rec["started_at"] - rec.get("wait_s", 0.0)
+            else:
+                el = 0.0
+            used[k] = el / caps[k] if caps.get(k) else 1.0
+        else:
+            used[k] = counters.get(k, 0) / caps[k] if caps.get(k) else 1.0
+    exhausted = [k for k in broker.counter_kinds(caps)
+                 if (caps.get(k) or 0) > 0 and counters.get(k, 0) >= caps[k]]
+    if rec.get("started_at") and rec.get("submitted_at"):
+        if rec["submitted_at"] - rec["started_at"] - rec.get("wait_s", 0.0) >= caps.get("wall_clock_s", float("inf")):
+            exhausted.append("wall_clock_s")
+    met = all(used[k] >= v - 1e-9 for k, v in policy.items())
+    return {"policy": policy, "used_frac": {k: round(v, 4) for k, v in used.items()}, "met": met,
+            "exempt_exhausted": exhausted, "submitted": rec.get("submission") is not None,
+            "bypassed": bool(rec.get("submission") is not None and not met and not exhausted)}
+
+
+# ---- prepare options: --extra-file SRC:DST (copied into the sandbox after a leak scan)
+RESERVED_SANDBOX_NAMES = ("TASK.md", "tool", "py", ".episode", "out")
+
+
+def parse_extra_files(specs):
+    """['SRC:DST', ...] -> [(abs src, normalised relative dst)]. DST must stay inside the sandbox and must not
+    replace a harness file (TASK.md, tool, py, .episode) or go under out/ (tool-written files)."""
+    out = []
+    for spec in specs or ():
+        if ":" not in spec:
+            raise ValueError(f"--extra-file: expected SRC:DST, got {spec!r}")
+        src, dst = spec.rsplit(":", 1)
+        src = os.path.abspath(os.path.expanduser(src))
+        if not os.path.isfile(src):
+            raise FileNotFoundError(f"--extra-file: source {src} is not a file")
+        if not dst or os.path.isabs(dst) or dst.startswith("~"):
+            raise ValueError(f"--extra-file: DST must be a relative path inside the sandbox, got {dst!r}")
+        nd = os.path.normpath(dst)
+        if nd == "." or nd.startswith("..") or nd.split(os.sep)[0] in RESERVED_SANDBOX_NAMES or nd.endswith(os.sep):
+            raise ValueError(f"--extra-file: DST {dst!r} is outside the sandbox or replaces a harness file/dir")
+        if nd in [d for _, d in out]:
+            raise ValueError(f"--extra-file: DST {dst!r} given twice")
+        out.append((src, nd))
+    return out
+
+
+def check_extra_file(src, dst, task, canary, leak_strings, private_strings):
+    """Leak-scan an extra file (contents and destination name) before it goes into the sandbox."""
+    with open(src, "rb") as f:
+        text = f.read().decode("utf-8", errors="replace")
+    problems = [p.replace("TASK.md", f"extra file {dst}")
+                for p in check_task_md(text, task, canary, leak_strings, private_strings)]
+    name = leakscan.scan_text(dst, canary, leak_strings, private_strings)
+    if name["canary"] or name["leak_strings"] or name["private"]:
+        problems.append(f"destination name {dst!r} contains a protected string")
+    return problems
+
+
 # ---------------------------------------------------------------------------------------------- setup
 def setup():
     venv = paths.venv_dir()
@@ -237,7 +372,12 @@ def _snapshot_instance(src):
 
 
 def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=None, agent_model=None,
-            start_broker=True):
+            start_broker=True, prompt_template=None, min_submit_frac=None, extra_files=None):
+    """Create one episode. Options (all recorded in the episode record and the run's config.json):
+    prompt_template: render TASK.md from this file instead of tasks/<task>/agent_prompt.md (same checks).
+    min_submit_frac: {"forward": 0.6} or "forward=0.6": ./tool refuses submit until that fraction of the cap is
+        used (or a budget/time has run out); a one-line note is appended to TASK.md.
+    extra_files: ["SRC:DST", ...]: copy SRC to <sandbox>/DST after leak-scanning it."""
     task_root = os.path.abspath(tasks_root or HARNESS_ROOT)
     instance_dir = os.path.abspath(instance_dir)
     run_dir = os.path.abspath(run_dir)
@@ -260,14 +400,27 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     if bad:
         raise ValueError("bad leak_strings: " + "; ".join(bad))
     caps = broker.merged_caps(inst.get("caps"))
+    policy = parse_min_submit_frac(min_submit_frac, caps)
+    extras = parse_extra_files(extra_files)
     desc = _describe(task_root, task, profile)
-    with open(os.path.join(tdir, "agent_prompt.md")) as f:
+    template_path = os.path.abspath(prompt_template) if prompt_template else os.path.join(tdir, "agent_prompt.md")
+    with open(template_path) as f:
         template = f.read()
+    template_info = {"path": template_path, "sha256": _sha256_file(template_path),
+                     "default": not prompt_template}
     task_md = render_task_md(template, public, render_tool_docs(desc["tool_docs"]), render_caps(caps))
+    if policy:
+        task_md = task_md.rstrip("\n") + "\n\n" + render_min_submit_note(policy) + "\n"
     private = private_strings_for(task, task_root, instance_dir, inst, public)
     problems = check_task_md(task_md, task, canary, leak_strings, private)
     if problems:
         raise ValueError("TASK.md failed checks: " + "; ".join(problems))
+    extra_info = []
+    for src, dst in extras:
+        bad = check_extra_file(src, dst, task, canary, leak_strings, private)
+        if bad:
+            raise ValueError(f"extra file {src} refused: " + "; ".join(bad))
+        extra_info.append({"src": src, "dst": dst, "sha256": _sha256_file(src), "bytes": os.path.getsize(src)})
     vpy = os.path.join(paths.venv_dir(), "bin", "python")
     if not os.path.exists(vpy):
         raise FileNotFoundError(f"analysis venv missing ({vpy}); run: python -m common.sandbox setup")
@@ -278,8 +431,14 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     os.makedirs(os.path.join(sbx, "scratch"))
     with open(os.path.join(sbx, "TASK.md"), "w") as f:
         f.write(task_md)
-    shutil.copyfile(CLIENT_SRC, os.path.join(sbx, "tool"))
+    with open(os.path.join(sbx, "tool"), "w") as f:
+        f.write(render_client(policy))
     os.chmod(os.path.join(sbx, "tool"), 0o755)
+    for e in extra_info:
+        dp = os.path.join(sbx, e["dst"])
+        os.makedirs(os.path.dirname(dp), exist_ok=True)
+        shutil.copyfile(e["src"], dp)
+        os.chmod(dp, 0o644)
     # ./py is a 2-line exec wrapper, not a symlink: Python 3.9 finds its venv (pyvenv.cfg) relative to the
     # path it was invoked by, so a symlink in the sandbox would run the bare system python without numpy.
     with open(os.path.join(sbx, "py"), "w") as f:
@@ -300,7 +459,8 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
            "tools": [t["name"] for t in desc["tool_docs"]], "tool_docs": desc["tool_docs"],
            "builtin_docs": BUILTIN_DOCS, "gpu_gb": desc["gpu_gb"], "grader_gpu_gb": desc.get("grader_gpu_gb", 0),
            "status": "open", "created_at": now, "started_at": None, "wait_s": 0.0, "submission": None,
-           "leak_detected": False, "leak_events": [], "behavioral_exposure": 0, "git_sha": sha, "git_dirty": dirty}
+           "leak_detected": False, "leak_events": [], "behavioral_exposure": 0, "git_sha": sha, "git_dirty": dirty,
+           "prompt_template": template_info, "min_submit_frac": policy, "extra_files": extra_info}
     broker.write_json_atomic(broker.record_path(eid), rec)
 
     edir = os.path.join(run_dir, "episodes", eid)
@@ -312,7 +472,10 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     broker.write_json_atomic(os.path.join(edir, "episode.json"), _public_record(rec))
     _update_config(run_dir, task, task_root, profiles=profile, solver_labels=solver_label, agent_models=agent_model,
                    instance_id=inst.get("instance_id"), seed=inst.get("seed"), tier=inst.get("tier"),
-                   dial=inst.get("dial"), instance_dir=instance_dir)
+                   dial=inst.get("dial"), instance_dir=instance_dir,
+                   prompt_templates={"path": template_path, "sha256": template_info["sha256"]},
+                   min_submit_fracs=policy or None,
+                   extra_files=[{"dst": e["dst"], "src": e["src"], "sha256": e["sha256"]} for e in extra_info] or None)
     if start_broker:
         broker.start(quiet=True)
     return {"episode": eid, "sandbox": sbx, "prompt": prompt, "episode_dir": edir}
@@ -322,7 +485,8 @@ def _public_record(rec):
     """The run-dir copy of the episode record: no canary, no leak strings, no submission internals."""
     keep = ("episode", "task", "instance_id", "tier", "profile", "solver_label", "agent_model", "sandbox",
             "instance_dir", "caps", "counters", "tools", "gpu_gb", "status", "created_at", "started_at",
-            "submitted_at", "closed_at", "wait_s", "leak_detected", "behavioral_exposure", "git_sha", "git_dirty")
+            "submitted_at", "closed_at", "wait_s", "leak_detected", "behavioral_exposure", "git_sha", "git_dirty",
+            "prompt_template", "min_submit_frac", "extra_files")
     out = {k: rec.get(k) for k in keep}
     out["n_leak_events"] = len(rec.get("leak_events") or [])
     out["cross_episode_access"] = bool(rec.get("cross_episode_access"))
@@ -397,20 +561,27 @@ def _scan_sandbox(rec):
       reading through it would leave the sandbox without naming an outside path)."""
     sbx = os.path.realpath(rec["sandbox"])
     canary, leaks, private = rec.get("canary"), rec.get("leak_strings"), rec.get("private_strings", [])
-    pristine = {"tool": CLIENT_SRC}
+    pristine = {"tool": render_client(rec.get("min_submit_frac")).encode()}
     edir = os.path.join(rec.get("run_dir") or "", "episodes", rec.get("episode") or "")
     if rec.get("run_dir") and os.path.exists(os.path.join(edir, "TASK.md")):
-        pristine["TASK.md"] = os.path.join(edir, "TASK.md")
+        with open(os.path.join(edir, "TASK.md"), "rb") as f:
+            pristine["TASK.md"] = f.read()
+    extra_sha = {e["dst"]: e["sha256"] for e in rec.get("extra_files") or []}
 
     def same_as_written(rel, p):
         if rel in (".episode", "py"):
             return True
+        if rel in extra_sha:
+            try:
+                return _sha256_file(p) == extra_sha[rel]
+            except OSError:
+                return False
         src = pristine.get(rel)
         if src is None:
             return rel == "TASK.md"         # no copy to compare against: treat as harness-written
         try:
-            with open(src, "rb") as a, open(p, "rb") as b:
-                return a.read() == b.read()
+            with open(p, "rb") as b:
+                return b.read() == src
         except OSError:
             return False
 
@@ -448,7 +619,7 @@ def _scan_sandbox(rec):
                 res["leak"] = True
                 res["reasons"].append(f"private string (instance path/id, repo path or codename) in sandbox file {rel}")
             if hit["leak_strings"]:
-                if rel in ("TASK.md", "tool", "py", ".episode") and same_as_written(rel, p):
+                if (rel in ("TASK.md", "tool", "py", ".episode") or rel in extra_sha) and same_as_written(rel, p):
                     res["leak"] = True
                     res["reasons"].append(f"leak_string in harness file {rel}")
                 else:
@@ -545,6 +716,9 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
         invalid.append("cross_episode_access")
     if sbx_scan["symlinks_outside"]:
         invalid.append("sandbox_symlink_outside")
+    msc = min_submit_check(rec)
+    if msc and msc["bypassed"]:
+        invalid.append("min_submit_bypassed")
     end = rec.get("submitted_at") or rec.get("closed_at") or time.time()
     grade["harness"] = {
         "episode": episode, "task": rec["task"], "instance_id": rec.get("instance_id"), "tier": rec.get("tier"),
@@ -561,6 +735,8 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
         "valid": not invalid, "invalid_reasons": invalid,
         "elapsed_s": round(end - rec["started_at"], 1) if rec.get("started_at") else None,
         "wait_s": round(rec.get("wait_s", 0.0), 1),
+        "prompt_template": rec.get("prompt_template"), "min_submit": msc,
+        "extra_files": [{"dst": e["dst"], "sha256": e["sha256"]} for e in rec.get("extra_files") or []],
     }
     broker.write_json_atomic(os.path.join(edir, "grade.json"), grade)
     try:
@@ -734,6 +910,12 @@ def main():
     p.add_argument("--agent-model", default=None)
     p.add_argument("--tasks-root", default=None, help="checkout holding tasks/<T>/ (default: this checkout)")
     p.add_argument("--json", action="store_true")
+    p.add_argument("--prompt-template", default=None,
+                   help="render TASK.md from this file instead of tasks/<T>/agent_prompt.md (same placeholders/checks)")
+    p.add_argument("--min-submit-frac", action="append", default=None, metavar="CAP=FRAC[,CAP=FRAC]",
+                   help="./tool refuses submit until this fraction of the cap is used, e.g. forward=0.6")
+    p.add_argument("--extra-file", action="append", default=None, metavar="SRC:DST",
+                   help="copy SRC into the sandbox at relative path DST after a leak scan (repeatable)")
     f = sub.add_parser("finish")
     f.add_argument("--episode", required=True)
     f.add_argument("--transcript", nargs="*", default=None)
@@ -754,7 +936,8 @@ def main():
     if a.cmd == "setup":
         setup()
     elif a.cmd == "prepare":
-        ep = prepare(a.task, a.instance_dir, a.profile, a.run_dir, a.solver_label, a.tasks_root, a.agent_model)
+        ep = prepare(a.task, a.instance_dir, a.profile, a.run_dir, a.solver_label, a.tasks_root, a.agent_model,
+                     prompt_template=a.prompt_template, min_submit_frac=a.min_submit_frac, extra_files=a.extra_file)
         if a.json:
             print(json.dumps({k: ep[k] for k in ("episode", "sandbox", "prompt")}))
         else:

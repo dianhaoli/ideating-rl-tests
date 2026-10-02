@@ -107,7 +107,8 @@ Python helper for scripted solvers: `from common.toolclient import Client; c = C
 
 ```
 python -m common.sandbox prepare --task T --instance-dir D --profile full|blackbox \
-       --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus|haiku|reference|blackbox|recipe]
+       --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus|haiku|reference|blackbox|recipe] \
+       [--prompt-template FILE] [--min-submit-frac forward=0.6] [--extra-file SRC:DST ...]   (see below)
    -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, .episode}
       writes runs/.episodes/<E>.json and <run-dir>/episodes/<E>/episode.json
       prints E and the exact test-agent prompt (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
@@ -123,6 +124,36 @@ python -m common.sandbox summarize --run-dir R   -> summary.json + summary.md (p
 `TASK.md` is rendered from `tasks/T/agent_prompt.md`. Placeholders `{public.<key>}` are filled from the
 instance's public.json, `{tool_docs}` from the profile's tool docs, `{caps}` from instance caps.
 The task's internal codename must not appear in TASK.md.
+
+Optional `prepare` flags (added 2026-10-02 for the FeatureMatch diagnosis study, D14; they need no broker restart):
+- `--prompt-template FILE`: render TASK.md from FILE instead of `tasks/T/agent_prompt.md`. Same placeholders and
+  the same checks (codename, canary, leak strings, private strings). The template's absolute path and sha256 are
+  stored in the episode record (`prompt_template: {path, sha256, default}`), in `episode.json`, in `grade.json`
+  (`harness.prompt_template`) and in the run's `config.json` (`prompt_templates`). Without the flag the default
+  template is recorded the same way with `default: true`.
+- `--min-submit-frac CAP=FRAC[,CAP=FRAC]` (repeatable; CAP is any counter cap such as `forward`, `generate`,
+  `tool_calls`, or `wall_clock_s`; FRAC in (0, 1]): the sandbox's `./tool` client refuses `submit` until the
+  episode has used at least that fraction of the cap. Before sending a submission the client asks the built-in
+  `budget` tool; if a requirement is not met it prints, e.g.,
+  `{"ok": false, "error": "submission not accepted yet: use at least 60% of the forward budget first (used 31%)"}`
+  (exit code 1) and sends nothing. Once time or any counter with a non-zero cap has run out, submitting is always
+  allowed, so an agent can never be locked out. The policy is baked into that sandbox's copy of the client (the
+  file set of the sandbox does not change), recorded as `min_submit_frac` in the episode record, `episode.json` and
+  `config.json` (`min_submit_fracs`), and a one-line note is appended to TASK.md:
+  "Note: `./tool submit` is accepted only after you have used at least 60% of your forward budget (or once your
+  time or one of your budgets has run out). `./tool budget` shows what you have used."
+  The broker itself does not enforce it. `finish` re-checks the counters at submission (`harness.min_submit`:
+  policy, used fractions, met, exemptions); a submission below the threshold with nothing exhausted means the client
+  was bypassed, and the episode is INVALID with reason `min_submit_bypassed`.
+- `--extra-file SRC:DST` (repeatable): copy the file SRC into the sandbox at DST. DST must be a relative path inside
+  the sandbox and must not be or replace `TASK.md`, `tool`, `py`, `.episode`, or anything under `out/`. Before
+  copying, the file's contents and DST are scanned exactly like TASK.md (canary, leak strings, private strings,
+  codename); any hit refuses the whole `prepare`. Each file's src, dst, sha256 and size is stored in the record
+  (`extra_files`); `grade.json` lists dst and sha256. At finish an extra file still identical to what was copied is
+  treated as a harness-written file (a leak string in it would be a leak); once the agent edits it, it counts as
+  the agent's file.
+Python: `sandbox.prepare(..., prompt_template=PATH, min_submit_frac="forward=0.6" or {"forward": 0.6},
+extra_files=["SRC:DST", ...])`.
 
 ## 6. Grader: `tasks/<task>/grader.py`
 
@@ -256,3 +287,8 @@ Refinements to the spec above:
   a non-empty `grader_error` and INVALID.
 - New `grade.json` harness fields: `symlinks_outside`, `cross_episode_access`. New invalid reasons:
   `cross_episode_access`, `sandbox_symlink_outside`.
+
+### prepare options (2026-10-02, D14)
+- `--prompt-template`, `--min-submit-frac`, `--extra-file`: see section 5. New `grade.json` harness fields:
+  `prompt_template`, `min_submit`, `extra_files`. New invalid reason: `min_submit_bypassed`.
+  Tests: `common/tests/test_prepare_options.py`.

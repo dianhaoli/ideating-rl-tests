@@ -203,3 +203,29 @@ events, orchestration decisions and gate summaries, with links.
   recover their concept on independently written probe texts).
 - Also: docs/PLAN_PROMPT.md had been truncated to 0 bytes (uncommitted, cause unknown, probably a stray write by an
   agent). Restored from git.
+
+## 2026-10-02 01:25 UTC: FeatureMatch diagnosis study started (Dan's brief; D14)
+- Plan: tasks/featurematch/diagnosis/PLAN.md on branch diag/featurematch (worktree ~/wt/fmdiag).
+- Phase A workflow (wf_5412322c-af1) has started. It covers: PREREG.md (step 0), the tool/task clarity audit (step 1), and
+  infrastructure: harness prepare options (--prompt-template, --min-submit-frac, --extra-file) plus a shared FeatureMatch
+  model service so the study stays at <= 2 GPU jobs. It also covers two independently written style banks (F = filter,
+  R = style-robust recipe), 232 concepts x 20 texts each, with 8 writer agents per bank.
+- Nothing is measured until PREREG.md is committed. All agent experiments will use fresh Claude Code subagents only
+  (no hosted API, per Dan's brief).
+
+## 2026-10-02 01:55 UTC: new task LatentKnockout (Dan's request; FeatureMatch "tests the wrong things")
+- Dan's diagnosis of FeatureMatch: latents chosen on Wikipedia-style text stay silent on agent-written text, so the score
+  partly measures style imitation. A new task should make the agent USE an SAE to explain a behaviour, graded by
+  RERUNNING the model: find <= k SAE latents whose ablation removes a behaviour on held-out target prompts while
+  preserving held-out controls. Reward ~ Effect x Preserve x KL factor.
+- Worktree ~/wt/latentknockout, branch task/latentknockout. Design brief (request + my starting hypotheses):
+  tasks/latentknockout/DESIGN_BRIEF.md.
+- Feasibility first (workflow wf_7ed4195f-743): behaviour validation, attribution + greedy reference, many
+  (family, group, layer) cells, baselines (random, most-active, mean-diff-cosine, plain non-SAE steering vector, naive
+  top-k attribution). Then an independent skeptic re-implements the key numbers and hunts cheap solvers. I review
+  before anything is built.
+- The FeatureMatch diagnosis phase A (wf_5412322c-af1) keeps running: PREREG, clarity, infra and style banks, mostly CPU.
+  Its GPU-heavy agent arms are on HOLD pending Dan's call, since he now regards FeatureMatch as testing the wrong things.
+- 02:00 UTC: Dan set the order: finish the FeatureMatch investigation first, then LatentKnockout. The LatentKnockout
+  feasibility workflow was stopped after a few minutes (nothing committed beyond the design brief). It resumes after
+  the FeatureMatch verdict. FeatureMatch agent arms are back ON.
