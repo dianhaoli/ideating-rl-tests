@@ -360,3 +360,27 @@ Workflow wf_95ca39e9-284 (7 agents). STEP3.md (fmdiag 22111857); skeptic 0fa8c45
   The style filter made this worse (0.571) but did not create it.
 - FeatureMatch status: **explored, not validated** (diagnosis complete, verdict "Not interpretability"). The PLAN's 3
   example transcripts do not exist on v2/v2f because no agent ran, so RESULTS points to the v1 forensics episodes, labelled v1.
+
+## 2026-10-02 (~08:00 UTC): crash-interrupted fix stages finished (wf_a83c544f-8d1); harness audit hardening started
+- **ShiftHunt: READY_FOR_SMOKE** (task/shifthunt b17f82b0). Design v3. Reference v3.1 (paired-edit confirmation): T1 27/27
+  one-shot [87.5, 100]; T2 solved 10/29, so 10 kept, 10/10 one-shot. Every recipe, the black-box control and every audit attack
+  pass <= 1 episode per pool (<= 3.7%; previously up to 43-68%). Harness twins identical to in-process (106/106 pre-crash,
+  11/11 reference post-crash). Open: **local commit a90db0a7 contains per-probe answer labels for all 56 v3 instances (not
+  pushed). Do NOT push task/shifthunt as is**: squash-merge, or regenerate the instances before agent runs. The T2 pool is small
+  (10). C1 residual: gradient statistics separate planted from null at AUC up to 0.75 in T2. A perfect-attribute-name attack
+  passes 11-17%, realistic attacks <= 3.7%. Claude API cap almost spent ($1.104/$1.20).
+- **LatentDiff: READY_FOR_SMOKE** (task/latentdiff f55e9868). Generator v3.1 + grader v2, 24 instances (23 kept). Reference
+  23/24 harness one-shot (23/23 kept); rarefreq/rarefreq2/blackbox/prior/meandiff*/kloracle/fingerprint 0/n; constant
+  "nothing" 1/24 (the all-null instance). Sonnet probe (claude-sonnet-5-5, $0.153) found the intended constant-vs-proportional
+  test and got 3/4 slots right; it missed one plant after checking only 16 texts. Mid-band signal, but the episode was INVALID through the R9
+  false positive. The pool is small (24).
+- **FeatureMatch fix stage: gates pass on its own terms** (178 kept; template_probe exactly at the 10% gate in T2/T3), but the
+  diagnosis verdict supersedes it: status stays "explored, not validated". Local commits 3f3252c/ab78fb0a carry per-instance
+  outcomes for 3 cross-check instances (excluded via exposed_instances.json). Do not push without review.
+- **Harness hardening workflow wf_af386dd8-734**: transcript-audit false positives that invalidated real probes in 3 tasks
+  (R9 exec of the agent's own scratch file; R2 sed slashes and "/"; R4 `nc` variable; bare codename), and validity gaps
+  (run-scripted rc != 0 or no successful call counts as valid; infrastructure crashes graded valid:true with score 0). One fixer, then a full
+  replay of every recorded episode under the old and new audit, plus an independent red-team (>= 40 synthetic breaches that must
+  still be flagged), then resolution.
+- Ready-for-smoke tasks are now BoolIntermediates, ShiftHunt and LatentDiff. Smoke order is Dan's call (D15 put
+  BoolIntermediates after LatentKnockout).
