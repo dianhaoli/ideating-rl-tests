@@ -304,3 +304,21 @@ wf_352c134a-502 (old session e4652089).
   of light jobs.
 - **Not started (priority is Dan's call):** the ResidualRecall T2 rebuild and a BoolIntermediates agent smoke. Dan's
   order is FeatureMatch diagnosis first, then LatentKnockout. Added to OPEN_QUESTIONS.
+
+## 2026-10-02 04:50 UTC: FeatureMatch diagnosis step 2 under PREREG A1.1 (3ea47d7f); step 3 launched
+- Pre-registered keep rule (A1.1, two separate thresholds): **354 of 5017 pooled latents kept (7.1%)**. Languages 0.59, **topics
+  0.04**. The F2 threshold (styled text) drives this: 8.2% of latents pass it, against 95.4% for the dataset split C. Dropped
+  latents fire on ~15% of their concept's styled texts, against 95% for kept ones. 82.9% of the current v2 pool's slots fail
+  (planted and null alike). "Filter selects easier latents": no (none of the 3 pre-registered thresholds is met).
+  Predictions P3/P4/P31-P34 missed by a wide margin (we expected ~40% survival).
+- Regenerated pool (180 instances, seeds 8000+/108000+/208000+): only 74 anchor concepts (v2: 159); language anchors
+  27% of slots (v2: 9%). **P6 fingerprint fails narrowly: 0.616 in the close tiers** (bar 0.60).
+- Style-robust recipe built (sr_recipe.py, a8d47fe8). Unfiltered-v2 dry run: SR-max planted accuracy 0.52, which depends
+  on which 6 of 20 texts it uses (0.47-0.58).
+- PREREG amendments, all before any filtered-pool result: A2 (SR text selection, sensitivity label, T3 budget, clustered CI),
+  A3 (run step 3 despite P6, because the fingerprint cannot help scripted recipes; fix P6 before any agent arm; report by
+  family; independent verification of step 2).
+- Workflow wf_95ca39e9-284: 4 verifiers (independent re-implementation of A1.1; blind bank-text validity audit; what
+  dropped latents fire on and whether style-robust latents exist outside the pool; fingerprint mechanism and
+  label-only exploitability), the step-3 baselines (in-process, one GPU job), a skeptic (re-grades and hunts new cheap
+  recipes), and STEP3.md.
