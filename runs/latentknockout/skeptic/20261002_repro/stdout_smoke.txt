@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   6%|▌         | 16/288 [00:00<00:01, 159.39it/s]Loading weights:  30%|███       | 87/288 [00:00<00:00, 481.15it/s]Loading weights:  53%|█████▎    | 153/288 [00:00<00:00, 562.16it/s]Loading weights:  76%|███████▌  | 219/288 [00:00<00:00, 599.09it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 579.71it/s]
+08:18:41 loaded; SAEs ['snapshots/fd571b47c1c64851e9b1989792367b9babb4af63/layer_18/width_16k/average_l0_74/params.npz']
+08:18:42 exactness L18 (max |margin cached - margin full forward|): {'[]': 0.0, '[10472, 13331, 1114]': 0.0}
+08:18:44 city_state:Arizona:18 clean check {'n_items': 250, 'n_my_clean_correct': 250, 'max_abs_margin_diff_vs_reported': 0.22575902938842773, 'median_abs_margin_diff': 0.03269559144973755}
+08:18:48 city_state:Arizona:18 sizes {'ex_t': 10, 'ex_c': 29, 'ho': 250, 'fresh_t': 189, 'fresh_s': 134, 'new_t': 231, 'new_entities_valid': ['Apache Junction', 'Avondale', 'Buckeye', 'Bullhead City', 'Camp Verde', 'Cottonwood', 'Fountain Hills', 'Goodyear', 'Holbrook', 'Oro Valley', 'Payson', 'Queen Creek', 'Safford', 'Sahuarita', 'Show Low', 'Sierra Vista', 'Wickenburg', 'Winslow'], 'new_entities_given': ['Avondale', 'Goodyear', 'Buckeye', 'Sierra Vista', 'Show Low', 'Payson', 'Cottonwood', 'Bullhead City', 'Winslow', 'Holbrook', 'Apache Junction', 'Fountain Hills', 'Queen Creek', 'Oro Valley', 'Sahuarita', 'Camp Verde', 'Wickenburg', 'Safford'], 'fresh_t_entities': 33}
+08:19:02 city_state:Arizona:18 my_ref_s0 [10472] J=0.998; reported ref_k5 [10472]
+08:19:14 city_state:Arizona:18 seed 1 examples ['Surprise', 'Nogales', 'Bisbee', 'Kingman'] -> my_ref [10472, 11299, 11534]
+08:19:30 city_state:Arizona:18 seed 2 examples ['Kingman', 'Sedona', 'Yuma', 'Tucson'] -> my_ref [5672, 6647, 9392, 10472, 11299]
+08:20:26 city_state:Arizona:18 done 103.8s  R(ho_S, fresh, new): {'rep_ref_k5': (0.76, 0.8, 0.9), 'rep_ref_k10': (0.76, 0.8, 0.9), 'rep_naive_k5': (0.8, 0.81, 0.91), 'rep_contr_k5': (0.79, 0.85, 0.92), 'rep_cos_k5': (0.82, 0.93, 0.98), 'my_cos_k5': (0.82, 0.93, 0.98), 'my_naive_k5': (0.8, 0.81, 0.91), 'my_contr_k5': (0.8, 0.81, 0.91), 'null': (0.0, 0.0, 0.0), 'my_ref_s0': (0.76, 0.8, 0.9), 'my_ref_s1': (0.8, 0.87, 0.93), 'my_cos_s1': (0.8, 0.92, 0.98), 'my_contr_s1': (0.72, 0.77, 0.87), 'my_ref_s2': (0.79, 0.86, 0.92), 'my_cos_s2': (0.82, 0.95, 0.98), 'my_contr_s2': (0.72, 0.72, 0.83)}
+08:20:26 all done peak_gpu 7.39 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 9 --label latentknockout-skeptic-smoke -- /opt/pytorch/bin/python -m tasks.latentknockout.skeptic_reproduce.repro repro runs/latentknockout/20261002T0642_sweep/cells runs/latentknockout/skeptic/20261002_repro city_state:Arizona:18"
+	User time (seconds): 113.27
+	System time (seconds): 2.57
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:54.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 562666
+	Voluntary context switches: 4913
+	Involuntary context switches: 588
+	Swaps: 0
+	File system inputs: 1480
+	File system outputs: 568
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

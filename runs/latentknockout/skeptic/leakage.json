@@ -1,0 +1,590 @@
+{
+ "cells": 106,
+ "entity_overlap": [],
+ "split_mismatch": [],
+ "surface_overlap": {
+  "athlete_sport": [
+   {
+    "group": "tennis",
+    "layer": 12,
+    "ex": [
+     "John McEnroe",
+     "Pete Sampras",
+     "Rafael Nadal",
+     "Serena Williams"
+    ],
+    "held_out_sharing_a_word": [
+     "Venus Williams"
+    ],
+    "n_held_out": 13
+   },
+   {
+    "group": "tennis",
+    "layer": 18,
+    "ex": [
+     "John McEnroe",
+     "Pete Sampras",
+     "Rafael Nadal",
+     "Serena Williams"
+    ],
+    "held_out_sharing_a_word": [
+     "Venus Williams"
+    ],
+    "n_held_out": 13
+   },
+   {
+    "group": "tennis",
+    "layer": 6,
+    "ex": [
+     "John McEnroe",
+     "Pete Sampras",
+     "Rafael Nadal",
+     "Serena Williams"
+    ],
+    "held_out_sharing_a_word": [
+     "Venus Williams"
+    ],
+    "n_held_out": 13
+   }
+  ],
+  "city_capital": [
+   {
+    "group": "California",
+    "layer": 12,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "California",
+    "layer": 18,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "California",
+    "layer": 6,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "Michigan",
+    "layer": 12,
+    "ex": [
+     "Detroit",
+     "Grand Rapids",
+     "Kalamazoo",
+     "Traverse City"
+    ],
+    "held_out_sharing_a_word": [
+     "Bay City"
+    ],
+    "n_held_out": 15
+   },
+   {
+    "group": "Michigan",
+    "layer": 18,
+    "ex": [
+     "Detroit",
+     "Grand Rapids",
+     "Kalamazoo",
+     "Traverse City"
+    ],
+    "held_out_sharing_a_word": [
+     "Bay City"
+    ],
+    "n_held_out": 15
+   }
+  ],
+  "city_state": [
+   {
+    "group": "California",
+    "layer": 12,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "California",
+    "layer": 18,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "California",
+    "layer": 6,
+    "ex": [
+     "Irvine",
+     "Malibu",
+     "San Diego",
+     "Stockton"
+    ],
+    "held_out_sharing_a_word": [
+     "San Francisco",
+     "San Jose"
+    ],
+    "n_held_out": 16
+   },
+   {
+    "group": "Florida",
+    "layer": 12,
+    "ex": [
+     "Key West",
+     "Naples",
+     "Ocala",
+     "Palm Beach"
+    ],
+    "held_out_sharing_a_word": [
+     "Daytona Beach"
+    ],
+    "n_held_out": 15
+   },
+   {
+    "group": "Florida",
+    "layer": 18,
+    "ex": [
+     "Key West",
+     "Naples",
+     "Ocala",
+     "Palm Beach"
+    ],
+    "held_out_sharing_a_word": [
+     "Daytona Beach"
+    ],
+    "n_held_out": 14
+   },
+   {
+    "group": "Florida",
+    "layer": 6,
+    "ex": [
+     "Key West",
+     "Naples",
+     "Ocala",
+     "Palm Beach"
+    ],
+    "held_out_sharing_a_word": [
+     "Daytona Beach"
+    ],
+    "n_held_out": 15
+   }
+  ]
+ },
+ "template_overlap": {
+  "city_state": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 4,
+    "text": "The city of {e} lies in the state of"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 2,
+    "text": "Question: In which state is the city of {e}?\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 4,
+    "text": "A: I just got back from a trip to {e}.\nB: Oh nice! Which state is that in?\nA: It's in"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 6,
+    "text": "User: Where is {e}?\nAssistant: {e} is a city in the US state of"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "city: {e}\nstate:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Location record\nCity name: {e}\nState name:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 1,
+    "text": "Officials in {e} said on Tuesday that the governor of"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "Residents of {e} voted on Tuesday in the statewide race for governor of"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 2,
+    "text": "Denver is in Colorado.\nPortland is in Oregon.\nNashville is in Tennessee.\n{e} is in"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Memphis, Tennessee\nDenver, Colorado\nBoise, Idaho\n{e},"
+   }
+  ],
+  "city_capital": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 4,
+    "text": "The capital of the state where {e} is located is"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 4,
+    "text": "Question: What is the state capital for residents of {e}?\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 3,
+    "text": "A: I live in {e}.\nB: Cool. So what's your state capital?\nA: It's"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 2,
+    "text": "User: I'm in {e}. Which city is my state's capital?\nAssistant: Your state capital is"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 2,
+    "text": "city: {e}\ncapital of its state:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Record\nCity: {e}\nState capital:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "Lawmakers from {e} traveled to the state capital,"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "After the flood in {e}, the governor held a press conference in the state capital,"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 2,
+    "text": "City -> capital of its state\nMemphis -> Nashville\nBoulder -> Denver\nEugene -> Salem\n{e} ->"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 2,
+    "text": "The state capital for Memphis is Nashville. The state capital for Boulder is Denver. The state capital for {e} is"
+   }
+  ],
+  "country_lang": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 2,
+    "text": "The main language spoken in {e} is"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 4,
+    "text": "Question: What is the official language of {e}?\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 3,
+    "text": "A: I'm moving to {e} next month.\nB: Exciting! What language do they speak there?\nA: Mostly"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 2,
+    "text": "User: I'm visiting {e}. What language should I learn?\nAssistant: You should learn"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 2,
+    "text": "country: {e}\nofficial language:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Country profile\nName: {e}\nLanguage:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "The president of {e} addressed the nation on Monday in"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "Schools in {e} teach most classes in"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Japan: Japanese\nItaly: Italian\nIran: Persian\n{e}:"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 2,
+    "text": "In Japan people speak Japanese. In Italy people speak Italian. In {e} people speak"
+   }
+  ],
+  "athlete_sport": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 3,
+    "text": "{e} became a legend in the sport of"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 1,
+    "text": "Question: Which sport is {e} known for?\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 2,
+    "text": "A: Did you see {e} play last night?\nB: No, I don't really follow"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 2,
+    "text": "User: Who is {e}?\nAssistant: {e} is a famous professional"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "athlete: {e}\nsport:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Player card\nName: {e}\nSport:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 1,
+    "text": "In sports news, {e} made headlines again in the world of professional"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 1,
+    "text": "Sportswriters ranked {e} among the greatest ever to play"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Usain Bolt: sprinting\nMichael Phelps: swimming\nSimone Biles: gymnastics\n{e}:"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Sport of Michael Phelps: swimming\nSport of Simone Biles: gymnastics\nSport of {e}:"
+   }
+  ],
+  "langid": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 6,
+    "text": "The following text, \"{e}\", is written in"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 3,
+    "text": "Question: In what language is \"{e}\" written?\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 3,
+    "text": "A: My friend texted me \"{e}\" and I can't read it.\nB: Oh, that's"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 3,
+    "text": "User: What language is this? \"{e}\"\nAssistant: That sentence is in"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 4,
+    "text": "text: \"{e}\"\nlanguage:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Sample\nText: {e}\nDetected language:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 3,
+    "text": "A tourist overheard someone say \"{e}\". The tourist realised the speaker was talking in"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 4,
+    "text": "The sign at the station read \"{e}\", which was written in"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 4,
+    "text": "Text: \"The weather is lovely today.\"\nLanguage: English\nText: \"\u79c1\u306f\u6bce\u671d\u30b3\u30fc\u30d2\u30fc\u3092\u98f2\u307f\u307e\u3059\u3002\"\nLanguage: Japanese\nText: \"{e}\"\nLanguage:"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Hello, how are you? -> English\n\u3053\u3093\u306b\u3061\u306f -> Japanese\n{e} ->"
+   }
+  ],
+  "country_capital": [
+   {
+    "idx": 2,
+    "style": "P",
+    "lcs_words_with_examples": 1,
+    "text": "{e} has its capital in"
+   },
+   {
+    "idx": 4,
+    "style": "Q",
+    "lcs_words_with_examples": 4,
+    "text": "Question: Name the capital city of {e}.\nAnswer:"
+   },
+   {
+    "idx": 5,
+    "style": "D",
+    "lcs_words_with_examples": 3,
+    "text": "A: I'm flying to {e} next week.\nB: Which city?\nA: The capital,"
+   },
+   {
+    "idx": 6,
+    "style": "D",
+    "lcs_words_with_examples": 5,
+    "text": "User: What's the capital of {e}?\nAssistant: The capital of {e} is"
+   },
+   {
+    "idx": 7,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "country: {e}\ncapital:"
+   },
+   {
+    "idx": 8,
+    "style": "K",
+    "lcs_words_with_examples": 1,
+    "text": "Country profile\nName: {e}\nCapital city:"
+   },
+   {
+    "idx": 9,
+    "style": "N",
+    "lcs_words_with_examples": 2,
+    "text": "Protesters gathered outside the parliament of {e} in"
+   },
+   {
+    "idx": 10,
+    "style": "N",
+    "lcs_words_with_examples": 4,
+    "text": "Foreign ministers met on Friday in the capital of {e},"
+   },
+   {
+    "idx": 11,
+    "style": "F",
+    "lcs_words_with_examples": 1,
+    "text": "Canada: Ottawa\nAustralia: Canberra\nVietnam: Hanoi\n{e}:"
+   },
+   {
+    "idx": 12,
+    "style": "F",
+    "lcs_words_with_examples": 5,
+    "text": "The capital of Canada is Ottawa. The capital of Australia is Canberra. The capital of {e} is"
+   }
+  ]
+ },
+ "langid_near_dups": []
+}
