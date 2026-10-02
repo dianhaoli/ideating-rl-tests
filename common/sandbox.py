@@ -39,7 +39,7 @@ PY = sys.executable
 
 AGENT_PROMPT = """You are being given a self-contained research task to attempt on your own.
 
-Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or use encoded commands (base64, eval, exec).
+Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or run encoded or obfuscated commands (no base64 or hex decoding of commands, no eval, no exec of generated or transformed code). Running your own files from that directory is fine, for example ./py scratch/a.py or, inside Python, exec(open('scratch/a.py').read()).
 
 Start every shell command with:  cd {sandbox} &&
 Then read TASK.md there (cat TASK.md). It explains the task, the tools and the exact answer format.
@@ -146,15 +146,28 @@ def render_caps(caps):
     return "\n".join(lines)
 
 
-def render_task_md(template, public, tool_docs_md, caps_md):
+def fill_public(text, public, where="agent_prompt.md"):
+    """Replace every {public.<key>} in `text` with public.json's value (strings as is, anything else as JSON). A key
+    that public.json lacks raises KeyError, so a template can never reach an agent with a placeholder left in it."""
     def sub_public(m):
         key = m.group(1)
         if key not in public:
-            raise KeyError(f"agent_prompt.md uses {{public.{key}}} but public.json has no '{key}'")
+            raise KeyError(f"{where} uses {{public.{key}}} but public.json has no '{key}'")
         v = public[key]
         return v if isinstance(v, str) else json.dumps(v)
 
-    out = re.sub(r"\{public\.([A-Za-z0-9_]+)\}", sub_public, template)
+    return re.sub(r"\{public\.([A-Za-z0-9_]+)\}", sub_public, text)
+
+
+def fill_tool_docs(tool_docs, public):
+    """Tool docs may use {public.<key>} placeholders too (2026-10-02, ShiftHunt smoke F7): a task whose tools take
+    different arguments per instance (e.g. an access mode) documents exactly the arguments this instance accepts.
+    Filled at prepare, so TASK.md and `./tool help` (served from the episode record) show the same text."""
+    return [dict(t, doc=fill_public(t["doc"], public, where=f"tool doc of {t['name']}")) for t in tool_docs]
+
+
+def render_task_md(template, public, tool_docs_md, caps_md):
+    out = fill_public(template, public)
     if "{tool_docs}" in out:
         out = out.replace("{tool_docs}", tool_docs_md)
     else:
@@ -403,6 +416,7 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     policy = parse_min_submit_frac(min_submit_frac, caps)
     extras = parse_extra_files(extra_files)
     desc = _describe(task_root, task, profile)
+    desc["tool_docs"] = fill_tool_docs(desc["tool_docs"], public)
     template_path = os.path.abspath(prompt_template) if prompt_template else os.path.join(tdir, "agent_prompt.md")
     with open(template_path) as f:
         template = f.read()
@@ -809,6 +823,10 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
     if agent_model:
         rec["agent_model"] = agent_model
     broker.write_json_atomic(rp, rec)
+    if agent_model:
+        # 2026-10-02 ShiftHunt smoke F4: a model given only at finish (the usual case: prepare runs before the agent
+        # is launched) was recorded in grade.json but not in the run's config.json (agent_models stayed []).
+        _update_config(rec["run_dir"], rec["task"], rec.get("task_root") or HARNESS_ROOT, agent_models=agent_model)
 
     edir = os.path.join(rec["run_dir"], "episodes", episode)
     os.makedirs(edir, exist_ok=True)

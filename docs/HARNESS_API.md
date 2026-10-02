@@ -432,3 +432,17 @@ Refinements to the spec above:
 - **Headless launcher**: not shipped (section 9, step 1). Workflow-launched agents remain the method; their wrapper is
   recorded as `prompt_match: workflow_wrapper`.
   Tests: `common/tests/test_smoke_fixes.py`. Replay: `runs/_harness/smoke_fixes_2026-10-02/`.
+
+### ShiftHunt smoke fixes (2026-10-02; tasks/shifthunt/SMOKE.md F4, F5, F7)
+- **F4** `finish --agent-model M` also adds M to the run's `config.json` `agent_models` (before, only a model given
+  at `prepare` was recorded there, so workflow runs, which name the model at finish, showed `agent_models: []`).
+- **F5** The agent prompt's rule now matches the transcript audit (R9): no encoded or obfuscated commands (no base64
+  or hex decoding of commands, no eval, no exec of generated or transformed code), while running one's own sandbox
+  files is stated as fine (`./py scratch/a.py`, or `exec(open('scratch/a.py').read())` inside Python). Before, the
+  prompt banned every `exec` although the audit allows exec of an own file, so a rule-following agent was held to a
+  stricter rule than the audit enforced. Episodes prepared earlier keep their own `agent_prompt.txt`.
+- **F7** Tool docs may contain `{public.<key>}` placeholders. `prepare` fills them from public.json (missing key =>
+  KeyError, prepare refuses), so TASK.md and `./tool help` both show the arguments this instance accepts (ShiftHunt
+  uses it for the open vs sample-only access mode). API: `sandbox.fill_public(text, public)`,
+  `sandbox.fill_tool_docs(tool_docs, public)`.
+  Tests: `common/tests/test_shifthunt_smoke_fixes.py`.
