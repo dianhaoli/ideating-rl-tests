@@ -241,3 +241,17 @@ events, orchestration decisions and gate summaries, with links.
   and lists them in the episode's sandbox_pruned.json. RL_KEEP_SANDBOX=1 disables this. Harness tests pass.
 - Consequence: any episode graded during the full-disk window (about 02:00-02:45) may be INVALID with grader_error.
   Builders should re-run those (check grade.json harness.invalid_reasons).
+
+## 2026-10-02 03:50 UTC: FeatureMatch diagnosis step 2 computed, but the filter does not match PREREG A1.1 (fixing)
+- Phase A finished: PREREG + Amendment 1, clarity audit + revised/disclosure templates, harness prepare options,
+  shared model service (0 mismatches), banks F and R (232 x 20 each), and the bank activations
+  (diag/featurematch 827191a). GPU is idle now.
+- Step 2 analysis (CF2 rule) kept 43% of planted slots and 25% of pooled latents. But the code departs from the
+  binding Amendment A1.1: (1) the key pools A+F1 (40 dataset vs 10 styled texts) instead of M = 0.5 AUROC_A +
+  0.5 AUROC_F1; (2) robustness is thresholded on pooled C+F2 (a latent silent on ALL styled text still gets 0.83,
+  and one styled hit reaches 0.85) instead of AUROC_F2 >= 0.85 AND AUROC_C >= 0.85; (3) the pool is redrawn
+  in place instead of regenerated (60/tier, seeds 8000+/108000+/208000+); (4) key_check.jsonl and
+  slot_disagreements.jsonl are missing. Under the stricter F2 metric only 8.7% of pooled latents survive (P3 predicted 0.45).
+- No baseline or agent has used the pool, so making the code follow the pre-registered rule is a conformance fix, not a
+  deviation. One builder agent fixes step 2 (CPU only, cached activations). A second agent implements the step-3 style-robust
+  recipe (SR-max / SR-thr from cached bank-R activations) in separate files.
