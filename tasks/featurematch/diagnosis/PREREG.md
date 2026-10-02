@@ -506,3 +506,33 @@ RESULTS.md, with no other change.
 In addition to the pre-registered Wilson interval (which treats slots as independent), report an instance-clustered
 bootstrap 95% CI (10,000 resamples by instance, `random.Random(20261002)`). The "borderline" label of the stop rule
 stays defined by the Wilson CI, as pre-registered. The clustered CI is reported next to it.
+
+---
+
+## Amendment 3 (2026-10-02 ~04:45 UTC, after step 2 under A1.1, before any step-3 or agent result on the filtered pool)
+
+**State.** Step 2 now follows A1.1 (commit 3ea47d7f). 354 of 5017 pooled latents are kept (0.071; languages 0.59, topics
+0.04). The pool was regenerated: 180 instances, 725 slots, null fraction 0.392. Its concept universe is much smaller (74
+distinct anchor concepts vs 159 in v2), and language anchors make up 27% of slots vs 9% in v2. **P6 fails narrowly:**
+the menu-feature fingerprint CV AUROC is 0.616 in the close tiers (bar 0.60; T1 about 0.50; latent-only features
+<= 0.589). No baseline, recipe or agent has been run on `instances_v2f`. The orchestrator has seen only the step-2 report above.
+
+### A3.1 Order of work given the P6 failure
+- The fingerprint can be exploited only by a policy that learns menu statistics. It does not affect the scripted step-3
+  baselines. Step 3 therefore runs on this pool as regenerated. The P6 failure is reported next to every step-3 number.
+- If the step-3 **stop rule fires**, the study stops as pre-registered. The verdict text adds that the filtered pool
+  failed P6 at 0.616, and that this cannot have raised a scripted recipe's accuracy.
+- If the stop rule **does not fire**, no agent arm runs until a fix to the generator's menu construction (pre-registered as
+  a new amendment before it is run) brings the close-tier fingerprint to <= 0.60. The generator's rule that menus offer
+  only answerable concepts is kept, because dropping it would let a prior recipe rule options out.
+
+### A3.2 Reporting by family (new; the decision and stop rules are unchanged)
+Every step-3 metric (and every later per-arm metric) is reported pooled (as pre-registered), and separately for topic
+anchors and language anchors. If the stop rule fires on the pooled number but not on topic slots alone, RESULTS.md and
+VERDICT.md must say so in the same sentence.
+
+### A3.3 Verification of step 2 before its numbers are used
+An independent re-implementation of the A1.1 keep rule, written without reading `style_filter.py`'s analysis code,
+must reproduce the kept set in `key_check.jsonl` exactly (allowing for documented float16 near-ties). Until it
+does, step-3 numbers are provisional. A separate audit checks that bank-F texts are on-concept, because the 4% topic
+survival rate could reflect the bank texts rather than the latents.
