@@ -93,3 +93,21 @@ held-out prompts although it flipped most of the example prompts (the greedy obj
 steering vector flips 79-94%. Naive top-5 attribution breaks the siblings too (Preserve 0.15): its latents fire on every
 "capital of the state" prompt, not on Texas. A first sign that small example sets overfit and that the error-term-free
 SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:42Z (runs/latentknockout/20261002T0642_sweep).
+
+## 2026-10-02T07:11Z Layer 18 sweep done (43 group-level cells; runs/latentknockout/20261002T0642_sweep/cells)
+- Chain restarted at 06:57Z with fewer steps (L6 limited to 4 groups per family, one extra seed at L18 for the
+  memorisation check, country -> capital at L18 only) to stay inside the time box; the L18 job itself was not touched.
+- Headline at L18 (held-out, new-style prompts, k <= 5): the greedy reference reaches R_S >= 0.5 on 24 of 43 cells
+  (0.56); median R_S 0.52; Effect 0.59, Preserve 0.99, KL ~0. Random and "no latents" are exactly 0.
+- **A cheap recipe beats the reference.** Take the mean-difference vector (mean last-token residual of the example
+  target prompts minus the example control prompts) and ablate the 5 latents whose decoder direction has the highest
+  cosine with it. Median R_S 0.67, and it is at least half the reference's R on 29 of 29 feasible cells (q = 1.00,
+  Wilson CI 0.86-1.00). It wins outright on 27 of 43 cells. The pre-registered rule says NO-GO-as-is (recipe).
+  Naive attribution (predicted to be the recipe) is weaker: q = 0.50. Its latents fire on every prompt of the family
+  ("capital of the state" latents), so Preserve drops (0.38).
+- New-style held-out prompts are NOT harder than same-style ones (R_S/R_T median 1.06). The FeatureMatch style
+  problem does not appear here, because the grader reruns the model on whatever prompts it likes.
+- Keep-state check (city -> capital: break the capital, keep "Dallas is in Texas"): only 2 of 12 groups reach
+  R x P_keep >= 0.5. The latents that carry "Arizona" carry it for both questions (P_keep 0.07 for Arizona,
+  0.12 for Georgia). A same-entity-contrast reference (rank latents by capital-attribution minus state-attribution on
+  the same cities) is queued for L12 and L18.

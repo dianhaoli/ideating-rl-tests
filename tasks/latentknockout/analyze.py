@@ -93,6 +93,7 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--kappa", type=float, default=0.1)
     ap.add_argument("--seeds", nargs="*", default=[], help="dirs with seed 1,2 reference-only cells (memorisation)")
+    ap.add_argument("--ks", default="", help="dir with city_capital --ks_contrast reference-only cells")
     a = ap.parse_args()
     cells = load(a.dirs)
     kap = a.kappa
@@ -168,6 +169,22 @@ def main():
     T["baselines_all_cells_median_R"] = {b: med([r[b]["R_S"] for r in meas if b in r]) for b in base + ["ref_k5"]}
     T["baselines_all_cells_share_R_ge_05"] = {b: round(float(np.mean([r[b]["R_S"] >= 0.5 for r in meas if b in r])), 3)
                                               for b in base + ["ref_k5"] if any(b in r for r in meas)}
+    # ---------------- upper bound: best of the evaluated k<=5 latent sets per cell (chosen on HELD-OUT; oracle)
+    cand = ["ref_k5", "cos_k5", "naive_k5", "contr_k5"]
+    orc = [max(r[b]["R_S"] for b in cand if b in r) for r in meas]
+    T["oracle_best_of_methods"] = dict(
+        median_R_S=med(orc), share_cells_ge05=round(float(np.mean([x >= 0.5 for x in orc])), 3) if orc else None,
+        share_cells_ge07=round(float(np.mean([x >= 0.7 for x in orc])), 3) if orc else None,
+        by_layer={L: med([o for o, r in zip(orc, meas) if r["L"] == L]) for L in layers},
+        share_ge05_by_layer={L: round(float(np.mean([o >= 0.5 for o, r in zip(orc, meas) if r["L"] == L])), 3) for L in layers},
+        which_wins={b: int(sum(1 for r in meas if max(cand, key=lambda c: r[c]["R_S"] if c in r else -1) == b)) for b in cand},
+        pairs_feasible=round(float(np.mean([max(max(r[b]["R_S"] for b in cand if b in r) for r in v) >= 0.5
+                                            for v in pairs.values()])), 3) if pairs else None)
+    feas_o = [(o, r) for o, r in zip(orc, meas) if o >= 0.5]
+    T["oracle_best_of_methods"]["q_vs_oracle"] = {b: round(float(np.mean([r[b]["R_S"] >= 0.5 * o for o, r in feas_o])), 3)
+                                                 for b in ["ref_k5", "cos_k5", "naive_k5", "contr_k5", "mostact_k5", "randact_k5_0", "rand_k5_0", "steer_tuned"]
+                                                 if feas_o and all(b in r for _, r in feas_o)}
+    T["cos_beats_ref_share"] = round(float(np.mean([r["cos_k5"]["R_S"] > r["ref_k5"]["R_S"] for r in meas if "cos_k5" in r])), 3)
     # ---------------- style: R_S vs R_T on feasible cells
     rat = [r["ref_k5"]["R_S"] / r["ref_k5"]["R_T"] for r in feas if r["ref_k5"]["R_T"] > 0]
     T["style"] = dict(median_ratio_S_over_T=med(rat), share_ratio_lt_07=round(float(np.mean([x < 0.7 for x in rat])), 3) if rat else None,
@@ -179,21 +196,61 @@ def main():
     # ---------------- keep-state (city_capital)
     ks = [r for r in meas if r["fam"] == "city_capital" and "refks_k5" in r]
     if ks:
-        T["keep_state"] = dict(
-            n=len(ks),
-            ref_R_S=med([r["ref_k5"]["R_S"] for r in ks]), ref_P_ks=med([r["ref_k5"].get("P_ks") for r in ks]),
-            ref_R_S_ks=med([r["ref_k5"].get("R_S_ks") for r in ks]),
-            refks_R_S_ks=med([r["refks_k5"].get("R_S_ks") for r in ks]), refks_P_ks=med([r["refks_k5"].get("P_ks") for r in ks]),
-            naive_R_S_ks=med([r["naive_k5"].get("R_S_ks") for r in ks if "naive_k5" in r]),
-            naive_P_ks=med([r["naive_k5"].get("P_ks") for r in ks if "naive_k5" in r]),
-            share_refks_ge05=round(float(np.mean([r["refks_k5"]["R_S_ks"] >= 0.5 for r in ks])), 3),
-            pairs_feasible_ks=round(float(np.mean([max(r["refks_k5"]["R_S_ks"] for r in ks if r["group"] == g) >= 0.5
-                                                   for g in {r["group"] for r in ks}])), 3),
-            naive_ratio_ks=med([r["naive_k5"]["R_S_ks"] / r["refks_k5"]["R_S_ks"] for r in ks
-                                if "naive_k5" in r and r["refks_k5"]["R_S_ks"] >= 0.5]),
-            naive_q_ks=round(float(np.mean([r["naive_k5"]["R_S_ks"] >= 0.5 * r["refks_k5"]["R_S_ks"] for r in ks
-                                            if "naive_k5" in r and r["refks_k5"]["R_S_ks"] >= 0.5])), 3)
-            if any(r["refks_k5"]["R_S_ks"] >= 0.5 for r in ks) else None)
+        # reference under the keep-state rule = the better (on held-out R_S_ks) of the plain and the keep-state greedy;
+        # this is generous to the reference (it peeks at held-out to choose between two candidates)
+        def rks(r):
+            return max(r["ref_k5"]["R_S_ks"], r["refks_k5"]["R_S_ks"])
+        kst = dict(n=len(ks), by_layer={})
+        for L in sorted({r["L"] for r in ks}):
+            rr = [r for r in ks if r["L"] == L]
+            feas_ks = [r for r in rr if rks(r) >= 0.5]
+            d = dict(n=len(rr), ref_R_S=med([r["ref_k5"]["R_S"] for r in rr]), ref_P_ks=med([r["ref_k5"]["P_ks"] for r in rr]),
+                     refks_P_ks=med([r["refks_k5"]["P_ks"] for r in rr]), best_ref_R_ks=med([rks(r) for r in rr]),
+                     share_feasible_ks=round(len(feas_ks) / len(rr), 3), n_feasible_ks=len(feas_ks))
+            for b in ("cos_k5", "naive_k5", "contr_k5", "steer_tuned"):
+                d[b + "_R_ks"] = med([r[b]["R_S_ks"] for r in rr if b in r])
+                d[b + "_P_ks"] = med([r[b]["P_ks"] for r in rr if b in r])
+                if feas_ks:
+                    d[b + "_q_ks"] = round(float(np.mean([r[b]["R_S_ks"] >= 0.5 * rks(r) for r in feas_ks if b in r])), 3)
+            kst["by_layer"][L] = d
+        pairs_ks = defaultdict(float)
+        for r in ks:
+            pairs_ks[r["group"]] = max(pairs_ks[r["group"]], rks(r))
+        kst["pairs_feasible_ks"] = round(float(np.mean([v >= 0.5 for v in pairs_ks.values()])), 3)
+        kst["pairs_best_R_ks"] = {g: round(v, 3) for g, v in pairs_ks.items()}
+        T["keep_state"] = kst
+    if a.ks:
+        kc = {(c["group"], c["layer"]): c for c in load([a.ks])}
+        main = {(c["group"], c["layer"]): c for c in cells if c["family"] == "city_capital" and c["seed"] == 0}
+        out = {}
+        for L in sorted({k[1] for k in kc}):
+            rows_ks = []
+            for (g, LL), c2 in kc.items():
+                if LL != L or (g, L) not in main:
+                    continue
+                c1 = main[(g, L)]
+                m1 = {n: metrics(c1, n, kap) for n in c1["set_names"]}
+                m2 = {n: metrics(c2, n, kap) for n in c2["set_names"]}
+                best = max([m1[n]["R_S_ks"] for n in ("ref_k5", "refks_k5")] + [m2[n]["R_S_ks"] for n in ("refks2_k5",) if n in m2])
+                best10 = max([m1[n]["R_S_ks"] for n in ("ref_k10", "refks_k10")] + [m2[n]["R_S_ks"] for n in ("refks2_k10",) if n in m2])
+                rows_ks.append(dict(g=g, best=best, best10=best10, refks2=m2.get("refks2_k5", {}).get("R_S_ks"),
+                                    refks2_E=m2.get("refks2_k5", {}).get("E_S"), refks2_Pks=m2.get("refks2_k5", {}).get("P_ks"),
+                                    ksc=m2.get("ksc_k5", {}).get("R_S_ks"), ksc_E=m2.get("ksc_k5", {}).get("E_S"),
+                                    ksc_Pks=m2.get("ksc_k5", {}).get("P_ks"),
+                                    cos=m1["cos_k5"]["R_S_ks"], naive=m1["naive_k5"]["R_S_ks"], contr=m1["contr_k5"]["R_S_ks"],
+                                    steer=m1["steer_tuned"]["R_S_ks"]))
+            feas_k = [r for r in rows_ks if r["best"] >= 0.5]
+            d = dict(n=len(rows_ks), share_feasible=round(len(feas_k) / max(1, len(rows_ks)), 3),
+                     median_best_R_ks=med([r["best"] for r in rows_ks]), median_best_R_ks_k10=med([r["best10"] for r in rows_ks]),
+                     median_refks2=med([r["refks2"] for r in rows_ks]),
+                     per_group={r["g"]: [round(r["best"], 2), round(r["refks2"] or 0, 2), round(r["ksc"] or 0, 2),
+                                         round(r["cos"], 2), round(r["naive"], 2)] for r in rows_ks})
+            for b in ("ksc", "cos", "naive", "contr", "steer"):
+                d[b + "_median_R_ks"] = med([r[b] for r in rows_ks])
+                if feas_k:
+                    d[b + "_q"] = round(float(np.mean([(r[b] or 0) >= 0.5 * r["best"] for r in feas_k])), 3)
+            out[L] = d
+        T["keep_state_v2"] = out
     # ---------------- country_capital (reported separately)
     if cc:
         T["country_capital"] = {f"L{L}": dict(n=len([r for r in cc if r["L"] == L]),

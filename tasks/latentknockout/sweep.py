@@ -75,6 +75,7 @@ def main():
     ap.add_argument("--groups", default="")
     ap.add_argument("--max_groups", type=int, default=0)
     ap.add_argument("--refonly", action="store_true")
+    ap.add_argument("--ks_contrast", action="store_true", help="city_capital: extra reference ranked by same-entity contrast")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     t0 = time.time()
@@ -168,10 +169,20 @@ def main():
                 # ---------------- reference: greedy forward selection on the example objective
                 m0, _ = S.eval_last(ex_ps, [Edit()])
                 m0 = np.maximum(m0[0], 1e-3)
-                kl1 = S.eval_kl(klp_ps, [Edit.lat([c]) for c in pool]).mean(1) if pool else np.zeros(0)
-                kl1 = {c: float(k) for c, k in zip(pool, kl1)}
+                pool2 = []
+                if ex_ks and a.ks_contrast:
+                    # same-entity contrast: latents that drive the capital answer but NOT the state answer of the
+                    # same example cities (what a careful agent would rank by under the keep-state rule)
+                    k_ps = PromptSet(S, L, [x[2] for _, x in ex_ks], [ks_ans] * len(ex_ks))
+                    attr_k, _, _ = S.attribution(k_ps)
+                    ksc = naive - attr_k.mean(0)
+                    pool2 = [int(i) for i in np.argsort(-ksc)[:12] if ksc[i] > 0]
+                    pool2 += [int(i) for i in np.argsort(-contr)[:4] if int(i) not in pool2]
+                allc = sorted(set(pool) | set(pool2))
+                kl1 = S.eval_kl(klp_ps, [Edit.lat([c]) for c in allc]).mean(1) if allc else np.zeros(0)
+                kl1 = {c: float(k) for c, k in zip(allc, kl1)}
 
-                def greedy(roles_ctrl):
+                def greedy(roles_ctrl, pool=pool):
                     sel, traj = [], []
                     it = ex_role == "t"
                     ic = np.isin(ex_role, roles_ctrl)
@@ -202,6 +213,11 @@ def main():
                     sel_ks, traj_ks, pref_ks = greedy(["c", "k"])
                     for k in KS:
                         sets[f"refks_k{k}"] = pref_ks[k]
+                    if pool2:
+                        _, traj_ks2, pref_ks2 = greedy(["c", "k"], pool=pool2)
+                        for k in KS:
+                            sets[f"refks2_k{k}"] = pref_ks2[k]
+                        sets["ksc_k5"] = [int(i) for i in np.argsort(-ksc)[:5]]
                 if not a.refonly:
                     for k in (5,):
                         sets[f"naive_k{k}"] = [int(i) for i in np.argsort(-naive)[:k]]
@@ -256,6 +272,8 @@ def main():
                            v_norm=float(v.norm()))
                 if ex_ks:
                     res["greedy_ks"] = traj_ks
+                    if pool2:
+                        res["greedy_ks2"] = traj_ks2
                 if not a.refonly:
                     res["best_alpha"] = best_alpha
                 # ---------------- what do the chosen latents fire on? (held-out prompts + wikitext)
