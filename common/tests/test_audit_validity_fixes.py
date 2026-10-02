@@ -246,7 +246,9 @@ def _llm_transcript(tmp_path, eid, sbx):
     """A minimal, clean LLM transcript for `eid` (one harmless Bash call) so finish() runs the audit as an LLM
     episode and the audit passes (so any INVALID reason is the one under test, not a missing/flagged transcript)."""
     p = tmp_path / f"{eid}.jsonl"
-    lines = [{"type": "user", "cwd": sbx, "message": {"role": "user", "content": f"episode {eid}; cwd {sbx}"}},
+    # the first user message is the episode's agent prompt (finish checks it; 2026-10-02 smoke F1)
+    lines = [{"type": "user", "cwd": sbx, "message": {"role": "user",
+                                                      "content": sandbox.AGENT_PROMPT.format(sandbox=sbx)}},
              {"type": "assistant", "cwd": sbx, "message": {"role": "assistant", "content": [
                  {"type": "tool_use", "id": "t0", "name": "Bash", "input": {"command": "echo hi"}}]}}]
     p.write_text("\n".join(json.dumps(l) for l in lines))

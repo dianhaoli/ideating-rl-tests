@@ -10,6 +10,7 @@ E = "ep0a1b2c3d4e"
 HOME = os.path.expanduser("~")
 SBX = f"{HOME}/rlsbx/{E}"
 OUTSIDE_CWD = f"{HOME}/somewhere"
+PROMPT = f"You are being given a task. Your working directory is {SBX}/ ."
 
 
 def _transcript(path, calls, cwd=SBX, first_user=None):
@@ -150,7 +151,7 @@ def test_find_transcripts_recursive(tmp_path):
     root = tmp_path / "projects"
     agent = root / "-home-x" / "sess1" / "subagents" / "workflows" / "wf_1"
     agent.mkdir(parents=True)
-    a = _transcript(agent / "agent-abc.jsonl", NORMAL[:2])
+    a = _transcript(agent / "agent-abc.jsonl", NORMAL[:2], first_user=PROMPT)
     # an orchestrator transcript that mentions E later (not in its first user message) must NOT be picked
     orch = root / "-home-x"
     _transcript(orch / "sess1.jsonl", [bash(f"python -m common.sandbox finish --episode {E}")],
@@ -158,7 +159,9 @@ def test_find_transcripts_recursive(tmp_path):
     other = root / "-home-y" / "subagents"
     other.mkdir(parents=True)
     _transcript(other / "agent-zzz.jsonl", NORMAL[:1], first_user="unrelated episode ep0000000000")
-    found = ta.find_transcripts(E, str(root))
+    # 2026-10-02 smoke F1: an operator whose first message NAMES the episode (or quotes the prompt) is not picked
+    _transcript(other / "agent-op.jsonl", NORMAL[:1], first_user=f"finish episode {E}; its prompt was: {PROMPT}")
+    found = ta.find_transcripts(E, PROMPT, str(root))
     assert found == [a]
 
 

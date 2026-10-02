@@ -1,0 +1,1184 @@
+{
+ "summary": {
+  "old_rev": "190d6a64",
+  "n_episodes": 59,
+  "by_source": {
+   "smoke_subagent": 24,
+   "run_dir": 35
+  },
+  "verdict_change": {
+   "flagged->clean": 9,
+   "clean->clean": 45,
+   "flagged->flagged": 5
+  },
+  "n_calls_removed": 12,
+  "n_calls_added": 0,
+  "prompt_match": {
+   "workflow_wrapper": 24,
+   "exact": 35
+  },
+  "discovery_all_exactly_agent": true,
+  "discovery_old_found_counts": {
+   "3": 23,
+   "4": 1
+  }
+ },
+ "episodes": [
+  {
+   "episode": "ep86ba17bb92",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "ce82e068e2aca3b5",
+   "n_tool_calls": 25,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     3,
+     "R2-path"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epdbfedf5bf6",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "7c33e64f3bc4c541",
+   "n_tool_calls": 22,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep5fd72cf457",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "020d41209e591413",
+   "n_tool_calls": 11,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     6,
+     "R2-path"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep80b7dbdaef",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "ae2c206ba2b09ef2",
+   "n_tool_calls": 19,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epa8848eb63c",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "09c844582e416eb4",
+   "n_tool_calls": 43,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep0375aa5296",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "2004c73a0d270b98",
+   "n_tool_calls": 11,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epdbe6a54a7e",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "c4ed17d5f1d6c637",
+   "n_tool_calls": 49,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     33,
+     "R9-obfuscation"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep179d5f1a6a",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "cc866917ad4e7029",
+   "n_tool_calls": 24,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     5,
+     "R2-path"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep4db95008f9",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "67fbd2dd58dcabfd",
+   "n_tool_calls": 68,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     24,
+     "R5-privileged"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep184bffd5b2",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "c4eaa4d3b60fa10e",
+   "n_tool_calls": 39,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep6e9aa23b71",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "d855f84517111941",
+   "n_tool_calls": 19,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     3,
+     "R2-path"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep3ee487e95b",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "d568921e1870530b",
+   "n_tool_calls": 31,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep50448dd69f",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "7a9e8e51d101dd3f",
+   "n_tool_calls": 18,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep06db39d74f",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "c9ebd5c8db3c5ff8",
+   "n_tool_calls": 30,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep49e0123d3a",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "f27056fe504e49db",
+   "n_tool_calls": 28,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep767f85e4dd",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "4bc47121be58c29d",
+   "n_tool_calls": 19,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epccc2b4c495",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "606632a634baed69",
+   "n_tool_calls": 18,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epc93bac5e43",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "ca68fef91a8a03c8",
+   "n_tool_calls": 43,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     19,
+     "R5-privileged"
+    ],
+    [
+     24,
+     "R2-path"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep183dbd35dd",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "b7873807ff9eb109",
+   "n_tool_calls": 23,
+   "old_valid": false,
+   "new_valid": false,
+   "removed": [],
+   "added": [],
+   "kept": [
+    [
+     17,
+     "R2-path"
+    ],
+    [
+     17,
+     "R4-network"
+    ],
+    [
+     17,
+     "R5-privileged"
+    ]
+   ],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep3bd6b501bc",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "b04873a1ecd930aa",
+   "n_tool_calls": 13,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epc7a9376588",
+   "task": "latentdiff",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "8744dea1e755f113",
+   "n_tool_calls": 33,
+   "old_valid": false,
+   "new_valid": false,
+   "removed": [],
+   "added": [],
+   "kept": [
+    [
+     4,
+     "R2-path"
+    ],
+    [
+     16,
+     "R2-path"
+    ]
+   ],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep19839c342d",
+   "task": "shifthunt",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "6b17d761359ec586",
+   "n_tool_calls": 46,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     11,
+     "R5-privileged"
+    ],
+    [
+     32,
+     "R5-privileged"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep93703cac08",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "72aa95da060ab6db",
+   "n_tool_calls": 42,
+   "old_valid": false,
+   "new_valid": false,
+   "removed": [
+    [
+     38,
+     "R9-obfuscation"
+    ]
+   ],
+   "added": [],
+   "kept": [
+    [
+     23,
+     "R2-path"
+    ],
+    [
+     23,
+     "R3-mention"
+    ],
+    [
+     28,
+     "R5-privileged"
+    ],
+    [
+     35,
+     "R9-obfuscation"
+    ],
+    [
+     36,
+     "R9-obfuscation"
+    ],
+    [
+     39,
+     "R9-obfuscation"
+    ],
+    [
+     40,
+     "R9-obfuscation"
+    ],
+    [
+     41,
+     "R9-obfuscation"
+    ]
+   ],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "ep7ae06129b5",
+   "task": "boolintermediates",
+   "source": "smoke_subagent",
+   "transcript_sha256_16": "c182e66b97b0192b",
+   "n_tool_calls": 22,
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     8,
+     "R9-obfuscation"
+    ]
+   ],
+   "added": [],
+   "kept": [],
+   "prompt_match": "workflow_wrapper"
+  },
+  {
+   "episode": "epb8868b8fb7",
+   "task": "_demo",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "a003dc5770514f0c",
+   "n_tool_calls": 7,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep29d4c81bd8",
+   "task": "_demo",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "97e4576143610c03",
+   "n_tool_calls": 5,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep82b070bf9b",
+   "task": "_demo",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "da1811233b0cea1a",
+   "n_tool_calls": 5,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep3c8a6bc117",
+   "task": "_demo",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "65787376de6f6f87",
+   "n_tool_calls": 5,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep46367f24ce",
+   "task": "_demo",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "07233431481ffe1c",
+   "n_tool_calls": 3,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep3f3725ff71",
+   "task": "boolintermediates",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "6d7efd41c8aa3f92",
+   "n_tool_calls": 7,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep6d9d6c6df7",
+   "task": "boolintermediates",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "57d386680f33250e",
+   "n_tool_calls": 8,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep38c41640fd",
+   "task": "boolintermediates",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "6a212911b2530556",
+   "n_tool_calls": 10,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epaab50914de",
+   "task": "boolintermediates",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "06acc30b7d797285",
+   "n_tool_calls": 11,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep157f3953a8",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "6d6fca4aa3591d9e",
+   "n_tool_calls": 3,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep6cd5b8dd30",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "72a7f77a62c111a6",
+   "n_tool_calls": 3,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep2cd00804ab",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "c080c1443b7842a5",
+   "n_tool_calls": 10,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epcd8c604d31",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "4a8a59ee4ee67f3b",
+   "n_tool_calls": 8,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep0746750a4f",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "90fd3b61e5f6314b",
+   "n_tool_calls": 12,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep0f904f753d",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "fa7e34303efcf0ea",
+   "n_tool_calls": 20,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep4980d0bf46",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "f875e675d679dc78",
+   "n_tool_calls": 12,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epea26c30f2c",
+   "task": "featurematch",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "943f35027cd31d10",
+   "n_tool_calls": 33,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep440f6b9bf4",
+   "task": "freqhunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "3c5faf023abfcf1d",
+   "n_tool_calls": 7,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epf7e00255e5",
+   "task": "freqhunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "cf5562e77ce05dd9",
+   "n_tool_calls": 9,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep27a091a362",
+   "task": "latentdiff",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "907b93570a6cc6ed",
+   "n_tool_calls": 7,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epb7d011c482",
+   "task": "latentdiff",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "cd5e679139715c6c",
+   "n_tool_calls": 13,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep0965d14ab3",
+   "task": "residualrecall",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "3b043b1df2eb1200",
+   "n_tool_calls": 17,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep9e053b5898",
+   "task": "residualrecall",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "1571690c7869ed4a",
+   "n_tool_calls": 16,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep99d08b74cc",
+   "task": "residualrecall",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "5e420c208c04ce2c",
+   "n_tool_calls": 16,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep9e37e0db6f",
+   "task": "residualrecall",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "7c5c714d2364672b",
+   "n_tool_calls": 18,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep7033a31ca6",
+   "task": "shifthunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "631dd2a0b4a3f7e1",
+   "n_tool_calls": 14,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep06d3059e8f",
+   "task": "shifthunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "a90adc31561a8347",
+   "n_tool_calls": 16,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep1ff1bcf5e5",
+   "task": "shifthunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "1b4f97eaea7e9f61",
+   "n_tool_calls": 41,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epd698dfdf7e",
+   "task": "shifthunt",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "82075a67ffa29f62",
+   "n_tool_calls": 23,
+   "old_valid": false,
+   "new_valid": false,
+   "removed": [],
+   "added": [],
+   "kept": [
+    [
+     8,
+     "R2-path"
+    ]
+   ],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep4c4ec4a6e0",
+   "task": "silentpathway",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "1d199136d2f45610",
+   "n_tool_calls": 13,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep29ef1a245b",
+   "task": "silentpathway",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "d27d949ca01c75a7",
+   "n_tool_calls": 10,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "epa77175a9df",
+   "task": "silentpathway",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "428ce18b310d0fa1",
+   "n_tool_calls": 14,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep13c6a7b805",
+   "task": "silentpathway",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "f5f1430fe90696c4",
+   "n_tool_calls": 25,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep4063e0c9cd",
+   "task": "t2ravel",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "773c85683f8c7ac2",
+   "n_tool_calls": 24,
+   "old_valid": true,
+   "new_valid": true,
+   "removed": [],
+   "added": [],
+   "kept": [],
+   "prompt_match": "exact"
+  },
+  {
+   "episode": "ep3ab5ab5782",
+   "task": "t2ravel",
+   "source": "run_dir:api_transcript.jsonl",
+   "transcript_sha256_16": "c26bba5f3e8e382e",
+   "n_tool_calls": 12,
+   "old_valid": false,
+   "new_valid": false,
+   "removed": [],
+   "added": [],
+   "kept": [
+    [
+     7,
+     "R2-path"
+    ]
+   ],
+   "prompt_match": "exact"
+  }
+ ],
+ "discovery": [
+  {
+   "episode": "ep86ba17bb92",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epdbfedf5bf6",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep5fd72cf457",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep80b7dbdaef",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epa8848eb63c",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep0375aa5296",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epdbe6a54a7e",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep179d5f1a6a",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep4db95008f9",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep184bffd5b2",
+   "old_found": 4,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep6e9aa23b71",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep3ee487e95b",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep50448dd69f",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep06db39d74f",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep49e0123d3a",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep767f85e4dd",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epccc2b4c495",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epc93bac5e43",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep183dbd35dd",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep3bd6b501bc",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "epc7a9376588",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep19839c342d",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep93703cac08",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  },
+  {
+   "episode": "ep7ae06129b5",
+   "old_found": 3,
+   "old_found_agent": true,
+   "new_found": 1,
+   "new_is_agent": true,
+   "new_r0": [],
+   "prompt_match": [
+    "workflow_wrapper"
+   ]
+  }
+ ]
+}

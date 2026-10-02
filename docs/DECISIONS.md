@@ -168,3 +168,19 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   (3) BoolIntermediates agent smoke (the only READY_FOR_SMOKE task); ResidualRecall T2 rebuild HELD.
 - The three fix stages interrupted by the crash (featurematch, shifthunt, latentdiff) finish in parallel (wf_a83c544f-8d1).
 - Ultracode is on: substantive steps run as workflows with adversarial verification.
+
+## D16. Transcript selection by exact prompt; headless launcher deferred (2026-10-02, smoke fixes)
+- **Transcript selection.** finish audits only transcripts whose first user message IS the agent prompt (exact, or
+  inside the one documented Claude Code Workflow wrapper). Search must find exactly one; none or several is INVALID
+  (R0), and an explicit `--transcript` must also start with the prompt. This replaces "contains the episode id",
+  which audited the smoke's operators as test agents. A nonce line was rejected: equality is stronger and leaves the
+  prompt unchanged. grade.json records `prompt_match` (`exact` / `workflow_wrapper`), so wrapped and unwrapped
+  launches can be told apart.
+- **Audit exemption for Python source.** A bare `~` and process-tool words are not violations inside Python source
+  that cannot reach a shell (the full conditions are in HARNESS_API section 7). The alternative, narrower text rules,
+  was rejected because it is blind to shell context.
+- **Headless test-agent launcher not shipped.** The only safe headless configuration needs Claude Code's OS sandbox,
+  and bubblewrap and socat are not installed. `auto` mode let an outside write and a network call through. Workflow
+  subagents stay the launch method, with their wrapper and repo context documented as known contamination. Enabling
+  the launcher needs `sudo dnf install -y bubblewrap socat` (Dan's call) plus the self-test in
+  HARNESS_VERIFICATION section 10.

@@ -778,6 +778,17 @@ def tool_log_health(log_path, client_disconnect_is_infra=True):
     return {"infra_failures": fails, "n_ok_task_calls": n_ok, "recovered": recovered}
 
 
+def episode_prompt(rec):
+    """The exact test-agent prompt prepare printed for this episode: <run_dir>/episodes/<E>/agent_prompt.txt without
+    the one newline prepare appends (falls back to re-rendering AGENT_PROMPT if the file is missing)."""
+    try:
+        with open(os.path.join(rec["run_dir"], "episodes", rec["episode"], "agent_prompt.txt")) as f:
+            txt = f.read()
+        return txt[:-1] if txt.endswith("\n") else txt
+    except OSError:
+        return AGENT_PROMPT.format(sandbox=rec["sandbox"])
+
+
 def finish(episode, transcripts=None, agent_model=None, search_root=None, solver_rc=None):
     """Grade, scan and audit one episode. solver_rc: the scripted solver's exit code (run-scripted passes it; an int,
     or "timeout"). With it, the episode is INVALID if rc != 0 (`solver_failed`) or if the solver made no successful
@@ -817,10 +828,22 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
 
     is_llm = bool(agent_model or rec.get("agent_model") or transcripts)
     if is_llm:
-        ts = list(transcripts or []) or transcript_audit.find_transcripts(episode, search_root)
-        audit = transcript_audit.audit(episode, rec["sandbox"], ts)
-        for i, t in enumerate(ts):
-            shutil.copyfile(t, os.path.join(edir, "transcript.jsonl" if i == 0 else f"transcript_{i}.jsonl"))
+        # 2026-10-02 smoke F1: the transcript must start with THIS episode's agent prompt (exactly, or inside the
+        # documented workflow wrapper); search finds only such transcripts and refuses to pick one of several (R0).
+        ts, r0, info = transcript_audit.locate(episode, episode_prompt(rec), transcripts, search_root)
+        audit = transcript_audit.audit(episode, rec["sandbox"], ts, r0=r0, info=info)
+        # The run dir holds exactly the transcripts this audit used. WHY: a re-finish used to leave older copies
+        # (transcript_1.jsonl from a first finish that had also picked up an operator's transcript) next to the new
+        # ones (smoke ep3bd6b501bc). Sources are read first: one may be a copy in this very directory.
+        data = []
+        for t in ts:
+            with open(t, "rb") as f:
+                data.append(f.read())
+        for old in glob.glob(os.path.join(edir, "transcript.jsonl")) + glob.glob(os.path.join(edir, "transcript_*.jsonl")):
+            os.unlink(old)
+        for i, b in enumerate(data):
+            with open(os.path.join(edir, "transcript.jsonl" if i == 0 else f"transcript_{i}.jsonl"), "wb") as f:
+                f.write(b)
     else:
         audit = {"episode": episode, "valid": True, "skipped": "scripted solver (no LLM transcript)",
                  "violations": [], "n_tool_calls": 0, "commands": [], "transcripts": []}
@@ -868,6 +891,8 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
         "cross_episode_access": bool(rec.get("cross_episode_access")),
         "audit_valid": audit["valid"], "audit_skipped": audit.get("skipped"),
         "n_audit_violations": len(audit["violations"]),
+        "transcript_discovery": audit.get("discovery"),
+        "prompt_match": [c["prompt_match"] for c in audit.get("prompt_check", [])],
         "valid": not invalid, "invalid_reasons": invalid,
         "elapsed_s": round(end - rec["started_at"], 1) if rec.get("started_at") else None,
         "wait_s": round(rec.get("wait_s", 0.0), 1),
@@ -1084,7 +1109,9 @@ def main():
                    help="copy SRC into the sandbox at relative path DST after a leak scan (repeatable)")
     f = sub.add_parser("finish")
     f.add_argument("--episode", required=True)
-    f.add_argument("--transcript", nargs="*", default=None)
+    f.add_argument("--transcript", nargs="*", default=None,
+                   help="the test agent's transcript(s); each must start with this episode's agent prompt. Default: search "
+                        "~/.claude/projects for the one transcript that does (none or several => INVALID, R0)")
     f.add_argument("--agent-model", default=None)
     f.add_argument("--search-root", default=None)
     f.add_argument("--solver-rc", default=None,
@@ -1121,7 +1148,8 @@ def main():
         g = finish(a.episode, a.transcript, a.agent_model, a.search_root, solver_rc=rc)
         h = g["harness"]
         print(json.dumps({"episode": a.episode, "pass": g.get("pass"), "score": g.get("score"), "valid": h["valid"],
-                          "invalid_reasons": h["invalid_reasons"], "submitted": h["submitted"]}))
+                          "invalid_reasons": h["invalid_reasons"], "submitted": h["submitted"],
+                          "prompt_match": h.get("prompt_match")}))
     elif a.cmd == "run-scripted":
         run_scripted(a.task, a.solver, a.instances, a.profile, a.run_dir, a.repeats, a.solver_label, a.tasks_root)
     elif a.cmd == "summarize":

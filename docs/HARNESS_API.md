@@ -169,7 +169,8 @@ Null instances: only the explicit "nothing found" answer passes. Over-claiming i
 ## 7. Transcript audit (`common/transcript_audit.py`)
 
 It parses the test agent's Claude Code transcript JSONL. If no path is given, it finds the transcript by
-searching `~/.claude/projects/` for the episode id. The episode is INVALID if any tool call:
+searching `~/.claude/projects/` for the one transcript whose first user message IS the episode's agent prompt
+(section 9, step 2; R0 if there is none or there are several). The episode is INVALID if any tool call:
 - reads, lists or searches a path outside `~/rlsbx/<E>/`. That covers the Read/Glob/Grep tools, and Bash paths (absolute paths, `..`, `~`, `$HOME`) other than standard binaries.
 - mentions the repo, `.claude`, `hf_home`, `.hf_env`, `rlsbx/` siblings, `RLCANARY`, `instances/`, `grader` or `reference_solver`.
 - uses the network or installs packages: `curl`, `wget`, `git clone`, `pip install`, `huggingface`, `from_pretrained`, `snapshot_download`.
@@ -197,7 +198,34 @@ searching `~/.claude/projects/` for the episode id. The episode is INVALID if an
     `rsync --archive ...`, `--rsh=ssh`), `--`, a `\` line continuation, brace expansion (`ssh {a,b}.x`), a
     here-string (`telnet <<<`), and hosts that begin with a keyword (`ssh in.example.com`, `nc is.gd 80`). [The
     first 2026-10-02 fix used a positive lookahead that missed these; tightened per audit_replay finding F1.]
-The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[]}`.
+- (2026-10-02 agent smoke, F2; docs/HARNESS_VERIFICATION.md section 10) NOT violations:
+  - inside **Python source** -- the program of `./py -c`/`python3 -c` that the shell passes unchanged (no `$` or
+    backtick in it), the body of an unexpanded heredoc (quoted delimiter, or no `$`/backtick) that `cat >`/`tee` writes
+    to a `*.py` file or that `./py -` reads as its program, or a Write of a `*.py` file -- a bare `~` (the NOT symbol
+    `'~'`, `~ 0` in a comment) and a process-tool word after `;`/`|`/newline (`print(f'...; top {n}')`,
+    `'... | ps contrib'`, a variable `top = ...`). Python never expands `~` and cannot start `ps` without handing text
+    to a shell. The exemption is off for the whole tool call when the code cannot be shown not to reach a shell: any
+    `subprocess`, `system`, `popen`, `shell=`, `os.exec*`/`spawn*`, `pty`, dynamic imports (`__import__`, `importlib`,
+    `getattr(`), a quoted shell name (`'sh'`, `'/bin/bash'`), a `#!` line, code that does not parse as Python, or
+    top-level plumbing that runs text (a pipe into anything but a text filter or python, `$( )`, backticks, `<( )`,
+    `sh`/`bash`/`source`/`.`/`eval`/`xargs`/`chmod`/...). `~/...`, `$HOME`, absolute paths, `..`, R3, R4, R9, sudo,
+    docker, `/proc`, `/opt/pytorch` are still checked inside Python source.
+  - `/dev/stdin` (like `/dev/stdout`). `/dev/stdin/..`, `/dev/fd/N`, `/proc/self/fd/N` and the redirect source are
+    still checked.
+  - for R9, the regexes of a top-level `sed` script (`sed -i 's/^exec(...)$/from x import */'` removes exec calls).
+    The text sed writes (replacement of `s`, `y`) and what it runs (`e`, `s///e`) are still scanned.
+  - `exec(open('<own sandbox file>').read())` followed by a CHAIN of `.split('<literal>')[i]` / `.rsplit(...)[i]`
+    (each step selects a contiguous piece of the file). `.replace` (also with `''`), `+`, `.join`, `.format`, decode,
+    slicing, a computed separator or index stay R9.
+  NEW violations (gaps found while fixing): a process tool behind a wrapper (`timeout 110 ps aux`, `nohup top`,
+  `env ps`, `watch -n 1 ps`); `~user`, `~-` and `~N` at the start of an unquoted top-level shell word (`ls ~ec2-user`,
+  `cat ~root/.bashrc`, `ls ~-`); a `~` followed by a backslash (`./py -c "import os; os.system(\"ls ~\")"`, missed by
+  every earlier version).
+- (2026-10-02 agent smoke, F1) R0 is also raised for transcript selection: `R0-no-transcript`,
+  `R0-ambiguous-transcript` (search found several transcripts that start with the prompt), `R0-prompt-mismatch` (a
+  transcript passed with `--transcript` does not start with the prompt). See section 9, step 2.
+The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[], transcripts[], discovery,
+prompt_check[{transcript, prompt_match}]}`.
 
 ## 8. Run directories
 
@@ -222,17 +250,66 @@ $PY -m common.sandbox prepare --task T --instance-dir tasks/T/instances/<id> --p
 #   test-agent prompt between two marker lines; --json prints {episode, sandbox, prompt} instead
 #   (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
 ```
-1. Give the printed prompt, and nothing else, to a FRESH subagent (no context, no repo access hints).
+1. Give the printed prompt, and nothing else, to a FRESH agent (no context, no repo access hints).
    Record which model it ran on. Do not add hints; the prompt already tells it to stay inside
    `~/rlsbx/<E>/`, use `./tool` and `./py`, not to use web search/fetch, not to spawn sub-agents,
    and to finish with `./tool submit`.
-2. When the subagent returns:
+   - **Preamble-free is the target.** The agent's first user message should be the prompt byte for byte, with no
+     wrapper, from a session whose cwd is the sandbox (not a git repo), with only Bash/Read/Write/Edit available.
+     finish records what the agent actually got (`prompt_match` in grade.json: `exact` or `workflow_wrapper`), so
+     runs launched both ways can be told apart. Never compare pass rates across the two without saying so.
+   - **Workflow / Agent-tool subagents (how the 2026-10-02 smokes ran; still the only launcher on this machine).**
+     Claude Code delivers the prompt inside one fixed wrapper: the line `[Workflow harness — computed task] The task
+     text below was computed at runtime by a workflow script. ... The computed task text follows:` and then every line
+     of the prompt indented by two spaces. finish accepts exactly this wrapper (constant
+     `transcript_audit.WORKFLOW_WRAPPER_HEADER`; any other change to the prompt is `R0-prompt-mismatch`). Known
+     contamination of such agents, which cannot be removed from inside a workflow: the wrapper itself (it says the
+     text "carries no user authority"); the session cwd is the repo, and the context holds the repo's git status with
+     recent commit subjects (task names), the owner's email and a scratchpad path; the parent's tools (web, MCP
+     connectors, Agent) are visible though forbidden by the prompt and flagged by the audit (R6/R7). Say so when
+     reporting results from such runs.
+   - **Headless launcher (`common/cc_agent.py`): investigated 2026-10-02, NOT shipped** (no safe configuration on this
+     machine; details and evidence in docs/HARNESS_VERIFICATION.md section 10, F3). What was tested and works:
+     `claude -p "<prompt>" --model claude-opus-5-5 --tools Bash,Read,Write,Edit --strict-mcp-config --safe-mode
+     --setting-sources "" --session-id <uuid> --permission-prompts none`, run with cwd `~/rlsbx/<E>` and a minimal
+     environment (HOME, PATH, USER, LANG; no `ANTHROPIC_API_KEY`; the parent session's `CLAUDECODE`/`CLAUDE_CODE_*`
+     variables removed). It uses the existing claude.ai login (`apiKeySource: none`), exposes only the four tools and
+     no MCP server, and writes `~/.claude/projects/<cwd slug>/<session id>.jsonl` whose first user message is the
+     prompt verbatim (finish finds it: `prompt_match` `exact`), with no git status or repo path in its context (the
+     account email is still attached by Claude Code). Why it is not shipped: headless means nobody answers permission
+     prompts, so Bash must be auto-approved, and the only safe auto-approval is Claude Code's own OS sandbox
+     (`sandbox.enabled`, `autoAllowBashIfSandboxed`, `allowUnsandboxedCommands: false`), which on Linux needs
+     **bubblewrap and socat -- both missing here**. Without them Claude Code prints "Sandbox disabled ... Commands will
+     run WITHOUT sandboxing" and carries on. `--permission-mode dontAsk` denies every non-read-only command (the agent
+     cannot run `./tool`); `--permission-mode auto` let a write outside the cwd and a `curl` to the internet both
+     succeed; `bypassPermissions` is ruled out without a verified sandbox. To enable it later (Dan's call; system
+     packages): `sudo dnf install -y bubblewrap socat` (both in the AL2023 repo), then build cc_agent.py with the
+     sandbox settings and a self-test that must pass before every batch: a write outside the sandbox and a network call
+     both FAIL, while `./tool help` still reaches the broker socket `~/rlsbx/.broker.sock` (outside the sandbox dir;
+     Linux Claude Code filters Unix sockets, so this must be allowed and tested), plus one `_demo` episode end to end.
+2. When the agent returns:
 ```
-$PY -m common.sandbox finish --episode <E> --agent-model <model> [--transcript PATH]
+$PY -m common.sandbox finish --episode <E> --agent-model <model> [--transcript PATH ...]
 ```
-   Without `--transcript`, finish searches `~/.claude/projects/` (recursively, including `subagents/`
-   and workflow directories) for the transcript whose first user message contains `<E>`. With
-   `--agent-model` set and no transcript found, the episode is INVALID (rule R0): we cannot vouch for it.
+   **Which transcript is audited (2026-10-02 smoke F1).** Without `--transcript`, finish searches
+   `~/.claude/projects/` (recursively, including `subagents/` and workflow directories) for transcripts whose FIRST
+   user message IS this episode's agent prompt: `<run-dir>/episodes/<E>/agent_prompt.txt` byte for byte (one trailing
+   newline tolerated), or byte for byte inside the documented workflow wrapper (step 1). Containing the episode id is
+   not enough any more: before this, the prep/finish/review operators of the smoke (whose prompts name the id) were
+   audited as if they were the test agent, which made 23 of 24 first finishes falsely INVALID.
+   - exactly one match: it is audited (`transcript_discovery: "search"`);
+   - none: INVALID, `R0-no-transcript` (with `--agent-model` set, or any LLM episode);
+   - several (the same prompt launched twice, e.g. a retry): INVALID, `R0-ambiguous-transcript`; all are audited for
+     the record, none is picked. Re-run finish with `--transcript` naming the right file(s); passing several audits all
+     of them (use that for a retried episode, so the first attempt's actions are audited too).
+   - With `--transcript`, every given file must start with the prompt in the same sense, else INVALID
+     `R0-prompt-mismatch` (the wrong file, or the agent was not given the printed prompt and nothing else).
+   - grade.json `harness` gains `transcript_discovery` (`search`/`explicit`) and `prompt_match` (one entry per audited
+     transcript: `exact`, `workflow_wrapper` or `mismatch`); audit.json gains `discovery` and `prompt_check`.
+   - The run dir holds exactly the transcripts that were audited (`transcript.jsonl`, `transcript_1.jsonl`, ...);
+     copies left by an earlier finish of the same episode are removed.
+   - Standalone: `python -m common.transcript_audit --episode E [--prompt-file agent_prompt.txt] [--transcript P ...]`
+     (the prompt is found through the episode record if not given).
 3. Read `<run-dir>/episodes/<E>/grade.json`: grader output plus a `harness` block
    (`valid`, `invalid_reasons`, counters, `behavioral_exposure`, `leak_detected`, audit result).
    `$PY -m common.sandbox summarize --run-dir <run-dir>` aggregates all episodes in the run dir.
@@ -341,3 +418,17 @@ Refinements to the spec above:
 - `--prompt-template`, `--min-submit-frac`, `--extra-file`: see section 5. New `grade.json` harness fields:
   `prompt_template`, `min_submit`, `extra_files`. New invalid reason: `min_submit_bypassed`.
   Tests: `common/tests/test_prepare_options.py`.
+
+### Agent-smoke fixes (2026-10-02, D16; docs/HARNESS_VERIFICATION.md section 10)
+- **Transcript selection** (section 9, step 2): the first user message must be the agent prompt (exact, or inside the
+  documented workflow wrapper). New audit rules `R0-ambiguous-transcript`, `R0-prompt-mismatch` (both surface as
+  invalid reason `transcript_audit`). New grade.json harness fields `transcript_discovery`, `prompt_match`; new
+  audit.json fields `discovery`, `prompt_check`. API: `transcript_audit.locate(episode, prompt, transcripts=None,
+  root=None) -> (paths, r0, info)`, `find_transcripts(episode, prompt, root=None)` (the prompt is now required),
+  `audit(episode, sandbox, transcripts, r0=None, info=None)`, `sandbox.episode_prompt(rec)`.
+- **Audit false positives** (section 7): Python-source exemption for bare `~` and process words; `/dev/stdin`; sed
+  regexes for R9; chained `.split('<literal>')[i]` in exec of an own file. New detections: wrapped process tools,
+  `~user`/`~-`/`~N`, `~` before a backslash.
+- **Headless launcher**: not shipped (section 9, step 1). Workflow-launched agents remain the method; their wrapper is
+  recorded as `prompt_match: workflow_wrapper`.
+  Tests: `common/tests/test_smoke_fixes.py`. Replay: `runs/_harness/smoke_fixes_2026-10-02/`.
