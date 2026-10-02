@@ -6,6 +6,8 @@
     ./tool <name> '<json object of args>'    e.g. ./tool logits '{"prompts": ["Hello"], "top_k": 5}'
     ./tool <name> key=value key2='[1,2]'     values are parsed as JSON when possible, else strings
     ./tool submit '<json answer>'            final answer; one accepted submission ends the episode
+                                             (if TASK.md says so, submit is accepted only after a minimum
+                                             share of a budget has been used)
 
 Prints the JSON response. Responses larger than 30 KB are saved to out/resp_<n>.json and only
 the path and a preview are printed. The first call of an episode may wait for compute; the
@@ -21,6 +23,8 @@ import time
 MAX_PRINT = 30 * 1024
 WAIT_LIMIT_S = 15 * 60
 HERE = os.path.dirname(os.path.abspath(__file__))
+MIN_SUBMIT_FRAC = {}  # set by common.sandbox prepare --min-submit-frac
+LABELS = {"wall_clock_s": "time", "tool_calls": "tool-call"}
 
 
 def parse_args(argv):
@@ -46,6 +50,34 @@ def parse_args(argv):
     return out
 
 
+def submit_refusal(budget_text):
+    """None if a submission may go ahead, else the refusal envelope. The episode's MIN_SUBMIT_FRAC says what
+    share of which budget must be used first; once time or any budget (with a non-zero cap) has run out, submitting is always allowed.
+    If the budget reply cannot be read, the submission goes ahead (the broker answers it)."""
+    try:
+        b = json.loads(budget_text)
+        if not b.get("ok"):
+            return None
+        b = b["result"]
+        if any(isinstance(v, dict) and v.get("cap", 0) > 0 and v.get("remaining", 1) <= 0 for v in b.values()):
+            return None
+        short = []
+        for k in sorted(MIN_SUBMIT_FRAC):
+            need = float(MIN_SUBMIT_FRAC[k])
+            v = b.get(k)
+            if not isinstance(v, dict) or not v.get("cap"):
+                continue
+            used = float(v.get("used", 0)) / float(v["cap"])
+            if used < need - 1e-9:
+                short.append("use at least %d%% of the %s budget first (used %d%%)"
+                             % (int(round(need * 100)), LABELS.get(k, k), int(used * 100)))
+    except Exception:
+        return None
+    if not short:
+        return None
+    return {"ok": False, "error": "submission not accepted yet: " + "; ".join(short)}
+
+
 def main():
     with open(os.path.join(HERE, ".episode")) as f:
         episode = f.read().strip()
@@ -55,13 +87,45 @@ def main():
         print(__doc__)
         return 0
     args = parse_args(sys.argv[2:])
+    if name == "submit" and MIN_SUBMIT_FRAC:
+        rc, text = request(sock_path, episode, "budget", {})
+        refusal = submit_refusal(text) if rc == 0 else None
+        if refusal is not None:
+            print(json.dumps(refusal))
+            return 1
+    rc, text = request(sock_path, episode, name, args)
+    if rc is None:
+        print(text)
+        return 1
+    try:
+        ok = json.loads(text).get("ok", False)
+    except ValueError:
+        ok = False
+    if len(text.encode()) > MAX_PRINT:
+        out_dir = os.path.join(HERE, "out")
+        if not os.path.isdir(out_dir):
+            os.makedirs(out_dir)
+        n = 1
+        while os.path.exists(os.path.join(out_dir, "resp_%d.json" % n)):
+            n += 1
+        rel = "out/resp_%d.json" % n
+        with open(os.path.join(HERE, rel), "w") as g:
+            g.write(text + "\n")
+        print(json.dumps({"ok": ok, "saved_to": rel, "bytes": len(text.encode()),
+                          "preview": text[:1500]}))
+    else:
+        print(text)
+    return 0 if ok else 1
+
+
+def request(sock_path, episode, name, args):
+    """One request to the broker. Returns (0, response text), or (None, error envelope text) on failure."""
     req = json.dumps({"episode": episode, "tool": name, "args": args}) + "\n"
     try:
         s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         s.connect(sock_path)
     except OSError:
-        print(json.dumps({"ok": False, "error": "tool service unavailable; try again in a minute"}))
-        return 1
+        return None, json.dumps({"ok": False, "error": "tool service unavailable; try again in a minute"})
     s.settimeout(WAIT_LIMIT_S + 600)
     s.sendall(req.encode())
     f = s.makefile("rb")
@@ -82,35 +146,16 @@ def main():
                 sys.stderr.flush()
                 last_note = time.time()
             if time.time() - t0 > WAIT_LIMIT_S:
-                print(json.dumps({"ok": False, "error": "still waiting for compute after 15 minutes; try again later"}))
-                return 1
+                s.close()
+                return None, json.dumps({"ok": False,
+                                         "error": "still waiting for compute after 15 minutes; try again later"})
             continue
         resp_line = line.decode()
         break
     s.close()
     if resp_line is None:
-        print(json.dumps({"ok": False, "error": "no response from tool service; try again"}))
-        return 1
-    text = resp_line.strip()
-    try:
-        ok = json.loads(text).get("ok", False)
-    except ValueError:
-        ok = False
-    if len(text.encode()) > MAX_PRINT:
-        out_dir = os.path.join(HERE, "out")
-        if not os.path.isdir(out_dir):
-            os.makedirs(out_dir)
-        n = 1
-        while os.path.exists(os.path.join(out_dir, "resp_%d.json" % n)):
-            n += 1
-        rel = "out/resp_%d.json" % n
-        with open(os.path.join(HERE, rel), "w") as g:
-            g.write(text + "\n")
-        print(json.dumps({"ok": ok, "saved_to": rel, "bytes": len(text.encode()),
-                          "preview": text[:1500]}))
-    else:
-        print(text)
-    return 0 if ok else 1
+        return None, json.dumps({"ok": False, "error": "no response from tool service; try again"})
+    return 0, resp_line.strip()
 
 
 if __name__ == "__main__":

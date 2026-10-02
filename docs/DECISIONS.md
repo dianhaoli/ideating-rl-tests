@@ -159,3 +159,6 @@ Plan and operational decisions: tasks/featurematch/diagnosis/PLAN.md on branch d
 ~/wt/fmdiag). Key choices: a shared FeatureMatch model service so the study stays at <= 2 GPU jobs; harness `prepare`
 options --prompt-template, --min-submit-frac, --extra-file (generic, no daemon restart needed); two independent style
 banks (filter vs recipe) to avoid circularity; fresh Claude Code subagents only (no hosted API for this study).
+Implemented 2026-10-02 (docs/HARNESS_API.md section 5): the submit threshold is enforced by the sandbox client
+(the running broker is untouched) and re-checked at finish (`min_submit_bypassed` => INVALID); once time or any
+non-zero budget runs out, submit is always allowed so no agent is locked out.
