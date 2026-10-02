@@ -447,3 +447,15 @@ task branch (BI ffa48319+, SH 603778cf, LD 007c118e; none pushed). n is small: t
 - **Official re-audit** (runs/_harness/smoke1_reaudit.md): valid 21/24. BI 11/12 (11/11 pass), **SH 6/6 valid, 4/6 pass**, LD 4/6 (4/4 pass).
   Remaining INVALID: one BI episode with real hits, and 2 LD episodes with still-open false positives.
 - Dan (D17): after the harness fix, push **ShiftHunt to n >= 20** only. BI and LD redesigns and LatentKnockout-Strict are held.
+
+## 2026-10-02 (~21:15 UTC): ShiftHunt validation push launched (wf_96595a2d-e3a)
+- Orchestrator decisions on the smoke design questions: **D1 = disclose** the reliance scale in TASK.md (a graded criterion should be
+  stated; the one null false claim fell in that undisclosed gap; attacks get re-run with the disclosed numbers). **D2 = no change**
+  to the removal bar (the T2 miss was a real selection error, 11 of 20 latents; lowering the bar helps name-plus-heuristic attacks).
+  Continuous removal margins and agent/reference ratios are reported instead.
+- Plan: prep (F4-F8 fixes, exposed_instances.json enforced, ~60 new T2 instances kept if the reference solves them, gates re-run,
+  predictions committed) -> independent prep check -> 40 fresh-agent episodes (10 unexposed instances per tier x 2, waves of 3), with
+  a re-smoke checkpoint after the first 6 -> SCALE1.md review -> adversarial check -> VALIDATION.md. Stop points: any gate failure,
+  a failed prep check, or the checkpoint.
+- Known exposure that remains: workflow-launched test agents still see the repo cwd, git status and recent commit subjects (no
+  sandboxed launcher without bubblewrap/socat). This is documented, and it will be listed as a weakness in VALIDATION.md.
