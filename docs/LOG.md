@@ -276,3 +276,31 @@ events, orchestration decisions and gate summaries, with links.
   ~03:10 run dirs as interrupted, memory rules, do not touch featurematch instances/cache).
 - The FeatureMatch diagnosis continues with two background builders: the step-2 filter conformance fix (PREREG A1.1) and the
   step-3 style-robust recipe.
+
+## 2026-10-02 04:10 UTC: wave-2 fix-stage reports never received before the crash (recovered from the old journal)
+The wave-2 workflow did not return before the crash, so these reports were never reviewed. Recovered from journal
+wf_352c134a-502 (old session e4652089).
+- **BoolIntermediates: READY_FOR_SMOKE.** v2 pools of 40 instances/tier (T1-T4). Reference 40/40 in every tier [0.91, 1.0];
+  blackbox 0/40; recipes (none, claim_all, prior, binarise_*) <= 1/40, i.e. the all-null rate; auditor attacks
+  twolevel/behav/unitdecode_read/count 0/40. Fingerprint AUROC <= 0.53. **Disputed F2:** `unitdecode` (read each unit's
+  input variables, then a causal clamp) solves 38-40/40 in every tier. The builder calls it a correct interp method (a
+  second reference) and withdrew the T4 "resists brute force" claim. Risk: the task may be too easy for frontier agents.
+  Measure per-instance bimodality in smoke. Gate-pool answers are effectively in git, so the smoke plan uses fresh
+  instances. Incident: at ~20:13 UTC yesterday the builder ran an unscoped `kill` on reference_solver processes, which
+  may have killed another task's reference episode.
+- **ResidualRecall: NEEDS_WORK.** Design v2 (low-rank unlearning edit at a different depth per model-tier, hardened).
+  T1: reference 6/6 in-process and in the harness; every shortcut 0/14. T2: reference 1/8 (cannot fully remove a rank-6 edit from
+  6-8 people). This is a new cause, not the v1 layer prior, so it is not a second same-reason failure. Proposed fix: rebuild T2
+  stage B at rank 3-4 (~15 min heavy GPU per model x 3), then more bank models (only 3 models, 14 instances).
+  Harness chains B/C/D were interrupted, and their run dirs (runs/residualrecall/20261002-011802_*_v2) are uncommitted.
+- **T2Ravel: DROP.** The reference is now reliable (16/16 one-shot, 129/129 label agreement), but with enough cities an honest null
+  exists only below the state's separability onset (layers 3-5), so the public layer predicts null with 100%
+  accuracy. That is C1 again after a redesign aimed at it. Salvage ideas are in its NOTES.
+- **SilentPathway: DROP** (build stage). Scripted gates pass (reference 12/12, recipes 0-1/14), but frontier probes solve
+  it in 10-13 turns: once switched on, a planted silent group is easy to read off. Possible reuse: a calibration or
+  small-agent task.
+- Harness issues reported by builders (open): transcript-audit false positives (sed regex slashes read as paths;
+  exec of the agent's own sandbox file; the R4 netcat regex matching a Python variable `nc`); GPU queue starvation
+  of light jobs.
+- **Not started (priority is Dan's call):** the ResidualRecall T2 rebuild and a BoolIntermediates agent smoke. Dan's
+  order is FeatureMatch diagnosis first, then LatentKnockout. Added to OPEN_QUESTIONS.

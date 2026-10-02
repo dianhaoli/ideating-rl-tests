@@ -12,3 +12,10 @@
 4. **The repo is public.** Instance answer keys stay out of git until their episodes finish (D6). Should the repo be private?
 5. **Test-agent models**: main = the session's Opus-class model; small = Haiku-class via the subagent model option.
    These are Claude Code subagents, not API runs. Every number is labelled that way.
+
+## 2026-10-02 04:10 UTC (orchestrator, after the crash)
+- BoolIntermediates is READY_FOR_SMOKE: the only task with all scripted gates passing on 40/tier pools. It is the strongest
+  "one validated environment" candidate for Oct 8, but an agent smoke has not run. Should it run now (fresh Claude Code subagents,
+  fresh instances), in parallel with the FeatureMatch diagnosis? The disputed unitdecode finding means it may be too
+  easy. Smoke would settle that.
+- ResidualRecall T2 rebuild (rank 3-4, ~45 min heavy GPU): do it now, or after LatentKnockout?
