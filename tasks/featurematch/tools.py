@@ -13,6 +13,11 @@ Every tool that accepts or returns latent indices uses the agent's (permuted) in
 Profiles:
   full      all tools
   blackbox  generate + next_token_logits only (behaviour, no internals) for the black-box control
+
+Shared model service (opt-in, model_service.py): when a FeatureMatch model service is running (env var
+FM_MODEL_SERVICE=<socket>, or its marker file ~/rlsbx/.fm_model_service), this tool server does not load the model:
+GPU_GB is 0 (CPU only, no GPU queue) and every model computation is sent to the service. The permutation stays here:
+the service only ever sees real latent ids. Both paths run the same functions (model_service.OPS).
 """
 import json
 import os
@@ -23,6 +28,7 @@ import numpy as np
 from common.toolserver import TaskEnv, ToolError, tool
 
 from tasks.featurematch.fm_core import D_SAE, LAYERS, MAX_TOKENS
+from tasks.featurematch.model_service import LocalBackend, RemoteBackend, ServiceUnavailable, service_socket
 
 MAX_TEXTS_ACTS = 16
 MAX_TEXTS_TOP = 8
@@ -30,6 +36,9 @@ MAX_LATENTS = 8
 MAX_CHARS = 2000
 _SUBJECT = None    # one model per process, shared by Env instances (in-process gate runs create many Envs)
 _SUBJECT_LOCK = threading.Lock()
+# Decided once per process, at import (the tool server reads GPU_GB right after importing this module): a socket path
+# if a live shared model service should be used, else None (load the model in-process, as before).
+SERVICE_SOCK = service_socket()
 
 
 def get_subject():
@@ -72,7 +81,8 @@ class Env(TaskEnv):
                  "next_token_logits"],
         "blackbox": ["task_info", "generate", "next_token_logits"],
     }
-    GPU_GB = 7          # gemma-2-2b bf16 (~5.2 GB) + 3 SAE encoders/decoders (~0.9 GB) + activations
+    # gemma-2-2b bf16 (~5.2 GB) + 3 SAE encoders/decoders (~0.9 GB) + activations; 0 (CPU only) with the shared service
+    GPU_GB = 0 if SERVICE_SOCK else 7
     MODEL_OUTPUT_FIELDS = {"tokens", "token", "completion", "top_tokens", "bottom_tokens", "at_token"}
 
     # ------------------------------------------------------------------ lifecycle
@@ -87,8 +97,13 @@ class Env(TaskEnv):
         # the shared GPU for nothing. Model tools wait for the load (inside their call, so at most a few tens of
         # seconds of the first model call). Planted and null instances load identically (no timing fingerprint).
         self._subj_err = None
+        if SERVICE_SOCK:
+            self._subj_thread = None
+            self.backend = RemoteBackend(SERVICE_SOCK)
+            return
         self._subj_thread = threading.Thread(target=self._bg_load, daemon=True)
         self._subj_thread.start()
+        self.backend = LocalBackend(lambda: self.subj)
 
     def _bg_load(self):
         try:
@@ -104,6 +119,13 @@ class Env(TaskEnv):
         if getattr(self, "_subj_err", None) is not None:
             raise RuntimeError("subject model failed to load") from self._subj_err
         return get_subject()
+
+    def compute(self, op, **args):
+        """One model computation (model_service.OPS), in-process or on the shared service."""
+        try:
+            return self.backend(op, **args)
+        except ServiceUnavailable:
+            raise ToolError("compute temporarily unavailable; try again in a minute")
 
     # ------------------------------------------------------------------ argument checks (generic messages only)
     def _texts(self, texts, cap):
@@ -157,9 +179,10 @@ class Env(TaskEnv):
         latents = self._latents(latents)
         self.charge("forward", len(texts))
         real = [int(self.perm[layer][p]) for p in latents]
-        acts, toks = self.subj.token_acts(texts, layer, real)
+        r = self.compute("token_acts", texts=texts, layer=layer, latents=real)
         out = []
-        for a, tk in zip(acts, toks):
+        for a, tk in zip(r["acts"], r["tokens"]):
+            a = np.asarray(a, dtype=np.float32).reshape(len(a), len(latents))
             row = {"tokens": tk, "max": {str(p): r4(a[:, j].max()) if len(a) else 0.0 for j, p in enumerate(latents)}}
             if per_token:
                 row["acts"] = {str(p): [r4(v) for v in a[:, j]] for j, p in enumerate(latents)}
@@ -180,23 +203,14 @@ class Env(TaskEnv):
         if not 1 <= k <= 20:
             raise ToolError("k must be an integer in 1-20")
         self.charge("forward", len(texts))
-        torch = self.subj.torch
-        hs, mask = self.subj.resid(texts, [layer])
-        a = self.subj.sae_encode(hs[layer], layer)
-        first = mask.float().argmax(dim=1)
-        m = mask.clone()
-        m[torch.arange(m.shape[0], device=m.device), first] = 0
-        a = a * m[..., None]
-        mx, pos = a.max(dim=1)                     # [B, D]
-        vals, idx = mx.topk(k, dim=-1)
-        toks = self.subj.token_strs(texts)
+        r = self.compute("top_latents", texts=texts, layer=layer, k=k)     # real latent ids
+        toks = r["tokens"]
         out = []
         for i in range(len(texts)):
             row = []
-            for v, j in zip(vals[i].tolist(), idx[i].tolist()):
+            for j, v, t in r["top"][i]:
                 if v <= 0:
                     continue
-                t = int(pos[i, j]) - int(first[i]) - 1
                 row.append({"latent": int(self.inv[layer][j]), "max": r4(v),
                             "at_token": toks[i][t] if 0 <= t < len(toks[i]) else ""})
             out.append({"tokens": toks[i], "top": row})
@@ -215,15 +229,8 @@ class Env(TaskEnv):
         if not 1 <= k <= 25:
             raise ToolError("k must be an integer in 1-25")
         self.charge("forward", 1)
-        torch = self.subj.torch
-        d = self.subj.sae[layer]["W_dec"][int(self.perm[layer][latent])]
-        W_U = self.subj.model.get_output_embeddings().weight
-        with torch.no_grad():
-            logits = (W_U @ d.to(W_U.dtype)).float()
-        top = logits.topk(k).indices.tolist()
-        bot = (-logits).topk(k).indices.tolist()
-        dec = self.subj.tok.decode
-        return {"top_tokens": [dec([i]) for i in top], "bottom_tokens": [dec([i]) for i in bot]}
+        r = self.compute("vocab_projection", layer=layer, latent=int(self.perm[layer][latent]), k=k)
+        return {"top_tokens": r["top_tokens"], "bottom_tokens": r["bottom_tokens"]}
 
     # ------------------------------------------------------------------ behavioural tools (both profiles)
     @tool(doc="Greedy text continuation from the model. args: prompt: str, max_new_tokens: int (1-48, default 32). "
@@ -237,11 +244,7 @@ class Env(TaskEnv):
         if not 1 <= n <= 48:
             raise ToolError("max_new_tokens must be an integer in 1-48")
         self.charge("generate", 1)
-        torch = self.subj.torch
-        enc = self.subj.tok(prompt, return_tensors="pt", truncation=True, max_length=256).to(self.subj.device)
-        with torch.no_grad():
-            out = self.subj.model.generate(**enc, max_new_tokens=n, do_sample=False)
-        return {"completion": self.subj.tok.decode(out[0, enc["input_ids"].shape[1]:], skip_special_tokens=True)}
+        return {"completion": self.compute("generate", prompt=prompt, max_new_tokens=n)["completion"]}
 
     @tool(doc="Next-token distribution after each prompt. args: prompts: list[str] (1-16), top_k: int (1-20, "
               "default 10). Returns the top_k tokens with log-probabilities. Cost: one forward unit per prompt.")
@@ -254,17 +257,9 @@ class Env(TaskEnv):
         if not 1 <= k <= 20:
             raise ToolError("top_k must be an integer in 1-20")
         self.charge("forward", len(prompts))
-        torch = self.subj.torch
-        tok = self.subj.tok
-        out = []
-        for p in prompts:
-            enc = tok(p, return_tensors="pt", truncation=True, max_length=256).to(self.subj.device)
-            with torch.no_grad():
-                lg = self.subj.model(**enc).logits[0, -1].float()
-            lp = torch.log_softmax(lg, -1)
-            v, i = lp.topk(k)
-            out.append({"top_tokens": [tok.decode([j]) for j in i.tolist()], "logprobs": [r4(x) for x in v.tolist()]})
-        return {"results": out}
+        r = self.compute("next_token_logits", prompts=prompts, top_k=k)
+        return {"results": [{"top_tokens": x["top_tokens"], "logprobs": [r4(v) for v in x["logprobs"]]}
+                            for x in r["results"]]}
 
     # ------------------------------------------------------------------ submission format check
     def validate_submission(self, sub):
