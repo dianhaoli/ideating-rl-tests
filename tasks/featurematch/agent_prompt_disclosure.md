@@ -24,6 +24,9 @@ text's tokens. A latent encodes a class when texts of that class reliably give i
 other classes do. "Other classes" means every other class in the collection, not only the other 19 on the list. The
 answer key was computed this way on texts from the collection.
 
+**How the answer key is defined:** options are disjoint dataset classes; the correct option is the class the latent
+separates best across varied styles.
+
 **"nothing found".** For some slots, the class the latent encodes is not among its 20 candidates. The correct answer
 for those slots is "nothing found". The latent on such a slot still encodes some class; that class is just not on the
 list. Each slot is set up independently, so an episode can contain any number of these slots, from none to all.

@@ -303,3 +303,163 @@ corrections go in dated sections appended below this line. Each says what change
 existed at the time.
 
 ---
+
+## Amendment 1 (2026-10-02, before any experiment or result)
+
+Written after Dan's STEP 1b instruction in `PLAN.md` (2026-10-02 ~01:35 UTC). **State at the time of writing:** step 1
+(the clarity audit, CPU only) is done. Banks F and R exist as text files only (`diagnosis/banks/F`, `diagnosis/banks/R`:
+232 concepts x 10 styles x 2 texts each). No activation has been computed on any bank text, no filtered pool exists,
+no baseline has run on a filtered pool, and no agent has run on v2. Nothing in sections 0-5 above is changed. Where
+this amendment and the text above disagree, this amendment wins, and the change is named below.
+
+### A1.1 Multi-style answer key (step 2; replaces the step-2 filter rule "keep the latent if auroc_F >= 0.85")
+
+**Why.** The current key is defined on encyclopedic dataset text only (split A). Step 1b makes the style filter the
+main validity fix: a latent's concept must be the class it separates best **across styles**, not just on
+Wikipedia-like text.
+
+**Text sets** (all activations are the max over tokens, texts truncated to 64 tokens exactly as in the tools):
+- Dataset splits A, B, C as before (`concepts.py`: 40 / 24 / 20 texts per concept; C exists for every concept that can
+  be an anchor or a menu option).
+- Bank F is split per concept into two halves, fixed now, before any bank activation exists: for each of the 10
+  styles, the **first** text listed for that style in the bank-F file goes to **F1**, the second to **F2**. So F1 and
+  F2 each hold 10 texts per concept, one per style.
+- Bank R is not used in step 2 at all. It stays reserved for the style-robust recipe (step 3).
+
+**AUROCs.** AUROC_X(j, c) for a text set X is computed as in `auroc.py`: positives are concept c's texts in X,
+negatives are the X texts of every other concept that has texts in X.
+
+**Definitions, per pooled latent j at layer L** (the pool of generator v2, `Tables.pools`):
+1. *Original key*: c\* = argmax over all concepts of AUROC_A(j, c) (exactly the generator's anchor).
+2. *Multi-style key*: k_ms = argmax over all concepts of M(c) = 0.5 x AUROC_A(j, c) + 0.5 x AUROC_F1(j, c). Dataset
+   text and styled text get equal weight, even though A has 40 texts per concept and F1 has 10.
+3. *Held-out agreement check* (on C + F2, used by neither key definition): k_ho = argmax over all concepts of
+   H(c) = 0.5 x AUROC_C(j, c) + 0.5 x AUROC_F2(j, c). For a concept without a split C, H(c) = AUROC_F2(j, c).
+4. *Style-robustness filter* (also on C + F2): AUROC_F2(j, c\*) >= 0.85 **and** AUROC_C(j, c\*) >= 0.85.
+
+**Keep rule.** A pooled latent is kept only if k_ms = c\* **and** k_ho = c\* **and** the filter (4) passes. The rule
+acts on latents, before the filtered pool is regenerated, and it is the same for latents that end up in planted and
+in null slots. That keeps null and planted latents indistinguishable, as in step 2 above. Consequences:
+- A **planted** slot of the filtered pool is kept only if its multi-style key equals its original key (its answer c\*
+  is the multi-style best class among all concepts, so also among its 20 options). The generator asserts this for
+  every planted slot, and the count of violations (expected 0) is reported.
+- On a **null** slot, c\* is not on the menu and c\* is also the multi-style best class, so "nothing found" is the
+  answer under both definitions.
+- For information only (no slot is dropped for it), each filtered slot also reports its multi-style margin: M of the
+  answer minus the best other option's M (planted), or 0.65 minus the best option's M (null).
+
+**Logs** (both committed, in `diagnosis/`):
+- `key_check.jsonl`: one row per pooled latent: layer, real latent id, c\*, k_ms, k_ho, the top 3 concepts under A, M
+  and H with their scores, AUROC_C(c\*), AUROC_F1(c\*), AUROC_F2(c\*), kept (yes/no) and the reason for dropping
+  (`ms_key_differs`, `heldout_key_differs`, `not_style_robust`, several allowed).
+- `slot_disagreements.jsonl`: every slot of the **current** v2 pool (180 instances) whose latent fails the keep rule,
+  with instance id, slot, kind, the reason, and for planted slots the option the multi-style key and the held-out
+  check would pick (an option number or "not on menu").
+- The step-2 report gives these counts by layer, by concept family (topic / language) and by slot kind.
+
+The remaining step-2 rules are unchanged: same regeneration (60 instances per tier, seeds 8000+, 108000+, 208000+),
+the fingerprint check, and the "the filter selects easier latents" test and its thresholds. The classifier's
+`style-robust latent` definition (section 1.3: auroc_F and fire_F on all of bank F) is also unchanged.
+
+### A1.2 New arm G: disclosure of how the key is defined (step 4)
+
+| Arm | What changes | Instances | n |
+|---|---|---|---|
+| G disclosure | `agent_prompt_disclosure.md` = the arm-A template plus one paragraph in the task description: "**How the answer key is defined:** options are disjoint dataset classes; the correct option is the class the latent separates best across varied styles." Nothing else differs (checked by diffing the rendered TASK.md files, see A1.6). | S | 20 |
+
+- Comparison: G vs A, paired on S, with every per-arm metric and the paired tests of section 2 (bootstrap CI on the
+  pass-rate and slot-accuracy differences, exact McNemar on slots). G is smoked on the smoke set first, like every arm.
+- Execution order if time runs out becomes: **A, G**, C, D, F, B, E-sim, E-density, E-budget.
+- G is a secondary arm for the decision rule (the primary arm stays A). The verdict text reports whether disclosure
+  changes the A-based verdict.
+
+### A1.3 Arm A's template gains clearer tool documentation (before any agent run)
+
+Step 1b asks for `top_latents` and `generate` to be documented so that "see what fires the latent" is a visible,
+measurable option. `agent_prompt_revised.md` (arm A, and the base of C, D, E, F, G) now says, for **every** tool, what
+it shows, its exact response keys and its cost. For example: `top_latents` "shows which latents of one layer are most
+active on each text you write, and at which token, including latents you did not name"; `generate` "shows how the
+model continues a prompt you write". The same is done for `latent_activations`, `vocab_projection`,
+`next_token_logits` and `task_info`, and the text says that the list order is not a suggested order. It names no
+method, recommends no tool and hints at no answer. Placeholders and the answer format are byte-identical. Arm B (old
+template) is unchanged. Predictions P14-P18 and P20-P28 above were made for the earlier wording; they stay as
+recorded, and A1.5 adds the new ones.
+
+### A1.4 Tool-usage metrics (step 5; added to the per-arm metrics)
+
+From the full tool log of each valid episode (scripted, in `classify.py`):
+- **Counts per episode** of `top_latents`, `generate`, `vocab_projection` and `next_token_logits` calls (calls
+  rejected with an error included, and also reported separately). Per arm: the share of episodes with >= 1 call of
+  each tool, and the mean and median count per episode.
+- **Used on the target latent**, per slot and per tool:
+  - `vocab_projection`: called with this slot's (layer, latent).
+  - `top_latents`: called at this slot's layer. Sub-flag *target surfaced*: this slot's latent appears in at least one
+    returned `top` list.
+  - `generate`: a completion is used as a probe for this slot, meaning a substring of >= 20 characters of the
+    completion appears in a later `latent_activations` text sent with this slot's (layer, latent) or in a later
+    `top_latents` text at this slot's layer.
+  - `next_token_logits`: one of its prompts is later sent unchanged (after stripping whitespace) as a probe for this
+    slot, as defined for `generate`.
+  Per arm: the share of slots with each flag, and the share of episodes with the flag on >= 1 slot.
+- **Association (descriptive only):** planted accuracy of slots with vs without each "used on the target" flag. This
+  is observational, never read as a causal effect of the tool.
+- Reported for every arm. A vs B tests whether documentation changes tool use, and A vs G whether disclosure does.
+
+### A1.5 RESULTS.md: how much of the pass rate style explains (required section)
+
+`RESULTS.md` must contain a section "How much of the pass rate does style explain?" with these numbers, each with a
+95% paired bootstrap CI (10,000 resamples by instance, `random.Random(20261002)`), on the core set S. Planted
+accuracy is the primary measure, because SR-max never answers "nothing found", so its pass rate is near 0 by
+construction. Here pa(X) is planted accuracy of X on S; BB is the black-box baseline (the floor); ref is the reference
+solver.
+1. **Q_SR (recipe share of the agent's success)** = (pa(SR-max) − pa(BB)) / (pa(A) − pa(BB)). This is how much of
+   arm A's planted accuracy a scripted recipe reproduces with no reasoning, only by probing each option in several
+   styles. Also reported: pa(SR-max) / pa(ref), and the same two numbers for SR-thr. Secondary, pass-rate version:
+   pass(SR-thr) / pass(A).
+2. **Q_D (oracle-examples share of the agent's gap)** = (pa(D) − pa(A)) / (pa(ref) − pa(A)). This is how much of the
+   gap between the agent and the reference closes when the agent is simply given in-style example texts per option.
+   Secondary, pass-rate version: (pass(D) − pass(A)) / (pass(ref) − pass(A)).
+3. Edge cases. If pa(A) − pa(BB) < 0.05, Q_SR is undefined and pa(SR-max) / pa(ref) is used instead. If
+   pa(ref) − pa(A) < 0.05, Q_D is undefined (there is no gap to close), and D − A is reported raw. If the stop rule
+   (section 4) fired, arms A and D do not exist: only pa(SR-max) / pa(ref) and pa(SR-thr) / pa(ref) on the whole
+   filtered pool are reported, and the rule below uses them.
+
+**Plain-language rule (binding).** If Q_SR > 0.50 **or** Q_D > 0.50 (point estimates; in the stop-rule case,
+pa(SR) / pa(ref) > 0.50), then RESULTS.md and VERDICT.md both say, in these words: **"FeatureMatch is mostly measuring
+style, not interpretability"**, followed by the number(s) that triggered it. If the triggering CI includes 0.50, the
+sentence ends with "(borderline)". This sentence is required even if the decision rule of section 4 would otherwise
+say "right reasons". Both numbers are reported whatever their values.
+
+### A1.6 Template check (done before this commit; no model call, no GPU)
+
+`common.sandbox prepare --prompt-template` was run with each of the three templates on the v2 instance
+`fm-t2-09ba84b566` (read-only, from `~/wt/featurematch/tasks/featurematch/instances`), run dirs under
+`~/.claude/jobs/e4652089/tmp/fmdiag_amend/`. Episodes: old `epe08c1131ef`, revised `ep6538e06d14`, disclosure
+`epfd3f47cb46`. All rendered with 0 placeholders left and passed `check_task_md`, and each was finished at once with
+0 tool calls and 0 forward units (`valid: true`, unsubmitted). Diffs of the rendered TASK.md files:
+- old: byte-identical to the step-1 render of the same instance (`fmdiag_clarity/TASK_old_fm-t2-09ba84b566.md`).
+- revised vs the step-1 revised render: one hunk, the per-tool section only (2,518 → 2,815 words).
+- disclosure vs revised: one hunk, the 2-line disclosure paragraph only (2,839 words).
+
+### A1.7 Predictions for the new quantities
+
+All are **guesses** unless a basis is given. None can be checked against data yet.
+
+| # | Quantity | Prediction | Basis |
+|---|---|---|---|
+| P31 | Share of pooled latents with k_ms = c\* | 0.90 overall; languages 0.98, topics 0.87 | guess. The 50/50 weighting still gives split A (where c\* has AUROC >= 0.90 and at most 2 other concepts come within 0.10 of it) half the score; a flip needs another concept to beat c\* by about 0.3 on F1 |
+| P32 | Share with k_ho = c\* | 0.85 | as P31, plus noise from 10 F2 texts |
+| P33 | Share passing the filter (AUROC_F2 >= 0.85 and AUROC_C >= 0.85) | 0.42 (plausible 0.25-0.60) | P3 (0.45) minus a little for the noisier 10-text half; AUROC_C(c\*) >= 0.85 fails rarely (pool needs A >= 0.90, B >= 0.85) |
+| P34 | Share kept by the full keep rule | **0.38** (plausible 0.22-0.55); languages 0.75, topics 0.30 | P31-P33; the three conditions are positively correlated |
+| P35 | Latents dropped **only** for a key disagreement (k_ms or k_ho differs, filter passed) | <= 5% of pooled latents | guess: a latent robust enough to pass the filter rarely prefers another class |
+| P36 | Slots of the current v2 pool that fail the keep rule | about 60% of slots, the same for planted and null within 5 points | P34; the rule is kind-blind |
+| P37 | Arm G pass rate (vs A) | 0.32 (A 0.25, P14); difference +0.07, paired CI includes 0 | guess: "across varied styles" pushes agents to probe in several styles, which mainly helps planted slots |
+| P38 | Arm G planted accuracy / null false-claim rate / planted "nothing found" | 0.72 / 0.22 / 0.10 (A: 0.65 / 0.20 / 0.15, P15) | guess: fewer silent-probe misses; slightly more claiming on nulls |
+| P39 | Arm G failure composition | W1 share about half of arm A's; right-reason share 0.45 (A 0.40) | guess |
+| P40 | Tool use, arm A with the new docs (share of episodes with >= 1 call) | `top_latents` 0.35, `generate` 0.25, `vocab_projection` 0.75, `next_token_logits` 0.05 | guess; v1 agents used only `latent_activations` and `vocab_projection` (clarity.md), and the docs now say what the other tools show |
+| P41 | Used on the target latent, arm A | `vocab_projection` on a slot latent in >= 95% of its calls; `top_latents` at a slot's layer in 90% of using episodes, target surfaced in 40% of them; `generate` completion used as a probe in 30% of using episodes | guess |
+| P42 | Tool use in the other arms (`top_latents` / `generate`, share of episodes) | B 0.10 / 0.10; C 0.45 / 0.35; D 0.20 / 0.15; F 0.10 / 0.10; G 0.40 / 0.30 | guess: C must spend budget; D has examples, so it needs to generate fewer texts; the small model explores less |
+| P43 | Association: planted accuracy of slots with `top_latents` target surfaced vs without | 0.80 vs 0.62 (descriptive) | guess |
+| P44 | Q_SR (planted accuracy) and pa(SR-max)/pa(ref) | Q_SR = (0.75 − 0.00) / (0.65 − 0.00) = **1.15**; pa(SR-max)/pa(ref) = 0.75 / 0.97 = 0.77 | P11, P15, P7, P8 |
+| P45 | Q_D (planted accuracy) | (0.82 − 0.65) / (0.97 − 0.65) = **0.53** (borderline; CI wide) | P21, P15, P7 |
+| P46 | **The plain-language rule fires** ("FeatureMatch is mostly measuring style, not interpretability") | **yes, probability about 0.75**, mostly through Q_SR or the stop rule (P13, p ~0.7); Q_D alone would trigger it with p ~0.5 | P44, P45 |
