@@ -263,3 +263,16 @@ events, orchestration decisions and gate summaries, with links.
 - Guards: 16 GB swap (/swapfile, in fstab); user-1000.slice MemoryHigh=24G, MemoryMax=26G (persistent), so a
   runaway job is killed inside the slice instead of taking the system down; per-job caps via systemd-run scopes;
   rules in BUILDER_GUIDE "Memory". Disk is now 86% used (swap file takes 16 GB).
+
+## 2026-10-02 04:00 UTC: interrupted workflow stages relaunched (new session, after the crash)
+- The crash killed the previous orchestrator session (e4652089). Finished before the crash: ideation, wave-1 harness/science/
+  integrate/audit, wave-2 build/audit (6 tasks), FeatureMatch forensics, diagnosis phase A and step-1b prep.
+  Interrupted mid-stage at ~03:10: fix:featurematch (wave 1; gates already committed at 3f3252c, waiting on the
+  harness retry stream), fix:shifthunt and fix:latentdiff (wave 2; gate/API-probe runs in flight).
+- A cross-session resume (journals copied into the new session) missed the cache after the first stage and began
+  re-running finished audits and science stages. I stopped it within about a minute. No files were changed (checked by mtime).
+- Relaunched as continuation workflow wf_a83c544f-8d1: the three fix agents only, each with its ORIGINAL fix prompt
+  (same report and audit text from the old journals) plus a crash-recovery note (predecessor's last actions, treat
+  ~03:10 run dirs as interrupted, memory rules, do not touch featurematch instances/cache).
+- The FeatureMatch diagnosis continues with two background builders: the step-2 filter conformance fix (PREREG A1.1) and the
+  step-3 style-robust recipe.
