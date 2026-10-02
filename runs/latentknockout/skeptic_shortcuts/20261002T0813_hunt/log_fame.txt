@@ -1,0 +1,25 @@
+Running scope as unit: run-r6df54279b30549c58598aa0b2a7f69b7.scope
+{"source": "train-00000-of-00002.parquet", "n_chars": 269699268, "count": {"Arabic": 572, "Pennsylvania": 2779, "Phoenix": 981, "baseball": 2255, "Dutch": 3155, "Washington": 7257, "Florida": 4944, "Spanish": 5507, "German": 13954, "English": 12817, "Italian": 4335, "Polish": 3554, "Atlanta": 1176, "Sacramento": 376, "Lansing": 198, "Olympia": 131, "New York": 15702, "Ohio": 2402, "Illinois": 2013, "Albany": 945, "Russian": 4337, "Tallahassee": 61, "California": 6457, "Georgia": 2152, "French": 14673, "tennis": 637, "basketball": 1498, "golf": 615, "Austin": 908, "Boston": 3715, "soccer": 369, "Arizona": 1262, "Texas": 4650, "Michigan": 4149, "Turkish": 1515, "Columbus": 555, "Massachusetts": 2237, "Harrisburg": 99, "hockey": 1296, "Springfield": 735, "Portuguese": 975}, "token_id": {"Arabic": 39525, "Pennsylvania": 18418, "Phoenix": 29738, "baseball": 23052, "Dutch": 21047, "Washington": 7049, "Florida": 11651, "Spanish": 13035, "German": 5132, "English": 4645, "Italian": 12710, "Polish": 32080, "Atlanta": 27192, "Sacramento": 43939, "Lansing": 83496, "Olympia": 85687, "New York": 1622, "Ohio": 13128, "Illinois": 14274, "Albany": 48794, "Russian": 11200, "Tallahassee": 161316, "California": 6092, "Georgia": 17392, "French": 6987, "tennis": 22560, "basketball": 21474, "golf": 13162, "Austin": 22605, "Boston": 12965, "soccer": 25882, "Arizona": 21823, "Texas": 9447, "Michigan": 13226, "Turkish": 31526, "Columbus": 34602, "Massachusetts": 21103, "Harrisburg": 132168, "hockey": 33280, "Springfield": 46777, "Portuguese": 38275}}
+	Command being timed: "/opt/pytorch/bin/python -m tasks.latentknockout.skeptic_shortcuts.fame runs/latentknockout/skeptic_shortcuts/20261002T0813_hunt/fame.json"
+	User time (seconds): 141.44
+	System time (seconds): 1.25
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:22.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1279652
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 403255
+	Voluntary context switches: 629
+	Involuntary context switches: 947
+	Swaps: 0
+	File system inputs: 307816
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

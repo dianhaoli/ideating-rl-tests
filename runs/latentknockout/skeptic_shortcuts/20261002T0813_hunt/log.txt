@@ -1,0 +1,60 @@
+Running scope as unit: run-r54039aa597c94392bf90f74260986149.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   8%|▊         | 24/288 [00:00<00:01, 239.85it/s]Loading weights:  32%|███▏      | 91/288 [00:00<00:00, 483.52it/s]Loading weights:  55%|█████▍    | 158/288 [00:00<00:00, 563.41it/s]Loading weights:  78%|███████▊  | 225/288 [00:00<00:00, 600.56it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 582.61it/s]
+08:55:10 city_state Pennsylvania L12 feasible 76.9s
+08:56:34 city_state Michigan L12 null 84.0s
+08:57:56 city_state Illinois L12 feasible 81.3s
+08:58:58 city_state Georgia L12 feasible 62.4s
+09:00:01 city_state Washington L12 null 62.9s
+09:00:58 city_state Massachusetts L12 feasible 57.0s
+09:02:06 city_capital California L12 feasible 68.1s
+09:03:27 city_capital Florida L12 feasible 80.7s
+09:04:30 city_capital Ohio L12 feasible 62.8s
+09:05:30 city_capital Pennsylvania L12 feasible 60.2s
+09:06:32 city_capital Michigan L12 null 62.2s
+09:07:29 city_capital Illinois L12 feasible 56.4s
+09:08:39 city_capital Georgia L12 feasible 69.7s
+09:09:42 city_capital Washington L12 null 63.8s
+09:10:37 city_capital Massachusetts L12 feasible 54.5s
+09:11:34 country_lang Spanish L12 null 57.2s
+09:12:28 country_lang Arabic L12 feasible 53.4s
+09:13:14 country_lang French L12 feasible 45.9s
+09:13:45 country_lang Portuguese L12 feasible 31.8s
+09:14:21 country_lang English L12 null 35.7s
+09:14:59 athlete_sport basketball L12 null 38.2s
+09:15:35 athlete_sport soccer L12 null 35.5s
+09:16:13 athlete_sport tennis L12 null 38.2s
+09:16:52 athlete_sport golf L12 null 39.2s
+09:17:30 athlete_sport baseball L12 null 37.2s
+09:18:33 langid French L12 null 62.8s
+09:19:33 langid Spanish L12 null 60.7s
+09:20:32 langid German L12 null 59.1s
+09:21:29 langid Italian L12 feasible 56.0s
+09:22:27 langid Portuguese L12 feasible 58.0s
+09:23:26 langid Dutch L12 feasible 59.2s
+09:24:23 langid Polish L12 feasible 57.5s
+09:25:19 langid Turkish L12 feasible 55.6s
+done 1894s peak_gpu 7.13 GB peak_rss 6.31 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --label latentknockout-shortcuthunt -- /opt/pytorch/bin/python -m tasks.latentknockout.skeptic_shortcuts.hunt runs/latentknockout/20261002T0636_validate2/validated.json runs/latentknockout/20261002T0642_sweep runs/latentknockout/skeptic_shortcuts/20261002T0813_hunt/cells --layers 12"
+	User time (seconds): 1879.23
+	System time (seconds): 6.84
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 31:37.61
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6305616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 568708
+	Voluntary context switches: 41572
+	Involuntary context switches: 16596
+	Swaps: 0
+	File system inputs: 13304
+	File system outputs: 7928
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

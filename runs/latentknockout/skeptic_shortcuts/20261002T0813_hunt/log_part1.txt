@@ -1,0 +1,42 @@
+Running scope as unit: run-r26b917d1f84e489ab5f335fc082fa589.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   3%|▎         | 9/288 [00:00<00:03, 89.48it/s]Loading weights:  30%|██▉       | 86/288 [00:00<00:00, 486.08it/s]Loading weights:  58%|█████▊    | 168/288 [00:00<00:00, 629.43it/s]Loading weights:  85%|████████▌ | 246/288 [00:00<00:00, 680.96it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 634.58it/s]
+08:14:08 city_state Texas L18 null 31.3s
+08:14:39 city_state California L18 null 30.6s
+08:15:08 city_state Florida L18 null 29.6s
+08:15:38 city_state New York L18 null 29.9s
+08:16:07 city_state Ohio L18 feasible 28.9s
+08:16:36 city_state Pennsylvania L18 null 28.6s
+08:17:06 city_state Michigan L18 feasible 29.8s
+08:17:35 city_state Illinois L18 feasible 28.9s
+08:18:03 city_state Georgia L18 feasible 27.9s
+08:18:32 city_state Arizona L18 feasible 29.4s
+08:19:11 city_state Washington L18 feasible 38.9s
+08:19:55 city_state Massachusetts L18 feasible 43.4s
+08:20:39 city_capital Texas L18 feasible 44.6s
+08:21:27 city_capital California L18 feasible 47.3s
+08:22:25 city_capital Florida L18 null 57.9s
+08:23:13 city_capital Ohio L18 feasible 48.7s
+08:24:10 city_capital Pennsylvania L18 null 57.0s
+08:25:03 city_capital Illinois L18 feasible 52.4s
+08:25:53 city_capital Georgia L18 feasible 50.6s
+08:26:39 city_capital Arizona L18 feasible 45.9s
+08:27:30 city_capital Washington L18 feasible 50.6s
+08:28:13 city_capital Massachusetts L18 feasible 43.0s
+08:28:56 country_lang Arabic L18 null 42.9s
+08:29:35 country_lang French L18 feasible 39.2s
+08:30:24 country_lang Portuguese L18 feasible 49.2s
+08:31:11 country_lang English L18 null 46.7s
+08:32:02 athlete_sport soccer L18 null 50.3s
+08:32:48 athlete_sport tennis L18 null 46.5s
+08:33:34 athlete_sport golf L18 feasible 46.0s
+08:34:15 athlete_sport baseball L18 null 40.9s
+08:34:57 athlete_sport hockey L18 feasible 41.7s
+08:35:52 langid French L18 feasible 55.3s
+08:36:52 langid Spanish L18 feasible 59.6s
+08:37:46 langid Italian L18 feasible 53.9s
+08:38:37 langid Portuguese L18 feasible 51.0s
+08:39:34 langid Dutch L18 feasible 57.0s
+08:40:27 city_state Texas L12 null 52.6s
+08:41:22 city_state Florida L12 null 55.5s
+08:42:22 city_state New York L12 null 59.6s
+08:43:26 city_state Ohio L12 feasible 63.6s

@@ -1,0 +1,100 @@
+Running scope as unit: run-r658fca014cde4031826d8be48fb3fe9a.scope
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   6%|▌         | 16/288 [00:00<00:01, 158.17it/s]Loading weights:  34%|███▍      | 98/288 [00:00<00:00, 545.34it/s]Loading weights:  61%|██████    | 176/288 [00:00<00:00, 650.80it/s]Loading weights:  87%|████████▋ | 250/288 [00:00<00:00, 685.83it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 647.44it/s]
+09:25:33 athlete_sport baseball L18 2.9s {'name_ans_k5': [11190, 15269, 5540, 2544, 11267], 'name_grp_k5': [11190, 15269, 5540, 2544, 11267]}
+09:25:35 athlete_sport golf L18 2.1s {'name_ans_k5': [1387, 6030, 2341, 78, 4672], 'name_grp_k5': [1387, 6030, 2341, 78, 4672]}
+09:25:37 athlete_sport hockey L18 2.0s {'name_ans_k5': [7355, 10136, 12164, 11759, 10629], 'name_grp_k5': [7355, 10136, 12164, 11759, 10629]}
+09:25:39 athlete_sport soccer L18 2.1s {'name_ans_k5': [11088, 13224, 16095, 1228, 12490], 'name_grp_k5': [11088, 13224, 16095, 1228, 12490]}
+09:25:41 athlete_sport tennis L18 2.1s {'name_ans_k5': [1823, 13727, 2762, 12334, 2248], 'name_grp_k5': [1823, 13727, 2762, 12334, 2248]}
+09:25:46 city_capital Arizona L18 4.8s {'name_ans_k5': [10472, 11371, 3825, 4558, 5502], 'name_grp_k5': [10472, 10649, 16119, 13519, 3183]}
+09:25:48 city_capital California L18 2.1s {'name_ans_k5': [11513, 9476, 13248, 12490, 746], 'name_grp_k5': [12604, 11513, 8712, 4618, 5474]}
+09:25:50 city_capital Florida L18 2.1s {'name_ans_k5': [13727, 5386, 15026, 11447, 16257], 'name_grp_k5': [10984, 14796, 15026, 12896, 3564]}
+09:25:52 city_capital Georgia L18 2.0s {'name_ans_k5': [5465, 8938, 10636, 1132, 746], 'name_grp_k5': [2341, 5465, 12479, 14133, 13090]}
+09:25:54 city_capital Illinois L18 2.0s {'name_ans_k5': [584, 9381, 5369, 11267, 5338], 'name_grp_k5': [14792, 6690, 4884, 15756, 2762]}
+09:25:56 city_capital Massachusetts L18 1.9s {'name_ans_k5': [16377, 10636, 8750, 5540, 1591], 'name_grp_k5': [6139, 16377, 6145, 2762, 8932]}
+09:25:58 city_capital Ohio L18 2.0s {'name_ans_k5': [6694, 2762, 11416, 2157, 12955], 'name_grp_k5': [15214, 1467, 11416, 7405, 1756]}
+09:26:00 city_capital Pennsylvania L18 2.2s {'name_ans_k5': [10136, 16257, 2601, 2074, 8298], 'name_grp_k5': [6133, 16257, 8298, 1153, 4558]}
+09:26:02 city_capital Texas L18 2.1s {'name_ans_k5': [13331, 12514, 14309, 16336, 10957], 'name_grp_k5': [13331, 11108, 13727, 2762, 5502]}
+09:26:05 city_capital Washington L18 2.1s {'name_ans_k5': [1467, 10228, 10379, 7863, 8019], 'name_grp_k5': [10636, 3995, 1450, 4024, 11570]}
+09:26:07 city_state Arizona L18 2.0s {'name_ans_k5': [10472, 10649, 16119, 13519, 3183], 'name_grp_k5': [10472, 10649, 16119, 13519, 3183]}
+09:26:09 city_state California L18 2.0s {'name_ans_k5': [12604, 11513, 8712, 4618, 5474], 'name_grp_k5': [12604, 11513, 8712, 4618, 5474]}
+09:26:11 city_state Florida L18 2.0s {'name_ans_k5': [10984, 14796, 15026, 12896, 3564], 'name_grp_k5': [10984, 14796, 15026, 12896, 3564]}
+09:26:13 city_state Georgia L18 1.9s {'name_ans_k5': [2341, 5465, 12479, 14133, 13090], 'name_grp_k5': [2341, 5465, 12479, 14133, 13090]}
+09:26:15 city_state Illinois L18 2.0s {'name_ans_k5': [14792, 6690, 4884, 15756, 2762], 'name_grp_k5': [14792, 6690, 4884, 15756, 2762]}
+09:26:17 city_state Massachusetts L18 1.9s {'name_ans_k5': [6139, 16377, 6145, 2762, 8932], 'name_grp_k5': [6139, 16377, 6145, 2762, 8932]}
+09:26:19 city_state Michigan L18 2.0s {'name_ans_k5': [14868, 6145, 6985, 8627, 15907], 'name_grp_k5': [14868, 6145, 6985, 8627, 15907]}
+09:26:21 city_state New York L18 2.1s {'name_ans_k5': [12401, 2384, 15249, 7373, 10636], 'name_grp_k5': [12401, 2384, 15249, 7373, 10636]}
+09:26:23 city_state Ohio L18 1.9s {'name_ans_k5': [15214, 1467, 11416, 7405, 1756], 'name_grp_k5': [15214, 1467, 11416, 7405, 1756]}
+09:26:25 city_state Pennsylvania L18 2.0s {'name_ans_k5': [6133, 16257, 8298, 1153, 4558], 'name_grp_k5': [6133, 16257, 8298, 1153, 4558]}
+09:26:27 city_state Texas L18 2.0s {'name_ans_k5': [13331, 11108, 13727, 2762, 5502], 'name_grp_k5': [13331, 11108, 13727, 2762, 5502]}
+09:26:29 city_state Washington L18 2.0s {'name_ans_k5': [10636, 3995, 1450, 4024, 11570], 'name_grp_k5': [10636, 3995, 1450, 4024, 11570]}
+09:26:31 country_lang Arabic L18 2.7s {'name_ans_k5': [9350, 13519, 9360, 592, 16119], 'name_grp_k5': [9350, 13519, 9360, 592, 16119]}
+09:26:33 country_lang English L18 1.8s {'name_ans_k5': [9724, 9877, 6781, 9350, 5549], 'name_grp_k5': [9724, 9877, 6781, 9350, 5549]}
+09:26:35 country_lang French L18 1.9s {'name_ans_k5': [3533, 14796, 4633, 6638, 12009], 'name_grp_k5': [3533, 14796, 4633, 6638, 12009]}
+09:26:37 country_lang Portuguese L18 1.7s {'name_ans_k5': [7825, 15933, 6876, 4558, 3183], 'name_grp_k5': [7825, 15933, 6876, 4558, 3183]}
+09:26:40 langid Dutch L18 3.6s {'name_ans_k5': [801, 11334, 2742, 8627, 14540], 'name_grp_k5': [801, 11334, 2742, 8627, 14540]}
+09:26:44 langid French L18 3.2s {'name_ans_k5': [3533, 14796, 4633, 6638, 9724], 'name_grp_k5': [3533, 14796, 4633, 6638, 9724]}
+09:26:47 langid Italian L18 3.1s {'name_ans_k5': [2515, 6690, 13105, 16297, 750], 'name_grp_k5': [2515, 6690, 13105, 16297, 750]}
+09:26:50 langid Portuguese L18 3.2s {'name_ans_k5': [7825, 15933, 6876, 4558, 3954], 'name_grp_k5': [7825, 15933, 6876, 4558, 3954]}
+09:26:53 langid Spanish L18 3.1s {'name_ans_k5': [9381, 6876, 13211, 12009, 9350], 'name_grp_k5': [9381, 6876, 13211, 12009, 9350]}
+09:26:56 athlete_sport baseball L12 2.9s {'name_ans_k5': [15979, 8875, 5177, 13722, 13496], 'name_grp_k5': [15979, 8875, 5177, 13722, 13496]}
+09:26:59 athlete_sport basketball L12 2.5s {'name_ans_k5': [7592, 11592, 13606, 9339, 13496], 'name_grp_k5': [7592, 11592, 13606, 9339, 13496]}
+09:27:01 athlete_sport golf L12 2.4s {'name_ans_k5': [7999, 10794, 8363, 4984, 12839], 'name_grp_k5': [7999, 10794, 8363, 4984, 12839]}
+09:27:04 athlete_sport soccer L12 2.4s {'name_ans_k5': [3245, 6229, 2612, 357, 3819], 'name_grp_k5': [3245, 6229, 2612, 357, 3819]}
+09:27:06 athlete_sport tennis L12 2.5s {'name_ans_k5': [11259, 6355, 3989, 7627, 3832], 'name_grp_k5': [11259, 6355, 3989, 7627, 3832]}
+09:27:11 city_capital California L12 4.5s {'name_ans_k5': [3449, 5215, 4667, 6508, 259], 'name_grp_k5': [3449, 14683, 15631, 7857, 2613]}
+09:27:13 city_capital Florida L12 2.5s {'name_ans_k5': [4939, 6355, 12554, 16282, 9340], 'name_grp_k5': [4939, 1920, 10676, 1966, 13001]}
+09:27:15 city_capital Georgia L12 2.3s {'name_ans_k5': [11127, 4667, 11993, 12772, 4697], 'name_grp_k5': [11127, 4984, 11993, 4697, 10518]}
+09:27:18 city_capital Illinois L12 2.4s {'name_ans_k5': [15850, 11675, 11591, 15337, 15614], 'name_grp_k5': [9028, 11904, 14633, 10324, 15337]}
+09:27:20 city_capital Massachusetts L12 2.2s {'name_ans_k5': [5758, 4667, 12772, 13496, 136], 'name_grp_k5': [5758, 8406, 9340, 10931, 16367]}
+09:27:23 city_capital Michigan L12 2.6s {'name_ans_k5': [205, 7498, 1330, 9990, 5459], 'name_grp_k5': [13819, 9990, 7498, 10931, 10641]}
+09:27:25 city_capital Ohio L12 2.4s {'name_ans_k5': [14407, 5633, 10641, 1165, 7214], 'name_grp_k5': [10641, 12334, 1418, 572, 1966]}
+09:27:28 city_capital Pennsylvania L12 2.6s {'name_ans_k5': [680, 10486, 12554, 11675, 13252], 'name_grp_k5': [680, 12186, 3485, 9340, 11430]}
+09:27:30 city_capital Washington L12 2.5s {'name_ans_k5': [10518, 12334, 6810, 4667, 13464], 'name_grp_k5': [11863, 2397, 2500, 12842, 1891]}
+09:27:33 city_state Florida L12 2.4s {'name_ans_k5': [4939, 1920, 10676, 1966, 13001], 'name_grp_k5': [4939, 1920, 10676, 1966, 13001]}
+09:27:35 city_state Georgia L12 2.3s {'name_ans_k5': [11127, 4984, 11993, 4697, 10518], 'name_grp_k5': [11127, 4984, 11993, 4697, 10518]}
+09:27:37 city_state Illinois L12 2.4s {'name_ans_k5': [9028, 11904, 14633, 10324, 15337], 'name_grp_k5': [9028, 11904, 14633, 10324, 15337]}
+09:27:40 city_state Massachusetts L12 2.3s {'name_ans_k5': [5758, 8406, 9340, 10931, 16367], 'name_grp_k5': [5758, 8406, 9340, 10931, 16367]}
+09:27:42 city_state Michigan L12 2.5s {'name_ans_k5': [13819, 9990, 7498, 10931, 10641], 'name_grp_k5': [13819, 9990, 7498, 10931, 10641]}
+09:27:45 city_state New York L12 2.4s {'name_ans_k5': [7078, 6510, 10005, 6810, 12772], 'name_grp_k5': [7078, 6510, 10005, 6810, 12772]}
+09:27:47 city_state Ohio L12 2.3s {'name_ans_k5': [10641, 12334, 1418, 572, 1966], 'name_grp_k5': [10641, 12334, 1418, 572, 1966]}
+09:27:49 city_state Pennsylvania L12 2.4s {'name_ans_k5': [680, 12186, 3485, 9340, 11430], 'name_grp_k5': [680, 12186, 3485, 9340, 11430]}
+09:27:52 city_state Texas L12 2.4s {'name_ans_k5': [1114, 6355, 2051, 11993, 1966], 'name_grp_k5': [1114, 6355, 2051, 11993, 1966]}
+09:27:54 city_state Washington L12 2.4s {'name_ans_k5': [11863, 2397, 2500, 12842, 1891], 'name_grp_k5': [11863, 2397, 2500, 12842, 1891]}
+09:27:57 country_lang Arabic L12 2.8s {'name_ans_k5': [7630, 1041, 4673, 6622, 13357], 'name_grp_k5': [7630, 1041, 4673, 6622, 13357]}
+09:27:59 country_lang English L12 2.1s {'name_ans_k5': [2739, 7751, 15921, 11087, 3560], 'name_grp_k5': [2739, 7751, 15921, 11087, 3560]}
+09:28:01 country_lang French L12 2.2s {'name_ans_k5': [3999, 9473, 1920, 6922, 11333], 'name_grp_k5': [3999, 9473, 1920, 6922, 11333]}
+09:28:03 country_lang Portuguese L12 2.0s {'name_ans_k5': [7943, 13730, 9340, 12186, 5758], 'name_grp_k5': [7943, 13730, 9340, 12186, 5758]}
+09:28:06 country_lang Spanish L12 2.2s {'name_ans_k5': [12734, 8459, 1549, 7371, 6023], 'name_grp_k5': [12734, 8459, 1549, 7371, 6023]}
+09:28:10 langid Dutch L12 4.2s {'name_ans_k5': [1932, 6210, 13075, 4586, 3705], 'name_grp_k5': [1932, 6210, 13075, 4586, 3705]}
+09:28:14 langid French L12 4.0s {'name_ans_k5': [3999, 9473, 1920, 6922, 10325], 'name_grp_k5': [3999, 9473, 1920, 6922, 10325]}
+09:28:18 langid German L12 4.0s {'name_ans_k5': [15072, 9937, 4984, 11333, 7963], 'name_grp_k5': [15072, 9937, 4984, 11333, 7963]}
+09:28:22 langid Italian L12 3.8s {'name_ans_k5': [15462, 4616, 1634, 14932, 12965], 'name_grp_k5': [15462, 4616, 1634, 14932, 12965]}
+09:28:26 langid Polish L12 3.9s {'name_ans_k5': [10247, 1855, 12186, 4983, 9614], 'name_grp_k5': [10247, 1855, 12186, 4983, 9614]}
+09:28:29 langid Portuguese L12 3.8s {'name_ans_k5': [7943, 13730, 9340, 5758, 4751], 'name_grp_k5': [7943, 13730, 9340, 5758, 4751]}
+09:28:33 langid Spanish L12 3.9s {'name_ans_k5': [12734, 8459, 1549, 7371, 6023], 'name_grp_k5': [12734, 8459, 1549, 7371, 6023]}
+09:28:37 langid Turkish L12 3.9s {'name_ans_k5': [5630, 6355, 15564, 7630, 1041], 'name_grp_k5': [5630, 6355, 15564, 7630, 1041]}
+done 195s peak_gpu 6.88 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 8 --label latentknockout-shortcuthunt2 -- /opt/pytorch/bin/python -m tasks.latentknockout.skeptic_shortcuts.hunt2 runs/latentknockout/20261002T0636_validate2/validated.json runs/latentknockout/skeptic_shortcuts/20261002T0813_hunt/cells"
+	User time (seconds): 194.89
+	System time (seconds): 4.42
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:18.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6281388
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 544598
+	Voluntary context switches: 7166
+	Involuntary context switches: 2060
+	Swaps: 0
+	File system inputs: 2496
+	File system outputs: 17152
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

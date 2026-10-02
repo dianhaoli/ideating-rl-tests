@@ -149,6 +149,18 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
   two gates; my probability that it passes them is ~0.35. Scripted example-objective verifier already gets ~0.48 of
   4-slot episodes, above the 10% recipe gate.
 
+## 2026-10-02T08:13Z Shortcut hunt started (skeptic pass on the recommended "LatentKnockout-Verify" design)
+- Goal: find CHEAP solvers (no search, no understanding) that pass the design in FEASIBILITY.md section 14, on its own
+  recommended cells: layers 12 and 18, 44 feasible cells (reference R >= 0.5) and 29 strict nulls (no method reaches
+  0.5 and the best set's 95% upper bound < 0.5). Files: tasks/latentknockout/skeptic_shortcuts/.
+- GPU job (hunt.py, one job, queue label latentknockout-shortcuthunt, 8 GB, RAM cap 8G): rebuilds each instance exactly
+  as sweep.py did (asserted against the stored held-out item list), builds latent sets with ~20 cheap recipes
+  (activation contrast, entity-token activation, logit-lens "say the answer" latents, format-cue latents, ID memorisers
+  from another split or the sister family, top-k attribution with k = 1..5) and scores them on the grader's held-out
+  items. It also scores every candidate on two self-made test sets the agent could build without the grader
+  (A: shown entities in new styles; B: new entities of the group in the shown styles) so that "verify, then submit or
+  say cannot" scripts can be simulated.
+
 ## 2026-10-02T08:20Z Independent reproduction started (skeptic pass on FEASIBILITY.md; files in skeptic_reproduce/)
 - Goal: re-implement the ablation and the R metric from scratch (kx.py; no import of lk_core / analyze), reproduce
   6 reported cells (reported reference set + cosine / naive / contrastive baselines, plus my own re-derived rankings
@@ -192,6 +204,15 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
 - Memory: every GPU job peaked at 6.28 GB RSS (memory-mapped bf16 model) under an 8G cap; GPU peak 7.8 GB of 9 GB
   requested; one job of mine at a time (the shortcut-hunt job shared the GPU, so runs were ~2x slower).
 
+## 2026-10-02T08:53Z Shortcut hunt: GPU job stopped by my own 30-min background limit, resumed
+- The first hunt.py job was launched as a background shell with the default 30-minute limit and was stopped at 08:43Z
+  after 41 of 73 cells (all 36 layer-18 cells, 5 layer-12 cells; every written cell file checked as valid JSON).
+  Cells are written one file each and the script skips finished cells, so it was relaunched for layer 12 only, chained
+  with hunt2.py (the "probe the concept's name" recipes). Lesson: give long background jobs an explicit timeout.
+- Reproduction check: for the 167 (cell, set) pairs where my rebuilt instance scores the same latent set as the
+  feasibility sweep (clean, contr_k5, naive_k5, cos_k5), held-out R_S agrees within 0.02 (mean 0.001; bf16 batching).
+- A second agent's GPU job (skeptic_reproduce) shares the GPU, so cells take ~55 s instead of ~30 s.
+
 ## 2026-10-02T09:16Z Reproduction finished (skeptic pass): strict-effect oracle and the other two "infeasible" cells
 - Strict-effect ORACLE (beam 1, ~72-latent pool, selected on the grader's held-out new-style items, then scored on my
   fresh prompts, which are out of sample). "Strict" = the answer must lose by >= 1 logit. Fresh R_strict at k = 5:
@@ -209,3 +230,30 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
   peak RSS 6.28 GB per job under an 8G scope cap. No activations saved; the largest file is 0.26 MB.
 - Not written: a separate FINDINGS.md (the subagent harness blocks report files); the ranked findings went to the
   orchestrator in the return message. Data: runs/latentknockout/skeptic/ (analysis_repro.md has every table).
+
+## 2026-10-02T09:30Z Shortcut hunt finished: cheap scripts pass the recommended design
+- Run: runs/latentknockout/skeptic_shortcuts/20261002T0813_hunt (cells/, tables.json, tables.md, fame.json). All 73
+  recommended cells (44 feasible, 29 null; 42 (family, group) pairs). No new recipe reached R >= 0.5 on any null
+  cell, so the null labels hold up against these methods.
+- Finding a set is easy. Share of feasible cells where the recipe's own set passes (R >= 0.5), k = 5, no search:
+  summed-activation contrast (SAE encode only, no gradients) 0.80 [0.66, 0.89]; logit lens restricted to active
+  latents 0.80; contrastive attribution 0.70; "encode the group's NAME in 4 neutral sentences" 0.68; logit lens on the
+  answer token with no prompt at all 0.66. Latents that fire on the template (format cues), the most active latents
+  and the most active latents on the entity's own tokens fail (0.00 / 0.09 / 0.16): the FeatureMatch lesson-2 trap
+  does not apply here. Most of these recipes contain the reference's first latent (0.86-0.98 of cells).
+- Deciding "cannot" is also easy. A script ranks latents 3 standard ways (top-1..5 each), ablates each set on 10-16
+  prompts about OTHER members of the group that it writes itself, picks the best, and answers "cannot" below a
+  threshold: 0.76 of 3-5-slot episodes [0.47, 0.94] (gate <= 0.10). With greedy prefixes and the extra rankings among
+  the candidates: 0.90 [0.63, 1.00]. With 60 forward passes per slot: 0.71 [0.46, 0.94]. Testing only on the shown
+  entities in new wordings: 0.56 [0.30, 0.81]. The feasibility report's own example-objective script: 0.52.
+- "Deceptive" nulls (look solved on the examples, J >= 0.6; 6 cells) do not help: the self-test scripts get 5-6 of
+  them right.
+- Memorisation: remembering which (family, group, layer) cells are null (labels only, IDs permuted) plus a fixed
+  layer rule: 0.90 of episodes. The reference set from another example split passes 0.88 of feasible cells, and the
+  set from the sister family (city -> state for city -> capital, language id for country -> language) 0.74.
+- Text statistics alone (family, layer, how often the group name occurs in wikitext, answer token id; no model run)
+  get 0.59 of null slots right; athlete -> sport is 80% null.
+- Peak RSS: hunt.py 6.31 GB (memory-mapped model), hunt2.py 6.28 GB, analysis 0.25 GB, fame.py 1.28 GB; GPU peak
+  7.13 GB of 8 GB requested, one job at a time. GPU time ~55 min (part 1 stopped at 30 min, see above).
+- Conclusion: LatentKnockout-Verify is a recipe task too. Its difficulty comes from thresholds and bookkeeping, not
+  from understanding the model's internals. The full findings with design fixes are in the returned report.
