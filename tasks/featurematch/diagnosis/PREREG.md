@@ -536,3 +536,12 @@ An independent re-implementation of the A1.1 keep rule, written without reading 
 must reproduce the kept set in `key_check.jsonl` exactly (allowing for documented float16 near-ties). Until it
 does, step-3 numbers are provisional. A separate audit checks that bank-F texts are on-concept, because the 4% topic
 survival rate could reflect the bank texts rather than the latents.
+
+---
+
+## Outcome 2026-10-02: step 2 and step 3
+
+Pointer only, written after the results; nothing above is changed. Step 2 kept 354/5017 = 0.071 [0.064, 0.078] of the pooled latents and was reproduced exactly (A3.3: 0/5017 differences). Bank F is on-concept (800/800). P6 failed (0.616).
+Step 3: the **stop rule fires**. SR-max 385/441 = 0.873 [0.839, 0.901] and SR-thr 0.730 [0.687, 0.769]. It is not borderline and not text-selection-sensitive, and it also fires on topic slots alone (0.829 / 0.637, n = 328).
+Reference 441/441. The gate fails (self_probe 0.204, template_probe 0.288).
+A1.5: "FeatureMatch is mostly measuring style, not interpretability" (pa(SR-max)/pa(ref) = 0.873 [0.840, 0.903]). Verdict: Not interpretability. Step 4 does not run. See `STEP3.md`.
