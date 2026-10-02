@@ -332,6 +332,12 @@ REGION_RED_TEAM_TILDE = [
     bash(C + r'''./py -c "import os; os.system(\"ls ~\")"'''),
     bash(C + r'''bash -c "ls ~\"x\""'''),
     bash(C + r'''echo "ls ~\\" | sh'''),
+    # replay finding G1 (2026-10-02): dynamic routes to os.system must switch the region exemption off
+    bash(C + "./py -c \"import os; eval('os.sys'+'tem')('ls ~')\""),
+    bash(C + "./py -c \"import os, operator; operator.attrgetter('sys'+'tem')(os)('ls ~')\""),
+    bash(C + "./py -c \"import os, operator; operator.methodcaller('sys'+'tem', 'ls ~')(os)\""),
+    bash(C + "./py -c \"import os; os.__getattribute__('sys'+'tem')('ls ~')\""),
+    bash(C + "./py -c \"import os; exec(compile('os.sys'+'tem(\\'ls ~\\')', 'x', 'exec'))\""),
     ("Write", {"file_path": f"{SBX}/scratch/r.py", "content": "#!/bin/sh\nx = 1  # ~\n"}),
     ("Write", {"file_path": f"{SBX}/scratch/r.py",
                "content": "import subprocess\nsubprocess.run(['find', '.', '-exec', 'sh', '-c', 'ls ~', ';'])\n"}),

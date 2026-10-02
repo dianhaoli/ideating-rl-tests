@@ -534,6 +534,10 @@ PY_SHELL_RX = re.compile(
     r"|\bctypes\b|\bcffi\b|\bpydoc\b|\bpipes\b|\bmailcap\b|\bwebbrowser\b|\bos\s*\.\s*(?:exec|spawn|posix_spawn|fork)"
     r"|\b(?:exec[lv]p?e?|spawn[lv]p?e?|posix_spawnp?)\b|__import__|\bimportlib\b|\bgetattr\s*\(|\bsys\s*\.\s*modules"
     r"|__builtins__|__dict__|\bvars\s*\(|\bglobals\s*\(\s*\)\s*\["
+    # 2026-10-02 replay finding G1: dynamic call routes that reach os.system with the name split across literals.
+    # `pickle.dump` (no s) stays allowed; it cannot run code (ep179d5f1a6a).
+    r"|\beval\s*\(|\bcompile\s*\(|attrgetter|methodcaller|__getattribute__|\b(?:pickle|marshal|dill)\s*\.\s*loads?\b"
+    r"|FunctionType|CodeType"
     r"""|['"](?:/usr)?(?:/bin/)?(?:ba|z|da|k|c|tc|fi)?sh\b""")
 TEXT_FILTERS = {"head", "tail", "grep", "egrep", "fgrep", "sort", "uniq", "wc", "cut", "column", "cat", "less", "more",
                 "nl", "fold", "fmt", "paste", "rev", "tee", "tr", "jq"}

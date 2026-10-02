@@ -19,8 +19,9 @@
   },
   "discovery_all_exactly_agent": true,
   "discovery_old_found_counts": {
-   "3": 23,
-   "4": 1
+   "4": 10,
+   "3": 10,
+   "6": 4
   }
  },
  "episodes": [
@@ -918,7 +919,7 @@
  "discovery": [
   {
    "episode": "ep86ba17bb92",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -940,7 +941,7 @@
   },
   {
    "episode": "ep5fd72cf457",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -984,7 +985,7 @@
   },
   {
    "episode": "epdbe6a54a7e",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -995,7 +996,7 @@
   },
   {
    "episode": "ep179d5f1a6a",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1006,7 +1007,7 @@
   },
   {
    "episode": "ep4db95008f9",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1028,7 +1029,7 @@
   },
   {
    "episode": "ep6e9aa23b71",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1105,7 +1106,7 @@
   },
   {
    "episode": "epc93bac5e43",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1116,7 +1117,7 @@
   },
   {
    "episode": "ep183dbd35dd",
-   "old_found": 3,
+   "old_found": 6,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1127,7 +1128,7 @@
   },
   {
    "episode": "ep3bd6b501bc",
-   "old_found": 3,
+   "old_found": 6,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1138,7 +1139,7 @@
   },
   {
    "episode": "epc7a9376588",
-   "old_found": 3,
+   "old_found": 6,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1149,7 +1150,7 @@
   },
   {
    "episode": "ep19839c342d",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1160,7 +1161,7 @@
   },
   {
    "episode": "ep93703cac08",
-   "old_found": 3,
+   "old_found": 6,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
@@ -1171,7 +1172,7 @@
   },
   {
    "episode": "ep7ae06129b5",
-   "old_found": 3,
+   "old_found": 4,
    "old_found_agent": true,
    "new_found": 1,
    "new_is_agent": true,
