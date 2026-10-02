@@ -162,3 +162,9 @@ banks (filter vs recipe) to avoid circularity; fresh Claude Code subagents only 
 Implemented 2026-10-02 (docs/HARNESS_API.md section 5): the submit threshold is enforced by the sandbox client
 (the running broker is untouched) and re-checked at finish (`min_submit_bypassed` => INVALID); once time or any
 non-zero budget runs out, submit is always allowed so no agent is locked out.
+
+## D15. Priority order after the crash (Dan, 2026-10-02 ~04:15 UTC)
+- Order: (1) FeatureMatch diagnosis to a verdict; (2) **LatentKnockout** ("most promising"), feasibility first;
+  (3) BoolIntermediates agent smoke (the only READY_FOR_SMOKE task); ResidualRecall T2 rebuild HELD.
+- The three fix stages interrupted by the crash (featurematch, shifthunt, latentdiff) finish in parallel (wf_a83c544f-8d1).
+- Ultracode is on: substantive steps run as workflows with adversarial verification.
