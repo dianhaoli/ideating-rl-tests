@@ -459,3 +459,18 @@ task branch (BI ffa48319+, SH 603778cf, LD 007c118e; none pushed). n is small: t
   a failed prep check, or the checkpoint.
 - Known exposure that remains: workflow-launched test agents still see the repo cwd, git status and recent commit subjects (no
   sandboxed launcher without bubblewrap/socat). This is documented, and it will be listed as a weakness in VALIDATION.md.
+
+## 2026-10-03 (~00:00 UTC): ShiftHunt prep stopped at the T2 gate; T1 scaled run + T2 fix launched (wf_96d109e5-27e)
+- Prep (wf_96595a2d-e3a) finished F4-F8, D1 (TASK.md "What relies means in numbers") and D2 (no bar change; margins.py), plus
+  harness 9d4d38c0 (pushed). **Exposure:** every one of the 56 earlier design-v3 instances has per-instance outcomes in committed run summaries
+  (and answer rows in local a90db0a7), so exposed_instances.json lists 59 ids. Fresh pools were built: T1b (16) and T2new (53 built).
+- **T1b gates PASS**: reference one-shot 16/16 [0.81, 1.0]; every recipe, the black-box control and every attack (including the disclosed-scale
+  variants) 0/16.
+- **T2 gate FAILS on the kept pool**: label-free reference one-shot 23/53 (43%). On the 23 kept, nothing / black-box / crosspool /
+  attrfp each pass 3/23 = 13% [0.045, 0.32]. On all 53 built, every non-reference solver is <= 3/53 = 5.7%. Cause: keeping only
+  reference-solved instances kept 3/3 all-null episodes (13% vs ~6.7% by design) and favoured attribution-easy instances (attrfp 2/20 kept
+  vs 0/30 dropped). Selection bias from a weak label-free reference (24/97 named planted slots below the bar).
+- **Decision (orchestrator):** split the tiers. (A) T1 scaled run now: 10 T1b instances x 2 = 20 episodes, predictions committed first,
+  checkpoint after 4, review + adversarial check. (B) In parallel, improve the label-free reference's T2 latent selection (no change to
+  tools/grader/generator/TASK.md), re-keep, check the bias, re-gate. Dropping the keep filter is reported only as a sensitivity check, because it would admit
+  instances not shown solvable through the tools.
