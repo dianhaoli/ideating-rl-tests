@@ -184,3 +184,7 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   subagents stay the launch method, with their wrapper and repo context documented as known contamination. Enabling
   the launcher needs `sudo dnf install -y bubblewrap socat` (Dan's call) plus the self-test in
   HARNESS_VERIFICATION section 10.
+
+## D17. After smoke run 1 (Dan, 2026-10-02 ~20:00 UTC)
+- Push ShiftHunt toward validation (n >= 20 fresh-agent episodes, >= 2 per instance) before Oct 8. Hold the BoolIntermediates
+  activations-only redesign, the LatentDiff matched-decoy redesign and the LatentKnockout-Strict gates.

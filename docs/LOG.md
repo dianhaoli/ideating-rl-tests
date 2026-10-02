@@ -430,3 +430,20 @@ task branch (BI ffa48319+, SH 603778cf, LD 007c118e; none pushed). n is small: t
   repo's git status and recent commit messages in their environment context. That is a contamination risk.
 - Next: harness fix workflow (F1-F3, including a sandboxed headless test-agent launcher if it can be made safe), then a re-audit of these 24.
   Task priorities after the smoke are Dan's call.
+
+## 2026-10-02 (~21:00 UTC): harness smoke fixes done; official re-audit 21/24 valid; Dan picks ShiftHunt to n >= 20
+- Workflow wf_c6af1340-fa5 (fix 02514eb4, replay 4fcb13cd). **F1** discovery now audits only the transcript whose first user
+  message IS the episode prompt (exact, or inside the documented workflow wrapper); none or several candidates give R0 INVALID. **F2** false
+  positives fixed ('~' / `| ps` / `; top` inside Python-only regions, /dev/stdin, exec( inside a sed regex, exec chains of literal
+  splits) with must-still-flag twins. The fixer's own red-team found and closed an older gap (`./py -c "...os.system(\"ls ~\")"` passed every earlier version).
+  **F3** headless sandboxed launcher NOT shipped: Claude Code's OS sandbox needs bubblewrap + socat (not installed). Without them a test
+  write outside the dir and a curl both succeeded, so it failed the safety test. Fallback: the wrapper is documented and `prompt_match` is recorded.
+  Enabling it later needs `sudo dnf install -y bubblewrap socat` (Dan's call) plus a launcher self-test.
+- Replay finding **G1** (the Python-region exemption missed eval/attrgetter/methodcaller/__getattribute__ routes): closed by me in
+  69a66c75 (guard tightened; 5 must-flag tests; replay of 59 transcripts unchanged; 383 tests pass).
+- **Process note:** three verifier/resolver agents (the red-team in wf_af386dd8-734, the diff review and the resolver here) declined to write
+  audit-evasion test inputs. Do not delegate "write inputs that get past the audit" again. Adversarial coverage comes from the
+  fixer's twin tests, the replay verifier's diff reasoning and my own targeted must-flag tests.
+- **Official re-audit** (runs/_harness/smoke1_reaudit.md): valid 21/24. BI 11/12 (11/11 pass), **SH 6/6 valid, 4/6 pass**, LD 4/6 (4/4 pass).
+  Remaining INVALID: one BI episode with real hits, and 2 LD episodes with still-open false positives.
+- Dan (D17): after the harness fix, push **ShiftHunt to n >= 20** only. BI and LD redesigns and LatentKnockout-Strict are held.
