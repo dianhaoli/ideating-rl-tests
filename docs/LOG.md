@@ -143,3 +143,63 @@ events, orchestration decisions and gate summaries, with links.
 - EditFind status from that handoff: the recipe gate passes (constant "nothing found" 1/36 T2, others 0/72). The
   reference gate is FAILING so far (prelim v2 3/11). It finds the edited subjects every time (rank 1 of 3000) but
   mis-picks the relation or new answer, or a decoy is not silent on unseen wordings. The integrator owns the fix.
+
+## 2026-10-01 18:45 UTC: EditFind status (relayed) and the duplicate-agent question
+- The editfind agent (a7c9e3b, which my 16:52 SendMessage had resumed) reported its grading redesign. Accepted answers
+  are recorded per edit, related-name claims are credited, and reference v4 plus the blackbox gates run unattended until about 19:20+.
+  Full relay: ~/wt/editfind/tasks/editfind/ORCH_RELAY.md (uncommitted file in that worktree).
+- I did NOT stop the resumed copy. The Wave-1 workflow journal shows science:editfind has not returned yet, and I
+  could not rule out that the resumed copy and the workflow's agent are the same agent. Stopping it might have killed
+  the workflow stage. It is idle except for its own background gate jobs.
+- Risk flagged for the integrator and auditor: the grader is now looser and some accepted answers are junk, which can
+  raise recipe/black-box pass rates. Those gates must be re-run after augmentation.
+
+## 2026-10-01 19:20 UTC: EditFind decision: rebuild the edit bank for specificity (last attempt before DROP)
+- Reference v4 on the final grader: T1 8/16 (Wilson 0.28-0.72), T2 9/16 (0.33-0.77). Null-slot FP 0.00. Recipes 0/36 except
+  "nothing found" T2 1/36 (runs/editfind/20261001-190458_prelim_reference_v4, ..._190457_prelim_recipes_cpu, editfind worktree).
+- Root cause (agent's analysis): the planted ground truth is under-specified. A ROME edit also moves same-named
+  neighbours (iPhone XS along with Lexus NX), its side effects depend on wording, and some edits barely move on new wordings.
+  A correct auditor's answer is therefore graded wrong about half the time. That is a task bug, not difficulty.
+- Decision (mine): rebuild the bank, keeping only *specific* edits (key-scan neighbours move <= 1 nat; only the edited
+  relation moves, to the target, on held-out wordings). Log per-relation survival and check the filter does not leave
+  only "easy" edits. Enlarge the pool >= 2x (memorisation risk). Time-box 1.5 h. If the reference is still < 95% after
+  this, editfind is DROP / "explored, not validated" (second gate failure for the same root cause).
+
+## 2026-10-01 19:55 UTC: EditFind DROP (explored, not validated)
+- The specificity rebuild kept **0/154** ROME edits, in all 10 relations (runs/editfind/20261001-193758_v5_bank_specificity,
+  editfind worktree, commit b6844c9). The blocking criterion is "only the edited relation moves". A layer-4 ROME edit moves
+  the subject's OTHER relations by a median of 7.4 nats (deciles 2.6-11.8). Neighbours-only keeps 71/154 and held-out-only 110/154.
+  Neighbours + held-out keeps 54/154, but that would mean grading every changed answer, i.e. a different task.
+- This is the second gate failure from the same root cause (an under-specified planted ground truth), so it is DROPPED per the plan.
+- What worked and is worth keeping: localisation. The corpus key-scan finds edited subjects (rank 1/3000), decoys are
+  rejected, null copies get no false claims, and recipes stay <= 1/36.
+- Finding worth telling Dan: "find the planted edit" tasks built on ROME inherit ROME's lack of specificity. The edit
+  is a change to the whole subject, not a single fact, so a pair-level answer key is ill-posed. Revival would need a
+  more specific editing method (e.g. MEMIT across several layers with a strong locality term, or fine-tuned single-fact
+  LoRAs validated for specificity). This is a transfer-relevant lesson for auditing benchmarks.
+- Coordination: copies of the resumed agent committed concurrently (16b627d, 6bcf82b, 84149f1). One used a lock file
+  to prevent a duplicate rebuild. The SendMessage-resumes-workflow-agent problem cost real confusion; see 18:10 entry.
+
+## 2026-10-01 20:05 UTC: FeatureMatch OpenAI probes, and GPU congestion now blocks agent measurement
+- 20261001-182038_openai_probe_orch (featurematch worktree): gpt-6-luna 0/3 and 3/4 slots (both FAIL; small-model signal is consistent).
+  Both gpt-6.1-sol episodes were starved by the GPU queue (5 tool calls in 90 min) and are excluded as an environment fault.
+- Lesson: with ~9 builders running gates, agent episodes on GPU-heavy tasks (7 GB tool servers) cannot be measured
+  reliably. Agent-measurement batches should run when builder load drops (after the build workflows finish), or in
+  dedicated windows. An overcommit change to gpuq that would have helped was denied by the permission classifier
+  (it touches a shared resource), so I left it alone and noted it for Dan.
+
+## 2026-10-02 00:50 UTC: FeatureMatch forensics (docs/forensics/FEATUREMATCH_PROBE_FORENSICS.md)
+- 12-agent workflow: per-episode slot forensics + independent skeptics + pool-wide answer-key check + synthesis.
+- Keys and grader are SOUND. In all 16 slots of the 4 valid episodes the key is the best menu concept on split C (never
+  used by the generator). Pool-wide key flips on C: 1/157 (v1), 1/431 (v2). Re-grading reproduced every slot.
+- All 7 misses are real agent errors. Each submitted with >= 37% of its compute unused, and 3 contradicted the agent's
+  own control probes. A task-side factor also contributed to each: style-dependent latents (MMA x2), a misleading label (skater),
+  and v1-only distractors / word-trap latents.
+- Sonnet: 5/8 planted slots right (Wilson 0.31-0.86), all nulls right. That sits between the fixed recipes (14-15%) and the
+  reference (96-97%). gpt-6-luna: 0/3 planted; its "3/4" was all null slots (scores 0 under the v2 product reward).
+- All agent data is on the RETIRED v1 pool. No agent has run on v2 yet.
+- Main open risk: style dependence. The 16:42 style check found only 50% of eligible latents pick out their own concept on
+  hand-written probes. Action before measurement: add a style-robustness filter to the generator (keep latents that
+  recover their concept on independently written probe texts).
+- Also: docs/PLAN_PROMPT.md had been truncated to 0 bytes (uncommitted, cause unknown, probably a stray write by an
+  agent). Restored from git.
