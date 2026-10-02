@@ -226,3 +226,6 @@ events, orchestration decisions and gate summaries, with links.
   before anything is built.
 - The FeatureMatch diagnosis phase A (wf_5412322c-af1) keeps running: PREREG, clarity, infra and style banks, mostly CPU.
   Its GPU-heavy agent arms are on HOLD pending Dan's call, since he now regards FeatureMatch as testing the wrong things.
+- 02:00 UTC: Dan set the order: finish the FeatureMatch investigation first, then LatentKnockout. The LatentKnockout
+  feasibility workflow was stopped after a few minutes (nothing committed beyond the design brief). It resumes after
+  the FeatureMatch verdict. FeatureMatch agent arms are back ON.
