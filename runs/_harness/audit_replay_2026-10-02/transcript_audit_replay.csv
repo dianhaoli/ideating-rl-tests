@@ -1,0 +1,36 @@
+episode,task,agent_model,run,copies,n_tool_calls,stored_valid,old_valid,new_valid,change,calls_removed,rules_removed,rules_added,rules_still_firing,removed_details
+epb8868b8fb7,_demo,api:claude-haiku-4-5,ideating-rl-tests/runs/_demo/20261001-152109_apiplumbing,13,7,True,True,True,none,0,,,,
+ep29d4c81bd8,_demo,api:claude-haiku-4-5,ideating-rl-tests/runs/_demo/20261001-165221_apiwarn,13,5,True,True,True,none,0,,,,
+ep82b070bf9b,_demo,api:claude-haiku-4-5,ideating-rl-tests/runs/_demo/20261001-173257_apisnapshot,13,5,True,True,True,none,0,,,,
+ep3c8a6bc117,_demo,openai:gpt-6-luna:medium,ideating-rl-tests/runs/_demo/20261001-181914_openai_plumbing,13,5,True,True,True,none,0,,,,
+ep46367f24ce,_demo,openai:gpt-6.1-sol:medium,ideating-rl-tests/runs/_demo/20261001-181914_openai_plumbing,13,3,True,True,True,none,0,,,,
+ep3f3725ff71,boolintermediates,api:claude-opus-5-5:medium,wt/boolintermediates/runs/boolintermediates/20261001-160600_apiprobe1,1,7,True,True,True,none,0,,,,
+ep6d9d6c6df7,boolintermediates,api:claude-opus-5-5:medium,wt/boolintermediates/runs/boolintermediates/20261001-160754_apiprobe2,1,8,True,False,True,flagged->clean,5,R9-obfuscationx5,,,exec()
+ep38c41640fd,boolintermediates,api:claude-opus-5-5:medium,wt/boolintermediates/runs/boolintermediates/20261001-161311_apiprobe3,1,10,True,False,True,flagged->clean,6,R9-obfuscationx6,,,exec()
+epaab50914de,boolintermediates,api:claude-opus-5-5:medium,wt/boolintermediates/runs/boolintermediates/20261001-164207_apiprobe4,1,11,True,True,True,none,0,,,,
+ep157f3953a8,featurematch,api:claude-opus-5-5:medium-ABORTED,wt/featurematch/runs/featurematch/20261001-165348_apiprobe_orch,1,3,True,True,True,none,0,,,,
+ep6cd5b8dd30,featurematch,api:claude-opus-5-5:medium-ABORTED,wt/featurematch/runs/featurematch/20261001-165348_apiprobe_orch,1,3,True,True,True,none,0,,,,
+ep2cd00804ab,featurematch,api:claude-sonnet-5-5:medium,wt/featurematch/runs/featurematch/20261001-171048_apiprobe_sonnet,1,10,False,True,True,none,0,,,,
+epcd8c604d31,featurematch,api:claude-sonnet-5-5:medium,wt/featurematch/runs/featurematch/20261001-171048_apiprobe_sonnet,1,8,True,True,True,none,0,,,,
+ep0746750a4f,featurematch,openai:gpt-6.1-sol:medium,wt/featurematch/runs/featurematch/20261001-182038_openai_probe_orch,1,12,True,True,True,none,0,,,,
+ep0f904f753d,featurematch,openai:gpt-6-luna:medium,wt/featurematch/runs/featurematch/20261001-182038_openai_probe_orch,1,20,True,True,True,none,0,,,,
+ep4980d0bf46,featurematch,openai:gpt-6.1-sol:medium,wt/featurematch/runs/featurematch/20261001-182038_openai_probe_orch,1,12,True,True,True,none,0,,,,
+epea26c30f2c,featurematch,openai:gpt-6-luna:medium,wt/featurematch/runs/featurematch/20261001-182038_openai_probe_orch,1,33,True,True,True,none,0,,,,
+ep440f6b9bf4,freqhunt,api:claude-sonnet-5-5:medium,wt/freqhunt/runs/freqhunt/20261001-172719_apiprobe_sonnet_orch,1,7,True,True,True,none,0,,,,
+epf7e00255e5,freqhunt,api:claude-sonnet-5-5:medium,wt/freqhunt/runs/freqhunt/20261001-172719_apiprobe_sonnet_orch,1,9,True,True,True,none,0,,,,
+ep27a091a362,latentdiff,api:claude-opus-5-5:medium,wt/latentdiff/runs/latentdiff/20261001-170517_apiprobe1,1,7,True,True,True,none,0,,,,
+epb7d011c482,latentdiff,api:claude-sonnet-5-5:medium,wt/latentdiff/runs/latentdiff/20261002-060146_apiprobe2_v31,1,13,False,False,True,flagged->clean,5,R9-obfuscationx5,,,exec()
+ep0965d14ab3,residualrecall,api:claude-sonnet-5-5:medium,wt/residualrecall/runs/residualrecall/20261001-174657_apiprobe1,1,17,False,False,True,flagged->clean,1,R4-networkx1,,,network client
+ep9e053b5898,residualrecall,api:claude-sonnet-5-5:medium,wt/residualrecall/runs/residualrecall/20261001-180352_apiprobe2,1,16,True,True,True,none,0,,,,
+ep99d08b74cc,residualrecall,api:claude-sonnet-5-5:medium,wt/residualrecall/runs/residualrecall/20261001-180406_apiprobe2,1,16,True,True,True,none,0,,,,
+ep9e37e0db6f,residualrecall,api:claude-sonnet-5-5:medium,wt/residualrecall/runs/residualrecall/20261002-014011_apiprobe3_v2,1,18,False,False,True,flagged->clean,4,R4-networkx4,,,network client
+ep7033a31ca6,shifthunt,api:claude-opus-5-5:medium,wt/shifthunt/runs/shifthunt/20261001-165026_apiprobe1,1,14,True,True,True,none,0,,,,
+ep06d3059e8f,shifthunt,api:claude-opus-5-5:medium,wt/shifthunt/runs/shifthunt/20261001-165406_apiprobe2,1,16,True,True,True,none,0,,,,
+ep1ff1bcf5e5,shifthunt,api:claude-haiku-4-5,wt/shifthunt/runs/shifthunt/20261001-173647_apiprobe3_haiku_T2,1,41,True,True,True,none,0,,,,
+epd698dfdf7e,shifthunt,api:claude-haiku-4-5,wt/shifthunt/runs/shifthunt/20261002-030835_apiprobe4_haiku_T1v3_INTERRUPTED,1,23,False,False,False,none,0,,,R2-pathx1,
+ep4c4ec4a6e0,silentpathway,api:claude-opus-5-5:medium,wt/silentpathway/runs/silentpathway/20261001-161143_apiprobe1,1,13,True,True,True,none,0,,,,
+ep29ef1a245b,silentpathway,api:claude-sonnet-5-5:medium,wt/silentpathway/runs/silentpathway/20261001-172716_apiprobe2_sonnet,1,10,False,False,True,flagged->clean,5,R2-pathx2;R9-obfuscationx4,,,exec() | path outside sandbox: /d | path outside sandbox: /print
+epa77175a9df,silentpathway,api:claude-sonnet-5-5:medium,wt/silentpathway/runs/silentpathway/20261001-174143_apiprobe3_sonnet,1,14,True,True,True,none,0,,,,
+ep13c6a7b805,silentpathway,api:claude-haiku-4-5:medium,wt/silentpathway/runs/silentpathway/20261001-174559_apiprobe4_haiku,1,25,False,False,True,flagged->clean,1,R2-pathx1,,,path outside sandbox: / (filesystem root)
+ep4063e0c9cd,t2ravel,api:claude-sonnet-5-5:medium,wt/t2ravel/runs/t2ravel/20261001-174447_apiprobe1,1,24,False,False,True,flagged->clean,1,R2-pathx1,,,path outside sandbox: / (filesystem root)
+ep3ab5ab5782,t2ravel,api:claude-sonnet-5-5:medium,wt/t2ravel/runs/t2ravel/20261001-175509_apiprobe2_easy,1,12,False,False,False,none,0,,,R2-pathx1,

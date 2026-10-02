@@ -1,0 +1,18 @@
+{
+ "old": "5d0f6fe1~1",
+ "new": "5d0f6fe1",
+ "episode_dirs": 95,
+ "unique_episodes": 35,
+ "dirs_old_to_new": {
+  "True->True": 85,
+  "False->True": 8,
+  "False->False": 2
+ },
+ "unique_old_to_new": {
+  "True->True": 25,
+  "False->True": 8,
+  "False->False": 2
+ },
+ "call_level_removed": 29,
+ "call_level_added": 0
+}
