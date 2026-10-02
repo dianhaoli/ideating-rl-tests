@@ -187,3 +187,19 @@ events, orchestration decisions and gate summaries, with links.
   reliably. Agent-measurement batches should run when builder load drops (after the build workflows finish), or in
   dedicated windows. An overcommit change to gpuq that would have helped was denied by the permission classifier
   (it touches a shared resource), so I left it alone and noted it for Dan.
+
+## 2026-10-02 00:50 UTC: FeatureMatch forensics (docs/forensics/FEATUREMATCH_PROBE_FORENSICS.md)
+- 12-agent workflow: per-episode slot forensics + independent skeptics + pool-wide answer-key check + synthesis.
+- Keys and grader are SOUND. In all 16 slots of the 4 valid episodes the key is the best menu concept on split C (never
+  used by the generator). Pool-wide key flips on C: 1/157 (v1), 1/431 (v2). Re-grading reproduced every slot.
+- All 7 misses are real agent errors. Each submitted with >= 37% of its compute unused, and 3 contradicted the agent's
+  own control probes. A task-side factor also contributed to each: style-dependent latents (MMA x2), a misleading label (skater),
+  and v1-only distractors / word-trap latents.
+- Sonnet: 5/8 planted slots right (Wilson 0.31-0.86), all nulls right. That sits between the fixed recipes (14-15%) and the
+  reference (96-97%). gpt-6-luna: 0/3 planted; its "3/4" was all null slots (scores 0 under the v2 product reward).
+- All agent data is on the RETIRED v1 pool. No agent has run on v2 yet.
+- Main open risk: style dependence. The 16:42 style check found only 50% of eligible latents pick out their own concept on
+  hand-written probes. Action before measurement: add a style-robustness filter to the generator (keep latents that
+  recover their concept on independently written probe texts).
+- Also: docs/PLAN_PROMPT.md had been truncated to 0 bytes (uncommitted, cause unknown, probably a stray write by an
+  agent). Restored from git.
