@@ -61,3 +61,24 @@ to test agents; do not call any hosted API; at most 2 GPU jobs, ~10 GB each (for
   style-robust recipe, step 3), so the recipe cannot pass merely by reusing the filter's own texts.
 - Test agents: workflow subagents with only the prepared prompt. Main model = the session's Opus-class model; small
   model = haiku (arm F). Transcripts are audited by common.transcript_audit; reads outside the sandbox invalidate.
+
+## STEP 1b (Dan, 2026-10-02 ~01:35 UTC): KEY DEFINITION AND DISCLOSURE (decide before Step 2). Binding.
+- The style-robustness filter is the MAIN VALIDITY FIX, not a cleanup. Redefine the answer key on a multi-style set
+  (encyclopedic dataset text plus casual, news, dialogue, listicle, ...): a latent's concept is the one it separates
+  best ACROSS STYLES, not on DBpedia-style text alone. Keep a planted slot only if the key is the same under this new
+  definition and the original one; log every slot where they differ.
+- Make top_latents and generate clearly documented in TASK.md (what they return and when they help), so that "see
+  what fires the latent" is a visible, measurable option, not a hidden trick. Record how often agents use them.
+- Add an arm that DISCLOSES in TASK.md how the key is defined ("options are disjoint dataset classes; the correct
+  option is the class the latent separates best across varied styles") vs an arm that does not. Same filtered pool.
+- In RESULTS.md, report how much of the pass rate the style-robust recipe and the oracle-examples arm explain. If
+  either explains most of it, say plainly that FeatureMatch is mostly measuring style, not interpretability.
+
+### Orchestrator implementation notes for 1b
+- Multi-style key: per concept, texts = dataset split A (encyclopedic) + bank F (10 styles x 2). To avoid defining and
+  checking the key on the same texts, split bank F per concept into F1 (one text per style) and F2 (the other): the
+  multi-style key is computed on A + F1; the "same under both definitions" check AND the AUROC >= 0.85 robustness filter
+  use C + F2 (held out from both key definitions). Bank R stays untouched for the style-robust recipe.
+- Arm G (disclosure): revised TASK.md + one disclosure paragraph (exact wording above) vs arm A (no disclosure).
+- PREREG and clarity outputs from phase A predate 1b: they get dated, pre-results amendments (PREREG addendum
+  "Amendment 1 (before any experiment)" and a clarity/TASK revision documenting top_latents/generate).
