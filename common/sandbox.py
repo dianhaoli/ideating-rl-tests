@@ -713,21 +713,39 @@ def _scan_tool_log(rec, log_path):
 # ended without a submission, was graded valid:true with score 0. Every reader (summaries, gates, RL rewards) then
 # counted an infrastructure problem as the solver failing the task, which biases every "must fail" gate toward
 # passing and every pass rate down. Such episodes are now INVALID with reason `infra_failure`.
-# Infrastructure-failure entries in the tool log (none of them can be produced by a tool's own error handling):
+# Infrastructure-failure entries in the tool log:
 #   - a response "tool server failed to start; try again later" (GPU-queue admission timeout, or the model load crashed);
-#   - the event client_disconnected_while_waiting (the client gave up, or was killed, while queued for compute);
 #   - the event server_stopped with reason "server died" or "found dead" (the tool-server process died: OOM, crash,
-#     RAM-cap kill; the in-flight call returned "tool failed (internal error)").
+#     RAM-cap kill; the in-flight call returned "tool failed (internal error)");
+#   - the event client_disconnected_while_waiting (the client gave up, or was killed, while queued for compute) --
+#     but this one is SERVER-side only for scripted solvers; see below.
 # The episode is `infra_failure` only if it has no submission AND no successful task-tool call came after the last
-# such entry (it never recovered). An episode that recovered and then ran out of time is an ordinary fail.
+# COUNTED entry (it never recovered). An episode that recovered and then ran out of time is an ordinary fail.
+#
+# WHY client disconnect is not infra for LLM episodes (audit_replay finding F2): the broker logs
+# `client_disconnected_while_waiting` whenever the client process dies while queued -- including when the agent's OWN
+# `timeout N ./tool <gpu tool>` expires (observed in residualrecall probe 3: `timeout 100`/`timeout 110` produced the
+# event at 100.01 s / 110.01 s). A failing LLM agent could make its last call `timeout 5 ./tool <gpu tool>` while a
+# queue exists and then not submit, turning a scored fail into INVALID `infra_failure` and skewing "must fail" gates
+# and RL rewards -- the exact bias this reason was meant to remove. The tool log cannot tell an agent-issued timeout
+# from the agent runner's own ~900 s command limit (api_agent.py), and an elapsed-time threshold is just as forgeable
+# (the agent can pick `timeout 910`). So for LLM episodes we count only SERVER-side failures, which the agent cannot
+# manufacture at will: `server_failed_to_start` and `server died`/`found dead`. Scripted solvers are trusted builder
+# code (not the adversarial side) and also get `no_successful_call`/`solver_failed`, so their client disconnects --
+# the run-scripted driver's 1800 s wait limit giving up under real contention -- still count.
+# Residual limitation: a server OOM/`server died` that an LLM agent deliberately induced and then abandons would
+# still read as infra; inducing it is far harder than a `timeout` and is self-limited by the per-call budget and the
+# server RAM cap, so it is left as a documented gap rather than guessed at from the log.
 INFRA_ERROR_PREFIXES = ("tool server failed to start",)
-INFRA_EVENTS = ("client_disconnected_while_waiting",)
 INFRA_STOP_REASONS = ("server died", "found dead")
+CLIENT_DISCONNECT_EVENT = "client_disconnected_while_waiting"
 BUILTIN_TOOLS = ("help", "budget", "submit")
 
 
-def tool_log_health(log_path):
-    """{"infra_failures": [{"n", "kind"}], "n_ok_task_calls": int, "recovered": bool} from a tool log."""
+def tool_log_health(log_path, client_disconnect_is_infra=True):
+    """{"infra_failures": [{"n", "kind"}], "n_ok_task_calls": int, "recovered": bool} from a tool log.
+    client_disconnect_is_infra=False (LLM episodes) ignores `client_disconnected_while_waiting`, which the agent can
+    trigger itself with `timeout N ./tool ...` (finding F2); only server-side failures then count."""
     fails, n_ok, recovered = [], 0, True
     try:
         f = open(log_path)
@@ -740,7 +758,7 @@ def tool_log_health(log_path):
             except json.JSONDecodeError:
                 continue
             kind = None
-            if e.get("event") in INFRA_EVENTS:
+            if e.get("event") == CLIENT_DISCONNECT_EVENT and client_disconnect_is_infra:
                 kind = e["event"]
             elif e.get("event") == "server_stopped" and e.get("reason") in INFRA_STOP_REASONS:
                 kind = "server_" + e["reason"].replace(" ", "_")
@@ -824,7 +842,9 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
     if msc and msc["bypassed"]:
         invalid.append("min_submit_bypassed")
     submitted = rec.get("submission") is not None
-    health = tool_log_health(log_dst)
+    # F2: for LLM episodes a client disconnect is not infra (the agent can cause it with `timeout N ./tool`); only
+    # server-side failures count. Scripted solvers are trusted and also gated by no_successful_call/solver_failed.
+    health = tool_log_health(log_dst, client_disconnect_is_infra=not is_llm)
     if not submitted and health["infra_failures"] and not health["recovered"]:
         invalid.append("infra_failure")
     if solver_rc is not None:

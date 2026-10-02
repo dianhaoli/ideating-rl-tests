@@ -1,13 +1,18 @@
-"""Synthetic old-vs-new probes for the 2026-10-02 audit loosening (commit 5d0f6fe1).
+"""Synthetic probes for the 2026-10-02 audit loosening. Three revisions:
+  OLD    = 5d0f6fe1~1  (before any loosening)
+  FIRST  = 5d0f6fe1    (the first fix; audit_replay found F1 here: real network commands slipped through)
+  FIXED  = the working tree (F1 tightened: R4 defaults to firing, carving out only Python-name uses)
 
     python runs/_harness/audit_replay_2026-10-02/regression_probes.py > regression_probes.txt
 
 No recorded episode contains these commands. Each one is checked as a Bash call that starts with
-`cd <sandbox> &&` (as every agent is told to do). LOOSER = flagged by the old audit, not by the new one.
+`cd <sandbox> &&` (as every agent is told to do). A `breach=True` case must be flagged in the FIXED
+column; the script exits non-zero if any is not (so this doubles as a regression check).
 """
 import importlib.util
 import os
 import subprocess
+import sys
 import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -15,15 +20,24 @@ REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 SB = "/home/ec2-user/rlsbx/epTEST000001"
 
 
-def load_rev(rev, tmp):
-    src = subprocess.run(["git", "-C", REPO, "show", f"{rev}:common/transcript_audit.py"], check=True,
-                         capture_output=True, text=True).stdout
-    p = os.path.join(tmp, "ta_" + rev.replace("~", "_") + ".py")
+def _load(src, name, tmp):
+    p = os.path.join(tmp, name + ".py")
     open(p, "w").write(src)
-    spec = importlib.util.spec_from_file_location(os.path.basename(p)[:-3], p)
+    spec = importlib.util.spec_from_file_location(name, p)
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
     return m
+
+
+def load_rev(rev, tmp):
+    src = subprocess.run(["git", "-C", REPO, "show", f"{rev}:common/transcript_audit.py"], check=True,
+                         capture_output=True, text=True).stdout
+    return _load(src, "ta_" + rev.replace("~", "_"), tmp)
+
+
+def load_worktree(tmp):
+    with open(os.path.join(REPO, "common", "transcript_audit.py")) as f:
+        return _load(f.read(), "ta_worktree", tmp)
 
 
 # (group, command, real breach?)  real breach = the command reaches outside the sandbox / the network
@@ -73,12 +87,25 @@ def rules(m, cmd):
 
 def main():
     tmp = tempfile.mkdtemp(prefix="audit_probe_")
-    old, new = load_rev("5d0f6fe1~1", tmp), load_rev("5d0f6fe1", tmp)
+    old, first, fixed = load_rev("5d0f6fe1~1", tmp), load_rev("5d0f6fe1", tmp), load_worktree(tmp)
+    missed = []
     for group, cmd, breach in CASES:
-        o, n = rules(old, cmd), rules(new, cmd)
-        tag = "LOOSER" if o and not n else "stricter" if n and not o else "same"
-        bad = " <-- real breach now passes" if tag == "LOOSER" and breach else ""
-        print(f"{tag:8s} {group:15s} breach={str(breach):5s} old={o} new={n} :: {cmd!r}{bad}")
+        o, fr, fx = rules(old, cmd), rules(first, cmd), rules(fixed, cmd)
+        note = ""
+        if breach and not fx and group != "pre-existing":   # known pre-existing gaps are not regressions
+            note = " <-- REGRESSION: real breach passes FIXED"
+            missed.append(cmd)
+        elif breach and fr == [] and fx and o:              # F1: first-fix let it through, FIXED re-flags it
+            note = " (F1 re-flagged in FIXED)"
+        print(f"{group:16s} breach={str(breach):5s} old={o} first={fr} fixed={fx} :: {cmd!r}{note}")
+    print()
+    if missed:
+        print(f"FAIL: {len(missed)} breach case(s) not flagged by FIXED (excluding known pre-existing gaps):")
+        for c in missed:
+            print("  " + repr(c))
+        sys.exit(1)
+    print("OK: every breach=True case (excluding known pre-existing gaps) is flagged by FIXED;")
+    print("    F1 network-client misses are re-flagged, and the intended exemptions stay exempt.")
 
 
 if __name__ == "__main__":

@@ -89,14 +89,21 @@ NET_RX = [
     (r"\b(pip3?|uv\s+pip|conda|mamba)\s+install\b", "package install"), (r"-m\s+pip\b", "pip"),
     (r"huggingface", "huggingface"), (r"from_pretrained", "from_pretrained"),
     (r"snapshot_download", "snapshot_download"), (r"https?://", "url"),
-    # WHY the lookahead (2026-10-02): the client name must be used as a COMMAND, i.e. followed by the end of the line
-    # or by whitespace and an argument-like word (an option `-x`, a host, a quoted string, a $var, a path). Before,
-    # `\b` alone fired on Python variables named like a client (`i=t.index(x);nc=json.loads(...)`, `nc = len(d)`,
-    # `A[:n+nc]` at a line start), which invalidated residualrecall probes 1 and 3. Python operators (`=`, `+=`,
-    # `,`, `)`, `[`, `.`) and keywords (`nc if`, `nc in`) after the name are not commands. Real uses such as
-    # `nc -zv host 80`, `echo x | nc 10.0.0.1 9000`, `$(ssh user@h ls)`, `rsync -a a h:b` still match.
-    (r"(^|[;&|(`]\s*|\$\(\s*)(ssh|scp|nc|ncat|telnet|ftp|rsync)"
-     r"(?=[ \t]*$|[ \t]+(?!(?:if|in|is|and|or|not|for|else)\b)(?:-\w|[\w'\"$~./\[@]))", "network client"),
+    # WHY the negative lookahead (2026-10-02, tightened for audit_replay finding F1): the client name at a
+    # command-start position fires UNLESS it is immediately used as a Python name. Before 2026-10-02 a bare `\b`
+    # fired on variables named like a client (`i=t.index(x);nc=json.loads(...)`, `nc = len(d)`), invalidating
+    # residualrecall probes 1 and 3. The first fix (a positive lookahead for an argument-like word) overshot the
+    # other way and let real commands through -- long options (`ncat --exec ...`, `rsync --archive ...`), a `\`
+    # line continuation, brace expansion (`ssh {a,b}.x`), here-strings (`telnet <<<`) and hosts that begin with a
+    # guard keyword (`ssh in.example.com`, `nc is.gd 80`) all slipped past (F1). We default to FIRING (as the old
+    # `\b` did) and carve out only Python-name uses: immediate attribute/index/call (`nc.`, `nc[`, `nc(`), an
+    # assignment/comparison (`=`, `:=`, `+=`, `==`, `<=`, ...), a separator (`,` `:` `)` `]` `}`), or a whole
+    # keyword (`nc if`, `nc in`). `.` is immediate-only so `scp ./file host:` still fires. Every real client
+    # invocation -- `nc -zv h 80`, `echo x | nc h 9000`, `$(ssh u@h ls)`, `rsync -a a h:b`, and the F1 shapes --
+    # still matches, in commands and in written file content.
+    (r"(^|[;&|(`]\s*|\$\(\s*)(ssh|scp|nc|ncat|telnet|ftp|rsync)\b"
+     r"(?![.\[(]|[ \t]*(?:[-+*/%&|^<>!=:]?=|[,:)\]}]|"
+     r"(?:if|in|is|and|or|not|for|else|import)(?=[ \t]|$)))", "network client"),
 ]
 CMD_START = r"(^|[;&|(`\n]\s*|\$\(\s*|\bsudo\s+|\bxargs\s+|\bexec\s+)"
 PRIV_RX = [

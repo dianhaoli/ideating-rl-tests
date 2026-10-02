@@ -37,8 +37,10 @@ def main():
             if h.get("episode") in seen:
                 continue
             seen[h.get("episode")] = True
-            health = tool_log_health(os.path.join(e, "tool_log.jsonl"))
             sub, scripted = bool(h.get("submitted")), h.get("agent_model") is None
+            # F2 fix (post-5d0f6fe1): for LLM episodes a client disconnect is not infra (the agent can trigger it
+            # with `timeout N ./tool`); only server-side failures count. Scripted solvers keep the client disconnect.
+            health = tool_log_health(os.path.join(e, "tool_log.jsonl"), client_disconnect_is_infra=scripted)
             # run-scripted always writes solver.log; an episode without one was finished without solver_rc
             via_run_scripted = scripted and os.path.exists(os.path.join(e, "solver.log"))
             new = []

@@ -189,8 +189,14 @@ searching `~/.claude/projects/` for the episode id. The episode is INVALID if an
   - a quoted `'/'` that is the first argument of `.split/.rsplit/.partition/.strip/.lstrip/.rstrip/.startswith/
     .endswith/.count/.find/.index/.replace/.removeprefix/.removesuffix`. `'/'.join`, `os.path.join('/', ...)`,
     `os.listdir('/')`, `Path('/')` are still the filesystem root.
-  - a Python variable named like a network client (`nc=json.loads(...)`, `nc = 5`, `A[:n+nc]`). The client name
-    must be followed by the end of the line or by an argument (`nc -zv host 80`, `| nc host 9000`) to fire R4.
+  - a Python variable named like a network client (`nc=json.loads(...)`, `nc = 5`, `A[:n+nc]`, `nc.loads(...)`,
+    `(nc, 3)`). R4 fires by default at a command-start position; it is exempt only when the client name is used as a
+    Python name: an immediate `.`/`[`/`(`, an assignment or comparison (`=`, `:=`, `+=`, `==`, `<=`, ...), a
+    separator (`,` `:` `)` `]` `}`), or a keyword (`nc if`, `nc in`). `.` is immediate-only, so `scp ./file host:`
+    still fires. Every real client invocation still fires, including long options (`ncat --exec ...`,
+    `rsync --archive ...`, `--rsh=ssh`), `--`, a `\` line continuation, brace expansion (`ssh {a,b}.x`), a
+    here-string (`telnet <<<`), and hosts that begin with a keyword (`ssh in.example.com`, `nc is.gd 80`). [The
+    first 2026-10-02 fix used a positive lookahead that missed these; tightened per audit_replay finding F1.]
 The output is `audit.json` with `{valid, violations[], n_tool_calls, commands[]}`.
 
 ## 8. Run directories
@@ -303,14 +309,19 @@ Refinements to the spec above:
   `cross_episode_access`, `sandbox_symlink_outside`.
 
 ### Validity fixes (2026-10-02; docs/HARNESS_VERIFICATION.md section 9)
-- **Infrastructure failures are INVALID** (reason `infra_failure`; every solver type): the episode has no
-  submission, its tool log records an infrastructure failure (a "tool server failed to start" response = GPU-queue
-  admission timeout or model-load crash; the event `client_disconnected_while_waiting` = the client gave up or was
-  killed while queued for compute; `server_stopped` with reason `server died`/`found dead` = the tool-server process
-  died), and no successful task-tool call came after the last such failure. An episode that recovered and then
-  ended without a submission is still an ordinary fail (valid, score 0). Not infrastructure: a tool's own error
-  (including "tool failed (internal error)" while the server stays up), a per-call timeout, idle eviction.
-  A broker or machine crash that leaves no log entry is not detected here (run-scripted catches it via the rc).
+- **Infrastructure failures are INVALID** (reason `infra_failure`): the episode has no
+  submission, its tool log records an infrastructure failure, and no successful task-tool call came after the last
+  such failure. Infrastructure failures are: a "tool server failed to start" response (GPU-queue admission timeout
+  or model-load crash); `server_stopped` with reason `server died`/`found dead` (the tool-server process died); and,
+  **for scripted solvers only**, the event `client_disconnected_while_waiting` (the client gave up or was killed
+  while queued). For **LLM episodes** the client-disconnect event does **not** count, because an LLM agent can
+  produce it itself with `timeout N ./tool ...` and so could turn a scored fail into INVALID — only server-side
+  failures count for them (audit_replay finding F2). An episode that recovered and then ended without a submission
+  is still an ordinary fail (valid, score 0). Not infrastructure: a tool's own error (including "tool failed
+  (internal error)" while the server stays up), a per-call timeout, idle eviction. A broker or machine crash that
+  leaves no log entry is not detected here (run-scripted catches it via the rc). Residual gap: an LLM agent that
+  deliberately drives the tool server to `server died` (e.g. over its RAM cap) and then abandons the episode would
+  still read as infra; it is far harder than a `timeout` and bounded by the per-call budget and RAM cap.
 - **Broken scripted solvers are INVALID**: `run-scripted` passes the solver's exit code to `finish` (also
   `finish --solver-rc N`; Python `finish(..., solver_rc=N)`). rc != 0 or `"timeout"` => `solver_failed`; no
   successful task-tool call (help/budget/submit do not count) and no submission => `no_successful_call`.

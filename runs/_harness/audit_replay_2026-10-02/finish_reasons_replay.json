@@ -1,17 +1,12 @@
 {
  "episode_dirs_with_grade": 9704,
  "unique_episodes": 9644,
- "valid_to_invalid": 46,
+ "valid_to_invalid": 43,
  "by_reason": {
   "infra_failure;no_successful_call": 25,
-  "infra_failure": 3,
   "no_successful_call": 18
  },
- "llm_flips": [
-  "ep157f3953a8",
-  "ep6cd5b8dd30",
-  "ep0746750a4f"
- ],
+ "llm_flips": [],
  "flips_with_submission": 0,
  "no_successful_call_only_without_traceback": [],
  "scripted_traceback_still_valid_without_new_reason": 1

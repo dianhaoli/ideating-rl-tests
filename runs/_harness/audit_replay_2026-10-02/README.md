@@ -167,3 +167,44 @@ Suggested fix:
   - Full suite: 250 passed, 1 skipped (`RL_SKIP_GPU=1`), re-run for this replay.
   - The fixer's "8,256 recorded episodes" is lower than the 9,644 unique episodes found here. The
     `infra_failure` count, 28, matches.
+
+## 6. Resolution of F1 and F2 (2026-10-02, follow-up commit)
+
+Both findings are fixed in the follow-up commit on `main`. The replay scripts in this directory were re-run
+against the fixed working tree; `regression_probes.txt` and `finish_reasons_replay.{csv,json}` above are the
+regenerated outputs.
+
+### F1 (R4 network-client) — fixed
+
+The lookahead was inverted. R4 now defaults to firing at a command-start position (as the original pre-loosening
+`\b` rule did) and carves out only uses where the client name is a Python name: an immediate attribute/index/call
+(`nc.`, `nc[`, `nc(`), an assignment or comparison (`=`, `:=`, `+=`, `==`, `<=`, ...), a separator (`,` `:` `)`
+`]` `}`), or a whole keyword (`nc if`, `nc in`). `.` is excluded immediately only, so `scp ./file host:` still
+fires. `regression_probes.py` now runs three revisions (OLD = `5d0f6fe1~1`, FIRST = `5d0f6fe1`, FIXED = working
+tree) and exits non-zero if any `breach=True` case (other than the documented pre-existing gaps) is unflagged by
+FIXED. All ten F1 shapes (long options, `--rsh=ssh`, `--`, `\` continuation, `ssh in.*`, `nc is.gd`, brace
+expansion, here-string) are re-flagged, while the residualrecall `nc=`/`nc.`/`(nc,` variable uses stay exempt.
+Ten twin cases (including one in Write content) were added to `test_audit_validity_fixes.py`.
+
+### F2 (`infra_failure` triggerable by the agent) — fixed
+
+`tool_log_health` takes `client_disconnect_is_infra` (default `True`). `finish()` passes `False` for LLM
+episodes, so `client_disconnected_while_waiting` — which an LLM agent can produce itself with
+`timeout N ./tool ...` — no longer counts as infrastructure for LLM episodes; only server-side failures
+(`server_failed_to_start`, `server died`/`found dead`) do. Scripted solvers (trusted builder code, also gated by
+`no_successful_call`/`solver_failed`) keep counting the client disconnect, which for them is the run-scripted
+driver's 1800 s wait limit giving up under real contention.
+
+Re-running `replay_finish_reasons.py` with this rule: valid→INVALID flips drop from **46 to 43**. The three LLM
+flips are gone (`ep157f3953a8`, `ep6cd5b8dd30` featurematch ABORTED orch; `ep0746750a4f` openai) — all had only
+a client disconnect. `llm_flips` is now empty. Server-side detection is preserved: `ep27a091a362` (latentdiff,
+`server_failed_to_start`, no submission, no recovery) is still an `infra_failure` under the new rule; it is not a
+flip only because its stored grade is already INVALID (`grader_error`). The 25 scripted
+`infra_failure;no_successful_call` and 18 `no_successful_call` flips are unchanged.
+
+Residual limitation (documented, not fixed): a server `server died` that an LLM agent deliberately induced (e.g.
+by driving the tool server over its RAM cap) and then abandoned without submitting would still read as infra.
+Inducing it is far harder than issuing a `timeout` and is self-limited by the per-call budget and the server RAM
+cap, so it is left as a known gap rather than guessed at from the log.
+
+Suite after the follow-up commit: 262 passed, 1 skipped (`RL_SKIP_GPU=1`). Secret scan clean.
