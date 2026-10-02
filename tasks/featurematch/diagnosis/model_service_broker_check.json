@@ -1,0 +1,49 @@
+{
+ "generated_at": "2026-10-02T02:39:20Z",
+ "episodes": {
+  "fm-t1-08f455e08d": {
+   "episode": "epb94aff5c53",
+   "valid": true,
+   "gpu_gb_declared": 0.0,
+   "counters": {
+    "tool_calls": 25,
+    "forward": 58,
+    "generate": 2,
+    "gradient": 0
+   }
+  },
+  "fm-t1-ffd27e1cac": {
+   "episode": "ep1ad3c6638e",
+   "valid": true,
+   "gpu_gb_declared": 0.0,
+   "counters": {
+    "tool_calls": 25,
+    "forward": 58,
+    "generate": 2,
+    "gradient": 0
+   }
+  },
+  "fm-t3-7ee1d4275f": {
+   "episode": "epe5bb534af6",
+   "valid": true,
+   "gpu_gb_declared": 0.0,
+   "counters": {
+    "tool_calls": 25,
+    "forward": 58,
+    "generate": 2,
+    "gradient": 0
+   }
+  }
+ },
+ "n_calls": 75,
+ "concurrent_episodes": 3,
+ "wall_s": 21.3,
+ "service_requests_served": 63,
+ "featurematch_toolserver_gpu_jobs_seen": [],
+ "n_mismatch": 0,
+ "mismatch": [],
+ "max_abs_diff": 0.0,
+ "n_numbers": 11794,
+ "n_numbers_identical": 11794,
+ "pass": true
+}

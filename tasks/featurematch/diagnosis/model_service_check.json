@@ -1,0 +1,81 @@
+{
+ "generated_at": "2026-10-02T02:36:54Z",
+ "instances": [
+  "fm-t1-08f455e08d",
+  "fm-t1-ffd27e1cac",
+  "fm-t3-7ee1d4275f"
+ ],
+ "n_calls": 75,
+ "service_gpu_gb_per_episode_server": 0,
+ "reference_gpu_gb": 7,
+ "tolerance": "strings/latent ids/errors exact; numbers |d| <= 1e-3 + 1e-2*|ref|",
+ "pass": true,
+ "n_mismatch": 0,
+ "seconds_service": {
+  "fm-t1-08f455e08d": 11.8,
+  "fm-t1-ffd27e1cac": 6.7,
+  "fm-t3-7ee1d4275f": 5.7
+ },
+ "seconds_inprocess": {
+  "fm-t1-08f455e08d": 59.5,
+  "fm-t1-ffd27e1cac": 5.6,
+  "fm-t3-7ee1d4275f": 2.9
+ },
+ "per_tool": {
+  "task_info": {
+   "n_calls": 3,
+   "n_exact_fields": 237,
+   "n_numbers": 25,
+   "n_numbers_identical": 25,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  },
+  "latent_activations": {
+   "n_calls": 21,
+   "n_exact_fields": 1764,
+   "n_numbers": 10440,
+   "n_numbers_identical": 10440,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  },
+  "top_latents": {
+   "n_calls": 12,
+   "n_exact_fields": 3429,
+   "n_numbers": 1089,
+   "n_numbers_identical": 1089,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  },
+  "vocab_projection": {
+   "n_calls": 30,
+   "n_exact_fields": 1413,
+   "n_numbers": 0,
+   "n_numbers_identical": 0,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  },
+  "generate": {
+   "n_calls": 6,
+   "n_exact_fields": 18,
+   "n_numbers": 0,
+   "n_numbers_identical": 0,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  },
+  "next_token_logits": {
+   "n_calls": 3,
+   "n_exact_fields": 246,
+   "n_numbers": 240,
+   "n_numbers_identical": 240,
+   "max_abs_diff": 0.0,
+   "mismatch": [],
+   "n_mismatch": 0
+  }
+ },
+ "check_wall_s": 24.3
+}

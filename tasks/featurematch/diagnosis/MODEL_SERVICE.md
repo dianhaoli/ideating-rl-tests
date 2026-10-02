@@ -102,6 +102,25 @@ $PY -m tasks.featurematch.model_service stop
 
 (The `prepare` options come from the main checkout's `common/sandbox.py`. See docs/HARNESS_API.md section 5.)
 
-## Check results
+## Check results (2026-10-02)
 
-See `model_service_check.json`. The numbers are filled in below by the infrastructure stage.
+Instances: fm-t1-08f455e08d, fm-t1-ffd27e1cac and fm-t3-7ee1d4275f (v2 pool, copied before use). Each got the same
+25 calls, 75 in all.
+
+1. **In-process vs service, direct** (`compare_service.py`; result in `model_service_check.json`). The reference
+   pass ran as one GPU job with `FM_MODEL_SERVICE=off`. The check pass ran on CPU against the service.
+   **0 mismatches.** Every number was bit-identical (10,440 activation values, 1,089 top-latent values, 240
+   log-probabilities). Every token string, latent index, generated completion, decoded vocab token and argument
+   error message was identical too. The bf16 tolerance was never needed: both paths run the same code on the same
+   GPU.
+2. **Through the real broker** (`broker_service_check.py`; result in `model_service_broker_check.json`). Three
+   episodes were prepared with `common.sandbox prepare` while the service ran, and the same 75 calls went through
+   `./tool` (the broker's client), all three episodes at once.
+   **0 mismatches** against the in-process reference (11,794 numbers, all identical). Each episode record declared
+   `gpu_gb 0.0`. The tool servers loaded in 0.0 s, and no `toolserver:featurematch` job ever appeared in the GPU
+   queue (the queue was polled every second). The service answered 63 requests. The other 12 calls were
+   `task_info` and argument errors, which never reach the model. All three episodes finished VALID.
+   The 75 concurrent calls took 21 s of wall time on a GPU shared with four other jobs.
+
+The service was stopped after the checks (`stop` → "stopped after 126 requests"; marker and socket removed;
+no `featurematch-modelservice` job left in the GPU queue).
