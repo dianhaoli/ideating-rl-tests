@@ -1,0 +1,12 @@
+probe                      OLD                      NEW                      CANDIDATE
+eval_concat_heredoc        FLAG R2-path             clean                    FLAG R2-path
+attrgetter_heredoc         FLAG R2-path             clean                    FLAG R2-path
+getattribute_py_c          FLAG R2-path             clean                    FLAG R2-path
+eval_ps_py_c               FLAG R5-privileged       clean                    FLAG R5-privileged
+write_py_eval              FLAG R2-path             clean                    FLAG R2-path
+control_os_system          FLAG R2-path             FLAG R2-path             FLAG R2-path
+control_bash_runs_py       FLAG R2-path             FLAG R2-path             FLAG R2-path
+control_f2a_not_symbol     FLAG R2-path             clean                    clean
+control_f2b_print_ps       FLAG R5-privileged       clean                    clean
+
+candidate on 59 replayed transcripts: verdict differs from NEW on none; flagged->clean vs OLD under the candidate: 9
