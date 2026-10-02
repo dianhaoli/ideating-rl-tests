@@ -1,13 +1,4 @@
-08:29:13 loaded; SAEs ['snapshots/fd571b47c1c64851e9b1989792367b9babb4af63/layer_18/width_16k/average_l0_74/params.npz']
-08:29:15 exactness L18 (max |margin cached - margin full forward|): {'[]': 0.0, '[10472, 13331, 1114]': 0.0}
-08:29:16 city_state:Texas:18 clean check {'n_items': 249, 'n_my_clean_correct': 248, 'max_abs_margin_diff_vs_reported': 0.13904410600662231, 'median_abs_margin_diff': 0.029843807220458984}
-08:29:19 city_state:Texas:18 sizes {'ex_t': 11, 'ex_c': 32, 'ho': 248, 'fresh_t': 146, 'fresh_s': 137, 'new_t': 139, 'new_entities_valid': ['Conroe', 'Del Rio', 'Grand Prairie', 'Harlingen', 'Kerrville', 'Nacogdoches', 'New Braunfels', 'Pflugerville', 'Port Arthur', 'Wichita Falls'], 'new_entities_given': ['Harlingen', 'Wichita Falls', 'Nacogdoches', 'Port Arthur', 'Conroe', 'Pflugerville', 'Kerrville', 'Del Rio', 'Grand Prairie', 'New Braunfels'], 'fresh_t_entities': 25}
-08:29:33 city_state:Texas:18 my_ref_s0 [399, 4511, 6319, 9941, 13331] J=0.730; reported ref_k5 [13331]
-08:41:48 city_state:Texas:18 strong {'n_ex_t': 64, 'n_ex_c': 68, 'pool': 121, 'trace': {1: [[13331], 0.674], 2: [[13331, 14658], 0.781], 3: [[6600, 13331, 14658], 0.832], 4: [[6319, 6600, 13331, 14658], 0.858], 5: [[194, 6600, 13331, 14658, 15394], 0.883]}}
-08:46:37 city_state:Texas:18 oracle {'pool': 112, 'trace': {1: [[13331], 0.163], 2: [[13331, 14658], 0.25], 3: [[91, 13331, 14658], 0.307], 4: [[91, 12437, 13331, 14658], 0.368], 5: [[91, 6600, 12437, 13331, 14658], 0.419]}}
-08:46:55 city_state:Texas:18 done 1060.4s  R(ho_S, fresh, new): {'rep_ref_k5': (0.16, 0.28, 0.37), 'rep_ref_k10': (0.16, 0.28, 0.37), 'rep_naive_k5': (0.14, 0.25, 0.34), 'rep_contr_k5': (0.16, 0.28, 0.34), 'rep_cos_k5': (0.17, 0.31, 0.42), 'my_cos_k5': (0.16, 0.31, 0.42), 'my_naive_k5': (0.14, 0.25, 0.34), 'my_contr_k5': (0.17, 0.28, 0.34), 'null': (0.0, 0.0, 0.0), 'my_ref_s0': (0.16, 0.3, 0.38), 'strong_ref': (0.34, 0.41, 0.56), 'strong_k1': (0.16, 0.28, 0.37), 'strong_k2': (0.26, 0.4, 0.57), 'strong_k3': (0.3, 0.46, 0.63), 'strong_k4': (0.31, 0.49, 0.65), 'strong_k5': (0.34, 0.41, 0.56), 'oracle_k1': (0.16, 0.28, 0.37), 'oracle_k2': (0.26, 0.4, 0.57), 'oracle_k3': (0.29, 0.44, 0.56), 'oracle_k4': (0.35, 0.43, 0.57), 'oracle_k5': (0.4, 0.46, 0.63)}
-08:46:56 athlete_sport:soccer:18 clean check {'n_items': 248, 'n_my_clean_correct': 248, 'max_abs_margin_diff_vs_reported': 0.18769383430480957, 'median_abs_margin_diff': 0.04438591003417969}
-08:46:57 athlete_sport:soccer:18 sizes {'ex_t': 8, 'ex_c': 25, 'ho': 248, 'fresh_t': 89, 'fresh_s': 116, 'new_t': 84, 'new_entities_valid': ['Eusebio', 'Ferenc Puskas', 'Frank Lampard', 'Lothar Matthaus', 'Ruud Gullit', 'Sergio Ramos', 'Steven Gerrard', 'Xavi Hernandez'], 'new_entities_given': ['Steven Gerrard', 'Frank Lampard', 'Ruud Gullit', 'Eusebio', 'Ferenc Puskas', 'Lothar Matthaus', 'Xavi Hernandez', 'Sergio Ramos'], 'fresh_t_entities': 22}
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   2%|▏         | 5/288 [00:00<00:05, 49.01it/s]Loading weights:  28%|██▊       | 82/288 [00:00<00:00, 467.74it/s]Loading weights:  57%|█████▋    | 164/288 [00:00<00:00, 622.27it/s]Loading weights:  82%|████████▏ | 235/288 [00:00<00:00, 630.03it/s]Loading weights: 100%|██████████| 288/288 [00:00<00:00, 456.21it/s]
 08:47:11 loaded; SAEs ['snapshots/fd571b47c1c64851e9b1989792367b9babb4af63/layer_18/width_16k/average_l0_74/params.npz']
 08:47:12 exactness L18 (max |margin cached - margin full forward|): {'[]': 0.0, '[10472, 13331, 1114]': 0.0}
 08:47:13 athlete_sport:soccer:18 clean check {'n_items': 248, 'n_my_clean_correct': 248, 'max_abs_margin_diff_vs_reported': 0.18769383430480957, 'median_abs_margin_diff': 0.04438591003417969}
@@ -23,3 +14,26 @@
 08:50:06 country_lang:English:18 oracle {'pool': 72, 'trace': {1: [[8613], 0.356], 2: [[8280, 8613], 0.381], 3: [[8280, 8613, 9392], 0.397], 4: [[8280, 8371, 8613, 9392], 0.413], 5: [[3851, 8280, 8371, 8613, 9392], 0.421]}}
 08:50:19 country_lang:English:18 done 82.5s  R(ho_S, fresh, new): {'rep_ref_k5': (0.35, 0.38, 0.35), 'rep_ref_k10': (0.35, 0.38, 0.36), 'rep_naive_k5': (0.3, 0.37, 0.34), 'rep_contr_k5': (0.32, 0.35, 0.28), 'rep_cos_k5': (0.02, 0.0, 0.0), 'my_cos_k5': (0.0, 0.04, 0.02), 'my_naive_k5': (0.3, 0.37, 0.34), 'my_contr_k5': (0.32, 0.35, 0.28), 'null': (0.0, 0.0, 0.0), 'my_ref_s0': (0.3, 0.38, 0.36), 'strong_ref': (0.35, 0.38, 0.34), 'strong_k1': (0.35, 0.4, 0.37), 'strong_k2': (0.34, 0.39, 0.36), 'strong_k3': (0.34, 0.38, 0.37), 'strong_k4': (0.34, 0.38, 0.37), 'strong_k5': (0.35, 0.38, 0.34), 'oracle_k1': (0.35, 0.4, 0.37), 'oracle_k2': (0.38, 0.33, 0.29), 'oracle_k3': (0.37, 0.35, 0.33), 'oracle_k4': (0.38, 0.36, 0.34), 'oracle_k5': (0.38, 0.36, 0.34)}
 08:50:19 all done peak_gpu 7.34 GB peak_rss 6.28 GB
+	Command being timed: "/opt/pytorch/bin/python -m common.gpuq run --gb 9 --label latentknockout-skeptic-strong2 -- /opt/pytorch/bin/python -m tasks.latentknockout.skeptic_reproduce.repro strong runs/latentknockout/20261002T0642_sweep/cells runs/latentknockout/skeptic/20261002_repro athlete_sport:soccer:18 country_lang:English:18"
+	User time (seconds): 195.36
+	System time (seconds): 2.55
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:16.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6280860
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 285
+	Minor (reclaiming a frame) page faults: 574131
+	Voluntary context switches: 7869
+	Involuntary context switches: 1777
+	Swaps: 0
+	File system inputs: 177616
+	File system outputs: 1016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

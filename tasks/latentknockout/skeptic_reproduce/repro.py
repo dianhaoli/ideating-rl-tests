@@ -337,14 +337,14 @@ def run_repro(kx, cells_dir, spec, out_dir, wiki, fh, mode):
         hst = np.array([r[0] == "tS" for r in ho_S])
         rk4 = rankings(cell, [r for r in ho_S if r[0] == "tS"], [r for r in ho_S if r[0] == "sS"])
         pool4 = []
-        for i in top(rk4["contr"], 50) + top(rk4["cos"], 20) + top(rk4["actdiff"], 20) + pool:
+        for i in top(rk4["contr"], 40) + top(rk4["cos"], 15) + top(rk4["actdiff"], 15) + pool:
             if i not in pool4:
                 pool4.append(i)
         for dlt in (0.0, 1.0):
             def hardR(m, m0_, it_, ic_, dlt=dlt):
                 t, c = m[:, it_], m[:, ic_]
                 return (t < -dlt).mean(1) * (c > 0).mean(1) + 1e-3 * J_ex(m, m0_, it_, ic_)
-            b4 = beam_search(ho_it, hm0, hst, ~hst, pool4, kmax=5, width=3, objective=hardR)
+            b4 = beam_search(ho_it, hm0, hst, ~hst, pool4, kmax=5, width=int(os.environ.get("LK_BEAM", "1")), objective=hardR)
             for k in b4:
                 sets[f"oracle_d{int(dlt)}_k{k}"] = b4[k][0]
             res[f"oracle_d{int(dlt)}"] = dict(pool=len(pool4), trace={k: [v[0], round(v[1], 3)] for k, v in b4.items()})
@@ -392,10 +392,11 @@ def run_repro(kx, cells_dir, spec, out_dir, wiki, fh, mode):
         m03 = it3.eval([[]])[0]
         ist = np.array([r[0] == "t" for r in rows3])
         pool3 = []
-        for i in top(rk3["contr"], 60) + top(rk3["naive"], 30) + top(rk3["cos"], 30) + top(rk3["actdiff"], 30):
+        P = [int(x) for x in os.environ.get("LK_POOL", "60,30,30,30").split(",")]
+        for i in top(rk3["contr"], P[0]) + top(rk3["naive"], P[1]) + top(rk3["cos"], P[2]) + top(rk3["actdiff"], P[3]):
             if i not in pool3:
                 pool3.append(i)
-        b3 = beam_search(it3, m03, ist, ~ist, pool3, kmax=5, width=3)
+        b3 = beam_search(it3, m03, ist, ~ist, pool3, kmax=5, width=int(os.environ.get("LK_BEAM", "3")))
         kb = max(b3, key=lambda k: b3[k][1])
         sets["strong_ref"] = b3[kb][0]
         for k in b3:
@@ -413,14 +414,14 @@ def run_repro(kx, cells_dir, spec, out_dir, wiki, fh, mode):
         hs = [r for r in ho_S if r[0] == "sS"]
         rk4 = rankings(cell, ht, hs)
         pool4 = []
-        for i in top(rk4["contr"], 60) + top(rk4["cos"], 20) + top(rk4["actdiff"], 20) + pool3[:40]:
+        for i in top(rk4["contr"], P[0]) + top(rk4["cos"], P[2]) + top(rk4["actdiff"], P[3]) + pool3[:40]:
             if i not in pool4:
                 pool4.append(i)
 
         def hardR(m, m0_, it_, ic_):     # hard R (no KL), soft term only as a tie-break
             t, c = m[:, it_], m[:, ic_]
             return (t < 0).mean(1) * (c > 0).mean(1) + 1e-3 * J_ex(m, m0_, it_, ic_)
-        b4 = beam_search(ho_it, hm0, hst, ~hst, pool4, kmax=5, width=3, objective=hardR)
+        b4 = beam_search(ho_it, hm0, hst, ~hst, pool4, kmax=5, width=int(os.environ.get("LK_BEAM", "3")), objective=hardR)
         for k in b4:
             sets[f"oracle_k{k}"] = b4[k][0]
         res["oracle"] = dict(pool=len(pool4), trace={k: [v[0], round(v[1], 3)] for k, v in b4.items()})

@@ -1,3 +1,10 @@
 [08:20:41] start repro
 [08:29:05] end repro rc=0 peakRSS_kB=6281544
 [08:29:05] start strong
+[08:46:59] end strong rc=0 peakRSS_kB=
+[08:46:59] chain done
+[08:47:03] start strong2
+[08:50:20] end strong2 rc=0 peakRSS_kB=6280860
+[08:50:20] start strict
+[09:13:01] end strict rc=0 peakRSS_kB=6281196
+[09:13:01] chain2 done

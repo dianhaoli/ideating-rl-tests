@@ -148,3 +148,64 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
   multi-slot with natural nulls, difficulty = verifying generalisation) is specified in FEASIBILITY.md section 14 with
   two gates; my probability that it passes them is ~0.35. Scripted example-objective verifier already gets ~0.48 of
   4-slot episodes, above the 10% recipe gate.
+
+## 2026-10-02T08:20Z Independent reproduction started (skeptic pass on FEASIBILITY.md; files in skeptic_reproduce/)
+- Goal: re-implement the ablation and the R metric from scratch (kx.py; no import of lk_core / analyze), reproduce
+  6 reported cells (reported reference set + cosine / naive / contrastive baselines, plus my own re-derived rankings
+  and greedy reference), check the split for leakage, measure seed and bootstrap stability, and try a stronger
+  search (and an oracle that optimises on the grader's own held-out items) on 3 cells reported infeasible.
+- Deliberate implementation differences: right padding with a plain causal mask (the original left-pads), my own
+  rerun-from-layer path checked against a hooked full forward, my own example controls and a fresh held-out set
+  (6 new templates per family in styles never used: trivia show, anecdote, checklist/form, census, blog, letter;
+  plus 10-20 NEW entities per target group) so the generalisation claim is tested on prompts nobody tuned on.
+- CPU leakage audit (leakage_check.py -> runs/latentknockout/skeptic/leakage.json): no entity is both an example and
+  a held-out item in any of the 106 cells; the example split re-derived from the sweep's seeding rule matches every
+  cell. One held-out "new style" template (city -> state D2 "User: Where is {e}?\nAssistant: {e} is a city in the US
+  state of") contains a 6-word run of an example template, so it is not a new style. Surface-form sharing between
+  example and held-out entities is rare (Serena/Venus Williams; San Diego/San Francisco/San Jose; Bay City).
+- Smoke run (city -> state Arizona L18): cached-residual rerun == hooked full forward (max |margin diff| 0.0);
+  250/250 held-out items clean-correct in my run (max |margin diff| vs reported 0.23, bf16 padding noise); my own
+  greedy reference picks the same single latent (10472) as the reported reference.
+
+## 2026-10-02T08:50Z Reproduction results so far (skeptic pass)
+- Reproduced: 6 cells (city -> state Arizona L18, city -> capital Illinois L12 and Texas L18, country -> language
+  French L18, langid Turkish L18, athlete golf L18). Reported R_S of the reference and of the cosine / naive /
+  contrastive sets reproduce within 0.03 on the same held-out items with my own code (Turkish reference 0.35 -> 0.32).
+  My own rankings pick the same latents. The recipe verdict reproduces on these cells.
+- Biggest problem found: Effect counts an answer as "removed" when it merely loses first place. Held-out answers are
+  often near ties (median lead 1.75 logits; 25% lead by < 1 logit), and 45-86% of the reference's flipped answers are
+  still in the top 3 (often replaced by " the" / " where", i.e. postponed). Recomputed on the ORIGINAL sweep's margins:
+  requiring the answer to lose by >= 0.5 logit gives p_pair 0.49 (< 0.50: the pre-registered NO-GO "nothing small
+  works" fires); >= 1 logit gives p_pair 0.33, p_cell 0.15; >= 2 logits gives 2 of 106 cells. The recipe problem
+  persists inside the few strict-feasible cells. (runs/latentknockout/skeptic/orig_robustness.json)
+- Stability: my reference on 3 example splits gives Turkish L18 R = 0.40 / 0.94 / 0.90 (reported 0.35, labelled
+  not feasible for the reference). Entity-clustered bootstrap CIs are wider than the item bootstrap used in the
+  study (median width 0.23 vs 0.19); 23 of 86 L12/L18 cells have a CI containing 0.5.
+- Fresh prompts I wrote (6 new-style templates per family + new entities): the reference set holds for Arizona (0.80),
+  golf (0.80) and Texas capital (0.64), and drops for French (0.88 -> 0.63) and Turkish (0.32 -> 0.17). New-entity-only
+  R is as high as or higher than the study's.
+- Infeasible check, city -> state Texas L18 (reported reference 0.17): a stronger search (5 templates, 5 extra
+  agent-written Texas towns, 121-latent pool, beam 3) reaches 0.34; an ORACLE that optimises directly on the grader's
+  held-out items reaches 0.42 at k = 5. So it is genuinely infeasible on the study's held-out cities (famous ones:
+  Dallas, Houston...), but on NEW, less famous Texas towns the same sets score 0.56-0.65. The null label depends on
+  which entities the grader holds out (consistent with the study's "fame" reading).
+- Memory: every GPU job peaked at 6.28 GB RSS (memory-mapped bf16 model) under an 8G cap; GPU peak 7.8 GB of 9 GB
+  requested; one job of mine at a time (the shortcut-hunt job shared the GPU, so runs were ~2x slower).
+
+## 2026-10-02T09:16Z Reproduction finished (skeptic pass): strict-effect oracle and the other two "infeasible" cells
+- Strict-effect ORACLE (beam 1, ~72-latent pool, selected on the grader's held-out new-style items, then scored on my
+  fresh prompts, which are out of sample). "Strict" = the answer must lose by >= 1 logit. Fresh R_strict at k = 5:
+  Arizona L18 0.72, Illinois L12 0.73, Texas capital L18 0.77. The reported reference sets get only 0.47 / 0.40 / 0.32.
+  So the collapse of p_pair under a strict effect (previous entry) comes mainly from the reference stopping at a
+  minimal 1-2 latent set that just tips the top-1. It is not mainly a limit of the dictionary: 3-5 latents chosen for
+  a real knock-out exist and generalise. The recipe problem persists under the strict effect: decoder-cosine top-5
+  gets fresh R_strict 0.71 (Arizona) and 0.53 (Texas capital), against 0.72 / 0.77 for the oracle.
+- Other cells reported infeasible: athlete soccer L18 (reported reference 0.01): stronger search 0.09, oracle on the
+  grader's own items 0.14. country -> language English L18 (0.35): stronger search 0.35, oracle 0.38. Both confirmed
+  infeasible at k <= 5 on the study's held-out set (within a ~70-110 latent pool). But the labels depend on the prompt
+  set: the reported soccer set scores 0.43 on my fresh templates (0.02 on the study's), and Texas sets score 0.56-0.63
+  on new, less famous Texas towns.
+- GPU: about 55 min of wall time in 5 jobs (shared GPU), one job of mine at a time, peak 7.8 GB of 9 GB requested;
+  peak RSS 6.28 GB per job under an 8G scope cap. No activations saved; the largest file is 0.26 MB.
+- Not written: a separate FINDINGS.md (the subagent harness blocks report files); the ranked findings went to the
+  orchestrator in the return message. Data: runs/latentknockout/skeptic/ (analysis_repro.md has every table).
