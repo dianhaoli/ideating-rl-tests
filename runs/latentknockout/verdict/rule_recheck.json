@@ -1,0 +1,639 @@
+{
+ "n_cells_loaded": 106,
+ "rules": {
+  "delta0.0": {
+   "delta": 0.0,
+   "min_clean": null,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.415,
+   "p_cell_ci": [
+    0.326,
+    0.51
+   ],
+   "n_feasible_cells": 44,
+   "p_pair": 0.698,
+   "p_pair_ci": [
+    0.549,
+    0.814
+   ],
+   "n_feasible_pairs": 30,
+   "median_ref_k10_best_layer": 0.686,
+   "families_with_ge3_feasible_groups": [
+    "city_capital",
+    "city_state",
+    "country_lang",
+    "langid"
+   ],
+   "feasible_groups_by_family": {
+    "athlete_sport": 2,
+    "city_capital": 10,
+    "city_state": 8,
+    "country_lang": 3,
+    "langid": 7
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.159,
+     "k": 7,
+     "n": 44,
+     "ci": [
+      0.079,
+      0.294
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 44,
+     "ci": [
+      0.0,
+      0.08
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 44,
+     "ci": [
+      0.0,
+      0.08
+     ]
+    },
+    "cos_k5": {
+     "q": 0.545,
+     "k": 24,
+     "n": 44,
+     "ci": [
+      0.401,
+      0.683
+     ]
+    },
+    "naive_k5": {
+     "q": 0.705,
+     "k": 31,
+     "n": 44,
+     "ci": [
+      0.558,
+      0.818
+     ]
+    },
+    "contr_k5": {
+     "q": 0.886,
+     "k": 39,
+     "n": 44,
+     "ci": [
+      0.76,
+      0.95
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.682,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 50,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.137
+    },
+    "12": {
+     "n": 43,
+     "feasible": 20,
+     "median_ref_k5": 0.466
+    },
+    "18": {
+     "n": 43,
+     "feasible": 24,
+     "median_ref_k5": 0.52
+    }
+   }
+  },
+  "delta0.5": {
+   "delta": 0.5,
+   "min_clean": null,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.264,
+   "p_cell_ci": [
+    0.19,
+    0.355
+   ],
+   "n_feasible_cells": 28,
+   "p_pair": 0.488,
+   "p_pair_ci": [
+    0.346,
+    0.632
+   ],
+   "n_feasible_pairs": 21,
+   "median_ref_k10_best_layer": 0.51,
+   "families_with_ge3_feasible_groups": [
+    "city_capital",
+    "city_state",
+    "langid"
+   ],
+   "feasible_groups_by_family": {
+    "athlete_sport": 1,
+    "city_capital": 6,
+    "city_state": 6,
+    "country_lang": 2,
+    "langid": 6
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.107,
+     "k": 3,
+     "n": 28,
+     "ci": [
+      0.037,
+      0.272
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 28,
+     "ci": [
+      0.0,
+      0.121
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 28,
+     "ci": [
+      0.0,
+      0.121
+     ]
+    },
+    "cos_k5": {
+     "q": 0.536,
+     "k": 15,
+     "n": 28,
+     "ci": [
+      0.358,
+      0.705
+     ]
+    },
+    "naive_k5": {
+     "q": 0.679,
+     "k": 19,
+     "n": 28,
+     "ci": [
+      0.493,
+      0.821
+     ]
+    },
+    "contr_k5": {
+     "q": 0.929,
+     "k": 26,
+     "n": 28,
+     "ci": [
+      0.774,
+      0.98
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.679,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 36,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.075
+    },
+    "12": {
+     "n": 43,
+     "feasible": 13,
+     "median_ref_k5": 0.342
+    },
+    "18": {
+     "n": 43,
+     "feasible": 15,
+     "median_ref_k5": 0.35
+    }
+   }
+  },
+  "delta1.0": {
+   "delta": 1.0,
+   "min_clean": null,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.151,
+   "p_cell_ci": [
+    0.095,
+    0.231
+   ],
+   "n_feasible_cells": 16,
+   "p_pair": 0.326,
+   "p_pair_ci": [
+    0.205,
+    0.475
+   ],
+   "n_feasible_pairs": 14,
+   "median_ref_k10_best_layer": 0.299,
+   "families_with_ge3_feasible_groups": [
+    "city_capital",
+    "city_state",
+    "langid"
+   ],
+   "feasible_groups_by_family": {
+    "city_capital": 5,
+    "city_state": 4,
+    "country_lang": 1,
+    "langid": 4
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.062,
+     "k": 1,
+     "n": 16,
+     "ci": [
+      0.011,
+      0.283
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 16,
+     "ci": [
+      0.0,
+      0.194
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 16,
+     "ci": [
+      0.0,
+      0.194
+     ]
+    },
+    "cos_k5": {
+     "q": 0.5,
+     "k": 8,
+     "n": 16,
+     "ci": [
+      0.28,
+      0.72
+     ]
+    },
+    "naive_k5": {
+     "q": 0.625,
+     "k": 10,
+     "n": 16,
+     "ci": [
+      0.386,
+      0.815
+     ]
+    },
+    "contr_k5": {
+     "q": 0.875,
+     "k": 14,
+     "n": 16,
+     "ci": [
+      0.64,
+      0.965
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.562,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 28,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.03
+    },
+    "12": {
+     "n": 43,
+     "feasible": 8,
+     "median_ref_k5": 0.201
+    },
+    "18": {
+     "n": 43,
+     "feasible": 8,
+     "median_ref_k5": 0.209
+    }
+   }
+  },
+  "delta2.0": {
+   "delta": 2.0,
+   "min_clean": null,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.019,
+   "p_cell_ci": [
+    0.005,
+    0.066
+   ],
+   "n_feasible_cells": 2,
+   "p_pair": 0.047,
+   "p_pair_ci": [
+    0.013,
+    0.155
+   ],
+   "n_feasible_pairs": 2,
+   "median_ref_k10_best_layer": 0.108,
+   "families_with_ge3_feasible_groups": [],
+   "feasible_groups_by_family": {
+    "city_capital": 1,
+    "city_state": 1
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.0,
+     "k": 0,
+     "n": 2,
+     "ci": [
+      0.0,
+      0.658
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 2,
+     "ci": [
+      0.0,
+      0.658
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 2,
+     "ci": [
+      0.0,
+      0.658
+     ]
+    },
+    "cos_k5": {
+     "q": 0.0,
+     "k": 0,
+     "n": 2,
+     "ci": [
+      0.0,
+      0.658
+     ]
+    },
+    "naive_k5": {
+     "q": 0.5,
+     "k": 1,
+     "n": 2,
+     "ci": [
+      0.095,
+      0.905
+     ]
+    },
+    "contr_k5": {
+     "q": 1.0,
+     "k": 2,
+     "n": 2,
+     "ci": [
+      0.342,
+      1.0
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.5,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 11,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.006
+    },
+    "12": {
+     "n": 43,
+     "feasible": 2,
+     "median_ref_k5": 0.044
+    },
+    "18": {
+     "n": 43,
+     "feasible": 0,
+     "median_ref_k5": 0.053
+    }
+   }
+  },
+  "delta0.0_drop_clean_lt_1.5": {
+   "delta": 0.0,
+   "min_clean": 1.5,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.321,
+   "p_cell_ci": [
+    0.24,
+    0.415
+   ],
+   "n_feasible_cells": 34,
+   "p_pair": 0.558,
+   "p_pair_ci": [
+    0.411,
+    0.696
+   ],
+   "n_feasible_pairs": 24,
+   "median_ref_k10_best_layer": 0.582,
+   "families_with_ge3_feasible_groups": [
+    "city_capital",
+    "city_state",
+    "langid"
+   ],
+   "feasible_groups_by_family": {
+    "athlete_sport": 2,
+    "city_capital": 8,
+    "city_state": 6,
+    "country_lang": 2,
+    "langid": 6
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.088,
+     "k": 3,
+     "n": 34,
+     "ci": [
+      0.03,
+      0.23
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 34,
+     "ci": [
+      0.0,
+      0.102
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 34,
+     "ci": [
+      0.0,
+      0.102
+     ]
+    },
+    "cos_k5": {
+     "q": 0.529,
+     "k": 18,
+     "n": 34,
+     "ci": [
+      0.367,
+      0.685
+     ]
+    },
+    "naive_k5": {
+     "q": 0.676,
+     "k": 23,
+     "n": 34,
+     "ci": [
+      0.508,
+      0.809
+     ]
+    },
+    "contr_k5": {
+     "q": 0.882,
+     "k": 30,
+     "n": 34,
+     "ci": [
+      0.734,
+      0.953
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.529,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 43,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.037
+    },
+    "12": {
+     "n": 43,
+     "feasible": 16,
+     "median_ref_k5": 0.375
+    },
+    "18": {
+     "n": 43,
+     "feasible": 18,
+     "median_ref_k5": 0.385
+    }
+   }
+  },
+  "delta1.0_drop_clean_lt_1.5": {
+   "delta": 1.0,
+   "min_clean": 1.5,
+   "n_cells": 106,
+   "n_pairs": 43,
+   "p_cell": 0.113,
+   "p_cell_ci": [
+    0.066,
+    0.188
+   ],
+   "n_feasible_cells": 12,
+   "p_pair": 0.256,
+   "p_pair_ci": [
+    0.149,
+    0.402
+   ],
+   "n_feasible_pairs": 11,
+   "median_ref_k10_best_layer": 0.221,
+   "families_with_ge3_feasible_groups": [
+    "city_capital",
+    "city_state",
+    "langid"
+   ],
+   "feasible_groups_by_family": {
+    "city_capital": 4,
+    "city_state": 4,
+    "langid": 3
+   },
+   "q": {
+    "mostact_k5": {
+     "q": 0.083,
+     "k": 1,
+     "n": 12,
+     "ci": [
+      0.015,
+      0.354
+     ]
+    },
+    "rand_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 12,
+     "ci": [
+      0.0,
+      0.243
+     ]
+    },
+    "randact_k5_0": {
+     "q": 0.0,
+     "k": 0,
+     "n": 12,
+     "ci": [
+      0.0,
+      0.243
+     ]
+    },
+    "cos_k5": {
+     "q": 0.583,
+     "k": 7,
+     "n": 12,
+     "ci": [
+      0.32,
+      0.807
+     ]
+    },
+    "naive_k5": {
+     "q": 0.583,
+     "k": 7,
+     "n": 12,
+     "ci": [
+      0.32,
+      0.807
+     ]
+    },
+    "contr_k5": {
+     "q": 0.917,
+     "k": 11,
+     "n": 12,
+     "ci": [
+      0.646,
+      0.985
+     ]
+    }
+   },
+   "contr_ge_0_8_ref_share": 0.417,
+   "cells_any_of_ref_cos_naive_contr_ge_tau": 22,
+   "by_layer": {
+    "6": {
+     "n": 20,
+     "feasible": 0,
+     "median_ref_k5": 0.009
+    },
+    "12": {
+     "n": 43,
+     "feasible": 5,
+     "median_ref_k5": 0.1
+    },
+    "18": {
+     "n": 43,
+     "feasible": 7,
+     "median_ref_k5": 0.134
+    }
+   }
+  }
+ },
+ "clean_margin_tS_L12_L18": {
+  "n": 6430,
+  "median": 1.75,
+  "share_lt_1": 0.254,
+  "share_lt_1_5": 0.425,
+  "share_ge_3": 0.244
+ }
+}

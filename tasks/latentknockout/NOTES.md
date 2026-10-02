@@ -257,3 +257,22 @@ SAE basis does not hold the whole "Texas" signal at L18. Full sweep launched 06:
   7.13 GB of 8 GB requested, one job at a time. GPU time ~55 min (part 1 stopped at 30 min, see above).
 - Conclusion: LatentKnockout-Verify is a recipe task too. Its difficulty comes from thresholds and bookkeeping, not
   from understanding the model's internals. The full findings with design fixes are in the returned report.
+
+## 2026-10-02T09:40Z Synthesis: final feasibility verdict (FEASIBILITY_VERDICT.md), CPU only
+- I read the predictions, the feasibility study, the precedent survey and both skeptic passes, then recomputed the
+  decision rule myself from the sweep's stored per-prompt margins (`verdict_check.py`, output
+  runs/latentknockout/verdict/rule_recheck.json). Every deciding number matches the study and the reproduction.
+- **Verdict: NO-GO-as-is (recipe)**, by the pre-registered rule. In plain words: small sets of latents that switch off
+  a behaviour do exist (30 of 43 pairs), but a one-line ranking of latents finds them about as well as the careful
+  search (naive attribution on 31 of 44 feasible cells, decoder cosine on 24 of 44; the limit was half).
+- The skeptics make it stronger, not weaker. (1) "Switched off" often meant "pushed to second place": the right answer
+  leads by only 1.75 logits at the median. If it must lose by at least 0.5 logit, the "nothing small works" check would
+  fire instead (p_pair 0.49), although an oracle shows that real 3-5-latent knock-outs exist. (2) The recommended
+  "Verify" variant is beaten by a short self-test script (0.76 of episodes against a 0.10 limit), and by remembering
+  which cells are null (0.90).
+- Recommendation: do not build LatentKnockout or its Verify variant as Dan's validated environment. Keep it as an
+  explored idea, with three findings for the pitch: rerun-based grading removes the style problem; a top-1 flip metric
+  counts near-ties; famous concepts cannot be knocked out with <= 5 latents. One conditional redesign
+  ("LatentKnockout-Strict") is specified, with three kill gates (about 4 h of GPU). My probability that it survives
+  them is about 0.10.
+- Peak RSS: 65 MB (verdict_check.py, under MemoryMax=2G). No GPU job.

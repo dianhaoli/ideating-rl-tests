@@ -220,3 +220,10 @@ shaded towards the recipe outcome.
 
 ## Freeze
 Nothing above this line changes after the commit that adds this file. Append dated outcome sections below.
+
+## 2026-10-02T09:40Z Outcome (appended after the freeze; nothing above was edited)
+- Verdict under the rule above: **NO-GO-as-is (recipe)**. Check 1 does not fire: p_pair 0.698 (30/43), p_cell 0.415, median
+  R_ref(k<=10) at the best layer 0.686. Check 2 fires: naive top-5 q = 0.705 (31/44, Wilson 0.56-0.82) and decoder cosine
+  q = 0.545 (24/44, 0.40-0.68, borderline). Rule (f) also applies (contrastive >= 0.8 x R_ref on 0.68 of feasible cells).
+- Post-hoc sensitivity (not part of the rule): if the answer must lose by >= 0.5 logit, check 1 fires instead (p_pair 0.49).
+- Item-by-item predictions vs outcomes, and the recommended design: `FEASIBILITY_VERDICT.md`.
