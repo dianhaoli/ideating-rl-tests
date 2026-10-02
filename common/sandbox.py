@@ -749,7 +749,37 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None):
     pub = _public_record(rec)
     pub["finished_at"] = rec["finished_at"]
     broker.write_json_atomic(os.path.join(edir, "episode.json"), pub)
+    _prune_sandbox(rec, edir)
     return grade
+
+
+PRUNE_MIN_BYTES = int(os.environ.get("RL_PRUNE_MIN_BYTES", "100000"))
+
+
+def _prune_sandbox(rec, edir):
+    """After grading (2026-10-02, disk hit 99%: ~9,500 finished sandboxes held 33 GB of tool-output arrays): delete files
+    larger than PRUNE_MIN_BYTES from the sandbox's out/ and scratch/. They were leak-scanned above, and their tool calls
+    are in tool_log.jsonl. Small files (agent scripts, notes) are kept for transcript analysis. RL_KEEP_SANDBOX=1 disables."""
+    if os.environ.get("RL_KEEP_SANDBOX") == "1":
+        return
+    removed, freed = [], 0
+    for sub in ("out", "scratch"):
+        for root, _dirs, files in os.walk(os.path.join(rec["sandbox"], sub)):
+            for fn in files:
+                fp = os.path.join(root, fn)
+                try:
+                    sz = os.path.getsize(fp)
+                    if sz > PRUNE_MIN_BYTES and not os.path.islink(fp):
+                        os.remove(fp)
+                        removed.append({"path": os.path.relpath(fp, rec["sandbox"]), "bytes": sz})
+                        freed += sz
+                except OSError:
+                    pass
+    if removed:
+        try:
+            broker.write_json_atomic(os.path.join(edir, "sandbox_pruned.json"), {"freed_bytes": freed, "files": removed})
+        except OSError:
+            pass
 
 
 # ---------------------------------------------------------------------------------------------- run-scripted

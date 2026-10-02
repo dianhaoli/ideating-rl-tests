@@ -229,3 +229,15 @@ events, orchestration decisions and gate summaries, with links.
 - 02:00 UTC: Dan set the order: finish the FeatureMatch investigation first, then LatentKnockout. The LatentKnockout
   feasibility workflow was stopped after a few minutes (nothing committed beyond the design brief). It resumes after
   the FeatureMatch verdict. FeatureMatch agent arms are back ON.
+
+## 2026-10-02 02:45 UTC: disk full (99%), fixed
+- Reported by the latentdiff builder: graders crashed with ENOSPC (episodes INVALID with grader_error), and in-process
+  jobs failed. Cause: ~/rlsbx held 33 GB across ~9,500 finished sandboxes, mostly tool-output .npy arrays. (/tmp had
+  already recovered: 26%.)
+- Fix 1 (one-off): deleted files > 100 KB in out/ and scratch/ of FINISHED episodes only (record finished/closed):
+  23,881 files, 32.2 GB freed. The 26 active episodes were untouched. Disk now 68% (33 GB free). Log:
+  runs/.episodes/prune_20261002.log.
+- Fix 2 (permanent): `sandbox finish` now prunes files > 100 KB from out/ and scratch/ after leak-scan and grading,
+  and lists them in the episode's sandbox_pruned.json. RL_KEEP_SANDBOX=1 disables this. Harness tests pass.
+- Consequence: any episode graded during the full-disk window (about 02:00-02:45) may be INVALID with grader_error.
+  Builders should re-run those (check grade.json harness.invalid_reasons).
