@@ -1,0 +1,41 @@
+bid,group,cid,label,bankF_clear,bankF_loose,bankF_off,bankF_instance_named,bankF_famous_real,bankF_term_named,splitA_term_named,splitA_manual_clear_of5,n_kept,n_dropped_lowF,n_dropped_other,dropped_lowF_fire_F_mean,dropped_lowF_fire_A_mean,kept_fire_F_mean,best_any_latent_layer,best_any_latent_auroc_F1,best_any_latent_auroc_F2_heldout,best_any_latent_auroc_A,best_pooled_auroc_F2
+b01,DROPLOW,topic:TelevisionStation,article about a television station,9,11,0,19,1,17,1.0,5,0,1,2,0.2,0.95,,18,0.9992,0.9984,0.9931,0.8473
+b02,DROPLOW,topic:HorseRace,article about a horse race,20,0,0,20,20,14,0.95,5,0,3,5,0.117,0.892,,18,0.9947,0.9928,0.995,0.8599
+b03,KEPT,topic:Publisher,article about a publisher,16,4,0,20,19,7,0.925,3,1,0,1,,,0.9,12,0.9988,0.8987,0.9425,0.8987
+b04,DROPLOW,topic:Bird,article about a bird,18,2,0,20,20,3,0.625,5,0,3,3,0.117,0.967,,18,0.9984,0.9971,0.9997,0.7451
+b05,DROPLOW,topic:ScreenWriter,article about a screen writer,14,6,0,13,11,13,0.875,5,0,1,1,0.15,0.875,,12,0.998,0.9984,0.98,0.6172
+b06,DROPLOW,topic:ChessPlayer,article about a chess player,19,1,0,19,0,3,1.0,5,0,2,6,0.125,0.875,,18,0.9999,1.0,1.0,0.8155
+b07,KEPT,topic:Galaxy,article about a galaxy,20,0,0,18,18,10,0.975,5,4,30,31,0.102,0.897,0.837,18,1.0,1.0,1.0,0.9993
+b08,DROPLOW,topic:Mollusca,article about a mollusc,17,3,0,20,20,0,0.875,5,0,80,26,0.05,0.911,,18,0.9948,0.9968,0.9996,0.8831
+b09,KEPT,topic:Earthquake,article about an earthquake,19,1,0,15,15,13,1.0,5,3,16,50,0.128,0.925,0.85,18,0.9993,0.9993,1.0,0.9616
+b10,KEPT,topic:RollerCoaster,article about a roller coaster,18,2,0,13,5,8,0.975,5,5,0,8,,,0.91,12,0.9995,0.9992,1.0,0.9746
+b11,DROPLOW,topic:Anime,article about an anime,20,0,0,20,20,3,0.65,5,0,1,3,0.0,0.95,,12,0.9977,0.9949,0.9937,0.7476
+b12,KEPT,topic:Magazine,article about a magazine,19,1,0,19,19,3,0.9,5,1,1,0,0.2,0.975,0.85,18,0.998,0.9965,0.9935,0.9212
+b13,DROPLOW,topic:Skater,article about a skater,15,5,0,12,9,10,1.0,5,0,2,15,0.15,0.975,,18,0.9903,0.978,0.9932,0.7417
+b14,KEPT,topic:Grape,article about a grape,18,2,0,19,19,2,1.0,5,2,2,29,0.175,0.863,0.925,12,0.9968,0.9946,0.9974,0.9421
+b15,DROPLOW,topic:Election,article about an election,16,4,0,9,8,7,1.0,5,0,3,9,0.167,0.9,,18,0.9989,0.998,0.9862,0.8422
+b16,DROPLOW,topic:AustralianFootballTeam,article about an Australian football team,18,2,0,18,18,11,0.975,5,0,3,6,0.15,0.875,,12,0.9962,0.9962,0.9784,0.7971
+b17,KEPT,topic:Canoeist,article about a canoeist,18,2,0,19,0,6,1.0,5,1,110,54,0.084,0.948,0.8,18,0.9789,0.9885,0.9959,0.8881
+b18,DROPLOW,topic:HandballPlayer,article about a handball player,14,6,0,19,0,5,1.0,5,0,5,3,0.07,0.93,,18,0.9748,0.8163,0.9644,0.6778
+b19,KEPT,topic:Astronaut,article about an astronaut,20,0,0,19,19,1,0.925,5,1,1,3,0.05,0.875,0.85,18,0.9983,0.9996,0.9857,0.9051
+b20,KEPT,topic:Historian,article about a historian,19,1,0,18,11,6,0.75,5,1,1,0,0.05,0.875,0.9,18,0.9931,0.9929,0.9833,0.918
+b21,DROPLOW,topic:Insect,article about an insect,19,1,0,20,20,1,0.025,5,0,3,5,0.117,0.85,,18,0.997,0.996,0.9995,0.8797
+b22,DROPLOW,topic:FormulaOneRacer,article about a Formula One racer,20,0,0,17,17,8,0.675,2,0,1,7,0.15,0.95,,18,0.9984,0.999,0.9937,0.8279
+b23,DROPLOW,topic:Fungus,article about a fungus,18,2,0,19,19,7,0.85,5,0,3,3,0.1,0.925,,6,0.9997,0.9984,0.9997,0.7829
+b24,KEPT,topic:Saint,article about a saint,20,0,0,20,20,4,0.675,4,1,0,2,,,0.7,6,0.9951,0.9364,0.9831,0.9254
+b25,DROPLOW,topic:Curler,article about a curler,17,3,0,13,7,8,1.0,5,0,11,13,0.155,0.882,,18,0.9743,0.971,0.9846,0.8254
+b26,KEPT,topic:NationalFootballLeagueSeason,article about a NFL season,18,2,0,18,18,12,0.95,2,1,9,27,0.15,0.933,1.0,18,0.9976,0.9936,0.9954,0.9482
+b27,DROPLOW,topic:FigureSkater,article about a figure skater,15,5,0,14,11,12,0.8,5,0,5,3,0.15,0.945,,18,0.9936,0.997,0.9958,0.652
+b28,KEPT,topic:Hotel,article about a hotel,15,5,0,10,6,10,0.9,5,1,0,0,,,1.0,18,0.9996,0.9992,0.9746,0.9961
+b29,DROPLOW,topic:MountainPass,article about a mountain pass,20,0,0,14,13,11,0.975,3,0,7,11,0.164,0.882,,18,0.9842,0.6733,0.9254,0.8316
+b30,KEPT,topic:Monarch,article about a monarch,20,0,0,19,19,13,0.9,5,1,0,3,,,0.7,18,0.9973,0.9985,0.9959,0.8862
+b31,KEPT,topic:Model,article about a model,17,3,0,15,8,3,0.95,4,1,0,0,,,0.75,12,0.9976,0.9977,0.9807,0.8922
+b32,KEPT,topic:SquashPlayer,article about a squash player,17,3,0,20,0,5,1.0,5,1,24,11,0.096,0.93,0.9,18,0.9416,0.8606,0.9412,0.8606
+b33,DROPLOW,topic:BaseballPlayer,article about a baseball player,19,1,0,19,0,3,0.95,5,0,1,1,0.1,0.925,,18,0.9901,0.9953,0.9981,0.6862
+b34,KEPT,topic:AcademicJournal,article about an academic journal,15,5,0,19,19,10,0.975,5,1,9,17,0.15,0.928,0.8,12,1.0,0.9999,0.9994,0.8997
+b35,KEPT,topic:Cricketer,article about a cricketer,19,1,0,19,0,5,1.0,5,2,1,3,0.2,0.95,0.9,12,0.9994,0.7457,0.9604,0.9926
+b36,DROPLOW,topic:AmateurBoxer,article about an amateur boxer,19,1,0,19,0,5,1.0,5,0,1,4,0.2,0.85,,18,0.9972,0.9455,0.9969,0.7727
+b37,KEPT,topic:Pope,article about a pope,20,0,0,20,20,11,1.0,5,1,8,16,0.144,0.969,0.7,18,0.9937,0.9439,0.9921,0.8949
+b38,KEPT,topic:RadioStation,article about a radio station,14,6,0,17,1,9,1.0,5,2,11,18,0.1,0.891,0.675,18,0.9994,0.9979,0.9987,0.8612
+b39,DROPLOW,topic:AustralianRulesFootballPlayer,article about an Australian rules football player,19,1,0,18,0,7,1.0,5,0,50,8,0.091,0.94,,18,0.998,0.9961,0.9997,0.7118
+b40,KEPT,topic:BeautyQueen,article about a beauty queen,19,1,0,17,16,19,1.0,5,2,1,23,0.2,0.875,0.875,12,1.0,0.9999,0.9998,0.8579

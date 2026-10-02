@@ -1,0 +1,40 @@
+{"bid": "b01", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "Wikipedia leads: '<call sign / channel name> is a ... television station/channel located in ...'. Obscure real stations; 3 of 5 are cable channels, not local stations."}
+{"bid": "b02", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'The <year> <race> was the Nth running of ...' or '<race> is a Grade N ... race held at ...'. Mix of famous and obscure."}
+{"bid": "b03", "codes": ["l1y", "c1y", "c1y", "l1y", "c1y"], "note": "'<company> is an American publishing company ...'. Two of five are loosely publishers (market intelligence firm, arts non-profit)."}
+{"bid": "b04", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'The <common name> (<binomial>) is a ... bird in the family ...'. Mostly obscure species."}
+{"bid": "b05", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born ...) is an American screenwriter.' Obscure people."}
+{"bid": "b06", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a <nationality> chess Grandmaster.' Obscure people."}
+{"bid": "b07", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'NGC <n> is a spiral galaxy in the constellation ...'. Catalogue galaxies, not famous ones."}
+{"bid": "b08", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Genus> is a genus of ... snails, marine gastropod mollusks in the family ...'. Obscure, often extinct genera; 'mollusk' spelled the US way."}
+{"bid": "b09", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'The <year> <place> earthquake occurred ... with a moment magnitude of ... and a maximum Mercalli intensity of ...'. Mostly minor quakes."}
+{"bid": "b10", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Ride> is a steel roller coaster located at <park> ...'."}
+{"bid": "b11", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Title> (<Japanese script> <romaji>) is a Japanese anime television series / OVA ...'. Obscure titles with Japanese script and romaji."}
+{"bid": "b12", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Title> is a <quarterly/monthly> magazine published in ...'. Obscure niche magazines."}
+{"bid": "b13", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a <nationality> speed skater ...' plus Olympic placings."}
+{"bid": "b14", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Variety> is a white/red <country> wine grape ...'. Minor varieties."}
+{"bid": "b15", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'The <year> <place> <office> election was held on ...'. State, provincial and council elections."}
+{"bid": "b16", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'The <Town> Football Club is an Australian rules football club ... competing in the <local league>'. Amateur and suburban clubs, not AFL clubs."}
+{"bid": "b17", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> is a retired <East/West German> slalom/sprint canoeist ... won N medals at the ICF ... Championships'."}
+{"bid": "b18", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a <nationality> handball player who plays for <club> and the national team.'"}
+{"bid": "b19", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Full name> (born <date>) is a <nationality> ... astronaut/cosmonaut'. Mostly lesser-known astronauts."}
+{"bid": "b20", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> is an American historian ...' with degrees and university posts. Obscure academics."}
+{"bid": "b21", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Binomial> is a moth in the <family> family. It was described by <author> in <year>. ... The wingspan is ...'. Almost all obscure moths."}
+{"bid": "b22", "codes": ["c1y", "c1y", "l1y", "l1y", "l1y"], "note": "'<Name> (born ...) is a <nationality> former racing driver.' Three of five never mention Formula One, so on the text alone they are only loosely F1."}
+{"bid": "b23", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Binomial> is a species of agaric fungus in the family ... described as new to science in <year> by ...'."}
+{"bid": "b24", "codes": ["c1y", "c1y", "c1y", "l1y", "c1y"], "note": "Hagiographic biographies of obscure saints, one beatus."}
+{"bid": "b25", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a Canadian curler from <town>. ... throws lead rocks for the <skip> rink.'"}
+{"bid": "b26", "codes": ["o1y", "c1y", "c1y", "o1y", "o1y"], "note": "TEAM seasons ('The 2004 Baltimore Ravens season was the team's ninth season in the NFL'). Three of five are CFL or Arena League team seasons, so the dataset class is broader than its label; bank F instead writes about NFL league years."}
+{"bid": "b27", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a <nationality> figure skater. She is the <year> national champion ...'."}
+{"bid": "b28", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Hotel> is a luxury/four-star hotel in <district>, <city> ...'."}
+{"bid": "b29", "codes": ["o1y", "l1y", "c1y", "c1y", "c1y"], "note": "'<Pass> (elevation ...) is a mountain pass in the <range> ...'. One is a peak (Bishops Cap), one a highway summit."}
+{"bid": "b30", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> was King of <kingdom> in the <n>th century, whose reign lasted from ...'. Obscure kings (Anuradhapura, Bernicia)."}
+{"bid": "b31", "codes": ["c1y", "c1y", "c1y", "c1y", "l1y"], "note": "'<Name> (born <date> in <town>) is a <nationality> model.' One is a lifestyle blogger."}
+{"bid": "b32", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name>, (born <date> in <city>) is a professional squash player who represents <country>. He reached a career-high world ranking of ...' Highly templated."}
+{"bid": "b33", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a former Major League Baseball (MLB) pitcher ...'."}
+{"bid": "b34", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Title> is a <monthly> peer-reviewed <field> journal published by <publisher> ...'."}
+{"bid": "b35", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a former English cricketer. <Name> was a right-handed batsman and ... bowler.'"}
+{"bid": "b36", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date> in <town>) is a <nationality> (amateur) boxer who competed at the <year> Olympics in the <weight> division.'"}
+{"bid": "b37", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'Pope <Name> (Latin: ...; dates) was Pope from <date> to <date>.'"}
+{"bid": "b38", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Call sign> is a <format> radio station licensed to <town>, broadcasting at <frequency> ... owned by ...'."}
+{"bid": "b39", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is an Australian rules footballer who plays for <club> in the Australian Football League (AFL).'"}
+{"bid": "b40", "codes": ["c1y", "c1y", "c1y", "c1y", "c1y"], "note": "'<Name> (born <date>) is a <nationality> model and beauty queen who represented <country> at Miss World <year> ...'."}
