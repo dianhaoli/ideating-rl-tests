@@ -1,0 +1,2465 @@
+{
+ "bank": "F",
+ "concepts": {
+  "topic:SoccerLeague": [
+   {
+    "style": "casual social-media post",
+    "text": "Allsvenskan is back this weekend!! Sixteen clubs, one trophy, and my Hammarby boys are finally ready. Who's watching the opener?"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Hot take: the Eredivisie is the most fun top flight in Europe to watch. Young players, open games, 4-3 scorelines every other week."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ZURICH, March 4 (Reuters) - The Swiss Super League will expand from 10 to 12 clubs next season after member clubs voted in favour of a new format, officials said on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Indian Super League announced a new broadcast deal on Monday, with matches to be streamed in five regional languages from the upcoming season, organisers said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who went down from the Championship this year? B: Three clubs dropped to League One, and two of them were in the top tier not long ago. A: Brutal division."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How many teams are in Liga MX? B: Eighteen, and they play two short tournaments a year, Apertura and Clausura. A: So two champions per year? B: Exactly."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. J1 League: Japan's top division has grown into one of Asia's best-run competitions, with packed stadiums, clean finances and promotion links to J2."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Scottish Premiership: twelve clubs, a split after 33 rounds, and the most intense derby atmosphere on this list."
+   },
+   {
+    "style": "forum question",
+    "text": "How does promotion into the Norwegian Eliteserien work? Do the top two in the second tier go up automatically, or is there a playoff for third place?"
+   },
+   {
+    "style": "forum question",
+    "text": "New to following MLS. Why is there no relegation, and how do the Eastern and Western Conferences decide who makes the playoffs?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched a full season of the Polish Ekstraklasa on a streaming pass. Quality is uneven, but the title race went to the final day and the crowds are fantastic. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Paid for the A-League season pass and loved it. The grand final format is great drama, though too many matches kick off at awkward times. Worth it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, the fixture list for the new Primeira Liga season came out today. Benfica play Porto in round nine, so I've circled the date already."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent the evening reading about Iceland's top division. Amazing that a country of under 400,000 people runs a ten-team championship every summer."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Veikkausliiga is the highest tier of men's association football in Finland, contested by twelve clubs from April to October, with the bottom side relegated."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Süper Lig, founded in 1959, is the top professional football division in Turkey; its most successful clubs are Galatasaray, Fenerbahçe and Beşiktaş."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The creation of the English Premier League in 1992 shows how television money can reshape an entire sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In my essay I argue that a national football league helps unite a country, because fans from every region follow the same competition each weekend."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's why the Bundesliga's fifty-plus-one rule matters. Members keep majority control, so ticket prices stay low. Next week we compare it with La Liga."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to Second Tier Talk. Today we break down the 2. Bundesliga promotion race, where five clubs are separated by three points with four rounds left."
+   }
+  ],
+  "topic:SoccerManager": [
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe they sacked Marco Bellini after six games. The man took us up two divisions in three years! This board has zero patience."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Gaffer's tactics today were spot on. Switched to a back three at half time and we turned 1-0 down into a 3-1 win. Give that man a new contract!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LISBON, Jan 12 (AP) - Sporting appointed 44-year-old Rui Matias as head coach on Thursday, handing the former youth-team boss a contract until 2028."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Celtic Bay FC said on Monday that manager Owen Fraser had left by mutual consent, with assistant Liam Doyle taking charge for Saturday's cup tie."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the new boss at United? B: A Dutch coach, Henk van Dalen. Won the Eredivisie twice with a pressing system. A: Hope he sorts out the defence."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see the manager's press conference? B: Yeah, he blamed the referee again. A: Every week. B: Still, he's kept us top six on half the budget."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Arsène Wenger: in charge of Arsenal for 22 years, he guided the 2003-04 'Invincibles' through an entire season unbeaten."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Carlo Rinaldi: the calm Italian tactician who has won titles in four countries and never raises his voice on the touchline."
+   },
+   {
+    "style": "forum question",
+    "text": "What qualifications do you need to become a football manager in Europe? Is the UEFA Pro Licence mandatory for top-flight clubs?"
+   },
+   {
+    "style": "forum question",
+    "text": "Serious question: is our manager tactically out of his depth, or is it the players? We've conceded from set pieces in seven straight matches."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read the autobiography of former Leeds and Valencia manager Tomás Ortega. Great stories about dressing-room rows and deadline days, a bit repetitive near the end. 4 stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw the documentary on Sir Alex Ferguson. A fascinating look at how he handled egos at Old Trafford for 26 years. Highly recommend."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met the gaffer at the club open day! Jürgen Hoff signed my programme and asked which position I play. Still smiling."
+   },
+   {
+    "style": "diary entry",
+    "text": "Coach Moreno called me into his office after training and said I'd start on Sunday. Twelve years at this club and he's the first manager who believed in me."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Giorgio Ferraresi (born 1971) is an Italian football manager and former defender who led Udinese to European qualification in his first season in charge."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "After retiring as a player in 2004, Pedro Alcántara became head coach of Real Valladolid, later working in Mexico and Greece before taking over the Chile national team."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A great football manager must be part tactician and part psychologist, as shown by how Pep Guardiola rebuilds his sides every season."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Brian Clough's years at Nottingham Forest prove that a strong leader in the dugout can lift an ordinary club to win the European Cup."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So the gaffer comes in at half time, doesn't shout, just writes three names on the whiteboard and says 'you three, press higher.' We won 2-0. That's management."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our guest spent fifteen years in the dugout across England's lower divisions. Welcome, Steve. What's the hardest part of the job at that level?"
+   }
+  ],
+  "topic:AustralianFootballTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "Mighty Magpies! Collingwood by 12 points in front of 90,000 at the MCG. Best Saturday arvo of the year."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Mum's a Bulldogs fan, Dad goes for the Cats, and I've picked the Dockers just to annoy them both. Footy season at our house is chaos."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MELBOURNE, Aug 30 (AAP) - Carlton secured a top-four finish on Saturday with a 34-point win over Gold Coast, setting up a qualifying final against the Brisbane Lions."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Tasmania Devils will enter the AFL in 2028 after the club unveiled its first senior coach and confirmed plans for a new stadium in Hobart, officials announced today."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who do you barrack for? B: Sydney Swans, mate, since the '05 flag. A: Brave thing to say in Melbourne. B: Red and white till I die."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Norwood win the SANFL grand final? B: Yep, beat Glenelg at Adelaide Oval. A: That's another premiership for the Redlegs, then."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. West Coast Eagles: the first club from Western Australia to win a VFL/AFL premiership, taking the 1992 flag at the MCG."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Hawthorn: four premierships between 2008 and 2015 and a famously precise kicking game built under Alastair Clarkson."
+   },
+   {
+    "style": "forum question",
+    "text": "Moving to Perth next month. Should I follow Fremantle or West Coast? Which footy club has the better members' culture for newcomers?"
+   },
+   {
+    "style": "forum question",
+    "text": "How many players does an Aussie rules side have on the ground? I count 18 a side plus interchange. Is that the same for state-league clubs too?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Joined the Richmond Tigers as a three-game member this year. Seats were decent, the club newsletter is great, and the Dreamtime match was unforgettable. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a Williamstown VFL game for $15. Grassy hill, good pies, passionate locals, and the Seagulls won by 40. Better value than any AFL match."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got my first Essendon guernsey today, number 5. Wore it to school under my jumper and nobody noticed. Bombers play Saturday night."
+   },
+   {
+    "style": "diary entry",
+    "text": "Footy training with the Port Adelaide juniors tonight. Coach said if I keep my handballs clean I might make the under-16s."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Geelong Football Club, nicknamed the Cats, is a professional Australian rules football club based in Geelong, Victoria, playing home games at Kardinia Park."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Subiaco Football Club is an Australian rules football club competing in the West Australian Football League, with home matches at Leederville Oval."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Brisbane Lions show how an Australian football club can thrive outside Victoria, winning three straight premierships from 2001 to 2003."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Country footy clubs in Victoria often hold small towns together, giving young people a reason to stay and a place to belong."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to the Kick-to-Kick podcast. This week: is the Giants' young midfield finally ready to deliver a premiership to Western Sydney?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and North Melbourne have won three of their last four, which for Kangaroos fans feels like a miracle after years at the bottom of the ladder."
+   }
+  ],
+  "topic:BasketballTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "Celtics up 2-0 in the series and the Garden is LOUD tonight. Let's finish this!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My local club, the Brisbane Bullets, just signed a seven-foot centre from Serbia. NBL season can't come fast enough."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BELGRADE, May 21 (Reuters) - Partizan Belgrade advanced to the EuroLeague Final Four on Tuesday after a 79-74 home win over Monaco in the deciding fifth game."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Golden State Warriors confirmed on Friday that their home opener at Chase Center will be played on October 24 against the Phoenix Suns."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are the Lakers any good this year? B: Their starting five is great, but the bench is thin. A: So, play-in again? B: Probably."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see Real Madrid won the ACB title? B: Again? That's every other year. A: Their backcourt is ridiculous."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Chicago Bulls (1995-96): 72 wins, 10 losses, and a roster featuring Michael Jordan, Scottie Pippen and Dennis Rodman."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Fenerbahçe Beko: Istanbul's powerhouse won its first EuroLeague crown in 2017 and plays in front of one of Europe's loudest crowds."
+   },
+   {
+    "style": "forum question",
+    "text": "Which NBA franchise has the best young core right now? I want to pick a team to follow that'll be good for the next five years."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the Toronto Raptors sell single-game tickets for preseason? Visiting family in October."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a Harlem Globetrotters show with the kids. Mostly comedy, some amazing trick shots, steep ticket prices. Kids rated it 10/10, I'd say 7."
+   },
+   {
+    "style": "product or event review",
+    "text": "Took in a Maccabi Tel Aviv home game: drums all four quarters, and they rallied from 15 down. Easily the best night of my trip."
+   },
+   {
+    "style": "diary entry",
+    "text": "We lost by one point in the county final. The whole squad cried in the locker room, even Coach Patel."
+   },
+   {
+    "style": "diary entry",
+    "text": "The Wildcats finally beat Riverside! I hit two free throws in the last minute and the whole team piled on me."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Boston Celtics are an American professional basketball team based in Boston, competing in the Atlantic Division of the NBA's Eastern Conference."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Žalgiris Kaunas is a Lithuanian professional basketball club founded in 1944, which won the EuroLeague in 1999 and plays its home games at Žalgiris Arena."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The San Antonio Spurs prove that steady leadership and smart drafting can keep a small-market franchise competitive for two decades."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When the Toronto Raptors won the 2019 championship, a country that lives for hockey suddenly fell in love with hoops."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Okay, Knicks talk. Are they a real contender or just a nice regular-season side? Because that second unit worries me in a seven-game series."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and this week's Team of the Week goes to the Las Vegas Aces, who have won eleven straight behind A'ja Wilson."
+   }
+  ],
+  "topic:CricketTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "Mumbai Indians defending 190 with Bumrah still to bowl at the death. This IPL season is wild."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Yorkshire need 140 on the last day with seven wickets in hand. Sitting at Headingley with a flask of tea and full belief."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAHORE, Feb 18 (AFP) - Pakistan named an unchanged squad on Sunday for the second Test against New Zealand, keeping faith with the batting order that collapsed in Karachi."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Somerset will play home Twenty20 matches under new floodlights this summer after the county club completed a £2 million upgrade at Taunton, the club confirmed."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How's the Proteas' bowling attack looking? B: Fast and nasty. Rabada, Jansen, plus a spinner who actually turns it. A: The Aussies won't enjoy that."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did the village XI win on Saturday? B: Lost by four runs. Our number eleven got run out going for a second. A: Classic."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. West Indies (1980-1995): a side that went fifteen years without losing a Test series, powered by a relentless four-man pace attack."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Chennai Super Kings: five IPL titles and a fan base so devoted that yellow shirts fill stadiums even at away games."
+   },
+   {
+    "style": "forum question",
+    "text": "How does selection work for a first-class county side? Does the director of cricket pick the XI, or the captain?"
+   },
+   {
+    "style": "forum question",
+    "text": "Visiting Wellington in January. Any chance to watch the Firebirds play at the Basin Reserve, and do I need tickets in advance?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Bought the Lancashire membership this year. Great views at Old Trafford and brilliant T20 Blast nights, but rain ruined two Championship games. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary following Afghanistan's rise in international cricket is inspiring. From refugee camps to beating England at a World Cup. Must watch."
+   },
+   {
+    "style": "diary entry",
+    "text": "Selected for the school's first XI today! Batting at number four on Saturday against St Mark's. Practised cover drives until dark."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched India collapse to 36 all out on TV. Dad switched it off in disgust, then switched it back on for the next morning's session."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Sydney Sixers are an Australian men's professional Twenty20 franchise that competes in the Big Bash League and plays home matches at the Sydney Cricket Ground."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Barbados is a first-class side in West Indian domestic cricket and has won the regional first-class championship more times than any other team."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The rise of Ireland's cricket team, from associate status to full Test membership in 2017, shows how a small nation can grow in a global sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A good cricket team needs patience as much as talent, because a Test match can turn on a single session."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Third Man. Today: can England's Bazball side really win in India, or will the spinners expose them again on turning pitches?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the Rajasthan Royals' powerplay record this season is staggering. They're scoring over sixty an innings in the first six overs."
+   }
+  ],
+  "topic:CyclingTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "Absolutely buzzing that our local club rider just signed with Visma–Lease a Bike! From Sunday chaingangs to the WorldTour."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "UAE white, Ineos navy, Lidl–Trek red... who has the best kit in the peloton this year? My vote goes to EF's pink."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS, Nov 3 (AP) - Cofidis confirmed on Friday that it will extend its sponsorship of the French squad through 2028, securing the future of one of the oldest teams in professional cycling."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Norwegian outfit Uno-X Mobility said on Wednesday it had received a wildcard invitation to the Tour de France for the third straight year."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is everyone riding in front of their leader? B: Domestiques. The whole squad shelters him from the wind. A: So seven guys work for one? B: Pretty much."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which outfit has the best sprint train? B: Alpecin, no contest. Their lead-out men drop Philipsen in the perfect spot every time."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Team Sky (2010-2019): seven Tour de France wins with four different riders and a data-driven approach that changed the sport."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Lotto: the Belgian squad that always seems to have a punchy rider in the breakaway on classics Sundays."
+   },
+   {
+    "style": "forum question",
+    "text": "How do pro cycling teams get a WorldTour licence? Is it purely points-based now, or does the UCI look at budget and ethics too?"
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know if Bahrain Victorious riders do public group rides during their January training camp in Spain?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the docuseries following Movistar through a Grand Tour season. Great look at team buses and race radios, but too much drama editing. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Bought the replica jersey of the Groupama–FDJ squad. Race-cut and tight, excellent quality, eye-watering price."
+   },
+   {
+    "style": "diary entry",
+    "text": "Day three of training camp in Calpe. The directeur sportif had us doing five-hour rides with sprint efforts. Legs dead, but I'm part of the squad now."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got a signed bidon from a Soudal Quick-Step rider at the team bus before the stage start. Best souvenir ever."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Movistar Team is a Spanish professional road cycling team that has raced continuously at the top level since its founding as Reynolds in 1980."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lidl–Trek is a professional cycling team registered in the United States, with men's and women's squads competing on the UCI World Tour."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In road racing, a team works like a machine: riders sacrifice personal glory so that one leader can win."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The success of Team Sky shows how marginal gains in nutrition and equipment can transform a squad's results."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So, Intermarché. Small budget, no superstar, yet three stage wins at the Giro. How is that squad punching so far above its weight?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the transfer window is open, and the big story is that UAE Team Emirates has signed two more climbers to support Pogačar in July."
+   }
+  ],
+  "topic:HandballTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "THW Kiel fans in the arena are insane tonight. Handball in Germany hits different!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our club's women's seven just got promoted to the second division!! Ten years ago we couldn't even field a full side."
+   },
+   {
+    "style": "news-wire report",
+    "text": "VESZPRÉM, June 2 (MTI) - Veszprém booked their place in the EHF Champions League Final4 on Sunday after an aggregate win over Paris Saint-Germain."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Denmark's Aalborg Håndbold said on Thursday it had extended the contract of its star playmaker for three seasons ahead of the new domestic campaign."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is that like water polo but on land? B: Kind of. Seven a side, three steps with the ball. Barça's squad is the best in Europe at it."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who won the German title? B: Füchse Berlin. A: Wow, after all those years behind Kiel and Flensburg. B: Their back line is unstoppable."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. FC Barcelona Handbol: dozens of Spanish titles and multiple EHF Champions League trophies make the Catalans Europe's most decorated handball club."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Győri Audi ETO KC: the Hungarian women's side that dominated European club handball through the 2010s."
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for an amateur handball club in Manchester. Does anyone know a team that accepts adult beginners?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why do Scandinavian handball sides like Kolstad suddenly have such big budgets? Who funds them?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to an SG Flensburg-Handewitt home game. Fast, physical, sixty goals in sixty minutes, and the crowd sang the whole time. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary about Montpellier's 2003 Champions League run was fascinating, though poor audio made the interviews hard to follow."
+   },
+   {
+    "style": "diary entry",
+    "text": "Training with the under-17 squad tonight. Coach moved me to left wing and I scored four goals in the practice match!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Our handball team lost the regional final by one goal. The goalkeeper saved a seven-metre throw late on, but we couldn't equalise."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rhein-Neckar Löwen is a German handball club based in Mannheim that competes in the Handball-Bundesliga and won the national championship in 2016 and 2017."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "RK Zagreb is a Croatian handball club founded in 1922, the dominant force in its domestic league and European champion in 1992 and 1993."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In Denmark, the local handball club is often the centre of village life, with players of every age training in the same hall."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The success of French handball sides shows how a strong youth academy can feed a whole national programme."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Seven Metres. Today we break down how Magdeburg's back court ripped apart Kielce's defence in the semi-final."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Nantes have quietly built one of the deepest rosters in the Starligue, and I think they're the dark horse for a European title."
+   }
+  ],
+  "topic:HockeyTeam": [
+   {
+    "style": "casual social-media post",
+    "text": "Leafs win in OT!!! Scotiabank Arena is shaking. Maybe this is finally the year."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our beer-league squad, the Frozen Pucks, just won its first game in two seasons. Celebrating like we lifted the Stanley Cup."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DENVER, April 28 (AP) - The Colorado Avalanche eliminated the Winnipeg Jets on Sunday with a 4-2 win in Game 6, advancing to the second round of the NHL playoffs."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Swedish club Färjestad BK announced on Tuesday that it had hired a new head coach on a three-year deal after missing the SHL playoffs for the first time in a decade."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's your team? B: The Bruins, obviously. A: Even after that trade? B: Especially after that trade. The defence is better."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are the Kraken any good yet? B: They made the second round once. A: Not bad for an expansion club. B: Seattle loves them anyway."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Montreal Canadiens: 24 Stanley Cup championships, the most of any franchise in NHL history."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. SKA Saint Petersburg: the KHL club with the biggest budget and one of the loudest arenas in Europe."
+   },
+   {
+    "style": "forum question",
+    "text": "Visiting Helsinki in February. Is it easy to get tickets for an HIFK home game, and which section has the best atmosphere?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the Hartford Whalers move to Carolina? Asking as a confused kid whose dad still wears their logo."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw the Belfast Giants at the SSE Arena. Fast skating, a scrap in the second period, a mascot dance-off. Great night out, overpriced nachos. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Bought the Vegas Golden Knights season ticket package. The pre-game show is pure Vegas theatre and the team is competitive, but parking is a nightmare."
+   },
+   {
+    "style": "diary entry",
+    "text": "Mom took me to my first Oilers game. They lost 3-1 but I caught a puck during warm-ups!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Our women's field hockey squad beat Ashford 2-1 in the county cup today. I scored the winner from a short corner."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Detroit Red Wings are a professional ice hockey team based in Detroit, Michigan, and one of the Original Six franchises of the National Hockey League."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "HC Davos is a Swiss ice hockey club founded in 1921 that plays in the National League and hosts the annual Spengler Cup."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Edmonton Oilers of the 1980s showed how a young, fast team built around Wayne Gretzky could change the way the game was played."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "For many small Canadian towns, the local junior club is a source of pride that brings everyone to the rink on Friday nights."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Alright, Rangers talk. Their power play is lethal, but five-on-five they're getting outshot every night. Can that last?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the Tampa Bay Lightning are back on top of the Atlantic Division, with their goalie stopping 94 percent of shots this month."
+   }
+  ],
+  "topic:RugbyClub": [
+   {
+    "style": "casual social-media post",
+    "text": "Leinster at the Aviva on a Saturday night, nothing beats it. Blue army in full voice!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our village rugby club's annual sevens tournament is this Sunday. BBQ, bouncy castle, and the old boys' match at 4pm. All welcome!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON, May 25 (AFP) - Stade Toulousain won a record sixth European Champions Cup on Saturday, beating Leinster 31-22 after extra time."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Welsh side Scarlets confirmed on Monday that they had signed a New Zealand-born flanker on a two-year contract ahead of the United Rugby Championship season."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who do you support in the Premiership? B: Saracens. A: Even after the salary-cap scandal? B: Loyalty, mate."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Fancy joining the club's social team? B: I've never played rugby. A: Nobody on that team really has. Training is Tuesdays, pints after."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Crusaders: the Christchurch franchise has won more Super Rugby titles than any other side."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Munster: famous for beating the All Blacks in 1978 and for the respectful silence at Thomond Park when kickers line up."
+   },
+   {
+    "style": "forum question",
+    "text": "Moving to Bath for university. Is it hard to get tickets to the Rec, and does the club have an amateur side students can join?"
+   },
+   {
+    "style": "forum question",
+    "text": "How does promotion into the French Top 14 work? Does the Pro D2 champion go up automatically?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to Harlequins' Big Summer Kick-Off at Twickenham. Huge crowd, fireworks, great family atmosphere, though the food queues were terrible. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Joined my local club's touch rugby nights this summer. Friendly people, well organised, and the clubhouse pints are cheap. Highly recommended."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got picked for the under-15s at the Gloucester academy today. Dad was more nervous than me."
+   },
+   {
+    "style": "diary entry",
+    "text": "Played my first full match for the Old Boys' second XV. Bruised, muddy, and completely happy."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Leicester Tigers is an English professional rugby union club founded in 1880 that plays its home matches at Welford Road and competes in the Premiership."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Wigan Warriors is a professional rugby league club based in Wigan, Greater Manchester, and one of the most successful clubs of the Super League era."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In the Welsh valleys, the rugby club is often the heart of the community, hosting weddings and fundraisers alongside Saturday matches."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Toulouse's academy system explains why the club produces so many international players."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to The Breakdown. Today: can Northampton's free-flowing attack win them another title, or will the big packs grind them down?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and Glasgow Warriors have now won eight on the bounce, and their scrum, honestly, is the best in the competition."
+   }
+  ],
+  "topic:Curler": [
+   {
+    "style": "casual social-media post",
+    "text": "Rewatching Eve Muirhead's Olympic gold run from 2022. That last shot in the final still gives me chills. Scotland's greatest skip."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our club's own Jenna Morrow is off to the junior worlds as third for Team Canada! So proud of this kid. #curling"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAUSANNE, March 20 (Reuters) - Swedish skip Anders Lindqvist won his third world title on Sunday, drawing to the button with his last stone to beat Canada 6-5."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Mara Thibault, 24, has been named the youngest skip ever to represent Manitoba at the Scotties Tournament of Hearts, provincial officials said on Tuesday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the guy yelling 'hurry hard'? B: That's Kevin Lund, the skip. He wants his sweepers to brush faster. A: He looks furious. B: He always does."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long has your uncle been curling? B: Forty years. He threw lead for a rink that won the provincial seniors twice."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Rachel Homan: a multiple Canadian champion skip known for aggressive shot-making and fearless double takeouts."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Bruce Mouat: the Scottish skip whose calm delivery and precise draws earned him Olympic silver in Beijing."
+   },
+   {
+    "style": "forum question",
+    "text": "My daughter wants to become a competitive curler. At what age do most elite players start throwing stones, and how many hours a week do they practise?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the Norwegian team's famous patterned trousers from Thomas Ulsrud's era are still on sale anywhere? Want a pair for our bonspiel."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read 'Hurry Hard', the memoir of a Saskatchewan curler who played thirty seasons. Charming stories about small-town rinks and bonspiel road trips. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Took a learn-to-curl session taught by former national champion Ingrid Halvorsen. Patient and funny, and I finally slid without falling. Five stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Played second for Grandpa's team at the club bonspiel today. Swept so hard my arms are jelly, but we won the C event!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Jennifer Jones at the rink today! She watched our junior practice and told me to keep my head up on the slide."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Anna Hasselborg (born 1989) is a Swedish curler who skipped her team to the Olympic gold medal at the 2018 Winter Games in Pyeongchang."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Stefan Moser (born 1984) is a Swiss curler from Bern who played lead on four national championship teams and competed at two world championships."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A skilled curler must read the ice the way a chess player reads a board, planning several stones ahead."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "John Shuster's comeback to win Olympic gold in 2018 shows that persistence matters as much as talent."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to The Hack. Our guest threw lead stones at three Olympics. What does a lead actually do that fans never notice?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and then she just slides out, calm as anything, and draws to the four-foot for two. Ice in her veins, that one."
+   }
+  ],
+  "topic:FigureSkater": [
+   {
+    "style": "casual social-media post",
+    "text": "Yuzuru Hanyu skating to Seimei still lives rent-free in my head. That triple axel was pure poetry."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our 12-year-old landed her first clean double axel at practice today!! Coach cried, I cried, the Zamboni driver clapped."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MILAN, March 22 (AP) - Japan's Kaori Sato won the women's world title on Saturday, landing a triple axel in her free skate to overtake the leader by 2.4 points."
+   },
+   {
+    "style": "news-wire report",
+    "text": "South Korean figure skater Park Ha-eun, 17, withdrew from the Grand Prix Final on Thursday with an ankle injury, her federation said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does she spin so fast? B: She's pulling her arms in. It's called a scratch spin. A: How is she not dizzy? B: Years of practice."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who are you rooting for in the ice dance? B: The French pair, Papadakis and Cizeron. Their choreography is unreal."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Katarina Witt: two Olympic golds for East Germany and a flair for performance that made her a global star."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Evgeni Plushenko: four Olympic medals and a quad-triple combination that defined men's skating in the 2000s."
+   },
+   {
+    "style": "forum question",
+    "text": "My son is 9 and wants to try competitive skating. How much does it cost per year to train as a figure skater at club level?"
+   },
+   {
+    "style": "forum question",
+    "text": "Can someone explain why Kim Yuna didn't get the 2014 Olympic gold? I keep reading about a judging controversy."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Stars on Ice tour. Nathan Chen's exhibition skate was the highlight, but the group numbers felt underrehearsed. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Peggy Fleming's memoir. A lovely look at skating in the 1960s, though light on technical detail."
+   },
+   {
+    "style": "diary entry",
+    "text": "Fell on my lutz six times at the morning session. On the seventh it finally stuck. Coach Elena says my long programme is ready for regionals."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Mao Asada's Sochi free skate again tonight. She fell in the short and still came back. I want to skate like that."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Michelle Kwan (born 1980) is an American former figure skater who won five World Championship titles and two Olympic medals."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mikhail Orlov (born 1998) is a Russian figure skater who competes in men's singles and won bronze at the Junior Grand Prix Final."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Surya Bonaly's backflip at the 1998 Olympics was a bold act of rebellion against strict judging rules."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A figure skater must combine the strength of an athlete with the grace of a dancer, as Javier Fernández showed throughout his career."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Edge Call. Today we're talking about the young Japanese skater who just landed a quad lutz in competition at fifteen."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...level four step sequence, level four spins, and the component scores were through the roof. That's how you win a short programme."
+   }
+  ],
+  "topic:IceHockeyPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Connor McDavid just went end to end through four defenders. I've watched it twenty times. Generational talent."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Proud aunt moment: my nephew Tyler scored his first OHL goal tonight! Top shelf, glove side."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TORONTO, Jan 9 (CP) - Maple Leafs forward Jakob Lindgren signed a four-year contract extension on Tuesday worth a reported $7.5 million per season."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Finnish defenceman Ville Korhonen was suspended for three games by the NHL's Department of Player Safety on Monday for an illegal check to the head."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's number 87? B: Sidney Crosby, the Penguins captain. A: He's been around forever. B: And still one of the best two-way centres."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does your goalie wear such huge pads? B: Pucks come at him at 160 kilometres an hour. A: Respect."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Wayne Gretzky: 894 regular-season goals and four Stanley Cups; 'The Great One' still holds dozens of NHL records."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Hilary Knight: the American forward who became the all-time leading scorer at the women's world championships."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it true Alexander Ovechkin shoots from the same spot on the power play every time? How do defences still not stop him?"
+   },
+   {
+    "style": "forum question",
+    "text": "My son is a 16-year-old winger. Should he play major junior in Canada or go the US college route to reach the pros?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Read the autobiography of Swedish defenceman Nils Ekström. Honest about concussions and life in the minors. Very moving. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary on Dominik Hašek was great; the archival footage of his sprawling saves in Nagano is worth the price alone."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got Auston Matthews' autograph outside the arena! He even asked what position I play."
+   },
+   {
+    "style": "diary entry",
+    "text": "Coach moved me from centre to left wing. Two assists tonight, so maybe he's right."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Bobby Orr (born 1948) is a Canadian former professional ice hockey defenceman who played mostly for the Boston Bruins and revolutionised the position with his offensive skill."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Teemu Selänne (born 1970) is a Finnish former professional ice hockey right winger who scored 76 goals in his rookie NHL season."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Mario Lemieux's return to the ice after cancer treatment shows the courage of a true athlete."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Being an ice hockey player requires speed, toughness and vision, but also the discipline to stay out of the penalty box."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our guest played 900 NHL games as a stay-at-home defenceman. Welcome. What's it like blocking a hundred-mile-an-hour slapshot?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and he's got 40 points in 30 games, as a rookie. The kid's going to win the Calder, mark my words."
+   }
+  ],
+  "topic:Skater": [
+   {
+    "style": "casual social-media post",
+    "text": "Irene Schouten just dominated the mass start again. Dutch speed skating is on another planet."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Cheering for my cousin Dani in the 500m short-track final tonight. Elbows out, girl!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "HEERENVEEN, Nov 17 (ANP) - Dutch skater Sem van der Velde won the 10,000 metres at the World Cup opener on Saturday, finishing 3.2 seconds clear at Thialf."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Short-track skater Lee Seo-yeon of South Korea won the 1,500 metres at the world championships on Sunday, surging past two rivals on the final lap."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why do they swing their arms like that? B: Momentum on the straights. On long distances they tuck one arm behind the back. A: Looks exhausting."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see him fall in the 1500? B: He clipped a block on the crossing straight. A: Four years of training gone in a second."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Eric Heiden: five individual gold medals at the 1980 Lake Placid Games, winning every distance from 500m to 10,000m."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Claudia Pechstein: the German long-track skater who competed at eight Winter Olympics."
+   },
+   {
+    "style": "forum question",
+    "text": "What clap skates do professional long-track skaters use? I'm switching from hockey skates and the blades confuse me."
+   },
+   {
+    "style": "forum question",
+    "text": "How does Sven Kramer's Olympic record in the 5000m hold up today? Has anyone come close?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the documentary about Apolo Ohno's short-track career. Gripping race footage, a bit too much slow motion. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Bonnie Blair's biography. An inspiring story of a skater from a big family who went on to win five Olympic golds."
+   },
+   {
+    "style": "diary entry",
+    "text": "Morning ice at 5:30 again. Ten 400m laps at race pace. Coach says my corners are finally smooth."
+   },
+   {
+    "style": "diary entry",
+    "text": "Skated on the frozen canals with Opa today, following part of the old Elfstedentocht route. Forty kilometres, frozen toes, very happy."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ireen Wüst (born 1986) is a Dutch former long-track speed skater who won thirteen Olympic medals, including six golds, across five Games."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Arianna Fontana (born 1990) is an Italian short-track speed skater and the most decorated Italian athlete in Winter Olympic history."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A speed skater must balance raw leg power with perfect technique, because one slip in a corner can cost a whole season's work."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Dan Jansen's victory in his final Olympic race in 1994, after years of heartbreak, is one of the most touching stories in sport."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Inner Lane. Our guest set a national junior record over 1500 metres last winter. What changed in your training?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and she's still two-tenths up at the 700 split, can she hold it? Yes! A new track record in Calgary!"
+   }
+  ],
+  "topic:Skier": [
+   {
+    "style": "casual social-media post",
+    "text": "Mikaela Shiffrin just broke another World Cup record. At this point she's racing against history, not other athletes."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our club kid Lukas finished fourth in the junior slalom today, beating racers two years older! Coaches are thrilled."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KITZBÜHEL, Jan 25 (Reuters) - Swiss downhiller Fabian Kälin won the Hahnenkamm downhill on Saturday, clocking 1:52.31 on the Streif for his first victory on the famous course."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Norwegian cross-country skier Ingrid Solberg withdrew from the Tour de Ski on Tuesday with a respiratory infection, her team confirmed."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does that guy have skinny skis? B: He's a cross-country racer. They cover fifty kilometres. A: In one go? B: In one go."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the best freestyle athlete right now? B: Eileen Gu, easily. Halfpipe, slopestyle, big air. A: She does all three?"
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Ingemar Stenmark: 86 World Cup race wins, almost all in slalom and giant slalom, a record that stood for decades."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Marit Bjørgen: eight Olympic gold medals in cross-country, making her one of the most decorated winter athletes ever."
+   },
+   {
+    "style": "forum question",
+    "text": "How do World Cup skiers train in summer? Do they really go to glaciers in Chile and New Zealand?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which bindings Lindsey Vonn used in her comeback season? Asking for gear-nerd reasons."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Bode Miller's memoir. Brutally honest about racing on the edge. Great read. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the film about Franz Klammer's 1976 Olympic downhill. The archival run is breathtaking, though the acted scenes are cheesy."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day on the race team! We ran gates on the red slope and I only straddled two. Coach Anja says my tuck is improving."
+   },
+   {
+    "style": "diary entry",
+    "text": "Skied 30 km of the classic trail today at minus fifteen. Eyelashes frozen, legs burning, totally happy."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Hermann Maier (born 1972) is an Austrian former alpine skier who won two Olympic golds in 1998, days after a spectacular crash in the downhill."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Johannes Høsflot Klæbo (born 1996) is a Norwegian cross-country skier who specialises in sprint events and has won multiple Olympic gold medals."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "An alpine skier racing downhill reaches speeds over 130 km/h, so courage is as important as technique."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Lindsey Vonn's return from serious knee injuries shows how determination can extend an athlete's career."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our guest raced the World Cup circuit for a decade in the speed events. What goes through your head in the start gate at Wengen?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...she's taking a very direct line... green at the second split... and she's in the lead by four-tenths!"
+   }
+  ],
+  "topic:SumoWrestler": [
+   {
+    "style": "casual social-media post",
+    "text": "Terunofuji won another Emperor's Cup on one good knee. Absolute warrior. #sumo"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Got to watch morning practice at a stable in Ryogoku today. The rikishi slam into each other at 7am like it's nothing."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO, Jan 26 (Kyodo) - Ozeki Hokutoumi clinched his second top-division championship on Sunday with a 13-2 record, putting him in line for promotion to yokozuna."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Hoshiumi, 23, was promoted to the juryo division on Wednesday, becoming a salaried sekitori two years after his professional debut, the Japan Sumo Association said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does he throw salt before the bout? B: Purification, it's a Shinto ritual. A: And the stomping? B: Driving evil spirits out of the ring."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How heavy was Hakuho? B: Around 155 kilos at his peak. A: That's small for a yokozuna? B: About average. Technique was his weapon."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Hakuhō Shō: 45 top-division championships, the most in sumo history."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Akebono: the Hawaiian-born giant who became the first non-Japanese yokozuna in 1993."
+   },
+   {
+    "style": "forum question",
+    "text": "Planning to attend the Nagoya basho. How do I find out when Ura's bouts are? He's my favourite rikishi."
+   },
+   {
+    "style": "forum question",
+    "text": "Do sumo wrestlers really eat chanko-nabe every day? How many calories does a top-division rikishi eat?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Read the biography of Chiyonofuji, 'The Wolf'. Great insight into how a lighter man dominated with muscle and speed. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Our Ryogoku tour included lunch with a retired maegashira. He told hilarious stories about stable life. 5 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Enho beat a man 80 kilos heavier today. Tiny, fast, fearless. New favourite."
+   },
+   {
+    "style": "diary entry",
+    "text": "My host father in Tokyo used to compete in makushita. He showed me how to tie a mawashi and laughed when I failed."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Takanohana Kōji (born 1972) is a former Japanese sumo wrestler who became the 65th yokozuna and won 22 top-division championships."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Kaiō Hiroyuki is a retired Japanese sumo wrestler who held the rank of ōzeki for a record 65 tournaments."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Takamiyama, born in Hawaii, opened the door for foreign rikishi when he won a top-division title in 1972."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A sumo wrestler lives by strict rules inside his stable, from wearing a topknot to cooking for senior wrestlers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today on Dohyo Talk: the young Kazakh rikishi who went 7-0 in his first lower-division tournament. Is he a future yokozuna?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...he gets a strong grip on the belt, drives forward, and yorikiri! Out he goes. That's eleven wins now."
+   }
+  ],
+  "topic:Historian": [
+   {
+    "style": "casual social-media post",
+    "text": "Just finished Mary Beard's SPQR. How can a book on ancient Rome be this funny? She should design every school curriculum."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My grandma was a local historian who spent forty years cataloguing parish records. Today the town library named its archive room after her."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON, Oct 5 (PA) - Cambridge historian Dr Helen Ashworth has won this year's Wolfson History Prize for her study of famine relief in 1840s Ireland, judges announced on Thursday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Andrzej Kowalczyk, whose research reshaped understanding of medieval trade in the Baltic, has died aged 89, his university said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who wrote that book on the late Ottoman Empire? B: Professor Halil Demir. He spent ten years in the Istanbul archives. A: Sounds like a heavy read."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you go to the lecture on Viking coins? B: Dr Lindqvist's? Yes, he argued trade routes went much further east than we thought."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Eric Hobsbawm: his four 'Age of' volumes covered modern history from 1789 to 1991 and shaped generations of students."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Barbara Tuchman: a two-time Pulitzer winner whose 'The Guns of August' is still read by military leaders."
+   },
+   {
+    "style": "forum question",
+    "text": "Which historians should I read to understand the causes of the First World War? I've heard Christopher Clark's 'The Sleepwalkers' is a good start."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Herodotus considered a reliable source, or more of a storyteller? Doing a project on the 'father of history'."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Simon Schama's book on the Dutch Golden Age. Rich detail and wonderful prose, though the footnotes are exhausting. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended a talk by Professor Nkem Obi on pre-colonial West African kingdoms. An engaging speaker who used old maps brilliantly. Five stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent all day in the county archive transcribing 18th-century court records for my thesis. My supervisor says I'm becoming a real historian."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Dr Ruth Calloway at the conference. She wrote the book that made me choose this field, and she remembered my question from her lecture!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Fernand Braudel (1902-1985) was a French historian and leader of the Annales school, best known for his study of the Mediterranean world."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Romila Thapar (born 1931) is an Indian historian whose research focuses on ancient India."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Thucydides wrote about the Peloponnesian War as an eyewitness, which makes his account valuable but also biased."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A good scholar of the past, like Marc Bloch, questions every source instead of simply repeating it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "My guest has spent thirty years studying the Silk Road. Professor Wei, what first drew you to the manuscripts of Dunhuang?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's what makes Edward Gibbon so fascinating. He partly blamed Christianity for Rome's fall, and scholars have argued about it ever since."
+   }
+  ],
+  "topic:Poet": [
+   {
+    "style": "casual social-media post",
+    "text": "Rereading Mary Oliver tonight. 'Tell me, what is it you plan to do with your one wild and precious life?' gets me every time."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My friend Leila read her own verses at an open mic for the first time and the whole café went silent. So proud!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "DUBLIN, April 3 (Reuters) - Siobhán Keane was named Ireland Professor of Poetry on Wednesday, praised by the panel for verse that 'makes the ordinary luminous'."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Nigerian-born poet Tunde Afolabi has won the Forward Prize for best first collection with 'Harmattan Hymns', a book about his childhood in Kano."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who wrote 'The Road Not Taken'? B: Robert Frost. A: I always thought it was about choosing boldly. B: Many do, but he meant it a bit ironically."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Have you read Pablo Neruda? B: Only the love sonnets. A: Try the odes. He wrote one to a tomato."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Emily Dickinson: nearly 1,800 poems, most discovered after her death, full of dashes and slant rhyme."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Langston Hughes: the voice of the Harlem Renaissance, who turned blues rhythms into verse."
+   },
+   {
+    "style": "forum question",
+    "text": "Can anyone recommend a contemporary poet similar to Seamus Heaney? I love his work about farms and bogs."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Rumi Persian or Turkish? Our class can't agree."
+   },
+   {
+    "style": "product or event review",
+    "text": "Ocean Vuong's new collection is tender and devastating. A few pieces felt unfinished, but the closing sequence is perfect. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw Kae Tempest perform live. Forty minutes of spoken word, no break, and the crowd barely breathed. Unforgettable."
+   },
+   {
+    "style": "diary entry",
+    "text": "Wrote three stanzas about the river this morning. Mrs Hale says I have a poet's eye. Maybe she's just being kind."
+   },
+   {
+    "style": "diary entry",
+    "text": "Visited Keats House in Hampstead today and stood in the garden where he wrote 'Ode to a Nightingale'. Goosebumps."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Wisława Szymborska (1923-2012) was a Polish poet and essayist who received the Nobel Prize in Literature in 1996."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Matsuo Bashō (1644-1694) was the most famous poet of Japan's Edo period, recognised as a master of haiku."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Wilfred Owen's verses show the horror of the trenches more honestly than any official report."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Maya Angelou turned her painful childhood into lines that gave hope to millions of readers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today I'm joined by a writer whose debut collection sold out in a week. Welcome, Amara. Would you read us the first poem?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...what I love about Wordsworth is that he made walking a creative act. Every hill, every daffodil became material for his lines."
+   }
+  ],
+  "topic:ScreenWriter": [
+   {
+    "style": "casual social-media post",
+    "text": "Aaron Sorkin's walk-and-talk dialogue in The West Wing is still unmatched. Nobody writes rhythm like that."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Huge news: my best friend just sold her first screenplay to a streaming studio!! Years of rewrites paid off."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES, Feb 10 (Reuters) - Daniel Okafor won the Writers Guild award for best original screenplay on Sunday for 'The Long Shore', a drama about a Lagos fishing family."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Ruth Mendel, the Hollywood scriptwriter who penned more than thirty films over five decades, has died aged 91, her family said on Tuesday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who wrote Chinatown? B: Robert Towne. A: The ending is so bleak. B: He wanted a different one, but Polanski changed it."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How's the script going? B: Act two is a mess. A: Want me to read it? B: Only if you promise not to mention the dream sequence."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Charlie Kaufman: the writer behind 'Being John Malkovich' and 'Eternal Sunshine of the Spotless Mind'."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Diablo Cody: won an Oscar for 'Juno', her very first feature script."
+   },
+   {
+    "style": "forum question",
+    "text": "How did screenwriters like Phoebe Waller-Bridge break in? Do I need an agent before submitting to competitions?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is Final Draft really necessary when you're starting out, or are free formatting tools good enough for a spec script?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Nora Ephron's essays. Funny, sharp, and full of insight into how she wrote 'When Harry Met Sally'. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Took a weekend workshop led by a TV writer who worked on three crime dramas. Practical advice on structure, though too short. 4 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finished the first draft of my pilot script at 3 am. Sixty pages. Tomorrow I start cutting."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got notes back from the producer: 'make the villain likeable'. Rewriting the whole second act again."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "William Goldman (1931-2018) was an American novelist and screenwriter who won Academy Awards for 'Butch Cassidy and the Sundance Kid' and 'All the President's Men'."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Jean-Claude Carrière (1931-2021) was a French screenwriter known for his long collaboration with director Luis Buñuel."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Without a strong script, even a great director cannot make a great film, as the career of Billy Wilder proves."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Bong Joon-ho and Han Jin-won's script for 'Parasite' shows how sharp writing can cross language barriers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Draft Zero. My guest wrote the script for last year's surprise horror hit. How many drafts did it take?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...what Tarantino does with dialogue is let scenes run long, then snap them shut. As a writer, you study that."
+   }
+  ],
+  "topic:AutomobileEngine": [
+   {
+    "style": "casual social-media post",
+    "text": "Just heard a Ferrari V12 at full song through a tunnel. My ears are ringing and I've never been happier."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Swapped a 2JZ into my old Supra this weekend. Big single turbo, 600 horsepower, zero regrets. The garage smells like victory."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO, May 28 (Reuters) - Toyota said on Tuesday it is developing a compact new 1.5-litre four-cylinder that can run on hydrogen and synthetic fuels."
+   },
+   {
+    "style": "news-wire report",
+    "text": "General Motors confirmed on Thursday that its sixth-generation small-block V8 will be built at its Tonawanda plant, promising better efficiency and lower emissions."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's under the bonnet? B: The old 1.9 TDI. A: Slow? B: Slow, but it'll do 500,000 kilometres if you change the oil."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does that Porsche sound different? B: Flat-six. The cylinders lie opposite each other. A: A boxer? B: Exactly."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Ford Coyote 5.0 V8: a modern four-valve design that gives the Mustang its signature roar."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Honda K20: the high-revving 2.0-litre four-cylinder beloved by tuners for VTEC and reliability."
+   },
+   {
+    "style": "forum question",
+    "text": "My BMW N47 diesel rattles at cold start. Is that the infamous timing chain issue, and how much does a fix cost?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is the Mazda Skyactiv-X compression-ignition petrol motor worth it, or should I just get the regular 2.0?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Drove the latest Golf GTI with the EA888 turbo four. Smooth, punchy midrange, and great fuel economy for its power. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Wankel rotary in my RX-8 sings to 9,000 rpm, but it drinks oil like a pirate. Love it, would not recommend it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dad and I rebuilt the carburettor on Grandpa's 1967 Beetle today. The air-cooled flat-four started on the second try!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched the mechanic open up my Fiesta's 1.0 EcoBoost. The wet belt was soaked and shedding, just like the forums warned."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Chevrolet small-block is a series of V8 automobile engines produced by General Motors since 1955, used in everything from the Corvette to pickup trucks."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Toyota 2JZ is a 3.0-litre inline-six produced from 1991 to 2007, known for its cast-iron block and durability."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Nikolaus Otto's four-stroke internal combustion design made the modern car possible."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Volkswagen's TDI diesels were once praised for efficiency, but the 2015 emissions scandal showed how engine software can be misused."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Torque Talk. This week: is Mercedes-AMG's M139, the most powerful production four-cylinder, a masterpiece or a ticking time bomb?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the beauty of the Rover V8 is that it started life as a Buick design. Aluminium block, light, and it ended up in everything from Land Rovers to TVRs."
+   }
+  ],
+  "topic:Earthquake": [
+   {
+    "style": "casual social-media post",
+    "text": "Just felt the whole apartment shake for like twenty seconds in Tokyo. Everyone ok? The alert said magnitude 5.8."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Ten years since the Nepal quake today. Thinking of the families in Kathmandu and the villages that are still rebuilding."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ANKARA, Feb 6 (Reuters) - A magnitude 7.8 quake struck southern Turkey near the Syrian border before dawn on Monday, toppling thousands of buildings, officials said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A magnitude 6.1 tremor hit central Chile late on Sunday, the national seismological centre said, cutting power in several towns, with no immediate reports of casualties."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you feel that? B: The glasses rattled. A: Should we get under the table? B: It's stopped. Probably just an aftershock."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Grandpa, were you in San Francisco in 1989? B: I was at Candlestick for the World Series. The stands swayed, then the power went out."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Valdivia, Chile, 1960: magnitude 9.5, the most powerful earthquake ever recorded, with a tsunami that reached Hawaii and Japan."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Lisbon, 1755: struck on All Saints' Day, followed by a tsunami and fires that destroyed much of the city."
+   },
+   {
+    "style": "forum question",
+    "text": "How far did the shaking from the 2011 Tōhoku quake reach? I've read Tokyo skyscrapers swayed for minutes."
+   },
+   {
+    "style": "forum question",
+    "text": "Was the 2023 Al Haouz earthquake in Morocco on a known fault? I didn't think that region was very active."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the museum about the 1995 Kobe quake. The shaking simulation is intense and the survivor testimonies are moving. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the documentary on the 2010 Haiti disaster. Heartbreaking footage, but it explained the fault rupture clearly."
+   },
+   {
+    "style": "diary entry",
+    "text": "Woke at 3 am to the bed sliding across the floor. We ran outside in pyjamas and stood in the street with the neighbours until sunrise."
+   },
+   {
+    "style": "diary entry",
+    "text": "Day four after the tremor. School is closed because of cracks in the walls. Mum says we'll sleep in the car one more night."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1906 San Francisco earthquake struck Northern California on April 18 with an estimated magnitude of 7.9, and the fires that followed destroyed much of the city."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2004 Indian Ocean earthquake, magnitude 9.1, triggered tsunamis that killed more than 225,000 people in fourteen countries."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1923 Great Kantō earthquake led Japan to rebuild Tokyo with wider streets and stricter building rules."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Christchurch quake of 2011 showed that even a moderate tremor can be deadly when it strikes directly beneath a city."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we talk to a seismologist who was in Anchorage during the 2018 quake. What did the first five seconds feel like?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the ground liquefied, basically turned to soup, and whole apartment blocks tipped over intact. That's what happened in Niigata in 1964."
+   }
+  ],
+  "topic:SolarEclipse": [
+   {
+    "style": "casual social-media post",
+    "text": "TOTALITY!!! Just watched the sun vanish over Texas and the whole crowd screamed. The diamond ring was unreal."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Clouds rolled in exactly two minutes before the eclipse. Four hours of driving for a grey sky. Pain."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MAZATLÁN, April 8 (AP) - Thousands of people on Mexico's Pacific coast watched the moon fully cover the sun for about four and a half minutes on Monday, at the start of its path across North America."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Spain is preparing for its first total solar eclipse in more than a century on August 12, with authorities warning of heavy traffic in the northern provinces."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can I look at it without glasses? B: Only during totality. The second the sun peeks out, glasses back on. A: Got it."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is it getting so cold? B: The moon is blocking most of the sunlight. A: The birds just went quiet. B: Wait for it..."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. May 29, 1919: observed from Príncipe and Brazil, this totality gave the first evidence supporting Einstein's general relativity."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. The annular eclipse of October 2023: a 'ring of fire' visible from Oregon to Brazil."
+   },
+   {
+    "style": "forum question",
+    "text": "What filter should I put on my DSLR to photograph the partial phases of the 2027 eclipse in Egypt?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is Luxor really the best spot for the August 2027 totality? I read the moon covers the sun for over six minutes there."
+   },
+   {
+    "style": "product or event review",
+    "text": "Joined an eclipse cruise in the Pacific. Three minutes of totality, knowledgeable crew, mediocre food. Still 5/5 for the sky."
+   },
+   {
+    "style": "product or event review",
+    "text": "The viewing party at the planetarium was well run: free eclipse glasses, telescopes with solar filters, and great live commentary."
+   },
+   {
+    "style": "diary entry",
+    "text": "We watched from the school field with cereal-box pinhole viewers. The crescent sun showed up a hundred times in the leaf shadows!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandma saw the 1999 totality in Cornwall. Today I saw my own. The sky went dark blue and Venus appeared at noon."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The total solar eclipse of July 22, 2009 was the longest of the 21st century, with totality lasting up to 6 minutes and 39 seconds over the Pacific Ocean."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "An annular solar eclipse occurred on May 20, 2012, visible as a ring of fire across southern China, Japan and the western United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In ancient China, a darkened sun at midday was seen as a warning to the emperor, so astronomers who failed to predict it could be punished."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Great American Eclipse of 2017 inspired millions of people to learn about astronomy."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Night Sky Talk. Our guest has chased twenty-three totalities. Which was the hardest to reach?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and as the last bead of sunlight disappears, you see the corona, pearly streamers reaching out in every direction. Nothing prepares you."
+   }
+  ],
+  "topic:OlympicEvent": [
+   {
+    "style": "casual social-media post",
+    "text": "That men's 4x100m relay final in Paris was ridiculous. Canada coming through for gold again!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Watching the women's synchronised 10m platform final at 3am. China's divers are perfect, as usual."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO, Aug 1 (Reuters) - Italy's Marcell Jacobs won the men's 100 metres final at the Tokyo Olympics on Sunday in 9.80 seconds."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Hungary took gold in the men's water polo tournament at the 2000 Sydney Games, beating Russia 13-6 in the final."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who won the women's marathon in Paris? B: Sifan Hassan, after running the 5,000 and 10,000 too. A: Three races in one Games? Unreal."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's in the modern pentathlon? B: Fencing, swimming, riding, and a combined run and shoot. A: All in one day?"
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Men's 100m, Beijing 2008: Usain Bolt eased up before the line and still set a world record of 9.69."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Women's team gymnastics, Atlanta 1996: Kerri Strug vaulted on an injured ankle to help secure the gold."
+   },
+   {
+    "style": "forum question",
+    "text": "How does qualification for Olympic BMX freestyle work? Is it based on world rankings or a separate series?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why was the men's 50 km race walk dropped from the Olympic programme after Tokyo?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Had tickets to the beach volleyball at the Eiffel Tower stadium. Incredible setting, DJ between points, amazing crowd. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the 1500m freestyle heats in person. Long, honestly, but the last 100 metres of the final heat had everyone on their feet."
+   },
+   {
+    "style": "diary entry",
+    "text": "Saw the women's skeleton runs live in Pyeongchang. They go head first at 130 km/h. I held my breath every time."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our town held a watch party for the women's eights final. Our local girl won silver and the pub went mad."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The men's 400 metres hurdles at the 2020 Summer Olympics was won by Karsten Warholm of Norway in a world record time of 45.94 seconds."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The men's 10,000 metres at the 1912 Stockholm Olympics was won by Hannes Kolehmainen of Finland."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1968 men's 200 metres medal ceremony, where Tommie Smith and John Carlos raised their fists, turned an Olympic final into a historic protest."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The marathon at the 1960 Rome Olympics, won by barefoot runner Abebe Bikila, showed the world the talent of African athletes."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we relive the men's team sprint in track cycling from London. The British trio were so fast they made the track look downhill."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's how the mixed doubles badminton final ended, 21-19 in the third game. The most dramatic match of the whole Games."
+   }
+  ],
+  "topic:CyclingRace": [
+   {
+    "style": "casual social-media post",
+    "text": "Paris-Roubaix today! Mud, cobbles, crashes and pure chaos. Best day of the calendar."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Rode the amateur version of the Tour of Flanders route. 240 km, endless hellingen, and the Koppenberg broke me. Never again (until next year)."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ROME, June 1 (Reuters) - The Giro d'Italia finished in Rome on Sunday, with the overall winner safely in the pink jersey after three weeks and roughly 3,400 kilometres of racing."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of the Tour Down Under said on Monday that next year's edition will feature a summit finish on Willunga Hill."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long is Milan-San Remo? B: Almost 300 kilometres. A: In one day? B: The longest one-day classic there is."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's in the yellow jersey? B: The overall leader. Polka dots are for the best climber. A: And green? B: Points, so usually a sprinter."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Liège-Bastogne-Liège: 'La Doyenne', first held in 1892, is the oldest of the five Monuments."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Strade Bianche: Tuscany's white gravel roads and a finish in Siena's Piazza del Campo."
+   },
+   {
+    "style": "forum question",
+    "text": "Planning to watch a mountain stage of the Vuelta. Is it better to stand at the summit or halfway up the climb?"
+   },
+   {
+    "style": "forum question",
+    "text": "When will next year's Tour de France route be presented? Hoping it passes through Brittany."
+   },
+   {
+    "style": "product or event review",
+    "text": "Spectated at the Gent-Wevelgem finish. Frites, beer tents, and the bunch sprint went right past us. Amazing atmosphere. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Rode the RideLondon sportive. Closed roads and great marshals, but the start pens were chaotic. 4 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Stood on the Alpe d'Huez hairpins for six hours waiting for the peloton. They passed in ninety seconds. Worth every minute."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finished my first stage race today: three days around the Peak District. Came 34th overall but won the mountains classification on day two!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Tour de France is an annual men's multiple-stage bicycle race held primarily in France, first organised in 1903 by the newspaper L'Auto."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Paris-Nice is an eight-day professional road cycling stage race held in March, nicknamed 'the race to the sun'."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Tour de France began as a publicity stunt to sell newspapers but became one of the world's biggest sporting events."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The cobbles of Paris-Roubaix show that a bike race can test luck and endurance as much as speed."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to The Echelon. Today: the route reveal for next year's Giro, with two time trials and a stage finishing on Mount Etna."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...forty kilometres to go, the breakaway has ninety seconds, and the crosswind is splitting the bunch to pieces."
+   }
+  ],
+  "topic:HorseRace": [
+   {
+    "style": "casual social-media post",
+    "text": "Our office sweepstake horse just won the Grand National at 33-1! Cake for everyone tomorrow."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Kentucky Derby day! Big hat, mint julep, and absolutely no idea which horse to pick."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MELBOURNE, Nov 5 (AAP) - An Irish-trained five-year-old won the Melbourne Cup at Flemington on Tuesday, holding off a fast-finishing local favourite by half a length."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of the Dubai World Cup announced on Wednesday that prize money for the feature race at the March meeting will rise to $12 million."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long is the Derby at Epsom? B: A mile and a half. A: And the bend? B: Tattenham Corner. They come downhill into it. Crazy."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is the Preakness called the second jewel? B: It's the second leg of the Triple Crown, after the Derby. A: And then the Belmont."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Prix de l'Arc de Triomphe: Europe's richest turf race, run at Longchamp on the first Sunday of October."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Palio di Siena: bareback riders race three laps of the Piazza del Campo in about ninety seconds."
+   },
+   {
+    "style": "forum question",
+    "text": "First time at Royal Ascot. What's the dress code on Gold Cup day, and is the Windsor Enclosure worth it?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why is the Cheltenham Gold Cup run over fences while the Derby is on the flat? Total newbie here."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the Breeders' Cup at Keeneland. Gorgeous setting, smooth organisation, great paddock views. Food lines were long. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Japan Cup at Tokyo Racecourse was a spectacle: a huge crowd hushed at the start, then a roar all the way down the long straight."
+   },
+   {
+    "style": "diary entry",
+    "text": "Went to the Galway Races with Uncle Seán. Mud everywhere, music everywhere, and the horse he tipped came last."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Secretariat's 1973 Belmont on YouTube with Dad. Thirty-one lengths. He got teary."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Grand National is a National Hunt horse race held annually at Aintree Racecourse near Liverpool, run over about four miles and two furlongs with thirty fences."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Kentucky Derby is a Grade I stakes race for three-year-old thoroughbreds, held annually at Churchill Downs in Louisville since 1875."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Melbourne Cup is called 'the race that stops a nation' because schools and offices pause to watch it."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Palio di Siena shows how a horse race can carry centuries of local tradition and rivalry."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Final Furlong. Today we preview the Irish Derby at the Curragh, where the favourite has never run on soft ground."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...they jump the last together, but she finds another gear up the Cheltenham hill and wins by three lengths!"
+   }
+  ],
+  "topic:Convention": [
+   {
+    "style": "casual social-media post",
+    "text": "Day 1 at San Diego Comic-Con! Waited four hours for Hall H but saw the trailer before anyone else. Worth it."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My Zelda cosplay took 300 hours and three people asked for photos in the first ten minutes at Anime Expo!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "INDIANAPOLIS, Aug 4 (AP) - Gen Con, the largest tabletop gaming convention in North America, drew more than 70,000 unique attendees this weekend, organisers said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of Worldcon, the World Science Fiction Convention, announced on Saturday the host city for next year's gathering, where the Hugo Awards will be presented on the final night."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are you going to Dragon Con? B: Already booked the hotel. A: Which costume this year? B: Group cosplay. We're the whole Fellowship."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What do people do at a Star Trek con? B: Panels with the actors, autograph lines, a costume contest. A: And the Klingon karaoke? B: Saturday night."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Comiket, Tokyo: the twice-yearly self-published comics market draws hundreds of thousands of visitors in a single weekend."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. PAX West: Seattle's gaming expo, famous for its indie showcase and the endless queue for the main theatre."
+   },
+   {
+    "style": "forum question",
+    "text": "First time at Lucca Comics & Games. Are tickets per day, and should I stay in Lucca itself or commute from Pisa?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if MCM London Comic Con allows replica props in the halls? My Mandalorian blaster is made of foam."
+   },
+   {
+    "style": "product or event review",
+    "text": "This year's show was disappointing: half the artist alley tables empty and celebrity photo ops at $90 each. 2/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Small fan con in Leeds, but brilliant: friendly volunteers, affordable autographs, and a great cosplay masquerade. 5 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met the voice actor of my favourite anime character at the con today! He signed my poster and said my name in the character's voice."
+   },
+   {
+    "style": "diary entry",
+    "text": "Three days, eleven panels, two hours of sleep a night. My feet hurt but I already bought next year's badge."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "San Diego Comic-Con is a multi-genre entertainment and comic book convention held annually in San Diego, California, since 1970."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Japan Expo is an annual convention on Japanese popular culture held in Villepinte, near Paris, since 1999."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Fan gatherings like Gen Con show that hobbies such as board games can build strong communities."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Comic-Con has grown from a small meeting of about 300 fans into an event where Hollywood studios launch blockbusters."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to Con Crew. We just got home from Emerald City Comic Con, and wow, the artist alley this year was stacked."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the badge line at Otakon wrapped around the block twice by 8 am, so plan ahead if you're going next summer."
+   }
+  ],
+  "topic:Election": [
+   {
+    "style": "casual social-media post",
+    "text": "Just voted! Queue was 40 minutes but the volunteers had coffee. Go vote, people!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe the mayoral race came down to 212 votes. Recount starts Monday. My nerves can't take it."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW DELHI, June 4 (Reuters) - Vote counting began on Tuesday in India's general election, the world's largest, in which more than 640 million people cast ballots over six weeks."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Voters in Iceland went to the polls on Saturday in a snap parliamentary vote called after the collapse of the governing coalition, with turnout reported at about 80 percent."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who are you voting for in the council race? B: Haven't decided. Both candidates promise to fix the potholes. A: They always do."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's ahead? B: Exit polls say the opposition, but the postal ballots aren't counted yet. A: So we'll know by midnight? B: Maybe by breakfast."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. South Africa, 1994: the first general election in which citizens of all races could vote, bringing Nelson Mandela to power."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. The 2000 US presidential race: decided by 537 votes in Florida after weeks of recounts."
+   },
+   {
+    "style": "forum question",
+    "text": "How does voting for the Bundestag work? Why do Germans get two votes on the ballot, and what's the five percent threshold?"
+   },
+   {
+    "style": "forum question",
+    "text": "I'm moving to Canada. Can permanent residents vote in provincial elections, or only citizens?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the BBC's results-night coverage until 5 am. Great graphics, too many pundits. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read a book about the 1948 Truman-Dewey campaign. Brilliant on how the pollsters got it wrong. 4 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Worked at the polling station from 7 am to 10 pm, then counted ballots by hand until midnight. Democracy is exhausting but beautiful."
+   },
+   {
+    "style": "diary entry",
+    "text": "First time voting today! Mum took a photo of me outside the school gym holding my polling card."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2019 Indian general election was held in seven phases from 11 April to 19 May 2019 to constitute the 17th Lok Sabha."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1983 United Kingdom general election was held on 9 June 1983 and gave the Conservative Party under Margaret Thatcher a landslide majority."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The July 1932 Reichstag election shows how economic crisis can push voters toward extremist parties."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Free and fair elections are the foundation of democracy because they let citizens change their leaders peacefully."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Swing State. Today: why did turnout among young voters drop in last month's provincial vote?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so the governing party lost six seats, but thanks to the coalition maths they actually stay in power. Proportional representation, folks."
+   }
+  ],
+  "topic:FilmFestival": [
+   {
+    "style": "casual social-media post",
+    "text": "The Cannes red carpet tonight is serving! And I'm stuck at home watching the livestream in pyjamas."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Saw fourteen films in five days at TIFF. My eyes are square but I've found my new favourite director."
+   },
+   {
+    "style": "news-wire report",
+    "text": "VENICE, Sept 7 (Reuters) - A Chilean family drama won the Golden Lion on Saturday, the jury announced, capping eleven days of screenings on the Lido."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Sundance Film Festival will move from Park City, Utah, to Boulder, Colorado, starting in 2027, organisers confirmed on Thursday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you get tickets for the Berlinale? B: Only a 9 am press screening. A: Of what? B: A three-hour Romanian drama. Wish me luck."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why's everyone in tuxedos? B: It's the closing-night gala. A: For a documentary festival? B: Even documentarians like to dress up."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Cannes: the Palme d'Or remains cinema's most prestigious prize, and the Croisette its most famous red carpet."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Busan International Film Festival: Asia's largest showcase for new cinema, held every autumn in South Korea."
+   },
+   {
+    "style": "forum question",
+    "text": "How do I submit a short to Clermont-Ferrand? Is there an entry fee, and do they accept films with English subtitles?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is Sitges worth it for horror fans? Thinking of going this October for the midnight screenings."
+   },
+   {
+    "style": "product or event review",
+    "text": "Tribeca this year had a strong lineup of documentaries, but scheduling was chaotic and two screenings started late. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Small festival in Galway, but the programming was excellent and directors stayed for every Q&A. Loved it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Volunteered as an usher at the Edinburgh film festival. Saw the director of my favourite movie eating chips on a bench."
+   },
+   {
+    "style": "diary entry",
+    "text": "My short film screened at the student festival tonight. Sixty people, two laughs in the right places. I'll take it."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Berlin International Film Festival, known as the Berlinale, is held annually in February and awards the Golden Bear to the best film in competition."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Toronto International Film Festival, founded in 1976, is one of the largest publicly attended film festivals in the world."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Events like Sundance give independent filmmakers a chance to be discovered."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Cannes shows how cinema can be both an art form and a huge business."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "We're live from the Lido! Day three at Venice and the buzz is all about a black-and-white silent film from Georgia."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...my top pick from the Telluride lineup is a quiet Japanese drama about a sushi chef. It'll go far in awards season."
+   }
+  ],
+  "topic:MilitaryConflict": [
+   {
+    "style": "casual social-media post",
+    "text": "Visited Gettysburg today. Standing on Little Round Top, where so many fell in July 1863, was overwhelming."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My great-grandfather fought at the Somme. Found his letters in the attic today. Reading them now."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SEOUL, July 27 (Yonhap) - Veterans gathered on Thursday to mark 70 years since the armistice that halted fighting in the Korean War, laying wreaths at the national cemetery."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Archaeologists in Belgium said on Tuesday they had uncovered remains of a field hospital used during the Battle of Waterloo in 1815."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why did the Hundred Years' War last 116 years? B: Truces, treaties, then fighting again. A: So not one long war? B: More like a series of them."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Grandpa, what was the Falklands like? B: Cold, wet, and far from home. Seventy-four days that felt like years."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Battle of Stalingrad (1942-1943): the turning point on the Eastern Front, with combined casualties in the millions."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. The Battle of Hastings, 1066: one afternoon that changed the English language and monarchy forever."
+   },
+   {
+    "style": "forum question",
+    "text": "What caused the Thirty Years' War? I understand religion played a role, but why did Catholic France fight on the Protestant side?"
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for good books on the Peninsular War. Is Charles Esdaile's history readable for a beginner?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Ken Burns' documentary series on the Vietnam War is exhaustive and deeply moving. Eighteen hours well spent. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the Culloden battlefield visitor centre. The immersive 360 room is powerful and the exhibits are well laid out. 4.5 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Class trip to the Normandy beaches. Omaha is so quiet now. Hard to imagine what happened there in June 1944."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finished reading about the Siege of Leningrad. 872 days. I complained about a cold lunch today. Perspective."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Battle of Agincourt was an English victory in the Hundred Years' War, fought on 25 October 1415 near Azincourt in northern France."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The War of the Pacific (1879-1884) was fought between Chile and an alliance of Bolivia and Peru over control of nitrate-rich coastal territory."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The American Civil War ended slavery in the United States but left deep divisions that lasted for generations."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Battle of Marathon in 490 BC proved that a smaller, disciplined Greek force could defeat the army of the Persian Empire."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Campaign History. Today: the Battle of Midway, and how broken Japanese codes let the US Navy set an ambush."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so by 1918 both sides were exhausted, the blockade was starving Germany, and the armistice finally came on the eleventh of November."
+   }
+  ],
+  "topic:MusicFestival": [
+   {
+    "style": "casual social-media post",
+    "text": "Glastonbury sunrise at the Stone Circle after dancing all night. Muddy, tired and completely happy."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Coachella lineup just dropped and I'm screaming! Weekend one, who's in?"
+   },
+   {
+    "style": "news-wire report",
+    "text": "ROSKILDE, June 29 (Ritzau) - More than 130,000 people descended on Roskilde this week for one of Europe's oldest music festivals, featuring around 180 acts across eight stages."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of Primavera Sound said on Monday that the Barcelona event had sold out in under four hours, a record for the festival."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you camp at Reading? B: Three nights. A: How was it? B: Rain on Friday, sunshine for the headliner. Perfect."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's Montreux like? B: Jazz by the lake, free stages along the promenade. A: Sounds classier than Download. B: Very different crowds."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Woodstock 1969: hundreds of thousands of people, three days of rain and the defining performances of a generation."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Fuji Rock: Japan's biggest outdoor music weekend, held in the mountains of Niigata with stages linked by forest trails."
+   },
+   {
+    "style": "forum question",
+    "text": "First time at Tomorrowland. Is DreamVille camping worth it, or should I stay in Antwerp and take the shuttle?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Bonnaroo allows reusable water bottles? It's Tennessee in June, so hydration is a must."
+   },
+   {
+    "style": "product or event review",
+    "text": "Green Man in Wales was a gem: beautiful valley setting, great folk and indie lineup, very family-friendly. Toilets could be cleaner. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Lollapalooza in Chicago was massive but badly organised: an hour to get in and overpriced drinks. Great main-stage sets though. 3/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Day two at Sziget. Danced to a Hungarian brass band at noon and a British DJ at 3 am. My feet have given up."
+   },
+   {
+    "style": "diary entry",
+    "text": "Volunteered at the local folk festival handing out wristbands. Got to watch the headliner's soundcheck from backstage!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Glastonbury Festival is a five-day festival of contemporary performing arts held near Pilton, Somerset, first staged in 1970."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Wacken Open Air is an annual heavy metal festival held in the village of Wacken in northern Germany since 1990."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Woodstock showed how music could bring together young people who wanted peace."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Today, big weekends such as Glastonbury raise millions for charity while also hosting the world's biggest bands."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "We just got back from Primavera and honestly the late-night electronic stage was the highlight of the weekend."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the headliner came on forty minutes late, but when the opening chords hit, eighty thousand people forgot all about it."
+   }
+  ],
+  "topic:FootballMatch": [
+   {
+    "style": "casual social-media post",
+    "text": "3-0 down at half time, then Liverpool won on penalties. Istanbul 2005 is still the greatest comeback I've ever seen."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "We were 2-0 down at 85 minutes and won 3-2! Scenes in the away end I'll never forget!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON, May 25 (PA) - Manchester United won the FA Cup on Saturday, beating Manchester City 2-1 at Wembley with goals from Alejandro Garnacho and Kobbie Mainoo."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Argentina beat France on penalties after a 3-3 draw in the World Cup final in Lusail on Sunday, with Lionel Messi scoring twice."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Were you watching the derby? B: Every second. That red card in the 30th minute changed everything. A: Still think we'd have won with eleven."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What happened in the '66 final? B: Hurst's hat-trick, England beat West Germany 4-2 after extra time. A: And that goal off the crossbar? B: Still debated."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Brazil 1-7 Germany, 2014 World Cup semi-final: five German goals in the first 29 minutes in Belo Horizonte."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. The 1999 Champions League final: Manchester United scored twice in stoppage time to beat Bayern Munich 2-1."
+   },
+   {
+    "style": "forum question",
+    "text": "Can someone explain the offside call in last night's semi-final? The striker looked level to me."
+   },
+   {
+    "style": "forum question",
+    "text": "Where can I find a full replay of the 1970 World Cup final between Brazil and Italy?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the North London derby from the home end. End-to-end, four goals, deafening noise. Best ticket I've ever bought."
+   },
+   {
+    "style": "product or event review",
+    "text": "That cup tie was a bore: 0-0 after 120 minutes, then a shootout that told us nothing about who played better. 2/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dad took me to my first match today. We won 1-0 with a header in the 89th minute and I lost my voice cheering."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our under-12s drew 2-2 against the top team. I saved a penalty in the second half!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The deciding match of the 1950 FIFA World Cup, known as the Maracanazo, saw Uruguay defeat Brazil 2-1 in front of about 200,000 spectators in Rio de Janeiro."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2005 UEFA Champions League Final was played at the Atatürk Olympic Stadium in Istanbul between Liverpool and AC Milan."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 'Miracle of Bern', West Germany's 1954 World Cup final win over Hungary, gave a defeated nation new confidence."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A single game can unite a whole country, as when Iceland drew 1-1 with Argentina in their first ever World Cup match in 2018."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Let's rewind to Sunday's game. Ninety-third minute, corner, the keeper comes up, and he heads it in! I've never seen anything like it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the first half was cagey, two shots on target in total, but after the break the home side pressed higher and it opened up completely."
+   }
+  ]
+ }
+}

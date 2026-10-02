@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "lang:ar": [
+   {
+    "style": "text message",
+    "text": "مرحبا يا أحمد، أنا في الطريق، سأصل بعد عشر دقائق. هل تريد أن أحضر لك قهوة؟"
+   },
+   {
+    "style": "text message",
+    "text": "يا سارة، لا تنسي موعد الطبيب غدا الساعة الرابعة. أرسلي لي رسالة عندما تخرجين."
+   },
+   {
+    "style": "press release",
+    "text": "أعلنت بلدية المدينة اليوم عن افتتاح حديقة عامة جديدة في الحي الشمالي، تضم ملاعب للأطفال ومسارات للمشي. ويبدأ استقبال الزوار يوم السبت المقبل."
+   },
+   {
+    "style": "press release",
+    "text": "تعلن شركة النور للتقنية عن إطلاق تطبيقها الجديد لتعلم اللغات، والمتوفر مجانا على الهواتف الذكية ابتداء من الأسبوع القادم."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "س: ما الذي دفعك إلى فتح هذا المطعم؟ ج: كنت أحب طبخ جدتي منذ الصغر، وأردت أن أشارك هذه الوصفات مع الناس."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "س: كيف تقضين يومك كمعلمة؟ ج: أبدأ بتحضير الدروس في الصباح الباكر، ثم أقضي معظم اليوم مع الطلاب في الفصل."
+   },
+   {
+    "style": "how-to tip",
+    "text": "نصيحة: لكي يبقى الخبز طريا لفترة أطول، احفظه في كيس من القماش بعيدا عن الشمس، ولا تضعه في الثلاجة."
+   },
+   {
+    "style": "how-to tip",
+    "text": "إذا أردت أن تنام بسرعة، أطفئ هاتفك قبل النوم بنصف ساعة، واشرب كوبا من الحليب الدافئ."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "ارتفاع درجات الحرارة في معظم المناطق هذا الأسبوع — توقعت هيئة الأرصاد الجوية أن تتجاوز الحرارة أربعين درجة في المدن الداخلية، ونصحت المواطنين بشرب الماء بكثرة."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "افتتاح معرض الكتاب السنوي بمشاركة مئات دور النشر — يستمر المعرض عشرة أيام ويضم ندوات وأمسيات شعرية للكبار والصغار."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "أتذكر أول مرة سافرت فيها بالقطار وحدي، كنت خائفا جدا، لكن رجلا عجوزا جلس بجانبي وحكى لي قصصا طوال الطريق حتى نسيت خوفي."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "في الصيف الماضي ذهبنا إلى البحر، وفجأة هبت عاصفة رملية، فركضنا كلنا إلى السيارة ونحن نضحك."
+   },
+   {
+    "style": "trivia question",
+    "text": "سؤال: ما هي أطول سلسلة جبال في العالم؟ الجواب: جبال الأنديز في أمريكا الجنوبية."
+   },
+   {
+    "style": "trivia question",
+    "text": "هل تعرف كم عدد الكواكب في المجموعة الشمسية؟ إنها ثمانية كواكب، وأقربها إلى الشمس هو عطارد."
+   },
+   {
+    "style": "email to a friend",
+    "text": "عزيزي خالد، كيف حالك؟ اشتقت إليك كثيرا. هل ستأتي إلى حفل زفاف أختي الشهر القادم؟ أخبرني حتى نحجز لك غرفة."
+   },
+   {
+    "style": "email to a friend",
+    "text": "مرحبا ليلى، أرسلت لك الصور التي التقطناها في الرحلة. ضحكت كثيرا عندما رأيتها! متى نلتقي مرة أخرى؟"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "هذه الجرة الفخارية صنعت قبل نحو ألفي عام، واستخدمت لحفظ زيت الزيتون. عثر عليها في قرية قريبة من الساحل."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "يعرض هذا الجناح أدوات الملاحة القديمة، ومنها الإسطرلاب الذي استخدمه البحارة لتحديد مواقعهم بواسطة النجوم."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "صباح الخير أيها المستمعون، معكم برنامج الصباح. الطقس اليوم مشمس، والطرق مزدحمة قليلا عند الجسر الرئيسي، فخذوا حذركم."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "يا لها من مباراة! الفريق المضيف يسجل هدفا رائعا في الدقيقة الأخيرة، والجمهور في المدرجات لا يصدق ما يرى!"
+   }
+  ],
+  "lang:bg": [
+   {
+    "style": "text message",
+    "text": "Здрасти, Мария! Закъснявам малко, автобусът още го няма. Ще бъда там след 15 минути."
+   },
+   {
+    "style": "text message",
+    "text": "Мамо, купих хляб и мляко. Трябва ли още нещо от магазина?"
+   },
+   {
+    "style": "press release",
+    "text": "Община Пловдив обявява началото на ремонта на централния площад. Работите ще продължат до края на септември, а движението ще бъде пренасочено."
+   },
+   {
+    "style": "press release",
+    "text": "Българската компания „Слънчев лъч“ представи нова линия соларни панели за домакинства, които ще се продават от следващия месец."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Кога започнахте да пишете? — Още в училище, когато учителката ми прочете на глас едно мое стихотворение пред целия клас."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Какво е най-трудното в работата на пчелар? — Търпението. Пчелите усещат, когато си нервен."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Съвет: за да не потъмняват нарязаните ябълки, полейте ги с малко лимонов сок."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ако искате цветята на балкона да цъфтят по-дълго, поливайте ги рано сутрин, а не по обяд."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Снежна покривка затвори проходите в Родопите — Пътните служби работят цяла нощ, а шофьорите са призовани да тръгват само с вериги."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Рекорден брой туристи по Черноморието това лято — Хотелите във Варна и Бургас отчитат почти пълна заетост през август."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Веднъж дядо ми ме заведе за риба на язовира. Цял ден не хванахме нищо, но той ми разказа толкова истории, че до днес го помня като най-хубавия ден."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Когато бях студентка в София, живеех в малка квартира без отопление и спях с шапка и ръкавици."
+   },
+   {
+    "style": "trivia question",
+    "text": "Въпрос: Кой е най-високият връх на Балканския полуостров? Отговор: Мусала в Рила, висок 2925 метра."
+   },
+   {
+    "style": "trivia question",
+    "text": "Знаете ли коя азбука се използва в България? Кирилицата, създадена от учениците на Кирил и Методий."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Здравей, Иване! Как си? Мислех си да дойдеш при нас на село през уикенда. Ще направим скара и ще пием домашно вино."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Скъпа Елена, благодаря ти за книгата, която ми изпрати. Прочетох я за две вечери и много ми хареса!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Тази сребърна гривна е открита при разкопки край Велико Търново. Тя датира от XIII век и е украсена с растителни мотиви."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "В тази зала са представени традиционни носии от различни краища на страната, всяка с характерни шевици и цветове."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Добро утро, слушатели! Днес ще бъде слънчево, с температури до 28 градуса. А сега една песен за добро настроение."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Невероятен гол в последната минута! Стадионът избухва, феновете скачат, а треньорът тича към тъча!"
+   }
+  ],
+  "lang:de": [
+   {
+    "style": "text message",
+    "text": "Hey Lena, ich steh noch im Stau auf der A9. Fangt ruhig schon ohne mich an, bin in 20 Minuten da!"
+   },
+   {
+    "style": "text message",
+    "text": "Kannst du bitte auf dem Heimweg noch Brötchen mitbringen? Wir haben keine mehr fürs Frühstück."
+   },
+   {
+    "style": "press release",
+    "text": "Die Stadtwerke Freiburg teilen mit, dass ab dem 1. März alle Busse der Linie 5 mit Elektroantrieb fahren. Damit sinken die Emissionen im Innenstadtverkehr deutlich."
+   },
+   {
+    "style": "press release",
+    "text": "Der Verein Gartenfreunde Nord e.V. lädt am kommenden Sonntag zum Tag der offenen Tür ein. Besucher erwartet ein Pflanzenflohmarkt sowie Kaffee und Kuchen."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Frage: Wie sind Sie zum Bäckerhandwerk gekommen? Antwort: Mein Vater hatte eine kleine Bäckerei, und ich habe schon als Kind mit ihm um vier Uhr morgens Teig geknetet."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Frage: Was gefällt Ihnen am Leben auf dem Land? Antwort: Die Ruhe am Abend und dass man seine Nachbarn noch wirklich kennt."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tipp: Kalkflecken im Wasserkocher lassen sich ganz einfach mit etwas Essig und Wasser entfernen. Kurz aufkochen, dann gründlich ausspülen."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Damit Ihre Fahrradkette nicht rostet, sollten Sie sie nach jeder Regenfahrt abwischen und einmal im Monat leicht ölen."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Herbststurm legt Bahnverkehr in Norddeutschland lahm — Zahlreiche Bäume stürzten auf die Gleise, Pendler mussten stundenlang auf Ersatzbusse warten."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Kleines Dorf in Bayern gewinnt Preis für schönsten Marktplatz — Die Bewohner hatten in zwei Jahren ehrenamtlicher Arbeit die alten Fachwerkhäuser restauriert."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Also, letzten Winter wollte ich meinen Schlüssel aus dem Schnee holen, und dabei ist mir auch noch die Mütze in den Bach gefallen. Meine Nachbarin hat sich halb totgelacht."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Ich weiß noch, wie meine Oma mir das Stricken beigebracht hat. Mein erster Schal war total schief, aber sie hat ihn trotzdem jeden Tag getragen."
+   },
+   {
+    "style": "trivia question",
+    "text": "Quizfrage: Welcher ist der längste Fluss, der durch Deutschland fließt? Antwort: Der Rhein."
+   },
+   {
+    "style": "trivia question",
+    "text": "Wissen Sie, wie viele Bundesländer Deutschland hat? Es sind sechzehn, darunter drei Stadtstaaten."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Liebe Anna, wie geht es dir? Wir haben endlich die neue Wohnung bezogen! Du musst uns unbedingt bald besuchen, das Gästezimmer ist schon fertig."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hallo Thomas, danke nochmal für den tollen Abend am Samstag. Hast du das Rezept für den Kartoffelsalat noch? Meine Mutter will es unbedingt haben."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Diese Taschenuhr wurde um 1850 in Glashütte gefertigt. Sie gehörte einem Lokführer, der sie über dreißig Jahre im Dienst trug."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Die ausgestellten Holzspielzeuge stammen aus dem Erzgebirge. Viele Familien verdienten im Winter ihren Lebensunterhalt mit dem Schnitzen."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Guten Morgen, liebe Hörerinnen und Hörer! Es ist sieben Uhr, draußen sind es frische acht Grad, und gleich gibt's die Verkehrsmeldungen."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Und da ist er drin! Was für ein Schuss aus zwanzig Metern, der Torwart hatte keine Chance! Das Stadion steht Kopf!"
+   }
+  ],
+  "lang:el": [
+   {
+    "style": "text message",
+    "text": "Γεια σου Νίκο! Είμαι στο λιμάνι, το πλοίο έχει καθυστέρηση μισή ώρα. Θα σε πάρω τηλέφωνο όταν φτάσω."
+   },
+   {
+    "style": "text message",
+    "text": "Μαμά, θα έρθω για φαγητό την Κυριακή. Να φέρω κάτι γλυκό;"
+   },
+   {
+    "style": "press release",
+    "text": "Ο Δήμος Θεσσαλονίκης ανακοινώνει τη δημιουργία νέου ποδηλατόδρομου κατά μήκος της παραλίας. Τα έργα θα ολοκληρωθούν μέσα στο καλοκαίρι."
+   },
+   {
+    "style": "press release",
+    "text": "Η εταιρεία «Ελιά και Ήλιος» παρουσιάζει τη νέα σειρά βιολογικού ελαιολάδου από την Κρήτη, διαθέσιμη σε επιλεγμένα καταστήματα από τον Μάιο."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Ερώτηση: Πώς ξεκινήσατε ως ψαράς; Απάντηση: Ο πατέρας μου με έπαιρνε στη βάρκα από δέκα χρονών, και από τότε δεν μπορώ να ζήσω μακριά από τη θάλασσα."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Ερώτηση: Τι σας αρέσει περισσότερο στη διδασκαλία; Απάντηση: Η στιγμή που ένα παιδί καταλαβαίνει κάτι καινούργιο και του λάμπουν τα μάτια."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Συμβουλή: Για να μείνει τραγανή η σαλάτα σας, προσθέστε το λάδι και το αλάτι μόνο λίγο πριν το σερβίρισμα."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Αν θέλετε να δροσίσετε το σπίτι χωρίς κλιματιστικό, κλείστε τα παντζούρια το μεσημέρι και ανοίξτε τα παράθυρα το βράδυ."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Καύσωνας σε όλη τη χώρα το Σαββατοκύριακο — Η θερμοκρασία αναμένεται να φτάσει τους 42 βαθμούς, ενώ οι αρχές συνιστούν προσοχή στους ηλικιωμένους."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Νέο αρχαιολογικό εύρημα στη Νάξο — Οι ανασκαφές έφεραν στο φως ένα μαρμάρινο άγαλμα σε εξαιρετική κατάσταση."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Θυμάμαι ένα καλοκαίρι στο χωριό της γιαγιάς μου, μαζεύαμε σύκα από τη συκιά και τα τρώγαμε πριν καν φτάσουμε στο σπίτι."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Την πρώτη φορά που οδήγησα μηχανάκι, έπεσα σε έναν θάμνο με βάτα. Όλη η παρέα γελούσε για μέρες."
+   },
+   {
+    "style": "trivia question",
+    "text": "Ερώτηση: Ποιο είναι το ψηλότερο βουνό της Ελλάδας; Απάντηση: Ο Όλυμπος, με ύψος 2.918 μέτρα."
+   },
+   {
+    "style": "trivia question",
+    "text": "Ξέρατε ότι η Ελλάδα έχει χιλιάδες νησιά και βραχονησίδες, αλλά μόνο περίπου διακόσια κατοικούνται;"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Αγαπητή Μαρία, τι κάνεις; Σκεφτόμουν να έρθω στην Αθήνα τον άλλο μήνα. Θα έχεις χρόνο για έναν καφέ;"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Γεια σου Γιώργο, σου στέλνω τις φωτογραφίες από τη γιορτή. Κοίτα αυτή με τον σκύλο, είναι η καλύτερη!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Αυτό το πήλινο αγγείο χρονολογείται στον 5ο αιώνα π.Χ. και χρησιμοποιούνταν για τη μεταφορά κρασιού."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Στην αίθουσα αυτή εκτίθενται παραδοσιακά υφαντά από τα νησιά του Αιγαίου, φτιαγμένα στον αργαλειό από γυναίκες του χωριού."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Καλημέρα σε όλους τους ακροατές μας! Σήμερα ο καιρός θα είναι ηλιόλουστος, και στη συνέχεια έχουμε μουσική για να ξεκινήσετε τη μέρα σας."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Γκολ! Απίστευτο σουτ από τα είκοσι μέτρα και η μπάλα καρφώνεται στα δίχτυα! Το γήπεδο σείεται!"
+   }
+  ],
+  "lang:es": [
+   {
+    "style": "text message",
+    "text": "Oye Carla, ¿ya saliste? Te espero en la puerta del cine, la peli empieza en diez minutos."
+   },
+   {
+    "style": "text message",
+    "text": "Mamá, se me olvidaron las llaves otra vez. ¿Vas a estar en casa a las seis?"
+   },
+   {
+    "style": "press release",
+    "text": "El Ayuntamiento de Valencia anuncia la ampliación del horario de las bibliotecas municipales durante la época de exámenes, que abrirán hasta medianoche."
+   },
+   {
+    "style": "press release",
+    "text": "La cooperativa Huerta Viva presenta su nuevo servicio de reparto de verduras ecológicas a domicilio en toda la provincia de Granada."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "P: ¿Qué es lo más difícil de ser panadero? R: Levantarse a las tres de la mañana, sin duda. Pero el olor del pan recién hecho lo compensa todo."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "P: ¿Cómo empezó su afición por la jardinería? R: Mi abuela tenía un patio lleno de geranios y yo la ayudaba a regarlos cada tarde."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Consejo: para que los aguacates maduren más rápido, guárdalos en una bolsa de papel junto a un plátano."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Si quieres ahorrar en la factura de la luz, pon la lavadora con agua fría y aprovecha las horas de tarifa más baja."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Una ola de calor pone en alerta a media España — Las temperaturas superarán los 40 grados en Andalucía y Extremadura durante el fin de semana."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Un pueblo de Asturias recupera su antigua fiesta de la sidra — Cientos de vecinos y visitantes se reunieron en la plaza para celebrar la tradición."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Te cuento: una vez en Sevilla me perdí buscando el hotel, y un señor mayor me acompañó caminando veinte minutos hasta la puerta. ¡Ni me dejó invitarle a un café!"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Cuando era pequeño, mi hermano y yo construimos una cabaña en el árbol del jardín. Duró exactamente una tormenta."
+   },
+   {
+    "style": "trivia question",
+    "text": "Pregunta: ¿Cuál es el río más largo de la península ibérica? Respuesta: El Tajo."
+   },
+   {
+    "style": "trivia question",
+    "text": "¿Sabías que el español es lengua oficial en una veintena de países? Es una de las lenguas maternas más habladas del mundo."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Querida Lucía: ¿qué tal todo por Buenos Aires? Aquí ya empieza a hacer frío. Cuéntame cómo te va en el nuevo trabajo, que tengo muchas ganas de saber."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hola Pablo, ¿te apetece venir a cenar el sábado? Voy a hacer paella y vienen también Marta y Jorge."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Este abanico pintado a mano perteneció a una familia de comerciantes de Cádiz a finales del siglo XIX."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Las piezas de cerámica de esta vitrina proceden de Talavera de la Reina, famosa por sus azulejos azules y amarillos."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "¡Buenos días, buenos días! Son las ocho de la mañana y esto es Café con la Radio. Hoy hablamos con los oyentes sobre sus recetas favoritas de la abuela."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "¡Gooool! ¡Qué golazo en el último minuto! ¡La afición no se lo puede creer, el estadio entero está de pie!"
+   }
+  ],
+  "lang:fr": [
+   {
+    "style": "text message",
+    "text": "Coucou Julie, je suis en retard, le métro est bloqué à Châtelet. J'arrive dans un quart d'heure, commande-moi un café !"
+   },
+   {
+    "style": "text message",
+    "text": "Tu peux passer à la boulangerie en rentrant ? Il nous faut une baguette pour ce soir."
+   },
+   {
+    "style": "press release",
+    "text": "La mairie de Lyon annonce l'ouverture d'un nouveau marché couvert dans le quartier de la Croix-Rousse. Une trentaine de producteurs locaux y vendront leurs produits chaque samedi."
+   },
+   {
+    "style": "press release",
+    "text": "L'association Lire Ensemble lance une campagne de collecte de livres pour les écoles rurales. Les dons peuvent être déposés dans toutes les médiathèques de la région."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q : Pourquoi avez-vous choisi de devenir fromager ? R : J'ai grandi dans une ferme en Savoie, et le goût du beaufort de mon grand-père ne m'a jamais quitté."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q : Quel est votre meilleur souvenir de voyage ? R : Une nuit sous les étoiles dans le désert, avec un silence que je n'avais jamais connu."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Astuce : pour éplucher facilement l'ail, écrasez légèrement la gousse avec le plat d'un couteau. La peau se détache toute seule."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Pour garder vos herbes fraîches plus longtemps, placez-les dans un verre d'eau au réfrigérateur, comme un petit bouquet."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Grève dans les transports : journée difficile pour les usagers franciliens — Seul un train sur trois circulait ce matin, et de nombreux salariés ont opté pour le télétravail."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Un village breton élu plus beau marché de France — Les habitants ont célébré la nouvelle autour de crêpes et de cidre sur la place de l'église."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Alors, la première fois que j'ai fait du ski, je suis descendu toute la piste sur les fesses. Mon moniteur riait tellement qu'il est tombé aussi !"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Je me souviens de ma grand-mère qui faisait des confitures chaque été. Toute la maison sentait l'abricot pendant des jours."
+   },
+   {
+    "style": "trivia question",
+    "text": "Question : Quel est le plus long fleuve de France ? Réponse : La Loire, avec plus de mille kilomètres."
+   },
+   {
+    "style": "trivia question",
+    "text": "Savez-vous combien de fromages différents on produit en France ? On en compte plus de mille selon certaines estimations."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Chère Camille, comment vas-tu ? Nous serons à Marseille la semaine prochaine. Tu es libre pour un déjeuner sur le Vieux-Port ?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Salut Marc, merci encore pour ton aide pour le déménagement ! Sans toi, on serait encore en train de porter des cartons."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Cette horloge en bois sculpté a été fabriquée dans le Jura vers 1820. Son mécanisme fonctionne encore aujourd'hui."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ces affiches publicitaires datent de la Belle Époque. Elles vantaient les mérites des stations balnéaires de la côte normande."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Bonjour à toutes et à tous, il est sept heures sur votre radio du matin. Au programme : la météo, les bouchons et un invité surprise."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "But ! Quelle frappe ! Le ballon termine en pleine lucarne, le gardien n'a rien pu faire. Le stade est en délire !"
+   }
+  ],
+  "lang:hi": [
+   {
+    "style": "text message",
+    "text": "राहुल, मैं स्टेशन पहुँच गया हूँ। तुम कितनी देर में आओगे? बारिश बहुत तेज़ है।"
+   },
+   {
+    "style": "text message",
+    "text": "माँ, आज रात खाने पर दो दोस्त भी आ रहे हैं। थोड़ी ज़्यादा दाल बना लेना।"
+   },
+   {
+    "style": "press release",
+    "text": "नगर निगम ने घोषणा की है कि अगले महीने से शहर के सभी पार्क सुबह पाँच बजे से खुलेंगे, ताकि लोग सुबह की सैर का आनंद ले सकें।"
+   },
+   {
+    "style": "press release",
+    "text": "एक स्थानीय कंपनी ने किसानों के लिए नया मोबाइल ऐप शुरू किया है, जिससे वे मौसम और मंडी के भाव की जानकारी अपनी भाषा में पा सकेंगे।"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "प्रश्न: आपने चाय की दुकान कब शुरू की? उत्तर: बीस साल पहले, जब मैं सिर्फ़ अठारह साल का था। तब एक कप चाय दो रुपये की थी।"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "प्रश्न: आपको पढ़ाने में सबसे अच्छा क्या लगता है? उत्तर: जब कोई बच्चा मुश्किल सवाल ख़ुद हल कर लेता है, तो उसकी मुस्कान देखकर दिल ख़ुश हो जाता है।"
+   },
+   {
+    "style": "how-to tip",
+    "text": "सुझाव: अगर दूध बार-बार उबलकर गिर जाता है, तो बर्तन के ऊपर एक लकड़ी का चम्मच रख दें।"
+   },
+   {
+    "style": "how-to tip",
+    "text": "गर्मियों में पौधों को सुबह जल्दी या शाम को पानी दें, दोपहर में पानी देने से जड़ों को नुकसान हो सकता है।"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "मानसून ने समय से पहले दी दस्तक — मौसम विभाग के अनुसार अगले तीन दिनों में कई राज्यों में भारी बारिश हो सकती है।"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "गाँव की बेटी ने राज्य स्तरीय दौड़ में जीता स्वर्ण पदक — पूरे गाँव ने ढोल-नगाड़ों के साथ उसका स्वागत किया।"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "एक बार बचपन में मैं मेले में खो गया था। मैं रोते-रोते गुब्बारे वाले के पास बैठ गया, और उसने मुझे मुफ़्त में एक लाल गुब्बारा दे दिया।"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "मेरी दादी हर सर्दी में गाजर का हलवा बनाती थीं, और हम सब भाई-बहन रसोई के दरवाज़े पर खड़े होकर इंतज़ार करते थे।"
+   },
+   {
+    "style": "trivia question",
+    "text": "प्रश्न: भारत की सबसे लंबी नदी कौन सी है? उत्तर: गंगा नदी।"
+   },
+   {
+    "style": "trivia question",
+    "text": "क्या आप जानते हैं कि ताजमहल को बनाने में लगभग बीस साल लगे थे?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "प्रिय सीमा, कैसी हो? बहुत दिनों से बात नहीं हुई। अगले हफ़्ते मैं दिल्ली आ रही हूँ, क्या हम मिल सकते हैं?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "नमस्ते अमित, तुम्हारी शादी की तस्वीरें देखीं, बहुत सुंदर हैं! माफ़ करना कि मैं नहीं आ पाया, अगली बार ज़रूर मिलेंगे।"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "यह पीतल का दीया लगभग दो सौ साल पुराना है। इसे राजस्थान के एक मंदिर में त्योहारों के समय जलाया जाता था।"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "इस कक्ष में हाथ से बुने हुए कालीन प्रदर्शित हैं, जिन्हें बनाने में कारीगरों को कई महीने लगते थे।"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "सुप्रभात दोस्तो! आप सुन रहे हैं सुबह की ख़ास पेशकश। आज मौसम सुहाना है, तो चलिए शुरू करते हैं एक पुराने मधुर गीत से।"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "क्या शानदार छक्का! गेंद सीधे स्टेडियम के बाहर! दर्शक ख़ुशी से झूम उठे हैं!"
+   }
+  ],
+  "lang:it": [
+   {
+    "style": "text message",
+    "text": "Ciao Giulia, sono in ritardo, il treno è fermo a Bologna. Ci vediamo direttamente al ristorante?"
+   },
+   {
+    "style": "text message",
+    "text": "Amore, ricordati di comprare il latte e le uova quando torni. A stasera!"
+   },
+   {
+    "style": "press release",
+    "text": "Il Comune di Torino annuncia l'apertura di tre nuove piste ciclabili nel centro storico, che collegheranno le principali piazze della città."
+   },
+   {
+    "style": "press release",
+    "text": "L'azienda agricola La Collina presenta il suo nuovo olio extravergine biologico, prodotto con olive raccolte a mano sulle colline umbre."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "D: Come è nata la sua passione per la pizza? R: Da bambino passavo le estati nella pizzeria di mio zio a Napoli, e guardavo come stendeva l'impasto."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "D: Qual è il segreto di un buon caffè? R: Acqua buona, una miscela fresca e soprattutto pazienza."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Consiglio: per cuocere la pasta al dente, assaggiatela un minuto prima del tempo indicato sulla confezione."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Se volete che il basilico duri di più, non mettetelo in frigorifero: tenetelo in un bicchiere d'acqua sul davanzale."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Neve record sulle Alpi: chiuse diverse strade di montagna — Gli impianti sciistici festeggiano, ma la protezione civile invita alla prudenza."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Un piccolo borgo siciliano rinasce grazie ai giovani — Decine di ragazzi sono tornati a vivere nel paese aprendo botteghe e agriturismi."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Allora, una volta a Venezia ho perso il vaporetto e mi sono messo a correre lungo il canale. Un gondoliere mi ha visto e mi ha dato un passaggio fino alla fermata dopo!"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Mia nonna faceva le tagliatelle a mano ogni domenica, e io dovevo stare attento a non toccare la sfoglia prima che si asciugasse."
+   },
+   {
+    "style": "trivia question",
+    "text": "Domanda: Qual è il vulcano attivo più alto d'Europa? Risposta: L'Etna, in Sicilia."
+   },
+   {
+    "style": "trivia question",
+    "text": "Lo sapevi che l'Italia è tra i paesi con più siti patrimonio dell'UNESCO al mondo?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Cara Francesca, come stai? Abbiamo finalmente deciso: quest'estate andiamo in Puglia! Vuoi venire con noi per qualche giorno?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Ciao Marco, grazie per la cena di ieri sera, era tutto buonissimo. Mi mandi la ricetta del tiramisù?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Questo violino fu costruito a Cremona all'inizio del Settecento. Il legno di acero e abete gli conferisce un suono caldo e profondo."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Le maschere esposte in questa sala venivano indossate durante il Carnevale di Venezia per nascondere l'identità di chi le portava."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Buongiorno a tutti gli ascoltatori! Sono le otto e mezza e fuori splende il sole. Restate con noi, tra poco i consigli per il fine settimana."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gol! Che rete straordinaria! Il pallone si infila sotto la traversa e lo stadio esplode di gioia!"
+   }
+  ],
+  "lang:ja": [
+   {
+    "style": "text message",
+    "text": "ごめん、電車が遅れてて10分くらい遅れそう！先にお店入っててね。"
+   },
+   {
+    "style": "text message",
+    "text": "今日の夕ごはん、カレーでいい？帰りに牛乳も買ってきてくれると助かる！"
+   },
+   {
+    "style": "press release",
+    "text": "株式会社さくら食品は、地元産の米粉を使った新しいパンを来月より全国のスーパーで発売することを発表しました。"
+   },
+   {
+    "style": "press release",
+    "text": "市立図書館は、夏休み期間中に子ども向けの読み聞かせ会を毎週土曜日に開催します。参加は無料です。"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "――職人になったきっかけは何ですか？ 父が畳屋をしていて、子どもの頃からいぐさの匂いに囲まれて育ったからです。"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "――毎日の楽しみは何ですか？ 朝、近所の公園を散歩して、季節の花を見つけることですね。"
+   },
+   {
+    "style": "how-to tip",
+    "text": "ちょっとしたコツ：ご飯をふっくら炊くには、お米を研いだあと三十分ほど水に浸けておきましょう。"
+   },
+   {
+    "style": "how-to tip",
+    "text": "冬場の乾燥対策には、寝る前に濡れたタオルを部屋に干しておくと効果的です。"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "桜の開花、例年より一週間早く — 気象庁によると、東京では今週末にも満開を迎える見込みで、各地の公園は花見客で賑わいそうです。"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "台風接近で新幹線が一部運休 — 鉄道各社は明日の午前中までの運転見合わせを決定し、利用者に注意を呼びかけています。"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "昔ね、おばあちゃんの家に泊まったとき、夜中に庭でタヌキを見たんだよ。びっくりして声も出なかった。"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "初めて富士山に登ったとき、山頂で見たご来光は本当に忘れられない。寒くて手が震えてたけどね。"
+   },
+   {
+    "style": "trivia question",
+    "text": "クイズ：日本で一番長い川はどこでしょう？ 答え：信濃川です。"
+   },
+   {
+    "style": "trivia question",
+    "text": "知っていましたか？ 日本には一万を超える島があると言われています。"
+   },
+   {
+    "style": "email to a friend",
+    "text": "まゆみへ　元気にしてる？来月そっちに行く予定だから、もしよかったら一緒にご飯でも食べようよ。"
+   },
+   {
+    "style": "email to a friend",
+    "text": "たけしくん、この前は引っ越しを手伝ってくれて本当にありがとう！今度お礼に焼き肉おごるね。"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "この茶碗は江戸時代に作られたもので、素朴な風合いと深い緑色の釉薬が特徴です。"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "展示されている着物は明治時代のもので、手描きの友禅染によって四季の草花が描かれています。"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "おはようございます！朝のラジオ、今日も元気にスタートです。今日は全国的に晴れ、洗濯日和になりそうですよ。"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "打ったー！大きい、大きい、入ったー！逆転のホームランです！スタンドは総立ちです！"
+   }
+  ],
+  "lang:nl": [
+   {
+    "style": "text message",
+    "text": "Hoi Sanne, ik sta nog in de file bij Utrecht. Beginnen jullie maar vast, ik ben er over een half uurtje."
+   },
+   {
+    "style": "text message",
+    "text": "Kun jij straks even boodschappen doen? We hebben geen brood en kaas meer."
+   },
+   {
+    "style": "press release",
+    "text": "De gemeente Groningen maakt bekend dat er volgend voorjaar twintig nieuwe fietsenstallingen bij het station komen. Daarmee moet het parkeerprobleem voor fietsers verdwijnen."
+   },
+   {
+    "style": "press release",
+    "text": "Bakkerij De Molen opent zaterdag haar tweede winkel in Haarlem. Ter gelegenheid van de opening krijgt iedere klant een gratis stroopwafel."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Vraag: Hoe bent u boer geworden? Antwoord: Ik ben op deze boerderij geboren, en mijn opa leerde me al koeien melken toen ik zes was."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Vraag: Wat vindt u het mooiste aan uw werk als verpleegkundige? Antwoord: Dat je echt het verschil kunt maken voor iemand op een moeilijk moment."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: wil je dat je tulpen langer mooi blijven? Snijd de stelen schuin af en zet ze in koud water met een paar ijsblokjes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Om je fiets in de winter goed te houden, kun je hem het beste binnen zetten en de ketting regelmatig schoonmaken."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Storm zorgt voor chaos op het spoor — Door omgewaaide bomen reden er vanochtend nauwelijks treinen tussen Amsterdam en Rotterdam."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Duizenden schaatsers op de Friese meren — Na jaren zonder ijs konden liefhebbers dit weekend eindelijk weer natuurijs schaatsen."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Weet je wat mij laatst overkwam? Ik fietste naar m'n werk en een eend liep doodleuk voor me over het fietspad, met zes kuikentjes erachteraan. Iedereen moest stoppen."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Toen ik klein was, gingen we elke zomer kamperen in Zeeland. Mijn vader kreeg de tent nooit in één keer goed opgezet."
+   },
+   {
+    "style": "trivia question",
+    "text": "Vraag: Welk deel van Nederland ligt onder de zeespiegel? Antwoord: Ongeveer een kwart van het land."
+   },
+   {
+    "style": "trivia question",
+    "text": "Wist je dat er in Nederland meer fietsen zijn dan inwoners?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Lieve Eva, hoe gaat het met je? We hebben eindelijk onze nieuwe tuin aangelegd. Kom je binnenkort een keer koffie drinken?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hoi Jeroen, bedankt voor je hulp met de verhuizing! Zonder jouw bus was het nooit gelukt. Ik trakteer volgende keer op een biertje."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Deze Delftsblauwe tegel werd rond 1700 gemaakt. Zulke tegels sierden vaak de keukens van rijke koopmansfamilies."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "In deze zaal ziet u oude schaatsen van hout en ijzer, waarmee men vroeger over de bevroren grachten reed."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Goedemorgen luisteraars! Het is half acht en het wordt vandaag een zonnige dag. Blijf luisteren voor het verkeer en de beste muziek."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Doelpunt! Wat een geweldige kopbal in de laatste minuut! Het hele stadion staat op z'n kop!"
+   }
+  ],
+  "lang:pl": [
+   {
+    "style": "text message",
+    "text": "Cześć Kasia, spóźnię się trochę, tramwaj utknął w korku. Będę za piętnaście minut!"
+   },
+   {
+    "style": "text message",
+    "text": "Mamo, kupić coś jeszcze oprócz chleba i masła? Jestem już w sklepie."
+   },
+   {
+    "style": "press release",
+    "text": "Urząd Miasta Gdańska informuje, że od przyszłego miesiąca w centrum zostanie uruchomiona nowa linia autobusów elektrycznych."
+   },
+   {
+    "style": "press release",
+    "text": "Firma Złoty Kłos przedstawia nową serię pieczywa na zakwasie, wypiekanego według tradycyjnych receptur z regionu Podhala."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Jak zaczęła się pani przygoda z ceramiką? — Na studiach zapisałam się na warsztaty garncarskie i od razu zakochałam się w glinie."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Co lubi pan najbardziej w pracy listonosza? — Rozmowy z ludźmi. Niektórzy czekają na mnie z herbatą."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Porada: aby pierogi się nie sklejały, po ugotowaniu polej je odrobiną roztopionego masła."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Jeśli chcesz, żeby pomidory szybciej dojrzały, połóż je na parapecie w słonecznym miejscu."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mróz sparaliżował komunikację w Krakowie — Wiele tramwajów nie wyjechało z zajezdni, a pasażerowie czekali na przystankach nawet godzinę."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mała wieś na Mazurach wygrała konkurs na najpiękniejszą miejscowość — Mieszkańcy przez dwa lata wspólnie odnawiali drewniane domy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Pamiętam, jak dziadek zabrał mnie pierwszy raz na grzyby. Zgubiliśmy się w lesie, ale wróciliśmy z pełnym koszem prawdziwków."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Kiedyś na weselu kuzynki orkiestra zagrała moją ulubioną piosenkę i tańczyłem tak długo, że rano nie mogłem chodzić."
+   },
+   {
+    "style": "trivia question",
+    "text": "Pytanie: Jaka jest najdłuższa rzeka w Polsce? Odpowiedź: Wisła."
+   },
+   {
+    "style": "trivia question",
+    "text": "Czy wiesz, że w Kopalni Soli w Wieliczce jest podziemna kaplica wyrzeźbiona w soli?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Droga Agnieszko, co u Ciebie słychać? W wakacje jedziemy nad morze. Może dołączysz do nas na kilka dni?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Cześć Tomek, dzięki za pomoc przy przeprowadzce! Następnym razem ja stawiam pizzę."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ta drewniana skrzynia posagowa pochodzi z XIX wieku. Panny młode przechowywały w niej pościel i ubrania."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "W tej sali prezentowane są wycinanki łowickie, kolorowe ozdoby z papieru wieszane w wiejskich chatach."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Dzień dobry, kochani słuchacze! Jest siódma rano, za oknem słońce, a my zaczynamy od dobrej muzyki."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gol! Co za strzał! Piłka wpada w samo okienko, a kibice na trybunach szaleją!"
+   }
+  ],
+  "lang:pt": [
+   {
+    "style": "text message",
+    "text": "Oi Ana, tô chegando! O ônibus atrasou um pouco. Me espera na frente da padaria?"
+   },
+   {
+    "style": "text message",
+    "text": "Pai, esqueci meu carregador em casa. Você pode trazer quando vier me buscar?"
+   },
+   {
+    "style": "press release",
+    "text": "A Prefeitura de Porto Alegre anuncia a revitalização da orla do Guaíba, com novas ciclovias, quiosques e áreas de lazer para as famílias."
+   },
+   {
+    "style": "press release",
+    "text": "A cooperativa Sabor do Campo lança uma nova linha de queijos artesanais produzidos em pequenas fazendas de Minas Gerais."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "P: Como começou o seu interesse pela música? R: Meu avô tocava violão nas festas da família, e eu ficava sentado ao lado dele, só olhando."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "P: Qual é o segredo de um bom pastel de nata? R: Massa folhada bem fina e o forno muito, muito quente."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Dica: para o arroz ficar soltinho, refogue os grãos no óleo com alho antes de colocar a água."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Se quiser que as bananas durem mais, separe-as do cacho e embrulhe as pontas com filme plástico."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Chuvas fortes deixam ruas alagadas no centro de São Paulo — A Defesa Civil recomenda que os moradores evitem sair de casa até o fim da tarde."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Aldeia portuguesa recupera tradição das vindimas — Vizinhos e turistas pisaram as uvas juntos numa festa que reuniu centenas de pessoas."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Uma vez, em Lisboa, apanhei o elétrico errado e fui parar do outro lado da cidade. Acabei descobrindo um café maravilhoso que frequento até hoje."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Quando eu era criança, minha mãe fazia bolo de fubá todo domingo, e a casa inteira ficava com aquele cheirinho."
+   },
+   {
+    "style": "trivia question",
+    "text": "Pergunta: Qual é o maior rio do Brasil em volume de água? Resposta: O rio Amazonas."
+   },
+   {
+    "style": "trivia question",
+    "text": "Você sabia que o português é língua oficial em nove países, espalhados por quatro continentes?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Querida Beatriz, tudo bem por aí? Estou com muitas saudades! Vamos combinar um almoço quando você voltar do Porto?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Oi Rafael, muito obrigado pela ajuda na mudança. Sem você eu ainda estaria carregando caixas!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Este azulejo pintado à mão foi produzido em Lisboa no século XVIII e decorava a fachada de uma casa senhorial."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Nesta sala estão expostas redes de pesca e barcos de madeira usados pelos pescadores do litoral nordestino."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Bom dia, ouvintes! São sete horas da manhã e o trânsito está tranquilo na avenida principal. Fiquem com a gente!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gooool! Que golaço de fora da área! O goleiro nem viu a bola passar e a torcida está em festa!"
+   }
+  ],
+  "lang:ru": [
+   {
+    "style": "text message",
+    "text": "Привет, Оля! Я уже у метро, жду тебя у выхода. Только не опаздывай, пожалуйста."
+   },
+   {
+    "style": "text message",
+    "text": "Мам, я задержусь на работе часа на два. Ужинайте без меня."
+   },
+   {
+    "style": "press release",
+    "text": "Администрация Казани сообщает об открытии нового парка на набережной. Посетителей ждут велосипедные дорожки, детские площадки и летнее кафе."
+   },
+   {
+    "style": "press release",
+    "text": "Компания «Северный хлеб» представляет новую линейку ржаного хлеба по старинным рецептам, которая поступит в продажу с понедельника."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Как вы стали пчеловодом? — Мой дед держал пасеку в деревне, и каждое лето я помогал ему собирать мёд."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "— Что вам больше всего нравится в работе учителя? — Когда ученик вдруг понимает трудную тему и у него загораются глаза."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Совет: чтобы картошка не темнела после чистки, положите её в холодную воду."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Если хотите, чтобы комнатные растения хорошо росли зимой, поставьте их поближе к окну и не поливайте слишком часто."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Сильные морозы ожидаются в Сибири на выходных — Синоптики прогнозируют до минус сорока градусов и советуют жителям не выходить на улицу без необходимости."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "В небольшом городе на Волге открылся музей самоваров — В коллекции более трёхсот экспонатов, собранных местными жителями."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Помню, как в детстве мы с братом пошли за грибами и заблудились. Вышли из леса только к вечеру, зато с полной корзиной."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Однажды я пыталась испечь бабушкин пирог по памяти и перепутала соль с сахаром. Вся семья до сих пор вспоминает."
+   },
+   {
+    "style": "trivia question",
+    "text": "Вопрос: Какое озеро самое глубокое в мире? Ответ: Байкал."
+   },
+   {
+    "style": "trivia question",
+    "text": "А вы знали, что в России одиннадцать часовых поясов?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Дорогая Наташа, как ты? Мы наконец переехали в новую квартиру! Приезжай в гости, когда будет время."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Привет, Дима! Спасибо за книгу, которую ты мне подарил. Читаю каждый вечер и не могу оторваться."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Эта расписная деревянная ложка изготовлена в Хохломе в конце XIX века. Её узор выполнен золотой и красной красками."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "В этом зале представлены старинные русские прялки, на которых крестьянки пряли шерсть долгими зимними вечерами."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Доброе утро, дорогие радиослушатели! Сейчас восемь часов, на улице солнечно, а мы начинаем утреннюю программу."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Гол! Какой удар! Мяч влетает прямо в девятку, и трибуны взрываются от восторга!"
+   }
+  ],
+  "lang:sw": [
+   {
+    "style": "text message",
+    "text": "Habari Juma, niko njiani kuja. Nitafika baada ya dakika kumi, unisubiri pale sokoni."
+   },
+   {
+    "style": "text message",
+    "text": "Mama, nimefika salama Arusha. Nitakupigia simu jioni."
+   },
+   {
+    "style": "press release",
+    "text": "Halmashauri ya Jiji la Dar es Salaam imetangaza kufunguliwa kwa soko jipya la samaki karibu na bandari wiki ijayo."
+   },
+   {
+    "style": "press release",
+    "text": "Kampuni ya Maji Safi inawatangazia wakazi wa Mombasa kwamba huduma ya maji itarejeshwa kikamilifu kuanzia kesho asubuhi."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Swali: Ulianzaje kazi ya ushonaji? Jibu: Bibi yangu alinifundisha kushona nikiwa na miaka kumi, na tangu hapo sijaacha."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Swali: Unapenda nini zaidi kuhusu kufundisha? Jibu: Kuona watoto wakijifunza kusoma na kuandika kwa mara ya kwanza."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ushauri: Ili wali usishikamane, osha mchele vizuri kwa maji baridi kabla ya kupika."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Kama unataka mboga zako zikue vizuri, mwagilia maji asubuhi na mapema au jioni jua likishazama."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mvua kubwa zanyesha Pwani — Mamlaka ya hali ya hewa imewashauri wananchi kuchukua tahadhari, hasa wanaoishi karibu na mito."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Timu ya vijana yashinda kombe la mkoa — Wachezaji walipokelewa kwa shangwe na ngoma walipowasili kijijini kwao."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Nakumbuka siku moja nilipokuwa mtoto, tulikwenda ziwani na baba. Tulivua samaki mmoja tu, lakini tulicheka siku nzima."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Mara ya kwanza nilipopanda daladala peke yangu, nilishuka kituo kibaya na kutembea kwa saa nzima kurudi nyumbani."
+   },
+   {
+    "style": "trivia question",
+    "text": "Swali: Mlima mrefu zaidi barani Afrika ni upi? Jibu: Mlima Kilimanjaro."
+   },
+   {
+    "style": "trivia question",
+    "text": "Je, unajua kwamba Kiswahili kinazungumzwa na mamilioni ya watu katika nchi nyingi za Afrika Mashariki?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Mpendwa Amina, habari za siku nyingi? Natumaini uko salama. Mwezi ujao nitakuja Zanzibar, tunaweza kuonana?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Habari Baraka, asante sana kwa msaada wako jana. Bila wewe nisingemaliza kazi ile kwa wakati."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mlango huu wa mbao uliochongwa kwa ustadi unatoka Zanzibar na una umri wa zaidi ya miaka mia moja."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Katika chumba hiki kuna vikapu na mikeka iliyosukwa kwa mikono na wanawake wa vijiji vya pwani."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Habari za asubuhi wasikilizaji wetu! Karibuni katika kipindi cha asubuhi. Leo tutazungumza kuhusu kilimo bora cha mahindi."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Goli! Goli! Mpira umeingia wavuni kwa kasi ya ajabu! Mashabiki wanashangilia uwanjani!"
+   }
+  ],
+  "lang:th": [
+   {
+    "style": "text message",
+    "text": "ขอโทษนะ รถติดมากเลย น่าจะไปถึงช้าประมาณสิบห้านาที เข้าร้านไปก่อนได้เลย"
+   },
+   {
+    "style": "text message",
+    "text": "แม่ วันนี้กลับบ้านดึกนะ ไม่ต้องรอกินข้าว"
+   },
+   {
+    "style": "press release",
+    "text": "เทศบาลนครเชียงใหม่ประกาศเปิดตลาดนัดชุมชนแห่งใหม่ทุกวันอาทิตย์ เพื่อสนับสนุนสินค้าเกษตรและงานฝีมือของคนในท้องถิ่น"
+   },
+   {
+    "style": "press release",
+    "text": "บริษัทข้าวหอมไทยเปิดตัวผลิตภัณฑ์ข้าวกล้องอินทรีย์รุ่นใหม่ ซึ่งจะวางจำหน่ายในซูเปอร์มาร์เก็ตทั่วประเทศตั้งแต่เดือนหน้า"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "ถาม: คุณเริ่มทำอาหารตั้งแต่เมื่อไหร่ ตอบ: ตั้งแต่เด็กเลยครับ ผมช่วยยายตำน้ำพริกในครัวทุกเย็น"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "ถาม: อะไรคือความสุขของการเป็นครู ตอบ: การได้เห็นเด็ก ๆ อ่านหนังสือออกเป็นครั้งแรกค่ะ"
+   },
+   {
+    "style": "how-to tip",
+    "text": "เคล็ดลับ: ถ้าอยากให้ข้าวเหนียวนุ่ม ให้แช่ข้าวไว้ในน้ำอย่างน้อยสี่ชั่วโมงก่อนนึ่ง"
+   },
+   {
+    "style": "how-to tip",
+    "text": "ถ้าต้นไม้ในบ้านใบเหลือง ลองลดการรดน้ำลง และย้ายไปไว้ในที่ที่มีแสงแดดรำไร"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "ฝนตกหนักทำน้ำท่วมหลายพื้นที่ในกรุงเทพฯ — กรมอุตุนิยมวิทยาเตือนประชาชนให้ระวังน้ำท่วมฉับพลันในช่วงสามวันนี้"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "เทศกาลลอยกระทงคึกคัก ประชาชนนับหมื่นร่วมงาน — ริมแม่น้ำเจ้าพระยาเต็มไปด้วยกระทงสวยงามและเสียงเพลงตลอดคืน"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "จำได้ว่าตอนเด็ก ๆ ไปเที่ยวทะเลกับพ่อ แล้วโดนปูหนีบนิ้วเท้า ร้องไห้เสียงดังจนทุกคนบนหาดหันมามอง"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "ครั้งแรกที่ขี่มอเตอร์ไซค์เอง ฉันลืมว่าต้องเบรกยังไง เลยต้องเอาเท้าลากพื้นจนรองเท้าขาด"
+   },
+   {
+    "style": "trivia question",
+    "text": "คำถาม: แม่น้ำสายใดไหลผ่านกรุงเทพมหานคร คำตอบ: แม่น้ำเจ้าพระยา"
+   },
+   {
+    "style": "trivia question",
+    "text": "รู้หรือไม่ว่า ภาษาไทยมีพยัญชนะทั้งหมดสี่สิบสี่ตัว"
+   },
+   {
+    "style": "email to a friend",
+    "text": "ถึงน้องฝน สบายดีไหม พี่จะไปเชียงรายเดือนหน้า ถ้าว่างไปกินข้าวด้วยกันนะ"
+   },
+   {
+    "style": "email to a friend",
+    "text": "สวัสดีต้น ขอบคุณมากที่ช่วยย้ายบ้านเมื่อวาน ไว้วันหลังเลี้ยงหมูกระทะเป็นการตอบแทนนะ"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "เครื่องปั้นดินเผาชิ้นนี้พบที่บ้านเชียง จังหวัดอุดรธานี มีอายุหลายพันปี และมีลวดลายสีแดงที่เป็นเอกลักษณ์"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "ห้องนี้จัดแสดงผ้าไหมทอมือจากภาคอีสาน ซึ่งแต่ละผืนใช้เวลาทอหลายเดือน"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "สวัสดีตอนเช้าค่ะท่านผู้ฟัง วันนี้อากาศแจ่มใส เตรียมตัวออกไปทำงานกันได้เลย แล้วมาฟังเพลงเพราะ ๆ กันค่ะ"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "เข้าไปแล้ว! ประตูสวยงามมากครับ ลูกยิงไกลเสียบสามเหลี่ยมพอดี แฟนบอลทั้งสนามลุกขึ้นเฮ!"
+   }
+  ],
+  "lang:tr": [
+   {
+    "style": "text message",
+    "text": "Selam Ayşe, trafik çok yoğun, on beş dakika gecikeceğim. Sen kahveleri söyle, geliyorum!"
+   },
+   {
+    "style": "text message",
+    "text": "Anne, akşama eve gelirken ekmek alayım mı? Başka bir şey lazım mı?"
+   },
+   {
+    "style": "press release",
+    "text": "İzmir Büyükşehir Belediyesi, Kordon boyunca yeni bir bisiklet yolu yapılacağını duyurdu. Çalışmaların yaz sonuna kadar tamamlanması planlanıyor."
+   },
+   {
+    "style": "press release",
+    "text": "Anadolu Çay şirketi, Rize'de yetişen organik çaylardan oluşan yeni ürün serisini önümüzdeki ay piyasaya sürüyor."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Soru: Simitçiliğe nasıl başladınız? Cevap: Babam da simitçiydi, ben de çocukken onunla sabahın erken saatlerinde fırına giderdim."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Soru: Öğretmenlikte sizi en çok ne mutlu ediyor? Cevap: Bir öğrencinin zor bir konuyu sonunda anladığı o an."
+   },
+   {
+    "style": "how-to tip",
+    "text": "İpucu: Pilavın tane tane olması için pirinci önce birkaç kez yıkayın ve sıcak suda yarım saat bekletin."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Balkondaki saksı çiçeklerinin uzun süre açması için onları sabah erken saatte sulayın."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "İstanbul'da yoğun kar yağışı hayatı olumsuz etkiledi — Birçok okulda eğitime ara verilirken, vatandaşlara toplu taşıma kullanmaları tavsiye edildi."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Karadeniz'de bir köy, geleneksel yayla şenliğini yeniden başlattı — Yüzlerce kişi horon tepmek için yaylada bir araya geldi."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Bir keresinde dedemle balığa gittik, bütün gün hiçbir şey tutamadık. Ama dönüşte aldığımız simitler hayatımda yediğim en güzel simitlerdi."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Küçükken bayramlarda bütün mahalleyi dolaşıp şeker toplardık. Ceplerimiz o kadar dolardı ki eve zor yürürdük."
+   },
+   {
+    "style": "trivia question",
+    "text": "Soru: Türkiye'nin en yüksek dağı hangisidir? Cevap: Ağrı Dağı."
+   },
+   {
+    "style": "trivia question",
+    "text": "Biliyor muydunuz? İstanbul, iki kıtaya yayılan nadir şehirlerden biridir."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Sevgili Elif, nasılsın? Gelecek ay Ankara'ya geleceğim. Bir akşam buluşup yemek yiyelim mi?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Merhaba Can, taşınmada yardım ettiğin için çok teşekkürler. Bir dahaki sefere yemekler benden!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bu çini tabak, on altıncı yüzyılda İznik'te üretilmiştir. Mavi ve kırmızı lale motifleriyle süslenmiştir."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bu salonda Anadolu'nun farklı bölgelerinden el dokuması kilimler sergilenmektedir."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Günaydın sevgili dinleyiciler! Saat sekiz, hava güneşli ve ılık. Şimdi güne güzel bir şarkıyla başlıyoruz."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gol! Ne muhteşem bir vuruş! Top doksana takıldı, tribünler ayakta!"
+   }
+  ],
+  "lang:ur": [
+   {
+    "style": "text message",
+    "text": "علی، میں بس اسٹاپ پر کھڑا ہوں۔ تم کتنی دیر میں پہنچو گے؟ بارش شروع ہو گئی ہے۔"
+   },
+   {
+    "style": "text message",
+    "text": "امی، آج میں دیر سے گھر آؤں گی۔ کھانا میرے لیے رکھ دیجیے گا۔"
+   },
+   {
+    "style": "press release",
+    "text": "لاہور کی شہری انتظامیہ نے اعلان کیا ہے کہ اگلے ماہ شہر میں تین نئے پارک عوام کے لیے کھول دیے جائیں گے۔"
+   },
+   {
+    "style": "press release",
+    "text": "ایک مقامی کمپنی نے طلبہ کے لیے نئی موبائل ایپ متعارف کرائی ہے، جس سے وہ اپنی زبان میں مفت کتابیں پڑھ سکیں گے۔"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "سوال: آپ نے نان بائی کا کام کب شروع کیا؟ جواب: میرے والد بھی یہی کام کرتے تھے، میں بچپن سے ان کے ساتھ تندور پر کھڑا ہوتا تھا۔"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "سوال: آپ کو پڑھانے میں سب سے اچھا کیا لگتا ہے؟ جواب: جب کوئی بچہ پہلی بار خود سے کہانی پڑھ لیتا ہے۔"
+   },
+   {
+    "style": "how-to tip",
+    "text": "مشورہ: چاول کو پکانے سے پہلے آدھا گھنٹہ پانی میں بھگو دیں، اس سے دانے لمبے اور الگ الگ بنیں گے۔"
+   },
+   {
+    "style": "how-to tip",
+    "text": "گرمیوں میں گھر کو ٹھنڈا رکھنے کے لیے دوپہر کو پردے بند رکھیں اور شام کو کھڑکیاں کھول دیں۔"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "کراچی میں شدید گرمی کی لہر — محکمہ موسمیات کے مطابق درجہ حرارت چالیس ڈگری سے تجاوز کر سکتا ہے، شہریوں کو پانی زیادہ پینے کا مشورہ دیا گیا ہے۔"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "گاؤں کی بیٹی نے قومی مقابلے میں پہلی پوزیشن حاصل کر لی — اہل علاقہ نے مٹھائیاں بانٹ کر خوشی منائی۔"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "مجھے یاد ہے، بچپن میں عید پر ہم سب کزن دادا ابو سے عیدی لینے کے لیے قطار میں کھڑے ہوتے تھے، اور وہ ہر ایک کو نیا نوٹ دیتے تھے۔"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "ایک بار میں ٹرین میں سو گیا اور اپنا اسٹیشن گزر گیا۔ اگلے شہر سے واپس آنے میں پورا دن لگ گیا۔"
+   },
+   {
+    "style": "trivia question",
+    "text": "سوال: پاکستان کی سب سے بلند چوٹی کون سی ہے؟ جواب: کے ٹو۔"
+   },
+   {
+    "style": "trivia question",
+    "text": "کیا آپ جانتے ہیں کہ اردو عام طور پر نستعلیق رسم الخط میں لکھی جاتی ہے؟"
+   },
+   {
+    "style": "email to a friend",
+    "text": "پیاری ثنا، کیسی ہو؟ بہت دن ہو گئے بات نہیں ہوئی۔ اگلے ہفتے اسلام آباد آ رہی ہوں، ملاقات ہو سکتی ہے؟"
+   },
+   {
+    "style": "email to a friend",
+    "text": "السلام علیکم بلال، کل مدد کرنے کا بہت شکریہ۔ تمہارے بغیر یہ کام وقت پر ختم نہیں ہو سکتا تھا۔"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "یہ تانبے کا برتن تقریباً دو سو سال پرانا ہے اور شادی بیاہ کے موقع پر استعمال ہوتا تھا۔"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "اس کمرے میں ہاتھ سے کڑھائی کیے گئے ملبوسات رکھے گئے ہیں، جن پر کئی مہینوں تک کام کیا جاتا تھا۔"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "صبح بخیر سننے والو! آپ سن رہے ہیں صبح کا خاص پروگرام۔ آج موسم خوشگوار ہے، تو آئیے ایک پرانے گیت سے آغاز کرتے ہیں۔"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "کیا شاندار چھکا! گیند سیدھی اسٹیڈیم سے باہر! تماشائی خوشی سے اچھل پڑے ہیں!"
+   }
+  ],
+  "lang:vi": [
+   {
+    "style": "text message",
+    "text": "Lan ơi, mình kẹt xe quá, chắc trễ mười lăm phút. Bạn vào quán gọi trước đi nhé!"
+   },
+   {
+    "style": "text message",
+    "text": "Mẹ ơi, tối nay con về muộn, mẹ đừng chờ cơm nha."
+   },
+   {
+    "style": "press release",
+    "text": "Ủy ban nhân dân thành phố Đà Nẵng thông báo khai trương công viên ven sông mới vào cuối tháng này, với đường đi bộ và khu vui chơi cho trẻ em."
+   },
+   {
+    "style": "press release",
+    "text": "Công ty Cà phê Cao Nguyên giới thiệu dòng sản phẩm cà phê hữu cơ mới, được trồng tại Đắk Lắk và sẽ bán ra từ tháng sau."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Hỏi: Chị bắt đầu bán phở từ khi nào? Đáp: Từ hơn hai mươi năm trước, tôi học nấu nước dùng từ bà nội."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Hỏi: Điều gì khiến anh yêu nghề giáo? Đáp: Được thấy học trò tiến bộ từng ngày là niềm vui lớn nhất của tôi."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Mẹo nhỏ: Muốn cơm dẻo và thơm, bạn hãy cho thêm vài giọt dầu ăn và một chút muối khi nấu."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Để rau thơm tươi lâu, hãy bọc rau trong khăn giấy ẩm rồi cho vào hộp kín trong tủ lạnh."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mưa lớn gây ngập nhiều tuyến đường tại Thành phố Hồ Chí Minh — Nhiều xe máy chết máy giữa đường, người dân phải dắt bộ về nhà."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lễ hội hoa xuân thu hút hàng nghìn du khách — Các con đường ở Đà Lạt rực rỡ sắc màu trong suốt tuần lễ hội."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Hồi nhỏ, tôi theo ông ra đồng thả diều. Có lần diều bay cao quá, đứt dây, hai ông cháu chạy theo cả cây số mà không bắt được."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Lần đầu tôi đi xe buýt một mình ở Hà Nội, tôi xuống nhầm trạm và phải đi bộ gần một tiếng mới về đến nhà."
+   },
+   {
+    "style": "trivia question",
+    "text": "Câu hỏi: Ngọn núi cao nhất Việt Nam là núi nào? Trả lời: Phan Xi Păng."
+   },
+   {
+    "style": "trivia question",
+    "text": "Bạn có biết vịnh Hạ Long có gần hai nghìn hòn đảo lớn nhỏ không?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Thân gửi Hoa, dạo này bạn khỏe không? Tháng sau mình vào Huế công tác, nếu rảnh mình đi uống cà phê nhé."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Chào Minh, cảm ơn bạn đã giúp mình chuyển nhà hôm qua. Lần sau mình mời bạn đi ăn lẩu nha!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Chiếc trống đồng này được tìm thấy ở miền Bắc Việt Nam, có niên đại khoảng hai nghìn năm, với hoa văn hình chim và thuyền."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Phòng này trưng bày áo dài truyền thống qua các thời kỳ, từ đầu thế kỷ hai mươi đến nay."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Xin chào quý thính giả, chào buổi sáng! Hôm nay trời nắng đẹp, mời các bạn cùng thưởng thức một ca khúc thật vui tươi."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Vàooo! Một cú sút tuyệt đẹp từ ngoài vòng cấm! Khán giả trên sân như vỡ òa!"
+   }
+  ],
+  "lang:zh": [
+   {
+    "style": "text message",
+    "text": "我还在地铁上，大概十分钟到，你先点菜吧！"
+   },
+   {
+    "style": "text message",
+    "text": "妈，今天加班，晚饭不用等我了。"
+   },
+   {
+    "style": "press release",
+    "text": "杭州市政府今日宣布，西湖周边将新增三条自行车绿道，预计明年春天全部完工。"
+   },
+   {
+    "style": "press release",
+    "text": "本地茶企“青山茶业”推出新款有机绿茶，产自云南高山茶园，下月起在全国各大超市上架。"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "问：您是怎么开始做面馆的？答：我小时候跟着奶奶学擀面，后来就想把这个味道带给更多人。"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "问：当老师最开心的是什么？答：看到学生自己解出一道难题时的那种笑容。"
+   },
+   {
+    "style": "how-to tip",
+    "text": "小窍门：煮饺子时，水开后加一点凉水，再煮开，饺子就不容易破。"
+   },
+   {
+    "style": "how-to tip",
+    "text": "想让绿萝长得好，记得放在散射光的地方，土干了再浇水。"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "强降雨致多地城市内涝 — 气象部门提醒市民尽量减少外出，注意防范山洪和地质灾害。"
+   },
+   {
+    "style": "headline plus lede",
+    "text": "小山村靠种茶走上致富路 — 村里的年轻人纷纷回乡，开起了民宿和网店。"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "我小时候过年，最喜欢跟爷爷去放鞭炮。有一次鞭炮没响，我凑过去看，结果“砰”的一声把我吓哭了。"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "第一次一个人坐火车去北京，我紧张得一晚上没睡，结果到站时差点下错车。"
+   },
+   {
+    "style": "trivia question",
+    "text": "问题：中国最长的河流是哪条？答案：长江。"
+   },
+   {
+    "style": "trivia question",
+    "text": "你知道吗？长城的总长度超过两万公里。"
+   },
+   {
+    "style": "email to a friend",
+    "text": "小雨，最近好吗？我下个月去上海出差，有空一起吃顿饭吧！"
+   },
+   {
+    "style": "email to a friend",
+    "text": "阿明，谢谢你昨天帮我搬家，改天请你吃火锅！"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "这件青花瓷瓶制作于明代，瓶身绘有缠枝莲纹，是景德镇窑的代表作品。"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "本展厅陈列着各地的传统剪纸作品，过去人们常在春节时把它们贴在窗户上。"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "各位听众朋友，早上好！今天天气晴朗，气温适宜，接下来为大家送上一首轻快的歌曲。"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "球进了！一记漂亮的远射直挂死角！全场观众都站起来欢呼！"
+   }
+  ],
+  "topic:AdultActor": [
+   {
+    "style": "text message",
+    "text": "Did you see Jenna Vale is retiring from porn after twelve years? Her farewell post to fans was actually really sweet."
+   },
+   {
+    "style": "text message",
+    "text": "lol my cousin just found out his old college roommate became an X-rated film star under the name Rex Daltry. Apparently he's won industry awards."
+   },
+   {
+    "style": "press release",
+    "text": "Former adult film star Mia Corrado announces her memoir, 'Off Camera,' about her decade in the porn industry and her later work as a performers' rights advocate. In stores March 4."
+   },
+   {
+    "style": "press release",
+    "text": "Veteran adult performer Tanya Lux has been named spokesperson for a performer health and safety coalition, the group announced today, citing her long advocacy for regular testing standards."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you stop performing in porn films? A: After eight years and two industry awards, I wanted to direct and run my own studio instead of being in front of the camera."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What surprised you most when you started in X-rated movies? A: How much of it is just business: contracts, shoot schedules, and managing my brand online."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from retired porn actress Nadia Rhodes: if you're leaving the industry, pick a new professional name early and ask a lawyer how to handle your old film credits."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Erotic-film veteran Lexi Starr's advice for newcomers to adult entertainment: read every contract, always use an agent, and keep your legal name private."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "X-Rated Star Brandon Steel Named Male Performer of the Year — The 34-year-old porn actor took home the top prize at the industry's annual awards show in Las Vegas on Saturday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ex-Porn Actress Lands Mainstream TV Role — Kira Monroe, who appeared in more than 200 adult films, will play a detective on a cable drama next season."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm at the airport and the woman next to me says she used to be a porn actress in the nineties, totally casual, and now she breeds horses in Montana. Best layover chat ever."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle swears he went to high school with a guy who became one of the best-known male stars of X-rated movies in the eighties. Every Thanksgiving he tells the story again."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which former adult film actress played herself in the HBO series Entourage? Answer: Sasha Grey."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which porn star wrote the bestselling 2004 memoir 'How to Make Love Like a Porn Star'? Answer: Jenna Jameson."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, remember Dana from our dorm? Turns out she spent five years making X-rated videos under a stage name, and now she runs a successful skincare brand. Small world!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jo, I finally watched that documentary about Lena Rivers, the porn actress who sued her old studio over unpaid royalties. You'd love it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This gold statuette was awarded in 1986 to erotic-film performer Candy Marlowe, one of the first in her industry to publicly campaign for performer health testing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Exhibit: The Golden Age of Adult Cinema. This costume was worn by porn actor Johnny Lake in his 1978 feature, one of the first X-rated films reviewed by mainstream newspapers."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Next up on the late show, former porn star Jessie Blaze calls in to talk about her new career flipping houses in Phoenix. Lines are open!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "You heard it here first: the adult-video actor who went by Lance Rocco just announced he's suing his former studio. Our legal guy says he's got a real case."
+   }
+  ],
+  "topic:VoiceActor": [
+   {
+    "style": "text message",
+    "text": "omg the guy who voices the dragon in that new game is the same one who did the talking cat in the cartoon we watched as kids!!"
+   },
+   {
+    "style": "text message",
+    "text": "Just met Priya Desai at the con, she's the narrator of that audiobook series we love. She did the villain's voice for me live!!"
+   },
+   {
+    "style": "press release",
+    "text": "Studio Lanternlight is pleased to announce that Marcus Bell will lend his voice to the lead role in its upcoming animated feature, 'The Lighthouse Fox,' opening next spring."
+   },
+   {
+    "style": "press release",
+    "text": "Award-winning dub artist Aiko Tanaka-Reyes joins the English cast of the anime series 'Starfall Academy' as the voice of the rebellious pilot Kaede."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you protect your voice during long recording sessions? A: Lots of warm water, no dairy, and I never record screaming scenes before lunch."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Which of your characters do fans recognize most? A: The grumpy robot sidekick. Kids at signings ask me to say his catchphrase every single time."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from veteran voice actress Delia Hart: when you audition for animation, record three takes of each line with different energy so the director hears your range."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Audiobook narrator Tom Okafor's advice: mark every character's pitch and accent in your script margin so they stay consistent across a twenty-hour book."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Beloved Cartoon Voice Retires After 40 Years in the Booth — Gerald Finch, who voiced the cheerful mouse in a long-running Saturday-morning show, recorded his final episode this week."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Game Studio Recasts Hero After Fan Petition — Players demanded the return of Sofia Marquez, whose voice performance as the original protagonist they say defined the series."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm ordering coffee and the barista goes, 'Your voice sounds familiar.' Turns out I'm the grandpa wizard in the game he plays every night. Free muffin!"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt dubbed a cartoon princess back in the nineties, and at every family party someone begs her to sing the princess song in that voice."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which performer voiced both Bugs Bunny and Daffy Duck, earning the nickname 'The Man of a Thousand Voices'? Answer: Mel Blanc."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who has provided the voice of Homer Simpson since the show began? Answer: Dan Castellaneta."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, guess who sat next to me on the train: the woman who voices the villain in that robot cartoon your kids watch. She recorded a hello message for them!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nina, did you know the narrator of that nature documentary is also the voice of the talking car in the kids' show? Same guy, Arthur Penn!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This script page from 1961 carries handwritten notes by June Foray, who gave voice to Rocky the Flying Squirrel and dozens of other cartoon characters."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The recording booth recreated here belonged to dubbing artist Hiro Matsuda, who gave Japanese voices to more than 300 foreign film characters during his career."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And our guest in the studio is none other than the voice of Captain Comet himself, Lou Brandt. Lou, give the listeners that famous laugh!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We've got the voice of the talking dog from every cereal commercial in the eighties on line two. Ray, is it true you recorded that bark in one take?"
+   }
+  ],
+  "topic:Comedian": [
+   {
+    "style": "text message",
+    "text": "Dude I just saw Marcy Klein do stand-up at the Laugh Shack, her bit about airport security had me crying."
+   },
+   {
+    "style": "text message",
+    "text": "Tickets for Omar Haddad's comedy tour drop tomorrow at 10. We HAVE to get front row this time, he roasts the front row."
+   },
+   {
+    "style": "press release",
+    "text": "Comedian Rachel Stone announces her first world tour, 'Overthinking It,' kicking off in Chicago this fall with 40 dates across North America and Europe."
+   },
+   {
+    "style": "press release",
+    "text": "The Downtown Comedy Festival is proud to name Kenji Ward as this year's headliner. Ward's deadpan storytelling won him a following after his late-night TV debut."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Where do your jokes come from? A: Mostly my mother. She doesn't know she's my co-writer, and I'd like to keep it that way."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was your worst night on stage? A: A wedding gig in Ohio where the bride's grandfather heckled me for twenty minutes. He killed, I bombed."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Stand-up veteran Lou Garcia's tip for open-micers: record every set on your phone, and keep only the jokes that got laughs three nights in a row."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from comic Bree Holloway: if a joke dies, acknowledge it out loud. Audiences forgive a bomb but never forgive pretending it didn't happen."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Stand-Up Star Sells Out Madison Square Garden — Tony Russo became the youngest comic to fill the arena, closing his set with a story about his grandmother's parrot."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Satirist Gloria Banks Wins Mark Twain Prize for American Humor — Known for her sharp political jokes, she accepted the award with a gag about the ceremony's dress code."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm at this tiny club, and the guy on stage starts roasting my haircut. Next year he's got his own TV special, and I swear the haircut joke is in it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My college roommate was always doing impressions of our professors. Now he tours the country telling jokes and still uses the chemistry teacher bit."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Whose 1972 routine 'Seven Words You Can Never Say on Television' led to a Supreme Court case? Answer: George Carlin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which stand-up comic co-created a famous 'show about nothing' with Larry David? Answer: Jerry Seinfeld."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kate, I got us tickets to see Sam Ortiz at the Orpheum on Friday. His special about moving back in with his parents is hilarious."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ben, remember that funny guy from improv class? Danny Moore just got a half-hour comedy special! I knew he'd make it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This sequined jacket was worn by vaudeville comic Harry 'Hoot' Delaney during his famous 1928 routine about a talking suitcase."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The notebooks shown here hold twenty years of handwritten jokes by comedian Edith Pryce, who crossed out every line that failed to get a laugh."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming up after the break, the funniest man in Cleveland, Bobby Lyons, is in the studio to talk about his new hour of stand-up. Bobby, you nervous?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ha! You can't make this stuff up, folks. That was Jenny Tran doing her famous bit about the DMV. Call in if you've lived it!"
+   }
+  ],
+  "topic:ComicsCreator": [
+   {
+    "style": "text message",
+    "text": "Just got my copy of Maya Lin's new graphic novel signed at the shop! She drew a little cat next to the autograph."
+   },
+   {
+    "style": "text message",
+    "text": "Did you know the guy who draws that superhero series lives in our town? He's doing a signing at Paper Dragon Comics on Saturday."
+   },
+   {
+    "style": "press release",
+    "text": "Ironclad Comics announces that writer-artist Dario Bellini will launch a new monthly series, 'Night Harbor,' this October, his first original book in five years."
+   },
+   {
+    "style": "press release",
+    "text": "Cartoonist Hannah Cho, creator of the beloved webcomic 'Moss & Pebble,' has signed a deal for a collected print edition and an animated adaptation."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do you write the script or draw the pages first? A: Thumbnails first. I need to see the panels before I know what the characters will say."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long does one issue take you? A: About five weeks: one for the script, three for pencils and inks, and one for lettering and colors."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from inker Ray Delgado: rotate the drawing board, never your wrist, so your brush lines stay smooth across every panel."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Webcomic artist Lina Park's advice: post on a fixed schedule, even if it's one strip a week. Readers come back for consistency."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Legendary Comic Book Artist Honored with Lifetime Award — Frank Morrow, co-creator of the masked detective The Shade, received the honor at this year's convention in San Diego."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen's Webcomic Lands Publishing Deal — Seventeen-year-old Jordan Ellis, who began posting a fantasy strip during lockdown, will see it printed as a graphic novel."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm sixteen, standing in line at the con, and the artist who drew my favorite superhero flips through my sketchbook and says, 'Keep going, kid.' I still have it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather drew a newspaper comic strip about a lazy farmer for thirty years. He'd test every gag on us at breakfast."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who created the comic strip 'Calvin and Hobbes'? Answer: Bill Watterson."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which writer co-created Spider-Man with artist Steve Ditko? Answer: Stan Lee."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mike, I finally read that graphic memoir by Ana Ruiz you recommended. The panels in the chapter about her dad made me tear up."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, the cartoonist who does the Sunday strip about the grumpy pug is teaching a workshop at the library! Want to sign up?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This original pencil page from 1962 shows the first appearance of Captain Meridian, drawn by Joe Kravitz in a single weekend to meet his deadline."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These sketches by Belgian cartoonist Hergé show early designs for Tintin's little white dog, Snowy."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On today's show we've got the guy behind every page of 'Iron Wolf,' writer and artist Sam Kessler! Sam, how many cups of coffee per issue?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big news for the comic fans out there: Lucy Tran is back drawing 'Starcat' after ten years. Phone lines are lit up, people are thrilled!"
+   }
+  ],
+  "topic:FashionDesigner": [
+   {
+    "style": "text message",
+    "text": "Did you see Elena Rossi's runway show last night?? The red cape dress was insane."
+   },
+   {
+    "style": "text message",
+    "text": "Just found a vintage coat from Ade Okonjo's very first collection at the thrift store for $20!!"
+   },
+   {
+    "style": "press release",
+    "text": "Milan-based designer Luca Ferraro unveils his spring/summer collection, inspired by Sicilian fishing villages, at a runway presentation during Fashion Week on September 22."
+   },
+   {
+    "style": "press release",
+    "text": "Couturier Amara Nwosu is pleased to announce the opening of her first flagship boutique in Paris, featuring her signature hand-beaded evening gowns."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Where do you start when creating a collection? A: With fabric. I touch hundreds of swatches before I sketch a single dress."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Who taught you to sew? A: My grandmother, on an old treadle machine. My first garment was a lopsided skirt for my doll."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from designer Sofia Laurent: to make a basic dress look tailored, take in the waist two centimeters and shorten the hem to just below the knee."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Couturier Kenji Mori's advice: build your wardrobe around three neutral colors, then add one bold piece each season."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Young Designer Wins International Woolmark Prize — Isabel Cortez impressed judges with a knitwear collection made entirely from recycled yarn."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fashion House Founder Steps Down After 30 Years — Henri Valois, whose tailored suits dressed generations of diplomats, handed creative control of his label to his former assistant."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm interning at this atelier, and the designer walks in, rips the sleeve off a jacket I spent all day on, and says 'Better.' And honestly? It was."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom sewed the costumes for the school play, and another parent told her she should start her own label. Ten years later, she did."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which French couturière popularized the 'little black dress' in the 1920s? Answer: Coco Chanel."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Whose 1947 'New Look' collection brought back full skirts and cinched waists? Answer: Christian Dior."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mia, I met the woman who made those dresses we loved at the market, Rosa Diaz! She's doing custom wedding gowns now. Want her number?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Josh, the guy who made your suit for the wedding, Tomas Grey, just got featured in a big style magazine. We knew him before he was famous!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This silk evening gown, created in 1951 by Spanish couturier Cristóbal Balenciaga, shows his gift for sculptural shapes that seem to float around the body."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The sketchbook shown here belonged to Marguerite Vane, who drew every outfit for her 1968 collection on the train between London and Paris."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And we're back! In the studio with me is the designer who dressed half the stars at last night's awards, Nadia Petrov. Nadia, which gown was the hardest?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big story on the style beat: Ricardo Alves just announced his label will stop using leather entirely. Callers, love it or hate it?"
+   }
+  ],
+  "topic:Painter": [
+   {
+    "style": "text message",
+    "text": "Went to the gallery opening, Tomas Vidal's new oil paintings of the harbor are gorgeous. You'd love the blues in them."
+   },
+   {
+    "style": "text message",
+    "text": "Bought a small watercolor from Ines Moreau at her market stall. She painted it right there in front of me. It's going over the couch!"
+   },
+   {
+    "style": "press release",
+    "text": "The Harbor Gallery is pleased to present 'Quiet Fields,' a solo exhibition of new landscapes in oil by Helen Ashby, opening May 3."
+   },
+   {
+    "style": "press release",
+    "text": "Abstract painter Kwame Mensah has been awarded this year's National Arts Fellowship for his large canvases exploring color and memory."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do you paint from photographs? A: Never. I sit in the field for hours until the light tells me which colors to mix."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do you only use three tubes of paint? A: Red, yellow and blue force me to mix everything else, and that's where the surprises happen."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from watercolorist Ana Lima: wet the paper first and drop the pigment in, then let it spread; don't chase it with the brush."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Painter Joel Brandt's advice: squint at your subject. It hides the details and shows you the big shapes of light and dark on the canvas."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Forgotten Canvas Sells for $2 Million — The portrait by Clara Holm, found rolled up in an attic, was bought by a museum after a fierce bidding war."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Painter, 92, Holds First Solo Show — Walter Greene, who painted every day for seventy years but never exhibited, finally hangs his work in his hometown gallery."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My neighbor paints sunsets from her porch every evening. One night she ran out of orange, so she mixed in my carrot juice, and honestly it's her best one."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I took a class with this old painter in Provence, and he made us paint the same lemon for a whole week. By Friday I finally saw it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Dutch artist painted 'The Starry Night' in 1889? Answer: Vincent van Gogh."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Mexican artist is famous for self-portraits with flowers in her hair? Answer: Frida Kahlo."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Liz, Marco Bianchi, whose canvas we saw in the café, is giving a still-life workshop next month. Let's bring our brushes!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dan, I finally hung the oil painting my grandmother made of her garden. Every time I look at the brushstrokes I can smell the roses."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Claude Monet painted this view of water lilies in his garden at Giverny around 1906, returning to the same pond again and again to capture the changing light."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Self-Portrait, 1923. In this canvas Eva Lindqvist shows herself holding a brush, a bold statement when few women were admitted to art academies."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live at the art fair, and next to me is Rosa Kent, who just sold her giant oil canvas of the old bridge. Rosa, how does it feel?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, you heard it: the guy painting portraits of every dog in the neighborhood, Hank Doyle, has a waiting list of 300 pups!"
+   }
+  ],
+  "topic:Photographer": [
+   {
+    "style": "text message",
+    "text": "Sarah's friend Leo is shooting our engagement photos at the lake Saturday! He's bringing two cameras and a drone."
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the picture of the lightning over the city on the news? Mina Cho took it from her rooftop with a long exposure!"
+   },
+   {
+    "style": "press release",
+    "text": "The Lumen Gallery presents 'Faces of the Coast,' a black-and-white portrait series by photographer Daniel Okoro, on view from June 1."
+   },
+   {
+    "style": "press release",
+    "text": "Wildlife photographer Elsa Lindgren has won the Golden Lens award for her image of a snow leopard at dawn in the Himalayas."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long did you wait for that shot? A: Eleven days in a hide. The owl appeared for forty seconds, and I got three frames."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Film or digital? A: Film for my personal work. I like that I only have thirty-six chances per roll."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from portrait photographer Ruth Abara: shoot an hour before sunset and put the sun behind your subject for a soft glow in the hair."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Street shooter Marco Ventura's advice: set your lens to f/8, walk close, and keep the camera up. Most good pictures happen in a second."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "War Photographer's Images Go on Display — Pictures taken by Anna Kessler over twenty years of conflict reporting fill the city museum's main hall."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Amateur's Snapshot Wins Prestigious Photo Prize — Retired nurse Peter Hale captured a fox leaping over a frozen stream on his morning walk."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So at my sister's wedding, the photographer climbed a tree to get the group shot. The branch snapped, and he still got the picture as he fell."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandpa had a darkroom in the basement. I'd watch his photos of our town slowly appear in the developer tray like magic."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who is famous for black-and-white photographs of Yosemite National Park? Answer: Ansel Adams."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who took the 1984 'Afghan Girl' portrait that became a famous magazine cover? Answer: Steve McCurry."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jen, found a great photographer for the baby shower, Lucia Ramos. Her candid shots are lovely and she's not expensive."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, Aaron Wu, the guy who shot the eclipse from the mountaintop, is giving a talk about his lenses at the library. Want to go?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Dorothea Lange took this photograph, known as 'Migrant Mother,' in California in 1936. It became a symbol of the Great Depression."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These glass-plate negatives were made by Henrik Aas, who traveled the fjords by rowboat in the 1890s taking pictures of fishing villages."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We've got the photographer who shot the famous puddle-jump picture downtown on the line! Kim, how many tries did that take?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the pictures Jamal Price snapped at the stadium last night, the catch in midair, are all over the internet. Jamal, you there?"
+   }
+  ],
+  "topic:AustralianRulesFootballPlayer": [
+   {
+    "style": "text message",
+    "text": "Mate did you see Jack Riley kick that goal from 55 out?? Swans are going to make the finals!"
+   },
+   {
+    "style": "text message",
+    "text": "Tom Callaghan just signed a three-year deal with Collingwood, the Magpies fans are going nuts on the forums."
+   },
+   {
+    "style": "press release",
+    "text": "The Geelong Football Club is pleased to confirm that midfielder Liam O'Brien has re-signed with the Cats until the end of the 2028 season."
+   },
+   {
+    "style": "press release",
+    "text": "Brisbane Lions ruckman Sam Hayes has been named the league's best and fairest after polling 31 votes across the home-and-away season, the AFL announced tonight."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's going through your head lining up for a set shot after the siren? A: Just my routine. Six steps back, eyes on the goal umpire, and kick through the ball."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel to play your 300th game at the MCG? A: Surreal. My dad was in the stands, and he hasn't missed a game since I was in the under-nines."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Richmond full-forward Ben Mitchell: when you take a mark, catch it out in front of your eyes, not on your chest, so you see the footy all the way in."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ruckman Hugh Ferris's advice for juniors: time your jump at the centre bounce by watching the umpire's hand, not the ball."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Sensation Kicks Six Goals on Debut — Eighteen-year-old Fremantle forward Kai Tran stunned the Perth crowd with a starring performance in the derby against the Eagles."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Footy Star Announces Retirement — West Coast champion Daniel Pierce will hang up the boots at season's end after 15 years and two premierships."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So when I was a kid in Ballarat, Nick Dawson from the Bulldogs came to our Auskick clinic, and he handballed to me. I didn't wash my hands for a week."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin played two seasons in the VFL before getting drafted by Hawthorn. His first kick in the big league went straight out on the full."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Sydney Swans and Hawthorn forward kicked more than 1,000 goals in his AFL career? Answer: Lance 'Buddy' Franklin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who holds the record for most goals in VFL/AFL history? Answer: Tony Lockett, with 1,360."
+   },
+   {
+    "style": "email to a friend",
+    "text": "G'day Mark, you won't believe it, your old schoolmate Ryan Hart just got drafted by the Adelaide Crows! Pick 14!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Steph, I've got two tickets to Carlton on Saturday. Your favourite, Harry Blake, is back from his hamstring injury!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This leather boot belonged to Essendon rover Charlie Webb, who kicked a vital goal in the 1949 Grand Final in a muddy MCG downpour."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Brownlow Medal shown here was won in 1972 by Fitzroy rover Alan Brady, who celebrated with his teammates at the local pub the next morning."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's done it! Matty Cooper roosts it from the boundary, straight through the big sticks! The Demons are back in front with a minute to go!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "What a mark! Ryan Doyle sits on the shoulders of two defenders, takes a screamer, and the crowd at the 'G is on its feet!"
+   }
+  ],
+  "topic:BadmintonPlayer": [
+   {
+    "style": "text message",
+    "text": "Lin Wei just won the Indonesia Open final in straight games!! Her smash is unreal."
+   },
+   {
+    "style": "text message",
+    "text": "Watching Anders Holm play men's doubles at the nationals, the rallies are so fast I can't even see the shuttle."
+   },
+   {
+    "style": "press release",
+    "text": "The national federation is pleased to announce that Priya Nair will captain the women's team at the upcoming Uber Cup Finals."
+   },
+   {
+    "style": "press release",
+    "text": "Sportswear brand Featherline has signed Malaysian men's singles star Hafiz Rahman to a four-year sponsorship deal, including a signature racket line."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you prepare for a long three-game match? A: Footwork drills every morning. If my feet are slow, my smash doesn't matter."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did you learn from losing the Olympic semifinal? A: That I was playing not to lose. In the bronze match I just attacked the net."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from doubles champion Kenta Mori: when your partner smashes, move up to the net. Most points end with a soft net kill."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Shuttler Mia Sørensen's advice for beginners: hold the racket loosely like a handshake, and squeeze only at the moment you hit the shuttlecock."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Shuttler Upsets World No. 1 in Jakarta — Sixteen-year-old Arjun Mehta took the opening game 21-18 and never looked back."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Danish Badminton Star Retires After Olympic Gold — Freja Lund ends her career with a final win in front of a home crowd in Copenhagen."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So in college I played a club match against this quiet girl from Penang, Siew Ling, and I didn't win a single point in the second game. She's in the world top twenty now."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad played badminton for his province in the eighties. He still beats me in the backyard with a cracked old racket."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Chinese player won men's singles Olympic gold in both 2008 and 2012? Answer: Lin Dan."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Malaysian shuttler was world No. 1 for 199 consecutive weeks but never won Olympic gold? Answer: Lee Chong Wei."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ravi, your old training partner Deepa just reached the All England quarterfinals! Are you watching tonight?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, I met Yuki Sato at the sports club, the doubles player from the Asian Games. She offered to coach our Thursday group!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This racket was used by Rudy Hartono, the Indonesian player who won the All England Championships eight times, seven of them in a row."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This wristband belonged to Danish champion Erland Kops, who won seven All England singles titles in the 1950s and 1960s."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "What a rally! Forty-two shots, and Chen Hao finishes it with a jump smash down the line! The crowd in the arena are on their feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listeners, the women's singles final is tied at one game each, and Kirsty McLeod is serving at 19-all. Unbelievable tension here."
+   }
+  ],
+  "topic:BaseballPlayer": [
+   {
+    "style": "text message",
+    "text": "Dude, Martinez just hit his 40th homer of the season!! The bleachers went crazy."
+   },
+   {
+    "style": "text message",
+    "text": "Our kid's Little League coach used to pitch in the minors for the Durham Bulls, no wonder they're undefeated."
+   },
+   {
+    "style": "press release",
+    "text": "The Portland Pioneers announced today that they have signed shortstop Diego Alvarez to a five-year contract extension."
+   },
+   {
+    "style": "press release",
+    "text": "Right-hander Cole Hendricks has been named the league's Pitcher of the Month after going 5-0 with a 1.12 ERA in June, the club announced."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What were you thinking when you came up with the bases loaded? A: Just look for a fastball. He'd been throwing me sliders all night."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How's the shoulder after surgery? A: Feels strong. I'm throwing 92 again in bullpen sessions, and I want to be back on the mound by July."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Gold Glove second baseman Ricky Soto: field ground balls with your glove out in front of you, not between your feet."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Veteran catcher Mike Kowalski's advice: when you frame a low pitch, catch the top half of the ball and gently lift your mitt."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie Throws No-Hitter in Third Career Start — Twenty-two-year-old lefty Owen Park struck out eleven against Kansas City on Tuesday night."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Slugger Retires After 18 Seasons — Hector Ramos finishes with 512 home runs and two World Series rings."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm at the ballpark with my dad, and this outfielder, Tommy Graves, tosses me a ball before the game. Thirty years later it's still on my shelf."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-uncle was a catcher in the Negro Leagues in the 1940s. He used to say the fastballs came in so hard they whistled."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who broke Major League Baseball's color barrier in 1947? Answer: Jackie Robinson."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Yankees slugger was nicknamed 'The Sultan of Swat'? Answer: Babe Ruth."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Greg, guess who moved in next door: former Cubs pitcher Al Benson! He offered to throw batting practice for our softball team."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lisa, Jamie's favorite player, center fielder Carlos Vega, is signing autographs at the mall Saturday. Want to take the kids?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This flannel jersey was worn by Lou Gehrig, the New York Yankees first baseman who played 2,130 consecutive games."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These spikes belonged to Satchel Paige, who pitched in the major leagues at 59 years old in 1965."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Here's the pitch... swung on, there's a long drive, deep left field, Rodriguez going back... it's GONE! A walk-off home run!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Two outs, bottom of the ninth, and Jake Moreno steps in. He's hitting .340 since the All-Star break, folks. This is the guy you want up."
+   }
+  ],
+  "topic:BasketballPlayer": [
+   {
+    "style": "text message",
+    "text": "Did you see Marcus Reed drop 45 last night?? That dunk over the center was unreal."
+   },
+   {
+    "style": "text message",
+    "text": "Our school's point guard, Jaylen Brooks, just committed to Duke!! The whole gym was cheering."
+   },
+   {
+    "style": "press release",
+    "text": "The Denver Peaks are pleased to announce the signing of All-Star forward Andre Wallace to a four-year contract."
+   },
+   {
+    "style": "press release",
+    "text": "Center Aisha Johnson has been named the women's league Defensive Player of the Year after averaging 3.4 blocks per game, the league announced Tuesday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was going through your mind on that last shot? A: Coach drew it up for me. I just caught it, squared up, and let it fly."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you improve your free throws? A: Two hundred a day all summer. I went from sixty percent to eighty-five."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from point guard Tyrese Hill: dribble with your fingertips, not your palm, and keep your eyes up on the defense."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former shooting guard Kelly Brennan's advice: keep your elbow under the ball and hold your follow-through until it swishes through the net."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie Forward Posts Triple-Double in NBA Debut — Nineteen-year-old Malik Carter had 14 points, 11 rebounds and 10 assists in a win over Boston."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hall of Fame Center Joins Coaching Staff — Seven-footer Viktor Novak, a two-time champion, returns to the franchise he led for a decade."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm shooting around at the park and this tall guy asks to play H-O-R-S-E. I lose in four shots. Turns out he played pro ball overseas for eight years."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom was a shooting guard at Tennessee in the eighties. She still sinks every free throw at the Thanksgiving hoop."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who scored 100 points in a single NBA game in 1962? Answer: Wilt Chamberlain."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which player won six NBA championships with the Chicago Bulls in the 1990s? Answer: Michael Jordan."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Chris, guess who's running the summer hoops camp: former Lakers guard Derek Stone! Let's sign the boys up."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Amy, Tasha Green from our high school team just made the national team roster. She was always our best rebounder."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These sneakers were worn by Bill Russell, the Boston Celtics center who won eleven championships in thirteen seasons."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This warm-up jacket belonged to Ruth Calloway, star center of an industrial-league women's team in the 1950s, who once scored 52 points in a game."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Brooks crosses over, steps back, three-pointer... BANG! At the buzzer! The Wolves win it!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, Davis has 38 tonight, and he's doing it on a sprained ankle. Somebody give this man a medal!"
+   }
+  ]
+ }
+}

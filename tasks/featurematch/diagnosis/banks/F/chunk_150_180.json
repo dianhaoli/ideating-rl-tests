@@ -1,0 +1,2465 @@
+{
+ "bank": "F",
+ "concepts": {
+  "topic:GrandPrix": [
+   {
+    "style": "casual social-media post",
+    "text": "That last lap at the Valdora Grand Prix!!! Rossi dove up the inside at the hairpin and the whole grandstand lost it. Best race of the season, no contest. #F1"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Rain at Interlagos on race day again. Safety car, three pit stops, and a rookie on the podium. Sunday racing doesn't get better than this."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MONTREAL (Reuters) - Lando Varga won the Canadian Grand Prix on Sunday, holding off the championship leader by 1.8 seconds after a late safety car bunched the field on the Circuit Gilles Villeneuve."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of the Baltic Grand Prix confirmed on Tuesday that the street race through Riga's old port will join the motorcycle world championship calendar from next season."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's on pole for Sunday? B: Okafor, by a tenth. A: The pit lane at Monza is so short, strategy won't matter. B: Then it's all about the start into Turn 1."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you get grandstand tickets for Silverstone? B: Club Corner, all three days. A: Practice Friday too? B: Of course, that's when you hear the engines properly."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Monaco - Tight barriers, the tunnel, the harbour chicane. Overtaking is nearly impossible, so Saturday qualifying decides almost everything."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. The Desert Night Race - Floodlit asphalt, sand blowing across Turn 11, and a 57-lap fight on tyres that overheat after ten laps."
+   },
+   {
+    "style": "forum question",
+    "text": "First time going to the Hungarian round in August. Is it worth paying extra for a seat near the pit straight, or is the view better at Turn 4?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the stewards only give a five-second penalty for that collision at the chicane last Sunday? He pushed his rival straight into the gravel."
+   },
+   {
+    "style": "product or event review",
+    "text": "Spent three days at the Spa weekend. Eau Rouge in person is terrifying, the campsite was muddy, and the podium ceremony was worth every euro. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The fan zone at this year's Sakhir race was excellent: pit-lane walk, simulator queue under ten minutes, but the shuttle buses after the chequered flag were chaos."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I actually heard the cars before I saw them today. Dad lifted me onto the fence at the first corner and a red car went past so fast my ears rang."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sunday. Watched the race from the hill at Turn 9. Our driver started fourteenth and finished fourth. Sunburnt, hoarse, completely happy."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Portuguese Grand Prix is a motor race held at the Algarve International Circuit, first run as a round of the world championship in 1958."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Marina Bay event is a night race run on a 5-kilometre street circuit in Singapore, known for its humidity and frequent safety-car periods."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Monaco race shows how a city street can be turned into one of the most famous racetracks in the world for a single weekend each year."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "At last year's Brazilian Grand Prix, a two-second tyre change by one pit crew decided the podium, proving that mechanics matter as much as drivers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the Suzuka weekend - what happened with the tyres? GUEST: The medium compound fell apart after twelve laps, so everybody who planned a one-stop had to rethink it live."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and he takes the chequered flag! After 58 laps around Yas Marina, the young Finn wins his first race in the top category, and the team are already on the pit wall celebrating."
+   }
+  ],
+  "topic:MixedMartialArtsEvent": [
+   {
+    "style": "casual social-media post",
+    "text": "Fight night card for Cage Kings 42 just dropped and the main event is STACKED. Silva vs Petrov for the lightweight belt. Who you got? 🥊"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "That flying knee in the second round of the co-main tonight... I've watched it 20 times. Instant knockout of the year candidate."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAS VEGAS (AP) - Brazil's Camila Duarte retained her flyweight title at Apex Combat 77 on Saturday with a third-round rear-naked choke, headlining a twelve-bout card at the T-Mobile Arena."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Promoters announced on Monday that the October card in Abu Dhabi will feature two title fights and a heavyweight bout between unbeaten prospects from Nigeria and Poland."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are you watching the prelims or just the main card? B: Prelims too, the bantamweight bout looks wild. A: The grappler or the striker? B: Striker if it stays standing past round one."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see the weigh-ins for Saturday's card? B: Kowalski missed by two pounds. A: So it's a catchweight now? B: Yeah, and he forfeits twenty percent of his purse."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. The Octagon Showdown in Perth - Sold 56,000 tickets, the biggest crowd ever for a cage-fighting card in the southern hemisphere."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Fury in the Cage 19 - Five finishes in five bouts, including a heel hook in under a minute in the opener."
+   },
+   {
+    "style": "forum question",
+    "text": "Going to my first live MMA card next month. Are floor seats worth it or do you see more from the upper bowl with the big screens?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why was the main event at last night's card only three rounds? I thought title bouts were always five."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended Gladiator FC 12 at the convention center. Undercard was mostly decision wins, but the headline welterweight fight ended in a spectacular spinning back fist. Sound system awful. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the pay-per-view of Saturday's card. Great co-main, but the headliner was 25 minutes of clinching against the fence and the stream froze twice. Not worth the price."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I worked the corner for Jonas tonight. Second fight on the card. He won by split decision and I was so nervous I forgot to bring the ice bucket."
+   },
+   {
+    "style": "diary entry",
+    "text": "Fight night. The arena smelled like popcorn and sweat. Our gym had three fighters on the card; two won by submission, one lost a close decision. Cried in the car."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Apex Combat 101 was a mixed martial arts event held on 14 March 2020 at the O2 Arena in London, headlined by a middleweight championship bout."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Titan Cage Championship 8 was a mixed martial arts card held in Seoul, featuring nine bouts across five weight classes."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The first Apex Combat card in 1997 was held in a high-school gym, yet it helped turn cage fighting into a mainstream sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The night in Rio when the local champion defended her belt showed how a single fight card can unite a whole city."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Let's break down the card from Saturday. GUEST: Prelims were sloppy, but that heavyweight knockout in the co-main saved the night, and the title fight went all five rounds."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the referee waves it off! Ninety seconds into the main event and the new champion is climbing the cage to celebrate with the crowd."
+   }
+  ],
+  "topic:WrestlingEvent": [
+   {
+    "style": "casual social-media post",
+    "text": "Last night's pay-per-view was INSANE. That ladder match had me screaming at the TV and then the champ got pinned clean in the main event?! #WrestleWar"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Who else lost their voice at Summer Slamdown? The crowd chanting 'this is awesome' during the cage match gave me chills."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - The sold-out Madison Square Garden card on Saturday saw 'The Viper' Dante Cruz capture the heavyweight championship after interference from his former tag partner."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers said the two-night spectacular in Riyadh drew more than 60,000 fans, featuring eight championship matches and the in-ring return of a retired legend."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's opening the show Saturday? B: Tag team ladder match. A: Bold. B: They want the crowd hot before the women's title match."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Was the main event a surprise? B: Total shock, the masked guy turned heel and cost his partner the belt. A: Ha, I knew he'd turn eventually."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Rumble at the River 2019 - Thirty men, one ring, and a winner who entered at number one and outlasted everyone for over an hour."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Steel Cage Spectacular - A cage match so brutal the announcers went silent when the champion climbed to the top of the cage."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it worth getting ringside tickets for next month's live show, or do you see more from the upper deck with the entrance ramp in view?"
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know why the scheduled tag title match was pulled from Sunday's card? Was someone injured or is it a storyline thing?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to Wrestle Fest 7 at the old armory. Indie wrestlers worked their hearts out, the luchadores flew off the top rope, and the merch table was cheap. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The pay-per-view started strong but the 40-minute main event dragged and the finish was a disqualification. Mixed feelings about this one."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, Uncle Raj took me to see the wrestlers tonight. The champion threw his sweaty wristband into the crowd and I caught it!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Saturday. Finally saw my favourite tag team live. They lost after a chair shot the ref didn't see. The crowd booed for five minutes."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Clash of Champions 2015 was a professional wrestling pay-per-view event held at the Spectrum Center, featuring seven matches including a triple threat for the heavyweight title."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rumble Royale is an annual professional wrestling event that takes its name from its signature thirty-person over-the-top-rope match."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1987 stadium show where a giant was body-slammed in front of 90,000 fans showed how wrestling had become mass entertainment."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Clash of Champions 2015 proved that a well-built storyline could make a single match feel like the climax of a novel."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Let's rate the card from Sunday. GUEST: The opener was a five-star ladder match, the midcard was filler, and the main event finish with the run-in? Divisive, but it got people talking."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...one, two, three! The challenger hits the finisher off the top rope, and we have a new champion here at Wrestle Kingdom!"
+   }
+  ],
+  "topic:GolfTournament": [
+   {
+    "style": "casual social-media post",
+    "text": "Sunday back nine at the Lakeside Classic was unreal. Eagle on 15, birdie on 17, and the 22-year-old lifts the trophy by one shot. ⛳"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Stuck at the 16th green all afternoon and watched three hole-in-ones. Best day of spectating at any golf event ever."
+   },
+   {
+    "style": "news-wire report",
+    "text": "AUGUSTA, Ga. (AP) - South Africa's Pieter Vos shot a final-round 66 on Sunday to win by two strokes, finishing at 13-under par after the overnight leader found the water on the 12th."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Pacific Coast Championship will move to a links course in Oregon next year, organisers said Tuesday, with the purse raised to $9 million."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's the cut line looking like? B: Even par. A: So Henderson's out? B: Unless the wind picks up this afternoon and blows everyone else up."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you get tickets for the final round? B: Yeah, grandstand at the 18th. A: Perfect, that's where the playoff will be if it goes extra holes."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. The Old Course at St Andrews - Pot bunkers, the Road Hole, and wind that can add six shots to a leader's score in an afternoon."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. The Desert Invitational - Famous for its rowdy par-3 16th, where 20,000 fans cheer and boo every tee shot."
+   },
+   {
+    "style": "forum question",
+    "text": "First time going to a tour event next month. Can I bring a folding chair, and is it better to follow one group or camp at a single green?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the leader get a two-stroke penalty on 14 yesterday? The commentary said something about grounding his club in a hazard."
+   },
+   {
+    "style": "product or event review",
+    "text": "Spent all four days at the Northern Open. Course in perfect condition, concessions overpriced, and the playoff on the 18th was the best drama I've seen in years. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The pro-am day was a treat: I got autographs from three major winners. Parking shuttles were slow but the volunteers were lovely."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I caddied for the club champion at the amateur qualifier today. He missed a two-foot putt on 18 and we missed the cut by one stroke."
+   },
+   {
+    "style": "diary entry",
+    "text": "Final round. Followed the leaders from the first tee. Walked about 12 kilometres. My favourite player shot 68 and finished tied for third."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Scottish Seniors Open is a professional golf tournament for players aged 50 and over, first held in 1987 at Gleneagles."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Masters is one of the four major championships in professional golf and is played each April at Augusta National Golf Club."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jack Nicklaus's win at the 1986 Masters, at the age of 46, showed that experience can beat youth over 72 holes."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1999 Open at Carnoustie, where the leader took seven on the final hole, reminds us that golf is never over until the last putt."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: The final round was brutal. GUEST: The pin positions were tucked behind bunkers, the greens were stimping at 13, and nobody in the top ten broke 70."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and he's holed it! A twenty-foot birdie putt on the 72nd hole, and he wins the championship by a single stroke!"
+   }
+  ],
+  "topic:SoccerTournament": [
+   {
+    "style": "casual social-media post",
+    "text": "Group stage done and my team is through on goal difference!!! Round of 16 here we come ⚽🔥 #CopaDelSur"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Penalty shootout in the quarter-final and our keeper saves TWO. Still shaking. This tournament is giving me a heart condition."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DOHA (Reuters) - Morocco reached the semi-finals of the Gulf Nations Cup on Wednesday after a 2-1 extra-time win over Nigeria, the first African side to go that far in the competition."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The confederation confirmed on Monday that next year's continental championship will expand to 24 teams, with matches spread over eight host stadiums."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who do we get in the last eight? B: Winner of Group D, probably Croatia. A: Ugh, their midfield. B: We beat them in the friendly last March."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see the draw for the youth championship? B: Group of death. Brazil, Spain and Japan. A: Brutal. B: Two go through, so it's anyone's."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. The 1970 edition in Mexico - Remembered for colour broadcasts, the Azteca crowds, and Brazil's legendary final against Italy."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Copa Del Pacífico 2016 - The final went to a 22-kick penalty shootout before the goalkeeper scored the winner."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know how the away-goals rule works in the knockout rounds of this year's cup? The tiebreakers on the website make no sense."
+   },
+   {
+    "style": "forum question",
+    "text": "Planning to attend three group matches next summer. Are fan zones in the host cities worth it or should I just get stadium tickets?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the regional youth cup final. Packed stadium, great atmosphere, the host side won 3-2 in extra time. Food lines were awful. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The women's championship this year was outstanding: attacking football, full stadiums, and a final decided by a stunning volley. Ticketing app crashed twice though."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, our team got knocked out in the round of 16 today. We had more shots, they had one counterattack. I'm not talking to anyone tonight."
+   },
+   {
+    "style": "diary entry",
+    "text": "Final day. Painted my face in the national colours, sang for ninety minutes, and we lifted the trophy. I will remember this forever."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2019 Africa Cup of Nations was the 32nd edition of the international men's football championship of Africa, held in Egypt and won by Algeria."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Asian Cup is an international association football tournament organised every four years for national teams of the Asian Football Confederation."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 2010 World Cup in South Africa showed that a football tournament could unite a whole continent behind its host."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1950 final in Rio, lost by Brazil in front of 200,000 people, is still remembered there as a national tragedy."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What a semi-final. GUEST: Ninety minutes of nothing, then two goals in extra time and a red card. Classic knockout football."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the referee blows the final whistle! They're champions of the continent for the first time, and the players are sprinting toward the travelling fans!"
+   }
+  ],
+  "topic:TennisTournament": [
+   {
+    "style": "casual social-media post",
+    "text": "Centre court at the Halle Open today was electric. Five-set epic, two tiebreaks, and the qualifier beat the top seed! 🎾"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Rain delay at the clay event again, so we're all huddled under the stands eating overpriced strawberries. Worth it for the quarters tomorrow."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MELBOURNE (Reuters) - Serbia's Marko Ilic reached his first major semi-final on Tuesday with a four-set win over the fifth seed in front of a packed Rod Laver Arena."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Organisers of the Basel indoor event said Monday that the tournament's prize money will rise by 15 percent and that a new hard court will be laid before the October draw."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you see the draw for next week? B: Our guy got a qualifier first round. A: Then the top seed in the third? B: Yeah, if he survives that long."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Grass or clay this weekend? B: Grass, the warm-up event before Wimbledon. A: Who's the defending champion? B: Some big server from Canada."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. The Monte Carlo Masters - Red clay with the Mediterranean behind the court; arguably the most beautiful setting in the sport."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. The Queen's Club Championships - The traditional grass-court warm-up where the bounce stays low and the serve-and-volley still works."
+   },
+   {
+    "style": "forum question",
+    "text": "Is a grounds pass at Flushing Meadows worth it for the first week? Can you actually see good matches on the outer courts?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the umpire give a code violation for a racket smash yesterday but not a point penalty? I'm confused about the warning rules."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the first three days of the Swiss Indoors. Great sightlines, quick security, and a classic three-setter under the roof. Ticket prices steep. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The juniors event alongside the main draw was a hidden gem: free seats, great rallies, and future stars playing two metres away."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I was a ball kid at the city open today. I handed a towel to the second seed and he said thank you! My arms hurt from crouching."
+   },
+   {
+    "style": "diary entry",
+    "text": "Quarter-final day. Watched the match from the top row. The tiebreak went to 14-12. My hands are blistered from clapping."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Madrid Open is an annual professional tennis tournament played on outdoor clay courts at the Caja Mágica in Madrid, Spain."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The US Open is a hard-court tennis tournament held annually in New York and is the last of the four Grand Slam events each season."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Wimbledon's rule of all-white clothing shows how an event can keep its traditions alive in a modern sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1980 Wimbledon final between Borg and McEnroe proved that a single match can make a championship legendary."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Let's talk about the final. GUEST: He saved three championship points, then broke serve twice in the fifth. On that surface? Unbelievable."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...game, set and match! After four hours and twelve minutes, the unseeded Argentine wins his first title on the tour."
+   }
+  ],
+  "topic:WomensTennisAssociationTournament": [
+   {
+    "style": "casual social-media post",
+    "text": "Indian Wells women's final tonight and both players are under 21!! WTA future is in great hands 🎾💜"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Swiatek-style topspin from the Polish qualifier today at the Stuttgart Open. She just upset the world number 3 on indoor clay. WTA chaos as usual."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DOHA (AP) - Czech player Karolina Mares won the Qatar Ladies Open on Saturday, beating the defending champion 6-4, 7-5 to claim her third WTA 1000 title."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The WTA confirmed on Monday that the Guadalajara event will be upgraded to a 500-level tournament next season, with the singles draw expanded to 32 players."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the top seed in the women's draw this week? B: Sabalenko-type power hitter from Belarus. A: Rankings points? B: It's a WTA 500, so plenty at stake."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you get tickets for the women's final in Wuhan? B: Front row. A: Lucky. B: Hoping the local favourite makes it through her semi."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Charleston Open - The green clay event where the WTA season's spring swing really starts, with a relaxed crowd and a long history."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Eastbourne International - A seaside grass event where top women players fine-tune their slice before Wimbledon."
+   },
+   {
+    "style": "forum question",
+    "text": "Does the WTA Finals use round-robin groups or straight knockout? Trying to work out if my favourite can still qualify for the semis."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the women's event in Dubai worth attending in February? Thinking of going for the quarter-finals of the WTA week."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Linz women's indoor event. Intimate arena, fantastic doubles final, and a teenager won her first title on the tour. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Charleston tournament this year had perfect weather, friendly staff, and some brilliant three-set matches in the women's draw. Food prices high."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I got a selfie with the women's champion after the final today! She signed my cap and told me to keep practising my backhand."
+   },
+   {
+    "style": "diary entry",
+    "text": "Final day of the ladies' event. Our home player lost in three sets but the crowd gave her a standing ovation. I nearly cried."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Wuhan Open is a professional women's tennis tournament played on outdoor hard courts, part of the WTA 1000 tier of the WTA Tour."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Birmingham Classic is a WTA grass-court tournament held at the Edgbaston Priory Club in England, first contested in 1982."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1970 Virginia Slims event in Houston, where nine women signed one-dollar contracts, led to the founding of the WTA tour."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Wuhan Open shows how women's tennis tournaments have expanded into Asia, bringing top WTA players to new fans."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: The women's final in Miami was incredible. GUEST: She was down a set and a break and still came back to win her first WTA 1000 title."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the Japanese teenager wins the women's title! Her first trophy on the WTA Tour, and she's in tears at the net."
+   }
+  ],
+  "topic:RollerCoaster": [
+   {
+    "style": "casual social-media post",
+    "text": "Just rode the Thunderhawk three times in a row. 90-metre drop, four inversions, and I screamed so loud my throat hurts 🎢😂"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Two-hour queue for Velocity Storm but that launch from 0 to 120 km/h in two seconds was worth every minute."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SANDUSKY, Ohio (AP) - A new steel coaster opening this summer will be the tallest in North America at 125 metres, park officials announced Thursday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A wooden coaster at a seaside park in Blackpool was closed Monday for inspection after riders reported unusual vibrations on the first drop, operators said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Front row or back row? B: Back. You get yanked over the top of the lift hill. A: I'm holding my glasses. B: Good idea, that airtime is no joke."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the Viper still closed for maintenance? B: Reopens Saturday. A: The one with the zero-g roll? B: Yeah, and the loop right after the station."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Steel Fury - A 1990s hypercoaster with a 70-metre first hill and more airtime moments than any other ride in Europe."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. The Wildcat - A compact wooden coaster from 1923 that still rattles riders through tight turns at a family park."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know if the new launched coaster at Silver Cove has a height requirement over 140 cm? My son is 138 and desperate to ride."
+   },
+   {
+    "style": "forum question",
+    "text": "Which is more intense: the inverted ride at Parque Nova or the wing coaster at Thrillworld? Trying to plan a trip around the best one."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Dragon Ascent is smooth as butter. The vertical lift is terrifying, the drop is beyond vertical, and the helix at the end is perfect. 9/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "Rode the old woodie at Lakemont Park this summer. Rough, loud, and absolutely brilliant. Bring a cushion for your back."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, today I finally rode the big coaster at the fair! I kept my eyes closed on the first drop but opened them for the loop."
+   },
+   {
+    "style": "diary entry",
+    "text": "Diary, Saturday: queued for an hour, got stuck on the lift hill for ten minutes when the ride stopped. Totally worth it when it started again."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Formula Rossa is a launched steel roller coaster at Ferrari World in Abu Dhabi, reaching a top speed of 240 km/h."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Beast is a wooden roller coaster at Kings Island in Ohio, opened in 1979 and known for its long track length."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Cyclone at Coney Island, opened in 1927, shows how a simple wooden ride can still thrill people almost a century later."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Kingda Ka's 139-metre top hat shows how potential energy turns into speed as riders plunge back toward the ground."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: We rode Titan's Fang this morning. GUEST: The first drop is 95 degrees, so it actually curls back under you. I lost my hat on the second inversion."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and here we go up the lift hill. Click, click, click. You can see the whole park from up here. Oh no, oh no, here comes the drop!"
+   }
+  ],
+  "topic:Lake": [
+   {
+    "style": "casual social-media post",
+    "text": "Sunrise over Lake Tahoe this morning. Water so clear you can see the rocks ten metres down. Not a single cloud ☀️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Kayaked across Loch Morar today. Glassy water, two otters, and the deepest freshwater in Britain under my paddle."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KAMPALA (Reuters) - Water levels in Lake Victoria rose to their highest in decades this week, flooding lakeside towns and forcing thousands of families from their homes."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Scientists said on Tuesday that ice cover on Lake Baikal formed three weeks later than average this winter, affecting the endemic seal population."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can we swim out from the shore today? B: The water's about 14 degrees. A: Brr. B: Wetsuit then, and we'll paddle to the island."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How deep is it in the middle? B: Over 300 metres, the guide said. A: Glad I'm in a boat. B: The fishing's best near the north shore."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Lake Bled - An emerald alpine lake with a tiny island church and a medieval castle perched on the cliff above."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Crater Lake - Formed in a collapsed volcanic caldera, it is the deepest lake in the United States."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the trail around Lake Louise doable in a day? Planning to walk the shoreline loop and maybe hike to the teahouse."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone fished Lake Titicaca? Wondering if you need a local guide or if you can rent a boat at Puno."
+   },
+   {
+    "style": "product or event review",
+    "text": "Stayed three nights by Lake Como. Ferries are easy, the water is beautiful, and the evening light over the villages is magic. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the boat tour on Lough Neagh was informative and calm, but the café on the pier needs better coffee. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we camped on the shore of Loch Awe tonight. Loons were calling across the water and I could see the Milky Way reflected near the reeds."
+   },
+   {
+    "style": "diary entry",
+    "text": "Summer at the cottage. Swam out to the raft before breakfast. The water was freezing for ten seconds and then perfect."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lake Malawi is an African Great Lake shared by Malawi, Mozambique and Tanzania, known for its hundreds of species of cichlid fish."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lake Ontario is the smallest by surface area of the five Great Lakes of North America and drains into the St. Lawrence River."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Baikal shows how a single body of fresh water can hold about a fifth of the world's unfrozen surface supply."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The shrinking of the Aral Sea shows how irrigation can destroy a great inland water body and the fishing towns on its shores."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've been diving in the Walchensee for ten years. GUEST: At forty metres the water's four degrees all year, and there are trees down there from before the valley flooded."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so we paddled out to the middle of Lough Leane, and it was totally silent. No wind, no motors, just the mountains upside down in the water."
+   }
+  ],
+  "topic:Castle": [
+   {
+    "style": "casual social-media post",
+    "text": "Climbed all 200 steps of the keep at Bodiam today. Moat, drawbridge, arrow slits - pure medieval fantasy 🏰"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just visited Neuschwanstein and honestly it looks like a Disney movie in real life. Those turrets above the gorge!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "EDINBURGH (Reuters) - Restoration of the medieval curtain wall at a Scottish fortress overlooking the Firth of Forth will cost £12 million, heritage officials said on Thursday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Archaeologists working beneath a 13th-century castle in Wales announced Tuesday the discovery of a previously unknown postern gate and a cache of crossbow bolts."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the great hall open to visitors? B: Yes, and the dungeon tour. A: Spooky. B: The guide says a prisoner carved his name in the wall in 1460."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can we walk along the battlements? B: Only on the north tower. A: Views of the river? B: All the way to the coast on a clear day."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Château de Chambord - Over 400 rooms and a famous double-helix staircase rumoured to have been designed by Leonardo da Vinci."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Himeji - A gleaming white Japanese fortress with maze-like walls designed to confuse attackers."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it worth booking the guided tour at Conwy, or can you see the towers and walls just as well on your own?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the fortress at Carcassonne is busy in October? Planning to walk the ramparts and stay inside the walls."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited Warwick on a rainy Saturday. The armoury was fantastic, the trebuchet demonstration was loud, and the café overpriced. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Dunnottar is a ruin on a sea cliff, windy and wild, with almost no facilities, but the views are unforgettable. 5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we explored the old castle on the hill today. I stood in the gatehouse and imagined knights riding through with flags."
+   },
+   {
+    "style": "diary entry",
+    "text": "Holiday day 3. Wandered the castle grounds. Found the old well in the courtyard and the bakery tower where they baked for the garrison."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Bran Castle is a fortress near Brașov in Romania, built in the 14th century and often linked in popular culture with the Dracula legend."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Caernarfon Castle is a medieval fortress in north Wales built by Edward I from 1283, known for its polygonal towers."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Tower of London was built by William the Conqueror to show the defeated English the power of their new king."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Edinburgh's fortress on its volcanic rock reminds visitors that the whole city grew around a single defensive stronghold."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What makes this fortress unusual? GUEST: It has a concentric design, two rings of walls, so attackers who broke through the first found themselves trapped in a killing zone."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and then the siege lasted eight months. The defenders survived on rainwater from the cistern beneath the keep until the relief army arrived."
+   }
+  ],
+  "topic:HistoricBuilding": [
+   {
+    "style": "casual social-media post",
+    "text": "Toured the old customs house downtown today. 1840s granite columns, original cast-iron staircase, and a ceiling painted with ships. Architecture nerds, go! 🏛️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "They're finally reopening the Victorian corn exchange after ten years of restoration. Those stained-glass skylights look brand new."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PHILADELPHIA (AP) - The city's 1790s merchants' hall, listed on the National Register of Historic Places, will reopen in spring after a $30 million restoration of its brick facade and cupola."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A fire on Tuesday damaged the roof of an 18th-century guildhall in the old town of Bruges, though firefighters saved its carved oak interior, officials said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: When was this place built? B: 1762, as a coaching inn. A: And the plaque? B: It says George Washington slept here, like every other old building in Virginia."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are we allowed upstairs? B: Only with the guide. The floorboards are original. A: Wow. B: Look at the hand-blown glass in those windows."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. The Old Stone House - Built in 1765, it's the oldest surviving structure on its original foundations in Washington, D.C."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. The Merchant's Exchange - A Greek Revival landmark from 1834 whose rotunda once hosted the city's grain auctions."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know the history of the brick mill on River Street? There's a date stone saying 1823 but I can't find any records."
+   },
+   {
+    "style": "forum question",
+    "text": "Our town wants to demolish the 1890s train depot. How do you get a building heritage-listed before the bulldozers arrive?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the restored 17th-century merchant's house in Amsterdam. Creaky stairs, Delft tiles, and a guide who knew every family that lived there. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Georgian assembly rooms are lovely but half the building is closed for repairs, so the ticket price feels steep. 3/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we went inside the old courthouse today. The judge's bench is still there and the walls are covered in names carved by bored jurors."
+   },
+   {
+    "style": "diary entry",
+    "text": "Saturday. Volunteered at the heritage open day. Showed visitors the Tudor fireplace and the priest hole behind the panelling."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Faneuil Hall is a marketplace and meeting hall in Boston, built in 1742 and known as the 'Cradle of Liberty'."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Cloth Hall in Kraków is a Renaissance trading hall in the centre of the Main Market Square, rebuilt after a fire in 1555."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Independence Hall in Philadelphia helps us understand how the founders debated and signed the Declaration in 1776."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The demolition of New York's old Penn Station in 1963 showed that once a landmark is gone, its history cannot be rebuilt."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So why is this house listed? GUEST: Timber frame from 1480, wattle-and-daub walls, and the original smoke-blackened roof beams. Almost nothing like it survives."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and when they stripped the plaster, they found medieval wall paintings underneath. The whole parish turned up to see them."
+   }
+  ],
+  "topic:Hospital": [
+   {
+    "style": "casual social-media post",
+    "text": "Huge thank you to the nurses on Ward 6 at St Mary's. Three nights after my appendix op and they never stopped smiling 💙"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Children's ward just got a brand-new playroom and a therapy dog named Biscuit. Volunteering here is the best part of my week."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NAIROBI (Reuters) - A new 400-bed teaching hospital opened in Nairobi on Monday, with a cancer treatment centre and Kenya's largest neonatal intensive care unit."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Doctors at a regional medical centre in Leeds said Thursday that A&E waiting times had fallen by a third since a new emergency wing opened last year."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which floor is maternity? B: Fourth, past the cardiology wing. A: And the car park? B: Pay at the machine by the main entrance."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long is the wait in A&E? B: Board says four hours. A: For a sprained wrist? B: They triage, so the heart attack came first."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Johns Hopkins Hospital - Founded in 1889 in Baltimore, it pioneered residency training for surgeons."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Great Ormond Street - The London children's hospital that receives royalties from Peter Pan."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the infirmary on Elm Road has free parking for visitors? My mum is in for knee surgery next week."
+   },
+   {
+    "style": "forum question",
+    "text": "Which hospital in the city has the best maternity unit? Looking for somewhere with a birth centre and good aftercare."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the new outpatient clinic is clean and modern, the radiographer was kind, but I waited ninety minutes past my appointment time. 3/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Spent a week at Riverside General with my dad. Ward was noisy at night, but the cardiology team explained everything clearly. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I visited Grandpa in the cardiac ward today. He's hooked up to beeping machines but he still made the nurses laugh."
+   },
+   {
+    "style": "diary entry",
+    "text": "Night shift in the ICU again. Two admissions, one discharge, and a family who brought us biscuits. Exhausted but grateful."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Mayo Clinic Hospital in Rochester, Minnesota is a major academic medical centre and one of the largest hospitals in the United States."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Charité is a university hospital in Berlin, founded in 1710 as a plague house, and one of the largest teaching hospitals in Europe."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Florence Nightingale's work at the Scutari barracks hospital changed how wards were cleaned and run."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "St Thomas' in London shows how one medical institution can serve the same city for over eight hundred years."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What's a night like in the emergency department? GUEST: Car crashes, chest pains, drunk students, and one surgeon running between theatres until dawn."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the new wing has 120 private rooms, so patients won't be sharing wards anymore. The board says it'll cut infections dramatically."
+   }
+  ],
+  "topic:Hotel": [
+   {
+    "style": "casual social-media post",
+    "text": "Checked in to The Ashby and the rooftop pool overlooks the whole skyline 😍 Free upgrade to a suite too!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Room service at 2am, fluffy robes, and a concierge who got us dinner reservations nobody else could. Living my best life at the Grand Marlowe."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DUBAI (Reuters) - A 75-storey luxury hotel opened on Thursday with 600 rooms, a sky-lobby restaurant and what its owners call the world's highest infinity pool."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The historic Raffles-style hotel on the waterfront will close for two years from January for a renovation of its 180 guest rooms, the owners said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Do you have a reservation? B: Yes, under Patel, two nights. A: Your room is 412, breakfast is from seven. B: Is the gym open all night?"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you book the place near the station? B: Yeah, four stars, late checkout. A: Parking? B: Valet only, thirty a night."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. The Savoy, London - Opened in 1889 by Richard D'Oyly Carte, it was the first luxury hotel in Britain with electric lights."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Hotel Il Pellicano - Clifftop rooms above the Tuscan coast and a terrace bar that has hosted film stars since the 1960s."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone stayed at the Harborview Inn? Wondering if the sea-view rooms are worth the extra or if the noise from the port is bad."
+   },
+   {
+    "style": "forum question",
+    "text": "Which hotel near the convention centre has decent wifi and a quiet floor? Booking for a work trip next month."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: friendly front desk, spotless room, comfy bed, but the breakfast buffet ran out of eggs by 8:30. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Stayed three nights at the Lakeshore Lodge. Lobby gorgeous, staff lovely, but the air conditioning rattled all night. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we arrived at the hotel late tonight. The bellboy carried our bags and there was a chocolate on my pillow!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Last night of the trip. Ordered room service, watched the city lights from bed, and hung the do-not-disturb sign on the door."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Waldorf Astoria New York is a luxury hotel on Park Avenue in Manhattan, opened at its current site in 1931."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Hotel Majestic is a historic hotel in Barcelona's Eixample district, with 275 rooms and a rooftop terrace."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Ritz in Paris shows how one grand building full of guest suites can become part of a city's identity."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When the Chelsea Hotel rented rooms to writers and musicians, it became a home for New York's artists."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've run that boutique hotel for twenty years. GUEST: Every room has a different theme, and guests come back just to try the next one."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the concierge said, 'Madam, we have a guest who has lived in suite 801 since 1974.' Can you imagine checking in and never checking out?"
+   }
+  ],
+  "topic:Museum": [
+   {
+    "style": "casual social-media post",
+    "text": "Spent five hours at the Rijksmuseum and still didn't see everything. Standing in front of The Night Watch gave me chills 🖼️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The new dinosaur hall at the Field in Chicago is incredible. A full T. rex skeleton right in the entrance!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS (AP) - The Louvre received a record 10 million visitors last year, with the Mona Lisa gallery the most crowded room, the museum said on Wednesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A new science museum opened in Lagos on Saturday, featuring interactive galleries on space, energy and the human body for school groups."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which gallery first? B: Egyptian antiquities, then the Impressionists. A: Audio guide? B: Free with the ticket, ask at the cloakroom."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the special exhibition sold out? B: Only the evening slots. A: Let's do the morning then. B: And lunch in the courtyard café."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. The Prado, Madrid - Home to Velázquez's Las Meninas and one of the finest collections of European painting."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. The Museum of Broken Relationships, Zagreb - Objects left behind after break-ups, each with a short story from the donor."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the British Museum free to enter? Planning a weekend in London and want to see the Rosetta Stone without booking ahead."
+   },
+   {
+    "style": "forum question",
+    "text": "What's the best time to visit the Uffizi to avoid crowds? I only have one morning in Florence."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the maritime museum has great ship models and a submarine you can walk through, but the café is tiny. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The modern art gallery downtown was confusing: half the rooms closed, labels hard to read, but the sculpture garden is lovely. 3/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, our class went to the Pitt Rivers today. I saw a real shrunken head, a totem pole and a meteorite you could touch."
+   },
+   {
+    "style": "diary entry",
+    "text": "Rainy Sunday. Wandered the V&A alone. Spent an hour in the medieval armour room just staring at the helmets."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Smithsonian National Air and Space Museum in Washington, D.C. holds the largest collection of historic aircraft and spacecraft in the world."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Hermitage Museum in Saint Petersburg, founded in 1764 by Catherine the Great, is one of the largest art museums in the world."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The British Museum allows students to see the Rosetta Stone in person instead of only reading about it."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Smithsonian shows how one institution can preserve objects for future generations, from the Wright Flyer to the Hope Diamond."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You're the curator of the new textile collection. GUEST: We have 4,000 pieces, from Peruvian weavings to 1960s miniskirts, and we're opening the first gallery next month."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the guard told us that the painting had been stolen in 1911 and missing for two years before it came back to the wall."
+   }
+  ],
+  "topic:Prison": [
+   {
+    "style": "casual social-media post",
+    "text": "Toured Alcatraz today. Standing inside a cell on Broadway corridor and looking out at San Francisco across the water... chilling 😶"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Did the night ghost tour at the old Eastern State Penitentiary. The cellblocks with crumbling vaulted ceilings are seriously eerie."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - Inspectors found overcrowding and broken heating at HMP Ashworth Road, a Victorian jail in the Midlands, according to a report published on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Officials said a new medium-security correctional facility for 1,200 inmates will open in Texas next year, replacing two older units."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long's he in for? B: Eighteen months, at the county jail. A: Visits? B: Saturdays, through the glass, forty-five minutes."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did the guards search your bag? B: Twice. A: And the visiting room? B: Plastic chairs, a vending machine, and a lot of crying kids."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Robben Island - Where Nelson Mandela spent 18 of his 27 years behind bars, now a museum and World Heritage Site."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Château d'If - The island fortress jail off Marseille made famous by The Count of Monte Cristo."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone visited a family member at Fairview Correctional? What ID do you need and are you allowed to bring snacks?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does the old penitentiary in our city still have the original cellblocks or were they demolished?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the guided tour of the former jail was grim but fascinating. The solitary confinement cells are tiny. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Old Melbourne Gaol tour is atmospheric, the guides act out historic trials, but the gift shop is a bit tasteless. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I volunteered at the prison library today. One inmate asked for books on carpentry so he can find work when he gets out."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day as a corrections officer. Learned the count routine, the lockdown procedures, and where every gate is. My feet ache."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sing Sing Correctional Facility is a maximum-security prison in Ossining, New York, opened in 1826 on the Hudson River."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Spandau Prison in West Berlin held Nazi war criminals after the Nuremberg trials and was demolished in 1987."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Robben Island reminds us how jails were used to silence political opponents in apartheid South Africa."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Eastern State Penitentiary's system of solitary cells shows how nineteenth-century ideas about punishment relied on isolation."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You spent twelve years as a warden. GUEST: The hardest part wasn't the inmates, it was the overcrowding and the staff shortages."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the escape happened on a foggy night. Three men slipped through a ventilation shaft and were never seen again."
+   }
+  ],
+  "topic:Restaurant": [
+   {
+    "style": "casual social-media post",
+    "text": "Finally got a table at Osteria Bianca and the truffle tagliatelle was everything 🤤 Booking again for my birthday."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Tiny ramen place near the station just got a Michelin star! Twelve seats, no reservations, worth every minute in line."
+   },
+   {
+    "style": "news-wire report",
+    "text": "COPENHAGEN (Reuters) - The Nordic restaurant Fjord was named the world's best on Monday, praised for its seasonal tasting menu built around foraged herbs."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A beloved family-run diner on Route 9 closed its doors on Sunday after 62 years, owners citing rising rent and staff shortages."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Table for two? B: Yes, by the window please. A: Tonight's special is grilled sea bass. B: Perfect, and a bottle of the house white."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you book for Friday? B: Eight o'clock at the tapas bar. A: The one with the patatas bravas? B: And the churros for dessert."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. El Celler de Can Roca, Girona - Run by three brothers, its tasting menu has topped the world's best lists twice."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Katz's Delicatessen, New York - Hand-carved pastrami sandwiches stacked so high you need two hands."
+   },
+   {
+    "style": "forum question",
+    "text": "Can anyone recommend a good vegan place in Lisbon? Something casual for dinner, not a tasting menu."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the brunch at Mabel's worth the wait on Sundays? The queue was round the block last time."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the steak was perfectly cooked, sides generous, service friendly but slow. Desserts a bit sweet. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Overpriced bistro: tiny portions, lukewarm soup, and the waiter forgot our drinks. Won't be returning. 2/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we tried the new Thai place on Elm Street tonight. The green curry was so spicy I cried, but in a good way."
+   },
+   {
+    "style": "diary entry",
+    "text": "Anniversary dinner. Candlelight, oysters, and a chef who came out to say hello. Best meal of the year."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Noma is a restaurant in Copenhagen known for its new Nordic cuisine, opened in 2003 by chef René Redzepi."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Le Bernardin is a French seafood restaurant in Manhattan that has held three Michelin stars since 2005."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Delmonico's in New York, opened in 1837, showed Americans that dining out could be an elegant event."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Fat Duck in Bray shows that a restaurant can turn cooking into science and theatre."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You opened your bistro with a single gas burner. GUEST: Yes, we did ten covers a night, now we do ninety and still make the bread every morning."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the food critic ordered the duck, sent back the wine, and then wrote the most glowing review the place ever got."
+   }
+  ],
+  "topic:ShoppingMall": [
+   {
+    "style": "casual social-media post",
+    "text": "Spent all Saturday at Westfield Stratford. Three floors of shops, an ice rink, and the food court has everything 🛍️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "New mall opened in town and the queue for the sneaker store went past the fountain on the ground floor."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DUBAI (AP) - Owners of a giant shopping centre with 1,200 stores and an indoor ski slope said Thursday that visitor numbers hit 100 million last year."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A 1980s suburban mall in Ohio will be demolished next year after its last anchor department store closed, the county announced."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Meet at the food court? B: Near the escalators, level two. A: Then the cinema? B: Yeah, the eight o'clock show on the top floor."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where did you park? B: Level P3, near the Macy's entrance. A: Great, we'll never find the car. B: Take a photo of the pillar."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Mall of America, Minnesota - Over 500 stores and a full theme park with roller coasters under one roof."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Galleria Vittorio Emanuele II, Milan - A glass-roofed 19th-century arcade lined with fashion houses and cafés."
+   },
+   {
+    "style": "forum question",
+    "text": "What time does Riverside Plaza open on Sundays? Need to get to the phone store before the crowds."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the new outlet centre outside the city worth the drive? Looking for cheap running shoes and kids' clothes."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the new shopping centre is bright and clean, plenty of parking, but half the units are still empty. 3/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Great place for a rainy day: indoor playground, decent food hall, forty shops on two levels, and the toilets are spotless. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, Mum took me to the mall today to buy school shoes. We had pretzels and I rode the carousel by the escalators."
+   },
+   {
+    "style": "diary entry",
+    "text": "Black Friday. Got to Eastgate Centre at six. Crowds on every escalator, but I found the TV I wanted at half price."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Dubai Mall is a shopping mall in Dubai, United Arab Emirates, opened in 2008 next to the Burj Khalifa."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Southdale Center in Edina, Minnesota, opened in 1956 and is considered the first fully enclosed shopping mall in the United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "West Edmonton Mall, with its water park and ice rink, shows how a shopping centre can become a tourist attraction."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The decline of Randall Park Mall in Ohio shows how online shopping left many malls with empty storefronts."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So why are so many malls dying? GUEST: Department stores closed, e-commerce grew, and the food courts can't carry the rent on their own."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and as teenagers we'd spend whole afternoons walking past the same shops, then sit by the fountain throwing pennies."
+   }
+  ],
+  "topic:Galaxy": [
+   {
+    "style": "casual social-media post",
+    "text": "Got my first photo of the Andromeda galaxy through my backyard telescope tonight! 2.5 million light-years away and still a fuzzy smudge 🌌"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "JWST just dropped an image of NGC 1300, its spiral arms full of glowing star nurseries. Space is beautiful."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PASADENA (AP) - Astronomers announced Wednesday the discovery of the most distant galaxy yet confirmed, seen as it was just 300 million years after the Big Bang."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A team using the ALMA telescope said on Monday that a dwarf galaxy orbiting the Milky Way contains far more dark matter than expected."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is that blur Andromeda? B: Yeah, the whole thing's huge, wider than the moon in the sky. A: Can we see its arms? B: Not without long exposure."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's the Whirlpool? B: A spiral galaxy interacting with a smaller companion. A: Is it close? B: About 23 million light-years."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. The Sombrero Galaxy - A bright core and a dark dust lane make it look like a wide-brimmed hat."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. The Large Magellanic Cloud - A satellite of the Milky Way visible to the naked eye from the Southern Hemisphere."
+   },
+   {
+    "style": "forum question",
+    "text": "Can I see the Triangulum galaxy with 10x50 binoculars from a dark site? Or do I need a proper telescope?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why does M87 have so few new stars compared to the Whirlpool? Trying to understand star formation in giant ellipticals."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the planetarium's new show on colliding galaxies is stunning. The simulation of the Milky Way merging with Andromeda was the highlight. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Bought a deep-sky imaging kit last month. Captured M81 and M82 in one frame on my second night. 4/5, steep learning curve."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, I stayed up past midnight at the observatory and the astronomer showed me M81 on the screen. Billions of stars in one smudge."
+   },
+   {
+    "style": "diary entry",
+    "text": "Camping, new moon. The Milky Way stretched across the whole sky. I can't believe we're inside that spiral."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Andromeda Galaxy (M31) is a barred spiral galaxy about 2.5 million light-years from Earth and the nearest large galaxy to the Milky Way."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Cartwheel Galaxy is a lenticular and ring galaxy about 500 million light-years away in the constellation Sculptor."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Milky Way is our home galaxy, a barred spiral containing the Sun and hundreds of billions of other stars."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hubble's 1924 study of the Andromeda nebula proved it was a separate star system far beyond our own."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: How many stars are in a typical spiral? GUEST: Hundreds of billions, and a supermassive black hole at the centre holding it all together."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and in about four billion years, Andromeda will collide with our Milky Way, and the two spirals will merge into one giant elliptical."
+   }
+  ],
+  "topic:Planet": [
+   {
+    "style": "casual social-media post",
+    "text": "Jupiter and Saturn are lined up next to each other in the night sky tonight! Go look southwest after sunset 🪐"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Saw Mars through my uncle's telescope and you can actually see the polar ice cap as a tiny white dot."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PASADENA (Reuters) - NASA's rover detected organic molecules in an ancient Martian lakebed, mission scientists said on Thursday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Astronomers said Tuesday that a newly discovered exoplanet orbiting a red dwarf 40 light-years away may have liquid water on its surface."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is Venus so bright? B: Thick clouds reflect sunlight. A: Can we live there? B: Not at 460 degrees and crushing pressure."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which one has the most moons? B: Saturn, last count over 140. A: And the rings? B: Mostly ice chunks, some as big as houses."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Mercury - The smallest world in our solar system, baking at 430°C on its day side and freezing at night."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Neptune - The windiest place known, with storms reaching 2,000 km/h in its blue methane atmosphere."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it possible to see Uranus with the naked eye from a dark site? Or do I need binoculars?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why is Pluto not considered a planet anymore? My kid asked and I couldn't explain the 2006 decision."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the planetarium's Jupiter show was brilliant: the Great Red Spot projected across the whole dome. Great for kids. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The new astronomy app is decent: it identifies Mars and Venus instantly, but the moon list for Saturn is out of date. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, tonight I saw Saturn's rings with my own eyes through the school telescope. They looked like a tiny sticker on the sky."
+   },
+   {
+    "style": "diary entry",
+    "text": "Clear night. Watched Venus set in the west, bright as a lamp. Wrote down the time so I can track it next week."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Jupiter is the fifth planet from the Sun and the largest in the Solar System, a gas giant with a mass more than twice that of all the others combined."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Kepler-452b is an exoplanet orbiting a Sun-like star about 1,800 light-years from Earth, in the habitable zone of its system."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Saturn's rings, made of ice and rock, make it the most recognisable world in our solar system."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Mars has always fascinated humans because it is the most Earth-like neighbour in our solar system."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What would a day on Venus be like? GUEST: Longer than its year, actually. It rotates backwards so slowly the sun rises in the west."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and when Voyager looked back from six billion kilometres, Earth was just a pale blue dot in a beam of sunlight."
+   }
+  ],
+  "topic:Diocese": [
+   {
+    "style": "casual social-media post",
+    "text": "So proud of our new bishop, installed today at the cathedral! Every parish turned out, choir was amazing ⛪"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Volunteering at the diocesan youth retreat this weekend. 300 teens from 40 parishes. Pray for us 🙏"
+   },
+   {
+    "style": "news-wire report",
+    "text": "VATICAN CITY (Reuters) - Pope Francis on Saturday appointed a 54-year-old Jesuit as bishop of the Diocese of San Pedro, which serves about 900,000 Catholics in northern Paraguay."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Anglican Diocese of Lichfield said Tuesday it would merge 12 rural parishes into three groups because of falling attendance and a shortage of clergy."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which diocese is our parish in? B: Westminster, I think. A: So the cardinal's our bishop? B: Yes, but the auxiliary bishop handles our area."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the bishop visiting for confirmations? B: Next Sunday. A: Do we need the diocesan form? B: Yes, signed by the parish priest."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Diocese of Durham - One of the oldest sees in England, its bishops once ruled the county as prince-bishops."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Archdiocese of Manila - Covering the capital of the Philippines, it serves more than three million Catholics."
+   },
+   {
+    "style": "forum question",
+    "text": "How do I find out which diocese my parish belongs to? Need a baptismal certificate copy for a wedding."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the Eparchy of Parma is under a Byzantine Catholic bishop or an Orthodox one? Trying to trace my grandparents' parish."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the diocesan pilgrimage to Walsingham was well organised, with buses from every parish and a beautiful Mass at the shrine. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The diocesan archives are open to researchers, staff helpful, but you need to book weeks ahead. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, the bishop confirmed me today in the cathedral. He tapped my cheek and said my confirmation name, Teresa."
+   },
+   {
+    "style": "diary entry",
+    "text": "Synod week. Delegates from every parish met in the diocesan centre to discuss youth ministry and church closures."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Roman Catholic Diocese of Galway is a Latin Church diocese in western Ireland, suffragan of the Archdiocese of Tuam, with its cathedral in Galway city."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Episcopal Diocese of Texas covers 57 counties in eastern Texas and is headquartered in Houston."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The see of Durham shows how in the Middle Ages a bishop could hold both religious and political power."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When the Diocese of Baltimore was created in 1789, it covered the entire United States."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What does a bishop actually do all week? GUEST: Ordinations, parish visits, meetings with clergy, and a mountain of paperwork from the chancery."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so the see was split in 1850 because it was simply too large for one bishop to visit every parish on horseback."
+   }
+  ],
+  "topic:Airport": [
+   {
+    "style": "casual social-media post",
+    "text": "Six-hour layover at Changi and honestly I'm not mad. Butterfly garden, rooftop pool, and the indoor waterfall ✈️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Heathrow Terminal 5 security line took 7 minutes today. Is this a record? Gate B42 here I come."
+   },
+   {
+    "style": "news-wire report",
+    "text": "FRANKFURT (Reuters) - Passenger traffic at Germany's busiest air hub rose 8 percent in August, with long-haul flights to Asia driving the increase, the operator said on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A new international terminal opened Monday at Kotoka in Accra, doubling capacity to five million travellers a year and adding twelve jet bridges."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which terminal for the Lisbon flight? B: Terminal 2, check-in desks 40 to 50. A: And the train to the gates? B: Every three minutes from level one."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you land on time? B: Circled for forty minutes, fog on the runway. A: Baggage? B: Carousel 6, still waiting."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Hamad International, Doha - A giant teddy-bear sculpture, quiet rooms and a swimming pool for transit passengers."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Lukla, Nepal - A 527-metre runway on a mountainside, the gateway for Everest trekkers."
+   },
+   {
+    "style": "forum question",
+    "text": "Is 55 minutes enough for a connection at Schiphol coming from outside Schengen? Worried about passport control."
+   },
+   {
+    "style": "forum question",
+    "text": "How do you get from O'Hare to downtown Chicago late at night? Is the Blue Line safe after midnight?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: brand-new terminal, quick security, but only one café after the gates and the seats near the runway windows are always full. 3/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Haneda is the best hub I've ever flown through: spotless, efficient, great ramen, and immigration took ten minutes. 5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, my flight was cancelled so I slept on the floor at gate 23. The cleaners woke me at 4am with their floor polisher."
+   },
+   {
+    "style": "diary entry",
+    "text": "First time flying alone. Got lost between terminals, but a lady at the information desk walked me to my departure gate."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Denver International Airport is the largest airport in the United States by land area, opened in 1995 and known for its tent-like white roof."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Kansai International Airport serves Osaka and was built on an artificial island in Osaka Bay, opening in 1994."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Heathrow's third-runway debate shows how one airport can become the centre of an argument about jobs, noise and climate change."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When Hong Kong's old Kai Tak closed in 1998, pilots no longer had to make the famous low turn over crowded apartment blocks."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've been an air traffic controller at Gatwick for fifteen years. GUEST: Single runway, one landing every ninety seconds at peak. It's a ballet."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the new control tower at the terminal is 87 metres tall, so controllers can see every taxiway even in the far cargo area."
+   }
+  ],
+  "topic:Dam": [
+   {
+    "style": "casual social-media post",
+    "text": "Stood on top of the Hoover Dam today. Arizona on one side, Nevada on the other, 221 metres of concrete under my feet 😳"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Spillway at Glenmore is open after all the rain and the water thundering down is insane. Bring a raincoat!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "YICHANG, China (Reuters) - The Three Gorges reservoir reached its maximum level of 175 metres on Tuesday, operators said, after heavy rains raised the Yangtze."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Engineers began removing the century-old Elwha barrier in Washington state on Monday, restoring the river's salmon runs for the first time in 100 years."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How much power does it make? B: About 2,000 megawatts from the turbines. A: And the reservoir? B: Forty kilometres long behind the wall."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why are the gates open? B: Flood release. A: Can we walk across the crest? B: Only on the visitor walkway on weekends."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Itaipu - A hydroelectric giant on the border of Brazil and Paraguay that supplies most of Paraguay's electricity."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Contra Dam - The Swiss arch wall from which James Bond bungee-jumped in GoldenEye."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the guided tour inside the Grand Coulee worth it? Do they show you the turbine hall?"
+   },
+   {
+    "style": "forum question",
+    "text": "Can you swim in the reservoir behind the Kariba wall or is it full of crocodiles?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the visitor centre at the hydro plant is fascinating, the lift down to the turbines is a highlight, but the gift shop is tiny. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Hiked to the old stone weir above the village. Overgrown and crumbling, but beautiful in autumn. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we drove across the dam today and I looked down the spillway. My stomach dropped like on a ride."
+   },
+   {
+    "style": "diary entry",
+    "text": "Diary, summer: the water behind the wall is so low this year you can see the drowned church tower of the old village."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Aswan High Dam is an embankment dam across the Nile in Egypt, completed in 1970 and creating Lake Nasser."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Grand Coulee Dam is a concrete gravity dam on the Columbia River in Washington state and the largest power station in the United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The building of the Three Gorges Dam displaced more than a million people, showing how big projects carry human costs."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Hoover Dam was built during the Great Depression and gave thousands of workers jobs."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What happens if the structure is overtopped? GUEST: Earth embankments can erode within hours, so the spillway capacity is everything."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and when the Vajont reservoir was filled, a landslide fell into the water and sent a wave over the wall that destroyed the town below."
+   }
+  ],
+  "topic:Cave": [
+   {
+    "style": "casual social-media post",
+    "text": "Squeezed through a crawlspace in Mammoth and came out in a chamber the size of a cathedral 🦇 Headlamp life."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The glowworms in Waitomo are like stars on the ceiling. Silent boat ride in total darkness. Magical."
+   },
+   {
+    "style": "news-wire report",
+    "text": "HANOI (AP) - Explorers mapping Son Doong in central Vietnam said on Friday they had found a new passage, extending the world's largest known cave passage by 1.2 kilometres."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Rescuers on Tuesday reached two spelunkers trapped by rising floodwater in a limestone cavern in the Picos de Europa, Spanish officials said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How far down are we? B: About 80 metres. A: Is that a stalactite or stalagmite? B: Stalactite, it hangs from the ceiling. Mind your head."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Turn off your lamp for a second. B: Whoa, I can't see my hand. A: That's true darkness. B: Okay, lights back on please."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Lascaux - Ancient horses and bulls painted on the walls 17,000 years ago."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Eisriesenwelt - An ice-filled cavern in the Austrian Alps stretching 42 kilometres into the mountain."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the Carlsbad Caverns self-guided walk okay for kids? How steep is the natural entrance trail?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if the blue grotto on Capri is open in winter? We'll be there in February."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the cavern tour was cold and damp, but the underground lake and the stalactite curtains were spectacular. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Did the adventure caving trip in the Mendips. Muddy, tight squeezes, helmets provided. Not for claustrophobics. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we went underground today. Water drips from the ceiling and the guide said the formations grow just a centimetre every century."
+   },
+   {
+    "style": "diary entry",
+    "text": "Expedition day 4. Rigged the 30-metre shaft, then mapped 200 metres of new passage. Found bat bones in the sediment."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mammoth Cave in Kentucky is the longest known cave system in the world, with more than 680 kilometres of surveyed passageways."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Blue Grotto is a sea cave on the coast of Capri, Italy, famous for the brilliant blue light reflected through its underwater entrance."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The paintings in Chauvet show that people who lived in caves more than 30,000 years ago were already skilled artists."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Tham Luang rescue in 2018 showed how dangerous flooded underground passages can be for those trapped inside."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What's it like diving in an underground river? GUEST: Zero visibility once the silt's up, so you follow a line by touch all the way out."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and at the back of the chamber, my torch lit up a handprint on the rock, outlined in red ochre thousands of years ago."
+   }
+  ],
+  "topic:Glacier": [
+   {
+    "style": "casual social-media post",
+    "text": "Walked on the Perito Moreno ice today with crampons on. Huge chunks calving into the lake with a sound like thunder 🧊"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The blue of the ice caves under Vatnajökull is unreal. No filter needed."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ZERMATT (Reuters) - The Gorner ice field in the Swiss Alps lost about 3 percent of its volume this year, the country's monitoring network said on Monday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Scientists said Tuesday that the Thwaites ice stream in Antarctica is retreating faster than models predicted, raising concerns over future sea-level rise."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can we walk on it? B: Only roped up with the guide. A: Why? B: Crevasses. Some are 40 metres deep and covered by snow."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where did the ice reach in 1900? B: All the way down to that sign by the car park. A: That's over a kilometre! B: It's melted back since."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Hubbard - A 120-kilometre river of ice in Alaska whose face is taller than a 30-storey building."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Aletsch - The longest ice stream in the Alps, flowing 23 kilometres from the Jungfrau region."
+   },
+   {
+    "style": "forum question",
+    "text": "Is a guided hike on the Franz Josef ice in New Zealand still possible, or is it helicopter-only now?"
+   },
+   {
+    "style": "forum question",
+    "text": "How fast does the Columbia ice field actually move? Trying to explain to my class why it looks frozen still."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the boat trip to the tidewater front in Glacier Bay was cold but incredible; we saw a huge calving event. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Joined a crevasse rescue course on the Mer de Glace. Excellent guides, tough day, great intro to icefield travel. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, today I stood on ice that is a thousand years old. It creaked under my boots like it was alive."
+   },
+   {
+    "style": "diary entry",
+    "text": "Field season, day 12. Drilled stakes into the ablation zone. The surface dropped 6 cm since Tuesday."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Perito Moreno Glacier is a glacier in Los Glaciares National Park in Argentina, one of the few in Patagonia that is not retreating."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Khumbu Glacier in Nepal lies between Mount Everest and the Lhotse-Nuptse ridge and contains the famous Khumbu Icefall."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The retreat of the Rhône Glacier shows clearly how climate change is shrinking the ice in the Alps."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Photos of the Muir Glacier from 1941 and 2004 reveal that the ice has almost completely disappeared from its valley."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: How do you measure an ice sheet? GUEST: Stakes, GPS and radar. On our site in Greenland the ice is 900 metres thick."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the meltwater stream under the snout of the ice was roaring so loud we had to shout to hear each other."
+   }
+  ],
+  "topic:Mountain": [
+   {
+    "style": "casual social-media post",
+    "text": "SUMMIT! 4,478 metres on the Matterhorn and the view over the Alps is insane. Legs are jelly 🏔️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Climbed Ben Nevis today in a total whiteout. Saw nothing but the summit cairn. Still counts."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KATHMANDU (Reuters) - A record 600 climbers reached the top of Everest this spring, Nepal's tourism department said, as crowding and deaths on the peak raised safety concerns."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Two climbers were rescued on Sunday from the north face of the Eiger after being trapped by a storm for 36 hours, Swiss authorities said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long to the summit? B: Four hours up, three down. A: Is there a hut? B: At the saddle, two-thirds of the way. We can refill water there."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is that Kilimanjaro? B: Yeah, the snowy peak above the clouds. A: Wow. B: We start the climb tomorrow at Machame Gate."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. K2 - The second-highest peak on Earth and one of the most dangerous to climb."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Table Mountain - The flat-topped landmark above Cape Town, reachable by cable car or a steep hike."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Mount Fuji doable for beginners in July? How crowded is the Yoshida trail at sunrise?"
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone hiked Snowdon via the Crib Goch ridge? Wondering how exposed the scramble really is."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the cable car up the Zugspitze was quick, views stunning, but the summit restaurant was packed. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Guided ascent of Mount Kinabalu: steep stairs, cold summit, unforgettable sunrise over Borneo. 5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we reached the top of the peak behind our village today. I could see three lakes and the ocean far away."
+   },
+   {
+    "style": "diary entry",
+    "text": "Summit day. Left at 2am, crampons on, reached the top at sunrise. Couldn't stop crying when the sun hit the snow."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mont Blanc is the highest peak in the Alps and Western Europe, rising 4,806 metres above sea level on the border of France and Italy."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mount Rainier is a large stratovolcano in Washington state, the highest summit in the Cascade Range."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Climbing Everest in 1953 proved that humans could survive at the top of the world's highest summit."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Matterhorn's sharp pyramid shape has made it a symbol of Switzerland and of mountaineering itself."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've guided on Denali for years. GUEST: It's the cold that gets people. Minus forty at high camp and winds that knock you flat."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and when we reached the summit ridge, the clouds broke and we could see the whole peak's shadow stretch across the valley below."
+   }
+  ],
+  "topic:MountainPass": [
+   {
+    "style": "casual social-media post",
+    "text": "Drove the Stelvio this morning. 48 hairpins on the way up and the café at the top does great strudel 🚗⛰️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Cycled over the Tourmalet today! 19 km climb, 2,115 m at the col, legs destroyed. #TourDeFrance vibes"
+   },
+   {
+    "style": "news-wire report",
+    "text": "GENEVA (AP) - The Great St Bernard road crossing reopened on Friday after snowfall closed the route between Switzerland and Italy for six months."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Authorities closed the Khyber crossing between Pakistan and Afghanistan on Monday after landslides blocked the highway near the summit."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the col open yet? B: Not until June, still five metres of snow. A: So we take the tunnel? B: Yeah, 30 minutes longer."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How high is the saddle? B: 2,757 metres. A: Do we need chains? B: Not in August, but there might be fog on the switchbacks."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Furka Pass - The hairpin road in Switzerland that appeared in the Bond film Goldfinger."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Khardung La - A high crossing in Ladakh, once claimed as the world's highest motorable road."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the Grossglockner road okay for a camper van? Worried about the hairpins and the toll."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone hiked over the Cirque? Trying to find a route over the col between the two valleys without ropes."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the ride over Trollstigen is spectacular, waterfalls everywhere, narrow hairpins, lots of tour buses. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Cycled the Col du Galibier this summer. Brutal final kilometres, cold at the top, but the views were worth every pedal stroke. 5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, we crossed the saddle between the two peaks on foot today. Snow at the top, flowers on the other side."
+   },
+   {
+    "style": "diary entry",
+    "text": "Bike trip day 6. Climbed the pass in the rain. At the summit sign we ate cold sandwiches and grinned like idiots."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Simplon Pass is a high mountain pass between the Pennine and Lepontine Alps in Switzerland, at an elevation of 2,005 metres."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Cajon Pass is a mountain pass between the San Bernardino and San Gabriel Mountains in southern California, crossed by Interstate 15."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hannibal's crossing of an Alpine pass with elephants in 218 BC remains one of the most daring military feats in history."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Khyber Pass has been a key trade and invasion route between Central Asia and the Indian subcontinent for centuries."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Why do so many cyclists love the Stelvio? GUEST: It's the hairpins. Forty-eight of them, each numbered, so you can count your suffering."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the caravan reached the top of the pass at dusk, and the traders lit fires in the old stone shelter before descending the other side."
+   }
+  ],
+  "topic:MountainRange": [
+   {
+    "style": "casual social-media post",
+    "text": "Flying over the Andes right now and it's just peak after snowy peak for hundreds of kilometres 🏔️ Window seat for the win!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Road trip along the Rockies this week. Every bend in the highway reveals another ridgeline. Canada is ridiculous."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KATHMANDU (Reuters) - Glaciers across the Himalaya lost ice 65 percent faster in the 2010s than in the previous decade, a regional study said on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Wildfires spread along the Sierra Nevada on Wednesday, forcing evacuations in foothill towns on both sides of the range."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long is the Appalachian chain? B: Over 2,000 kilometres, Georgia to Maine. A: And you hiked the whole trail? B: Five months and six pairs of boots."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Are the Carpathians higher than the Alps? B: No, much lower, but wilder. A: Bears? B: Lots of bears."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. The Himalaya - Home to all ten of the world's highest peaks, including Everest and Kangchenjunga."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. The Atlas Mountains - Stretching across Morocco, Algeria and Tunisia, with Berber villages tucked into the valleys."
+   },
+   {
+    "style": "forum question",
+    "text": "Which part of the Pyrenees is best for a week of hut-to-hut hiking? French side or Spanish side?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is it true the Ural Mountains are the boundary between Europe and Asia? Planning a trip and want to cross the divide."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the guided trek through the Dolomites was stunning, with jagged limestone peaks and cosy refuges every night. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Driving through the Scottish Highlands' Cairngorms in October: golden light, red deer, almost no traffic. 5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, from the plane today I saw the whole Alps stretching from one side of the window to the other."
+   },
+   {
+    "style": "diary entry",
+    "text": "Week 3 on the trail. The range keeps going north, ridge after ridge. My knees hurt but I don't want it to end."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Andes are the longest continental mountain range in the world, stretching about 7,000 kilometres along the western coast of South America."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Drakensberg is the highest mountain range in Southern Africa, rising to 3,482 metres in Lesotho."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Himalaya were formed when the Indian plate collided with Eurasia, and they are still rising today."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Rocky Mountains create a great continental divide, sending rivers to both the Pacific and the Atlantic."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What makes the Caucasus special? GUEST: It's a wall between two seas, with peaks over 5,000 metres and dozens of languages in its valleys."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and from the summit you could see the whole Sierra laid out to the south, granite ridges stretching as far as the haze would let us see."
+   }
+  ],
+  "topic:Volcano": [
+   {
+    "style": "casual social-media post",
+    "text": "Etna is erupting again and we watched lava fountains from our hotel balcony in Catania 🌋 Absolutely wild."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Hiked to the crater rim of Mount Bromo at sunrise. Smoke, sulfur smell, and the ground was warm under our boots."
+   },
+   {
+    "style": "news-wire report",
+    "text": "REYKJAVIK (Reuters) - A fissure eruption began on the Reykjanes Peninsula late Sunday, sending lava toward the evacuated town of Grindavik, Iceland's Met Office said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Authorities in Indonesia raised the alert level for Mount Merapi on Tuesday after pyroclastic flows travelled three kilometres down its southern flank."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is it still active? B: It last erupted in 1991. A: Then why is there steam? B: Fumaroles. The magma chamber's still hot underneath."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can we get close to the lava? B: Only to the viewing point, gas levels are high. A: Bring masks? B: Yes, and water."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Mount St. Helens - Its 1980 eruption blew off the whole north side of the mountain."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Stromboli - Erupting almost continuously for 2,000 years, nicknamed the Lighthouse of the Mediterranean."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it safe to hike Villarrica in Chile? I read you can look into the crater and see the lava lake."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone visited Kīlauea recently? Is the lava lake in Halemaʻumaʻu still visible from the overlook?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the guided night hike up Pacaya was steep and dusty, but roasting marshmallows over a lava vent was unforgettable. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The tour around Vesuvius was interesting, crater views decent, but the path is crowded and windy. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, the ground shook last night and this morning a plume of ash rose above the mountain. School is closed."
+   },
+   {
+    "style": "diary entry",
+    "text": "Field log: sampled gas at the summit vent. Sulfur dioxide readings double last week's. Seismometers show tremor."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mount Pinatubo is an active stratovolcano in the Philippines whose 1991 eruption cooled the global climate by about half a degree."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mauna Loa is a shield volcano on the island of Hawaii and one of the largest on Earth by volume."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The eruption of Vesuvius in 79 AD buried the Roman city of Pompeii under metres of ash."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Krakatoa's explosion in 1883 was heard thousands of kilometres away and caused deadly tsunamis."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: How do you predict an eruption? GUEST: We watch earthquakes, ground swelling and gas output. At Etna, all three spiked a week before the last one."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the lava crept through the village for weeks, slowly swallowing the church and the bakery while the people watched from the hill."
+   }
+  ],
+  "topic:Racecourse": [
+   {
+    "style": "casual social-media post",
+    "text": "Ladies' Day at Ascot was everything. Hats, champagne, and my £5 each-way bet came in at 20/1 🐎"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Cheltenham Festival day two and the roar when the field came up the hill to the finish gave me goosebumps."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOUISVILLE, Ky. (AP) - Churchill Downs will add a new grandstand and expand its paddock before next year's Kentucky Derby, track officials said on Wednesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Flemington announced on Tuesday that its turf straight will be relaid after heavy rain forced the postponement of Saturday's meeting."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which horse do you fancy in the 3:15? B: Silver Dawn, she loves soft ground. A: Each way? B: Yes, and let's watch from the rail by the final furlong."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where's the parade ring? B: Behind the grandstand. A: Can we see the jockeys? B: They walk out just before the bell."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Longchamp - The Paris track that hosts the Prix de l'Arc de Triomphe every October."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Aintree - Home of the Grand National, with fences like Becher's Brook and The Chair."
+   },
+   {
+    "style": "forum question",
+    "text": "First time going to Epsom on Derby day. Is the hill free or do we need grandstand tickets to see the finish?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does Sandown have a good view from the members' enclosure, or is the course hard to follow on the far turn?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the evening meeting at Windsor was relaxed, the riverside setting lovely, but the bar queues were huge. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Spent a day at Meydan. Spectacular floodlit track and grandstand, but betting is not allowed there. Odd but fun. 3.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, Grandad took me to the races today. We stood by the rail and the horses thundered past so close I felt the ground shake."
+   },
+   {
+    "style": "diary entry",
+    "text": "Race day. Picked horses by their names. Lost every bet except the last race. Ate a pie in the grandstand and laughed all the way home."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ascot Racecourse is a horse-racing venue in Berkshire, England, founded in 1711 by Queen Anne and host of Royal Ascot."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Santa Anita Park is a thoroughbred racetrack in Arcadia, California, opened in 1934 with the San Gabriel Mountains as a backdrop."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Curragh in County Kildare has been a centre of Irish horse racing for centuries and hosts all five Irish Classics."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Saratoga Race Course, opened in 1863, is one of the oldest sporting venues in the United States."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What's special about the Melbourne Cup track? GUEST: Flemington's 1,200-metre straight is huge, the field fans out across the turf like a cavalry charge."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and they're coming round the final turn, the favourite is boxed in on the rail, and here comes the outsider up the stands' side!"
+   }
+  ],
+  "topic:Bridge": [
+   {
+    "style": "casual social-media post",
+    "text": "Walked across the Golden Gate at sunrise this morning. Fog rolling under the deck and the towers poking out above it 🌉"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Tower Bridge just lifted for a tall ship and the whole traffic queue got out to film it. Classic London moment."
+   },
+   {
+    "style": "news-wire report",
+    "text": "GENOA (Reuters) - The rebuilt San Giorgio viaduct opened to traffic on Monday, replacing the motorway crossing that collapsed in 2018."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Engineers said on Tuesday that the 1930s suspension span over the Mississippi needs new cables after inspectors found widespread corrosion."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long is it? B: Nearly two kilometres. A: Can we cycle across? B: Yes, there's a bike lane on the east side of the deck."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the drawbridge up? B: Yeah, a cargo ship's coming through. A: How long? B: Ten minutes, usually."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. The Millau Viaduct - The tallest bridge in the world, its masts rising higher than the Eiffel Tower above the Tarn valley."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Ponte Vecchio - A medieval stone arch in Florence still lined with jewellers' shops."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the walkway on the Sydney Harbour Bridge open at night? Want to get photos of the Opera House from the deck."
+   },
+   {
+    "style": "forum question",
+    "text": "How long does it take to walk across the Brooklyn Bridge? Planning to do it at sunset next week."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the BridgeClimb in Sydney was pricey but the view from the arch was worth every dollar. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The glass skywalk on the Zhangjiajie span is terrifying and amazing. Long queues, but worth it. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, today we drove over the Chesapeake crossing to the island. The water below sparkled and the cables went up like harp strings."
+   },
+   {
+    "style": "diary entry",
+    "text": "Cycling day 4. Crossed the old packhorse span into town. Seven arches, ivy on the parapet, a heron under the third arch."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Golden Gate Bridge is a suspension bridge spanning the Golden Gate strait in San Francisco, opened in 1937."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Øresund Bridge is a combined road and rail crossing between Copenhagen and Malmö, linking Denmark and Sweden."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The building of the Brooklyn Bridge in 1883 showed how steel cables could span distances once thought impossible."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The collapse of the Tacoma Narrows span in 1940 taught engineers to design for wind as well as weight."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What's hard about building a cable-stayed span? GUEST: Balancing the deck as it grows from each tower, segment by segment, until the two halves meet in the middle."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and when the two halves of the deck met over the river, the welders shook hands in mid-air, three hundred metres above the water."
+   }
+  ]
+ }
+}

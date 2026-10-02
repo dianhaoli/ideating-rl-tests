@@ -1,0 +1,1809 @@
+{
+ "bank": "F",
+ "concepts": {
+  "topic:NationalFootballLeagueSeason": [
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe the 2007 Patriots went 16-0 and then lost the Super Bowl to the Giants. That whole year still haunts me lol #NFL"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Hot take: the 1985 Bears defense was the scariest thing the league has ever seen. 15-1, a title, and a shuffle video. Iconic."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - The NFL released its 2024 regular-season schedule Tuesday, with the defending champion Kansas City Chiefs opening at home against Baltimore on a Thursday night in Week 1."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The league confirmed that the 2020 campaign would go ahead with no preseason games, expanded rosters, and mostly empty stadiums because of the pandemic."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which NFL year was the wildest? B: 2011 for sure. Brees, Brady, and Stafford all threw for over 5,000 yards, and Tebow was somehow winning playoff games."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did the Lions really go 0-16 in 2008? B: Yep, first team ever to lose every game of a sixteen-game regular season."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 1972: Miami finished 17-0, and that NFL season remains the only perfect run from opening Sunday through the Super Bowl."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. 2013 - Peyton Manning threw 55 touchdown passes, Denver scored a record 606 points, and then Seattle crushed them in the Super Bowl."
+   },
+   {
+    "style": "forum question",
+    "text": "Was the 1982 NFL season really cut to nine games because of the players' strike? How did they pick the playoff teams that year?"
+   },
+   {
+    "style": "forum question",
+    "text": "Question for the old-timers: when did the league go from a 14-game to a 16-game regular season? Was 1978 the first year?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Grading the 2021 NFL year overall: 8/10. The new 17-game schedule dragged in December, but the divisional playoff weekend was the best I've ever watched."
+   },
+   {
+    "style": "product or event review",
+    "text": "Had tickets to every Bills home game in 2022. The snow game in November was miserable and magnificent, but the playoff exit came way too early. 6/10."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, the Eagles clinched the division today. Week 16 and we're 13-2. Dad cried a little during the fourth quarter."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sunday night. Fantasy draft for the new football year is next week and I still don't know who to take first overall."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1994 NFL season was the 75th regular season of the National Football League and the first in which teams could attempt a two-point conversion."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2002 season saw the league realign into eight four-team divisions after the Houston Texans joined as the 32nd franchise."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1958 NFL season ended with a sudden-death championship game between the Colts and Giants, which helped make pro football a television sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In 1967 the Packers closed out the year by winning the Ice Bowl at minus-thirteen degrees, which shows how weather can shape sports history."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to the show. Today we're grading every team's 2023 regular season, starting with the Texans, who went from the cellar to a division title."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So, uh, what people forget about 1999 is the Rams lost their starting quarterback in August, handed the job to Kurt Warner, and won the whole thing."
+   }
+  ],
+  "topic:BaseballSeason": [
+   {
+    "style": "casual social-media post",
+    "text": "Still not over the 2004 Red Sox coming back from 0-3 against the Yankees. Best October of my life."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Mariners won 116 games in 2001 and didn't even make the World Series. Baseball is cruel, folks."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SEATTLE (AP) - The Mariners clinched their first postseason berth in 21 years on Friday night, ending the longest playoff drought among major North American sports leagues."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Los Angeles Dodgers finished their 2024 baseball season with 98 wins, securing home-field advantage throughout the National League playoffs."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How did the 1969 Mets go from also-rans to champions? B: Pitching, mostly. Tom Seaver won 25 games that summer."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Wasn't 2019 the year the Nationals started 19-31? B: Yeah, and they still won the World Series in October."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. 1927 Yankees - Babe Ruth hit 60 home runs, the club went 110-44, and they swept the Pirates in the World Series."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. 2023 Orioles: Two years removed from 110 losses, a young roster won 101 games and the AL East."
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the 1994 baseball season end in August? Was there really no World Series that year because of the strike?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know how many postseason games the 2005 White Sox lost? I think it was only one."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review of the Royals' 2015 run from a ticket holder: worth every penny. The comeback against Houston in the division series alone justified the price."
+   },
+   {
+    "style": "product or event review",
+    "text": "I'd give the Tigers' 2003 baseball season a 1 out of 10. Forty-three wins. I still went to forty games out of pure stubbornness."
+   },
+   {
+    "style": "diary entry",
+    "text": "June 14. The Brewers won again, eight in a row now. Grandpa says this team reminds him of the '82 club."
+   },
+   {
+    "style": "diary entry",
+    "text": "Opening Day tomorrow. We lost 100 games last year, but I'm writing it down: we finish above .500 this time."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1998 St. Louis Cardinals season was the franchise's 117th, notable for Mark McGwire's then-record 70 home runs."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1951 New York Giants season ended with Bobby Thomson's pennant-winning home run, known as the Shot Heard 'Round the World."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1947 Brooklyn Dodgers season matters to American history because Jackie Robinson broke baseball's color barrier that April."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "During the 1919 White Sox season, eight players were accused of fixing the World Series, which badly damaged public trust in the game."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "On today's episode we break down the Rangers' 2023 run, from a 102-loss team two years earlier to the franchise's first championship."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Honestly, the 1988 Dodgers had no business winning it all. Gibson's home run on one leg, Hershiser's scoreless streak... magic summer."
+   }
+  ],
+  "topic:NCAATeamSeason": [
+   {
+    "style": "casual social-media post",
+    "text": "The 2010 Auburn Tigers going 14-0 with Cam Newton was absurd. War Eagle forever."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My alma mater's hoops team just finished the regular season 31-3. Never been prouder to be a Gonzaga Bulldog."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAWRENCE, Kan. (AP) - The Kansas Jayhawks closed their regular season with a 78-65 win over Baylor, clinching a share of the Big 12 title."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The 2019 LSU Tigers football team completed a 15-0 season Monday night with a national championship victory over Clemson."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did the UConn women go undefeated again? B: Yep, 38-0 that year, and they won the national title by double digits."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How did Appalachian State's football team do in 2007? B: They upset Michigan in the opener and won the FCS championship."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. 2005 Texas Longhorns - Vince Young led the squad to a 13-0 record and a Rose Bowl win over USC."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. The 1990-91 UNLV Runnin' Rebels started 34-0 before falling to Duke in the Final Four."
+   },
+   {
+    "style": "forum question",
+    "text": "How did the 2014-15 Kentucky basketball team get to 38-0 and still not win the title? Was the platoon system the problem?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone have the full schedule for Boise State's 2006 football team? I want to rewatch the run to the Fiesta Bowl."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review of our Wildcats' year: 6-6 and a minor bowl invite. Mediocre, but the freshman quarterback gives me hope for next fall."
+   },
+   {
+    "style": "product or event review",
+    "text": "As a Villanova alum I rate the 2015-16 squad a perfect 10. Kris Jenkins at the buzzer was worth the tuition."
+   },
+   {
+    "style": "diary entry",
+    "text": "Nov. 26. We beat our rivals in the final game, so the Ducks finish 11-1. Campus is going nuts."
+   },
+   {
+    "style": "diary entry",
+    "text": "Coach told us at practice that this is the best team the program has had in twenty years. Conference tournament starts Thursday."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2011 Alabama Crimson Tide football team represented the University of Alabama in the 2011 NCAA Division I FBS football season."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1995-96 Massachusetts Minutemen basketball team, coached by John Calipari, reached the Final Four with a 35-2 record."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 1966 Texas Western basketball team, which started five Black players in the national final, changed college sports in the South."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In my report I compare the 1984 BYU Cougars football team to modern programs, since they won a national title from a small conference."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Let's talk 2022 TCU Horned Frogs. Picked seventh in the Big 12 preseason poll, and they ended up playing for the national title."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our guest today played on the 2008 Davidson team with Stephen Curry, and he's going to tell us about that Elite Eight run."
+   }
+  ],
+  "topic:SoccerClubSeason": [
+   {
+    "style": "casual social-media post",
+    "text": "Arsenal's Invincibles in 2003-04. 38 league games, zero losses. Never forget. #COYG"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Leicester winning the league at 5000-1 in 2015-16 is still the greatest sports story ever, fight me."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - Manchester City completed a domestic treble on Saturday, adding the FA Cup to the Premier League title and the League Cup."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Borussia Dortmund ended their 2022-23 Bundesliga season in second place after a final-day draw with Mainz handed the title to Bayern."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How did Barcelona's 2008-09 season go? B: Guardiola's first year, and they won La Liga, the Copa del Rey, and the Champions League."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did your club go down? B: Yeah, finished nineteenth. Two wins after Christmas, total disaster."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Juventus 2011-12: Unbeaten in Serie A under Antonio Conte, with 23 wins and 15 draws."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Celtic 1966-67 - The Lisbon Lions won every competition they entered, including the European Cup."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Manchester United's 1998-99 season the only time an English club won the treble before City did it?"
+   },
+   {
+    "style": "forum question",
+    "text": "Which Ajax campaign was better, 1994-95 or 2018-19? The young squad reaching the Champions League semis felt special."
+   },
+   {
+    "style": "product or event review",
+    "text": "My review of Napoli's 2022-23 campaign: 10/10. First Scudetto since Maradona, and the city partied for weeks."
+   },
+   {
+    "style": "product or event review",
+    "text": "Honest rating of our club's year: 5/10. Great cup run to the quarterfinals, but we were awful away from home in the league."
+   },
+   {
+    "style": "diary entry",
+    "text": "May 19. Final matchday. We stayed up on goal difference. I've never hugged so many strangers."
+   },
+   {
+    "style": "diary entry",
+    "text": "The manager got sacked today and it's only October. Fourteenth in the table and the board panicked."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 2004-05 Liverpool F.C. season was the club's 113th, culminating in a Champions League final victory over AC Milan in Istanbul."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 1971-72 AFC Ajax season saw the Amsterdam club win the Eredivisie, the KNVB Cup, and a second consecutive European Cup."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Real Madrid's 2016-17 season shows that squad rotation can help a club compete for both the domestic league and Europe."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In this essay I examine how Bayern Munich's 2019-20 season, interrupted for months by the pandemic, still ended with a treble."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Right, on today's pod we're reviewing Arsenal's year: top of the table at Christmas, then the April collapse."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So, Wrexham, back-to-back promotions. Our guest was in the stands for the final home game when they clinched it."
+   }
+  ],
+  "topic:MusicGenre": [
+   {
+    "style": "casual social-media post",
+    "text": "Discovered shoegaze this week and now everything sounds like a dream inside a washing machine. Loving it."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Afrobeats has taken over my whole playlist. Burna Boy and Wizkid on repeat all summer."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NASHVILLE (AP) - Country music posted its strongest streaming year on record, driven by younger listeners and crossover hits, an industry report said Wednesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "UNESCO added Jamaican reggae to its list of intangible cultural heritage, citing its contribution to international discussion of injustice, love, and humanity."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's the difference between grunge and alternative rock? B: Grunge came out of Seattle in the late '80s, heavier and sludgier. Think Nirvana and Soundgarden."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is bossa nova just slow samba? B: Sort of. It blends samba rhythm with jazz harmony, like João Gilberto's records."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Vaporwave: Born online in the early 2010s, it slows down '80s mall music and smooth jazz into hazy nostalgia."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Drill - Started in Chicago and later reshaped in London, it uses dark beats and sliding 808 basslines."
+   },
+   {
+    "style": "forum question",
+    "text": "Can someone explain what makes music 'post-rock'? Bands like Explosions in the Sky have no vocals, so is it still rock?"
+   },
+   {
+    "style": "forum question",
+    "text": "Where should I start with Delta blues? I know Robert Johnson but nothing else from that style."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a K-pop concert for the first time. The choreography and fan chants were incredible, 9/10 experience."
+   },
+   {
+    "style": "product or event review",
+    "text": "This flamenco night was a revelation: the guitarist, the singer's raw cante jondo, the rhythmic clapping. Highly recommend."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent all night listening to old disco records from Mom's collection. Donna Summer is unreal."
+   },
+   {
+    "style": "diary entry",
+    "text": "Band practice today. We decided we're a ska band now. Need to find a trombone player."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Bebop is a style of jazz developed in the early 1940s, characterized by fast tempos, complex chord progressions, and virtuosic improvisation."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Zydeco is a music genre that evolved in southwest Louisiana among French-speaking Creoles, featuring accordion and washboard."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hip hop began at block parties in the Bronx in the 1970s, where DJs like Kool Herc extended drum breaks for dancers."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Punk rock was a reaction against the polished stadium rock of the 1970s, favoring short, fast songs and a do-it-yourself attitude."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we're digging into the roots of techno, from Detroit warehouses in the mid-'80s to Berlin clubs after the Wall fell."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "When people say 'emo,' they picture eyeliner, but the genre actually started in the D.C. hardcore scene around 1985."
+   }
+  ],
+  "topic:SupremeCourtOfTheUnitedStatesCase": [
+   {
+    "style": "casual social-media post",
+    "text": "Read Miranda v. Arizona for class and now I finally get why cops read you your rights on every TV show."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Obergefell v. Hodges anniversary today. Still remember crying when the ruling came down."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (AP) - The Supreme Court ruled 6-3 on Friday that a Colorado web designer could not be compelled to create websites that conflict with her beliefs, citing the First Amendment."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The justices heard oral arguments Monday in a dispute over whether a federal agency may enforce rules without explicit authorization from Congress."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What did Marbury v. Madison actually decide? B: It established judicial review, the Court's power to strike down laws as unconstitutional."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Was Plessy v. Ferguson overturned by Brown? B: Effectively, yes. In 1954 the justices said separate schools were inherently unequal."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Gideon v. Wainwright (1963): Guaranteed that people charged with felonies get a lawyer even if they can't afford one."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Tinker v. Des Moines - Students who wore black armbands to protest the Vietnam War won protection for speech at school."
+   },
+   {
+    "style": "forum question",
+    "text": "Law student here: why is McCulloch v. Maryland considered so important for federal power? The necessary and proper clause part confuses me."
+   },
+   {
+    "style": "forum question",
+    "text": "Does the ruling in Citizens United apply to unions as well as corporations? Getting different answers online."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended oral argument at the Court last week. Waited in line since 4 a.m., but watching the justices grill the attorneys was worth it."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review of the new documentary about Loving v. Virginia: moving and well-researched, and the archival footage of Mildred Loving is stunning."
+   },
+   {
+    "style": "diary entry",
+    "text": "Today in civics we did a mock trial of Texas v. Johnson. I argued that burning the flag is protected speech and our side won."
+   },
+   {
+    "style": "diary entry",
+    "text": "The decision came out this morning. Mom kept refreshing the news; she said she'd been waiting for this ruling for years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Roe v. Wade, 410 U.S. 113 (1973), was a landmark decision of the Supreme Court of the United States on abortion rights; it was overruled in 2022."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Dred Scott v. Sandford (1857) held that African Americans could not be citizens, a decision later nullified by the Fourteenth Amendment."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In Brown v. Board of Education, the Court unanimously ruled that racial segregation in public schools violated the Equal Protection Clause."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Korematsu v. United States shows how the highest court can fail to protect civil liberties during wartime."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "On this episode we unpack New York Times Co. v. Sullivan and the 'actual malice' standard for libel suits brought by public officials."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So the question in Gibbons v. Ogden was basically: who gets to regulate steamboats on the Hudson, New York or Congress?"
+   }
+  ],
+  "topic:Anime": [
+   {
+    "style": "casual social-media post",
+    "text": "Just finished Fullmetal Alchemist: Brotherhood and I'm emotionally destroyed. Ed and Al deserved better."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Spy x Family episode 3 had me laughing so hard. Anya's faces are everything."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (Kyodo) - The animated film 'Demon Slayer: Mugen Train' became the highest-grossing film in Japanese box-office history, surpassing 'Spirited Away.'"
+   },
+   {
+    "style": "news-wire report",
+    "text": "Studio MAPPA announced Tuesday that the final season of the 'Attack on Titan' anime will conclude with a two-part television special."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Cowboy Bebop worth watching? B: Absolutely. 26 episodes of space bounty hunters and an amazing jazz soundtrack by Yoko Kanno."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's your favorite in Haikyu!!? B: Hinata, the short guy who can jump higher than anyone on the volleyball court."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Neon Genesis Evangelion - A giant-robot series that turns into a meditation on depression and loneliness."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Mob Psycho 100: A shy boy with psychic powers tries to live a normal middle-school life, with gorgeous animation by Studio Bones."
+   },
+   {
+    "style": "forum question",
+    "text": "Should I watch the Naruto filler episodes or skip them? Is there a good guide to which ones actually matter?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is the English dub of Death Note any good, or should I watch it subbed?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Frieren: Beyond Journey's End is a quiet masterpiece. Slow pacing, beautiful animation, and an elf learning to grieve. 10/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "The Chainsaw Man adaptation looks incredible, but the early episodes felt rushed. 7/10, still bingeing it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Stayed up until 2 a.m. watching Your Lie in April. Cried at the last episode. I need to practice piano more."
+   },
+   {
+    "style": "diary entry",
+    "text": "Started One Piece today. Only about 1,100 more episodes to go."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sailor Moon is a Japanese anime television series produced by Toei Animation, based on Naoko Takeuchi's comics, that aired from 1992 to 1997."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Akira is a 1988 Japanese animated cyberpunk film directed by Katsuhiro Otomo, set in a dystopian Neo-Tokyo."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Pokémon TV series, which premiered in Japan in 1997, introduced Japanese animation to millions of Western children."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hayao Miyazaki's animated film 'Princess Mononoke' explores the conflict between industry and the natural world."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back. This week we're ranking every opening theme from Jujutsu Kaisen, and yes, we will fight about it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "What I love about the Steins;Gate anime is that the first half seems slow, and then episode twelve flips everything."
+   }
+  ],
+  "topic:HollywoodCartoon": [
+   {
+    "style": "casual social-media post",
+    "text": "Rewatched 'What's Opera, Doc?' and Elmer singing 'Kill the wabbit' still cracks me up almost 70 years later."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Steamboat Willie entering the public domain was the most 2024 news ever. Mickey whistling at the wheel, free for all."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES - A restored print of Walt Disney's 1929 short 'The Skeleton Dance' will screen at the Academy Museum this weekend, the museum said Monday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Warner Bros. announced a new Blu-ray collection of Chuck Jones shorts, including 'Duck Amuck' and 'One Froggy Evening.'"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which Tom and Jerry short won the first Oscar? B: 'The Yankee Doodle Mouse,' in 1943."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who directed the Road Runner cartoons? B: Chuck Jones, and he had rules, like the Coyote is never hurt by the Road Runner himself."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. 'Duck Amuck' (1953) - Daffy Duck battles an unseen animator who keeps erasing and redrawing him."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. 'Red Hot Riding Hood' (1943): Tex Avery's wild MGM take on the fairy tale, famous for the Wolf's eye-popping reactions."
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for a list of all the Pink Panther theatrical shorts. Did 'The Pink Phink' really win an Academy Award?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why were some old Fleischer Popeye shorts in color and others in black and white?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw a program of 1940s Warner Bros. shorts at the revival theater. 'Rabbit Seasoning' killed; the crowd was howling."
+   },
+   {
+    "style": "product or event review",
+    "text": "The new 4K restoration of the Fleischer 'Superman' shorts is stunning. The 1941 animation looks better than many modern films."
+   },
+   {
+    "style": "diary entry",
+    "text": "Saturday. Watched old Bugs Bunny cartoons with Grandpa. He knew every line of 'Rabbit of Seville.'"
+   },
+   {
+    "style": "diary entry",
+    "text": "Did a report on Betty Boop today. Didn't know her shorts got toned down after the Hays Code."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Flowers and Trees' is a 1932 Silly Symphonies animated short produced by Walt Disney, the first commercially released film in full Technicolor."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Gertie the Dinosaur' is a 1914 animated short film by Winsor McCay, one of the first cartoons to feature a character with real personality."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Theatrical cartoons like 'A Wild Hare' were shown before feature films, which is how American audiences first met Bugs Bunny in 1940."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "During World War II, Hollywood studios produced propaganda shorts such as Donald Duck's 'Der Fuehrer's Face,' which won an Oscar."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our animation historian says 'The Band Concert' from 1935 is the best Mickey short ever made. Let's hear why."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Okay, so in 'Feed the Kitty,' the bulldog Marc Antony thinks his kitten got baked into cookies. Peak Chuck Jones."
+   }
+  ],
+  "topic:ComicStrip": [
+   {
+    "style": "casual social-media post",
+    "text": "Calvin and Hobbes ended in 1995 and nothing has filled the hole in my heart since."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Today's Garfield is literally just him staring at a lasagna for three panels. Peak art."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KANSAS CITY (AP) - Andrews McMeel Syndication said Monday that 'Pearls Before Swine' will appear in 50 more newspapers starting next month."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Several newspapers announced this week they would stop running 'Dilbert' on their comics pages."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you read Peanuts as a kid? B: Every Sunday. Charlie Brown and the football never got old."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's 'Doonesbury' about? B: Garry Trudeau's political satire. It's been running since 1970."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 'The Far Side' - Gary Larson's single-panel absurdity starring cows, scientists, and cavemen."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. 'Bloom County' - Opus the penguin and Bill the Cat ran wild through 1980s politics."
+   },
+   {
+    "style": "forum question",
+    "text": "Is there a complete collection of 'Krazy Kat' Sunday pages? I want to see George Herriman's color work."
+   },
+   {
+    "style": "forum question",
+    "text": "How did 'For Better or For Worse' age its characters in real time? I've never seen another daily comic do that."
+   },
+   {
+    "style": "product or event review",
+    "text": "The complete Calvin and Hobbes box set is heavy, but worth it. The snowman Sundays alone are worth the price."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The new 'Little Nemo in Slumberland' reprint finally prints the 1905 Sunday pages at full size. Breathtaking."
+   },
+   {
+    "style": "diary entry",
+    "text": "Clipped today's 'Zits' from the paper and stuck it on the fridge because it's literally my brother."
+   },
+   {
+    "style": "diary entry",
+    "text": "Drew my own three-panel gag about our cat today. Mom says it's as good as 'Mutts.'"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Peanuts is a syndicated daily and Sunday American comic strip written and illustrated by Charles M. Schulz that ran from 1950 to 2000."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Beetle Bailey' is an American comic strip created by Mort Walker in 1950, set at the fictional Camp Swampy army post."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Al Capp's 'Li'l Abner' used the hillbilly town of Dogpatch to satirize American politics and culture for over forty years."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Newspaper comics like 'The Yellow Kid' helped start the circulation wars of the 1890s between Pulitzer and Hearst."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we discuss why 'Prince Valiant' still runs in the Sunday funnies after almost ninety years."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "My guest drew 'Sally Forth' for a decade, and she says the hardest part was fitting a joke into three panels every day."
+   }
+  ],
+  "topic:Manga": [
+   {
+    "style": "casual social-media post",
+    "text": "Read all of Berserk in two weeks. Kentaro Miura's art is insane. RIP to a legend."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Chapter 1100 of One Piece dropped and my timeline is just people screaming about Kuma."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (Kyodo) - Publisher Shueisha said Monday that 'Jujutsu Kaisen' has surpassed 100 million copies in circulation, including digital editions."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The final volume of 'Spy x Family's' latest arc topped the Oricon weekly comic book chart, the publisher said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Should I start Vagabond? B: Yes, it's Takehiko Inoue's samurai epic, and the brushwork on every page is unbelievable."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Nana finished? B: No, Ai Yazawa put it on hiatus in 2009 for health reasons."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. 'Monster' - Naoki Urasawa's thriller about a surgeon hunting a killer he once saved."
+   },
+   {
+    "style": "listicle item",
+    "text": "10. 'Yotsuba&!' - A green-haired girl discovers everyday wonders. Pure comfort reading, volume after volume."
+   },
+   {
+    "style": "forum question",
+    "text": "Which English edition of 'Akira' is best, the Kodansha box set or the old colorized Epic Comics one?"
+   },
+   {
+    "style": "forum question",
+    "text": "Where should I start reading Junji Ito? Is 'Uzumaki' too creepy for a beginner?"
+   },
+   {
+    "style": "product or event review",
+    "text": "'Vinland Saga' volume 12 is a turning point. Thorfinn's farm arc sounds dull but it's the emotional heart of the series. 5 stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "Bought the 'Chainsaw Man' box set. Paper quality is great, but the slipcase scuffed quickly."
+   },
+   {
+    "style": "diary entry",
+    "text": "Read 'Fruits Basket' volume 6 on the bus and missed my stop. Worth it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Started drawing my own shonen story today, inspired by 'Hunter x Hunter.' Panel layouts are harder than they look."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Dragon Ball' is a Japanese manga series written and illustrated by Akira Toriyama, serialized in Weekly Shonen Jump from 1984 to 1995."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'The Rose of Versailles' is a shojo manga by Riyoko Ikeda set before and during the French Revolution."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Osamu Tezuka's 'Astro Boy' established many visual conventions of Japanese comics, such as large expressive eyes."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hayao Miyazaki drew the 'Nausicaä of the Valley of the Wind' manga for twelve years, and its story goes much further than the film."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "This week on the pod we read 'Goodnight Punpun' volume one, and wow, Inio Asano does not pull punches."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Something I love about 'Mushishi' is that every chapter is self-contained, almost like a folk tale you read in one sitting."
+   }
+  ],
+  "topic:Album": [
+   {
+    "style": "casual social-media post",
+    "text": "Rumours by Fleetwood Mac front to back on vinyl tonight. No skips."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Kendrick dropped 'To Pimp a Butterfly' ten years ago and it still sounds like the future."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - Taylor Swift's 'The Tortured Poets Department' debuted at No. 1 on the Billboard 200, earning 2.61 million equivalent units in its first week."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Radiohead announced that 'OK Computer' will be reissued for its anniversary with three previously unreleased tracks."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's your desert-island record? B: 'Kind of Blue' by Miles Davis. Five tracks, all perfect."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Have you heard Beyoncé's 'Lemonade'? B: Yes, the visual version too. 'Formation' closing it out is perfect."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. 'Pet Sounds' (1966) - Brian Wilson's lush arrangements pushed pop into new territory."
+   },
+   {
+    "style": "listicle item",
+    "text": "12. 'The Miseducation of Lauryn Hill' - Her only solo studio LP, and a Grammy Album of the Year winner."
+   },
+   {
+    "style": "forum question",
+    "text": "Is side two of 'Abbey Road' meant to be played as one continuous medley? First time listening on vinyl."
+   },
+   {
+    "style": "forum question",
+    "text": "What's a good first Björk record? Debut or Homogenic?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Billie Eilish's 'Hit Me Hard and Soft' is her most cohesive LP yet, ten songs that flow into each other. 8.5/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "The deluxe edition of 'Purple Rain' is worth it for the remastering alone; 'When Doves Cry' sounds brand new."
+   },
+   {
+    "style": "diary entry",
+    "text": "Bought my first CD today: 'Nevermind.' The baby on the cover is weird but 'Lithium' is my favorite track."
+   },
+   {
+    "style": "diary entry",
+    "text": "Played Adele's '21' all the way through on the drive home and sang every song."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Thriller' is the sixth studio album by American singer Michael Jackson, released on November 30, 1982, by Epic Records."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Blue' is the fourth studio album by Canadian singer-songwriter Joni Mitchell, released in June 1971 by Reprise Records."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Beatles' 'Sgt. Pepper's Lonely Hearts Club Band' showed that a record could be a unified artistic statement rather than a set of singles."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Marvin Gaye's 'What's Going On' addressed war, poverty, and the environment through a connected cycle of songs."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "On today's episode we go track by track through 'The Dark Side of the Moon,' starting with the heartbeat on 'Speak to Me.'"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So when 'Illmatic' came out in '94, Nas was twenty, and every producer on it was a legend. Ten tracks, no filler."
+   }
+  ],
+  "topic:ArtistDiscography": [
+   {
+    "style": "casual social-media post",
+    "text": "Ranked the entire Taylor Swift discography from Debut to Midnights and I've lost friends over it."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Going through every Radiohead release in chronological order this week. Currently at Amnesiac."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Universal Music said Friday it would reissue the complete Bob Marley and the Wailers catalogue, spanning thirteen studio albums and several live records."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Prince's estate announced a new series of archival releases, adding to a catalogue that already includes 39 studio albums."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How many studio albums did the Beatles release? B: Twelve in the UK, plus a pile of singles, EPs, and compilations."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Kanye's whole catalog on streaming? B: Most of it, but some early mixtapes from before 'The College Dropout' aren't."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. David Bowie: 26 studio albums, from 'David Bowie' in 1967 to 'Blackstar,' released two days before his death."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Madonna - 14 studio albums, three soundtrack albums, and more than 80 singles across four decades."
+   },
+   {
+    "style": "forum question",
+    "text": "Can someone help me sort out the Pink Floyd discography? Which compilations and live albums are worth owning beyond the studio records?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does Metallica's discography count 'Garage Inc.' as a studio album or as a covers compilation?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Finished collecting every Fleetwood Mac LP. The early Peter Green records are underrated; the late-'80s output is weaker."
+   },
+   {
+    "style": "product or event review",
+    "text": "This box set covers Stevie Wonder's full Motown run from 1962 to 1987. Booklet is thorough, but the mastering on the early singles is muddy."
+   },
+   {
+    "style": "diary entry",
+    "text": "Made a spreadsheet of all of Dolly Parton's albums. Over fifty solo studio records, and I own nineteen."
+   },
+   {
+    "style": "diary entry",
+    "text": "Listened to every Kate Bush record in release order today. 'Hounds of Love' is still number one."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The discography of American rapper Eminem consists of eleven studio albums, four compilation albums, and one collaborative album."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Rolling Stones discography comprises 24 studio albums, more than 30 live albums, and over 100 singles released since 1964."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Johnny Cash's recordings over five decades show his music moving from rockabilly to gospel to the stark American Recordings series."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Bob Dylan's catalogue of nearly forty studio albums reflects an artist constantly reinventing his sound."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Our challenge this week: summarize Elton John's entire output in under ten minutes. Thirty-one studio albums. Go."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "If you look at Aretha Franklin's chart history, she placed over a hundred singles on the Billboard charts. The catalog is enormous."
+   }
+  ],
+  "topic:ClassicalMusicComposition": [
+   {
+    "style": "casual social-media post",
+    "text": "Beethoven's Ninth live tonight. When the choir came in on 'Ode to Joy' I got full-body chills."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can't stop listening to Debussy's 'Clair de Lune.' Perfect rainy-day music."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LEIPZIG (Reuters) - A previously unknown serenade for string trio attributed to the young Mozart, found in a German library, received its premiere on Saturday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Berlin Philharmonic will open its concert season with Mahler's Symphony No. 2, 'Resurrection,' conducted by Kirill Petrenko."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's that piece they play at every wedding? B: Pachelbel's Canon in D, written for three violins and basso continuo."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is 'The Rite of Spring' famous? B: Stravinsky's ballet score caused near-riots at its 1913 premiere in Paris."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Vivaldi's 'The Four Seasons' - Four violin concertos that paint spring, summer, autumn, and winter in sound."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Bach's Goldberg Variations: an aria and thirty variations, famously recorded by Glenn Gould in 1955."
+   },
+   {
+    "style": "forum question",
+    "text": "Which recording of Rachmaninoff's Piano Concerto No. 2 do you recommend? I like a slower second movement."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Barber's 'Adagio for Strings' originally a movement from his String Quartet? I keep reading conflicting info."
+   },
+   {
+    "style": "product or event review",
+    "text": "The orchestra's performance of Dvořák's 'New World' Symphony was powerful; the English horn solo in the Largo was gorgeous."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: This new recording of Holst's 'The Planets' rushes 'Saturn,' but 'Jupiter' is thrilling. 4 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Piano lesson today. I'm finally learning Chopin's Nocturne in E-flat major, Op. 9 No. 2."
+   },
+   {
+    "style": "diary entry",
+    "text": "Played second violin in Elgar's 'Nimrod' at the spring concert. Mom cried."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Symphony No. 5 in C minor, Op. 67, by Ludwig van Beethoven was written between 1804 and 1808 and is one of the best-known compositions in classical music."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Boléro' is a one-movement orchestral piece by Maurice Ravel, premiered in 1928, built on a single repeated melody over a long crescendo."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Tchaikovsky's '1812 Overture' commemorates Russia's defense against Napoleon, complete with cannon fire in the score."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Handel's oratorio 'Messiah' was first performed in Dublin in 1742 and is now a holiday tradition in many countries."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "In this episode we listen to the opening of Richard Strauss's 'Also sprach Zarathustra,' which most people know from '2001: A Space Odyssey.'"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "What fascinates me about Schubert's 'Unfinished' Symphony is that nobody knows why he stopped after two movements."
+   }
+  ],
+  "topic:Musical": [
+   {
+    "style": "casual social-media post",
+    "text": "Hamilton tickets FINALLY!!! I've had the cast recording memorized since 2016."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Saw Wicked on Broadway and 'Defying Gravity' gave me goosebumps. Elphaba floating up there at the end of Act One!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - 'Hadestown' won eight Tony Awards on Sunday night, including best musical and best original score."
+   },
+   {
+    "style": "news-wire report",
+    "text": "'The Phantom of the Opera,' Broadway's longest-running show, played its final performance at the Majestic Theatre after 35 years."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's 'Les Misérables' about? B: An ex-convict named Jean Valjean in 19th-century France. Bring tissues for 'Bring Him Home.'"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is 'Rent' still worth seeing? B: Yeah, the songs hold up. 'Seasons of Love' is a classic."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. 'West Side Story' (1957) - Romeo and Juliet on New York's Upper West Side, with music by Leonard Bernstein."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. 'Six' - Henry VIII's wives reimagined as a pop concert, each queen singing her own story."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the stage show 'Cats' really that strange? My kids want to see the touring production."
+   },
+   {
+    "style": "forum question",
+    "text": "Which 'Sweeney Todd' cast recording is best, the 1979 original or the 2023 revival?"
+   },
+   {
+    "style": "product or event review",
+    "text": "'Dear Evan Hansen' touring production: strong vocals and a great band, but the story still makes me uneasy. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "'The Book of Mormon' was hilarious and outrageous. The opening number 'Hello!' had the whole theater laughing."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got cast as Sandy in our school's production of 'Grease.' Rehearsals start Monday!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Saw 'Come From Away' tonight. Cried during 'Me and the Sky.'"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Oklahoma!' is the first musical written by the team of Rodgers and Hammerstein; it opened on Broadway in 1943."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'A Chorus Line' is a stage musical conceived by Michael Bennett about seventeen dancers auditioning for spots in a Broadway chorus."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "'Show Boat' (1927) was one of the first Broadway shows to use songs and dance to address serious themes such as racism."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "'Fiddler on the Roof' explores tradition and change through Tevye, a milkman in a Jewish village in Tsarist Russia."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to the theater pod. Today: Sondheim's 'Into the Woods,' and why Act Two gets so much darker."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "The thing about 'Chicago' is that Bob Fosse staged every song like a vaudeville act, and that's the whole point."
+   }
+  ],
+  "topic:Single": [
+   {
+    "style": "casual social-media post",
+    "text": "'Blinding Lights' is still on repeat for me. That synth intro!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Olivia Rodrigo's 'drivers license' dropped and I cried in my car. Again."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES (AP) - Lil Nas X's 'Old Town Road' spent a record 17th week at No. 1 on the Billboard Hot 100, Billboard said Monday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Kate Bush's 1985 single 'Running Up That Hill' re-entered the charts after it featured in 'Stranger Things.'"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What was the B-side of 'Hey Jude'? B: 'Revolution,' the faster, louder version."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: When did 'Despacito' come out? B: January 2017, and then the remix with Justin Bieber pushed it to number one."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. 'Smells Like Teen Spirit' (1991) - The lead single from 'Nevermind' turned grunge mainstream overnight."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. 'Bad Guy' - Billie Eilish's whispery hit ended 'Old Town Road's' long run at the top of the charts."
+   },
+   {
+    "style": "forum question",
+    "text": "Was 'Bohemian Rhapsody' really released as a single at almost six minutes long? How did radio play it?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if 'Blue Monday' was ever released on 7-inch, or only as a 12-inch?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Sabrina Carpenter's 'Espresso' is the perfect summer track. Catchy, playful, under three minutes. 9/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "The band's new lead single is a letdown: overproduced, forgettable chorus. 4/10."
+   },
+   {
+    "style": "diary entry",
+    "text": "Heard 'Like a Prayer' on the radio and called the station to request it again. They played it!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Bought the 'Single Ladies' CD at the mall today and practiced the dance all afternoon."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Rolling in the Deep' is a song by English singer Adele, released in 2010 as the lead single from her second studio album, '21.'"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Respect' is a song written by Otis Redding; Aretha Franklin's 1967 version became a number-one single in the United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The charity single 'We Are the World' was recorded in 1985 to raise money for famine relief in Ethiopia."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Billie Holiday's 1939 recording of 'Strange Fruit' was released as a protest against racial violence in the American South."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we break down how 'Gangnam Style' went from a K-pop release to the first YouTube video with a billion views."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "When 'Crazy in Love' came out in 2003, that horn sample hooked everybody in the first two seconds."
+   }
+  ],
+  "topic:AcademicJournal": [
+   {
+    "style": "casual social-media post",
+    "text": "My first paper just got accepted in the Journal of Applied Ecology!! Three rounds of revisions but WE DID IT."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Reviewer 2 at Physical Review Letters wants me to rewrite the whole introduction. Classic."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - The Lancet retracted a widely cited study on Thursday after the authors could not verify the underlying patient data."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Nature said it will publish peer-review reports alongside all newly submitted research papers, a change aimed at transparency."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where should I submit my linguistics paper? B: Try 'Language,' the journal of the Linguistic Society of America."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's the impact factor of Cell? B: Around forty. It's one of the top venues in biology."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 'The New England Journal of Medicine' - Founded in 1812, one of the oldest continuously published medical journals."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. 'American Economic Review' - The flagship journal of the American Economic Association, publishing since 1911."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone published in PLOS ONE recently? How long did peer review take for you?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does 'The Journal of Philosophy' accept submissions from grad students, or should I aim for a smaller venue?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review of the journal's new manuscript system: much faster to navigate, but the submission portal still crashes on large PDFs. 3/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "As an author I rate the refereeing at 'Annals of Mathematics' the most rigorous I've experienced; my paper took two years."
+   },
+   {
+    "style": "diary entry",
+    "text": "Submitted my thesis chapter to the Journal of Fluid Mechanics today. Fingers crossed."
+   },
+   {
+    "style": "diary entry",
+    "text": "The rejection letter came from Science. Desk-rejected in four days."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Journal of the American Chemical Society is a weekly peer-reviewed scientific journal established in 1879 by the American Chemical Society."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Mind' is a quarterly peer-reviewed academic journal of philosophy published by Oxford University Press on behalf of the Mind Association."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The founding of 'Philosophical Transactions of the Royal Society' in 1665 marks the beginning of scientific publishing."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Peer-reviewed periodicals like 'The BMJ' help ensure that medical research is checked by experts before it reaches doctors."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "My guest edits 'The Journal of Neuroscience,' and today she explains how reviewers are chosen for each manuscript."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "So 'Physical Review' started at Cornell in 1893, and now there's a whole family of them, from A through X."
+   }
+  ],
+  "topic:Magazine": [
+   {
+    "style": "casual social-media post",
+    "text": "Found a stack of my mom's old Rolling Stone issues from the '70s. The covers are incredible."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My New Yorker subscription is basically just for the cartoons and I'm not ashamed."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (AP) - National Geographic said it will stop selling print copies on U.S. newsstands next year, though subscribers will still receive the monthly."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Sports Illustrated named its Sportsperson of the Year in its December issue, released Thursday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Wired still in print? B: Yeah, monthly, and the feature stories on tech are great."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is Vogue's September issue such a big deal? B: It's the biggest fashion issue of the year, sometimes over 800 pages."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. 'Mad' - The satirical humor magazine that taught generations of kids to mock everything."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. 'The Economist' - Calls itself a newspaper but comes out weekly, and its articles carry no bylines."
+   },
+   {
+    "style": "forum question",
+    "text": "Are back issues of 'Omni' available anywhere? I want to read the 1980s science fiction stories."
+   },
+   {
+    "style": "forum question",
+    "text": "Is 'Cook's Illustrated' worth subscribing to, or are all the recipes online anyway?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The monthly's redesign looks gorgeous, but there are fewer long features now. 3/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Subscribed to 'Highlights' for my daughter. She loves the hidden pictures puzzle in every issue."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got my first issue of 'Seventeen' in the mail today. Read it twice."
+   },
+   {
+    "style": "diary entry",
+    "text": "Bought a copy of 'Time' at the airport because the cover story was about robots."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Life' was an American magazine published weekly from 1936 to 1972, renowned for its photojournalism."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Popular Mechanics' is a magazine founded in 1902 that covers science, technology, and do-it-yourself projects."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Norman Rockwell's covers for 'The Saturday Evening Post' shaped how Americans pictured everyday life."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "'Ebony,' founded in 1945 by John H. Johnson, celebrated Black achievement at a time when mainstream publications ignored it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "This week's guest was editor-in-chief of 'Esquire' in the '90s, and he has stories."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "What made 'Spin' different from 'Rolling Stone' was its focus on alternative and indie music in the late '80s."
+   }
+  ],
+  "topic:Newspaper": [
+   {
+    "style": "casual social-media post",
+    "text": "The Guardian cryptic crossword is kicking my butt today."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My local paper, the Daily Hampshire Gazette, just printed my letter to the editor! Small-town fame."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PITTSBURGH (AP) - The Pittsburgh Post-Gazette said it will end its print edition and move to digital-only publication next year."
+   },
+   {
+    "style": "news-wire report",
+    "text": "The Chicago Tribune won the Pulitzer Prize for investigative reporting for its series on unsafe housing, the Pulitzer board announced."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the Times of India the biggest English-language daily? B: By circulation, yes, it has been for years."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who owns The Wall Street Journal? B: News Corp, Rupert Murdoch's company, since 2007."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 'Le Monde' - The Paris evening daily founded in 1944, a reference for French politics."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. 'The Boston Globe' - Its Spotlight team's investigation into abuse cover-ups won a Pulitzer and inspired a film."
+   },
+   {
+    "style": "forum question",
+    "text": "How do I access the New York Times archive from the 1920s? Is it free for subscribers?"
+   },
+   {
+    "style": "forum question",
+    "text": "Did the Rocky Mountain News really shut down in 2009? Where did its reporters end up?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Subscribed to the Financial Times for a month. Excellent markets coverage, but the paywall is pricey. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Our local weekly's new website is a mess: ads everywhere and the stories are hard to find."
+   },
+   {
+    "style": "diary entry",
+    "text": "Delivered newspapers this morning before school. The Sunday edition is so heavy."
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandpa reads the Toronto Star cover to cover every morning with his coffee."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Times is a British daily national newspaper based in London, founded in 1785 under the title The Daily Universal Register."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Asahi Shimbun is one of Japan's oldest and largest daily papers, founded in Osaka in 1879."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The New York Herald became famous when it sent reporter Henry Morton Stanley to Africa to find David Livingstone."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Benjamin Franklin's 'Pennsylvania Gazette' was one of the most important printed papers in colonial America."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we talk with a former Miami Herald reporter about covering hurricanes for the front page."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "The Los Angeles Times started in 1881 as a four-page sheet, and now look at it."
+   }
+  ],
+  "topic:VideoGame": [
+   {
+    "style": "casual social-media post",
+    "text": "Elden Ring has broken me. Malenia killed me 87 times. Still going."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Stardew Valley at 2 a.m. is my therapy. Just harvested my first ancient fruit."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KYOTO (Reuters) - Nintendo said 'The Legend of Zelda: Tears of the Kingdom' sold 10 million copies in its first three days, a record for the series."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Rockstar Games released the first trailer for 'Grand Theft Auto VI,' which drew more than 90 million YouTube views in a day."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Hollow Knight hard? B: Hard but fair, and the map is huge. Hornet will humble you."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which Mario Kart is the best? B: Double Dash, because two players ride in each kart."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. 'Tetris' (1984) - Falling blocks, endless replay, and the most famous music on the Game Boy."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. 'Half-Life 2' - Physics puzzles with the gravity gun and a story told without a single cutscene."
+   },
+   {
+    "style": "forum question",
+    "text": "Stuck on the Water Temple in Ocarina of Time. Where's the last small key?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is Baldur's Gate 3 worth it for someone who's never played Dungeons & Dragons?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Hades is a near-perfect roguelike: tight combat, great voice acting, a story that rewards dying. 10/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "Cyberpunk 2077 at launch was buggy, but after the 2.0 update it's a great RPG. 8/10."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finally beat Celeste today. Cried at the summit."
+   },
+   {
+    "style": "diary entry",
+    "text": "Played Minecraft with my cousin all afternoon. We built a castle with a moat full of lava."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Pac-Man is a 1980 maze action video game developed and released by Namco for arcades."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'The Last of Us' is a 2013 action-adventure title developed by Naughty Dog for the PlayStation 3."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Atari's 'Pong' (1972) was one of the first commercially successful arcade games and helped launch the industry."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "'Undertale' makes players think about violence by letting them spare every monster they meet."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "On today's show we walk through the history of 'Super Mario 64' speedruns, from the first star routes to the backwards long jump."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "What 'Portal' did brilliantly was teach you every mechanic without a single tutorial screen."
+   }
+  ],
+  "topic:EurovisionSongContestEntry": [
+   {
+    "style": "casual social-media post",
+    "text": "ABBA's 'Waterloo' won Eurovision 50 years ago and I'm still dancing to it."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Finland's 'Cha Cha Cha' should have won in 2023. The public vote said it all."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MALMÖ (Reuters) - Switzerland's Nemo won the Eurovision Song Contest on Saturday with 'The Code,' a song blending opera, rap, and drum and bass."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Ukraine's Kalush Orchestra won the contest in Turin with 'Stefania,' a folk-rap tribute to the singer's mother, organizers said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which song did Lordi perform? B: 'Hard Rock Hallelujah,' Finland's first Eurovision win in 2006, monster masks and all."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What was Måneskin's entry? B: 'Zitti e buoni,' Italy's winner in 2021."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 'Euphoria' (Loreen, Sweden 2012) - The wind machine, the bare feet, the record televote haul."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. 'Nel blu, dipinto di blu' - Italy's 1958 entry only finished third but became a global hit as 'Volare.'"
+   },
+   {
+    "style": "forum question",
+    "text": "Did Céline Dion really sing for Switzerland in 1988? Was 'Ne partez pas sans moi' her winning song?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the UK's 'Space Man' do so well with the juries in 2022 after years of near-last finishes?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review of Portugal's 'Amar pelos dois': a quiet ballad with no staging tricks, and it was stunning. 10/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "This year's Norwegian song was fun on the radio, but the arena staging was a mess. 5/10."
+   },
+   {
+    "style": "diary entry",
+    "text": "Eurovision party at Anna's tonight. Our country's song got nul points from the jury. We cheered anyway."
+   },
+   {
+    "style": "diary entry",
+    "text": "Voted twenty times for the Icelandic band during the final. No regrets."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Puppet on a String' was the United Kingdom's winning entry at the Eurovision Song Contest 1967, performed by Sandie Shaw."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Fairytale' is a song performed by Alexander Rybak that represented Norway at Eurovision 2009 and set a points record."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Conchita Wurst's 'Rise Like a Phoenix,' which won for Austria in 2014, became a symbol of tolerance across Europe."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Teach-In's 'Ding-a-dong' won for the Netherlands in 1975, the first year the twelve-points scoring system was used."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we rank every Swedish Eurovision song since 2000, and yes, 'Heroes' is high on the list."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Dana International's 'Diva' won for Israel in 1998, and honestly that performance changed the contest."
+   }
+  ],
+  "topic:Play": [
+   {
+    "style": "casual social-media post",
+    "text": "Saw 'Death of a Salesman' tonight. Willy Loman absolutely wrecked me."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Reading 'Waiting for Godot' for class: nothing happens, twice."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - Agatha Christie's 'The Mousetrap' marked its 70th anniversary in the West End on Friday, still the world's longest-running stage production."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Tom Stoppard's 'Leopoldstadt' won the Tony Award for best play on Sunday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What happens at the end of 'A Doll's House'? B: Nora walks out on her husband and slams the door."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who wrote 'Our Town'? B: Thornton Wilder, in 1938. The Stage Manager narrates the whole thing."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. 'A Raisin in the Sun' - Lorraine Hansberry's 1959 drama about a Black family in Chicago's South Side."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. 'Angels in America' - Tony Kushner's two-part epic set during the AIDS crisis."
+   },
+   {
+    "style": "forum question",
+    "text": "Is 'Hamlet' too long to stage uncut? Our director wants to try the full four hours."
+   },
+   {
+    "style": "forum question",
+    "text": "Where can I find scripts of 'The Importance of Being Earnest' for a school production?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Our community theater's '12 Angry Men' was gripping: one jury room, twelve actors, no intermission. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The 'Fences' revival had an outstanding lead, but the second act dragged. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Rehearsal for 'Romeo and Juliet' today. I keep forgetting my lines in the balcony scene."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got the part of Stanley in 'A Streetcar Named Desire.' I have to yell 'Stella!' every night."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'The Cherry Orchard' is the last play by Russian playwright Anton Chekhov, first performed at the Moscow Art Theatre in 1904."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Oedipus Rex' is an Athenian tragedy by Sophocles, first performed around 429 BC."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Arthur Miller's 'The Crucible' uses the Salem witch trials as an allegory for McCarthyism."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In 'Pygmalion,' George Bernard Shaw shows how language and accent determine social class."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back. Today we're talking about Edward Albee's 'Who's Afraid of Virginia Woolf?' and that long, brutal night."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "What struck me about 'August: Osage County' is how the dinner scene feels like a war."
+   }
+  ],
+  "topic:Poem": [
+   {
+    "style": "casual social-media post",
+    "text": "They read 'The Road Not Taken' at my graduation and I'm not okay."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Mary Oliver's 'Wild Geese' is the poem I read every time I'm sad."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (AP) - Amanda Gorman's 'The Hill We Climb,' read at the inauguration, topped bestseller lists within days."
+   },
+   {
+    "style": "news-wire report",
+    "text": "A previously unknown sonnet attributed to Elizabeth Barrett Browning was found in a library archive in Scotland, scholars said Thursday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What's 'The Raven' about? B: A grieving narrator, and a raven that just keeps saying 'Nevermore.'"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Do you know 'Do Not Go Gentle into That Good Night'? B: Yeah, Dylan Thomas's villanelle for his dying father."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. 'Ozymandias' by Percy Bysshe Shelley - A shattered statue in the desert, a lesson in fleeting power."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. 'Still I Rise' - Maya Angelou's defiant celebration of resilience."
+   },
+   {
+    "style": "forum question",
+    "text": "What's the meaning of 'Stopping by Woods on a Snowy Evening'? Is the speaker thinking about death?"
+   },
+   {
+    "style": "forum question",
+    "text": "Are there good annotated editions of 'The Waste Land'? I'm lost after 'April is the cruellest month.'"
+   },
+   {
+    "style": "product or event review",
+    "text": "The open-mic reading of 'Howl' at the festival was electric. Goosebumps from the first line."
+   },
+   {
+    "style": "product or event review",
+    "text": "The new illustrated edition of 'The Rime of the Ancient Mariner' is beautiful, but the font is tiny. 4/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Memorized Shakespeare's Sonnet 18 for English. 'Shall I compare thee to a summer's day?'"
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandpa recited Kipling's 'If-' to me tonight from memory."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'The Love Song of J. Alfred Prufrock' is a poem by T. S. Eliot, first published in 1915."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "'Beowulf' is an Old English epic poem of about 3,182 alliterative lines."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In 'Harlem,' Langston Hughes asks what happens to a dream deferred."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Wilfred Owen's 'Dulce et Decorum Est' exposes the horror of a gas attack in World War I."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "In this episode we read Coleridge's 'Kubla Khan' and the story of the person from Porlock."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Edgar Allan Poe's 'Annabel Lee' was the last complete poem he wrote, and you can hear the sea in every line."
+   }
+  ]
+ }
+}

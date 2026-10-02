@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:Pope": [
+   {
+    "style": "text message",
+    "text": "omg just watched the livestream, Francis waved right at our section from the popemobile!! mom is crying lol"
+   },
+   {
+    "style": "text message",
+    "text": "Did u finish the reading on Gregory the Great? Prof says he's on the quiz, esp the Gregorian chant stuff"
+   },
+   {
+    "style": "press release",
+    "text": "VATICAN CITY - The Holy See Press Office announces that His Holiness will celebrate Mass in St. Peter's Square on Sunday and deliver the Angelus blessing afterward. Pilgrims are advised to arrive early."
+   },
+   {
+    "style": "press release",
+    "text": "The Diocese of Leiria-Fatima is pleased to confirm that the pontiff will visit the shrine in May, marking the anniversary of the apparitions. Accreditation for journalists opens Monday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What surprised you most about covering Benedict XVI? A: How shy he was. A theologian first, he seemed happier in a library than on a balcony."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did John XXIII call the Second Vatican Council? A: He said the Church needed to open its windows and let in some fresh air."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: To attend a general audience on Wednesday, request free tickets from the Prefecture of the Papal Household a few weeks ahead, and bring your passport."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Planning to see the pontiff's Christmas Urbi et Orbi blessing? Get to St. Peter's Square by 10 a.m., pack water, and leave large bags at home."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "White Smoke Rises Over Sistine Chapel - Cardinals elected a new pope on the fifth ballot Thursday evening, and crowds in St. Peter's Square erupted as the bells rang."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pontiff Issues Encyclical on Climate - In a 180-page letter, the Holy Father urged world leaders to treat care for the planet as a moral duty."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my grandfather was in Rome in '78, the year of three popes. He swore he saw white smoke twice in two months and nobody believed him. He was right."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was twelve when John Paul II came to Denver. I remember the helicopter, the heat, and my dad lifting me up so I could see the white cassock."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which pontiff resigned in 2013, the first to step down in nearly 600 years? Answer: Benedict XVI."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which pope was the first from the Americas, elected in 2013 after serving as Archbishop of Buenos Aires? (Francis)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Maria, guess what - we got tickets to the Wednesday audience! The Holy Father passed about ten feet from us. I'll send photos when I'm back from Rome."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tom, finished that biography of Leo XIII you lent me. Fascinating how Rerum Novarum basically started Catholic social teaching on workers. Coffee next week?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ring of the Fisherman, 1958-1963. Worn by John XXIII throughout his reign, this gold signet ring was ceremonially defaced after his death, as tradition required."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This red velvet mozzetta trimmed with ermine was worn by Pius IX, whose 31-year reign remains the longest verified papacy in history."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And here's the balcony, folks - the curtains are moving! The cardinal protodeacon steps to the microphone... 'Habemus papam!' The crowd is going absolutely wild down here!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, we're talking popes tonight. Line two says Sixtus IV did more for Rome's art than anyone - he built the Sistine Chapel, after all. Fair point, Gary."
+   }
+  ],
+  "topic:Saint": [
+   {
+    "style": "text message",
+    "text": "Lost my keys AGAIN. Grandma says pray to Anthony of Padua, patron of lost things. Honestly worth a shot at this point"
+   },
+   {
+    "style": "text message",
+    "text": "Bringing the dog to the blessing of the animals Sat for the feast of Francis of Assisi, u coming?"
+   },
+   {
+    "style": "press release",
+    "text": "The Sanctuary of Lourdes announces special services on April 16 marking the anniversary of the death of Bernadette Soubirous, the miller's daughter whose visions made the grotto a pilgrimage site."
+   },
+   {
+    "style": "press release",
+    "text": "The Archdiocese of Dublin invites the public to a Mass honoring Brigid of Kildare on February 1, now a national holiday in Ireland."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does Joan of Arc still fascinate people? A: A peasant teenager leads an army, is burned as a heretic, then is canonized five centuries later. That's an extraordinary arc."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What drew you to Hildegard of Bingen? A: She was an abbess, composer, healer and visionary in the 1100s, and was finally named a Doctor of the Church in 2012."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Making a Santa Lucia crown for December 13? Use battery candles, not real ones, and weave lingonberry greenery around the wire ring."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To walk the Camino to the tomb of St. James in Santiago de Compostela, collect stamps in your pilgrim passport at least once a day for the last 100 km."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Kateri Tekakwitha Canonized - The Mohawk woman from 17th-century New York became the first Indigenous North American declared a saint, as thousands of pilgrims gathered."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Relics of Therese of Lisieux Begin World Tour - The 'Little Flower,' a Carmelite nun who died at 24, still draws huge crowds a century later."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Every December 6th, my dad left chocolate coins in our shoes. He told us it was St. Nicholas, the bishop who secretly dropped gold through a poor man's window."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I visited Assisi I sat in the little chapel where Francis gave away his clothes and his inheritance. I'm not even religious, but it got me."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which patron saint of Ireland is said to have used a shamrock to explain the Trinity? Answer: Patrick."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Spanish mystic and Carmelite reformer wrote 'The Interior Castle'? (Teresa of Avila)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Anna, we made it to Siena! Saw the relic of Catherine of Siena in the basilica. Creepy and moving at once. Pizza tonight."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Dear Raj, the feast of Ignatius of Loyola is July 31, so the Jesuit school is holding its open house that day. Want to come along?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Icon of St. George and the Dragon, Novgorod, 15th century. The soldier-martyr, patron of England and Georgia, spears the dragon while the rescued princess looks on."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Reliquary of Thomas Aquinas, Toulouse. The Dominican theologian, author of the Summa Theologiae, was canonized in 1323, fifty years after his death."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Happy St. Patrick's Day, folks! The whole stadium's in green, and one fan came dressed as the man himself - mitre, crozier, rubber snakes and all!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says Rose of Lima is the patron of Peru, so the national team should be praying to her before kickoff. I like it, Mario, I like it."
+   }
+  ],
+  "topic:CollegeCoach": [
+   {
+    "style": "text message",
+    "text": "Coach Wooden quote of the day: 'Be quick, but don't hurry.' Taped it above my desk for finals week"
+   },
+   {
+    "style": "text message",
+    "text": "Did u see Izzo screaming at the freshman on the sideline lol, Michigan State still won by 12"
+   },
+   {
+    "style": "press release",
+    "text": "Ridgefield State University announces the hiring of Tara Okafor as head women's basketball coach. Okafor led Division II Lakeview to two national titles in five seasons."
+   },
+   {
+    "style": "press release",
+    "text": "The University of Alabama congratulates Nick Saban on his retirement after 17 seasons in Tuscaloosa and six national championships with the Crimson Tide."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Dawn, what changed when you took over South Carolina? A: We stopped chasing stars and started recruiting kids who'd run through a wall for each other."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Coach Holtz, your secret at Notre Dame? A: Three rules. Do what's right, do your best, and treat others the way you'd want to be treated."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for walk-ons: Krzyzewski's staff always noticed who sat up front in film sessions taking notes. Be that player."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to get recruited? Email the program's assistants, not just the guy in charge, with a short highlight reel and your GPA up front."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Gators Fire Football Boss After 4-7 Season - Florida parted ways with its head coach Sunday, ending a three-year tenure marked by blowout losses to rivals."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Auriemma Wins 12th National Title - UConn's longtime women's basketball leader added another trophy Sunday night, extending a record no one in the sport has approached."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle played for Bear Bryant in the '60s. He said August practices were so brutal that guys would sneak out at night and just never come back."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a student manager at Tennessee, and Pat Summitt once stared at me for forgetting a towel. Just stared. I never forgot a towel again."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which UCLA basketball leader won 10 NCAA titles in 12 years, including seven straight? Answer: John Wooden."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who led Duke men's basketball from 1980 to 2022 and retired with the most wins in Division I history? (Mike Krzyzewski)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jake, did you hear Boeheim retired? 47 years at Syracuse. That 2-3 zone is going to feel weird without him barking at refs."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sam, big news: my nephew committed to play for Kim Mulkey at LSU! She came to the house herself. My sister is over the moon."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Houndstooth hat worn by Paul 'Bear' Bryant, Alabama, c. 1975. Bryant retired in 1982 with 323 wins, then the most in major college football."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This whistle and clipboard belonged to Dean Smith, who led North Carolina for 36 seasons and made the 'Four Corners' offense famous."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Saban's off the sideline, he's in the official's face - I've never seen him this hot, folks! Fourth and one, and the Tide's going for it!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Columbus wants them to hire a guy from the FCS ranks. Bold. But Dabo came out of nowhere too, didn't he? Receivers coach to legend."
+   }
+  ],
+  "topic:Airline": [
+   {
+    "style": "text message",
+    "text": "Ugh Ryanair charged me 50 euro bc my bag was 2 cm too big. Never again"
+   },
+   {
+    "style": "text message",
+    "text": "Landed! Emirates gave us free champagne in economy, I could get used to this"
+   },
+   {
+    "style": "press release",
+    "text": "Nordwind Air today announced new nonstop service between Oslo and Reykjavik starting in June, operated four times weekly with its Airbus A320neo fleet."
+   },
+   {
+    "style": "press release",
+    "text": "Southwest Airlines reported record quarterly revenue and confirmed it will introduce assigned seating, ending its five-decade open-boarding policy."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Singapore Airlines build its reputation? A: Relentless cabin service. The 'Singapore Girl' became a brand, and crew train for months before their first flight."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you start a low-cost carrier in Colombia? A: Buses took 20 hours between cities. We could fly people there for the same price in one."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: On KLM, check in online exactly 30 hours before departure to grab the free seats near the front."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Flying Aer Lingus from Dublin to the US? You clear American customs before boarding, so arrive early and land like it's a domestic flight."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Carrier Grounds Fleet After Engine Inspection - Pacific Wing grounded all 23 of its turboprops Tuesday, stranding thousands of travelers across the islands."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pan Am's Final Flight Remembered - Thirty-five years after the company folded, former flight attendants gathered in Miami to mark the anniversary."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First time I ever flew was Qantas to Sydney. I was eight, the crew gave me little wings and let me peek into the cockpit. Different times."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were delayed six hours on JetBlue once, and the captain ordered pizza for the whole gate. Best delay of my life, honestly."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which carrier, founded in 1919, is the oldest still operating under its original name? Answer: KLM Royal Dutch Airlines."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Australian airline's tail logo features a flying kangaroo? (Qantas)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lena, booked our flights on Turkish Airlines through Istanbul. The layover is long, but they offer a free city tour, so let's do it!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, do you still have Lufthansa miles? I'm trying to get to Munich for Oktoberfest and the fares are brutal."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Flight attendant uniform, Braniff International, 1965. Designed by Emilio Pucci, these bright outfits were part of the 'End of the Plain Plane' campaign."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Model of the Boeing 747 'Clipper Victor', Pan American World Airways' first jumbo jet, which entered service in January 1970."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, sounds like the team charter's delayed again. Delta's de-icing in Minneapolis, so tip-off may get pushed. Stay with us."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Call-in Tuesday: worst travel story. Linda says Spirit lost her luggage AND her wheelchair. Linda, I'm so sorry, that's outrageous."
+   }
+  ],
+  "topic:Bank": [
+   {
+    "style": "text message",
+    "text": "Chase just texted me a fraud alert for a $3 purchase in Ohio, I've never been to Ohio lol"
+   },
+   {
+    "style": "text message",
+    "text": "Opened my Monzo account, the coral card is so cute. Instant notifications every time I buy coffee"
+   },
+   {
+    "style": "press release",
+    "text": "First Prairie Bank of Nebraska announces the opening of its 40th branch in Kearney, along with expanded agricultural lending for local farm families."
+   },
+   {
+    "style": "press release",
+    "text": "Deutsche Bank AG reported a net profit of 1.2 billion euros for the third quarter, driven by strong fees in its corporate and investment division."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Grameen focus on women borrowers? A: Muhammad Yunus found they repaid more reliably and spent loans on their families. It reshaped microcredit."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What does the Bank of England actually do day to day? A: Sets interest rates, issues the notes, and keeps an eye on whether lenders are safe."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Wells Fargo waives the monthly fee if you keep a $500 minimum balance, so set an automatic transfer from your paycheck."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Moving to Germany? Open a Sparkasse account first; your landlord will want a local IBAN before handing over the keys."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Silicon Valley Bank Collapses - Regulators seized the tech-focused lender Friday after depositors tried to withdraw $42 billion in a single day."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lehman Brothers Files for Bankruptcy - The 158-year-old Wall Street firm collapsed overnight, sending markets into turmoil."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother kept her savings at the same little credit union for sixty years. When it merged with a big chain she marched in and closed everything."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In '08 I worked at Washington Mutual. One Friday we were told JPMorgan had taken us over. Monday, new logo on the door."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Italian institution, founded in 1472, is considered the world's oldest bank still operating? Answer: Banca Monte dei Paschi di Siena."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Swiss lender took over Credit Suisse in 2023? (UBS)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Priya, HSBC finally approved the mortgage! We can make an offer on the flat. Celebratory dinner on us."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Carl, do you know if Barclays charges for transfers to Spain? I need to pay the deposit on the villa."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ledger of the Medici Bank, Florence, 1450s. The family's branches in London, Bruges and Geneva helped spread double-entry bookkeeping."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Vault door, First National Bank of Northfield, Minnesota, 1876. The James-Younger gang's failed robbery here ended in a shootout with townspeople."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Let's thank tonight's sponsor, Heartland Savings and Loan, the stadium naming partner. And the Hawks lead by four."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Money hour, line three: Doug asks if he should move his savings from his credit union to an online-only lender for the higher rate. Doug, check the deposit insurance first."
+   }
+  ],
+  "topic:Brewery": [
+   {
+    "style": "text message",
+    "text": "Sierra Nevada just dropped Celebration IPA for the season, grabbing a 6 pack, want some?"
+   },
+   {
+    "style": "text message",
+    "text": "Meet at Hopworks after work? New hazy on tap and trivia at 7"
+   },
+   {
+    "style": "press release",
+    "text": "Copper Kettle Brewing Co. will open its new taproom in Asheville on May 3, with 24 taps, a beer garden and a pilot system for small-batch experiments."
+   },
+   {
+    "style": "press release",
+    "text": "Guinness announces a 50 million euro investment in its St. James's Gate site in Dublin, where stout has been made since 1759."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Dogfish Head get started? A: Sam Calagione made tiny 10-gallon batches in Delaware, three times a day, adding odd ingredients nobody else would."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes your lager different? A: We cold-condition it for eight weeks in our cellars in Pilsen, the way it was done in 1842."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: On the Anchor tour in San Francisco, book the earliest slot - the copper kettles are fired up and you'll smell the mash."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Westvleteren? You can only buy the Trappist 12 by reservation online, and the monks limit how many crates you can take."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Beloved Portland Brewer Closes After 30 Years - BridgePort, Oregon's oldest craft brewery, poured its final pints Saturday as fans lined up around the block."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Small Vermont Beermaker Wins Gold - Hill Farmstead's saison took top honors at an international competition, beating 400 entries."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stopped at a tiny tavern in Bamberg where they've been making smoked beer since the 1400s. Tasted like bacon. My wife hated it; I had three."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My buddy and I tried homebrewing in college, scorched the wort, then toured Sam Adams in Boston. Turns out they're way better at it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Bavarian brewery, once run by Benedictine monks, claims to be the world's oldest, dating to 1040? Answer: Weihenstephan."
+   },
+   {
+    "style": "trivia question",
+    "text": "What Colorado brewery, founded by Adolph Coors in 1873, still operates in Golden? (Coors)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Megan, the brewery crawl is on for Saturday! Starting at Russian River for Pliny, then Bear Republic in Healdsburg. Paul is driving."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Chris, picked up a case from Cantillon in Brussels for you. Their gueuze is spontaneously fermented, so it's sour, be warned."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Copper kettle, Yuengling, Pottsville, Pennsylvania, c. 1880. America's oldest operating brewery has been family-run since 1829."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Wooden lager barrel stamped by the Pabst company of Milwaukee, which grew into the largest beer producer in the United States by the 1890s."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Halftime here at Lambeau, and Leinenkugel's has a tent outside pouring Summer Shandy - the Chippewa Falls family outfit since 1867."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our sponsor tonight, Three Floyds, made a special batch of Gumballhead for the playoffs. Callers, if the Bulls win, first round's on them. Allegedly."
+   }
+  ],
+  "topic:BusCompany": [
+   {
+    "style": "text message",
+    "text": "Greyhound is 2 hrs late again, stuck in Amarillo. Send snacks"
+   },
+   {
+    "style": "text message",
+    "text": "Booked FlixBus Berlin to Prague for 19 euros, the green one at 7am, don't let me oversleep"
+   },
+   {
+    "style": "press release",
+    "text": "Megabus announces new double-decker service between Chicago and Minneapolis with free Wi-Fi and power outlets at every seat, with fares from $1."
+   },
+   {
+    "style": "press release",
+    "text": "Lakeshore Coach Lines will add 12 electric coaches to its commuter routes from Grand Rapids this fall, cutting diesel use by a third."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Stagecoach grow so fast? A: Brian Souter and his sister started with two vehicles in Perth after deregulation in 1980 and bought up rivals."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of running an intercity coach operator in Brazil? A: The distances. Some of our routes from Sao Paulo run over 40 hours."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: On National Express, book the cheapest 'Fun Fare' online weeks ahead; London to Manchester can be under ten pounds."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Riding ADO overnight from Mexico City to Oaxaca? Bring a sweater; the drivers keep the air conditioning freezing."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "BoltBus Ends Service - The low-cost carrier, owned by Greyhound, will stop running its Northeast routes Sunday after more than a decade."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Coach Operator Fined After Brake Failure - Regulators fined Pine Ridge Motorcoach $250,000 after inspectors found worn brakes on six vehicles."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I rode Trailways from Albany to New York every weekend in college. Same driver, Earl, every time. He knew all our names."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I backpacked Argentina, Andesmar had seats that fully reclined and a steward served wine. Best overnight ride I've had."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American intercity line uses a running dog as its logo? Answer: Greyhound Lines."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which green-branded German startup became Europe's largest long-distance coach network? (FlixBus)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rosa, I'm coming up Friday on Peter Pan from Boston, gets into Springfield at 6:40. Can you pick me up?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tim, Coach USA dropped the airport shuttle route, so I'll need a ride to Newark on the 10th."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Yellow Coach Model Z, 1931. Built for Pickwick Stages, this early intercity bus carried passengers along Route 66 between Los Angeles and Chicago."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Route map of Southern Vectis, Isle of Wight, 1950s. Its open-top buses still carry holidaymakers along the island's coast."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Team travel update: the Mud Hens are riding Lamers coaches to Indianapolis tonight. Six-hour trip, a lot of card games back there."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller Ray says he drove for Jefferson Lines for 31 years, Minneapolis to Kansas City, never missed a day. Ray, that's a career. Thank you."
+   }
+  ],
+  "topic:LawFirm": [
+   {
+    "style": "text message",
+    "text": "Got the offer from Skadden!! Summer associate, NYC. Gonna be billing in 6-minute increments forever lol"
+   },
+   {
+    "style": "text message",
+    "text": "Just dropped the lease off w/ Patel & Gruber, they said they'll review by Friday"
+   },
+   {
+    "style": "press release",
+    "text": "Hargrove Whitman LLP is pleased to announce that Elena Ruiz has been named partner in its intellectual property practice, effective January 1."
+   },
+   {
+    "style": "press release",
+    "text": "Baker McKenzie today announced the opening of its Riyadh office, with a team focused on energy and infrastructure deals."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Wachtell become known for the poison pill? A: Martin Lipton devised it in 1982 to defend clients from hostile takeovers, and it changed M&A."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like as a first-year at a Magic Circle firm? A: Long nights at Clifford Chance, a lot of document review, and the best training you'll get."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: When interviewing at Cravath, know their rotation system - associates rotate among partners rather than joining one practice group."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hiring a small practice for your will? Ask whether Dunmore & Kaye charges a flat fee; many estate planners do."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Dewey & LeBoeuf Collapses - The partnership of more than 1,000 lawyers filed for bankruptcy Monday, the largest law firm failure in U.S. history."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Kirkland Tops Revenue Charts - Kirkland & Ellis posted more than $7 billion in annual revenue, cementing its spot as the world's highest-grossing legal practice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was filing papers at a two-attorney shop in Tulsa, Hensley and Ward. Mr. Hensley still used a typewriter in 1999."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When Dad's company got sued, we hired Jones Day. The partner's hourly rate was more than our monthly rent. We won, though."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Chicago law firm counted Abraham Lincoln's son Robert among its partners? Answer: Isham, Lincoln & Beale."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which global firm, born from a 1949 Chicago partnership, became one of the first truly international practices? (Baker McKenzie)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jess, my interview at Sullivan & Cromwell went well I think! The partner asked about my moot court case for 20 minutes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Omar, can you recommend someone for an immigration visa? A friend says Fragomen is the biggest name in that area."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Brass nameplate from the offices of Lincoln & Herndon, Springfield, Illinois. Abraham Lincoln practiced here with William Herndon from 1844 until 1861."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Partnership deed of Linklaters & Paines, London, 1920. The firm traces its roots to 1838, when John Linklater opened his practice."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The league's labor talks continue - the players brought in Weil Gotshal, and word is the owners hired Proskauer. Lawyers, lawyers everywhere."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Thanks to tonight's sponsor, Morgan & Morgan, 'For the People.' Okay, back to the field. Smith with the ball..."
+   }
+  ],
+  "topic:Publisher": [
+   {
+    "style": "text message",
+    "text": "Penguin Random House just said yes to my manuscript!!! Screaming"
+   },
+   {
+    "style": "text message",
+    "text": "Bookstore has the new Tor releases out, want me to grab that fantasy one?"
+   },
+   {
+    "style": "press release",
+    "text": "HarperCollins announces a three-book deal with debut novelist Ama Mensah, with the first title due next spring."
+   },
+   {
+    "style": "press release",
+    "text": "Graywolf Press, the independent Minneapolis house, has received a national grant to expand its list of poetry in translation."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Bloomsbury take a chance on Harry Potter? A: The chairman's eight-year-old daughter read the first chapter and demanded the rest."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's your mission at Fitzcarraldo Editions? A: Ambitious essays and translated fiction, those blue and white covers, and no compromise on quality."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Before submitting to Scholastic, check whether they accept unagented manuscripts; most big houses don't."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to pitch to Lonely Planet? Send a short sample of your travel writing and a list of destinations you know well."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Simon & Schuster Sold to Private Equity - The century-old house was acquired by KKR for $1.62 billion after a merger with a rival was blocked."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Small Press Wins Booker - An independent house in Norwich saw its debut novel take the Booker Prize, its first major award."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt worked at Alfred A. Knopf in the 70s. She said Mr. Knopf himself wandered the halls in loud shirts inspecting book jackets."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I sent my picture book to fifty houses. Fifty rejections. Then a tiny outfit in Vermont called Pinecone Press said yes."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which British house, founded in 1935, popularized cheap paperbacks with a bird logo? Answer: Penguin Books."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which London publisher released Darwin's 'On the Origin of Species' in 1859? (John Murray)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jen, Faber & Faber wants to see the full poetry collection! T.S. Eliot used to be an editor there. I'm freaking out."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kev, Oxford University Press sent the proofs; can you check the index by Tuesday? You're a lifesaver."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "First edition of 'Ulysses', Shakespeare and Company, Paris, 1922. Sylvia Beach published Joyce's novel when no English-language house would touch it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hand press of the Hogarth Press, founded by Leonard and Virginia Woolf in 1917 in the dining room of their house in Richmond."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Book hour on the radio: our guest's novel just came out from Little, Brown. Callers, get your questions ready."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Fun one, folks - our own play-by-play man has a memoir coming from Crown next fall. Tell-all? We'll see."
+   }
+  ],
+  "topic:RecordLabel": [
+   {
+    "style": "text message",
+    "text": "Sub Pop signed my cousin!! Same label that put out Nirvana's first album, she is losing it"
+   },
+   {
+    "style": "text message",
+    "text": "Motown 60th anniversary vinyl box set is on sale, should I get it"
+   },
+   {
+    "style": "press release",
+    "text": "Def Jam Recordings is proud to announce the signing of Atlanta rapper Kay Rivers, whose debut album arrives this summer."
+   },
+   {
+    "style": "press release",
+    "text": "Rough Trade Records celebrates its anniversary with a reissue series of its earliest singles, pressed on coloured vinyl."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Berry Gordy start Motown? A: With an $800 family loan in 1959 and a house in Detroit he called Hitsville U.S.A."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Factory Records skip normal contracts? A: Tony Wilson wanted artists to own their music. He literally wrote the agreement in his own blood."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: When sending a demo to Warp Records, include a streaming link, not attachments, and keep the email to three lines."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Shopping for Blue Note reissues? Look for the Tone Poet series; they're pressed from the original analog tapes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Atlantic Records Turns 75 - The company founded by Ahmet Ertegun in 1947 celebrated with a star-studded concert in New York."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Indie Imprint Signs Viral Singer - Tiny Bristol outfit Lantern Sound beat three majors to sign 19-year-old songwriter Mae Holloway."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad worked at Stax in Memphis in '67. He swept floors and said Otis Redding used to tip him a dollar after sessions."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I started a cassette-only label in my garage in 2004. Dubbed 200 tapes, sold eleven. Still have the rest under the bed."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Memphis company first recorded Elvis Presley, at 706 Union Avenue? Answer: Sun Records."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which British record company signed the Beatles in 1962 through its Parlophone imprint? (EMI)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nina, Domino emailed back about the EP! They want a call next week. Can you believe it?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Paul, found an original Chess Records 45 of Muddy Waters at the flea market for $3. Best Sunday ever."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original Hitsville U.S.A. sign, Detroit, 1959. Motown's first headquarters held offices upstairs and Studio A in the former garage."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mixing console, Sun Studio, Memphis. Sam Phillips' company recorded Johnny Cash, Jerry Lee Lewis and Elvis Presley in this room."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "That's the new single from Mara Jett, out now on Interscope. Coming up, the weather and your calls."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the walk-up song tonight is that old Stax classic 'Soul Man.' Memphis label, Memphis crowd, everybody's dancing in the stands."
+   }
+  ],
+  "topic:Winery": [
+   {
+    "style": "text message",
+    "text": "Napa trip: Robert Mondavi tasting at 11, then Stag's Leap at 2. Who's driving?"
+   },
+   {
+    "style": "text message",
+    "text": "The rose from Chateau d'Esclans is on sale at Costco, grab 2 pls"
+   },
+   {
+    "style": "press release",
+    "text": "Willow Creek Vineyards in Oregon's Willamette Valley announces the release of its 2022 Pinot Noir, aged 14 months in French oak."
+   },
+   {
+    "style": "press release",
+    "text": "Chateau Margaux unveils a new cellar and visitor center, marking a new chapter for the Bordeaux first growth."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Chateau Montelena change wine history? A: Its 1973 Chardonnay beat the French at the 1976 Judgment of Paris tasting. Nobody expected California to win."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why plant vines on the slopes of Etna? A: Volcanic soil, old Nerello Mascalese vines, and huge temperature swings. Our estate sits at 900 meters."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: At Penfolds' Magill Estate in Adelaide, book the cellar tour; you can taste wine straight from the barrel room."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Marques de Riscal in Rioja? Reserve lunch at the hotel restaurant and take the guided cellar walk first."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Frost Ravages Burgundy Harvest - Domaine de la Romanee-Conti lost nearly half its grapes after a late April frost, the owners said."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Finger Lakes Winemaker Takes Top Prize - Dr. Konstantin Frank's dry Riesling was named best in show at a New York competition."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "On our honeymoon we got lost in Tuscany and ended up at a tiny family estate. The grandmother poured us Chianti from a jug and wouldn't take money."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I picked grapes one autumn at Cloudy Bay in Marlborough. Sticky hands for six weeks, and I still can't drink Sauvignon Blanc without smiling."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Napa winery's 1973 Cabernet won the red wine category at the 1976 Judgment of Paris? Answer: Stag's Leap Wine Cellars."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Champagne house is named for a widow credited with inventing riddling? (Veuve Clicquot)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Clara, we joined the wine club at Ridge Vineyards! First shipment of Monte Bello arrives in March; you're invited to the opening."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dave, booked a tasting at Kanonkop in Stellenbosch for our Cape Town trip. Their Pinotage is legendary, apparently."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Wine press, Schloss Johannisberg, Rheingau, 18th century. The estate is credited with discovering late-harvest Riesling in 1775, when the harvest courier arrived late."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bottle of 1787 Chateau Lafite, said to bear Thomas Jefferson's initials. The Pauillac estate has produced wine since the 17th century."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight's broadcast is brought to you by Barefoot Cellars. And look at that - fans popping corks in the bleachers. Not sure that's allowed."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Line four, Marco from Sonoma, says his family's vineyard took a gold medal last week. Congrats Marco, send us a bottle!"
+   }
+  ],
+  "topic:Library": [
+   {
+    "style": "text message",
+    "text": "Meet me at the Bodleian at 2, I'm in the Radcliffe Camera, top floor"
+   },
+   {
+    "style": "text message",
+    "text": "NYPL card renewed!! Free Libby audiobooks again, my commute is saved"
+   },
+   {
+    "style": "press release",
+    "text": "The Brookfield Public Library will reopen its renovated Main Branch on Saturday, featuring a maker space, a children's reading garden and extended evening hours."
+   },
+   {
+    "style": "press release",
+    "text": "The Library of Congress announces it has acquired the personal papers of a celebrated jazz composer, now open to researchers."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's special about the Long Room at Trinity College? A: Two hundred thousand of Dublin's oldest books under a barrel-vaulted ceiling, plus the Book of Kells downstairs."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Andrew Carnegie fund so many reading rooms? A: As a poor boy he borrowed books from a local colonel's collection. He wanted to give that to everyone."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: At the British Library, register for a Reader Pass online first, then bring ID and proof of address to the desk."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting the Admont Abbey reading hall in Austria? Go in the morning, when the light through the windows hits the gilded shelves."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Bibliotheca Alexandrina Opens - Egypt inaugurated a vast modern library Tuesday, a nod to the legendary ancient one that burned centuries ago."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Overdue Book Returned After 82 Years - The Cedar Falls Public Library received a copy of 'Treasure Island' checked out in 1941, with a note of apology."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was ten our town's bookmobile came every Thursday. Mrs. Ortiz saved every new Nancy Drew for me under the counter."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I wrote my whole dissertation in the Rose Main Reading Room on 42nd Street. Those lion statues out front felt like old friends by the end."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Washington, D.C. institution, founded in 1800, is the largest library in the world by shelf space? Answer: The Library of Congress."
+   },
+   {
+    "style": "trivia question",
+    "text": "What famous ancient collection was supposedly founded under Ptolemy I in Egypt? (The Library of Alexandria)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sophie, the Morgan in New York has its Gutenberg Bible on display this month. Want to go Saturday?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Aaron, I got a reader card for the Bibliotheque nationale. The oval reading room at Richelieu is stunning."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Card catalog drawer, Boston Public Library, c. 1900. It was the first large free municipal lending collection in the U.S., opened in 1854."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Clay tablets from the collection of Ashurbanipal, Nineveh, 7th century BCE, among the earliest organized archives of written texts."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Before the game, a shout-out to the Springfield Public Library summer reading kids - 500 of them in the stands tonight!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Seattle Central branch looks like a crumpled glass box. Love it or hate it, folks, you've got to admit it's something."
+   }
+  ],
+  "topic:School": [
+   {
+    "style": "text message",
+    "text": "Parent-teacher night at Lincoln Elementary is Thurs 6pm, can u pick up Emma after?"
+   },
+   {
+    "style": "text message",
+    "text": "Ms. Park says Westview Middle is closed tmrw for snow!!! no math test"
+   },
+   {
+    "style": "press release",
+    "text": "Riverside High is proud to announce that its robotics team will compete at the national championship in Houston this April."
+   },
+   {
+    "style": "press release",
+    "text": "Phillips Exeter Academy announced a new need-blind admissions policy for domestic applicants beginning next fall."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's different about Summerhill? A: Founded by A.S. Neill in 1921, it lets children decide whether to attend lessons. Most eventually do."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you turn Maple Grove Elementary around? A: Breakfast for every kid, reading tutors after lunch, and teachers who stayed more than a year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: For kindergarten registration at Oak Hill Primary, bring your child's birth certificate, immunization record and two proofs of address."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Touring a Montessori program? Watch the three-to-six classroom for twenty minutes; you'll see how kids choose their own work."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Little Rock Central Marks Integration Anniversary - Members of the Little Rock Nine returned to the building where they faced mobs in 1957."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rural Montana Academy Graduates Class of Three - All three seniors at Elk Creek received diplomas Saturday in the one-room schoolhouse."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first week at St. Mary's, a nun caught me passing notes and made me read mine to the class. It was about her. Worst day ever."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We had one teacher for all eight grades in our little prairie classroom in Saskatchewan. The older kids taught the little ones to read."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English boarding school, founded in 1440 by Henry VI, has educated 20 British prime ministers? Answer: Eton College."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Arkansas high school became a symbol of desegregation in 1957? (Little Rock Central)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dana, Jamal got into Bronx Science! The test prep paid off. We're taking him out for ramen tonight."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Lou, the reunion for Westlake's class of '96 is in June. Remember Mr. Kaplan's chemistry fires?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Desk and slate from the Oakwood one-room schoolhouse, Ohio, 1890. Students of all ages shared a single classroom heated by a wood stove."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Uniform blazer of Gordonstoun, the Scottish boarding school founded in 1934 by Kurt Hahn, known for its outdoor expeditions."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Friday night lights, folks, and Westfield High leads Central 21-14! The marching band's on the field and the student section is rocking!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Shout-out to the Jefferson Middle School choir, who sang the anthem tonight. Beautiful job, kids."
+   }
+  ],
+  "topic:University": [
+   {
+    "style": "text message",
+    "text": "Got into Michigan!!! Go Blue!! Mom is already buying the sweatshirt"
+   },
+   {
+    "style": "text message",
+    "text": "Oxford interview tmrw, they're gonna ask about Kant, pray for me"
+   },
+   {
+    "style": "press release",
+    "text": "Stanford University today announced free tuition for undergraduates from families earning under $150,000 a year."
+   },
+   {
+    "style": "press release",
+    "text": "The University of Cape Town has again been ranked first in Africa in the Times Higher Education rankings."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Bologna special? A: Founded in 1088, it's the oldest continuously operating university in the Western world. Students have argued in these halls for nine centuries."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you choose McGill over Toronto? A: Montreal, honestly. And the medicine faculty. But mostly Montreal."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Visiting Harvard Yard? Rubbing the foot of the John Harvard statue is a tourist ritual; students know what happens to it at night."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Applying to ETH Zurich? Tuition is low, but you'll need strong math; the first-year exams weed out a lot of people."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "MIT Unveils Record Fusion Magnet - Researchers at the Cambridge institute said Thursday they had built the strongest high-temperature superconducting magnet of its kind."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Todai Admits Record Number of Women - The University of Tokyo said women make up about a quarter of its incoming class, still far behind global peers."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I remember moving into my dorm at Berkeley, the Campanile chiming, someone protesting on Sproul Plaza on day one. I knew I'd found my place."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather studied at Heidelberg before the war. He kept his faded red student cap on his bookshelf his whole life."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Ivy League institution, founded in 1636, is the oldest in the United States? Answer: Harvard."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Spanish university, founded in 1218, is among the oldest in Europe? (Salamanca)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ines, I'm officially a Cambridge PhD student! King's College, no less. Come visit and we'll go punting on the Cam."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dev, the University of Melbourne campus is gorgeous. Got lost three times looking for the law building."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founding charter of Charles University, Prague, issued by Emperor Charles IV in 1348, establishing the first university in Central Europe."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Rowing oar, Oxford University Boat Club, 1829. The first Boat Race against Cambridge was rowed at Henley that year."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "College hoops tonight: Gonzaga, the little Jesuit campus in Spokane, takes on Duke at 9 Eastern. Can the Zags do it again?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says Notre Dame should finally join a conference. Kyle, buddy, the Irish do things their own way in South Bend."
+   }
+  ],
+  "topic:MythologicalFigure": [
+   {
+    "style": "text message",
+    "text": "Watching that Hercules doc and now I'm obsessed with the 12 labors lol, the stables one is gross"
+   },
+   {
+    "style": "text message",
+    "text": "Babe I named the cat Loki bc he's a little trickster and he just knocked my coffee over"
+   },
+   {
+    "style": "press release",
+    "text": "The National Theatre announces a new staging of 'Medea', following the sorceress from Colchis as she takes revenge on Jason."
+   },
+   {
+    "style": "press release",
+    "text": "The museum will open 'Isis and Osiris', an exhibition tracing the Egyptian story of death and rebirth, on March 4."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does Prometheus resonate with writers? A: He stole fire for humanity and was chained to a rock for it. Every rebel sees himself in him."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Who is Anansi? A: A spider trickster from Akan stories in Ghana. He won all the world's stories from the sky god by outwitting him."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Telling the tale of Persephone to kids? Use pomegranate seeds as a prop to explain why winter comes each year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Drawing Thor for your comic? Keep Mjolnir short-handled, as the Norse sources say, because Loki's meddling left the handle stubby."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Statue of Athena Unearthed Near Corinth - Archaeologists found a marble figure of the goddess of wisdom, still holding her shield, with an owl at her feet."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Asteroid Named for Quetzalcoatl - Astronomers honored the feathered serpent of Aztec belief by naming a near-Earth rock after him."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My yiayia told me about Odysseus every night. Ten years to get home! She said that's why I should never complain about traffic."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In Hawaii a guide told us Pele lives in Kilauea, and if you take lava rock home you'll get bad luck. My friend mailed hers back."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In Greek myth, who flew too close to the sun on wings of wax and feathers? Answer: Icarus."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Norse god gave up an eye at Mimir's well to gain wisdom? (Odin)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Zoe, at the museum in Naples I saw the Farnese Hercules, all muscle, leaning on his club. You'd love it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Max, for your D&D campaign, why not use Baba Yaga? Chicken-legged hut, iron teeth, the whole thing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bronze statuette of Anubis, Egypt, Late Period. The jackal-headed guardian oversaw embalming and weighed the hearts of the dead."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Red-figure vase, Athens, c. 480 BCE, showing Perseus holding the severed head of Medusa while Athena looks on."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Hydra is the best monster in all of myth. Cut off one head, two grow back. Jim, that's tonight's opposing defense, my friend."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Story hour on the radio: tonight, Gilgamesh and his friend Enkidu set off to fight Humbaba in the Cedar Forest."
+   }
+  ],
+  "topic:SoapCharacter": [
+   {
+    "style": "text message",
+    "text": "DID U SEE Phil Mitchell last night?! He's back in the Queen Vic like nothing happened"
+   },
+   {
+    "style": "text message",
+    "text": "Sami Brady is the worst and I love her. Days is unhinged this week"
+   },
+   {
+    "style": "press release",
+    "text": "ABC announces that Susan Lucci will return as Erica Kane for a one-episode special celebrating the legacy of 'All My Children'."
+   },
+   {
+    "style": "press release",
+    "text": "ITV confirms that Ken Barlow, Coronation Street's longest-serving resident, will marry again in the Christmas episode."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the secret of playing Victor Newman for 40 years? A: He's a villain who loves his family. That contradiction keeps him alive."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Did you know Dot Cotton would become iconic? A: No. She was a chain-smoking launderette worker who quoted the Bible. Viewers adored her."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Catching up on Stefano DiMera? Just assume he's faked his death at least twice and you'll follow along fine."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to 'Neighbours'? Start with Scott and Charlene's 1987 wedding episode; it explains why Ramsay Street mattered to a generation."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Luke and Laura's Wedding Draws 30 Million - The General Hospital nuptials became the most-watched hour in daytime TV history."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Dirty Den Returns From the Dead - EastEnders stunned viewers as the landlord, presumed shot in 1989, walked back into Albert Square."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mum never missed Hilda Ogden. When Hilda left Coronation Street in '87, mum cried like she'd lost a neighbour."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In college our whole dorm watched 'Days' at one o'clock. When Marlena got possessed, someone actually screamed."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 'Dallas' villain was shot in a 1980 cliffhanger that made 'Who shot J.R.?' a global question? Answer: J.R. Ewing."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which 'Home and Away' character, played by Ray Meagher since 1988, is famous for saying 'Stone the flamin' crows'? (Alf Stewart)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tina, you won't believe it, Brooke Logan's latest wedding on 'The Bold and the Beautiful' finally aired. Still not over it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo, Pat Butcher's earrings are in that charity auction! Should we bid? They're enormous."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Costume worn by Alexis Carrington Colby in 'Dynasty', 1985: shoulder pads, black hat with veil, and pearls, the uniform of television's most glamorous schemer."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original Rovers Return bar, 'Coronation Street'. Bet Lynch, with her leopard print and towering hair, poured pints behind it for decades."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Yankees' front office has more drama than Sonny Corinthos. Lot of shootings in Port Charles, Frank, I don't think it's that bad."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Talk radio hour: listeners, who's the greatest villain, Victor Newman or Stefano DiMera? Lines are lit up."
+   }
+  ],
+  "topic:AmericanFootballPlayer": [
+   {
+    "style": "text message",
+    "text": "Mahomes no-look pass again?! This man is not human"
+   },
+   {
+    "style": "text message",
+    "text": "Fantasy draft tmrw, should I take Christian McCaffrey first or Justin Jefferson"
+   },
+   {
+    "style": "press release",
+    "text": "The Green Bay Packers announced today that they have signed linebacker Marcus Delaney to a four-year contract extension."
+   },
+   {
+    "style": "press release",
+    "text": "The Pro Football Hall of Fame welcomes Calvin 'Megatron' Johnson, the Detroit receiver who set a single-season record with 1,964 yards."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Tom, what's kept you going at 43? A: Diet, sleep, and loving the game. I still get nervous before every kickoff."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Walter, how'd you get the nickname Sweetness? A: Teammates at Jackson State gave it to me. Something about how I ran."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Jerry Rice: run your routes at full speed in practice, every rep, so game days feel slow."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to tackle like Troy Polamalu? Keep your head up and hit with the shoulder, never lead with the helmet."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hamlin Returns to Field - Bills safety Damar Hamlin, who suffered cardiac arrest during a Monday night game, took the field again for the first time."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie Running Back Breaks Franchise Record - Andre Wells rushed for 241 yards Sunday, the most ever by a Jaguars player."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I met Barry Sanders at a Detroit diner in '98. Super quiet, tipped great, and signed my napkin. He retired the next summer."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad drove us to Canton just to see Jim Brown's bust. He talked about watching him run over linebackers like they were kids."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which quarterback has won the most Super Bowls, with seven rings? Answer: Tom Brady."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which 1985 Bears defensive lineman, nicknamed 'The Refrigerator', scored a touchdown in Super Bowl XX? (William Perry)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mark, got two tickets to see Lamar Jackson play the Steelers on Sunday. Want one?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Liz, my nephew got a scholarship to play linebacker at Ohio State! Next Ray Lewis, according to my sister."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jersey worn by Jim Thorpe, Canton Bulldogs, 1915. An Olympic champion, Thorpe was the first big-name star of pro football."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Helmet of Joe Namath, New York Jets, Super Bowl III, 1969. 'Broadway Joe' guaranteed a win over the Colts and delivered."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Third and long, Allen drops back, scrambles left - he's got Diggs! Thirty-eight yards, first down Buffalo, and this crowd is unbelievable!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, is Aaron Donald the best defensive tackle ever? Pete from Pittsburgh says nobody touches Mean Joe Greene. Go ahead, Pete."
+   }
+  ],
+  "topic:Band": [
+   {
+    "style": "text message",
+    "text": "Radiohead tickets went on sale and sold out in 4 min. I hate it here"
+   },
+   {
+    "style": "text message",
+    "text": "Bro the new Arctic Monkeys album is so slow but I can't stop listening"
+   },
+   {
+    "style": "press release",
+    "text": "The Velvet Harbors announce a 30-date North American tour supporting their third album, 'Low Tide', kicking off in Seattle on April 2."
+   },
+   {
+    "style": "press release",
+    "text": "ABBA Voyage has extended its London residency, with digital avatars of the four Swedish members performing nightly."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did U2 meet? A: Larry Mullen pinned a note on his Dublin school noticeboard looking for musicians. Bono, Edge and Adam showed up."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you split in 1970? A: We'd been the Beatles since we were teenagers. Everyone wanted to be themselves for a while."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Going to a Phish show? Learn the crowd 'woo' in 'Harry Hood' and bring glow sticks for the second set."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Starting a garage group? Do what the Ramones did: three chords, short songs, matching leather jackets, and play fast."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Led Zeppelin Reunite for One Night - The surviving members played London's O2 Arena, with John Bonham's son Jason on drums."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Local Punk Quartet Wins Battle of the Bands - Seattle's Dish Rattlers took first place Saturday and a slot at the summer festival."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I saw Nirvana in a tiny club in '91, before Nevermind blew up. Maybe eighty people. Kurt smashed a guitar in the third song."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My parents met at a Grateful Dead show in 1977. Dad still says Cornell that night was the best concert ever played."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Swedish quartet won Eurovision in 1974 with 'Waterloo'? Answer: ABBA."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which British rock group's drummer, Keith Moon, was famous for wrecking hotel rooms? (The Who)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rachel, Coldplay added a second night at Wembley. I got us four tickets, floor seats! Bring the light-up wristband."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mo, my cousin's group The Pale Lanterns is playing the Black Cat on Friday. They sound like early R.E.M. You in?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ringo Starr's Ludwig drum kit, Ed Sullivan Show, 1964. Some 73 million Americans watched the Beatles' first live U.S. television appearance."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Stage costume, Queen, Live Aid 1985. Freddie Mercury's white vest and jeans became iconic after the group's 20-minute set at Wembley."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "That was Pearl Jam, live at the Gorge in '98. Up next, the Foo Fighters, then your calls on the best grunge album."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Rolling Stones should've retired thirty years ago. Rick, Mick Jagger is 80 and still runs around more than you do."
+   }
+  ],
+  "topic:SpeedwayRider": [
+   {
+    "style": "text message",
+    "text": "Zmarzlik won AGAIN in Torun, that's his 5th world title?? Poland is going nuts"
+   },
+   {
+    "style": "text message",
+    "text": "Going to watch the Wolverhampton Wolves tonight, Woffinden's back in the lineup"
+   },
+   {
+    "style": "press release",
+    "text": "Belle Vue Aces are delighted to confirm the signing of Danish rider Mikkel Andersen for the coming season, completing their seven-man team."
+   },
+   {
+    "style": "press release",
+    "text": "Organisers of the Grand Prix series confirm Tai Woffinden will receive a wild card for the Cardiff round after recovering from his back injury."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Tony, how did you win six world titles? A: Preparation. My bikes were perfect, my starts were sharp, and I never stopped thinking during the four laps."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Greg, what's it like still racing at 50? A: Same as at 20. The tapes go up, you throw the bike sideways into turn one and hope."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Ivan Mauger: at the start, watch the tapes, not the starter. React to movement and keep your weight forward over the front wheel."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to racing on shale? Set your clutch so it bites late, and practise slides at low speed before your first heat."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pedersen Crashes Out in Gorzow - Three-time world champion Nicki Pedersen was taken to hospital after a heavy fall in heat seven Saturday night."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teenage Australian Wins Under-21 World Crown - Max Fricke held off two Poles in the final heat to take gold in Pardubice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad took me to see Peter Craven race at Belle Vue in 1962. Little man, no brakes, sliding sideways through the cinders. I was hooked forever."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I rode a season in the National League in the 90s. Broke my collarbone twice. One whiff of methanol and I'm nineteen again."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which New Zealander won six individual world titles on shale and was famed for meticulous bike preparation? Answer: Ivan Mauger."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Swedish rider won six world titles between 1994 and 2005, equalling Mauger's record? (Tony Rickardsson)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kasia, I got tickets for the Grand Prix in Warsaw! Zmarzlik at the National Stadium with 50,000 fans, it will be crazy."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Gary, did you see Jason Crump's interview? Says his dad Phil had him on a bike at four. Explains a lot."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jawa 500cc machine ridden by Ole Olsen, world champion 1971. No brakes, one gear, methanol fuel: the classic four-lap speedway bike."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Race jacket of Barry Briggs, Wimbledon Dons, 1958. The New Zealander won four world titles and helped popularize dirt-track racing across Europe."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tapes up! Lindgren gets the jump, Holder on the outside - oh, he's around him on turn two! Heat twelve, and the Lions are back in this meeting!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, the Dons back at Plough Lane? Nope, just a rumour, Terry. But wouldn't it be lovely to hear the bikes in Wimbledon again."
+   }
+  ],
+  "topic:ClassicalMusicArtist": [
+   {
+    "style": "text message",
+    "text": "Yuja Wang at Carnegie tonight!! Her dress + Prokofiev, I'm not ok"
+   },
+   {
+    "style": "text message",
+    "text": "Can't study w/o Glenn Gould's Goldberg Variations on loop. Yes, the humming too"
+   },
+   {
+    "style": "press release",
+    "text": "The Chicago Symphony Orchestra announces that pianist Mitsuko Uchida will perform all five Beethoven concertos over two weekends in March."
+   },
+   {
+    "style": "press release",
+    "text": "Deutsche Grammophon is proud to release the debut recording of Korean cellist Han Ji-woo, featuring the Dvorak Concerto."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Yo-Yo, why play Bach in refugee camps? A: Music doesn't fix borders, but for an hour people can feel human together. That matters."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Itzhak, how do you perform after polio? A: Seated. The violin doesn't care how you got to the chair."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Martha Argerich's circle: practice slowly at first, then trust your fingers on stage. She rarely practiced in front of anyone."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Learning guitar the classical way? Andres Segovia insisted on daily scales; start with his major and minor scales before any repertoire."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Du Pre's Davidov Cello Finds New Voice - The instrument once played by Jacqueline du Pre is now heard in concert halls in the hands of Yo-Yo Ma."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Pianist Wins Van Cliburn - Yunchan Lim, 18, became the youngest gold medalist in the competition's history Saturday in Fort Worth."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a page-turner when Vladimir Horowitz played Moscow in 1986. My hands shook so badly. He winked at me before the Scarlatti."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My daughter heard Hilary Hahn play once and asked for violin lessons the next morning. That was nine years ago."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which cellist, wife of Daniel Barenboim, made a legendary 1965 recording of the Elgar Concerto? Answer: Jacqueline du Pre."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Venezuelan conductor, trained in El Sistema, became music director of the Los Angeles Philharmonic in 2009? (Gustavo Dudamel)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Elena, Sheku Kanneh-Mason is playing Wigmore Hall in May. He played at the royal wedding, remember? Tickets are going fast."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Bill, found Maria Callas's 1953 'Tosca' on vinyl at the market for five pounds. The scratches are worth it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Steinway used by Glenn Gould for his 1981 recording of the Goldberg Variations, shown with the low folding chair he insisted on."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Stradivarius violin, 1713, played by Joshua Bell, who once performed with it in a Washington metro station and was largely ignored."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "This is Classic FM, and that was Lang Lang with Liszt's 'La Campanella.' Next, Anne-Sophie Mutter plays Vivaldi's 'Summer.'"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the anthem tonight is performed by Renee Fleming, who sang at the Super Bowl too. Goosebumps all over the ballpark."
+   }
+  ],
+  "topic:Legislature": [
+   {
+    "style": "text message",
+    "text": "Bundestag vote is today on the pension thing, Papa is glued to the TV"
+   },
+   {
+    "style": "text message",
+    "text": "lol Nebraska has the only one-house state legislature, learned that in civics today"
+   },
+   {
+    "style": "press release",
+    "text": "The Scottish Parliament will open its doors at Holyrood for a free festival of democracy on September 1, with tours of the debating chamber."
+   },
+   {
+    "style": "press release",
+    "text": "The Texas Legislature has adjourned its 140-day regular session after passing a two-year state budget of more than $300 billion."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Althing so special to Icelanders? A: It first met in 930 at Thingvellir, outdoors, beside a rock. It's one of the oldest assemblies on earth."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like being new in the Lok Sabha? A: Five hundred forty-three members, everyone shouting, and you're from a small district in Kerala. Humbling."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: To watch Prime Minister's Questions in the House of Commons, queue at the Cromwell Green entrance early on Wednesday morning."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting the Reichstag building? Book the free dome visit online and look down through the glass into the plenary chamber."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Knesset Dissolves, Israel Heads to Fifth Election - Lawmakers voted 92-0 to disband, triggering another vote in under four years."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "European Parliament Approves AI Act - MEPs in Strasbourg backed the landmark law by a wide margin Wednesday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I interned at the Minnesota State Capitol one winter. A senator from Duluth taught me to read a fiscal note in my first week."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "On Tynwald Day on the Isle of Man, the new laws were read aloud in English and Manx on a hill. Felt like a thousand years ago."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is Sweden's national parliament called? Answer: The Riksdag."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which country's parliament, the Storting, meets in Oslo? (Norway)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ali, got a gallery pass for the Senedd in Cardiff tomorrow. They're debating the 20 mph speed limit, should be lively."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jane, the Dail is back next week, and our TD says the housing bill finally gets a vote."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ceremonial mace of the House of Commons of Canada. The Speaker's authority is symbolized by this gilded staff, placed on the table during each sitting."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Woolsack, House of Lords, London. The Lord Speaker sits on this wool-stuffed cushion, a reminder of medieval England's wealth in wool."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the Florida House just passed the stadium funding bill, 78 to 39. The Rays might finally get their new ballpark."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says Congress should spend less time on hearings about college sports and more on potholes. Hard to argue, Bob."
+   }
+  ],
+  "topic:MilitaryUnit": [
+   {
+    "style": "text message",
+    "text": "Grandpa's reunion w/ the 101st Airborne vets is Sat, he wants us all there"
+   },
+   {
+    "style": "text message",
+    "text": "Bro got his maroon beret, officially in the Parachute Regiment, so proud"
+   },
+   {
+    "style": "press release",
+    "text": "The 82nd Airborne Division will hold a public ceremony at Fort Liberty on Friday to welcome soldiers home from a nine-month deployment."
+   },
+   {
+    "style": "press release",
+    "text": "The Brigade of Gurkhas marks more than two centuries of service to the Crown with parades in Kathmandu and London this spring."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What made the Tuskegee Airmen extraordinary? A: Black pilots in a segregated military who flew escort missions over Europe with a superb record, then came home to Jim Crow."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the French Foreign Legion so famous? A: Recruits from every nation, a new name if you want it, and the motto 'Legio Patria Nostra'."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: At the Go For Broke monument in Los Angeles, read the names of the 442nd Regimental Combat Team, the most decorated American unit of its size."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Researching a relative in the Black Watch? Start with the regimental museum in Perth; they hold records going back to 1739."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Easy Company's Last Veteran Dies at 98 - The paratrooper, whose company was portrayed in 'Band of Brothers,' jumped into Normandy on D-Day."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Marine Battalion Returns From Pacific Exercise - 1st Battalion, 3rd Marines landed at Kaneohe Bay after six weeks of drills with allied forces."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad was in the 1st Cavalry in Vietnam. He never talked about it, except to say the helicopters were the loudest thing he ever heard."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I joined the Coldstream Guards at 18. First week, the sergeant made me brush my bearskin until it looked perfect. Took hours."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which elite British regiment, founded in 1941 by David Stirling, has the motto 'Who Dares Wins'? Answer: The Special Air Service."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which RAF squadron carried out the 1943 'Dambusters' raid? (No. 617 Squadron)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fran, found Great-Uncle Joe's papers. He served with the Fighting 69th from New York in France in 1918. Amazing."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, the Royal Scots Dragoon Guards pipes and drums are playing Edinburgh Castle Saturday. Want to come?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Regimental colours of the 54th Massachusetts Infantry, 1863. One of the first Black regiments of the Union Army, it led the assault on Fort Wagner."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Flight jacket, 'Flying Tigers', 1st American Volunteer Group, China, 1942. A blood chit sewn on the back asked locals to help downed pilots."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Before kickoff, the Golden Knights, the Army's parachute team, are dropping into the stadium with the game ball. Here they come, folks!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Shout-out to the 10th Mountain Division from Fort Drum, two hundred soldiers in the stands tonight. Thank you for your service."
+   }
+  ],
+  "topic:PoliticalParty": [
+   {
+    "style": "text message",
+    "text": "Labour canvassers on our street again, I hid behind the sofa lol"
+   },
+   {
+    "style": "text message",
+    "text": "Did u register as a Democrat or independent? Primary deadline is Friday"
+   },
+   {
+    "style": "press release",
+    "text": "The Green Party of Canada announces its candidate for Saanich-Gulf Islands, a marine biologist and longtime local organizer."
+   },
+   {
+    "style": "press release",
+    "text": "The Liberal Democrats will launch their election manifesto in Bath on Tuesday, promising to fix care homes and clean up rivers."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the Bharatiya Janata Party grow so fast? A: Grassroots organization, a clear ideology, and a strong leader at the top."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What does the CDU stand for in Germany? A: Christian Democratic Union. Centre-right, home of Adenauer and Merkel, and it led most postwar governments."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: To join the Scottish National Party, sign up online; members get a vote in leadership contests."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to volunteer for the Republicans in your county? Show up at the local committee meeting; they always need poll watchers."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "ANC Loses Majority for First Time - South Africa's governing movement fell below 50 percent of the vote, forcing it into coalition talks."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pirate Party Wins Seats in Iceland - The digital-rights movement took nearly 15 percent of the vote Saturday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother joined Labour in 1945 and handed out leaflets for Attlee. She voted for them every election until she was 102."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "At my first caucus in Iowa, a Democratic neighbor brought cookies to win over undecideds. It worked on me."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Mexican party governed for 71 straight years until 2000? Answer: The PRI, the Institutional Revolutionary Party."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which British party is nicknamed the Tories? (The Conservatives)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mia, the Social Democrats asked me to run for city council! Can I count on you to help hang posters?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Leo, I just joined the Greens. Climate's my thing, and our local branch needs volunteers for the bike lane petition."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Campaign banner, Whig Party, 1840: 'Tippecanoe and Tyler Too.' William Henry Harrison's log-cabin campaign changed American electioneering."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Membership card of the Indian National Congress, 1930s, belonging to a delegate who marched with Gandhi to Dandi."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Talk hour: the Libertarians want to scrap the stadium tax. Caller Steve, you're on. Are you voting for them?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the Republican convention's in town, so traffic around the arena tonight will be a nightmare. Leave early."
+   }
+  ],
+  "topic:PublicTransitSystem": [
+   {
+    "style": "text message",
+    "text": "MTA delays AGAIN, L train stuck under the river, gonna be late"
+   },
+   {
+    "style": "text message",
+    "text": "Tap your Oyster card, don't forget, ok see u at King's Cross"
+   },
+   {
+    "style": "press release",
+    "text": "Metro Transit announces the opening of the Blue Line extension to Brooklyn Park on Monday, with free rides all weekend."
+   },
+   {
+    "style": "press release",
+    "text": "BART will install new fare gates at all its stations by year's end to reduce fare evasion across the Bay Area."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Tokyo's metro so punctual? A: Obsessive maintenance, staff pointing and calling at every step, and a culture where a one-minute delay earns an apology slip."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's unique about Medellin's Metrocable? A: Gondolas linking hillside neighborhoods to the metro. Commutes dropped from two hours to twenty minutes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: In Paris, get a Navigo Easy pass and load ticket bundles; it works on the Metro, the RER inside the city, and buses."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Riding the Chicago 'L'? Pay with the Ventra app, and stand to the right on the escalators at Clark/Lake."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hong Kong MTR Extends Line Across Harbour - The East Rail extension now runs under Victoria Harbour, cutting travel from the New Territories by 15 minutes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Moscow Metro Unveils Station Named for Poet - Riders packed the new marble-and-mosaic stop Saturday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I first rode the Washington Metro, I loved those waffle ceilings. Then the escalator broke and I climbed it all at Wheaton."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In Singapore the MRT is so clean I dropped a sandwich and honestly considered eating it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which city opened the world's first underground railway in 1863? Answer: London, with the Metropolitan Railway."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which South American city's Subte, opened in 1913, was Latin America's first subway? (Buenos Aires)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lucy, take the SkyTrain from YVR to Waterfront, it's 25 minutes. I'll meet you at the station."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jon, Seoul's subway has Wi-Fi everywhere and heated seats in winter. I may never come home."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Token booth, New York City Transit, c. 1970. Riders bought brass subway tokens here until the MetroCard replaced them in 2003."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mosaic panel, Komsomolskaya station, Moscow Metro, 1952. Stalin-era stations were designed as 'palaces for the people'."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, MARTA's running extra trains after the game tonight, so skip the parking nightmare and ride to Five Points."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says Muni in San Francisco is late every single morning. Kevin, I'm with you, the N Judah is a lifestyle."
+   }
+  ],
+  "topic:TradeUnion": [
+   {
+    "style": "text message",
+    "text": "Teamsters rally at the UPS hub at 6, bring water and a sign"
+   },
+   {
+    "style": "text message",
+    "text": "Did the nurses' union vote on the contract? Mom says strike if they lowball again"
+   },
+   {
+    "style": "press release",
+    "text": "The United Auto Workers today announced a tentative agreement with Ford that includes a 25 percent wage increase over four years."
+   },
+   {
+    "style": "press release",
+    "text": "UNISON, the UK's largest public service union, confirms that members in 12 hospitals have voted for industrial action."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did Solidarity achieve in Poland? A: Shipyard workers in Gdansk formed the first independent labor organization in the Soviet bloc. It helped end communism."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did SAG-AFTRA strike in 2023? A: Streaming residuals, and protection against AI copying performers' faces and voices."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Joining the IBEW apprenticeship? Apply through your local's training center; you'll earn while you learn for about five years."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Thinking of organizing with the Communications Workers of America? Start by quietly asking coworkers what they'd change."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Writers Guild Ends 148-Day Strike - Hollywood screenwriters ratified a deal with gains on pay and AI protections."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Dockworkers Shut East Coast Ports - The International Longshoremen's Association walked out at midnight from Maine to Texas."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad was with the United Mine Workers in West Virginia. In '78 we lived on soup for three months during the strike. He never crossed the line."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I joined the teachers' federation local, the old-timers took me to lunch and told me to always read my contract."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which labor leader co-founded the United Farm Workers with Dolores Huerta in 1962? Answer: Cesar Chavez."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which American union, founded in 1903, takes its name from drivers of horse teams? (The Teamsters)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, the nurses' federation got us a 15 percent rise! Drinks are on me Friday."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Patrick, IG Metall is negotiating again in Stuttgart. Your plant might get the shorter week."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Banner of the Amalgamated Society of Engineers, London, 1851. Hand-painted banners like this were carried proudly on marches."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Picket sign, Lawrence Textile Strike, 1912. Women organized by the Industrial Workers of the World demanded 'Bread and Roses'."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, if the players' association doesn't reach a deal by midnight, we're looking at a lockout. No baseball in April."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Detroit, a 30-year UAW man, says the stadium workers deserve the same raise. Good point, Mike."
+   }
+  ],
+  "topic:SportsTeamMember": [
+   {
+    "style": "text message",
+    "text": "Did u see the clip of Brandi Chastain's penalty in '99? Whole team piled on her, iconic"
+   },
+   {
+    "style": "text message",
+    "text": "Lena made the varsity volleyball squad!! Starting setter as a sophomore"
+   },
+   {
+    "style": "press release",
+    "text": "Manchester City confirms the signing of midfielder Rodrigo Hernandez on a five-year contract. He will wear the number 16 shirt."
+   },
+   {
+    "style": "press release",
+    "text": "USA Basketball has named its 12-player women's roster for the Olympics, including veteran guard Diana Taurasi in her sixth Games."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Megan, what's it like being part of a World Cup-winning squad? A: You remember the locker room more than the goals. Those women are family."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Christian, how did it feel to be the college kid on the '92 Dream Team? A: I mostly watched legends practice. Best seat in the house."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for new squad members: learn everyone's name the first week, carry the kit bags, and never sit in the captain's seat on the team bus."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Trying out for a club rugby side? Show up fit, talk loudly on the field, and volunteer to play out of position if asked."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie Defender Called Up to Canucks - Jonas Halvorsen, 20, joins the roster after injuries left the blue line short."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Kenya Sevens Squad Named for World Series - Selectors kept nine players from last season and added two university standouts."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I played second base for the Toledo Mud Hens one summer in 1979. Never made the bigs, but my teammates still call me every birthday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My brother was the backup goalie for the Sheffield Steelers. He played eleven minutes all season and talks about it like it was the Stanley Cup."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who scored the 'Golden Goal' for Canada's men's hockey team at the 2010 Vancouver Olympics? Answer: Sidney Crosby."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Brazilian forward played for Santos, Barcelona and PSG, and wore number 10 for his national side? (Neymar)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Abby, guess who made the county cricket second XI? Me! Opening bowler. First match is at Taunton next month."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Fred, your old teammate from the Maine Red Claws just signed with a club in Spain. Small world."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jersey worn by Mike Eruzione, captain of the 1980 U.S. Olympic hockey team that beat the Soviet Union in the 'Miracle on Ice'."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Team photograph, Uruguay, 1930 World Cup winners, with captain Jose Nasazzi seated at center holding the trophy."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And a big welcome back to number 23, Tomas Ruiz, who's been out six weeks with that hamstring. The squad looks complete again."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Bulls should trade their sixth man. Ron, he's the glue guy! You don't trade the glue guy."
+   }
+  ],
+  "topic:Ambassador": [
+   {
+    "style": "text message",
+    "text": "Dad's dinner w/ the Japanese ambassador is tonight, I have to wear the itchy dress"
+   },
+   {
+    "style": "text message",
+    "text": "Caroline Kennedy is ambassador to Australia now? Didn't she do Japan before"
+   },
+   {
+    "style": "press release",
+    "text": "The White House announces the nomination of Laura Benton, a career foreign service officer, to serve as U.S. envoy to the Republic of Kenya."
+   },
+   {
+    "style": "press release",
+    "text": "The Embassy of Brazil in Ottawa welcomes Ambassador Ricardo Moura, who presented his credentials to the Governor General on Tuesday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Mr. Kennan, what did you learn in Moscow? A: That Soviet power could be contained, not by war, but by patience. I wrote it all in one long telegram."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's an envoy's typical day in Oslo? A: Morning briefings, a lunch with a minister, an evening reception. And a lot of reading cables."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: When writing to a foreign envoy, use 'His Excellency' or 'Her Excellency' followed by the full name and title."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hoping to meet your country's representative abroad? Most embassies host national-day receptions; register with your consulate to get invited."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Envoy Expelled After Spy Row - Ottawa ordered the diplomat to leave within 72 hours following allegations of interference in local politics."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Samantha Power Sworn In at UN - The former journalist took her seat Monday as America's representative to the United Nations."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather was Ireland's man in Madrid in the 1960s. He always said the job was 90 percent dinners and 10 percent crises."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked as a driver for the Swedish ambassador in Nairobi. Nicest boss I ever had. He learned Swahili just to chat with me."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American founding father served as envoy to France and won crucial support for the Revolution? Answer: Benjamin Franklin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Hollywood child star later became U.S. ambassador to Ghana and Czechoslovakia? (Shirley Temple Black)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Grace, guess who sat next to me at the gala: the Mexican ambassador to Canada! She's lovely and a huge hockey fan."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, Uncle Ray was just confirmed as our envoy to Portugal. Lisbon visit, anyone?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Protective passport issued by Raoul Wallenberg, Swedish diplomat in Budapest, 1944, whose papers saved thousands of Jews from deportation."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Court uniform of Lord Macartney, British envoy to the Qianlong Emperor of China, 1793, whose mission famously refused to kowtow."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the French ambassador's here tonight, and he's dropping the ceremonial puck. Bonsoir, monsieur!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Australian ambassador bounced the first pitch. Mate, it's a cricket country, give him a break."
+   }
+  ],
+  "topic:Architect": [
+   {
+    "style": "text message",
+    "text": "Just walked past the Gehry building downtown, it looks like crumpled foil lol love it"
+   },
+   {
+    "style": "text message",
+    "text": "Zaha Hadid's opera house in Guangzhou is on my bucket list!!"
+   },
+   {
+    "style": "press release",
+    "text": "The Pritzker Prize jury announces that Burkinabe architect Diebedo Francis Kere is this year's laureate, honored for his schools built with local clay."
+   },
+   {
+    "style": "press release",
+    "text": "Studio Linh Tran Architects has been selected to design the new waterfront museum in Da Nang, with construction beginning in spring."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Mr. Pei, why glass for the Louvre pyramid? A: The museum needed a new entrance without hiding the old palace. Glass lets the history show through."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Tadao, why so much concrete? A: Concrete, light and silence. The Church of the Light in Osaka is about those three things."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: Touring Frank Lloyd Wright's Fallingwater? Book the in-depth tour to see the cantilevered terraces up close over Bear Run."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to see Gaudi's work in Barcelona? Buy Sagrada Familia tickets online days ahead and visit Casa Batllo right at opening."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hadid's Studio Wins Tower Commission - The London firm founded by the late Zaha Hadid will design a 60-story tower in Dubai."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Le Corbusier Villa Restored - Villa Savoye near Paris reopened Thursday after a two-year restoration of its white facade and roof garden."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother was a draftsman for Eero Saarinen. She said he'd sketch the TWA terminal on napkins at lunch and hand them to her."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I sat in Philip Johnson's Glass House once on a tour. It was raining, and it felt like being inside the storm."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who designed the Sydney Opera House, though he left the project before it was finished? Answer: Jorn Utzon."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Roman engineer wrote 'De architectura,' saying buildings should be sturdy, useful and beautiful? (Vitruvius)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ruth, finally saw Mies van der Rohe's Barcelona Pavilion. 'Less is more' makes sense when you're standing in it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nick, Bjarke Ingels' ski-slope power plant in Copenhagen is open. We have to go next winter."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Drafting instruments of Christopher Wren, who drew the plans for St Paul's Cathedral after the Great Fire of London in 1666."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "High-backed chair designed by Charles Rennie Mackintosh for the Willow Tea Rooms, Glasgow, 1903. Its tall lattice echoes his interiors."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Look at this place, folks - designed by the same firm that did Yankee Stadium. Retractable roof, and it's open tonight."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says I.M. Pei's Rock and Roll Hall of Fame in Cleveland is the best building in Ohio. Not arguing with you, Dennis."
+   }
+  ],
+  "topic:Astronaut": [
+   {
+    "style": "text message",
+    "text": "Watching Sunita Williams on the ISS livestream, she's floating with a burrito lol"
+   },
+   {
+    "style": "text message",
+    "text": "Chris Hadfield's Space Oddity video is still the best thing ever made"
+   },
+   {
+    "style": "press release",
+    "text": "NASA announces that Navy test pilot Jordan Reyes has been selected for its newest class of astronaut candidates, beginning training in Houston this fall."
+   },
+   {
+    "style": "press release",
+    "text": "The European Space Agency celebrates Samantha Cristoforetti, the first European woman to command the International Space Station."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Buzz, what did the Moon look like? A: Magnificent desolation. Gray dust, black sky, and Earth hanging there like a blue marble."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Peggy, how did you spend 665 days in orbit? A: Lots of science, lots of exercise, and lots of photos of home through the cupola."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Scott Kelly: in zero gravity, tether everything. Lose a pen on the station and you might find it weeks later stuck to an air vent."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Dream of flying to space? Like Mae Jemison, earn a STEM degree, build professional experience, and stay very fit."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Gagarin Orbits Earth - The Soviet pilot became the first human in space Wednesday, circling the planet in 108 minutes aboard Vostok 1."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Sally Ride to Fly on Shuttle - The 31-year-old physicist will become the first American woman in space on Challenger's next mission."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather met John Glenn at a parade in Ohio after his orbit. Said Glenn shook his hand and asked about his farm."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We watched Neil Armstrong step onto the Moon on a black-and-white TV in my aunt's living room. My dad cried. I was six."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first woman in space, in 1963? Answer: Valentina Tereshkova."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Apollo 13 commander radioed 'Houston, we've had a problem'? (Jim Lovell)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kate, Tim Peake is giving a talk at the science museum on Saturday. The kids would love it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jack, saw Gene Cernan's Apollo 17 suit at the Smithsonian. Last man on the Moon, and the lunar dust is still on it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Spacesuit worn by Alan Shepard on Freedom 7, 1961. The first American in space flew a 15-minute suborbital hop and later golfed on the Moon."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Pressure suit of Yang Liwei, 2003, who became China's first person in orbit aboard Shenzhou 5."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the first pitch tonight comes from Mike Massimino, who repaired the Hubble telescope on a spacewalk. Let's see if he can throw a strike."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says Neil Armstrong was the greatest athlete ever. Interesting take, Vic. Can't argue with that landing."
+   }
+  ],
+  "topic:BeautyQueen": [
+   {
+    "style": "text message",
+    "text": "Miss Universe tonight!! Philippines better win, Catriona vibes"
+   },
+   {
+    "style": "text message",
+    "text": "My cousin got 2nd runner-up in Miss Teen Georgia, so proud, she twirled a baton"
+   },
+   {
+    "style": "press release",
+    "text": "The Miss America Organization congratulates Madison Carter, Miss Alabama, newly crowned Miss America, who will spend her year promoting childhood literacy."
+   },
+   {
+    "style": "press release",
+    "text": "Miss World Krystyna Pyszkova of the Czech Republic will visit Mumbai next month to support girls' education programs."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Catriona, what was the lava walk? A: A slow turn on stage, inspired by Mayon Volcano. I practiced it in my apartment in Manila for months."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did winning Miss Venezuela mean to you? A: Everything. In Caracas, the pageant is like the Super Bowl."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from former Miss USA Kenya Moore: in the interview round, answer in three sentences, then smile and stop."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Training for a state pageant? Walk in heels daily, rehearse your talent until it's automatic, and read the news every morning for the interview."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Miss Universe Crowns South Africa's Tunzi - Zozibini Tunzi, 26, won Sunday, praised for her answer on what girls should learn."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Former Pageant Winner Elected Mayor - Laura Kendrick, Miss Ohio 2009, won city hall in Dayton on Tuesday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom was Miss Puerto Rico in 1975. She still keeps the sash in a drawer and puts the crown on every Christmas."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I did hair backstage at Miss Texas once. Forty contestants, ninety cans of hairspray. I could barely breathe."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first Black Miss America, crowned in 1983? Answer: Vanessa Williams."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Miss World 1994 from India went on to Bollywood stardom? (Aishwarya Rai)"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sol, saw Miss Japan's national costume at the pageant last night. A samurai-inspired gown! You'd have loved it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Carmen, your niece is competing for Miss Panama next month. We should go cheer her on."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Crown and sash of Bess Myerson, Miss America 1945, the first Jewish winner, who refused to change her name for the stage."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Evening gown worn by Pia Wurtzbach, Miss Universe 2015, the night the host announced the wrong winner before correcting it."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And the anthem tonight is sung by the reigning Miss Iowa. Let's give her a big hand, folks."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says pageants are outdated. Jill, Miss Universe draws more viewers than our playoff games. Just saying."
+   }
+  ]
+ }
+}

@@ -1,0 +1,2465 @@
+{
+ "bank": "F",
+ "concepts": {
+  "lang:ar": [
+   {
+    "style": "casual social-media post",
+    "text": "صباح الخير يا جماعة! أخيرًا وصلت القهوة الجديدة من اليمن، طعمها خرافي 😍 مين يجي يشرب معي فنجان؟"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "اليوم أول يوم في النادي الرياضي بعد غياب سنة كاملة... رجليّ تؤلمني لكن الحماس عالي! #بداية_جديدة"
+   },
+   {
+    "style": "news-wire report",
+    "text": "عمّان (رويترز) - أعلنت وزارة النقل اليوم الأحد عن افتتاح خط حافلات سريع جديد يربط وسط المدينة بالجامعة الأردنية، ومن المتوقع أن يخدم نحو خمسين ألف راكب يوميًا."
+   },
+   {
+    "style": "news-wire report",
+    "text": "القاهرة - ارتفعت درجات الحرارة في معظم المحافظات المصرية إلى أكثر من أربعين درجة مئوية، ودعت هيئة الأرصاد المواطنين إلى تجنب التعرض المباشر لأشعة الشمس."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- هل حجزت تذاكر القطار إلى الإسكندرية؟\n- نعم، القطار يغادر الساعة الثامنة صباحًا، فلا تتأخر هذه المرة!"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- كم سعر هذا القميص؟\n- مئة وخمسون ريالًا، لكن إذا اشتريت اثنين أعطيك خصمًا جيدًا."
+   },
+   {
+    "style": "listicle item",
+    "text": "٣. اشرب كوبًا من الماء فور استيقاظك: هذه العادة البسيطة تنشّط جسمك وتساعدك على التركيز طوال اليوم."
+   },
+   {
+    "style": "listicle item",
+    "text": "٥. نظّم مكتبك مساء كل يوم، فالبدء في مكان مرتب صباحًا يوفّر عليك الكثير من الوقت والتوتر."
+   },
+   {
+    "style": "forum question",
+    "text": "السلام عليكم، عندي مشكلة في الحاسوب المحمول: الشاشة تنطفئ فجأة بعد عشر دقائق من التشغيل. هل واجه أحدكم شيئًا مشابهًا؟"
+   },
+   {
+    "style": "forum question",
+    "text": "يا إخوان، أريد أن أتعلم البرمجة من الصفر. هل تنصحونني بلغة بايثون أم جافاسكريبت للبداية؟"
+   },
+   {
+    "style": "product or event review",
+    "text": "زرت مطعم «بيت الزيتون» مساء أمس، والمشاوي كانت ممتازة والخدمة سريعة، لكن الأسعار مرتفعة قليلًا. أعطيه أربع نجوم من خمس."
+   },
+   {
+    "style": "product or event review",
+    "text": "اشتريت هذه السماعات قبل شهر، الصوت نقي والبطارية تدوم طويلًا، لكنها تضغط على الأذن بعد ساعتين من الاستخدام."
+   },
+   {
+    "style": "diary entry",
+    "text": "الثلاثاء: استيقظت متأخرًا وفاتني الاجتماع الأول. شعرت بالذنب طوال اليوم، لكن جدتي اتصلت في المساء وأضحكتني كثيرًا."
+   },
+   {
+    "style": "diary entry",
+    "text": "عزيزتي المفكرة، اليوم أنهيت قراءة الرواية التي بدأتها منذ شهرين. النهاية كانت حزينة، لكنني سعيدة لأنني لم أستسلم."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "دمشق هي عاصمة الجمهورية العربية السورية، وتُعدّ من أقدم المدن المأهولة باستمرار في العالم."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "نهر النيل هو أطول أنهار قارة أفريقيا، ويمر عبر عدة دول قبل أن يصب في البحر الأبيض المتوسط."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "إن القراءة هي غذاء العقل، فهي توسّع آفاق الإنسان وتعرّفه على ثقافات الشعوب الأخرى."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "ومن أهم فوائد الرياضة أنها تحافظ على صحة القلب وتقوّي العزيمة وتعلّم الإنسان الصبر."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "أهلًا بكم مستمعينا الكرام في حلقة جديدة من بودكاست «حكايات المدينة»، واليوم ضيفنا شاب افتتح مكتبة صغيرة في حيّ قديم."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- إذن كيف بدأت فكرة المشروع؟\n- بصراحة، بدأت من مطبخ أمي، كنا نصنع الحلويات ونبيعها للجيران فقط."
+   }
+  ],
+  "lang:bg": [
+   {
+    "style": "casual social-media post",
+    "text": "Днес най-после изкачих Мусала! Гледката горе е невероятна, а вятърът почти ме отнесе 😂 #планина"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Някой знае ли добра пицария в центъра на Пловдив? Гостите идват довечера и нямам идея къде да ги заведа."
+   },
+   {
+    "style": "news-wire report",
+    "text": "СОФИЯ (БТА) - Столичната община обяви, че ремонтът на бул. „Витоша“ ще приключи до края на месеца, а движението ще бъде възстановено поетапно."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Варна посрещна над двеста хиляди туристи през юли, съобщиха от местното бюро по туризъм. Най-много са гостите от Германия и Румъния."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Ще дойдеш ли на рождения ден на Мария в събота?\n- Разбира се! Само ми кажи какво да купя за подарък."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Колко струва билетът до Бургас?\n- Тридесет и два лева в едната посока, влакът тръгва в осем и половина."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Пийте повече вода през лятото – дори леко обезводняване води до умора и главоболие."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Разходете се в Родопите през есента: цветовете на горите са като от картичка."
+   },
+   {
+    "style": "forum question",
+    "text": "Здравейте, колата ми издава странен звук при завиване наляво. Някой сблъсквал ли се е с подобен проблем?"
+   },
+   {
+    "style": "forum question",
+    "text": "Търся съвет: кой университет е по-добър за информатика – Софийският или Техническият?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Бяхме в механа „Старата къща“ – шопската салата беше свежа, кавърмата отлична, а обслужването много любезно. Препоръчвам!"
+   },
+   {
+    "style": "product or event review",
+    "text": "Концертът снощи беше страхотен, но звукът в залата беше твърде силен и на моменти не се чуваше вокалът."
+   },
+   {
+    "style": "diary entry",
+    "text": "Понеделник. Валя цял ден и не излязох никъде. Сготвих баница по рецептата на баба и вкъщи замириса на детство."
+   },
+   {
+    "style": "diary entry",
+    "text": "Скъпи дневнико, днес взех изпита по шофиране от първия път! Още не мога да повярвам."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Рилският манастир е най-големият православен манастир в България и е включен в списъка на ЮНЕСКО."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Дунав е втората по дължина река в Европа и образува голяма част от северната граница на България."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Книгите ни помагат да опознаем света и да разберем по-добре себе си и хората около нас."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Според мен приятелството е едно от най-ценните неща в живота на всеки човек."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Добре дошли в нов епизод на нашия подкаст! Днес говорим за това как да спестяваме пари, без да се лишаваме от всичко."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- И какво те накара да се върнеш в България след десет години в чужбина?\n- Честно казано, липсваше ми семейството и храната."
+   }
+  ],
+  "lang:de": [
+   {
+    "style": "casual social-media post",
+    "text": "Endlich Wochenende! Wer kommt mit zum Flohmarkt am Mauerpark? Ich such noch 'nen alten Plattenspieler 😄"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Mein Zug hat schon wieder 40 Minuten Verspätung. Danke, Deutsche Bahn, für diesen wunderschönen Montagmorgen."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BERLIN (dpa) - Die Bundesregierung hat sich auf ein neues Förderprogramm für Wärmepumpen geeinigt. Hausbesitzer sollen ab Januar bis zu 30 Prozent der Kosten erstattet bekommen."
+   },
+   {
+    "style": "news-wire report",
+    "text": "München - Bei einem Brand in einer Lagerhalle im Stadtteil Moosach ist am Dienstagabend ein Sachschaden von mehreren Hunderttausend Euro entstanden. Verletzt wurde niemand."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Hast du schon die Einkaufsliste geschrieben?\n- Ja, aber ich hab vergessen, ob wir noch Eier haben. Schau mal kurz im Kühlschrank nach."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Entschuldigung, wie komme ich zum Hauptbahnhof?\n- Gehen Sie geradeaus bis zur Ampel und dann links, ungefähr fünf Minuten."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Lüften Sie mehrmals täglich kurz und kräftig: Das spart Heizkosten und beugt Schimmel vor."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Planen Sie Ihre Mahlzeiten für die ganze Woche – so kaufen Sie weniger ein und werfen weniger weg."
+   },
+   {
+    "style": "forum question",
+    "text": "Hallo zusammen, mein Fahrrad quietscht beim Bremsen ganz furchtbar. Liegt das an den Belägen oder an der Felge?"
+   },
+   {
+    "style": "forum question",
+    "text": "Kann mir jemand erklären, wie man die Steuererklärung mit ELSTER macht? Ich mache das zum ersten Mal und bin total überfordert."
+   },
+   {
+    "style": "product or event review",
+    "text": "Die Kaffeemaschine macht einen hervorragenden Espresso, ist aber ziemlich laut. Für den Preis trotzdem eine klare Kaufempfehlung."
+   },
+   {
+    "style": "product or event review",
+    "text": "Das Theaterstück gestern war leider enttäuschend: Die Schauspieler waren gut, aber die Handlung zog sich endlos in die Länge."
+   },
+   {
+    "style": "diary entry",
+    "text": "Mittwoch. Heute im Park eine alte Schulfreundin getroffen, die ich zehn Jahre nicht gesehen habe. Wir haben stundenlang geredet."
+   },
+   {
+    "style": "diary entry",
+    "text": "Liebes Tagebuch, ich bin so müde. Die Kinder waren den ganzen Tag krank und ich habe kaum geschlafen."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Der Rhein ist einer der längsten Flüsse Europas und fließt durch die Schweiz, Deutschland und die Niederlande."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Hamburg ist nach Berlin die zweitgrößte Stadt Deutschlands und besitzt einen der wichtigsten Häfen Europas."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Meiner Meinung nach sollten Schüler mehr über den Umgang mit Geld lernen, weil das im späteren Leben sehr wichtig ist."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Zusammenfassend lässt sich sagen, dass das Internet unser Leben sowohl erleichtert als auch komplizierter gemacht hat."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Herzlich willkommen zu einer neuen Folge! Heute sprechen wir mit einer Imkerin darüber, warum Bienen in der Stadt so gut zurechtkommen."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Und wie bist du eigentlich zum Kochen gekommen?\n- Ehrlich gesagt durch meine Oma. Die hat mich schon mit fünf Jahren Teig kneten lassen."
+   }
+  ],
+  "lang:el": [
+   {
+    "style": "casual social-media post",
+    "text": "Καλημέρα από τη Νάξο! Η θάλασσα σήμερα είναι σαν λάδι 🌊 Ποιος ζηλεύει;"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Ξέχασα πάλι τα κλειδιά μέσα στο σπίτι... τρίτη φορά αυτόν τον μήνα. Κάποιος να με σώσει!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "ΑΘΗΝΑ (ΑΠΕ) - Σε λειτουργία τίθεται από τη Δευτέρα ο νέος σταθμός του μετρό στην Καλαμαριά, ανακοίνωσε το υπουργείο Μεταφορών."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Θεσσαλονίκη - Ισχυρές βροχοπτώσεις προκάλεσαν πλημμύρες σε δρόμους της πόλης, ενώ η πυροσβεστική δέχθηκε δεκάδες κλήσεις για αντλήσεις υδάτων."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Θα έρθεις για καφέ το απόγευμα;\n- Δεν μπορώ, έχω φροντιστήριο μέχρι τις επτά. Πάμε αύριο;"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Πόσο κάνουν οι ντομάτες;\n- Δύο ευρώ το κιλό, φρέσκες από το χωριό!"
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Επισκεφθείτε τα Μετέωρα νωρίς το πρωί, πριν φτάσουν τα τουριστικά λεωφορεία."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Δοκιμάστε γεμιστά σε μια παραδοσιακή ταβέρνα – είναι το απόλυτο καλοκαιρινό φαγητό."
+   },
+   {
+    "style": "forum question",
+    "text": "Γεια σας, ψάχνω καλό ηλεκτρολόγο στην περιοχή του Βόλου. Έχει κανείς να προτείνει;"
+   },
+   {
+    "style": "forum question",
+    "text": "Ξέρει κανείς αν χρειάζεται βίζα για ταξίδι στη Γεωργία με ελληνικό διαβατήριο;"
+   },
+   {
+    "style": "product or event review",
+    "text": "Η ταβέρνα «Το Λιμανάκι» έχει φανταστικό χταπόδι στα κάρβουνα και υπέροχη θέα. Λίγο αργή η εξυπηρέτηση, αλλά αξίζει."
+   },
+   {
+    "style": "product or event review",
+    "text": "Αγόρασα αυτό το σίδερο πριν από δύο εβδομάδες και ήδη σταμάτησε να βγάζει ατμό. Δεν το συνιστώ."
+   },
+   {
+    "style": "diary entry",
+    "text": "Κυριακή. Πήγαμε στο χωριό να μαζέψουμε ελιές με τον παππού. Κουράστηκα πολύ, αλλά γέλασα ακόμα περισσότερο."
+   },
+   {
+    "style": "diary entry",
+    "text": "Αγαπημένο μου ημερολόγιο, σήμερα πήρα τα αποτελέσματα των εξετάσεων και πέρασα στη σχολή που ήθελα!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ο Παρθενώνας είναι αρχαίος ναός στην Ακρόπολη της Αθήνας, αφιερωμένος στη θεά Αθηνά."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Η Κρήτη είναι το μεγαλύτερο νησί της Ελλάδας και το πέμπτο μεγαλύτερο της Μεσογείου."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Η φιλία είναι ένα πολύτιμο αγαθό, γιατί μας στηρίζει στις δύσκολες στιγμές της ζωής."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Κατά τη γνώμη μου, η προστασία του περιβάλλοντος πρέπει να ξεκινά από το σχολείο."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Καλώς ήρθατε σε ένα νέο επεισόδιο! Σήμερα μιλάμε με έναν ψαρά από την Κάλυμνο για τη ζωή στη θάλασσα."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Πώς ξεκίνησες να γράφεις τραγούδια;\n- Στην αρχή για πλάκα, στο μπαλκόνι με μια παλιά κιθάρα του πατέρα μου."
+   }
+  ],
+  "lang:es": [
+   {
+    "style": "casual social-media post",
+    "text": "¡Por fin viernes! Esta noche toca cena con las amigas y luego a bailar salsa 💃 ¿Alguien se apunta?"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Llevo tres días intentando que mi planta de albahaca no se muera. Consejos, por favor 🌿😅"
+   },
+   {
+    "style": "news-wire report",
+    "text": "MADRID (EFE) - El Ayuntamiento anunció este lunes la ampliación de los carriles bici en el centro de la ciudad, con una inversión de doce millones de euros."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Ciudad de México - Un sismo de magnitud 5,2 sacudió la capital la madrugada del martes, sin que se reportaran daños materiales ni personas heridas."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- ¿Ya compraste las entradas para el concierto?\n- Sí, pero solo quedaban en la última fila. Algo es algo, ¿no?"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Perdone, ¿sabe a qué hora cierra la farmacia?\n- A las nueve, pero la de la esquina abre las veinticuatro horas."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Aprovecha la luz natural: trabajar cerca de una ventana mejora el ánimo y la concentración."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Visita el mercado local los sábados por la mañana; la fruta es más fresca y barata."
+   },
+   {
+    "style": "forum question",
+    "text": "Hola a todos, mi portátil se calienta muchísimo cuando juego. ¿Me recomiendan alguna base refrigerante?"
+   },
+   {
+    "style": "forum question",
+    "text": "¿Alguien sabe cuánto tarda en llegar la renovación del pasaporte? Viajo en tres semanas y estoy nerviosa."
+   },
+   {
+    "style": "product or event review",
+    "text": "El restaurante tiene unas tapas deliciosas y un ambiente muy acogedor, aunque tuvimos que esperar casi una hora para sentarnos."
+   },
+   {
+    "style": "product or event review",
+    "text": "Compré esta mochila para el viaje y es comodísima, aunque los cierres parecen un poco frágiles."
+   },
+   {
+    "style": "diary entry",
+    "text": "Jueves. Hoy llovió todo el día y me quedé leyendo en la cama. A veces no hacer nada es exactamente lo que necesito."
+   },
+   {
+    "style": "diary entry",
+    "text": "Querido diario: hoy mi hermano pequeño aprendió a montar en bici sin ruedines. Lloró, se cayó y volvió a intentarlo."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sevilla es la capital de Andalucía y es conocida por su catedral gótica y la torre de la Giralda."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "El lago Titicaca, situado entre Perú y Bolivia, es el lago navegable más alto del mundo."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "En mi opinión, aprender un segundo idioma abre puertas tanto en lo personal como en lo profesional."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "En conclusión, la tecnología es una herramienta útil siempre que la usemos con responsabilidad."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Bienvenidos a un nuevo episodio. Hoy hablamos con una panadera de Valladolid que se levanta a las tres de la mañana desde hace veinte años."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- ¿Y cómo empezaste a viajar sola?\n- Pues por casualidad: mi amiga canceló el viaje a última hora y decidí ir igualmente."
+   }
+  ],
+  "lang:fr": [
+   {
+    "style": "casual social-media post",
+    "text": "Enfin le week-end ! Brunch en terrasse avec les copains puis balade au bord de la Seine ☀️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Quelqu'un a vu mon chat ? Il s'est encore enfui par la fenêtre de la cuisine 😩 #Lyon"
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS (AFP) - La mairie a annoncé mardi l'ouverture de trois nouvelles piscines municipales d'ici l'été prochain, dans le cadre de son plan de rénovation sportive."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Marseille - Un violent orage a provoqué des inondations dans plusieurs quartiers mercredi soir. Les pompiers sont intervenus à plus de deux cents reprises."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Tu as pensé à acheter du pain ?\n- Oups, j'ai complètement oublié. Je redescends tout de suite à la boulangerie."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Bonjour, je voudrais réserver une table pour quatre personnes ce soir.\n- Bien sûr, vers quelle heure souhaitez-vous venir ?"
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Éteignez votre téléphone une heure avant de dormir : votre sommeil sera plus profond."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Partez à la découverte des petits villages de Provence en dehors de la haute saison."
+   },
+   {
+    "style": "forum question",
+    "text": "Bonjour à tous, ma machine à laver fait un bruit étrange pendant l'essorage. Est-ce que quelqu'un a une idée ?"
+   },
+   {
+    "style": "forum question",
+    "text": "Est-ce que quelqu'un a déjà fait le chemin de Compostelle à vélo ? Je cherche des conseils pour l'équipement."
+   },
+   {
+    "style": "product or event review",
+    "text": "Le restaurant propose une cuisine savoureuse et des desserts maison délicieux, mais le service était un peu lent."
+   },
+   {
+    "style": "product or event review",
+    "text": "Ce roman se lit d'une traite : des personnages attachants et une fin vraiment inattendue. Je recommande !"
+   },
+   {
+    "style": "diary entry",
+    "text": "Samedi. Journée au marché avec maman, puis tarte aux pommes dans l'après-midi. Simple, mais parfait."
+   },
+   {
+    "style": "diary entry",
+    "text": "Cher journal, aujourd'hui j'ai enfin osé parler à mon voisin de classe. Il est encore plus gentil que je pensais."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Bordeaux est une ville du sud-ouest de la France, célèbre pour ses vignobles et son architecture du XVIIIe siècle."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Le mont Blanc, situé dans les Alpes, est le plus haut sommet d'Europe occidentale."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "À mon avis, la lecture permet aux jeunes de développer leur imagination et leur esprit critique."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Pour conclure, il est essentiel que chacun fasse des efforts pour protéger l'environnement."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Bienvenue dans ce nouvel épisode ! Aujourd'hui, on reçoit une fromagère du Jura qui nous parle de son métier."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Alors, comment est née l'idée de la librairie ?\n- Franchement, d'un rêve d'enfant. Je passais mes mercredis à la bibliothèque."
+   }
+  ],
+  "lang:hi": [
+   {
+    "style": "casual social-media post",
+    "text": "आज बारिश में भीगकर गरम-गरम पकौड़े खाए, इससे अच्छा दिन क्या हो सकता है? ☔😋"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "कोई बताएगा कि दिल्ली में सबसे अच्छी छोले भटूरे कहाँ मिलते हैं? दोस्तों के साथ प्लान बना रहा हूँ।"
+   },
+   {
+    "style": "news-wire report",
+    "text": "नई दिल्ली - मौसम विभाग ने अगले तीन दिनों तक उत्तर भारत के कई राज्यों में भारी बारिश की चेतावनी जारी की है।"
+   },
+   {
+    "style": "news-wire report",
+    "text": "मुंबई - शहर में लोकल ट्रेन सेवा सोमवार सुबह तकनीकी खराबी के कारण करीब एक घंटे तक बाधित रही, जिससे यात्रियों को परेशानी हुई।"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- तुमने होमवर्क पूरा कर लिया?\n- हाँ माँ, बस गणित का एक सवाल बाकी है।"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- भैया, ये आम कितने के हैं?\n- सौ रुपये किलो, एकदम मीठे हैं, चखकर देखिए।"
+   },
+   {
+    "style": "listicle item",
+    "text": "3. सुबह जल्दी उठकर कम से कम बीस मिनट टहलें, इससे पूरा दिन ताज़गी बनी रहती है।"
+   },
+   {
+    "style": "listicle item",
+    "text": "6. पढ़ाई के बीच छोटे-छोटे ब्रेक लें, ताकि दिमाग थके नहीं।"
+   },
+   {
+    "style": "forum question",
+    "text": "नमस्ते दोस्तों, मेरे फोन की बैटरी बहुत जल्दी खत्म हो जाती है। क्या कोई उपाय बता सकता है?"
+   },
+   {
+    "style": "forum question",
+    "text": "क्या किसी ने जयपुर से उदयपुर बस से यात्रा की है? कौन सी बस सेवा अच्छी है?"
+   },
+   {
+    "style": "product or event review",
+    "text": "इस रेस्टोरेंट का पनीर टिक्का लाजवाब था, लेकिन सेवा थोड़ी धीमी थी। फिर भी दोबारा ज़रूर आएँगे।"
+   },
+   {
+    "style": "product or event review",
+    "text": "यह कुकर बहुत मज़बूत है और खाना जल्दी पकाता है, बस ढक्कन थोड़ा भारी है।"
+   },
+   {
+    "style": "diary entry",
+    "text": "मंगलवार। आज दादी ने अपने बचपन की कहानियाँ सुनाईं। मुझे पता ही नहीं था कि वे गाँव में नदी पार करके स्कूल जाती थीं।"
+   },
+   {
+    "style": "diary entry",
+    "text": "प्रिय डायरी, आज मेरी पहली नौकरी का पहला दिन था। थोड़ा डर लगा, पर सब लोग बहुत अच्छे थे।"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "गंगा भारत की सबसे पवित्र नदियों में से एक है, जो हिमालय से निकलकर बंगाल की खाड़ी में मिलती है।"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "ताजमहल आगरा में स्थित एक सफ़ेद संगमरमर का मकबरा है, जिसे शाहजहाँ ने बनवाया था।"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "मेरे विचार में, पेड़ लगाना हर नागरिक का कर्तव्य होना चाहिए।"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "अतः हम कह सकते हैं कि शिक्षा ही किसी भी देश की प्रगति की नींव है।"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "नमस्कार, आप सुन रहे हैं हमारा पॉडकास्ट। आज हमारे साथ हैं एक युवा किसान, जो जैविक खेती कर रहे हैं।"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- आपने यह काम शुरू कैसे किया?\n- सच कहूँ तो मजबूरी में, लेकिन धीरे-धीरे मुझे इससे प्यार हो गया।"
+   }
+  ],
+  "lang:it": [
+   {
+    "style": "casual social-media post",
+    "text": "Finalmente al mare! Gelato al pistacchio in mano e piedi nella sabbia 🍦☀️ #estate"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Qualcuno sa se la metro di Milano funziona domenica? Devo andare in stazione presto."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ROMA (ANSA) - Il Comune ha annunciato un nuovo piano per la manutenzione delle strade, con lavori previsti in quindici quartieri entro la fine dell'anno."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Napoli - Migliaia di persone hanno partecipato sabato alla festa del patrono nel centro storico, nonostante la pioggia del pomeriggio."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Hai già prenotato l'albergo a Firenze?\n- Sì, uno piccolo vicino al Duomo. Speriamo sia tranquillo."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Scusi, quanto costa un biglietto per Bologna?\n- Ventidue euro, il treno parte tra dieci minuti dal binario quattro."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Assaggia la pizza fritta a Napoli: è uno street food che non dimenticherai."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Porta sempre con te una borraccia: in molte città italiane ci sono fontanelle con acqua potabile."
+   },
+   {
+    "style": "forum question",
+    "text": "Ciao a tutti, il mio forno non scalda più bene. Secondo voi conviene ripararlo o comprarne uno nuovo?"
+   },
+   {
+    "style": "forum question",
+    "text": "Qualcuno ha esperienza con i corsi serali di lingua inglese a Torino? Cerco consigli."
+   },
+   {
+    "style": "product or event review",
+    "text": "La trattoria offre piatti genuini a prezzi onesti; la carbonara era perfetta, il tiramisù un po' troppo dolce."
+   },
+   {
+    "style": "product or event review",
+    "text": "Lo spettacolo è stato emozionante e gli attori bravissimi, ma la sala era troppo calda."
+   },
+   {
+    "style": "diary entry",
+    "text": "Venerdì. Oggi ho cucinato le lasagne della nonna per la prima volta. Non erano come le sue, ma quasi."
+   },
+   {
+    "style": "diary entry",
+    "text": "Caro diario, oggi ho litigato con Giulia per una sciocchezza. Domani le chiederò scusa."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Venezia è una città costruita su oltre cento isole, collegate da ponti e canali."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "L'Etna, in Sicilia, è il vulcano attivo più alto d'Europa."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Secondo me, lo sport è fondamentale per la crescita dei ragazzi perché insegna il rispetto delle regole."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In conclusione, ognuno di noi può fare qualcosa per ridurre l'inquinamento."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Benvenuti a una nuova puntata! Oggi parliamo con un liutaio di Cremona che costruisce violini da quarant'anni."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- E com'è nata la tua passione per la fotografia?\n- Per caso, con la vecchia macchina di mio padre trovata in soffitta."
+   }
+  ],
+  "lang:ja": [
+   {
+    "style": "casual social-media post",
+    "text": "今日は久しぶりに晴れたので、近所の公園でピクニックしました！おにぎりが最高においしかった🍙"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "新しいカフェに行ってみたけど、抹茶ラテが甘すぎた…次はブラックにしよう☕"
+   },
+   {
+    "style": "news-wire report",
+    "text": "【東京】気象庁は２日、関東地方で今週末にかけて大雨となるおそれがあるとして、土砂災害などへの警戒を呼びかけた。"
+   },
+   {
+    "style": "news-wire report",
+    "text": "大阪市は１日、市内の公立小学校に新しい給食センターを開設すると発表した。来年４月から稼働する予定。"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "「明日の会議、何時からだっけ？」\n「十時からだよ。資料はもう送っておいたから。」"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "「すみません、駅までどう行けばいいですか？」\n「この道をまっすぐ行って、二つ目の信号を右です。」"
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 朝起きたらまずコップ一杯の水を飲みましょう。体がすっきり目覚めます。"
+   },
+   {
+    "style": "listicle item",
+    "text": "6. 寝る前の一時間はスマホを見ないようにすると、ぐっすり眠れます。"
+   },
+   {
+    "style": "forum question",
+    "text": "質問です。中古のノートパソコンを買おうと思っていますが、気をつけるべき点はありますか？"
+   },
+   {
+    "style": "forum question",
+    "text": "京都で紅葉を見るなら、どこのお寺がおすすめですか？人が少ないところだとうれしいです。"
+   },
+   {
+    "style": "product or event review",
+    "text": "このラーメン屋はスープが濃厚でとてもおいしかったです。ただ、行列が長くて一時間待ちました。"
+   },
+   {
+    "style": "product or event review",
+    "text": "このイヤホンは音質が良くて軽いですが、バッテリーの持ちが少し短いと感じました。"
+   },
+   {
+    "style": "diary entry",
+    "text": "十月三日。今日は仕事で失敗してしまった。でも帰り道に見た夕焼けがきれいで、少し元気が出た。"
+   },
+   {
+    "style": "diary entry",
+    "text": "今日は母の誕生日だった。みんなでケーキを作ったら、少し形がくずれたけど母はとても喜んでくれた。"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "富士山は静岡県と山梨県にまたがる活火山で、標高は三千七百七十六メートルである。"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "琵琶湖は滋賀県にある日本最大の湖である。"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "私は、毎日読書をすることは心を豊かにする大切な習慣だと考える。"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "このように、地域の人々が協力することで、町はもっと住みやすくなるはずだ。"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "皆さん、こんにちは。今日のゲストは、山奥で小さなパン屋を営んでいる方です。"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "「そもそも、どうしてこの仕事を始めたんですか？」\n「実は、祖父の店を継ぐことになったのがきっかけなんです。」"
+   }
+  ],
+  "lang:nl": [
+   {
+    "style": "casual social-media post",
+    "text": "Eindelijk zon! Meteen de fiets gepakt en naar het strand van Scheveningen 🚲☀️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Wie weet een goede kapper in Utrecht? Mijn haar is echt een ramp op dit moment 😅"
+   },
+   {
+    "style": "news-wire report",
+    "text": "AMSTERDAM (ANP) - De gemeente heeft dinsdag bekendgemaakt dat er volgend jaar vijfhonderd extra fietsparkeerplekken bij het Centraal Station komen."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Rotterdam - Door een stroomstoring zaten woensdagavond ruim tienduizend huishoudens urenlang zonder elektriciteit."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Heb jij de sleutels van de schuur gezien?\n- Ja, die hangen naast de voordeur, waar ze altijd hangen."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Hoeveel kost een kopje koffie hier?\n- Twee euro vijftig, en de appeltaart is vandaag in de aanbieding."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Neem altijd een regenjas mee, ook als het 's ochtends nog zonnig is."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Bezoek de Keukenhof doordeweeks, dan is het een stuk minder druk."
+   },
+   {
+    "style": "forum question",
+    "text": "Hallo allemaal, mijn cv-ketel slaat steeds af. Iemand een idee wat ik kan controleren voordat ik een monteur bel?"
+   },
+   {
+    "style": "forum question",
+    "text": "Heeft iemand ervaring met het huren van een kano in de Biesbosch? Wat kost dat ongeveer?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Het restaurant had heerlijke stamppot en vriendelijk personeel, maar de muziek stond veel te hard."
+   },
+   {
+    "style": "product or event review",
+    "text": "Deze stofzuiger is licht en zuigt goed, alleen de accu raakt na twintig minuten al leeg."
+   },
+   {
+    "style": "diary entry",
+    "text": "Zondag. Met opa naar de markt geweest en daarna samen haring gegeten. Hij vertelde verhalen over vroeger."
+   },
+   {
+    "style": "diary entry",
+    "text": "Lief dagboek, vandaag mijn eerste dag op de nieuwe school. Ik was zenuwachtig, maar het viel mee."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Amsterdam is de hoofdstad van Nederland en staat bekend om zijn grachten en historische huizen."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "De Waddenzee is een ondiepe zee in het noorden van Nederland en staat op de werelderfgoedlijst van UNESCO."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Volgens mij is het belangrijk dat jongeren leren omgaan met geld voordat ze uit huis gaan."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Kortom, sport zorgt niet alleen voor een gezond lichaam, maar ook voor een gezonde geest."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welkom bij een nieuwe aflevering! Vandaag praten we met een kaasboer uit Gouda over zijn familiebedrijf."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Hoe ben je eigenlijk begonnen met schilderen?\n- Gewoon op zolder, met de oude verf van mijn vader."
+   }
+  ],
+  "lang:pl": [
+   {
+    "style": "casual social-media post",
+    "text": "Nareszcie weekend! Jedziemy z ekipą w Bieszczady, trzymajcie kciuki za pogodę ⛰️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Czy ktoś wie, gdzie w Krakowie zjem najlepsze pierogi ruskie? Pytam dla kolegi z Hiszpanii 😄"
+   },
+   {
+    "style": "news-wire report",
+    "text": "WARSZAWA (PAP) - Ratusz poinformował w poniedziałek, że nowa linia tramwajowa na Gocław zostanie otwarta pod koniec przyszłego roku."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Gdańsk - Ponad sto tysięcy osób odwiedziło w weekend Jarmark Dominikański, informują organizatorzy."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Kupiłeś już bilety na pociąg do Wrocławia?\n- Tak, jedziemy w piątek o siódmej rano."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Przepraszam, gdzie jest najbliższa apteka?\n- Prosto do skrzyżowania, a potem w prawo, obok poczty."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Pij wodę z cytryną zaraz po przebudzeniu – to prosty sposób na lepsze samopoczucie."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Odwiedź Zakopane poza sezonem, wtedy szlaki są o wiele spokojniejsze."
+   },
+   {
+    "style": "forum question",
+    "text": "Cześć, mój laptop strasznie się grzeje podczas grania. Macie jakieś sprawdzone rozwiązanie?"
+   },
+   {
+    "style": "forum question",
+    "text": "Czy ktoś robił prawo jazdy w Poznaniu? Którą szkołę jazdy polecacie?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Restauracja ma świetny żurek i bardzo miłą obsługę, ale trzeba długo czekać na stolik."
+   },
+   {
+    "style": "product or event review",
+    "text": "Ten czajnik szybko gotuje wodę i wygląda elegancko, niestety po miesiącu zaczął przeciekać."
+   },
+   {
+    "style": "diary entry",
+    "text": "Wtorek. Dzisiaj z babcią lepiłyśmy pierogi na święta. Moje były krzywe, ale smakowały tak samo."
+   },
+   {
+    "style": "diary entry",
+    "text": "Drogi pamiętniku, zdałam egzamin z matematyki! Wreszcie mogę odetchnąć."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Wisła jest najdłuższą rzeką Polski i uchodzi do Morza Bałtyckiego w okolicach Gdańska."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Kraków był stolicą Polski do końca XVI wieku i słynie z zabytkowego Starego Miasta."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Moim zdaniem czytanie książek rozwija wyobraźnię i uczy cierpliwości."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Podsumowując, każdy z nas powinien dbać o środowisko, segregując śmieci i oszczędzając wodę."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Witajcie w nowym odcinku! Dziś rozmawiamy z pszczelarzem z Mazur o tym, jak wygląda jego zwykły dzień."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Jak zaczęła się twoja przygoda z gotowaniem?\n- Od babci, która pozwalała mi mieszać zupę, gdy miałem pięć lat."
+   }
+  ],
+  "lang:pt": [
+   {
+    "style": "casual social-media post",
+    "text": "Bom dia, gente! Hoje é dia de praia em Copacabana e açaí no fim da tarde 🌴☀️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Alguém sabe se a padaria da esquina abre no domingo? Estou com uma saudade enorme de pão de queijo."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LISBOA (Lusa) - A Câmara Municipal anunciou esta segunda-feira a criação de mais dois quilómetros de ciclovias na zona ribeirinha."
+   },
+   {
+    "style": "news-wire report",
+    "text": "São Paulo - Fortes chuvas provocaram alagamentos em vários bairros da capital paulista na noite de terça-feira, segundo a Defesa Civil."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Você já comprou o presente da sua mãe?\n- Ainda não, estava pensando em um livro de receitas."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Com licença, quanto custa o bilhete para o Porto?\n- Vinte e cinco euros, e o comboio sai às nove."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Experimente o pastel de nata ainda quente, de preferência com canela por cima."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Leve sempre protetor solar, mesmo em dias nublados."
+   },
+   {
+    "style": "forum question",
+    "text": "Oi, pessoal! Meu celular está desligando sozinho quando a bateria chega a 20%. Alguém já passou por isso?"
+   },
+   {
+    "style": "forum question",
+    "text": "Alguém já fez a trilha da Pedra da Gávea? É muito difícil para iniciantes?"
+   },
+   {
+    "style": "product or event review",
+    "text": "O restaurante tem uma feijoada deliciosa e um atendimento simpático, mas o preço está um pouco alto."
+   },
+   {
+    "style": "product or event review",
+    "text": "Comprei este liquidificador e estou adorando: é potente e fácil de limpar."
+   },
+   {
+    "style": "diary entry",
+    "text": "Quarta-feira. Hoje choveu o dia todo e fiquei em casa vendo filmes antigos com a minha avó."
+   },
+   {
+    "style": "diary entry",
+    "text": "Querido diário, hoje consegui finalmente correr cinco quilômetros sem parar!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "O rio Amazonas é o maior rio do mundo em volume de água e atravessa o norte do Brasil."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lisboa é a capital de Portugal e é conhecida pelos seus elétricos amarelos e pelo fado."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Na minha opinião, a escola deve ensinar os alunos a pensar de forma crítica."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Portanto, conclui-se que a leitura é fundamental para o desenvolvimento de qualquer pessoa."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Olá, sejam bem-vindos a mais um episódio! Hoje conversamos com uma pescadora do Algarve."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- E como você começou a tocar violão?\n- Com meu tio, nas férias, sentado na varanda da casa dele."
+   }
+  ],
+  "lang:ru": [
+   {
+    "style": "casual social-media post",
+    "text": "Наконец-то выпал первый снег! Дети уже лепят снеговика во дворе ❄️☃️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Кто знает хорошего мастера по ремонту стиральных машин в Казани? Моя опять сломалась 😩"
+   },
+   {
+    "style": "news-wire report",
+    "text": "МОСКВА - Мэрия объявила, что в следующем году в столице откроют пять новых станций метро."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Санкт-Петербург - Из-за сильного ветра в пятницу были перекрыты несколько мостов, сообщает городская администрация."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Ты купил хлеб?\n- Ой, забыл. Сейчас сбегаю в магазин."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Скажите, пожалуйста, как пройти к вокзалу?\n- Идите прямо, потом налево, минут десять пешком."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Проветривайте комнату перед сном – так вы будете лучше высыпаться."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Обязательно попробуйте пельмени в маленьком кафе, а не в туристическом ресторане."
+   },
+   {
+    "style": "forum question",
+    "text": "Всем привет! У меня ноутбук стал очень медленно загружаться. Что можно сделать, кроме переустановки системы?"
+   },
+   {
+    "style": "forum question",
+    "text": "Подскажите, кто ездил на Байкал зимой? Какую одежду лучше взять?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Ресторан очень уютный, борщ просто великолепный, но официанты немного медлительные."
+   },
+   {
+    "style": "product or event review",
+    "text": "Купила эти наушники месяц назад: звук отличный, но провод быстро перетёрся."
+   },
+   {
+    "style": "diary entry",
+    "text": "Суббота. Ездили с папой на дачу, собирали яблоки. Устала, но было очень хорошо."
+   },
+   {
+    "style": "diary entry",
+    "text": "Дорогой дневник, сегодня я впервые выступала на сцене. Руки дрожали, но всё прошло отлично!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Волга – самая длинная река в Европе, она впадает в Каспийское море."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Байкал – самое глубокое озеро на планете, расположенное в Восточной Сибири."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "По моему мнению, дружба – это одна из самых важных ценностей в жизни человека."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Таким образом, можно сделать вывод, что чтение развивает ум и воображение."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Здравствуйте, дорогие слушатели! Сегодня у нас в гостях пчеловод из Алтая."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- А как вы вообще пришли в эту профессию?\n- Совершенно случайно: друг позвал помочь на один день, а я остался на десять лет."
+   }
+  ],
+  "lang:sw": [
+   {
+    "style": "casual social-media post",
+    "text": "Habari za asubuhi marafiki! Leo ni siku ya kwenda ufukweni Mombasa, nani yuko tayari? 🌊"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Chai ya tangawizi na mandazi asubuhi hii ya mvua... raha tupu! ☕"
+   },
+   {
+    "style": "news-wire report",
+    "text": "NAIROBI - Serikali imetangaza kuwa ujenzi wa barabara mpya kuelekea uwanja wa ndege utakamilika mwishoni mwa mwaka huu."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Dar es Salaam - Mvua kubwa iliyonyesha usiku wa kuamkia leo imesababisha mafuriko katika baadhi ya mitaa ya jiji."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Umeshanunua tiketi ya basi kwenda Arusha?\n- Ndiyo, basi linaondoka saa kumi na mbili alfajiri."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Samahani, embe hizi ni bei gani?\n- Shilingi mia tano kwa moja, ni tamu sana!"
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Kunywa maji mengi kila siku, hasa wakati wa joto kali."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Tembelea Zanzibar wakati wa kiangazi ili kufurahia fukwe zake nzuri."
+   },
+   {
+    "style": "forum question",
+    "text": "Jamani, simu yangu inazima yenyewe kila mara. Kuna mtu anajua tatizo linaweza kuwa nini?"
+   },
+   {
+    "style": "forum question",
+    "text": "Naomba ushauri: ni chuo gani kizuri cha kusomea uhasibu hapa Dodoma?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Mgahawa huu una pilau tamu sana na huduma nzuri, ingawa bei ni juu kidogo."
+   },
+   {
+    "style": "product or event review",
+    "text": "Nilinunua redio hii mwezi uliopita; sauti ni nzuri na betri inadumu muda mrefu."
+   },
+   {
+    "style": "diary entry",
+    "text": "Jumatatu. Leo nilimsaidia bibi kupanda mboga shambani. Nilichoka, lakini nilifurahi sana."
+   },
+   {
+    "style": "diary entry",
+    "text": "Shajara yangu mpendwa, leo nimepata kazi mpya! Siwezi kuamini bado."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mlima Kilimanjaro ndio mlima mrefu zaidi barani Afrika, na uko kaskazini mwa Tanzania."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ziwa Victoria ni ziwa kubwa zaidi barani Afrika na linashirikiwa na Kenya, Uganda na Tanzania."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Kwa maoni yangu, elimu ni ufunguo wa maisha bora kwa kila mtoto."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Kwa hiyo, ni wajibu wa kila mmoja wetu kutunza mazingira yetu."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Karibuni tena wasikilizaji wapendwa katika kipindi chetu! Leo tuko na mkulima kijana kutoka Morogoro."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Ulianzaje biashara hii ya kushona nguo?\n- Nilianza na cherehani moja ya mama yangu, nyumbani kwetu."
+   }
+  ],
+  "lang:th": [
+   {
+    "style": "casual social-media post",
+    "text": "วันนี้ไปกินข้าวซอยที่เชียงใหม่มา อร่อยมากกก ใครมาเที่ยวต้องลองนะ 🍜"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "ฝนตกหนักทั้งวันเลย รถติดยาวไปถึงอนุสาวรีย์ชัยฯ เหนื่อยมากวันนี้ 😩"
+   },
+   {
+    "style": "news-wire report",
+    "text": "กรุงเทพฯ - กรมอุตุนิยมวิทยาประกาศเตือนฝนตกหนักในหลายจังหวัดภาคใต้ ระหว่างวันที่ ๓ ถึง ๕ ตุลาคมนี้"
+   },
+   {
+    "style": "news-wire report",
+    "text": "ภูเก็ต - นักท่องเที่ยวต่างชาติเดินทางเข้าจังหวัดเพิ่มขึ้นกว่าร้อยละสามสิบในเดือนที่ผ่านมา ตามข้อมูลของการท่องเที่ยวแห่งประเทศไทย"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- พรุ่งนี้ไปตลาดนัดด้วยกันไหม\n- ไปสิ แต่ต้องไปเช้า ๆ นะ ก่อนแดดจะร้อน"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- มะม่วงกิโลละเท่าไหร่คะ\n- หกสิบบาทจ้ะ หวานมาก ลองชิมดูก่อนได้"
+   },
+   {
+    "style": "listicle item",
+    "text": "๓. ดื่มน้ำให้เพียงพอทุกวัน โดยเฉพาะในหน้าร้อน"
+   },
+   {
+    "style": "listicle item",
+    "text": "๕. ถ้าไปเที่ยวกระบี่ อย่าลืมนั่งเรือไปเกาะพีพีตอนเช้า"
+   },
+   {
+    "style": "forum question",
+    "text": "สวัสดีครับ แอร์ที่บ้านมีน้ำหยดตลอดเวลา มีใครเคยเจอปัญหาแบบนี้บ้างไหมครับ"
+   },
+   {
+    "style": "forum question",
+    "text": "อยากเรียนภาษาญี่ปุ่นด้วยตัวเอง มีหนังสือหรือแอปที่แนะนำไหมคะ"
+   },
+   {
+    "style": "product or event review",
+    "text": "ร้านนี้ต้มยำกุ้งรสจัดจ้านมาก บรรยากาศดี แต่ที่จอดรถหายากไปหน่อย"
+   },
+   {
+    "style": "product or event review",
+    "text": "หม้อหุงข้าวรุ่นนี้หุงข้าวได้นุ่มอร่อย ใช้งานง่าย คุ้มราคามาก"
+   },
+   {
+    "style": "diary entry",
+    "text": "วันอาทิตย์ ไปทำบุญที่วัดกับแม่ตอนเช้า แล้วกลับมาช่วยยายทำขนม รู้สึกอิ่มใจมาก"
+   },
+   {
+    "style": "diary entry",
+    "text": "วันนี้สอบเสร็จแล้ว รู้สึกโล่งมาก แม้จะไม่แน่ใจว่าจะผ่านหรือเปล่า"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "แม่น้ำเจ้าพระยาเป็นแม่น้ำสายสำคัญที่ไหลผ่านกรุงเทพมหานครลงสู่อ่าวไทย"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "ดอยอินทนนท์ในจังหวัดเชียงใหม่เป็นยอดเขาที่สูงที่สุดในประเทศไทย"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "ข้าพเจ้าคิดว่าการอ่านหนังสือเป็นนิสัยที่ดีที่ทุกคนควรฝึกตั้งแต่เด็ก"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "ดังนั้น เราทุกคนควรช่วยกันรักษาสิ่งแวดล้อมเพื่อคนรุ่นต่อไป"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "สวัสดีครับท่านผู้ฟัง วันนี้เรามีแขกรับเชิญเป็นชาวประมงจากจังหวัดตราด"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- แล้วคุณเริ่มทำร้านกาแฟได้ยังไงครับ\n- จริง ๆ เริ่มจากชงให้เพื่อนกินที่บ้านค่ะ แล้วเพื่อนก็บอกต่อกันไปเรื่อย ๆ"
+   }
+  ],
+  "lang:tr": [
+   {
+    "style": "casual social-media post",
+    "text": "Sonunda hafta sonu! Boğaz'da simit ve çay keyfi, daha ne isterim ☕🌊"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Ankara'da iyi bir dişçi bilen var mı? Dişim iki gündür zonkluyor 😣"
+   },
+   {
+    "style": "news-wire report",
+    "text": "İSTANBUL (AA) - Büyükşehir Belediyesi, yeni metro hattının gelecek yıl hizmete açılacağını duyurdu."
+   },
+   {
+    "style": "news-wire report",
+    "text": "İzmir - Kentte etkili olan sağanak yağış nedeniyle bazı cadde ve sokakları su bastı, ekipler bölgede çalışma başlattı."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Akşam yemeğe ne yapalım?\n- Bilmem, belki mercimek çorbası ve pilav?"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Afedersiniz, otogara nasıl gidebilirim?\n- Düz gidin, ikinci ışıktan sağa dönün, beş dakika sürer."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Kapadokya'ya giderseniz sabah erkenden balon turuna katılmayı unutmayın."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Kahvaltıda mutlaka menemen deneyin, en güzeli küçük esnaf lokantalarında yapılır."
+   },
+   {
+    "style": "forum question",
+    "text": "Merhaba arkadaşlar, bilgisayarım açılırken mavi ekran veriyor. Ne yapmam gerektiğini bilen var mı?"
+   },
+   {
+    "style": "forum question",
+    "text": "Erasmus için Polonya'ya gidecek olan var mı? Konaklama konusunda tavsiye almak istiyorum."
+   },
+   {
+    "style": "product or event review",
+    "text": "Restoranın kebapları çok lezzetliydi, garsonlar güler yüzlüydü ama fiyatlar biraz yüksek."
+   },
+   {
+    "style": "product or event review",
+    "text": "Bu çaydanlığı geçen ay aldım, çok hızlı kaynatıyor ve kullanımı çok kolay."
+   },
+   {
+    "style": "diary entry",
+    "text": "Pazartesi. Bugün babaannemle birlikte mantı yaptık. Benimkiler biraz büyük oldu ama herkes beğendi."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sevgili günlük, bugün ilk kez tek başıma şehirlerarası otobüse bindim."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "İstanbul, Avrupa ve Asya kıtaları arasında yer alan ve Boğaz ile ikiye ayrılan bir şehirdir."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Van Gölü, Türkiye'nin en büyük gölüdür ve Doğu Anadolu Bölgesi'nde bulunur."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Bence kitap okumak insanın hayal gücünü geliştiren en önemli alışkanlıktır."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Sonuç olarak, çevreyi korumak hepimizin ortak sorumluluğudur."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Merhaba sevgili dinleyiciler, bugünkü konuğumuz Karadeniz'de çay yetiştiren genç bir çiftçi."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Peki müziğe nasıl başladınız?\n- Dedemin bağlamasıyla, köyde bahçede otururken."
+   }
+  ],
+  "lang:ur": [
+   {
+    "style": "casual social-media post",
+    "text": "آج لاہور میں بارش ہوئی تو فوراً چائے اور پکوڑے بنا لیے، اس سے اچھا موسم کوئی نہیں ☔"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "کوئی بتائے کراچی میں سب سے مزیدار بریانی کہاں ملتی ہے؟ مہمان آ رہے ہیں!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "اسلام آباد - محکمہ موسمیات نے آئندہ تین روز کے دوران ملک کے بیشتر حصوں میں شدید گرمی کی پیشگوئی کی ہے۔"
+   },
+   {
+    "style": "news-wire report",
+    "text": "کراچی - شہر میں نئی بس سروس کا افتتاح کر دیا گیا ہے، جس سے روزانہ ہزاروں مسافر مستفید ہوں گے۔"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- کیا تم نے ٹکٹ خرید لیے؟\n- ہاں، ٹرین صبح آٹھ بجے روانہ ہو گی، دیر مت کرنا۔"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- بھائی، یہ سیب کتنے کے ہیں؟\n- دو سو روپے کلو، بالکل تازہ ہیں۔"
+   },
+   {
+    "style": "listicle item",
+    "text": "۳۔ صبح اٹھتے ہی ایک گلاس پانی پئیں، اس سے جسم تروتازہ رہتا ہے۔"
+   },
+   {
+    "style": "listicle item",
+    "text": "۵۔ سفر سے پہلے اپنا سامان ایک دن پہلے تیار کر لیں تاکہ جلدی نہ ہو۔"
+   },
+   {
+    "style": "forum question",
+    "text": "السلام علیکم، میرا موبائل بہت گرم ہو جاتا ہے۔ کیا کسی کے پاس اس کا حل ہے؟"
+   },
+   {
+    "style": "forum question",
+    "text": "کیا کسی نے مری سے نتھیا گلی تک پیدل سفر کیا ہے؟ راستہ کیسا ہے؟"
+   },
+   {
+    "style": "product or event review",
+    "text": "اس ریستوران کا قورمہ بہت لذیذ تھا اور عملہ بھی خوش اخلاق تھا، البتہ قیمتیں تھوڑی زیادہ ہیں۔"
+   },
+   {
+    "style": "product or event review",
+    "text": "یہ استری بہت اچھی ہے، جلدی گرم ہوتی ہے اور ہلکی بھی ہے۔"
+   },
+   {
+    "style": "diary entry",
+    "text": "بدھ۔ آج نانی نے اپنے گاؤں کی پرانی کہانیاں سنائیں، دل خوش ہو گیا۔"
+   },
+   {
+    "style": "diary entry",
+    "text": "پیاری ڈائری، آج میرا امتحان بہت اچھا ہوا، شکر ہے!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "دریائے سندھ پاکستان کا سب سے طویل دریا ہے جو بحیرۂ عرب میں گرتا ہے۔"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "بادشاہی مسجد لاہور میں واقع ہے اور مغل دور کی ایک شاندار عمارت ہے۔"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "میرے خیال میں تعلیم ہر بچے کا بنیادی حق ہے۔"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "لہٰذا ہم سب کو اپنے ماحول کو صاف رکھنے کی کوشش کرنی چاہیے۔"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "السلام علیکم سامعین، آج ہمارے مہمان ایک نوجوان ہیں جنہوں نے اپنے محلے میں کتب خانہ کھولا ہے۔"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- آپ نے یہ کام کیسے شروع کیا؟\n- سچ پوچھیں تو اپنے والد کی دکان سے، بچپن میں وہیں بیٹھا کرتا تھا۔"
+   }
+  ],
+  "lang:vi": [
+   {
+    "style": "casual social-media post",
+    "text": "Sáng nay ăn bát phở bò ở góc phố Hàng Bông, ngon xuất sắc luôn mọi người ơi 🍜"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Trời Sài Gòn hôm nay mưa to quá, kẹt xe cả tiếng đồng hồ mới về tới nhà 😩"
+   },
+   {
+    "style": "news-wire report",
+    "text": "HÀ NỘI - Bộ Giao thông Vận tải cho biết tuyến đường sắt đô thị mới sẽ chính thức vận hành vào cuối năm nay."
+   },
+   {
+    "style": "news-wire report",
+    "text": "Đà Nẵng - Hàng nghìn du khách đã đổ về thành phố để xem lễ hội pháo hoa quốc tế vào tối thứ Bảy."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Tối nay mình ăn gì đây?\n- Hay là đi ăn bún chả đi, lâu rồi chưa ăn."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Chị ơi, xoài này bao nhiêu một ký?\n- Ba mươi nghìn em ơi, ngọt lắm."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Hãy uống một cốc nước ấm sau khi thức dậy để cơ thể tỉnh táo hơn."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Nếu đến Hội An, đừng quên thả đèn hoa đăng trên sông Hoài vào buổi tối."
+   },
+   {
+    "style": "forum question",
+    "text": "Chào mọi người, laptop của mình bị chậm quá. Có ai biết cách khắc phục không?"
+   },
+   {
+    "style": "forum question",
+    "text": "Có ai từng đi Sa Pa vào mùa đông chưa? Nên mang theo những gì ạ?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Quán này có bánh xèo rất giòn và nước chấm vừa miệng, nhưng chỗ ngồi hơi chật."
+   },
+   {
+    "style": "product or event review",
+    "text": "Mình mua cái nồi cơm điện này được một tháng rồi, nấu cơm rất ngon và dễ dùng."
+   },
+   {
+    "style": "diary entry",
+    "text": "Thứ Ba. Hôm nay cùng bà gói bánh chưng chuẩn bị cho Tết. Mệt nhưng vui lắm."
+   },
+   {
+    "style": "diary entry",
+    "text": "Nhật ký thân mến, hôm nay mình đã vượt qua kỳ thi lái xe!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Vịnh Hạ Long là một di sản thiên nhiên thế giới nằm ở tỉnh Quảng Ninh."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sông Mê Kông chảy qua nhiều quốc gia trước khi đổ ra biển ở miền Nam Việt Nam."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Theo em, đọc sách là một thói quen tốt giúp chúng ta mở mang hiểu biết."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Tóm lại, mỗi người chúng ta cần chung tay bảo vệ môi trường sống."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Xin chào quý thính giả, hôm nay chúng ta sẽ trò chuyện với một người nông dân trồng cà phê ở Đắk Lắk."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Vậy anh bắt đầu nghề này như thế nào?\n- Thật ra là nhờ ông nội, hồi nhỏ tôi hay theo ông ra vườn."
+   }
+  ],
+  "lang:zh": [
+   {
+    "style": "casual social-media post",
+    "text": "今天终于去吃了那家网红火锅，排了两个小时的队，不过真的很好吃！🍲"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "周末下雨哪儿也去不了，只好在家追剧，顺便学做了红烧肉😂"
+   },
+   {
+    "style": "news-wire report",
+    "text": "新华社北京10月2日电 国家气象中心发布预报，未来三天华北地区将迎来明显降温天气。"
+   },
+   {
+    "style": "news-wire report",
+    "text": "上海市交通委员会日前宣布，明年将新开通两条地铁线路，进一步缓解早晚高峰的出行压力。"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "“你明天几点下班？”\n“大概六点吧，要不我们一起去吃饭？”"
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "“老板，这个西瓜多少钱一斤？”\n“三块五，保证甜，不甜不要钱！”"
+   },
+   {
+    "style": "listicle item",
+    "text": "3. 每天早上起床后喝一杯温水，有助于唤醒身体。"
+   },
+   {
+    "style": "listicle item",
+    "text": "6. 去杭州的话，一定要在西湖边散散步，最好是傍晚的时候。"
+   },
+   {
+    "style": "forum question",
+    "text": "请问大家，笔记本电脑开机特别慢，除了重装系统还有什么办法吗？"
+   },
+   {
+    "style": "forum question",
+    "text": "有没有人去过云南大理？想问一下十月份去穿什么衣服合适。"
+   },
+   {
+    "style": "product or event review",
+    "text": "这家餐厅的小笼包皮薄馅多，服务也很热情，就是环境有点吵。"
+   },
+   {
+    "style": "product or event review",
+    "text": "这款电饭煲煮出来的米饭很香，操作也简单，性价比很高。"
+   },
+   {
+    "style": "diary entry",
+    "text": "十月三日 晴。今天和奶奶一起包饺子，她教我怎么捏出好看的花边。"
+   },
+   {
+    "style": "diary entry",
+    "text": "今天考试终于结束了，虽然有几道题不会做，但心里轻松了很多。"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "长江是中国最长的河流，流经十一个省级行政区，最终注入东海。"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "西安是中国历史上著名的古都，有着三千多年的建城史。"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "我认为，读书不仅能增长知识，还能让我们学会思考。"
+   },
+   {
+    "style": "school essay sentence",
+    "text": "总而言之，保护环境是我们每一个人的责任。"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "大家好，欢迎收听本期节目。今天我们请到了一位在山区教书十年的老师。"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "“那您当初为什么决定开这家书店呢？”\n“其实就是想给小区的孩子们一个安静看书的地方。”"
+   }
+  ],
+  "topic:AdultActor": [
+   {
+    "style": "casual social-media post",
+    "text": "Wild that Roxy Delaine just announced she's retiring after 15 years in adult films. Respect for how she always talked openly about consent and on-set safety."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just watched the interview where former porn star Jake Marlowe talks about leaving the industry and becoming a nurse. Genuinely inspiring career change."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAS VEGAS (AP) - Performer Kira Vance took home Female Performer of the Year at the AVN Awards on Saturday, her third win in the category."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES - Veteran X-rated film star Dante Rios has filed a lawsuit against a production studio, alleging unpaid royalties from more than forty titles released since 2012."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you see Mia Laurent is writing a memoir about her years in porn?\n- Yeah, she says it's mostly about the business side and how she managed her own studio."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Wasn't Tyler Brooks the guy who did adult films before going mainstream?\n- Right, he got a small part in a crime drama last year and the critics actually liked him."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Sasha Quinn: the former adult performer turned advocate who co-founded a union-style group pushing for regular health testing and fair contracts."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Bree Holloway: after a decade of XXX features, she now runs one of the most popular true-crime podcasts in the country."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which year Lexi Monroe was inducted into the AVN Hall of Fame? Trying to settle a trivia argument with a friend."
+   },
+   {
+    "style": "forum question",
+    "text": "Question for film-history nerds: was Vince Calloway the first male porn actor to direct his own production company in the 1980s?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Nina Starr's autobiography over the weekend. Frank and surprisingly funny about her twenty years in adult entertainment, though the middle chapters drag. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the documentary screening about retired pornographic actress Carla Benet. Thoughtful, never sensational, and her interviews carry the whole film."
+   },
+   {
+    "style": "diary entry",
+    "text": "March 4. Finished the profile on the ex-porn actress who now teaches high-school chemistry. She was so calm about the online harassment she still gets."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interviewed Rocco Vane today for the book. He says the hardest part of quitting X-rated work wasn't money, it was employers googling his stage name."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Jenna Hartwell (born 1979) is an American former pornographic actress and director who won several AVN and XBIZ awards during the 2000s."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Marco Delacroix is a French adult film actor who appeared in more than three hundred productions between 1995 and 2010."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Many former adult actors, such as Tara Linn, have spoken about the stigma that follows them when they try to find work outside the industry."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The career of Brandon Steele shows how performers in the porn business in the 2010s increasingly built their own brands through social media."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today on the show we have Ashley Raine, who spent twelve years as an adult performer and now coaches people on financial planning."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- So what made you leave porn at the peak of your career?\n- Honestly, burnout. I'd shot something like two hundred scenes and I wanted a normal schedule."
+   }
+  ],
+  "topic:VoiceActor": [
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe the guy who voices the grumpy raccoon in my favorite cartoon is the same voice as the villain in that space RPG. Marco Ellison has insane range 🎙️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just found out Yuki Tanabe voiced both the hero and his evil twin in the anime dub. How do voice actors even do that?!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (Kyodo) - Seiyuu Haruka Morimoto has been cast as the lead in the upcoming anime adaptation of a bestselling fantasy novel, the studio announced Monday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BURBANK - Dubbing veteran Glen Ortiz, whose voice has been heard in more than three hundred animated episodes, will receive a lifetime achievement award next month."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Wait, that's the same lady who voices the talking cat?\n- Yep, Dana Hollis. She also does the GPS voice in half the cars in Europe."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- How did you get the role of the dragon?\n- I sent in an audition recorded in my closet with blankets on the walls. Two weeks later they called back."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Felix Ramírez: the Mexican dubbing artist behind the Spanish voices of three different superhero franchises."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Nora Petit: best known as the narrator of a hit children's audiobook series and the squeaky sidekick in a long-running cartoon."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know who voiced the old wizard in the English dub of that 2009 RPG? The credits only list the studio."
+   },
+   {
+    "style": "forum question",
+    "text": "Aspiring voice actor here. Did Lauren Kim really start out recording radio commercials before landing her first game role?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Lisa Moreau's narration of the audiobook is outstanding: she gives each of the eight characters a distinct accent without ever overdoing it. Five stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "The dub is mostly solid, but Ben Asher's performance as the captain sounds flat compared to his work in the original series."
+   },
+   {
+    "style": "diary entry",
+    "text": "June 12. Recording session ran four hours. My throat is wrecked from all the monster growls, but the director said the last take was perfect."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Takeshi Ono at the convention today. He did the hero's catchphrase for me in that exact voice and I nearly cried."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rebecca Shaw (born 1974) is an American voice actress known for her roles in animated television series and video games."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Kenji Nakamura is a Japanese seiyuu affiliated with Aoni Production, recognized for voicing several protagonists in shonen anime."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Voice actors like Maria Fontaine show that acting is not only about appearance, because she creates whole personalities using only her voice."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Although audiences never see his face, Daniel Price has become famous through the cartoon characters he voices."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "My guest today has voiced a talking toaster, a space marine, and a grandmother hedgehog. Welcome to the show, Priya Desai!"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's the strangest direction you've gotten in the booth?\n- 'Sound like a cloud that's a little disappointed.' And honestly, I nailed it."
+   }
+  ],
+  "topic:Comedian": [
+   {
+    "style": "casual social-media post",
+    "text": "Saw Tommy Reyes live last night and I'm still laughing about his bit on airport security 😂 Do NOT sit in the front row."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Dana Walsh's new hour-long special dropped and the bit about her mom's group chat is painfully accurate."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - Stand-up comic Marcus Bell will host this year's televised awards ceremony, organizers announced Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "EDINBURGH - Irish comedian Siobhan Grady has won the top prize at this year's Fringe festival for her show about growing up above a pub."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you get tickets for Raj Patel's tour?\n- Only for the late show. Apparently he does a whole extra crowd-work set there."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who's that guy doing impressions on the late-night show?\n- That's Kevin Doyle. He used to do open mics at the bar on Fifth."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Ali Hassan: whose deadpan storytelling about his immigrant family has sold out theaters across Canada."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Greta Lindqvist: the Swedish stand-up who turned her disastrous wedding into a viral Netflix special."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know where Jerry Kline recorded his first comedy album? I remember it was some tiny club in Chicago."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it just me, or has Paula Grant's material gotten way more political since her late-night show was cancelled?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Sam Ortega's special starts strong with ten minutes of killer jokes about dating apps, but the closing bit about his dog falls flat. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the comedy club Friday. The headliner, Maya Fields, was sharp and fearless with hecklers; the openers were forgettable."
+   },
+   {
+    "style": "diary entry",
+    "text": "Oct 9. Bombed at the open mic again. Three people, one was the bartender. Leo Grant told me even he bombed for two years, so I'm going back Thursday."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finally got a laugh on the airline-food joke tonight. Stand-up is the strangest job I've ever loved."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Harold Finch (1932-2004) was a British comedian and television presenter best known for his music-hall sketches and catchphrases."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Leila Navarro is an American stand-up comic and actress who rose to fame through her late-night appearances in the 2010s."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The career of comedian Ray Dunn shows how humor can be used to talk about serious topics like poverty and grief."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Many people think making others laugh is easy, but performers like Anna Kowalski rewrite each joke dozens of times."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back! My guest today has done twelve thousand shows, including one on a cruise ship during a storm. Please welcome Danny Lu!"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- How do you know when a joke's ready?\n- When it gets a laugh in three different cities. Until then it's just a rumor."
+   }
+  ],
+  "topic:ComicsCreator": [
+   {
+    "style": "casual social-media post",
+    "text": "Met Kate Morrow at Comic-Con and she sketched a tiny version of her grumpy dragon character on my copy 😭 Best day ever."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Ray Fujimoto's new webcomic update just dropped and the cliffhanger is brutal. How does he draw this fast?"
+   },
+   {
+    "style": "news-wire report",
+    "text": "SAN DIEGO (AP) - Cartoonist Emil Varga won two Eisner Awards on Friday for his graphic memoir about growing up in postwar Budapest."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ANGOULÊME - Belgian bande dessinée artist Claire Dubois has been awarded the festival's Grand Prix for her body of work."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who drew that new superhero series?\n- Tomás Rivera on art, and Jess Park writes it. They also did the vampire mini-series."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Is it true the mangaka took a break?\n- Yeah, Akira Sato announced a three-month hiatus for health reasons. The last chapter ended on a cliffhanger."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Lena Hart: the cartoonist whose newspaper strip about a lazy office cat has run every day since 1998."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Hiro Takeda: creator of the long-running pirate manga, known for drawing every background by hand."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which issue of the superhero series Mark Delaney started penciling? I'm trying to complete my run."
+   },
+   {
+    "style": "forum question",
+    "text": "What pens does Nadia Okafor use for her inking? Her line work in the new graphic novel is incredible."
+   },
+   {
+    "style": "product or event review",
+    "text": "Sofia Marchetti's graphic novel is gorgeous: the watercolor panels make every page feel like a painting, though the story is thin. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The new run is a letdown. Dave Holt's writing is sharp, but the rushed artwork makes the action scenes hard to follow."
+   },
+   {
+    "style": "diary entry",
+    "text": "Jan 21. Finished inking pages 14 through 18. My wrist hurts. Editor wants the cover by Friday. Why did I promise a monthly comic?"
+   },
+   {
+    "style": "diary entry",
+    "text": "Today I saw a kid reading my first manga volume on the train. I didn't say anything, but I smiled the whole way home."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Walter Greene (1921-1989) was an American comic book artist and writer, best known for co-creating several Golden Age superheroes."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Yumi Hasegawa is a Japanese manga artist known for her romance series serialized in a monthly shōjo magazine."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Through his comic strips, Pedro Alves showed that drawings with only a few words can tell powerful stories."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The artist Joanne Reilly proved that comics can be serious literature when her graphic memoir won a national book prize."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today I'm talking with Ben Kowalczyk, who wrote and drew a 600-page graphic novel over eleven years, mostly at his kitchen table."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- How do you plan a page?\n- Thumbnail sketches first, tiny boxes on a napkin. If the panels work that small, they'll work printed."
+   }
+  ],
+  "topic:FashionDesigner": [
+   {
+    "style": "casual social-media post",
+    "text": "Obsessed with Lucia Ferretti's new spring collection 😍 Those pastel trench coats are everything."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe a dress by Amara Okoye was on the red carpet last night. She was selling at a local market three years ago!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS (AFP) - Belgian couturier Pieter Van Damme presented his first haute couture collection on Tuesday, featuring sculptural gowns made from recycled silk."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MILAN - Italian designer Giorgio Santoro has been appointed creative director of a historic leather goods house, the company said in a statement."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who designed that suit you wore to the wedding?\n- A young Korean designer, Min-ji Park. She tailors everything by hand."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you watch the runway show?\n- Yes! Elena Ruiz sent models out in giant knitted capes. Strange, but beautiful."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Tomás Herrera: the Argentine designer famous for turning traditional ponchos into high-end evening wear."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Ingrid Solberg: whose minimalist Scandinavian label sells out every season within hours."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Nadia Rahman's label ships internationally? I love her embroidered jackets."
+   },
+   {
+    "style": "forum question",
+    "text": "Which school did Henri Moreau study at before founding his couture house? I'm writing a paper on him."
+   },
+   {
+    "style": "product or event review",
+    "text": "Sarah Lindqvist's latest collection is stunning: clean lines, bold colors, and fabrics that feel luxurious. Only complaint: the sizing runs small."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended Kofi Mensah's show at fashion week. The kente-inspired tailoring was the highlight; the finale gowns felt rushed."
+   },
+   {
+    "style": "diary entry",
+    "text": "Feb 2. Fitting day for the collection. Three gowns need to be remade. I sketched new sleeves on the train home."
+   },
+   {
+    "style": "diary entry",
+    "text": "Today the buyer from the department store loved my linen line. Twelve years of sewing in my bedroom finally paid off."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Coco Albertine (1925-1998) was a French couturier who founded the fashion house Maison Albertine in 1952."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rafael Ito is a Brazilian-Japanese clothing designer known for streetwear collections that blend kimono cuts with denim."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The work of Grace Abara shows that fashion can celebrate cultural heritage while still feeling modern."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "I admire the couturier Lin Wei because she uses only sustainable materials and pays her workers fairly."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today's guest dressed three Oscar winners and started out altering school uniforms in her aunt's shop. Welcome, Valentina Cruz!"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's your process for a new collection?\n- I start with a color, not a shape. Last season it was the green of wet moss."
+   }
+  ],
+  "topic:Painter": [
+   {
+    "style": "casual social-media post",
+    "text": "Stood in front of a Helena Varga landscape for twenty minutes today. The way she paints fog over the river is unreal 🎨"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just bought my first original oil painting! It's a small harbor scene by local artist Tom Becker and I'm in love."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - A still life by 17th-century Dutch master Pieter van Hoorn sold for 8.2 million pounds at auction on Thursday, a record for the artist."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MADRID - The Prado will open a major retrospective of Spanish painter Inés Calvo next spring, bringing together more than ninety of her canvases."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who painted that huge blue canvas in the lobby?\n- Kwame Asante. He did it with a broom instead of a brush."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you see the Monet-style garden scenes at the gallery?\n- Those were by Clara Holm. She paints outdoors every morning, rain or shine."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Frida Navarro: the Mexican artist whose vivid self-portraits mix folk art with surreal dreamscapes."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Arvid Lund: a Norwegian painter known for moody fjord landscapes in deep blues and greys."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know what kind of canvas Mei Lin uses for her ink-and-oil works? The texture looks almost like paper."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it true that Jacques Morel painted over his early portraits because he couldn't afford new canvas?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The exhibition of Rosa Delgado's watercolors is breathtaking; her use of light on water is masterful, though the gallery lighting doesn't help. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the retrospective of abstract expressionist Leo Marsh. The huge color fields are overwhelming in the best way, but the audio guide is useless."
+   },
+   {
+    "style": "diary entry",
+    "text": "April 7. Spent all day on the sky in the wheat field picture. Scraped it off twice. Ochre and cobalt still fighting each other."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sold two paintings at the street fair today. The old woman who bought the lighthouse said it reminded her of her childhood."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Johannes Albrecht (1820-1891) was a German Romantic painter known for his mountain landscapes and dramatic skies."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Amrita Sen is an Indian painter whose large oil canvases depict everyday life in Kolkata's markets."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The paintings of Elena Rossi show how an artist can use color to express emotions that words cannot."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Vincent Dorr struggled with poverty all his life, yet he painted over eight hundred works."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today's guest paints only at night, with a single lamp. Her portraits now hang in three national galleries. Welcome, Sofia Petrakis."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- Why do you work so large?\n- Because I want people to walk into the painting, not just look at it."
+   }
+  ],
+  "topic:Photographer": [
+   {
+    "style": "casual social-media post",
+    "text": "Lena Shaw's photos of the northern lights over Iceland are unreal. How is that a real photograph?! 📸"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just discovered street photographer Diego Alvarez and I've been scrolling his black-and-white shots of Havana for an hour."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - Photojournalist Amina Diallo won the Pulitzer Prize on Monday for her images documenting flood survivors in West Africa."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS - A retrospective of French photographer Henri Lacombe, famous for his portraits of jazz musicians, opens Saturday at a major Paris gallery."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who took your wedding pictures?\n- Sam Okafor. He made us stand in a wheat field at sunset and it was totally worth it."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Is that shot of the eagle real?\n- Yep, wildlife photographer Ingrid Holm waited three days in a hide to get it."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Yusuf Karim: whose portraits of world leaders defined magazine covers for four decades."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Mara Jensen: the landscape shooter who hikes for days carrying a large-format camera."
+   },
+   {
+    "style": "forum question",
+    "text": "What lens does Kenji Watanabe use for his night street scenes in Tokyo? The bokeh is gorgeous."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Ruth Ellison really shoot all her desert landscapes on film, or is that just a rumor?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The exhibition of Peter Novak's war photography is powerful and hard to look at. Excellent captions; the room was too crowded. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Hired Clara Benson for our family portraits. She was patient with our toddlers and the final photos are beautiful, though delivery took six weeks."
+   },
+   {
+    "style": "diary entry",
+    "text": "May 2. Woke at 4 a.m. to catch the fog over the valley. Got maybe one good frame out of three hundred. Worth it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Today the magazine finally published my photo essay on the fishermen. Mom bought five copies."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Dorothy Kline (1902-1971) was an American photographer best known for her documentary images of rural families during the Great Depression."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Takumi Hayashi is a Japanese photographer celebrated for his minimalist seascapes taken with long exposures."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The photos of Robert Kane show that a single image can change how the public thinks about war."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Through her portraits, Anna Vogel teaches us to look closely at people we might otherwise ignore."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "My guest today has photographed polar bears, presidents and her own grandmother's hands. Welcome, Nadia Petrova!"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's in your camera bag?\n- One body, one 35 millimeter lens. If I carry more, I spend my time choosing instead of seeing."
+   }
+  ],
+  "topic:AustralianRulesFootballPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Jack Doherty kicked six goals for the Bombers today!! Best game of his life and he's only 20 🔥 #AFL"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "How good was that mark by Liam Tran in the last quarter? Flew right over the pack. Speccy of the year."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MELBOURNE (AAP) - Collingwood midfielder Sam Whitfield has won the Brownlow Medal, polling 31 votes in a record-breaking season."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PERTH - West Coast Eagles ruckman Tom Barrett will miss six weeks with a knee injury sustained in Saturday's win over Fremantle."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you see Brodie Lawson's goal from the boundary?\n- Mate, from fifty metres on the run. The MCG crowd went nuts."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who's playing full-forward for the Swans this week?\n- Ryan Kelly, he's back from his hamstring and kicked four in the twos."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Charlie Nguyen: the Hawthorn small forward who led the league in tackles inside fifty this season."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Mick O'Rourke: three-time premiership player and one of the toughest backmen to pull on the Geelong jumper."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know how many games Darcy Pike played for North Melbourne before the trade to Adelaide?"
+   },
+   {
+    "style": "forum question",
+    "text": "Was Lachie Grant drafted in the first round? I reckon he's the best young midfielder in the AFL right now."
+   },
+   {
+    "style": "product or event review",
+    "text": "Ben Maddox's footy biography is a ripping read, especially the chapters on his grand final win with Richmond. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Saints game. Josh Wells was everywhere: thirty-two disposals, two goals and a smother on the siren. Shame about the result."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sat 14 Aug. Watched our Josh play his first senior game for the Dockers. Kicked a goal with his first touch. I cried in the stands."
+   },
+   {
+    "style": "diary entry",
+    "text": "Training was hard today. Coach said if I keep my kicking up I might get a debut against Carlton next month."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ron Harley (1938-2015) was an Australian rules footballer who played 240 games for the Melbourne Football Club in the VFL."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Jessica Stone is an Australian rules footballer who captains the Brisbane Lions in the AFL Women's competition."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Tom Carey showed that a ruckman could also be a match-winner, as he kicked forty goals in one season."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Playing footy taught Nathan Bruce leadership, which later helped him captain Essendon to a premiership."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome back to the footy pod. Joining us is Hayden Black, two hundred games for the Crows and still the best kick we've seen."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What was it like running out for your first grand final?\n- Honestly I couldn't hear anything. A hundred thousand people and it just went silent in my head."
+   }
+  ],
+  "topic:BadmintonPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Lee Jun-ho's smash today was clocked at over 400 km/h 🏸 How is that even physically possible?"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Watching Priya Nair play at the Indonesia Open, her net shots are pure art."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KUALA LUMPUR (Bernama) - Malaysian shuttler Tan Wei Ming reached the men's singles final of the Malaysia Open with a straight-games win on Saturday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "COPENHAGEN - Denmark's Mads Kristensen climbed to world No. 2 in the BWF rankings after winning the French Open on Sunday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you watch the women's doubles final?\n- Yes! Kim Soo-ah and Park Ji-yeon saved four match points. Incredible."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who's the guy with the crazy jump smash?\n- That's Arjun Mehta, the young Indian player. He's only nineteen."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Yuki Matsuda: the Japanese singles star famous for her endless rallies and incredible defense."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Hendra Wijaya: an Indonesian doubles legend with three world championship titles."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which racket Chen Lu uses? Trying to pick a new one for my club games."
+   },
+   {
+    "style": "forum question",
+    "text": "How did Sofie Lund come back from her Achilles injury so fast? She's already back in the top ten."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary about shuttler Lin Dao is inspiring: great match footage from the Olympics, though too short. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the exhibition match at the arena. Rahul Sharma's deceptive drops left the crowd gasping. Seats were cramped."
+   },
+   {
+    "style": "diary entry",
+    "text": "Mar 15. Lost in the quarterfinal 21-19 in the third. My backhand let me down again. Coach says more footwork drills."
+   },
+   {
+    "style": "diary entry",
+    "text": "Today I played doubles with Mei Ling for the first time. We clicked straight away."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lee Chong Hwa is a retired Malaysian badminton player who was ranked world No. 1 in men's singles for several years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Carolina Ruiz is a Spanish badminton player who won Olympic gold in women's singles."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Badminton players like Wang Fei need incredible speed and reflexes, because the shuttle can travel faster than any other ball in sport."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The career of Ananya Rao shows how hard work can turn a small-town girl into a world champion shuttler."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today on the show we have Kenta Mori, the reigning All England champion. Kenta, welcome!"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's your daily training like?\n- Three hours on court, an hour of footwork, then gym. And lots of rice."
+   }
+  ],
+  "topic:BaseballPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Diego Morales just hit his 40th homer of the season!! Dude is a monster at the plate ⚾🔥"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can we talk about how Kenji Ito struck out 14 batters tonight? That splitter is filthy."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BOSTON (AP) - Red Sox shortstop Carlos Vega went 4-for-5 with two RBIs on Tuesday, extending his hitting streak to 22 games."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CHICAGO - Cubs pitcher Ryan Mitchell has been placed on the 15-day injured list with elbow inflammation, the team announced."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you see the catch Tyler Hayes made in center?\n- Crashed right into the wall and held on. Robbed a home run in the ninth."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who's starting on the mound tonight?\n- Luis Ortega. His fastball's been sitting at ninety-eight lately."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Mike 'Hammer' Donnelly: the slugging first baseman who led the American League in RBIs three straight years."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Shohei Tanaka: a two-way star who both pitches and bats cleanup for his team."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone remember what Jimmy Rourke's batting average was in his rookie season with the Mets?"
+   },
+   {
+    "style": "forum question",
+    "text": "Is Marcus Bell going to the Hall of Fame on the first ballot? 500 homers and three Gold Gloves should be enough."
+   },
+   {
+    "style": "product or event review",
+    "text": "The biography of catcher Eddie Malone is a fun read, full of dugout stories from the 1970s, though it skips his later years. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Dodgers game. Andre Watkins pitched eight scoreless innings and the crowd gave him a standing ovation. Hot dogs were overpriced."
+   },
+   {
+    "style": "diary entry",
+    "text": "Aug 3. Took my son to see Josh Carter play. He signed his glove after batting practice. Kid hasn't stopped smiling."
+   },
+   {
+    "style": "diary entry",
+    "text": "Called up to triple-A today. Still can't believe it. Gotta work on hitting the curveball."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Henry 'Hank' Wallace (1915-1982) was an American professional baseball outfielder who played sixteen seasons in the major leagues."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Takashi Mori is a Japanese baseball pitcher who played for the Yomiuri Giants before signing with a Major League club."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The career of Roberto Díaz shows that a player can become a hero both on the field and in his community."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jackie Moore broke barriers in baseball, proving that talent matters more than background."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Today we're joined by Gary Lopez, who spent fourteen years as a major league catcher. Gary, what was it like catching a no-hitter?"
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's the hardest pitch you ever faced?\n- Nolan Pierce's slider. It looked like a strike and ended up in the dirt every time."
+   }
+  ],
+  "topic:BasketballPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Jaylen Brooks dropped 52 points tonight!! Somebody check if he's human 🏀🔥"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can't stop watching that crossover Marcus Tate pulled in the fourth quarter. Defender's ankles are still on the floor."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES (AP) - Lakers forward Darius King recorded a triple-double on Wednesday as Los Angeles beat Phoenix 118-104."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MADRID - Spanish point guard Pablo Ruiz has signed a three-year contract extension with Real Madrid, the club announced."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Did you see Andre Wallace's dunk over the center?\n- Yeah, posterized him! The whole arena lost it."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "- Who's the new rookie point guard?\n- Tyrese Coleman. He averaged twenty in college and his court vision is ridiculous."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Lena Fischer: the German forward who led the WNBA in rebounds last season."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Kevin Okafor: a seven-foot shot-blocker who also hits threes at over 38 percent."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Chris Dalton's knee injury is serious? Fantasy league playoffs are next week."
+   },
+   {
+    "style": "forum question",
+    "text": "Who was the better shooter in their prime: Ray Thompson or Steve Kerrigan? Discuss."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw the documentary on Isaiah Grant's comeback after his Achilles tear. Emotional and well made, but too much slow-motion. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Courtside at the Celtics game! Jamal Price hit the game-winner at the buzzer. Tickets cost a fortune but worth every penny."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dec 12. Practice ran late again. Coach says I need to work on my free throws; I went 4 of 10 last game."
+   },
+   {
+    "style": "diary entry",
+    "text": "Today I met Sue Lawrence at the youth camp. She showed me how to shoot a proper jump shot."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Reggie Hollins (born 1966) is a retired American professional basketball player who spent twelve seasons in the NBA."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Yao Chen is a Chinese former basketball center who played for the Shanghai Sharks and later in the NBA."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The story of Lamar Carter shows how a player from a poor neighborhood can become a role model for millions."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In my essay I chose Diana Walker, who led her team to four championships while studying to become a doctor."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "Welcome to Hoops Talk! Today we've got All-Star guard Malik Jordan to talk about his journey from the playground to the pros."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "- What's your pregame routine?\n- Same every time: two hundred shots, a nap, then chicken and rice. Never change it."
+   }
+  ]
+ }
+}

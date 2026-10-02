@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:GrandPrix": [
+   {
+    "style": "text message",
+    "text": "Monaco qualifying starts at 4, come over and watch, the tunnel onboard laps are insane this year"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see Norris lock up into Turn 1 at Silverstone?? Whole race changed after that pit stop"
+   },
+   {
+    "style": "press release",
+    "text": "The organisers of the Hungarian Grand Prix confirmed today that the Hungaroring will host the race through 2032, with a renovated paddock and new grandstands opening for next season."
+   },
+   {
+    "style": "press release",
+    "text": "Race promoters announced record attendance of 310,000 fans across the weekend at the Australian Grand Prix in Melbourne's Albert Park."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Suzuka so hard for drivers? A: The Esses. One small mistake in the first sector and you lose the rhythm for the whole lap."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you manage the tyres in Bahrain? A: We did a two-stop on the hards and just kept the gap to Leclerc under three seconds until the final stint."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If you're going to the Belgian race at Spa, pack a rain jacket even in August. The weather at Eau Rouge can change in ten minutes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for first-timers in Monza: sit near the Parabolica grandstand so you see cars braking hard and the run onto the main straight."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Verstappen Wins Rain-Soaked Brazilian Grand Prix From 17th on Grid. The Dutchman carved through the field at Interlagos in a drive rivals called one of the best of his career."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Late Safety Car Hands Sainz Victory in Singapore. A crash at Turn 7 with six laps left bunched the field under the floodlights at Marina Bay."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm in the grandstand at Montreal, right by the Wall of Champions, and Hamilton just kisses it, no damage. Whole stand screamed."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad took me to the race at Brands Hatch in 1986 and I still remember the smell of the fuel and Mansell waving on the slowdown lap."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which street race runs through the tunnel of a tiny principality on the Mediterranean every May? Answer: Monaco."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: At which circuit did Ayrton Senna win his home race in 1991 while stuck in sixth gear? Answer: Interlagos, São Paulo."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, got two tickets for the Austin race in October, Turn 1 grandstand. Flights are cheap if you book this week. You in?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Priya, the Abu Dhabi race was unreal, the cars finish under lights at sunset. I'll send photos of the marina once I'm home."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1955 Le Mans tragedy changed motor racing forever; here at the museum you can see the steering wheel from the winning car of the French Grand Prix that same summer."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This Ferrari 312T carried Niki Lauda to victory at the 1975 Monaco race. Note the wide airbox above the driver's head."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And he's down the inside at Copse, Russell has the lead! Lap 38 of 52 and the crowd at Silverstone are on their feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Pit wall is calling him in, box box box, they're going for the softs with twelve laps left at Zandvoort. Bold call!"
+   }
+  ],
+  "topic:MixedMartialArtsEvent": [
+   {
+    "style": "text message",
+    "text": "UFC 300 main card starts at 10 eastern, Pereira vs Hill. Bring chips, I'll get the stream sorted"
+   },
+   {
+    "style": "text message",
+    "text": "Bro did you see that spinning back fist in the co-main last night?? Fight of the night for sure"
+   },
+   {
+    "style": "press release",
+    "text": "Bellator Paris is set for the Accor Arena on May 16, headlined by a lightweight title bout and six French fighters on the main card."
+   },
+   {
+    "style": "press release",
+    "text": "ONE Championship announced today that its Friday Fights card at Lumpinee Stadium sold out within hours, with a strawweight MMA bout closing the night."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you feel walking out at Madison Square Garden? A: Honestly my legs were shaking until the first takedown. After that it was just a fight."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was the game plan for the third round? A: Coach said keep the jab long and wait for him to shoot. When he did, I had the guillotine."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching a fight night live? Get to the arena for the prelims. The early bouts are often the wildest finishes of the evening."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Betting on a card for fun? Look at reach, recent camp changes and who's cutting a lot of weight, not just the record."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Adesanya Reclaims Belt With Fifth-Round Knockout at UFC 287. The Miami crowd erupted as the middleweight landed a counter right."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "PFL Finals Crown Six Champions in One Night. Each winner took home a million dollars at the season-ending card in Washington."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was cageside at UFC 229 and when the brawl started after the main event, security just froze. Nobody knew what was going on."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin fought on a regional card in Ohio, Cage Titans 41, and won by armbar in ninety seconds. We were screaming the whole time."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1993 event in Denver launched the UFC, won by Royce Gracie? Answer: UFC 1."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which UFC card in 2016 drew a record crowd of over 56,000 at Melbourne's Docklands Stadium? Answer: UFC 193."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Marcus, the Fight Night in Vegas is on the 14th, cheap seats are still up. Weigh-ins are free to watch on Friday too."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jess, finally saw a card live in London. The atmosphere at the O2 when the Brit on the main event won was deafening."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These gloves were worn by Ronda Rousey at UFC 157 in 2013, the first women's bout ever held in the promotion."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This poster advertised Pride Fighting Championships' 2002 Shockwave card in Tokyo, which packed over 70,000 fans into the national stadium."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's got the back, hooks are in, he's hunting for the choke... and the tap! Thirty seconds left in round two, what a finish!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Judges' scores coming in for the co-main: 29-28, 28-29, 29-28, split decision. Folks, this card has been a rollercoaster."
+   }
+  ],
+  "topic:WrestlingEvent": [
+   {
+    "style": "text message",
+    "text": "WrestleMania night 2 tonight! Cody vs Roman main event, I'm calling it now, new champ"
+   },
+   {
+    "style": "text message",
+    "text": "Did you catch the ladder match at All In? I can't believe he jumped off the top of that thing"
+   },
+   {
+    "style": "press release",
+    "text": "WWE confirmed today that SummerSlam will be held at MetLife Stadium in New Jersey, with tickets on sale Friday."
+   },
+   {
+    "style": "press release",
+    "text": "All Elite Wrestling announced that its pay-per-view All In will return to Wembley Stadium in August after last year's record crowd."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was going through your head before the Royal Rumble entrance? A: Just counting the seconds on the clock. When my music hit, I forgot everything."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long did you rehearse the finish of that cage match? A: We talked it through all afternoon, but the crowd tells you when it's time."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a big pay-per-view? Bring a sign, but keep it smaller than the venue rules say or security will take it at the door."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching a live card for the first time? Stay for the dark match after the broadcast ends; wrestlers often thank the fans there."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Undertaker's Streak Ends at WrestleMania XXX. A stunned New Orleans crowd fell silent as Brock Lesnar pinned the Deadman."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Starrcade Returns With Steel Cage Main Event. The holiday tradition, once WCW's biggest night, filled the arena in Greensboro."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at the Montreal Survivor Series in '97, and when the bell rang early, the whole building just booed. Nobody knew it was a screwjob yet."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle took me to a small indie show in a VFW hall in Pennsylvania, and a guy dove off the balcony into the crowd. Best ten bucks ever."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1987 event drew a then-record 93,173 fans to the Pontiac Silverdome? Answer: WrestleMania III."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which annual January show features thirty entrants and an over-the-top-rope elimination? Answer: The Royal Rumble."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dee, I got us floor seats for Wrestle Kingdom at the Tokyo Dome! Book your flight, January 4 is the big night."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sam, the Saturday Night's Main Event revival was so much fun, old-school ring announcer and everything. You'd have loved it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This championship belt was defended at the first Clash of the Champions in 1988, aired free on cable against WrestleMania IV."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hulk Hogan's ring jacket from WrestleMania I, held at Madison Square Garden in March 1985, is displayed here alongside the original poster."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's climbing to the top rope, the crowd is on its feet... Swanton Bomb! One, two, three! What a way to close the show!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And here comes the music, folks, the arena is shaking! A surprise return at the Rumble, number twenty-nine!"
+   }
+  ],
+  "topic:GolfTournament": [
+   {
+    "style": "text message",
+    "text": "Scheffler's at -14 going into Sunday at Augusta, I've got the green jacket money on him"
+   },
+   {
+    "style": "text message",
+    "text": "Leaving early for the Phoenix Open, 16th hole stadium is gonna be wild today"
+   },
+   {
+    "style": "press release",
+    "text": "The R&A announced today that the 154th Open Championship will be played at Royal Birkdale, with practice rounds open to the public."
+   },
+   {
+    "style": "press release",
+    "text": "Organisers confirmed a record purse of $25 million for this year's Players Championship at TPC Sawgrass in Ponte Vedra Beach."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did you hit into the 17th island green? A: A soft wedge, 130 yards. The wind was swirling so I just aimed at the middle."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel holing that putt on the 72nd hole? A: I've practised that putt in my head since I was eight years old."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a big golf event? Bring a periscope and pick one hole to camp at, rather than chasing groups around the course."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Spectator tip: phones are banned at Augusta during play, so plan a meeting point with friends before you go in."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tiger Woods Wins the Masters at 43. Fourteen years after his last major, Woods slipped on a fifth green jacket as fans roared."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Playoff Decides Ryder Cup Opener as Europe Leads by Two. Rome's Marco Simone club erupted after a fourball comeback."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was standing behind the 18th green at Carnoustie in '99 when Van de Velde took his shoes off and walked into the burn. Unbelievable."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our club pro qualified for the U.S. Open at Pinehurst and we all drove down to watch him make the cut by a single shot."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which golf major awards its winner a green jacket? Answer: The Masters."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which biennial competition pits Europe against the United States in team golf? Answer: The Ryder Cup."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mark, I've got grounds passes for Thursday at the PGA Championship. Bring sunscreen and comfortable shoes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lisa, walked all eighteen holes following Rory at the Irish Open yesterday. My calves hate me but it was brilliant."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This claret jug replica marks the first Open Championship, played at Prestwick in 1860 over three rounds of twelve holes."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bobby Jones used this putter, Calamity Jane, to win the 1930 Grand Slam, including the Amateur at Merion."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He needs par on 18 to win the tournament outright... the drive finds the fairway, the crowd is holding its breath!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Birdie on 16! That's three in a row and he's now one off the lead going into the final two holes at Valhalla!"
+   }
+  ],
+  "topic:SoccerTournament": [
+   {
+    "style": "text message",
+    "text": "Euro final kicks off at 9, Spain vs England, pub's already full so get here early"
+   },
+   {
+    "style": "text message",
+    "text": "Copa América group stage is so chaotic this year, Bolivia might actually go through lol"
+   },
+   {
+    "style": "press release",
+    "text": "FIFA confirmed today that the 2030 World Cup will be co-hosted by Spain, Portugal and Morocco, with opening matches in South America."
+   },
+   {
+    "style": "press release",
+    "text": "The Africa Cup of Nations organising committee announced that 24 teams will compete across six stadiums in Morocco next winter."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was it like scoring in a World Cup semi-final? A: You don't hear the noise for a second, and then it hits you like a wave."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the squad cope with the heat in Qatar? A: We trained at night for two weeks before the opening match."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Following a cup in a foreign country? Buy the fan card early; many group-stage tickets are linked to it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching a knockout match at home? Keep snacks ready for extra time and penalties, they can add an hour."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Argentina Win World Cup on Penalties After Epic Final. Messi lifted the trophy at Lusail after a 3-3 draw with France."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hosts Côte d'Ivoire Crowned AFCON Champions. The Elephants came from behind to beat Nigeria in Abidjan."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was in Lisbon for the Euro 2004 final when Greece beat Portugal. The whole city went silent, and the Greek fans danced till sunrise."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our village team got drawn against a league club in the FA Cup third round. We lost 5-0 but we sang the whole match."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which country hosted the first FIFA World Cup in 1930? Answer: Uruguay."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which nation won the first Women's World Cup in 1991 in China? Answer: The United States."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Luca, got tickets for the Gold Cup quarterfinal in Houston! Mexico are playing, it's going to be packed."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, the Asian Cup in Doha was great fun, every stadium had air-conditioning and the fans from Jordan were incredible."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This match ball was used in the 1966 World Cup final at Wembley, where England beat West Germany 4-2 after extra time."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Jules Rimet Trophy, awarded until 1970, was stolen in London in 1966 and found days later by a dog named Pickles."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "It's down to penalties in this semi-final! The keeper guesses right... saved! The fans behind the goal are going berserk!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ninety-third minute, a corner, the keeper's come up... he heads it in! They're through to the knockout round!"
+   }
+  ],
+  "topic:TennisTournament": [
+   {
+    "style": "text message",
+    "text": "Wimbledon ballot results came out!! We got Centre Court for Tuesday, strawberries on me"
+   },
+   {
+    "style": "text message",
+    "text": "US Open night session tonight, Alcaraz is on second, don't fall asleep before 10"
+   },
+   {
+    "style": "press release",
+    "text": "Tennis Australia announced today that the Australian Open will start on a Sunday again, with a record prize pool for the singles draws."
+   },
+   {
+    "style": "press release",
+    "text": "Roland-Garros confirmed that the new roof over Court Philippe-Chatrier will allow night sessions throughout the fortnight."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you adjust from clay in Paris to grass in London? A: Shorter steps, lower stance, and you try not to slide like a skater."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did you change after losing the first set? A: I started returning from further back and mixing in more slices."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to Melbourne Park? Grounds passes are cheap, and you can watch seeded players practise on the outside courts."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Flushing Meadows, check the practice schedule each morning; you can sit right behind the top seeds for free."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Djokovic Claims Tenth Australian Open Title. The Serbian dropped just one set across the fortnight in Melbourne."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Indian Wells Final Postponed by Desert Windstorm. Officials moved the men's championship match to Monday morning."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I queued overnight in Wimbledon Park in 2008 and got into the Federer-Nadal final. It ended in near darkness and nobody left."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother saw Billie Jean King play at Forest Hills back in the sixties, and she still talks about her serve."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Grand Slam is played on red clay in Paris? Answer: The French Open, at Roland-Garros."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which clay-court men's event is held each April at a country club overlooking the sea in Monaco? Answer: The Monte-Carlo Masters."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, I can get passes for the Queen's Club week in June. Grass, Pimm's, and good seats on the side courts."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mei, I finally went to the Shanghai Masters. The stadium roof opens like a magnolia flower, it's beautiful."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This wooden racket was used by Fred Perry when he won Wimbledon in 1936, the last British men's champion for 77 years."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The original Davis Cup bowl, commissioned in 1900, is displayed here beside photographs of the first match in Boston."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Break point down, second serve... she goes for it down the line, ace! What nerve at five-all in the third!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And that's the match! Straight sets, and the crowd on Arthur Ashe are giving him a standing ovation!"
+   }
+  ],
+  "topic:WomensTennisAssociationTournament": [
+   {
+    "style": "text message",
+    "text": "Swiatek vs Sabalenka in the Madrid final tomorrow, clay queen vs power, I can't decide who I want"
+   },
+   {
+    "style": "text message",
+    "text": "WTA Finals tickets in Riyadh just dropped, top eight women only, round robin. Wanna go?"
+   },
+   {
+    "style": "press release",
+    "text": "The WTA announced today that the Charleston Open will raise its prize money by 20 percent and add a new stadium court."
+   },
+   {
+    "style": "press release",
+    "text": "Organisers of the Dubai Duty Free Tennis Championships confirmed a strong women's field featuring six of the world's top ten players."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you prepare for the WTA 1000 in Beijing after the US hard courts? A: Long flight, a few easy days, then lots of serve practice."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did winning in Stuttgart mean to you? A: I got the trophy and the Porsche. My mum still can't believe it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a women's event like Eastbourne? The week before Wimbledon is a great chance to see top players up close."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for the Miami Open: the women's quarterfinals often land on a weekday, so tickets are cheaper and crowds smaller."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Gauff Captures First WTA 1000 Title in Cincinnati. The 19-year-old beat Muchova in straight sets."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rybakina Rolls Through Wuhan Field. The Kazakh won without dropping a set at the revived WTA event in China."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at the 2001 Indian Wells final when the crowd booed Serena. She won anyway, and stayed away for fourteen years."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My friend's daughter was a ball girl at the Hobart International and Sloane Stephens gave her a signed wristband."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which WTA event awards its champion a sports car each year? Answer: The Porsche Tennis Grand Prix in Stuttgart."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which season-ending women's event features only the top eight singles players? Answer: The WTA Finals."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, the women's event in Toronto is on next week. Ons Jabeur is playing her first match on Tuesday night."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rosa, the Guadalajara Open was amazing, the crowd chanted for every Mexican wildcard on court."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This dress was worn by Martina Navratilova at the 1990 Virginia Slims Championships, now known as the WTA Finals."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Billie Jean King and eight other players signed one-dollar contracts in 1970 to launch the Virginia Slims circuit, forerunner of the WTA Tour."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Match point in the Doha final... Swiatek crushes the forehand cross-court, and that's a third straight title in Qatar!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Sabalenka with the ace to hold, she leads the Brisbane final four games to two. What a serve she has tonight!"
+   }
+  ],
+  "topic:RollerCoaster": [
+   {
+    "style": "text message",
+    "text": "Line for Steel Vengeance is 2 hrs, worth it?? I'm shaking already"
+   },
+   {
+    "style": "text message",
+    "text": "Just rode Kingda Ka, that launch made my soul leave my body lol"
+   },
+   {
+    "style": "press release",
+    "text": "Six Flags Over Texas announced today that a new hybrid wooden coaster with a 90-foot drop will open in spring."
+   },
+   {
+    "style": "press release",
+    "text": "Europa-Park unveiled Voltron Nevera, a multi-launch coaster with a top speed of 90 km/h, at its Rulantica resort press event."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you design Fury 325 with a giant drop? A: We wanted the feeling of falling out of the sky, then a long sweeping turn."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of building a wooden coaster? A: Wood moves with the weather, so we re-track some sections every year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Take off loose glasses and empty your pockets before boarding; many parks now have metal detectors at launch coasters."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ride in the back row for the strongest airtime on the first drop, front row for the view."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Top Thrill 2 Reopens at Cedar Point. The rebuilt 420-foot coaster now launches riders forward and backward before the final run."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Formula Rossa Clocks Record Speed. The Abu Dhabi ride hits 240 km/h in under five seconds, riders wear goggles."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So the first time I rode the Cyclone at Coney Island, the lap bar came down and the guy said 'hold on to your teeth.' He wasn't joking."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My little brother was finally tall enough for Space Mountain and screamed the whole ride in the dark, then wanted to go again."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which coaster, opened in 1927 in Brooklyn, is a New York City landmark? Answer: The Coney Island Cyclone."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which ride at Ferrari World is the fastest coaster in the world? Answer: Formula Rossa."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jen, we should do Magic Mountain next month, they have like nineteen coasters. Twisted Colossus is first."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Raj, Steel Dragon 2000 in Japan was enormous, over 2,400 meters of track. My legs were jelly afterwards."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This car rode the Leap-the-Dips at Lakemont Park, opened in 1902 and the world's oldest operating coaster."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Switchback Railway, built at Coney Island in 1884, cost a nickel and reached six miles per hour."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And here's the first drop, ninety-five degrees, beyond vertical... listen to that scream! You can hear it from the parking lot!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live from the park opening day, and the queue for the new launch ride already snakes past the funnel cake stand!"
+   }
+  ],
+  "topic:Lake": [
+   {
+    "style": "text message",
+    "text": "Water's freezing at Tahoe but so clear you can see the bottom at 20 ft. Coming tomorrow?"
+   },
+   {
+    "style": "text message",
+    "text": "Kayaked across Loch Ness this morning, no monster, just mist and one very confused duck"
+   },
+   {
+    "style": "press release",
+    "text": "Ohio officials announced today that beaches along Erie's southern shore will reopen after algae levels dropped below the safety threshold."
+   },
+   {
+    "style": "press release",
+    "text": "The Baikal research station in Irkutsk announced that ice cover on the Siberian waters formed two weeks later than average this winter."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Crater Lake so blue? A: It's very deep, about 590 meters, and fed almost only by snow and rain, so the water is very pure."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do people say Titicaca is special? A: It's one of the highest navigable bodies of water in the world, shared by Peru and Bolivia."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Planning a swim in Lac Léman, off the Geneva shore? Check the water temperature first; it can be 14 degrees even in June."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Fishing on Lake of the Woods in winter: drill your ice holes at least ten centimeters thick before walking out."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Dead Sea Shoreline Retreats Another Meter. The salt lake between Jordan and Israel keeps shrinking as tributaries are diverted."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ice Fishing Season Opens on Mille Lacs. Thousands of shacks appeared on the frozen Minnesota waters within a single weekend."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid we rented a cabin on Lake Winnipesaukee and I caught my first bass off the dock. Dad still has the photo."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We swam out to the little island at Bled, rang the church bell, and the whole wedding party waved at us."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which body of water in Siberia holds about a fifth of the world's unfrozen fresh water? Answer: Baikal."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which is the largest of the Great Lakes by surface area? Answer: Lake Superior."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sophie, the cottage on Como is booked for August! Ferry from Bellagio, then a ten-minute walk."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Daniel, Lake Louise at sunrise is unreal, turquoise water and the glacier above. Bring a warm jacket."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Victoria Nyanza, the source of the White Nile, covers nearly 69,000 square kilometers across three countries."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This dugout canoe was found in the shoreline mud at Neuchâtel and is around 5,000 years old."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Wind's picking up on Michigan's big water this afternoon, so if you're out sailing, head for the harbor before 4."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our fishing report: walleye biting near the north shore of Lake Erie, use jigs about twenty feet down."
+   }
+  ],
+  "topic:Castle": [
+   {
+    "style": "text message",
+    "text": "At Edinburgh Castle, the one o'clock gun just went off and I nearly dropped my coffee"
+   },
+   {
+    "style": "text message",
+    "text": "Neuschwanstein tour at 11, bus leaves Füssen at 9:30, don't be late!"
+   },
+   {
+    "style": "press release",
+    "text": "Historic Environment Scotland announced that Stirling Castle's Great Hall will reopen after two years of roof repairs."
+   },
+   {
+    "style": "press release",
+    "text": "Warwick Castle unveiled a new trebuchet demonstration and medieval jousting show for the summer season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the oldest part of Windsor? A: The Round Tower sits on a mound built by William the Conqueror around 1070."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why was Bran Castle linked to Dracula? A: Mostly tourism. Its look fit the story, though Stoker likely never saw it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting a hilltop fortress? Wear shoes with grip; the stone stairs inside towers are often uneven and slippery."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Book Himeji tickets early in cherry blossom season; the keep allows limited visitors up the steep wooden stairs."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lightning Strikes Hohenzollern Battlements. The hilltop castle in Germany suffered minor damage to one tower."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Conwy Castle Walls Reopen After Stonework Project. Visitors can again walk the medieval circuit around the Welsh town."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We got lost in the dungeon tour at Chillon and the guide had to come back for us. My son swears he heard chains."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather proposed to my grandmother on the drawbridge at Bodiam, right above the moat with all the carp."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Bavarian castle inspired Disney's Sleeping Beauty castle? Answer: Neuschwanstein."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English castle is the oldest occupied one in the world? Answer: Windsor Castle."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Clara, Eilean Donan was magical in the fog. Three bridges of stone and the loch all around it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Pete, you'd love Carcassonne, the whole walled city with fifty-two towers. We walked the ramparts at night."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Caernarfon was begun by Edward I in 1283; its banded walls echo the walls of Constantinople."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This iron key opened the gatehouse of Kenilworth, which withstood a six-month siege in 1266."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the castle grounds where the archery tournament is underway, and the crowd is packed along the old curtain wall!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Today on the travel hour: why everybody climbs the keep at Dover, and what you'll find in the secret wartime tunnels below."
+   }
+  ],
+  "topic:HistoricBuilding": [
+   {
+    "style": "text message",
+    "text": "Inside the old Customs House now, the ceiling murals are from 1890 and still gorgeous"
+   },
+   {
+    "style": "text message",
+    "text": "Tour of the Flatiron Building at 3, meet by the plaque on Fifth Ave"
+   },
+   {
+    "style": "press release",
+    "text": "The city announced that the 1871 Union Station clock tower will be restored with original brick and reopened to visitors next spring."
+   },
+   {
+    "style": "press release",
+    "text": "The National Trust confirmed today that Hardwick Hall, famed for its Elizabethan windows, will open its long gallery for evening tours."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How old is the Old State House in Boston? A: It dates to 1713; the Declaration of Independence was read from its balcony."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was the hardest part of restoring the Chrysler Building lobby? A: Matching the original marble and the ceiling mural colors."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting an old landmark? Look for the date stone above the door; many 18th-century builders carved the year there."
+   },
+   {
+    "style": "how-to tip",
+    "text": "When touring a heritage house, ask about the servants' staircase; it's often the best-preserved part of the building."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fire Damages 17th-Century Guildhall Roof. Firefighters saved the timber-framed hall's painted ceiling in a nighttime operation."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Independence Hall Reopens After Renovation. The Philadelphia landmark welcomes visitors back to the Assembly Room."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-aunt was married in the old courthouse in Savannah, and they still have the same oak benches from 1889."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When we toured the Palazzo Vecchio, the guide opened a secret door behind a painting and led us up into the roof beams."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which Philadelphia building was the US Constitution signed? Answer: Independence Hall."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which iron-and-glass London structure built in 1851 burned down in 1936? Answer: The Crystal Palace."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nora, the Hôtel de Ville in Brussels has free tours on Sundays. The Gothic tower is breathtaking."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jacob, we stayed next to the Mission San Juan Capistrano. The adobe walls from 1776 still stand."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Built in 1756 as a grain exchange, this merchant hall later served as a theatre, a barracks, and a town archive."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Monticello, designed by Thomas Jefferson, took over forty years to build and redesign."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Today on Heritage Hour: the 1820s textile mill on River Street that's becoming apartments, with original beams intact."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the old opera house turns 150 this weekend, and they're opening the balcony boxes for the first time since 1960!"
+   }
+  ],
+  "topic:Hospital": [
+   {
+    "style": "text message",
+    "text": "Mum's in room 412 at St Thomas', visiting hours till 8, bring her a magazine"
+   },
+   {
+    "style": "text message",
+    "text": "Parking at Mass General is a nightmare, take the T if you're coming to see the baby"
+   },
+   {
+    "style": "press release",
+    "text": "Johns Hopkins Hospital announced the opening of a new pediatric cancer wing with 60 beds and a rooftop garden."
+   },
+   {
+    "style": "press release",
+    "text": "Great Ormond Street Hospital confirmed today that it has completed its first gene therapy trial for a rare childhood disorder."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's a night shift like in the emergency department at Bellevue? A: Unpredictable. You might see a broken wrist and a gunshot wound in the same hour."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the Mayo Clinic become so famous? A: The Mayo brothers pioneered group practice, with specialists working side by side."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting someone in an intensive care unit? Call ahead; many units limit visitors to two at a time."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Before a planned operation at your local medical center, bring a list of all medicines you take, including vitamins."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Cleveland Clinic Opens New Heart Center. The facility will perform up to 6,000 cardiac procedures a year."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Charité Celebrates 300 Years. Berlin's teaching hospital, home to several Nobel laureates, marks its anniversary with open days."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My daughter was born at Royal Infirmary during a snowstorm; the midwife slept on a chair in the corridor for two nights."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I broke my arm skiing and the little clinic in Chamonix had me in a cast within forty minutes. Best care ever."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Paris hospital, founded in 651, is often called the city's oldest? Answer: Hôtel-Dieu."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: At which London hospital did Florence Nightingale open her nursing school in 1860? Answer: St Thomas'."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ivy, the children's ward at Sick Kids in Toronto is looking for volunteers to read to patients on weekends."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sam, Dad's surgery went well at Mount Sinai. The nurses are lovely, he's already complaining about the food."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This iron bed comes from the Scutari barracks hospital, where Florence Nightingale nursed soldiers during the Crimean War."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Opened in 1752, Pennsylvania Hospital was the first in the American colonies, co-founded by Benjamin Franklin."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming up after the news, we talk to the nurses at County General about the new maternity unit opening on Monday."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big thanks to the staff of St Mary's who called in to the show this morning; your charity bake sale raised four thousand dollars!"
+   }
+  ],
+  "topic:Hotel": [
+   {
+    "style": "text message",
+    "text": "Checked in at the Savoy, the room overlooks the Thames, I'm never leaving"
+   },
+   {
+    "style": "text message",
+    "text": "Hotel pool closes at 10, we're in room 1207 at the Marriott, come up after dinner"
+   },
+   {
+    "style": "press release",
+    "text": "The Ritz Paris announced today the reopening of its legendary Bar Hemingway following a six-month restoration."
+   },
+   {
+    "style": "press release",
+    "text": "The Burj Al Arab confirmed that it will add an outdoor terrace with private cabanas built out over the Persian Gulf."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the secret behind the Waldorf Astoria's famous salad? A: Apples, celery and walnuts, first served here in 1896."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the Ice Hotel in Jukkasjärvi stay frozen? A: It doesn't. We rebuild every room from river ice each winter."
+   },
+   {
+    "style": "how-to tip",
+    "text": "When booking a room, ask for one on a high floor away from the elevator; it's quieter."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Leave a small tip for housekeeping each day, not just at checkout, since different staff may clean your room."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Raffles Singapore Reopens After Two-Year Restoration. The colonial-era landmark is again serving its famous Singapore Sling."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Chelsea Hotel Welcomes Guests Again. The Manhattan building, home to artists and musicians for decades, completes its renovation."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stayed at the Stanley in Colorado, the one that inspired The Shining. My wife made me sleep with the lights on."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "On our honeymoon the staff at the Hotel Danieli in Venice left rose petals on the bed and a gondola waiting outside."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Colorado lodge inspired Stephen King's The Shining? Answer: The Stanley Hotel."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which London hotel was the Peach Melba dessert created by chef Escoffier? Answer: The Savoy."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Emma, found a cheap B&B in Galway right by the harbor, breakfast included. Shall I book it?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ali, the Peninsula in Hong Kong picked us up in a Rolls-Royce. The afternoon tea alone was worth the trip."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Opened in 1907, the Plaza on Fifth Avenue cost $12.5 million and was home to the fictional Eloise."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This brass room key belonged to suite 1201 at the Mount Washington Hotel, where the Bretton Woods conference met in 1944."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on the travel show: the boutique inn in Lisbon where every room is decorated by a local artist."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, tell us your worst check-in story! First caller, you got locked out of your room in a towel? Classic!"
+   }
+  ],
+  "topic:Museum": [
+   {
+    "style": "text message",
+    "text": "Louvre line is huge, we're going round to the Carrousel entrance, meet you by the inverted pyramid"
+   },
+   {
+    "style": "text message",
+    "text": "Free entry at the Met after 5 on Fridays? Let's go see the Egyptian temple"
+   },
+   {
+    "style": "press release",
+    "text": "The Rijksmuseum announced that Rembrandt's The Night Watch will be restored in full view of visitors inside a glass chamber."
+   },
+   {
+    "style": "press release",
+    "text": "The Smithsonian's National Air and Space Museum reopened six galleries today after a major renovation."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the most popular object at the British Museum? A: The Rosetta Stone. People queue three deep to see it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the Guggenheim Bilbao change the city? A: Visitors came for the titanium building and stayed for the old town."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Big gallery tip: pick three rooms you really want to see first, then wander. You can't see the Prado in one day."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Most art galleries offer free audio guides on their app; bring headphones and save the rental fee."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Uffizi Breaks Visitor Record. Florence's gallery welcomed over five million people last year."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Natural History Museum Unveils Blue Whale Skeleton. The 25-meter skeleton now hangs in the main hall in London."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was seven, my dad took me to the Field Museum in Chicago and I stood under Sue the T. rex for an hour."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I got told off by a guard at the Hermitage for leaning too close to a Matisse. In my defense, it was beautiful."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Paris gallery is housed in a former railway station? Answer: The Musée d'Orsay."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which is the world's largest art museum by gallery space, in a former royal palace? Answer: The Louvre."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kate, the Tate Modern has a new installation in the Turbine Hall, giant swings everywhere. Want to go Saturday?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Leo, the Museo Nacional de Antropología in Mexico City is incredible, the Aztec sun stone is massive."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1683, the Ashmolean in Oxford is often called Britain's first public museum."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Pergamon Museum's Ishtar Gate was rebuilt here in Berlin from glazed bricks excavated in Babylon."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live at the opening of the new science center downtown, and kids are already lined up for the planetarium!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tomorrow on the show, the curator of the transport museum tells us how they got a steam locomotive through the doors."
+   }
+  ],
+  "topic:Prison": [
+   {
+    "style": "text message",
+    "text": "Alcatraz ferry at 9:10 from Pier 33, bring a jacket, it's windy on the island"
+   },
+   {
+    "style": "text message",
+    "text": "We did the night tour at Eastern State, those cellblocks are seriously creepy"
+   },
+   {
+    "style": "press release",
+    "text": "The state corrections department announced that the 1890s penitentiary in Joliet will become a museum and visitor center."
+   },
+   {
+    "style": "press release",
+    "text": "Officials confirmed that Robben Island will open new guided walks led by former political prisoners."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was daily life like in Sing Sing? A: Silence was mandatory early on. Inmates worked in the quarries and ate without speaking."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Halden Prison in Norway famous? A: Cells have private bathrooms and windows; the focus is on rehabilitation."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Planning to visit a historic jail? Book the earliest tour; the cells are less crowded and the guides have more time for questions."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Kilmainham Gaol tours sell out quickly in summer, so reserve online a week ahead."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Three Inmates Escape From Alcatraz in 1962. The men used spoons and papier-mâché heads to fool guards."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Old Melbourne Gaol Hosts Ned Kelly Exhibit. The bushranger's death mask is displayed in the cell block where he was hanged."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather was a guard at Leavenworth for thirty years; he said the hardest part was the night shifts in winter."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We visited the Hanoi Hilton, and the guide showed us the cell where John McCain was held. Everyone was quiet afterward."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: On which island was Nelson Mandela held for 18 years? Answer: Robben Island."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Paris fortress was stormed on July 14, 1789? Answer: The Bastille."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Carl, Eastern State Penitentiary has a Halloween event, and Al Capone's cell is on the tour. Spooky and educational."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mo, Port Arthur in Tasmania was beautiful and grim at the same time. The ruins are right by the water."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Opened in 1829, Eastern State introduced solitary confinement on a wide scale; this cell door shows the feeding hatch."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Tower of London served as a jail for centuries; Rudolf Hess was one of the last people held here, in 1941."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking on the morning show: two men walked out of the county lockup overnight and police are searching the river woods."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our guest today served twelve years in Angola, Louisiana, and now runs the rodeo program for the inmates there."
+   }
+  ],
+  "topic:Restaurant": [
+   {
+    "style": "text message",
+    "text": "Got a table at Noma for 8! Wear something nice, the tasting menu is like 20 courses"
+   },
+   {
+    "style": "text message",
+    "text": "Katz's Deli, pastrami on rye, the line moves fast. Meet me at the corner"
+   },
+   {
+    "style": "press release",
+    "text": "Chef Massimo Bottura announced today that Osteria Francescana will open a second dining room for lunch service."
+   },
+   {
+    "style": "press release",
+    "text": "The Ledbury confirmed it has regained its third Michelin star after reopening in Notting Hill last year."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the signature dish at El Celler de Can Roca? A: Probably the caramelized olives on a little bonsai tree."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why open a ramen bar in a basement? A: Rent was cheap, and people like finding a hidden place."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Reserve popular bistros at 10 a.m. thirty days ahead, when many booking systems release new tables."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ask your server what the kitchen is proudest of tonight; it's usually better than the bestseller."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Beloved Diner Closes After 70 Years. Lou's on Main Street served its last cup of coffee to a line around the block."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Taqueria Wins Michelin Star. El Califa de León in Mexico City is the first street taco stand to receive the honor."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stumbled into a tiny trattoria in Rome with no menu; the nonna just brought us whatever she'd cooked. Best meal of my life."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was washing dishes at Antoine's in New Orleans, and the chef let me taste the oysters Rockefeller."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which New Orleans eatery invented Oysters Rockefeller in 1899? Answer: Antoine's."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Danish place was named world's best four times and pioneered New Nordic cuisine? Answer: Noma."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Gina, the dumpling place in Flushing is open again. Soup dumplings for twelve bucks. Saturday lunch?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Omar, the steakhouse in Buenos Aires we went to, La Cabrera, still has the best grilled provoleta. Let's go back."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1725, Sobrino de Botín in Madrid is said to be the oldest operating restaurant in the world."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This menu from Delmonico's, 1899, lists terrapin, canvasback duck and the original Baked Alaska."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Food hour, folks! Today we're at a smoky barbecue joint in Austin where the brisket line starts at six a.m."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the new pho spot on Elm Street is the best in town, and the owner just texted us: free spring rolls for listeners!"
+   }
+  ],
+  "topic:ShoppingMall": [
+   {
+    "style": "text message",
+    "text": "Meet at the food court in the Galleria, by the escalator near Zara"
+   },
+   {
+    "style": "text message",
+    "text": "Mall of America has an indoor roller coaster??? we're going this weekend"
+   },
+   {
+    "style": "press release",
+    "text": "Westfield announced today that its London center at Stratford will add 40 new stores and a rooftop cinema."
+   },
+   {
+    "style": "press release",
+    "text": "The Dubai Mall confirmed a new aquarium tunnel and a second ice rink as part of its expansion."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the secret of the King of Prussia mall's success? A: Location near Philadelphia and a huge mix of luxury and everyday brands."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you turn the old department store into a climbing gym? A: Anchor stores are leaving; people now come for experiences."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a big shopping center on Black Friday? Park near the cinema entrance; it's usually the emptiest lot."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Use the directory kiosks or app map; big malls like West Edmonton have over 800 stores."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Dead Mall Reborn as Medical Center. The 1970s Hickory Hollow complex in Nashville now houses clinics and a library."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Southdale Turns 70. America's first enclosed mall, in Edina, Minnesota, celebrates with a vintage car show."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In the nineties my friends and I spent every Saturday at the Galleria, just walking loops and eating pretzels."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I got lost in the Iran Mall in Tehran for two hours. It has a library, a lake and a mirrored palace hall."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Alberta shopping center was once the largest in the world and has a wave pool? Answer: West Edmonton Mall."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What was the name of the first fully enclosed US mall, opened in 1956? Answer: Southdale Center."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Becca, Garden State Plaza has a big sale this weekend. Let's grab lunch at the food court after."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ken, the Siam Paragon in Bangkok is wild. Car showrooms on one floor and an aquarium below."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Galleria Vittorio Emanuele II in Milan, opened in 1877, is one of the world's oldest covered shopping arcades."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This neon sign hung above the entrance of the Northland Center in Michigan, a pioneering open-air mall from 1954."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the new outlet center out on Route 9, and they're giving away gift cards to the first hundred shoppers!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic update: the parking garage at Tysons Corner is full, use the Metro stop instead."
+   }
+  ],
+  "topic:Galaxy": [
+   {
+    "style": "text message",
+    "text": "Clear skies tonight! You can see Andromeda with binoculars, look near Cassiopeia"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the new Webb image of the Cartwheel? Those spiral arms look like a wheel"
+   },
+   {
+    "style": "press release",
+    "text": "NASA released a new image today of the Pinwheel Galaxy, M101, showing young star clusters across its spiral arms."
+   },
+   {
+    "style": "press release",
+    "text": "Astronomers announced the discovery of JADES-GS-z14-0, a galaxy seen just 290 million years after the Big Bang."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How far is Andromeda? A: About 2.5 million light-years. The light you see left it before humans existed."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Sombrero so recognizable? A: A bright bulge and a dark dust lane make it look like a wide-brimmed hat."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To find Andromeda, go to the Great Square of Pegasus, then hop two stars up toward Cassiopeia."
+   },
+   {
+    "style": "how-to tip",
+    "text": "For photographing the Whirlpool, use a tracking mount and stack many short exposures to bring out the arms."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Milky Way and Andromeda Collision May Be Less Likely. New measurements cut the chance of a merger in ten billion years to about half."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Webb Spots 'Phoenix' Spiral Rebuilding Itself. The dwarf system appears to be forming new stars from recycled gas."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was camping in the Atacama when my guide pointed up and said, that's the Large Magellanic Cloud. It looked like a ghost."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First time I saw the Milky Way's core from a dark sky, I actually cried. It looks like smoke across the sky."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which spiral is the nearest large neighbor of the Milky Way? Answer: Andromeda, M31."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which two irregular companions of our galaxy are visible from the Southern Hemisphere? Answer: The Large and Small Magellanic Clouds."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ravi, finally got a photo of M51 with my telescope. The companion is visible too, a little smudge."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, the planetarium show on the Triangulum spiral was so cool, it has about 40 billion stars."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Centaurus A, an elliptical with a twisted dust lane, hosts a supermassive black hole firing jets a million light-years long."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This photographic plate, taken by Edwin Hubble in 1923, showed a variable star in Andromeda and proved it lay far beyond our own."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Sky Talk: why the Cigar, M82, is bursting with new stars after a close pass by its neighbor M81."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listener question: can you see a whole galaxy with your naked eye? Yes, Andromeda, on a dark autumn night!"
+   }
+  ],
+  "topic:Planet": [
+   {
+    "style": "text message",
+    "text": "Look west after sunset, that bright 'star' is Venus! Brightest thing in the sky tonight"
+   },
+   {
+    "style": "text message",
+    "text": "Jupiter's moons are visible through my little telescope, four tiny dots in a line!"
+   },
+   {
+    "style": "press release",
+    "text": "NASA announced today that Perseverance found new organic molecules in rocks from Jezero Crater on Mars."
+   },
+   {
+    "style": "press release",
+    "text": "Astronomers announced that TRAPPIST-1e may hold liquid water, according to new Webb observations."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Venus so hot? A: Its thick carbon dioxide atmosphere traps heat; the surface is about 465 °C."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long is a day on Mercury? A: One solar day lasts about 176 Earth days, longer than its year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To spot Saturn's rings, use a telescope with at least 25x magnification and look in a dark, steady sky."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Use a stargazing app to locate Mars; it shines with a reddish color that doesn't twinkle."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Uranus Spins on Its Side, New Model Explains Why. A giant collision billions of years ago likely tipped it over."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Neptune's Winds Clocked at 2,100 km/h. Voyager data reveals the fastest winds measured in the solar system."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandpa set up his telescope on the back porch and showed me Saturn's rings. I didn't believe it was real."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In third grade I made a papier-mâché Jupiter with a red spot. My teacher hung it from the classroom ceiling."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which world in our solar system has the Great Red Spot? Answer: Jupiter."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What was the first planet discovered with a telescope, in 1781? Answer: Uranus, by William Herschel."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Maya, Mars and Venus are close together in the sky this week. Look west around 9pm!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Leo, we watched the Cassini documentary. Did you know Saturn could float in a giant bathtub?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mars has the tallest volcano in the solar system, Olympus Mons, about 22 kilometers high."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This meteorite was blasted off the Martian surface and landed in Egypt in 1911."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Space Hour: the planet where it rains diamonds. That's right, deep inside Neptune!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, look south tonight around ten; Saturn is at opposition, the best view of the year!"
+   }
+  ],
+  "topic:Diocese": [
+   {
+    "style": "text message",
+    "text": "Bishop's visiting our parish Sunday for confirmations, the whole chancery from Brooklyn is coming"
+   },
+   {
+    "style": "text message",
+    "text": "Did you get the bishop's letter? New Mass times for all churches in the deanery"
+   },
+   {
+    "style": "press release",
+    "text": "The Diocese of Arlington announced today that Bishop Michael Burbidge will ordain six new priests at the Cathedral of St. Thomas More."
+   },
+   {
+    "style": "press release",
+    "text": "The Anglican Diocese of Sydney confirmed that its synod will meet in October to elect a new archbishop."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How many parishes does Chicago's archbishop oversee? A: Over 200, serving about two million Catholics."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What does a bishop do in a see like Durham? A: He oversees the clergy, confirms people and cares for the cathedral."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If you're moving to Westminster, check the cardinal's archdiocesan website to find the parish that covers your address."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To arrange a church wedding, start with your parish priest; the diocese may require a marriage preparation course."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Archdiocese of Los Angeles Opens New Cathedral Center. The Cathedral of Our Lady of the Angels hosts the dedication Mass."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lincoln Bishop Merges Rural Parishes. Fewer priests have prompted the Nebraska see to combine twelve churches."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was an altar boy in the Diocese of Cork, the bishop came to bless our new bell, and I nearly dropped the incense."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt worked forty years in the chancery office of the Archdiocese of Boston, filing baptism records."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which see does the Pope lead as its bishop? Answer: Rome."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English see is the oldest, founded by Augustine in 597? Answer: Canterbury."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Father Tom, the youth group from the bishopric of Galway is joining us for the pilgrimage in July."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Anne, the bishop of Lyon sent a lovely letter for our parish's 200th anniversary. I'll forward it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1789, the Diocese of Baltimore was the first Catholic diocese in the United States."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This map shows the boundaries of the medieval see of Lincoln, once stretching from the Humber to the Thames."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Today on Faith Matters, the archbishop talks about plans to restore churches across the province."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning show: the diocese is hosting a charity run for the Catholic schools. Sign up online!"
+   }
+  ],
+  "topic:Airport": [
+   {
+    "style": "text message",
+    "text": "Landed at Heathrow T5, passport queue is massive, I'll text when I'm at arrivals"
+   },
+   {
+    "style": "text message",
+    "text": "Flight delayed at O'Hare again, snow on the runway. Don't wait up"
+   },
+   {
+    "style": "press release",
+    "text": "Changi Airport announced today that its Terminal 5 will open in 2030, adding capacity for 50 million passengers a year."
+   },
+   {
+    "style": "press release",
+    "text": "Denver International confirmed that a new concourse with 26 gates opened this morning on its east side."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the approach into Paro in Bhutan so tricky? A: You fly between mountains and only see the runway at the last moment."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Hartsfield-Jackson in Atlanta so busy? A: It's a huge Delta hub, and most of the US is within a two-hour flight."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Arriving at JFK? The AirTrain to Jamaica station plus the subway is much cheaper than a taxi into Manhattan."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Schiphol, allow extra time for security; the queues for non-Schengen flights can take an hour in summer."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Kai Tak Closes After 73 Years. Hong Kong's famous harbor airfield, with its steep turn over rooftops, shut down overnight."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "New Istanbul Airport Becomes Europe's Busiest. The hub overtook London Heathrow in passenger numbers last year."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I got stuck overnight at Reykjavík's Keflavík during a storm and slept under a bench next to a choir from Norway."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad worked baggage at LaGuardia for thirty years and he still judges every suitcase he sees."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which hub has a butterfly garden, a waterfall called the Rain Vortex and a rooftop pool? Answer: Singapore Changi."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which airfield in Saint Martin is famous for planes landing just above a beach? Answer: Princess Juliana International."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ash, pick me up at Gatwick North Terminal at 6, I'll be by the coffee shop near arrivals."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lena, Munich's terminal has its own brewery! I had a beer and a pretzel during my layover."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Tempelhof in Berlin served as the lifeline of the 1948 Berlin Airlift, with planes landing every 90 seconds."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This control tower radio was used at Croydon, London's first international airport, opened in 1920."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic and travel: heavy delays at LAX this morning, allow two hours for security at Terminal 4."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good news for travelers, the new parking garage at Logan opens today, and the first day is free!"
+   }
+  ],
+  "topic:Dam": [
+   {
+    "style": "text message",
+    "text": "Hoover Dam tour is sold out at noon, we got the 2pm one, meet at the visitor center"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the spillway at Oroville on the news? Water's pouring over everything"
+   },
+   {
+    "style": "press release",
+    "text": "The Bureau of Reclamation announced that Glen Canyon Dam will release extra water this spring to rebuild sandbars in the Grand Canyon."
+   },
+   {
+    "style": "press release",
+    "text": "China Three Gorges Corporation confirmed record electricity output from the Yangtze facility last year."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long did it take to build Hoover? A: About five years, finishing in 1936, two years ahead of schedule."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Grand Ethiopian Renaissance project so controversial? A: Egypt and Sudan worry it will reduce the Nile's flow downstream."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting a hydroelectric site? Bring ID; many have security checks before you can walk across the crest."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Driving to Grand Coulee in summer? Stay for the evening laser light show projected onto the spillway."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teton Dam Collapses in Idaho. Floodwaters swept through towns downstream after the new earthen wall failed in June 1976."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Itaipu Sets New Power Record. The Brazil-Paraguay plant on the Paraná supplied most of Paraguay's electricity."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We drove across the top of Hoover and my sister put one foot in Nevada and one in Arizona, right on the line."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad helped pour concrete at the Kariba project in the fifties; he said it was hot enough to cook eggs on the forms."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which concrete arch on the Colorado River was completed in 1936? Answer: Hoover Dam."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which structure across the Yangtze is the world's largest power station? Answer: Three Gorges Dam."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Raj, Contra Dam in Switzerland is where they filmed the GoldenEye bungee jump. You can do it too!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Bea, we toured Aswan High Dam in Egypt. The reservoir behind it goes on forever."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Completed in 1970, the Aswan High Dam ended the Nile's annual floods; this model shows its rock-fill core."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This hard hat belonged to a 'high scaler' who dangled from ropes to clear canyon walls before the Boulder project began."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Water levels behind Hoover have dropped so low that the intake towers are showing a white bathtub ring of mineral stains."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the reservoir: crews will open the spillway gates tomorrow, so stay off the river below."
+   }
+  ],
+  "topic:Cave": [
+   {
+    "style": "text message",
+    "text": "Mammoth Cave tour starts at 10! Bring a sweater, it's 12 degrees down there all year"
+   },
+   {
+    "style": "text message",
+    "text": "Just did the boat ride through the Puerto Princesa underground river, so many bats!!"
+   },
+   {
+    "style": "press release",
+    "text": "The National Park Service announced that the Carlsbad Caverns elevator has been repaired and the Big Room trail is open again."
+   },
+   {
+    "style": "press release",
+    "text": "Explorers confirmed today that Hang Son Doong in Vietnam contains a jungle and clouds inside its main chamber."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How was Lascaux discovered? A: In 1940, four teenagers followed their dog into a hole and found walls covered in painted animals."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the deepest known shaft in the world? A: Veryovkina, in Abkhazia, over 2,200 meters deep."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On a guided tour underground, don't touch the formations; oils from your skin stop stalactites growing."
+   },
+   {
+    "style": "how-to tip",
+    "text": "For wild caving, always tell someone where you're going and carry three light sources."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Thai Boys Rescued From Tham Luang. All twelve players and their coach were brought out by divers after 18 days."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "New Chamber Found in Mammoth Cave System. Surveyors added another 13 kilometers to the world's longest known underground network."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We squeezed through a passage in Waitomo so tight I had to exhale to fit, then the ceiling lit up with glowworms."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "As a kid I got lost for ten minutes in Luray Caverns and found the stalactite organ by myself. Scared and amazed."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which French grotto holds 17,000-year-old paintings of horses and bulls? Answer: Lascaux."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Kentucky system is the longest known in the world? Answer: Mammoth Cave."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kai, the Blue Grotto on Capri was magical, the light makes the water glow neon blue."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, Eisriesenwelt in Austria is full of ice even in summer. Bring gloves!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Discovered in 1994, Chauvet contains some of the oldest known cave art, more than 30,000 years old."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This stalagmite cross-section from Jenolan in Australia shows growth bands spanning 40,000 years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Today on Outdoor Radio: spelunkers in Missouri just mapped a new passage under Meramec State Park."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Rescue update: the caver trapped in the flooded tunnel has been reached by divers and is in good spirits."
+   }
+  ],
+  "topic:Glacier": [
+   {
+    "style": "text message",
+    "text": "Standing on the Perito Moreno walkway, a chunk just broke off and crashed into the water!!"
+   },
+   {
+    "style": "text message",
+    "text": "Glacier hike on Fox tomorrow, crampons provided, meet at the hut at 8"
+   },
+   {
+    "style": "press release",
+    "text": "Swiss researchers announced that the Rhône Glacier lost another 2 percent of its volume this summer."
+   },
+   {
+    "style": "press release",
+    "text": "Parks Canada confirmed that the Athabasca Glacier walking trail will be rerouted as the ice retreats."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How fast does Jakobshavn move? A: In summer, up to 40 meters a day, among the fastest in the world."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why are the Aletsch ice fields important? A: They're the largest in the Alps and supply water to the Rhône valley."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Never walk onto an ice tongue without a guide; crevasses can be hidden under snow bridges."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Bring sunglasses on the ice, the glare can burn your eyes even on cloudy days."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Okjökull Declared Dead. Iceland unveils a plaque for the first ice mass lost to climate change."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Thwaites Retreat Accelerates. Scientists say the Antarctic 'Doomsday' ice sheet is melting faster than expected."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I touched the snout of Franz Josef in 1998, and when I went back in 2018 it was a half-hour walk further up the valley."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We kayaked to the face of Hubbard in Alaska and heard it groan like thunder before calving."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Argentine ice field is famous for advancing rather than retreating? Answer: Perito Moreno."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which is the largest glacier in the Alps? Answer: The Great Aletsch."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mia, the Mendenhall in Juneau has ice caves under it this year, blue like a cathedral."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tom, flew over the Vatnajökull ice cap in Iceland. Felt like another planet."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This core from the Quelccaya ice cap in Peru records 1,800 years of climate in its layers."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Photographs of Muir Glacier from 1941 and 2004 show the ice gone, replaced by open water and forest."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Planet Watch: the Swiss town that wraps its ice in blankets every summer to slow the melt."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers asked about the Columbia Glacier; it's retreated nearly 20 kilometers since 1980."
+   }
+  ],
+  "topic:Mountain": [
+   {
+    "style": "text message",
+    "text": "Summit of Ben Nevis! Cloud cleared for two minutes, totally worth the climb"
+   },
+   {
+    "style": "text message",
+    "text": "Kilimanjaro day 5, leaving for Uhuru Peak at midnight. Wish me luck"
+   },
+   {
+    "style": "press release",
+    "text": "Nepal announced today a new permit fee for climbers attempting Everest, rising to $15,000 per person."
+   },
+   {
+    "style": "press release",
+    "text": "Rangers at Denali National Park confirmed that the climbing season saw a record 60 percent summit rate."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is K2 called the Savage Mountain? A: It's steeper than Everest and the weather is unpredictable; about one in four climbers have died."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you prepare for the Matterhorn? A: Lots of scrambling in the Dolomites and practice with fixed ropes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Start a big peak hike early; afternoon thunderstorms are common above the treeline in summer."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On Mount Washington, pack layers; the summit has some of the worst weather recorded anywhere."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Nepali Sherpa Sets Everest Record. Kami Rita reached the top of the world's highest peak for the 30th time."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Climbers Summit Annapurna in Winter. The team endured wind chill below minus 50 degrees."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We hiked Mount Fuji overnight to see the sunrise from the top. I've never been so cold or so happy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother climbed Snowdon at 80, slowly, refusing the train. She had tea at the summit café."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is the highest peak in Africa? Answer: Kilimanjaro."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which summit in Ecuador is farthest from the Earth's center? Answer: Chimborazo."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jack, I signed us up for Mount Rainier with a guide in July. Glacier training first day."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Freya, Table Mountain cable car was closed for wind, so we hiked Platteklip Gorge. Brutal but beautiful."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mont Blanc was first climbed in 1786 by Jacques Balmat and Michel-Gabriel Paccard."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This ice axe was carried by Edmund Hillary on the 1953 first ascent of Everest."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Weekend outdoors: wind gusts of 80 km/h on Grouse Mountain, so skip the summit trail."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking news: helicopter rescue on Mount Hood, two climbers stranded below the Hogsback."
+   }
+  ],
+  "topic:MountainPass": [
+   {
+    "style": "text message",
+    "text": "Stelvio's 48 hairpins done on the bike!! My legs are toast"
+   },
+   {
+    "style": "text message",
+    "text": "Highway closed at Donner Pass, chains required. Taking the long way"
+   },
+   {
+    "style": "press release",
+    "text": "The Swiss canton of Uri announced that the Gotthard Pass road will reopen on June 1 after winter snow clearing."
+   },
+   {
+    "style": "press release",
+    "text": "Caltrans confirmed today that Tioga Pass into Yosemite is open for the season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Khyber Pass historic? A: It's linked Central Asia and India for millennia; armies from Alexander to the British crossed it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of the Tour's climb over the Col du Tourmalet? A: The last four kilometers, steep and in thin air."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Check the Furka road status before driving; high Alpine crossings often close until late May."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On Independence Pass in Colorado, oversized vehicles are banned; stick to the main route."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hannibal's Route Over the Alps Still Debated. Scientists point to the Col de la Traversette based on ancient dung."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Avalanche Closes Rogers Pass. The Trans-Canada Highway shut for 24 hours in British Columbia."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We drove Transfăgărășan in Romania and stopped at every switchback for photos. Top Gear called it the best road in the world."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad drove us over Hardknott Pass in Cumbria in a Mini, 30 percent gradients, Mum held the dashboard the whole time."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Alpine crossing did Napoleon take into Italy in 1800? Answer: The Great St Bernard Pass."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Himalayan crossing claims to be one of the highest motorable roads? Answer: Khardung La."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ollie, the Grossglockner road opens next week. Let's take the motorbikes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ines, crossing Thorong La on the Annapurna circuit was tough, 5,416 meters. Headache but worth it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Simplon has been a key route between Switzerland and Italy since Roman times; Napoleon built the road."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This milestone stood beside Brenner, the lowest major crossing of the Alps, used by Romans."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic alert: snow on Snoqualmie Pass, Interstate 90 eastbound has chain requirements."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Cycling commentary: he's alone at the summit of Galibier, three minutes ahead!"
+   }
+  ],
+  "topic:MountainRange": [
+   {
+    "style": "text message",
+    "text": "Driving through the Rockies, snow on every peak, stopping in Banff tonight"
+   },
+   {
+    "style": "text message",
+    "text": "Flying over the Andes right now, look at all those white ridges"
+   },
+   {
+    "style": "press release",
+    "text": "Pakistan's tourism board announced new permits for trekkers crossing the Karakoram, home to K2 and three other 8,000-meter peaks."
+   },
+   {
+    "style": "press release",
+    "text": "Officials announced that the Appalachian Trail will add a 30-mile reroute through the Great Smokies section."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why are the Alps so popular for skiing? A: Reliable snow, villages at high altitude and lifts linking whole valleys."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How old are the Appalachians? A: About 480 million years; they were once as tall as the Himalayas."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hiking the Pyrenees in summer? Refuges fill fast, so book beds ahead on the GR10."
+   },
+   {
+    "style": "how-to tip",
+    "text": "In the Scottish Highlands, check the forecast; the Cairngorms get Arctic weather even in June."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Himalayas Rising Faster Than Thought. GPS data shows the chain grows about 1 cm per year."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Wildfires Spread Across the Sierra Nevada. Thousands evacuated as flames move through the foothills."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Crossing the Atlas on a bus in Morocco, the driver played music the whole way and we stopped for mint tea at the top."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I spent a summer in the Carpathians with shepherds; we slept in huts and ate cheese for every meal."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is the longest continental chain of peaks in the world? Answer: The Andes."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which range traditionally separates Europe from Asia? Answer: The Urals."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Eva, the Dolomites in October were stunning, the peaks turned pink at sunset."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Bilal, the Hindu Kush trek is on. Our guide says the passes open in mid-June."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Alps formed when the African plate pushed into Europe, folding sediment into peaks."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This map from 1856 shows the first survey of the Himalayas and the peak later named Everest."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Weather: heavy snow in the Cascades, chain controls on all routes over the crest."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Today on Nature Radio: why the Great Dividing Range shapes rainfall across eastern Australia."
+   }
+  ],
+  "topic:Volcano": [
+   {
+    "style": "text message",
+    "text": "Etna's erupting!! You can see the lava glow from our hotel balcony in Catania"
+   },
+   {
+    "style": "text message",
+    "text": "Flights cancelled, ash cloud from Iceland again. Stuck in Oslo"
+   },
+   {
+    "style": "press release",
+    "text": "The USGS raised the alert level for Kīlauea after new fissures opened on the summit."
+   },
+   {
+    "style": "press release",
+    "text": "Indonesian authorities announced evacuations near Mount Merapi as lava domes grew."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Vesuvius bury Pompeii? A: In AD 79, pumice and pyroclastic flows covered the town in hours."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Yellowstone called a supervolcano? A: It's had three massive eruptions, the last 640,000 years ago."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hiking near an active crater? Carry a gas mask; sulfur fumes can be dangerous."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On Stromboli tours, wear sturdy boots and bring a headlamp for the night descent."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Eyjafjallajökull Grounds Flights Across Europe. Ash from Iceland halted air traffic for six days in 2010."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hunga Tonga Blast Heard in Alaska. The undersea eruption sent a pressure wave around the globe."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stood on the rim of Masaya in Nicaragua and looked down at bubbling lava. My face was hot."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle was a ranger at Mount St. Helens; he said ash fell like gray snow for days."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Mexican peak appeared in a farmer's cornfield in 1943? Answer: Parícutin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1883 eruption in Indonesia was heard 4,800 km away? Answer: Krakatoa."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nina, Mauna Loa's lava flow is visible from the highway at night. Let's drive out."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Pablo, we climbed Villarrica in Chile and looked into the lava lake. Unreal."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Tambora's 1815 eruption caused the 'Year Without a Summer' across Europe and North America."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This cast shows a dog from Pompeii, trapped by the eruption of Vesuvius."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking: lava from Fagradalsfjall has reached the road near Grindavík, residents evacuated."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Science hour: what's happening under Campi Flegrei, the restless caldera near Naples."
+   }
+  ],
+  "topic:Racecourse": [
+   {
+    "style": "text message",
+    "text": "Royal Ascot tomorrow! Hats on, gates open at 10:30"
+   },
+   {
+    "style": "text message",
+    "text": "Cheltenham Festival, Gold Cup day, I've got a fiver on the Irish horse"
+   },
+   {
+    "style": "press release",
+    "text": "Churchill Downs announced a new paddock and grandstand ahead of the 150th Kentucky Derby."
+   },
+   {
+    "style": "press release",
+    "text": "The Hong Kong Jockey Club confirmed that Happy Valley will host its first international night meeting this season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Aintree's Grand National so famous? A: The fences are huge, like Becher's Brook, and the race is over four miles."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Flemington special? A: The Melbourne Cup, and roses lining the whole straight."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to the races? Arrive early to see the horses parade; you can judge their mood before betting."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Saratoga, pack a picnic; you can bring food to the backyard area."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rich Strike Wins Kentucky Derby at 80-1. The longshot surged along the rail at Churchill Downs."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Longchamp Reopens After Renovation. Paris's track unveiled a new grandstand for the Arc."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We went to Del Mar on opening day and everyone wore crazy hats; my friend's had a working fountain."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad took me to Epsom on Derby Day when I was ten; I picked the grey horse and it won."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which track hosts the Kentucky Derby? Answer: Churchill Downs."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Melbourne venue holds the 'race that stops a nation'? Answer: Flemington."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sean, Leopardstown at Christmas is brilliant. Mulled wine and steeplechases."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ruth, Meydan in Dubai hosts the World Cup night. The grandstand is a mile long!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Newmarket has hosted horse racing since the 1600s; Charles II often rode here."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These silks were worn at Longchamp by the jockey of the first Arc de Triomphe winner, 1920."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And they're off at Belmont Park! Three furlongs to go, the favorite has the lead!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from Goodwood, where the track's famous slope has caught out another favorite!"
+   }
+  ],
+  "topic:Bridge": [
+   {
+    "style": "text message",
+    "text": "Walking the Golden Gate right now, the fog is rolling in under the deck, so cool"
+   },
+   {
+    "style": "text message",
+    "text": "Traffic on the Verrazzano is terrible, take the ferry instead"
+   },
+   {
+    "style": "press release",
+    "text": "Transport officials announced that the Brooklyn Bridge promenade will get a new bike lane."
+   },
+   {
+    "style": "press release",
+    "text": "Scotland's transport agency confirmed the Queensferry Crossing over the Firth of Forth carried a record 30 million vehicles last year."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long did the Golden Gate take to build? A: About four years, opening in 1937."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does the Tower Bridge open? A: Its bascules lift for tall ships heading upriver."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To photograph Pont Neuf, go at sunrise when the Seine is calm and empty."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Crossing Charles Bridge in Prague? Go before 8am to avoid the crowds."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tacoma Narrows Collapses in Wind. 'Galloping Gertie' twisted and fell into Puget Sound in 1940."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Millau Viaduct Opens in France. The cable-stayed span soars 343 meters above the Tarn valley."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We walked across the Sydney Harbour arch on a climb tour; at the top I could see the Opera House."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather was a riveter on the Forth Bridge repairs; he said painting it never ended."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which London crossing has two towers and lifts for ships? Answer: Tower Bridge."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Venice span is named after sighs of prisoners? Answer: The Bridge of Sighs."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ana, we cycled across the Øresund to Sweden! Fourteen kilometers over the sea."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jun, the Akashi Kaikyō in Japan has the world's longest central suspension span."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ponte Vecchio in Florence, built in 1345, still has shops along its sides."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This rivet comes from the Sydney Harbour Bridge, opened in 1932 and nicknamed 'The Coathanger'."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic update: lane closure on the Bay Bridge westbound, expect delays."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the span's opening ceremony, the mayor is cutting the ribbon now!"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2465 @@
+{
+ "bank": "F",
+ "concepts": {
+  "topic:Pope": [
+   {
+    "style": "casual social-media post",
+    "text": "Just learned Celestine V quit the papacy after five months in 1294 because he missed his hermit cave. Honestly relatable. #history"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Standing under the Sistine ceiling thinking about how Julius II basically bullied Michelangelo into painting it. Warrior pontiff energy."
+   },
+   {
+    "style": "news-wire report",
+    "text": "VATICAN CITY (AP) - Pope Leo XIV used his first Easter blessing on Sunday to call for ceasefires, addressing tens of thousands of pilgrims from the loggia of St. Peter's Basilica."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ROME - Historians gathered Thursday to mark the anniversary of John XXIII's opening of the Second Vatican Council, which the pontiff convened in 1962 to modernize the Church."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Which pontiff called the First Crusade? B: Urban II, at the Council of Clermont in 1095. A: And the crowd shouted 'Deus vult'? B: That's the story."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is Gregory I called 'the Great'? B: He reorganized church charity in Rome and sent missionaries to England. A: Plus the chant named after him. B: Exactly."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Leo XIII (1878-1903): The first pope ever filmed on camera, he also wrote Rerum Novarum, the landmark encyclical on workers' rights."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Sixtus V: In just five years on the throne of Peter he rebuilt Rome's water supply, raised obelisks, and finished the dome of St. Peter's."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Pius IX really lose the Papal States and then call himself a 'prisoner in the Vatican'? Trying to understand the timeline for my history class."
+   },
+   {
+    "style": "forum question",
+    "text": "Question for church history buffs: how did Innocent III manage to put England under interdict? Was King John really excommunicated by him?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The new biography of Paul VI is excellent: it finally explains why he wrote Humanae Vitae and how lonely he felt afterward. Four stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw the exhibition on Benedict XIV in Bologna. Great letters on display showing his wit and his love of science; the audio guide was weak."
+   },
+   {
+    "style": "diary entry",
+    "text": "Visited Avignon today and stood in the palace where Clement VI held court. Hard to imagine the head of the Church living in France for decades."
+   },
+   {
+    "style": "diary entry",
+    "text": "Read about Gregory VII tonight, the one who made Emperor Henry IV wait barefoot in the snow at Canossa. What a power move."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Pope Boniface VIII (c. 1230-1303) issued the bull Unam Sanctam in 1302, asserting papal supremacy over secular rulers."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Alexander VI, born Rodrigo Borgia, reigned as Bishop of Rome from 1492 until his death in 1503."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The papacy of Leo X shows how the sale of indulgences to fund St. Peter's Basilica helped spark Martin Luther's protest."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In my opinion, John Paul II's many trips abroad made the pope a global figure in a way no earlier pontiff had been."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Francis picks his name after Francis of Assisi, first Jesuit, first from the Americas. GUEST: Right, and he moves into the guesthouse instead of the papal apartments."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's when Formosus gets dug up, put on trial in his robes, and convicted. The Cadaver Synod, 897. Easily the weirdest episode in church history."
+   }
+  ],
+  "topic:Saint": [
+   {
+    "style": "casual social-media post",
+    "text": "Happy feast day to Brigid of Kildare! Made my rush cross this morning just like Gran taught me."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Fun fact: the real Nicholas of Myra supposedly tossed bags of gold through a window so three poor girls could marry. That's where the stocking thing comes from."
+   },
+   {
+    "style": "news-wire report",
+    "text": "VATICAN CITY - Carlo Acutis, the Italian teenager who built websites cataloguing Eucharistic miracles, was canonized on Sunday, becoming the Church's first millennial saint."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ASSISI, Italy - Pilgrims filled the basilica on Saturday for the feast of Francis of Assisi, the 13th-century friar remembered for renouncing wealth and preaching to birds."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the patron of lost things again? B: Anthony of Padua. A: So I pray to him for my car keys? B: My grandmother swears it works every time."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Was Joan of Arc really burned at nineteen? B: Yes, in 1431 at Rouen. A: And then canonized? B: In 1920, almost five centuries later."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Kateri Tekakwitha: The Mohawk-Algonquin woman known as the 'Lily of the Mohawks' became the first Native American to be canonized, in 2012."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Columba of Iona: This Irish monk founded the abbey on Iona in 563 and is credited with the first recorded sighting of the Loch Ness monster."
+   },
+   {
+    "style": "forum question",
+    "text": "How did Therese of Lisieux become a Doctor of the Church when she died at 24 and wrote only one memoir? Genuinely curious about the criteria."
+   },
+   {
+    "style": "forum question",
+    "text": "Is there any historical evidence that Patrick actually drove snakes out of Ireland, or is that purely legend? Ireland apparently never had snakes."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary on Hildegard of Bingen was gorgeous: her chants, her herbal remedies, her visions. Wish it spent more time on her letters to emperors."
+   },
+   {
+    "style": "product or event review",
+    "text": "Toured the basilica in Tours last week. The crypt with the tomb of Martin, the soldier who cut his cloak in half for a beggar, was very moving."
+   },
+   {
+    "style": "diary entry",
+    "text": "Lit a candle for Saint Jude today, patron of hopeless cases. Mom's surgery is Thursday. Feels right."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finished Teresa of Avila's Interior Castle tonight. Her image of the soul as a castle of many rooms stays with me."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Catherine of Siena (1347-1380) was a Dominican tertiary and mystic who persuaded the papal court to return from Avignon to Rome."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Saint Cuthbert (c. 634-687) was a monk and bishop of Lindisfarne whose incorrupt body became the focus of a major cult in Durham."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Thomas Becket's murder in Canterbury Cathedral in 1170 turned an archbishop into a martyr and made his shrine a destination for pilgrims for centuries."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Mother Teresa, canonized in 2016 as Saint Teresa of Calcutta, is admired for her work with the dying, though some critics question the care in her homes."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Ignatius of Loyola is a soldier, gets his leg smashed by a cannonball, and during recovery reads lives of holy men. GUEST: And that's the start of the Jesuits."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and every December 13 in Sweden, girls wear candle crowns for Lucia, a young martyr from Syracuse. It's a fascinating crossover of Sicilian and Nordic tradition."
+   }
+  ],
+  "topic:CollegeCoach": [
+   {
+    "style": "casual social-media post",
+    "text": "Dawn Staley walking the sideline in that blazer, calling timeouts like a chess master. Gamecocks run the SEC."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Rumor is our head coach just turned down a seven-year offer from a bigger program to stay at Boise State. Respect, Coach Hartley."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TUSCALOOSA, Ala. (AP) - Nick Saban, who won six national championships at Alabama, announced his retirement Wednesday after 17 seasons leading the Crimson Tide."
+   },
+   {
+    "style": "news-wire report",
+    "text": "AMES, Iowa - Iowa State signed head coach Marcus Delaney to a contract extension through 2031 on Monday after the Cyclones' first conference title in program history."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you hear Izzo's taking Michigan State to the Final Four again? B: The man lives in March. A: Twenty-plus straight tourney appearances is insane."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does everyone talk about John Wooden's Pyramid of Success? B: Ten NCAA titles at UCLA. A: And he taught players to put their socks on properly first? B: Day one."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Pat Summitt, Tennessee: 1,098 wins, eight national titles, and every player who finished her eligibility under her graduated."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Mike Krzyzewski, Duke: Coach K retired in 2022 with 1,202 victories, the most in men's Division I basketball history."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Kirby Smart still calls the defense himself at Georgia, or did he hand it fully to his coordinator?"
+   },
+   {
+    "style": "forum question",
+    "text": "Our new offensive coordinator came from a D-II school. Any Bobcats fans know how he did there? Worried he can't recruit at this level."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Geno Auriemma's memoir over the weekend. Brutally honest about how he pushes his UConn players; great chapter on the 90-game win streak."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the clinic Coach Renfro hosted at Western Kentucky. His walk-through of the zone press was worth the drive alone."
+   },
+   {
+    "style": "diary entry",
+    "text": "Coach Alvarez called me into her office after practice and said she's starting me Saturday. Couldn't stop smiling on the bus home."
+   },
+   {
+    "style": "diary entry",
+    "text": "Recruiting visit today. The head man at Furman remembered my grandma's name from his letter. That got me."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Paul William 'Bear' Bryant (1913-1983) was an American football coach who led the University of Alabama to six national championships between 1961 and 1979."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Dean Smith (1931-2015) led the men's basketball program at the University of North Carolina for 36 seasons and popularized the four-corners offense."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A college coach like Tony Bennett at Virginia shows that a slow, disciplined defensive system can still win a national title."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Many people forget that Vivian Stringer took three different schools to the Final Four, proving her success came from leadership rather than talent alone."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Jim Harbaugh wins the national title at Michigan and goes straight to the Chargers. GUEST: That's what he does, he wins and leaves. It's his whole resume."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...in the transfer-portal era, the guy running a mid-major program is basically a general manager. Coach Pruitt told me he spends more time on NIL than on film."
+   }
+  ],
+  "topic:Airline": [
+   {
+    "style": "casual social-media post",
+    "text": "Ryanair charged me 40 euros because my backpack was 2 cm too tall. Flight was on time though, so I guess we're even."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Flew Singapore Airlines Suites for the first time on points. Real bed, real door, satay before dinner. Never going back to economy mentally."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DUBLIN (Reuters) - Aer Lingus said on Tuesday it would add four transatlantic routes next summer, including a new service from Dublin to Nashville."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SYDNEY - Qantas reported a record annual profit on Thursday as strong demand for international travel offset higher fuel costs, the carrier said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Should we fly Icelandair and do the free stopover in Reykjavik? B: Up to seven days at no extra fare? Obviously yes."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Southwest still doesn't assign seats? B: They changed that recently. A: Wait, really? B: Yep, and checked bags aren't free anymore either."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. KLM: Founded in 1919, the Dutch flag carrier is the world's oldest airline still operating under its original name."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Emirates: Its A380 fleet comes with an onboard shower spa in first class and a lounge bar for premium passengers."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone had luck getting a refund from Wizz Air after a cancellation? Their chatbot keeps sending me in circles."
+   },
+   {
+    "style": "forum question",
+    "text": "Is JetBlue's Mint worth the upgrade on a Boston to LA red-eye, or is the regular seat with extra legroom enough?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Air New Zealand, Auckland to LAX in the Economy Skycouch: three seats that fold into a flat bed. Crew were lovely, food average. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Lufthansa Frankfurt-Chicago: an hour delayed, no explanation, and the vegetarian meal ran out. The seat was comfy but service felt tired."
+   },
+   {
+    "style": "diary entry",
+    "text": "Flew Cathay Pacific to Hong Kong today. The flight attendant brought me a second bowl of congee without asking. Small kindness, long night."
+   },
+   {
+    "style": "diary entry",
+    "text": "My first time on Spirit. Paid for a seat, a bag, and water. Arrived on time, so I can't complain much."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Pan American World Airways, commonly known as Pan Am, was the largest international air carrier in the United States from 1927 until its collapse in 1991."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "LATAM Airlines Group is a Chilean-Brazilian carrier headquartered in Santiago, formed by the 2012 merger of LAN and TAM."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The success of easyJet's low-fare model forced older national carriers in Europe to cut costs and create budget subsidiaries of their own."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When BOAC launched the first transatlantic jet passenger service in 1958 with the Comet 4, it began a new age of fast international travel."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Why does Alaska Airlines keep winning the satisfaction surveys? GUEST: Free messaging on Wi-Fi, decent snacks, and they pick up the phone. Low bar, but they clear it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so Norse Atlantic starts flying 787s from Oslo to New York for like 150 dollars. Everyone said it would fail, same as Norwegian. We'll see."
+   }
+  ],
+  "topic:Bank": [
+   {
+    "style": "casual social-media post",
+    "text": "Monzo's 'round up into a savings pot' thing quietly saved me 300 quid this year. Didn't even notice."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Wells Fargo's app went down on payday again. Love trying to pay rent while staring at a spinning wheel."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ZURICH (Reuters) - UBS completed its emergency takeover of Credit Suisse on Monday, ending the 167-year history of one of Switzerland's best-known lenders."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK - JPMorgan Chase reported quarterly net income of $13 billion on Friday, beating analyst estimates on stronger investment banking fees."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why'd you switch to Nubank? B: No fees, card in a week, and the app's actually readable. A: Half of Brazil seems to be on it now."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is HSBC still really the 'Hongkong and Shanghai' bank? B: Yeah, founded there in 1865, though it's headquartered in London now."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Medici Bank (1397-1494): The Florentine family's firm pioneered double-entry bookkeeping and letters of credit across Europe."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Grameen: Muhammad Yunus's microlender in Bangladesh made small loans to poor women without collateral and won the 2006 Nobel Peace Prize."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Santander UK charge a fee for international transfers to Spain if I hold accounts in both countries? Their website is vague."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know why Silicon Valley Bank collapsed so fast in 2023? Was it just the bond losses, or was it the deposit run on social media?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Opened a business account with ING last month. Setup took ten minutes online, the interest rate is fair, but customer service only answers by chat."
+   },
+   {
+    "style": "product or event review",
+    "text": "Barclays branch on the High Street: the teller sorted my lost card in five minutes and was genuinely friendly. Five stars, which surprised me."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finally paid off the car loan with Chase today. Walked out of the branch feeling ten pounds lighter."
+   },
+   {
+    "style": "diary entry",
+    "text": "The loan officer at First Citizens approved my first mortgage this afternoon. Called Dad from the parking lot."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Deutsche Bank AG is a German multinational investment bank and financial services company headquartered in Frankfurt, founded in 1870."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Bank of Amsterdam, established in 1609, was an early public exchange institution that helped make the Dutch Republic a financial center."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The bankruptcy of Lehman Brothers in September 2008 shows how the failure of a single firm could freeze credit markets around the world."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Rabobank began as a network of farmers' cooperatives in the Netherlands, which explains why it still lends heavily to agriculture today."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Northern Rock, 2007, people literally queuing outside branches to pull their savings. GUEST: The first run on a British lender in over a century."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and Goldman Sachs started with a guy buying promissory notes and tucking them in his hat. Marcus Goldman, 1869, lower Manhattan."
+   }
+  ],
+  "topic:Brewery": [
+   {
+    "style": "casual social-media post",
+    "text": "Waited three hours in line at Tree House in Charlton for four cans of Julius. Worth it? Ask me after the second one."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "New taproom alert: Three Rivers Fermentation just opened by the old mill downtown. Their smoked porter is unreal."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SAN FRANCISCO (AP) - Anchor Brewing, maker of Anchor Steam beer since 1896, announced Wednesday it would cease operations, citing declining sales."
+   },
+   {
+    "style": "news-wire report",
+    "text": "COPENHAGEN - Carlsberg said on Tuesday it had agreed to buy British soft drinks maker Britvic, as the Danish brewer seeks to diversify beyond beer."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can you actually buy Westvleteren 12? B: Only by reservation at the abbey, and the monks limit how much you take. A: That's dedication."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Cantillon open for tours? B: Yeah, in Brussels. You see the open copper cooling tank where wild yeast gets in overnight. A: Sour heaven."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Weihenstephan, Freising: Brewing on that Bavarian hill since 1040, it claims the title of the oldest continuously operating brewery in the world."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Sierra Nevada, Chico: Ken Grossman's Pale Ale, first brewed in 1980, helped kick off the American craft beer boom."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Russian River releases Pliny the Younger in bottles anymore, or is it draft-only at the Santa Rosa pub?"
+   },
+   {
+    "style": "forum question",
+    "text": "Planning a trip to Plzen. Is the Pilsner Urquell tour worth it, and do they still let you taste unfiltered lager in the cellars?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The tour at the Guinness Storehouse ends with a pint in the Gravity Bar overlooking Dublin. Overpriced, crowded, and I'd still go again."
+   },
+   {
+    "style": "product or event review",
+    "text": "Dogfish Head's brewpub in Rehoboth: 60 Minute IPA on draft, wood-fired pizza, friendly staff. The 120 Minute nearly knocked me out."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent the afternoon at Hilltop Barn Brewing helping bottle their saison. My hands smell like hops and I'm very happy."
+   },
+   {
+    "style": "diary entry",
+    "text": "Asahi's factory tour in Suita today. Free tasting at the end, three glasses in twenty minutes. Took the train home very cheerfully."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Orval Brewery is a Trappist brewery located within the walls of the Abbaye Notre-Dame d'Orval in the Gaume region of Belgium."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "BrewDog is a Scottish multinational brewing company founded in Fraserburgh in 2007 by James Watt and Martin Dickie."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Brooklyn Brewery helped revive the borough's beer-making tradition, which had collapsed after Rheingold and Schaefer left the city in the 1970s."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Small producers like Founders in Grand Rapids prove that a local beer maker can grow into a national brand without losing its identity."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Arthur Guinness signs a 9,000-year lease at St. James's Gate for 45 pounds a year. GUEST: Best real estate deal in Irish history."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...we're at Driftwood Ales on the coast, and the head brewer is pouring us a sour aged in Pinot barrels. Tell the listeners what's in it."
+   }
+  ],
+  "topic:BusCompany": [
+   {
+    "style": "casual social-media post",
+    "text": "Took FlixBus from Berlin to Prague for 14 euros. Wi-Fi died at the border, but the views through Saxony were gorgeous."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Megabus top deck front seats are the best $1 I ever spent. Felt like piloting a spaceship down I-95."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DALLAS (AP) - Greyhound Lines said on Monday it would close several downtown terminals and move passengers to curbside stops to cut costs."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - Stagecoach Group agreed to a 595 million pound takeover by a German infrastructure fund on Wednesday, the British bus and coach operator said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How do I get from Boston to Springfield cheapest? B: Peter Pan, there's a run every couple of hours from South Station. A: Do I need to print my ticket? B: Nope."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is National Express any good for Heathrow? B: Coaches every half hour from Victoria, cheaper than the train. Just leave time for traffic."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. ADO, Mexico: Its first-class buses have reclining seats, movies, and a free snack, making overnight trips to Oaxaca surprisingly comfortable."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Kamil Koc: Turkey's oldest intercity operator, founded in 1926, still has hosts who hand out cologne and tea on board."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Arriva still operate the regional routes around Maastricht, or did another operator take over the concession?"
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone used Trailways from Albany to the Adirondacks? Wondering whether the luggage limit is strict."
+   },
+   {
+    "style": "product or event review",
+    "text": "Rede Expressos, Lisbon to Porto: clean, punctual, USB chargers that actually worked, and a friendly driver. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Coach USA's Suburban Transit run to Princeton was 40 minutes late, the bathroom was locked, and the driver was rude. Not again."
+   },
+   {
+    "style": "diary entry",
+    "text": "Overnight Greyhound to Memphis. The woman next to me shared her oranges and told me about her granddaughter's wedding."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day driving for Lothian Country. Got lost at a roundabout near Linlithgow; the regulars cheered me on anyway."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Go-Ahead Group is a British transport company founded in Newcastle upon Tyne in 1987 that operates bus services across the United Kingdom."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ouibus was a French long-distance coach operator launched by the national railway SNCF in 2012 and taken over by BlaBlaCar in 2018."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When Greyhound introduced its double-decker Scenicruiser in 1954, cross-country bus travel became a symbol of American freedom."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Deregulation in 1980s Britain allowed firms like Badgerline to compete on local routes, changing how people traveled in small towns."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: FlixBus doesn't own most of its buses. GUEST: Right, local partner firms drive them in green paint, and Flix does the booking and the brand."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and our listener Maria says the Tica Bus from San Salvador to Managua took 13 hours, but the border crossing was surprisingly smooth."
+   }
+  ],
+  "topic:LawFirm": [
+   {
+    "style": "casual social-media post",
+    "text": "Day one as a summer associate at Kirkland. They gave me a laptop, a badge, and 400 pages of discovery. Cool cool cool."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Shoutout to Ruiz & Patel Legal for helping my mom with her immigration paperwork for free. Real ones."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Reuters) - Allen & Overy and Shearman & Sterling completed their merger on Wednesday, creating a transatlantic firm with about 4,000 lawyers."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK - Cravath, Swaine & Moore announced year-end associate bonuses on Monday, and rival Wall Street firms matched the scale within hours."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Wait, Wachtell only has one office? B: Just Midtown Manhattan. A: And they still do the biggest mergers? B: They invented the poison pill defense."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's handling Grandpa's estate? B: Hollis & Burke on Main Street. A: The guys with the green awning? B: Yep, they did the house closing too."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Baker McKenzie: With more than 70 offices worldwide, it was one of the first truly global practices, founded in Chicago in 1949."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Clifford Chance: The London-based Magic Circle member handles cross-border finance deals from Hong Kong to Sao Paulo."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it true that Skadden gives a fellowship for public interest work right after graduation? How competitive is it?"
+   },
+   {
+    "style": "forum question",
+    "text": "Got an offer from Latham and one from a smaller boutique litigation shop. Which is better for someone who wants trial experience early?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Hired Calloway Family Law for my divorce. Clear about fees, answered emails within a day, and didn't push me into court. Recommend."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Linklaters open evening for trainees. Impressive tour, decent canapes, but the partners' talks felt rehearsed."
+   },
+   {
+    "style": "diary entry",
+    "text": "Made partner at Delgado Fairweather today. Fourteen years. Celebrated with tacos in the car because I was too tired for anything else."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interviewed at Jones Day this morning. They asked about my moot court brief for twenty minutes straight. I think it went okay?"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mossack Fonseca was a Panamanian law firm and corporate service provider whose leaked records formed the basis of the 2016 Panama Papers investigation."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Freshfields Bruckhaus Deringer is an international law firm headquartered in London, with origins tracing back to 1743."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Firms like Dentons, which merged with dozens of practices across the world, show how legal services have become a global business."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Cravath's system of hiring graduates straight from law school and training them in-house became the model for big American legal practices."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Sullivan & Cromwell basically helped build Wall Street. GUEST: They were in the room for the founding of U.S. Steel and General Electric."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...my first year at the firm, a senior partner made me redo a single footnote eleven times. Kesler Boone, in Denver. I learned a lot."
+   }
+  ],
+  "topic:Publisher": [
+   {
+    "style": "casual social-media post",
+    "text": "Fitzcarraldo Editions covers are so iconic. Plain blue, white type, and I want every single one on my shelf."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Bloomsbury took a chance on a manuscript a dozen other houses rejected. That book was Harry Potter. Never give up, writers."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK (AP) - Penguin Random House said Tuesday it would not appeal a federal judge's ruling blocking its $2.2 billion acquisition of Simon & Schuster."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS - Gallimard announced on Thursday that it would publish the late author's final novel in the spring, with a first printing of 150,000 copies."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where'd your manga collection come from? B: Mostly Shueisha titles, One Piece and Jujutsu Kaisen. A: So all Jump stuff. B: Exactly."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Graywolf really accept your poetry collection? B: They emailed this morning! A: That's huge, they're so selective. B: I'm still shaking."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Faber & Faber: T. S. Eliot worked there as an editor and championed poets like Ted Hughes and Sylvia Plath."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. O'Reilly Media: Known for the animal woodcuts on its programming manuals, starting with the camel on its Perl book."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Tor Books accept unagented fantasy submissions anymore? I heard they reopened for a while but can't find details."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know if Scholastic still runs those school book fairs in Canada? My kids' school hasn't had one since 2019."
+   },
+   {
+    "style": "product or event review",
+    "text": "Persephone Books' grey editions are beautiful: endpapers from period fabrics, sturdy bindings, and forgotten novels by women writers. Worth every penny."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the Oxford University Press museum on Walton Street. Small but wonderful, with old printing type and early dictionary slips."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got my contract from Hachette today. Read the royalty clause four times. Mum cried on the phone."
+   },
+   {
+    "style": "diary entry",
+    "text": "Editor at Coffee House Press called. They want revisions on chapter three but they like it. They like it!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Alfred A. Knopf, Inc. is an American publishing house founded in 1915 by Alfred A. Knopf Sr. and Blanche Knopf, known for its borzoi colophon."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "HarperCollins is one of the 'Big Five' English-language publishers, headquartered in New York City and owned by News Corp."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Allen Lane's Penguin paperbacks, launched in 1935 for the price of a pack of cigarettes, made good literature affordable for ordinary readers."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Small presses like Dalkey Archive show that a publisher can survive by championing experimental fiction that bigger houses ignore."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Macmillan was founded by two Scottish brothers in 1843. GUEST: And they put out Alice in Wonderland, which kept them afloat for decades."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...we started Pigeonhole Press in a garage with a risograph, and now we put out six titles a year. Distribution is still the hardest part."
+   }
+  ],
+  "topic:RecordLabel": [
+   {
+    "style": "casual social-media post",
+    "text": "Sub Pop's 'Loser' shirts are back in stock. Grunge never died, it just got merch."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just found a stack of Blue Note pressings at a garage sale for $3 each. Reid Miles covers, original labels. Shaking."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES (Reuters) - Def Jam Recordings named a new chief executive on Monday as Universal Music Group reshuffles leadership at the hip-hop imprint."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MEMPHIS, Tenn. - The Stax Museum of American Soul Music marked the anniversary of the studio's founding on Saturday with a free concert on McLemore Avenue."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who signed Adele first? B: XL Recordings, after her friend posted demos on MySpace. A: Same people behind Radiohead's later stuff? B: Yep."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why's Factory Records so legendary? B: Joy Division, New Order, the Hacienda, and contracts that let bands own their masters. A: Tony Wilson was a character."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Motown: Berry Gordy's Detroit hit factory gave us The Supremes, Stevie Wonder, and Marvin Gaye."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Warp: The Sheffield label behind Aphex Twin and Boards of Canada basically defined 'electronic listening music' in the '90s."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Rough Trade still releasing vinyl-only editions, or did they go fully digital? Trying to track down a limited Parquet Courts pressing."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know how Merge splits profits with its artists? I read they do 50-50 after costs, which sounds generous."
+   },
+   {
+    "style": "product or event review",
+    "text": "The 4AD box set is a gorgeous object: Vaughan Oliver's artwork, remastered Cocteau Twins tracks, and a thick booklet. Steep price though."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Domino anniversary show. The surprise headline set was great; the sound in the room was muddy."
+   },
+   {
+    "style": "diary entry",
+    "text": "Signed with Saltmarsh Records today. A small indie, but they believe in the album. Dad bought champagne he couldn't afford."
+   },
+   {
+    "style": "diary entry",
+    "text": "Toured Sun Studio in Memphis. Stood where Elvis cut 'That's All Right' for Sam Phillips. Got goosebumps."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Chess Records was an American record company founded in Chicago in 1950, known for recording blues artists such as Muddy Waters and Howlin' Wolf."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Island Records is a British-Jamaican label founded by Chris Blackwell in 1959, instrumental in bringing reggae, including Bob Marley, to international audiences."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Death Row's rise and fall in the 1990s shows how West Coast rap became big business and how quickly that business could collapse."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "By pressing its own records and selling them cheaply, Dischord let Washington's punk scene grow without relying on major corporations."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Kranky, Thrill Jockey, Drag City, Chicago had this weird cluster of indies. GUEST: And Drag City famously held out on streaming for years."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so Ninja Tune started as Coldcut's way to release their own experiments without a major breathing down their necks."
+   }
+  ],
+  "topic:Winery": [
+   {
+    "style": "casual social-media post",
+    "text": "Sunset tasting at Bodega Garzon in Uruguay. Tannat, ocean breeze, and a cheese board the size of my car."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Cloudy Bay sauv blanc on a Tuesday because adulting is hard. Marlborough in a glass."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NAPA, Calif. (AP) - Stag's Leap Wine Cellars, whose 1973 cabernet beat top French wines at the 1976 Judgment of Paris, marked the anniversary with a public tasting Sunday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BEIRUT - Chateau Musar said on Wednesday it had completed its harvest in the Bekaa Valley, continuing a tradition that survived even the civil war."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Penfolds Grange really worth that much? B: The 1951 is the stuff of legend. A: I'll stick with their Bin 28. B: Smart."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Can we visit Domaine de la Romanee-Conti? B: Not really, they don't do public tours. A: So we just stare at the stone cross? B: Everyone does."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Catena Zapata, Mendoza: Its Mayan-pyramid-shaped building sits among high-altitude Malbec vines with the Andes behind."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Klein Constantia, Cape Town: Its sweet Vin de Constance was reportedly a favorite of Napoleon in exile."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Ridge Vineyards still do walk-in tastings at Monte Bello, or do you need a reservation now?"
+   },
+   {
+    "style": "forum question",
+    "text": "Planning a Rioja trip. Is the Lopez de Heredia cellar tour worth it if I only have one day?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Antinori nel Chianti Classico: stunning architecture built into the hillside, knowledgeable guide, generous pours. Pricey lunch, though."
+   },
+   {
+    "style": "product or event review",
+    "text": "Concha y Toro's Casillero del Diablo tour leans hard into the devil legend, but the cellar is atmospheric and the carmenere was great."
+   },
+   {
+    "style": "diary entry",
+    "text": "Helped with harvest at Fernhill Estate today. Purple hands, sore back, best sandwich I've ever eaten under an olive tree."
+   },
+   {
+    "style": "diary entry",
+    "text": "Robert Mondavi in Oakville. The arch, the lawn, a glass of Fume Blanc. Thought about Grandpa who loved this place."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Chateau Margaux is a Bordeaux wine estate in the Margaux appellation, ranked among the four First Growths in the classification of 1855."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Vega Sicilia is a Spanish winery in Ribera del Duero, founded in 1864 and famous for its long-aged red Unico."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The estate of Oremus in Tokaj shows how Hungarian sweet wine recovered after communism ended and private owners returned."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Domaine Chandon, founded in Napa by Moet & Chandon in 1973, proved that French sparkling-wine methods could succeed in California."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the winemaker at Brick House in Oregon ferments everything with native yeast. GUEST: Which is terrifying in a cold year. You just hope."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the family at Quinta do Noval still has the Nacional vines on their own roots, pre-phylloxera style. Tiny vintage, unreal prices."
+   }
+  ],
+  "topic:Library": [
+   {
+    "style": "casual social-media post",
+    "text": "The Long Room at Trinity College Dublin smells like old paper and history. Also the Book of Kells, no photos allowed."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Tianjin Binhai's 'eye' auditorium is so cool, even if half the shelves up top are printed images. Still came away inspired."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (AP) - The Library of Congress said on Tuesday it had unveiled a newly digitized collection of Civil War maps for free public use."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - The British Library restored most of its online services on Monday, months after a ransomware attack crippled its catalogue."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Do I need a pass for the Bodleian? B: You have to swear an oath not to light fires inside. A: Seriously? B: Out loud, in front of staff."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where'd you study for finals? B: The Rose Main Reading Room on 42nd Street. A: Under the painted ceiling? B: Best place in New York."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Admont Abbey, Austria: The world's largest monastic reading hall, with a white-and-gold baroque ceiling and some 70,000 volumes."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Stuttgart City Library: A plain white cube outside, a bright stepped atrium inside that looks like a sci-fi set."
+   },
+   {
+    "style": "forum question",
+    "text": "Does the Seattle Central Library still let non-residents get a card? Moving there next month and want to use the Rem Koolhaas building."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone researched in the Strahov collection in Prague? Do they allow scholars into the Theological Hall?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Biblioteca Vasconcelos in Mexico City: floating shelves, a whale skeleton sculpture, free entry. One of the best afternoons of my trip."
+   },
+   {
+    "style": "product or event review",
+    "text": "Boston Public Library's courtyard cafe is a gem. Bates Hall in the McKim building is breathtaking, though the Wi-Fi was spotty."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent all afternoon at the Hillsdale branch helping kids with homework. One girl finally got fractions. Best Tuesday."
+   },
+   {
+    "style": "diary entry",
+    "text": "The Morgan in Manhattan: J. P. Morgan's study, three tiers of walnut shelves, a Gutenberg Bible. I didn't want to leave."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Library of Alexandria was one of the largest and most significant repositories of knowledge in the ancient world, flourishing under the Ptolemies."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The National Library of Australia, located in Canberra, holds Captain Cook's Endeavour journal among its collections."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Carnegie library in Homestead, Pennsylvania, built for steelworkers in 1898, included a music hall and a swimming pool alongside its books."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Bibliotheca Alexandrina, opened in 2002, shows how Egypt tried to revive the spirit of the ancient book collection with a modern building."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the staff at Ferguson Municipal stayed open during the 2014 protests. GUEST: It became a refuge; teachers held classes there."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the county branch on Elm lends out seeds, laptops, even fishing rods. Free with a card. It's wild."
+   }
+  ],
+  "topic:School": [
+   {
+    "style": "casual social-media post",
+    "text": "Lincoln Elementary's spring concert was 40 minutes of recorders and I loved every second. My kid waved the whole time."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Proud alum of Bronx Science! Eight Nobel laureates came out of those halls. Our cafeteria pizza had nothing to do with it."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WINDSOR, England (AP) - Eton College announced Thursday it would open free sixth-form colleges in northern England in partnership with Star Academies."
+   },
+   {
+    "style": "news-wire report",
+    "text": "OAKVILLE, Ont. - Maple Ridge Secondary School evacuated students Tuesday morning after a minor chemistry lab fire, officials said. No one was hurt."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Summerhill really a school where you don't have to go to class? B: Lessons are optional, and kids vote on rules. A: Wild. B: Running since 1921."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How was pickup today? B: Westbrook Middle had the car line backed up to the highway again. A: They need a second gate."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Gordonstoun, Scotland: Founded by Kurt Hahn, it sends pupils on sailing expeditions and counts King Charles III among its alumni."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Raffles Institution, Singapore: Established in 1823, it has educated several of the country's prime ministers."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Stuyvesant's specialized test still decide admission entirely, or have they added interviews? My daughter is in seventh grade."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone send their kids to Riverside Montessori in Austin? Wondering about class sizes for the toddler program."
+   },
+   {
+    "style": "product or event review",
+    "text": "Open house at Lakeside was impressive: robotics lab, a real greenhouse, and teachers who knew every kid's name. The tuition, though."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited Le Rosey's winter campus in Gstaad. Beautiful chalets and serious ski coaching, but it felt more like a resort than a classroom."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day teaching fourth grade at Pine Hollow. A boy brought me a frog. I'm keeping the frog in the classroom tank for now."
+   },
+   {
+    "style": "diary entry",
+    "text": "Graduation from Central High tonight. Mr. Okafor shook my hand and said 'told you.' I nearly cried on stage."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Phillips Exeter Academy is a co-educational boarding school in Exeter, New Hampshire, founded in 1781 and known for its Harkness table method."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rugby School is a public school in Warwickshire, England, where the sport bearing its name is traditionally said to have originated in 1823."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The admissions debate at Thomas Jefferson High School for Science and Technology shows how hard it is to balance merit with fairness."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "My primary school, St. Anne's in Leeds, taught me that a small reading corner can change a child's life."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the Dalton School's whole plan is contracts, each kid signs up for monthly assignments. GUEST: Helen Parkhurst, 1919. Still going."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...I taught at Harbor View Charter for six years, and the thing that worked was breakfast. Feed kids, scores go up. Simple."
+   }
+  ],
+  "topic:University": [
+   {
+    "style": "casual social-media post",
+    "text": "Got into McGill!!! Montreal winters, here I come. Buying the warmest coat in existence."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Purdue students camping outside Mackey Arena for basketball tickets in sleet. Boilermakers are built different."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CAMBRIDGE, Mass. (AP) - MIT announced Monday that undergraduate tuition would be free for students from families earning under $200,000 a year."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CAPE TOWN - The University of Cape Town said on Friday it would open a new climate research institute funded by an international foundation."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Bologna really the oldest university? B: Founded in 1088, running ever since. A: Older than Oxford? B: By a few decades at least."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why'd you pick ETH Zurich? B: Einstein studied there, and tuition is under a thousand francs a semester. A: That second reason is the real one."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. University of al-Qarawiyyin, Fez: Founded by Fatima al-Fihri in 859, it's often cited as the oldest continuously operating degree-granting institution."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Salamanca, Spain: Its carved facade hides a tiny frog; spotting it on a skull is said to bring exam luck."
+   },
+   {
+    "style": "forum question",
+    "text": "Does Heidelberg still offer English-taught master's programs in molecular biosciences? The admissions portal is confusing."
+   },
+   {
+    "style": "forum question",
+    "text": "Can international students work part-time while studying at NUS? I got an offer for computer engineering and need to budget."
+   },
+   {
+    "style": "product or event review",
+    "text": "Campus tour at Stanford: palm-lined Oval, Hoover Tower view, enthusiastic guide walking backwards the whole time. Bring water."
+   },
+   {
+    "style": "product or event review",
+    "text": "Toured Tsinghua's campus in Beijing. The old auditorium and the garden are lovely, though visitor registration took an hour."
+   },
+   {
+    "style": "diary entry",
+    "text": "Moved into my dorm at Caltech today. Roommate already built a tiny robot to turn off the lights. This is going to be interesting."
+   },
+   {
+    "style": "diary entry",
+    "text": "Defended my thesis at Todai this morning. Professor Sato smiled once. I'll take it."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The University of Oxford is a collegiate research university in England, with evidence of teaching there as early as 1096."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Harvard University, founded in 1636 in Cambridge, Massachusetts, is the oldest institution of higher learning in the United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Sorbonne's role in the May 1968 protests shows how universities can become centers of political change."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Land-grant schools like Iowa State brought agricultural science to farm families who never expected to go to college."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Johns Hopkins basically imported the German research model to America. GUEST: Graduate seminars, labs, PhDs. 1876. Everything changed."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...I went to Universidad de los Andes in Bogota, and the campus climbs right up the mountainside. You get your cardio between lectures."
+   }
+  ],
+  "topic:MythologicalFigure": [
+   {
+    "style": "casual social-media post",
+    "text": "Rewatched the Ragnarok trailer and remembered that the original Loki literally gave birth to an eight-legged horse. Marvel left out the best parts."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Anansi the spider tricking the sky god out of all the world's stories is still my favorite bedtime tale. Thanks, Grandma."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MEXICO CITY (AP) - Archaeologists said Wednesday they had uncovered a stone carving of the feathered serpent Quetzalcoatl at a temple site near the capital."
+   },
+   {
+    "style": "news-wire report",
+    "text": "ATHENS - A newly restored marble statue of Persephone went on display Monday at the National Archaeological Museum after decades in storage."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why did Prometheus get chained to a rock? B: He stole fire for humans. A: And an eagle ate his liver every day? B: And it grew back every night."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's Maui again? B: The demigod who fished up New Zealand's North Island and slowed the sun with a rope. A: The Moana guy? B: Sort of."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Baba Yaga: The Slavic witch lives in a hut on chicken legs and flies around in a mortar, steering with a pestle."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Sun Wukong: The Monkey King, born from a stone, wields a staff that shrinks to the size of a needle so he can tuck it behind his ear."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Medusa always a monster in Greek tradition, or did Ovid invent the version where Athena cursed her? Looking for primary sources."
+   },
+   {
+    "style": "forum question",
+    "text": "Is there any connection between Freyja and Frigg in Norse sources, or were they always separate goddesses? Can't find a clear answer."
+   },
+   {
+    "style": "product or event review",
+    "text": "Madeline Miller's novel about Circe is gorgeous: the witch of Aiaia finally gets her own voice. Slow middle, perfect ending."
+   },
+   {
+    "style": "product or event review",
+    "text": "The museum's Hanuman exhibit had carvings of the monkey god leaping to Lanka with a mountain in his hand. Great audio guide."
+   },
+   {
+    "style": "diary entry",
+    "text": "Read the Epic of Gilgamesh on the train today. The bit where he loses the plant of immortality to a snake broke my heart."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched a Bunraku performance about Izanagi going to the underworld to bring Izanami back. He lit a torch and looked at her. Of course he did."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "In Egyptian religion, Osiris was the god of the afterlife and resurrection, murdered by his brother Set and restored by his wife Isis."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Cu Chulainn is a hero of the Ulster Cycle of Irish legend, said to have defended Ulster single-handedly against the army of Queen Medb."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Thor's hammer Mjolnir was not just a weapon but a symbol that protected farms and marriages in Viking Age Scandinavia."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Zeus's many disguises in Greek myth suggest that the ancient Greeks saw their chief god as powerful but morally flawed."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Odin hangs himself on Yggdrasil for nine nights to learn the runes. GUEST: A sacrifice of himself to himself. Very metal."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and in Lakota stories Iktomi the spider is a trickster, kind of a cousin to Anansi, though the tales are their own thing."
+   }
+  ],
+  "topic:SoapCharacter": [
+   {
+    "style": "casual social-media post",
+    "text": "Phil Mitchell has been shot, jailed, and nearly drowned and still runs the Arches. Walford's cockroach. Love him."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Victor Newman scowling across the boardroom table at Jack Abbott is my entire personality today. #YR"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (PA) - Coronation Street's Ken Barlow, played by William Roache since 1960, will be at the centre of a major storyline next spring, ITV confirmed on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES - Days of Our Lives fans will see Marlena Evans possessed once again in a Halloween storyline, the show's producers said Monday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Dot Cotton ever actually stop smoking? B: Not really. A: But she quoted the Bible constantly. B: Cigarette in one hand, scripture in the other."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Alf Stewart still in Summer Bay? B: Since episode one. A: 'Stone the flamin' crows!' B: The man is Home and Away."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Luke Spencer (General Hospital): His 1981 wedding to Laura drew around 30 million viewers, the highest-rated hour in daytime TV history."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Kim Tate (Emmerdale): Faked her own death, galloped off on a horse, and came back years later even more ruthless."
+   },
+   {
+    "style": "forum question",
+    "text": "When did Stefano DiMera come back from the dead the first time? I've lost count of how many 'deaths' he's had on Days."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone remember which year Harold Bishop washed out to sea in Neighbours and came back with amnesia? My mum and I are arguing."
+   },
+   {
+    "style": "product or event review",
+    "text": "The episode where Bet Lynch faces down Alec behind the bar of the Rovers was Coronation Street at its finest. Julie Goodyear was magnificent."
+   },
+   {
+    "style": "product or event review",
+    "text": "Sonny Corinthos's courtroom arc on GH this month: brilliant acting, absurd legal logic. I'll take it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Den hand Angie the divorce papers on Christmas Day again on YouTube. Mum said the whole country gasped in 1986."
+   },
+   {
+    "style": "diary entry",
+    "text": "Cried at Rita's wedding scene tonight. After losing Len, she deserved some happiness."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Scott Robinson is a fictional character from the Australian soap opera Neighbours, played by Jason Donovan from 1986 to 1989."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Erica Kane is a fictional character from the ABC soap opera All My Children, portrayed by Susan Lucci from 1970 until 2011."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A character like Hollyoaks's Tony Hutchinson shows how long-running serials let viewers grow up alongside the people on screen."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Characters such as Pat Butcher in EastEnders, with her trademark earrings, became so familiar that viewers mourned her as if she were real."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Ridge Forrester has married Brooke how many times? GUEST: I think it's six, depending on how you count the annulments."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the Who Shot J.R. cliffhanger? J.R. Ewing, Dallas, 1980. Tens of millions of viewers wanted to know. Primetime soap at its peak."
+   }
+  ],
+  "topic:AmericanFootballPlayer": [
+   {
+    "style": "casual social-media post",
+    "text": "Mahomes throwing a no-look pass sidearm off his back foot on 3rd and 14. This man is a cheat code."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My nephew just got his first varsity start at linebacker for the Hillcrest Rams. Two sacks!! Proud uncle mode."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TAMPA, Fla. (AP) - Tom Brady announced his retirement Wednesday, ending a 23-season career with seven Super Bowl titles."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PITTSBURGH - Steelers linebacker T.J. Watt agreed to a contract extension on Thursday that made him the highest-paid non-quarterback in the league."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the best running back ever? B: Barry Sanders. A: Not Payton? B: Barry retired at 30 after a 2,000-yard season. Unreal."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Jerry Rice really run up that hill every offseason? B: The famous one in San Carlos. A: That explains catching passes at 42."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Lawrence Taylor: The Giants linebacker changed how offenses protect the quarterback; teams built schemes just to block him."
+   },
+   {
+    "style": "listicle item",
+    "text": "9. Aaron Donald: Three Defensive Player of the Year awards from the interior line, which is basically unheard of."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Johnny Unitas really cut by the Steelers before he became a star with the Colts? Trying to settle a bet."
+   },
+   {
+    "style": "forum question",
+    "text": "How does Travis Kelce find gaps in zone coverage so consistently? Is it him reading the safeties or the quarterback improvising?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Read Walter Payton's biography this week. Honest about his struggles after retirement; the chapter on his final game is heartbreaking."
+   },
+   {
+    "style": "product or event review",
+    "text": "The NFL Films documentary on Reggie White does justice to 'the Minister of Defense'. Great footage of his hump move."
+   },
+   {
+    "style": "diary entry",
+    "text": "Two-a-days started. They moved me from wideout to cornerback. Got burned twice, picked one off. I think I like it here."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Jalen Hurts at the autograph signing. Super calm, asked my little brother about his school. He's a good dude."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "James Nathaniel Brown (1936-2023) was an American football fullback who played nine seasons for the Cleveland Browns and led the league in rushing eight times."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Joseph Clifford Montana Jr. is a former quarterback who won four Super Bowls with the San Francisco 49ers in the 1980s."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Deion Sanders showed that a cornerback could be as exciting as any receiver, returning kicks and even playing professional baseball at the same time."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "J.J. Watt's flood-relief fundraising in Houston proved that an athlete's influence can reach far beyond the field."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Ray Lewis gave that pregame speech every week. GUEST: And the dance out of the tunnel. Teammates said it was worth a touchdown."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Peyton Manning at the line, pointing, yelling 'Omaha! Omaha!' Nobody knew what it meant. That was the point."
+   }
+  ],
+  "topic:Band": [
+   {
+    "style": "casual social-media post",
+    "text": "Khruangbin live at Red Rocks last night. Bass lines so smooth I forgot I had a body."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Paramore covering 'Burning Down the House' is the crossover I didn't know I needed."
+   },
+   {
+    "style": "news-wire report",
+    "text": "STOCKHOLM (AP) - ABBA Voyage, the London show starring digital avatars of the Swedish quartet, was extended again on Thursday, organizers said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - The Rolling Stones announced a European stadium tour on Tuesday to support their latest studio album."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does Fleetwood Mac's Rumours sound so sad? B: Half of them were breaking up while recording it. A: And they sang breakup songs about each other? B: Yep."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: You've never heard Talking Heads? B: Only 'Psycho Killer'. A: Watch Stop Making Sense. The big suit. Trust me."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. The Ramones: Four guys in leather jackets, all pretending to be brothers, playing two-minute songs at breakneck speed."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. Black Sabbath: Tony Iommi's heavy riffs out of Birmingham basically invented heavy metal."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Radiohead ever officially explain why they released In Rainbows as pay-what-you-want? Looking for an interview source."
+   },
+   {
+    "style": "forum question",
+    "text": "Which Sonic Youth album should I start with, Daydream Nation or Goo? Total beginner to noise rock."
+   },
+   {
+    "style": "product or event review",
+    "text": "Arcade Fire's new record is uneven but the closer is huge: strings, choir, accordion, everything. 7/10."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw boygenius at the Greek. Three voices, one mic, and the crowd singing every word. Perfect night."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our garage band, The Lint Rollers, played Kayla's birthday party. Nobody threw anything. Huge success."
+   },
+   {
+    "style": "diary entry",
+    "text": "Found Dad's old Clash vinyl in the attic, London Calling with a coffee stain. Played it twice. I get it now."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Beatles were an English rock band formed in Liverpool in 1960, comprising John Lennon, Paul McCartney, George Harrison and Ringo Starr."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Tame Impala is the psychedelic music project of Australian multi-instrumentalist Kevin Parker, who tours with a full live band."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Nirvana's success with Nevermind brought alternative rock into the mainstream and changed what radio stations were willing to play."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Queen's Live Aid performance in 1985 is often called the greatest rock set ever, because Freddie Mercury held 72,000 people in his hand."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Led Zeppelin barely released singles in the UK. GUEST: Page wanted people to hear the albums whole. Bold, and it worked."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...when Pink Floyd flew an inflatable pig over Battersea Power Station for the Animals cover, it broke loose and drifted into the Heathrow flight path."
+   }
+  ],
+  "topic:SpeedwayRider": [
+   {
+    "style": "casual social-media post",
+    "text": "Zmarzlik just clinched another Grand Prix title. Gorzow goes mental, as it should."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Watched my cousin Kieran's first second-half race at Peterborough tonight. Fell on turn two, got up, finished. Proud!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "WARSAW (AP) - Tai Woffinden, the three-time world champion, said on Monday he would race in the Polish Ekstraliga again next season after recovering from injury."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WOLVERHAMPTON - Wolves reserve Danny Hale suffered a broken collarbone in a first-bend crash at Monmore Green on Monday and is expected to miss six weeks."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How does Nicki Pedersen score so many points with that style? B: He never shuts the throttle off the gate. A: Aggressive. B: Three world titles aggressive."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's that rider with the Aussie flag on his kevlars? B: Jack Holder. His brother Chris was world champion in 2012. A: A shale family, then."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Ivan Mauger: The New Zealander won six individual world titles on a 500cc bike with no brakes."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Greg Hancock: The Californian took his fourth world crown in 2016 at age 46 and still wore a smile through every heat."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know what gearing Leon Madsen runs on bigger tracks like Vojens? Trying to set up my junior bike."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Bruce Penhall really retire on the podium in 1982 to go act on CHiPs? My dad swears it's true."
+   },
+   {
+    "style": "product or event review",
+    "text": "Jason Crump's autobiography is gripping: his dad Phil's career, his three world titles, and the brutal crashes. Recommended for any shale fan."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to Belle Vue for the National League meeting. Young Aces rider Leo Darnell won four heats out of five. Great night out, dodgy chips."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got my first heat win at Glasgow tonight. Gated perfectly, held the inside on lap three. Mum hugged me in the pits."
+   },
+   {
+    "style": "diary entry",
+    "text": "Methanol smell still in my hair. Fell twice at practice, but the new frame turns like a dream on the shale."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Tony Rickardsson is a Swedish former motorcycle speedway rider who won six Individual Speedway World Championships between 1994 and 2005."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ove Fundin (1933-2023) was a Swedish speedway rider who won the individual world title five times between 1956 and 1967."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Hans Nielsen's world titles in the 1980s helped make speedway one of Denmark's favorite spectator sports."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Erik Gundersen's terrible crash at Bradford in 1989 changed how riders and promoters thought about safety fences."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Peter Collins, 1976 world champion in Katowice, first Englishman in years. GUEST: And he made wet tracks look easy, everyone said."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Emil Sayfutdinov out of the gate in heat 12, holds the line, holds it, and he's away. Three points to the visitors."
+   }
+  ],
+  "topic:ClassicalMusicArtist": [
+   {
+    "style": "casual social-media post",
+    "text": "Yuja Wang played three encores in a sequined minidress and then casually destroyed the Rach 3. Iconic."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Hilary Hahn's 100-days-of-practice posts are why I picked my violin back up after ten years. Day 14!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES (AP) - Gustavo Dudamel will leave the LA Philharmonic to become music director of the New York Philharmonic, the orchestras said Thursday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - Cellist Sheku Kanneh-Mason received a standing ovation at the Proms on Friday after performing Elgar's concerto at the Royal Albert Hall."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does Glenn Gould hum on his recordings? B: He couldn't stop. A: And the low chair? B: His dad sawed the legs down. He took it everywhere."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Martha Argerich still touring? B: She hates solo recitals, mostly plays with friends now. A: Still the fastest hands alive though."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Jacqueline du Pre: Her 1965 recording of Elgar's Cello Concerto with Barbirolli is still the version many listeners love most."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Maria Callas: 'La Divina' turned opera roles like Tosca and Norma into intense dramatic portraits."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Mitsuko Uchida's Mozart sonata cycle worth buying on CD, or is her newer recording better? I'm building a collection."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Heifetz really practice only a couple of hours a day as an adult? I keep reading conflicting claims."
+   },
+   {
+    "style": "product or event review",
+    "text": "Anne-Sophie Mutter's Beethoven concerto at the Musikverein: crystalline tone, daring tempos, slightly cool slow movement. Still magnificent."
+   },
+   {
+    "style": "product or event review",
+    "text": "Lang Lang's Goldberg Variations album divides people. I found the aria lovely but some variations over-pedaled. 3/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Heard Itzhak Perlman tonight. He came out on crutches, sat, smiled, and the first note of the Bach made me forget everything."
+   },
+   {
+    "style": "diary entry",
+    "text": "My piano teacher played me Horowitz's 1986 Moscow recital. The Traumerei. A man in the audience was crying. So was I."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Herbert von Karajan (1908-1989) was an Austrian conductor who led the Berlin Philharmonic for 35 years and became one of the best-selling classical recording artists."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Klaus Makela is a Finnish conductor and cellist, named chief conductor designate of the Royal Concertgebouw Orchestra while still in his twenties."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Yo-Yo Ma's Silk Road Ensemble shows that a classical musician can build bridges between very different musical traditions."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Daniel Barenboim's West-Eastern Divan Orchestra, which brings together Israeli and Arab players, shows music used as a tool for dialogue."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Nadia Boulanger taught everyone, Copland, Glass, Quincy Jones. GUEST: And she was the first woman to conduct the New York Philharmonic, in 1939."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the soprano Jessye Norman sang 'La Marseillaise' at the bicentennial in Paris, draped in the tricolor. Unforgettable."
+   }
+  ],
+  "topic:Legislature": [
+   {
+    "style": "casual social-media post",
+    "text": "Watched PMQs today. The Speaker yelled 'ORDER' fourteen times. The House of Commons is better than any reality show."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Shoutout to the Vermont General Assembly for passing the bill our class wrote letters about. Civics actually works!"
+   },
+   {
+    "style": "news-wire report",
+    "text": "BERLIN (Reuters) - The Bundestag voted on Friday to approve a new defense spending package after a lengthy debate in the lower house."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW DELHI - The Lok Sabha passed a bill reserving one-third of its seats for women on Wednesday, with near-unanimous support."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Iceland's Althing really the oldest parliament? B: Founded in 930 at Thingvellir. A: Outdoors? B: In a rift valley, yes."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why does the Senate filibuster? B: It takes 60 votes to end debate. A: So 41 senators can block a bill? B: Pretty much."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Tynwald, Isle of Man: Every July, its members gather outdoors on Tynwald Hill, where new laws are read aloud in English and Manx."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. The Knesset: Israel's 120-seat chamber sits in Jerusalem, with Chagall tapestries in its reception hall."
+   },
+   {
+    "style": "forum question",
+    "text": "How does the Scottish Parliament's voting system work? Is it really a mix of constituency seats and regional lists?"
+   },
+   {
+    "style": "forum question",
+    "text": "Can anyone explain why the Nebraska Legislature has only one chamber? Every other U.S. state has two."
+   },
+   {
+    "style": "product or event review",
+    "text": "Took the tour of the Storting in Oslo. Our guide explained the seating by county; the chamber ceiling is stunning."
+   },
+   {
+    "style": "product or event review",
+    "text": "Visited the European Parliament's hemicycle in Strasbourg. The translation booths were fascinating; the cafe coffee was not."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day as a page in the Texas House. Ran amendments between desks for six hours. My feet hate me."
+   },
+   {
+    "style": "diary entry",
+    "text": "Sat in the public gallery of the Dail today. The Ceann Comhairle had to suspend the sitting after a shouting match. Exciting."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The National Diet is Japan's bicameral legislature, composed of the House of Representatives and the House of Councillors."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Riksdag is the unicameral legislature of Sweden, with 349 members elected by proportional representation every four years."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Long Parliament of 1640 challenged Charles I and showed that a representative assembly could resist a king."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Because New Zealand's House of Representatives has no upper chamber, a bill can become law much faster than in most countries."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: In Peru, the unicameral Congress has removed a whole string of presidents for 'moral incapacity.' GUEST: It's a vague clause, and they use it a lot."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Ohio General Assembly gaveled in at 1 p.m., and by 1:05 they'd recessed for lunch. Peak Columbus."
+   }
+  ],
+  "topic:MilitaryUnit": [
+   {
+    "style": "casual social-media post",
+    "text": "Watching Trooping the Colour and the Coldstream Guards' bearskins are absolutely enormous. How do they not topple over?"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Grandpa served with the 1st Cavalry Division in Korea. Found his patch in a shoebox today. Yellow shield, black horse head."
+   },
+   {
+    "style": "news-wire report",
+    "text": "FORT CAMPBELL, Ky. (AP) - Soldiers of the 101st Airborne Division returned home Saturday after a nine-month deployment, greeted by families on the airfield."
+   },
+   {
+    "style": "news-wire report",
+    "text": "FOLKESTONE, England - The Royal Gurkha Rifles held a parade on Sunday to honor veterans of the regiment's service in Borneo."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who were the Night Witches? B: The 588th Night Bomber Regiment, Soviet women flying plywood biplanes. A: Why that name? B: Their idling engines sounded like brooms swishing."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: The 442nd? B: Japanese American soldiers in WWII, the most decorated unit for its size. A: While their families were in camps? B: Yes."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. No. 303 Squadron: Polish pilots flying Hurricanes claimed more victories than any other RAF fighter squadron in the Battle of Britain."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. The Harlem Hellfighters: The 369th Infantry spent 191 days in combat in WWI, longer than any other American regiment."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know where the French Foreign Legion's 2nd Parachute Regiment is based? Reading about Calvi in Corsica and it keeps coming up."
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for records of the Black Watch's 2nd Battalion at Tobruk. My great-uncle was there in 1941. Where do I start?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The museum exhibit on 617 Squadron, the Dambusters, had a bouncing bomb replica and Guy Gibson's logbook. Very moving."
+   },
+   {
+    "style": "product or event review",
+    "text": "Band of Brothers holds up: Easy Company from Toccoa to the Eagle's Nest, brilliantly acted. Episode nine still guts me."
+   },
+   {
+    "style": "diary entry",
+    "text": "Passed selection for the battalion recce platoon today. Sergeant Morris said 'don't get comfy.' Not planning to."
+   },
+   {
+    "style": "diary entry",
+    "text": "Visited the Rats of Tobruk memorial in Canberra. Grandad was 9th Division. Left a sprig of rosemary."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The 332nd Fighter Group, known as the Tuskegee Airmen, was the first group of African American military aviators in the U.S. Army Air Forces."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Royal Scots Greys was a cavalry regiment of the British Army, famous for its charge at the Battle of Waterloo in 1815."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The 54th Massachusetts Infantry Regiment proved during the assault on Fort Wagner that Black soldiers would fight bravely for the Union."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Monuments Men of the MFAA section saved thousands of artworks stolen by the Nazis, showing that soldiers can protect culture too."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the 1st Marine Division lands on Guadalcanal in August 1942. GUEST: Supplies cut off within days, and they live on captured rice."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Grenadier Guards got their name after Waterloo, supposedly for defeating the grenadiers of the French Imperial Guard."
+   }
+  ],
+  "topic:PoliticalParty": [
+   {
+    "style": "casual social-media post",
+    "text": "The Official Monster Raving Loony Party manifesto promises to make 99p coins. Honestly, more realistic than most."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Volunteering for the Greens at the farmers' market today. Got three people to register and one to adopt a hedgehog. Win-win."
+   },
+   {
+    "style": "news-wire report",
+    "text": "JOHANNESBURG (Reuters) - The African National Congress lost its parliamentary majority for the first time since 1994, final results showed on Sunday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO - Japan's Liberal Democratic Party will hold a leadership election next month, the party announced Tuesday, after the prime minister's resignation."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What was the Bull Moose Party? B: Teddy Roosevelt's Progressives in 1912. A: Did they win? B: Beat Taft, split the vote, and Wilson won."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Sinn Fein topped the vote in the North? B: First nationalist party to be largest at Stormont. A: Big shift. B: Huge."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. The Pirate Party, Sweden: Founded in 2006 to reform copyright law, it won two seats in the European Parliament in 2009."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. The Whigs: The American Whig Party opposed Andrew Jackson and elected two presidents before collapsing over slavery in the 1850s."
+   },
+   {
+    "style": "forum question",
+    "text": "How does the SNP choose its leader? Is it a members' ballot or does the group at Holyrood decide?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did Mexico's PRI hold power for 71 years? Was it just electoral fraud or did it actually have broad support?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the Lib Dem conference fringe events. Lively debates on electoral reform, decent free coffee, a lot of yellow."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary on Brazil's Workers' Party is gripping: union roots, Lula's rise, the corruption cases. One-sided at times."
+   },
+   {
+    "style": "diary entry",
+    "text": "Canvassed for Labour on the estate tonight. One man invited me in for tea and talked about his pension for an hour."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got my membership card from the CDU youth wing today. Mama thinks I'm too young for politics. I'm seventeen!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Indian National Congress is a political party in India founded in 1885, which led the movement for independence from British rule."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Bharatiya Janata Party is one of India's two major national parties, founded in 1980 and led to power by Narendra Modi in 2014."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The collapse of the Federalists after the War of 1812 shows that a political group can disappear when it opposes a popular war."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Fianna Fail, founded by de Valera in 1926, dominated Irish politics for decades by appealing to small farmers and workers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: The Know-Nothings got their name because members said 'I know nothing' if asked about the group. GUEST: A secret society that turned into a national movement."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Christian Democrats in Italy led nearly every government from 1946 to 1992 and then just vanished after the bribery scandals."
+   }
+  ],
+  "topic:PublicTransitSystem": [
+   {
+    "style": "casual social-media post",
+    "text": "The Montreal Metro runs on rubber tires so it's whisper-quiet. Also every station looks like a 1966 album cover."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The L train was stuck between Bedford and Lorimer for 25 minutes. Love this city, hate this subway."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (AP) - The Washington Metropolitan Area Transit Authority said Monday that Metrorail ridership had reached its highest level since 2019."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BOGOTA - TransMilenio added a new batch of electric buses to its rapid-transit fleet on Thursday, city officials said, expanding service to the south."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How do I get to Shinjuku from Ginza? B: Marunouchi Line, the red circle on the map. A: Do I need a new ticket? B: Just tap your Suica."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why is the Moscow Metro so fancy? B: Stalin wanted 'palaces for the people.' A: Chandeliers underground? B: And mosaics at Komsomolskaya."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Copenhagen Metro: Fully driverless, runs 24/7, and you can sit right at the front window watching the tunnel."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Medellin Metrocable: Gondolas linking hillside neighborhoods to the city's rail line cut some commutes from hours to minutes."
+   },
+   {
+    "style": "forum question",
+    "text": "Is the Oyster card still worth getting on the Tube, or should I just use contactless? Visiting London for a week."
+   },
+   {
+    "style": "forum question",
+    "text": "Does BART run all night on weekends? Need to get from SFO to Oakland after a 1 a.m. landing."
+   },
+   {
+    "style": "product or event review",
+    "text": "Singapore's MRT is spotless, air-conditioned, and trains come every two minutes. The no-durian rule is the only hardship."
+   },
+   {
+    "style": "product or event review",
+    "text": "Chicago's 'L': the Loop elevated tracks are fantastic for sightseeing, but the Red Line at night felt grubby and slow."
+   },
+   {
+    "style": "diary entry",
+    "text": "Rode the Stockholm tunnelbana just to see the stations. T-Centralen's blue vines painted on raw rock were unreal."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got lost changing lines at Chatelet again. The Paris Metro has 16 lines and I swear they all meet there."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The London Underground, opened in 1863, is the oldest underground railway network in the world."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Mass Transit Railway (MTR) is the rapid transit network serving Hong Kong, known for its very high punctuality rate."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Curitiba's bus rapid transit system, with its tube-shaped stations, showed that a city could get subway-like service for a fraction of the cost."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Portland's MAX light rail helped the city grow inward instead of outward, protecting farmland at its edges."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Vienna sells an annual transit pass for 365 euros. GUEST: A euro a day! And ridership went way up. Every mayor should be stealing this."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Seoul subway has Wi-Fi in the tunnels, heated seats in winter, and platform screen doors at practically every station."
+   }
+  ],
+  "topic:TradeUnion": [
+   {
+    "style": "casual social-media post",
+    "text": "Shoutout to SAG-AFTRA for holding the line. Picket signs and sunscreen outside the studio all summer."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just got my Teamsters card! Dad's been a member 30 years. Feels like a family tradition."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DETROIT (AP) - The United Auto Workers reached a tentative agreement with Ford on Wednesday, ending a six-week strike at several plants."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - The RMT rail union announced on Monday that members had voted to accept a pay offer, ending a long-running dispute with train operators."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What was Solidarnosc? B: The Polish shipyard workers' movement Lech Walesa led. A: And it helped end communism there? B: Pretty much."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why did the writers strike? B: The WGA wanted protections against AI and better streaming residuals. A: Did they get them? B: Mostly."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. United Farm Workers: Cesar Chavez and Dolores Huerta organized grape pickers and launched a national boycott in the 1960s."
+   },
+   {
+    "style": "listicle item",
+    "text": "7. IG Metall: Germany's metalworkers' organization, with more than two million members, helped win the 35-hour week."
+   },
+   {
+    "style": "forum question",
+    "text": "Can a part-time warehouse worker join the Amazon Labor Union, or do you have to be full-time? Asking for my brother at JFK8."
+   },
+   {
+    "style": "forum question",
+    "text": "Does UNISON represent hospital porters as well as nurses? Starting a new job in the NHS and want to know who to join."
+   },
+   {
+    "style": "product or event review",
+    "text": "Read the history of the ILGWU after the Triangle fire. Clear writing, brilliant photos of the 1909 shirtwaist strike. Five stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "CUPE's member education weekend: excellent workshop on grievance handling, terrible hotel coffee. Learned a lot about bargaining."
+   },
+   {
+    "style": "diary entry",
+    "text": "Elected shop steward at the plant today. Thirty-two votes. Now I have to actually read the contract."
+   },
+   {
+    "style": "diary entry",
+    "text": "Picket line at dawn with the nurses. National Nurses United brought donuts. Cars kept honking for us."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The National Union of Mineworkers is a British trade union for coal miners, which led the 1984-85 miners' strike under Arthur Scargill."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The International Longshore and Warehouse Union represents dockworkers on the U.S. West Coast and in Hawaii and British Columbia."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Knights of Labor in the 1880s welcomed skilled and unskilled workers alike, an idea far ahead of its time."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Brotherhood of Sleeping Car Porters, led by A. Philip Randolph, showed that Black workers could organize and win despite discrimination."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the Tolpuddle Martyrs get transported to Australia just for swearing an oath together. GUEST: 1834, six farm laborers. Massive public outcry."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the local president at the steel mill told me bargaining is ninety percent patience and ten percent knowing when to walk out."
+   }
+  ],
+  "topic:SportsTeamMember": [
+   {
+    "style": "casual social-media post",
+    "text": "Our club's new signing, defender Lena Fischer, already has the whole squad following her pre-match playlist. Welcome to the team, Lena!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Shoutout to Marco, the domestique who dragged our leader up the Tourmalet today. Nobody wins without the guys who fetch the bottles."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MELBOURNE (AAP) - Midfielder Jordan Teague has re-signed with Hawthorn for two more seasons, the club confirmed on Friday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO - Relay anchor Kenji Morita said on Sunday he was honored to be named to Japan's 4x100m squad for the world championships."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the new goalie on the roster? B: Erik Lindqvist, called up from the farm team. A: Any good? B: Stopped 34 shots in his debut."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Priya still in the varsity eight? B: She's in the stroke seat now. A: So she sets the rhythm for the whole boat? B: Exactly."
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Sarah Nkemelu, utility back: She's started at fly-half, center, and wing this season, wherever the squad needs her."
+   },
+   {
+    "style": "listicle item",
+    "text": "8. Tomas Aguirre, bench forward: Averaging only 12 minutes a game, he still leads the team in hustle stats and charges drawn."
+   },
+   {
+    "style": "forum question",
+    "text": "My son just made the U-16 club roster as a backup keeper. How much playing time do second-string goalies usually get?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Ruth Okafor is still on the national sevens squad? Haven't seen her in the last two tournament lineups."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary on the 1980 'Miracle on Ice' roster focuses on lesser-known players, not just the captain. Wonderful."
+   },
+   {
+    "style": "product or event review",
+    "text": "Game recap: our new left back, Ines Carvalho, had two assists and won every header. Best debut I've seen from a squad player."
+   },
+   {
+    "style": "diary entry",
+    "text": "Made the varsity soccer team today! Number 14. I'll start on the bench but that's fine, I'm on the roster."
+   },
+   {
+    "style": "diary entry",
+    "text": "Last practice before nationals. The whole crew signed my oar. Twelve years of rowing and this boat is the best family I've had."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Daniel Okoro (born 1995) is a Nigerian professional basketball player who has been a member of the national team since 2017."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Anna Kowalczyk is a Polish volleyball player who was part of the squad that won the European Championship silver medal."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A role player like Robert Horry, who won seven NBA championships, shows that teams need dependable members, not just stars."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Chicago Bulls' Steve Kerr proved that a bench shooter could decide a championship with one shot."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Our guest today played eleven seasons as a utility infielder for three clubs. GUEST: I was the guy who knew every position and started at none of them."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the team captain, Mia Brandt, called a players-only meeting at halftime. Next half they scored three. That's leadership."
+   }
+  ],
+  "topic:Ambassador": [
+   {
+    "style": "casual social-media post",
+    "text": "Just learned Shirley Temple became the U.S. envoy to Ghana and later Czechoslovakia. Child star to diplomat is a wild career arc."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The Canadian ambassador showed up at our school's Canada Day picnic and flipped pancakes for an hour. Absolute legend."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (AP) - U.S. Ambassador Caroline Kennedy presented her credentials to Emperor Akihito on Tuesday, arriving at the palace in a horse-drawn carriage."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - Britain's envoy to Washington, Sir Kim Darroch, resigned on Wednesday after leaked cables critical of the U.S. administration caused a diplomatic row."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Why did Benjamin Franklin stay in Paris so long? B: He was the American minister, charming the French into an alliance. A: In a fur cap? B: Very on brand."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Where's your aunt posted now? B: She's heading the embassy in Montevideo. A: Fancy! B: Mostly she complains about the paperwork."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. George F. Kennan: His 'Long Telegram' from Moscow shaped U.S. Cold War policy, and he later served briefly as ambassador to the USSR."
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Clare Boothe Luce: The playwright and congresswoman became U.S. ambassador to Italy in 1953, one of the first women in such a major post."
+   },
+   {
+    "style": "forum question",
+    "text": "How does someone become an ambassador in the UK's foreign service? Is it all career diplomats, or are some political appointees?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Jon Huntsman spoke Mandarin during his time as envoy to Beijing? I've seen a video but can't confirm it."
+   },
+   {
+    "style": "product or event review",
+    "text": "Madeleine Albright's memoir covers her years at the UN with sharp humor. The chapter on Bosnia is the strongest. Highly recommend."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the Norwegian embassy's Constitution Day reception. Ambassador Halvorsen gave a short, funny speech, and the waffles were excellent."
+   },
+   {
+    "style": "diary entry",
+    "text": "Presented my credentials to the president today. Rehearsed the bow a dozen times and still nearly tripped on the carpet."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dinner at the residence with the Japanese envoy. He told me about growing up near Kyoto and then served the best matcha I've ever had."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "John Quincy Adams served as U.S. minister to Russia from 1809 to 1814, years before he became secretary of state and president."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Linda Thomas-Greenfield is an American diplomat who served as the U.S. Ambassador to the United Nations from 2021 to 2025."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Joseph P. Kennedy's time as ambassador in London shows how an envoy's personal views about appeasement could damage his country's reputation."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Ambassador Henry Morgenthau Sr.'s reports from Constantinople in 1915 show how an envoy could alert the world to atrocities."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What surprised you most about running an embassy? GUEST: Honestly, how much of my week went to visas and trade fairs, not grand diplomacy."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and the new envoy arrives in Canberra, presents credentials at Government House, and immediately gets asked about cricket."
+   }
+  ],
+  "topic:Architect": [
+   {
+    "style": "casual social-media post",
+    "text": "Fallingwater in person: Frank Lloyd Wright really looked at a waterfall and said 'let's put the living room on top of it.' Iconic."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Zaha Hadid's curves at the Heydar Aliyev Center in Baku look like the building is melting into the plaza. Unreal."
+   },
+   {
+    "style": "news-wire report",
+    "text": "OUAGADOUGOU (AP) - Diebedo Francis Kere, who builds schools from clay in his native Burkina Faso, became the first African to win the Pritzker Prize, the jury announced Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - Norman Foster's firm unveiled plans on Thursday for a new airport terminal in the Gulf, featuring a vast lattice roof."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: When will the Sagrada Familia be finished? B: They're aiming for 2026, a century after Gaudi died. A: He knew he wouldn't see it. B: He said his client wasn't in a hurry."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who designed the glass pyramid at the Louvre? B: I. M. Pei. A: People hated it at first? B: Parisians were furious. Now it's on every postcard."
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Tadao Ando: A former boxer with no formal training, he turned bare concrete and light into spaces like the Church of the Light in Osaka."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Lina Bo Bardi: The Italian-Brazilian designer behind Sao Paulo's MASP, a museum suspended between two red concrete frames."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it worth visiting Le Corbusier's Villa Savoye if I only have half a day in Paris? How long does it take to get there?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know if Alvar Aalto designed the furniture in Paimio Sanatorium himself? I've read conflicting things."
+   },
+   {
+    "style": "product or event review",
+    "text": "Toured the Guggenheim Bilbao: Frank Gehry's titanium curves are dazzling outside, though some galleries feel awkward inside. Still worth it."
+   },
+   {
+    "style": "product or event review",
+    "text": "Oscar Niemeyer's cathedral in Brasilia is breathtaking from the inside, with stained glass pouring light down between the concrete ribs."
+   },
+   {
+    "style": "diary entry",
+    "text": "Saw Julia Morgan's Hearst Castle today. She designed over 700 buildings and nobody in my class had heard of her. Changing that."
+   },
+   {
+    "style": "diary entry",
+    "text": "Lecture by Bjarke Ingels tonight. He talked about 'hedonistic sustainability' and showed a power plant with a ski slope on the roof. Inspired."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ludwig Mies van der Rohe (1886-1969) was a German-American architect associated with the phrase 'less is more' and the Seagram Building in New York."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sir Christopher Wren (1632-1723) was an English architect who rebuilt dozens of London churches after the Great Fire, including St Paul's Cathedral."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Renzo Piano's Centre Pompidou, with its pipes and escalators on the outside, challenged the idea that a museum must look serious."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Kengo Kuma's use of wood in Tokyo's Olympic stadium shows how modern architects are reconnecting buildings with nature."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Louis Kahn spent years on the capitol complex in Dhaka. GUEST: And he died in Penn Station, deep in debt, before it was finished."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...my mentor at the studio, Hannah Voss, always said a building should be drawn first with a soft pencil and a long walk around the site."
+   }
+  ],
+  "topic:Astronaut": [
+   {
+    "style": "casual social-media post",
+    "text": "Chris Hadfield singing Space Oddity on the ISS still gives me chills over a decade later."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Thomas Pesquet's photos of the Alps from orbit are my new wallpaper. Snow and clouds and tiny towns."
+   },
+   {
+    "style": "news-wire report",
+    "text": "HOUSTON (AP) - Sunita Williams and Butch Wilmore returned to Earth on Tuesday aboard a SpaceX capsule after an unplanned nine-month stay on the space station."
+   },
+   {
+    "style": "news-wire report",
+    "text": "COLOGNE - Samantha Cristoforetti took command of the International Space Station on Wednesday, becoming the first European woman to hold the post."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Gagarin really say 'Poyekhali!' at launch? B: 'Let's go!' Yes. A: And he was only 27? B: And a hero to the whole world by lunchtime."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: How long was Scott Kelly up there? B: 340 days. A: And his twin stayed on Earth for the study? B: Mark, yes. Science's favorite twins."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Valentina Tereshkova: A textile worker and amateur parachutist, she became the first woman in space in 1963 aboard Vostok 6."
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Mae Jemison: Doctor, dancer, and the first African American woman to fly in space, aboard Endeavour in 1992."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Buzz Aldrin really take communion on the Moon before walking outside? Trying to confirm for a church newsletter."
+   },
+   {
+    "style": "forum question",
+    "text": "How did Peggy Whitson rack up more than 600 days in space? Is that still the American record?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Tim Peake's book about his six months in orbit is fun and full of practical details, like how toothpaste behaves in microgravity. 4 stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw Sally Ride's flight suit at the Smithsonian. The exhibit about the first American woman in space was short but moving."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Christina Koch at the science fair today. She spent almost a year on the station and said the hardest part was missing her dog. I want her job."
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandpa told me again how he watched Armstrong step off the ladder on a neighbor's TV. He still says 'one small step' every time we look at the Moon."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Yang Liwei is a Chinese military pilot who, aboard Shenzhou 5 in 2003, became the first person sent into space by China."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rakesh Sharma is a former Indian Air Force pilot who flew aboard Soyuz T-11 in 1984, becoming the first Indian citizen in space."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "John Glenn's return to space at 77 aboard the shuttle Discovery proved that age need not end a career of exploration."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Neil Armstrong's quiet personality after Apollo 11 shows that being a hero does not require seeking attention."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: What's the first thing you wanted after landing? GUEST: A shower. Six months of wet wipes. Then a salad. Fresh lettuce is the dream up there."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Emirati astronaut Sultan Al Neyadi did a six-month mission and posted daily photos of the Gulf from the station."
+   }
+  ],
+  "topic:BeautyQueen": [
+   {
+    "style": "casual social-media post",
+    "text": "Catriona Gray's lava walk at Miss Universe 2018 is still the most iconic thing to happen in pageant history. Fight me."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My cousin just won Miss Riverside County!!! The sash, the crown, the happy tears. So proud of her community-garden platform."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SAN SALVADOR (AP) - Sheynnis Palacios of Nicaragua was crowned Miss Universe on Saturday, the first woman from her country to win the title."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MUMBAI - Krystyna Pyszkova of the Czech Republic won the 71st Miss World pageant on Saturday, organizers said, after a ceremony in Mumbai."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Wait, Vanessa Williams was Miss America? B: 1984, the first Black woman to win. A: Before 'Save the Best for Last'? B: Long before."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Gal Gadot really compete in a pageant? B: Miss Israel 2004, then Miss Universe. A: She said she didn't love it. B: Acting worked out better."
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Priyanka Chopra: Crowned Miss World in 2000 at 18, she went on to Bollywood and Hollywood stardom."
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Zozibini Tunzi: The South African titleholder of 2019 used her final answer to argue that girls should be taught leadership."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know what platform Harnaaz Sandhu ran on when she won Miss Universe 2021? I'm prepping for my own pageant interview."
+   },
+   {
+    "style": "forum question",
+    "text": "How much training did Pia Wurtzbach do before her third try at the Philippine national title? Wondering how long prep takes."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the documentary on Bess Myerson, the 1945 Miss America who faced antisemitism on her tour. Powerful and well researched."
+   },
+   {
+    "style": "product or event review",
+    "text": "The memoir by former Miss Teen USA titleholder Kara Lindell was surprisingly funny about hairspray and homesickness. Three stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interview round tomorrow at Miss Ohio. Practiced my answer on literacy fifty times. Mom steamed my gown twice."
+   },
+   {
+    "style": "diary entry",
+    "text": "Gave back my crown tonight after a year as Strawberry Festival Queen. Cried more than when I won it."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Aishwarya Rai is an Indian actress and model who was crowned Miss World in 1994."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Janelle Commissiong of Trinidad and Tobago became the first Black woman to be crowned Miss Universe, in 1977."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Lara Dutta's win as Miss Universe in 2000 made pageants a symbol of national pride in India."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Gloria Diaz, the Philippines' first Miss Universe in 1969, started a pageant tradition that her country still takes very seriously."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Victoria Kjaer Theilvig, the first Danish Miss Universe, 2024. GUEST: And the platinum pixie cut! Everyone said that would never win."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so R'Bonney Gabriel designs her own gowns, and she won Miss Universe in a dress she made herself. A fashion designer as queen."
+   }
+  ]
+ }
+}

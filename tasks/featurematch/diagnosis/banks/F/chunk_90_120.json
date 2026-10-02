@@ -1,0 +1,2465 @@
+{
+ "bank": "F",
+ "concepts": {
+  "topic:BusinessPerson": [
+   {
+    "style": "casual social-media post",
+    "text": "Just heard Priya Raman speak at the startup breakfast. She built her logistics company from one van to 4,000 trucks and still answers her own email. Total legend. #founderlife"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Hot take: Marcus Feld selling his sneaker brand for $2B and then buying a minor-league soccer team is the most chaotic billionaire move of the year 😂"
+   },
+   {
+    "style": "news-wire report",
+    "text": "FRANKFURT (Wire) - Helga Brandt, the chief executive who turned Brandt Kühltechnik into Europe's largest maker of commercial refrigerators, will step down in March after 22 years, the company said on Tuesday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SEOUL - Retail tycoon Park Ji-hoon on Monday announced a $300 million takeover of a rival convenience-store chain, extending his group's lead in the country's crowded market."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you read that Tomás Aguilar is stepping down as CEO? B: Yeah, after doubling the airline's revenue. Rumor is the board wanted someone cheaper. A: Typical."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"How did your aunt start the bakery chain?\" \"She borrowed $5,000 from her brother, opened one shop in Leeds, and now Rosalind Hale owns sixty-two of them.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Akiko Mori — The former bank clerk founded a stationery empire at 41 and now chairs a company listed on the Tokyo Stock Exchange."
+   },
+   {
+    "style": "listicle item",
+    "text": "#7: Derek Osei, who flipped a failing textile mill in Accra into a profitable export business and now sits on four corporate boards."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone read the biography of industrialist Walter Kimball? I'm curious whether his hostile takeovers in the 1980s were really as ruthless as the reviews say."
+   },
+   {
+    "style": "forum question",
+    "text": "Question for MBA folks: why did investor Lena Kowalski step down from the board of her own fintech company right before the IPO? Was it a governance thing?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Built From Scrap' tells how shipping magnate Carlos Ibarra went from dockworker to owning a fleet of 80 vessels. Inspiring, though it glosses over his labor disputes. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the keynote by entrepreneur Naomi Feldstein at the retail summit. Her story of rescuing a bankrupt department store chain was gripping, but the Q&A ran way too short."
+   },
+   {
+    "style": "diary entry",
+    "text": "Met Mr. Okafor today, the man who owns half the hotels on the coast. He shook my hand, asked about my sales numbers, and offered me a regional manager job. I still can't believe it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dear diary, Grandpa told me again how he started the hardware company in 1958 with one counter and a loan. Tomorrow I sign the papers to take over as managing director."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Gustav Lindqvist (1921–2004) was a Swedish industrialist and businessman who founded the Lindqvist Group, a manufacturer of ball bearings and machine tools."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sunita Bhargava (born 1968) is an Indian business executive who has served as chairperson and chief executive officer of Bhargava Pharmaceuticals since 2009."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "In my essay I argue that Henry Ford was more than a carmaker; as an industrialist he changed how factories paid and organized their workers."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Madam C. J. Walker, who built a hair-care company in the early 1900s, became one of the first self-made female millionaires in the United States."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: My guest today ran a supermarket chain with 30,000 employees. Deborah, what's the hardest decision you made as CEO? GUEST: Closing forty stores in one week. I still think about it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's when Raj Patel, the founder of the coffee franchise, realized his margins were vanishing. So on today's episode we'll trace how he rebuilt the company from the brink."
+   }
+  ],
+  "topic:Chef": [
+   {
+    "style": "casual social-media post",
+    "text": "Ate at Lucía Herrera's new place last night and her smoked octopus with burnt lemon is unreal. She was in the kitchen plating every dish herself 🔥🍴"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Chef Bao Tran just got his second Michelin star and posted a photo of his mom's pho recipe as thanks. Not crying, you're crying."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS (Wire) - Chef Étienne Moreau, whose Lyon restaurant held three Michelin stars for 25 years, announced on Thursday he will close it and open a cooking school for teenagers."
+   },
+   {
+    "style": "news-wire report",
+    "text": "COPENHAGEN - Mette Sørensen of Denmark won the Bocuse d'Or cooking competition on Wednesday with a platter of turbot, sea buckthorn and rye, edging out the Norwegian and French teams."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's cooking at the wedding? B: Kenji Watanabe. He trained in Kyoto for ten years and runs that omakase counter downtown. A: Fancy. B: His tamagoyaki alone is worth the trip."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"You trained under Marco Bellini?\" \"Three years on his pasta station. He'd taste every sauce and send back half of them. Best head chef I ever had.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "5. Amara Nwosu — The London-based chef who brought Nigerian jollof to fine dining and earned a Michelin star in 2021."
+   },
+   {
+    "style": "listicle item",
+    "text": "#2 Diego Ruiz: a self-taught cook from Oaxaca whose mole negro restaurant now has a six-month waitlist."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know what happened to Paolo Ricci? His trattoria in Bologna was amazing and now it seems closed. Did he move abroad to open a new kitchen?"
+   },
+   {
+    "style": "forum question",
+    "text": "Which of Hiro Saito's cookbooks is better for a home cook — the ramen one or the izakaya one? I loved his TV episodes."
+   },
+   {
+    "style": "product or event review",
+    "text": "Dinner at Margaux Delacroix's tasting menu was a triumph: twelve courses, each sharper than the last, and she came out to explain the duck. Pricey but worth it. ★★★★★"
+   },
+   {
+    "style": "product or event review",
+    "text": "The class with pastry chef Ingrid Holm was fun, though she moved fast. Her croissant lamination tips alone made the $90 worthwhile."
+   },
+   {
+    "style": "diary entry",
+    "text": "First day as commis in Laurent's kitchen. He yelled at me for cutting the shallots too big, then showed me how himself. My hands smell of garlic and I'm exhausted but happy."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Grandma Rosa make her ragù one last time before her restaurant closes. Forty years behind that stove. I wrote down every step she did."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Auguste Escoffier (1846–1935) was a French chef, restaurateur and culinary writer who popularised and modernised traditional French cooking methods."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Yuki Tanabe (born 1975) is a Japanese chef known for her kaiseki restaurant in Kanazawa, which received two Michelin stars in 2016."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Julia Child changed American home cooking by showing on television that French recipes could be made in an ordinary kitchen."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The chef I admire most is my uncle Samir, who runs a small Lebanese restaurant and taught me that good food starts with patience."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So you were a line cook at nineteen and running your own kitchen at twenty-six. GUEST: Yeah, I opened Ember with two burners and a borrowed smoker. Now we do four hundred covers a night."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Anaïs Dubois tells us her secret is brown butter in almost everything. Stick around, because after the break she's walking us through her famous tarte Tatin."
+   }
+  ],
+  "topic:Economist": [
+   {
+    "style": "casual social-media post",
+    "text": "Prof. Anika Rao's thread on why rent control backfires in small cities is the best thing I've read all week. Clear charts, zero jargon. 📈"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe Harold Finch predicted the 2008 housing crash in a 2005 paper nobody read. Dude deserves the Nobel tbh."
+   },
+   {
+    "style": "news-wire report",
+    "text": "STOCKHOLM (Wire) - The Nobel memorial prize in economic sciences was awarded on Monday to Dutch economist Pieter van Leeuwen for his work on how labor markets respond to minimum wage changes."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON - Former IMF chief economist Maria Castillo warned on Thursday that rising public debt in emerging markets could trigger a wave of defaults next year."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the keynote at the conference? B: David Okonkwo, the guy who studies microfinance in West Africa. A: Oh, his randomized trials on village loans? B: Exactly, those."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Did Professor Lindgren really advise the central bank?\" \"For six years. Her inflation-targeting model is still what they use.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Esther Klein — Her research on how school vouchers affect household spending reshaped education policy in three countries."
+   },
+   {
+    "style": "listicle item",
+    "text": "#9: Rajiv Menon, a development scholar whose studies of monsoon rainfall and farm incomes are cited in nearly every Indian budget debate."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Hyman Minsky worth reading for a beginner? People keep quoting his 'stability breeds instability' idea and I want to understand it properly."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone else find Prof. Takeda's lectures on game theory confusing? His textbook is great but the problem sets assume way too much math."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: In 'The Price of Everything', Sophie Laurent argues that carbon taxes are fairer than subsidies. Her data is strong, though her chapter on trade wanders. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The panel featuring Claudia Ortega, the labor-market researcher, was the highlight of the policy forum. She explained wage stagnation better than any textbook I've read."
+   },
+   {
+    "style": "diary entry",
+    "text": "Professor Adebayo signed my copy of his book on monetary policy today and told me to apply for the central bank internship. I'm buzzing."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent all night reading Keynes for tomorrow's seminar. I get why he argued governments should spend during slumps, but my head hurts."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Joan Robinson (1903–1983) was a British economist known for her work on imperfect competition and her contributions to post-Keynesian theory."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Arvid Holmberg (born 1952) is a Swedish economist and professor at Uppsala University whose research focuses on public finance and taxation."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Adam Smith, often called the father of modern economics, argued in 1776 that the division of labor makes nations wealthier."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Amartya Sen showed that famines are not caused only by food shortages but by people losing the ability to buy food."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've spent twenty years modeling housing bubbles. GUEST: Right, and the pattern is always the same: credit gets cheap, prices outrun incomes, and everyone assumes it'll last."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...my guest is Dr. Fiona Gallagher, who advised the Irish finance ministry during the bailout. Fiona, what did the textbooks get wrong about austerity?"
+   }
+  ],
+  "topic:Engineer": [
+   {
+    "style": "casual social-media post",
+    "text": "Shoutout to Kofi Mensah, the structural engineer who redesigned our town's footbridge for free after the flood. Absolute hero 🌉"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My sister Leah just got her professional engineering license! Seven years of exams and site work. So proud 💪"
+   },
+   {
+    "style": "news-wire report",
+    "text": "HOUSTON (Wire) - Aerospace engineer Rachel Dominguez, who led the design of the lander's heat shield, was named NASA's chief technologist on Friday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MUMBAI - Anil Deshpande, credited with the earthquake-resistant design of the city's new metro viaducts, received the national infrastructure award on Sunday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who designed the dam? B: A guy named Pieter Vos. He worked on the Delta Works in the Netherlands before this. A: So he knows water. B: Better than anyone."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"What does your mom do?\" \"She designs jet engines at Rolls-Royce. Mostly the turbine blades — she's been doing it for twenty years.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "6. Isambard Kingdom Brunel — He built railways, tunnels and the giant steamship Great Eastern, reshaping Victorian Britain."
+   },
+   {
+    "style": "listicle item",
+    "text": "#3 Hedy Morales: the electrical engineer whose low-cost solar inverter now powers clinics in 14 countries."
+   },
+   {
+    "style": "forum question",
+    "text": "Did Nikola Tesla really design the AC induction motor alone? I keep reading conflicting stories about how much credit he gets."
+   },
+   {
+    "style": "forum question",
+    "text": "Any tips on finding the papers of Tomasz Wójcik? He was the mechanical designer behind the old Polish tram bogies and I'm researching his work."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Steel and Sky' profiles Fazlur Rahman Khan, the structural designer behind the tube system used in skyscrapers. Fascinating, if a bit technical. 4 stars."
+   },
+   {
+    "style": "product or event review",
+    "text": "The talk by bridge designer Ingrid Solheim at the museum was excellent. She walked us through the cable calculations for her fjord crossing without losing the crowd."
+   },
+   {
+    "style": "diary entry",
+    "text": "My supervisor Dmitri checked my circuit board layout and found three grounding mistakes in five minutes. Twenty years designing power systems — he's scary good."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dad came home covered in oil again. He's been fixing the pump design at the plant all week and swears the new valve will work tomorrow."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "John Smeaton (1724–1792) was an English civil engineer responsible for the design of bridges, canals, harbours and the third Eddystone Lighthouse."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Mariko Ishida (born 1964) is a Japanese mechanical engineer known for her work on high-speed rail suspension systems."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Emily Roebling took over the construction of the Brooklyn Bridge when her husband fell ill, and she learned the mathematics of cables to do it."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Gustave Eiffel's company designed not only the famous tower in Paris but also the internal iron frame of the Statue of Liberty."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You spent ten years testing car crash structures. GUEST: Yeah, I'd watch the same crumple zone fail on video maybe two hundred times before I figured out the weld problem."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...today's guest, Samuel Adeyemi, designed water-pumping systems for refugee camps. Samuel, what's the hardest engineering constraint when there's no grid power?"
+   }
+  ],
+  "topic:Journalist": [
+   {
+    "style": "casual social-media post",
+    "text": "Huge respect to Elena Vasquez for her investigation into the city's water contracts. Eighteen months of digging and three officials resigned. Real reporting still matters 📰"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Met my favorite war correspondent at the book fair today!!! Tom Brennan signed my copy and said to keep writing. 😭"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Wire) - Veteran BBC correspondent Margaret Hale, who covered five wars and two royal weddings, will retire at the end of the year, the broadcaster said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MEXICO CITY - Investigative journalist Carlos Medina won a national press prize on Tuesday for his series exposing illegal logging in Michoacán."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who broke the story? B: Aisha Bello at the Herald. She got the leaked memos and spent two weeks verifying them. A: Bet the minister's furious. B: Already lawyered up."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"How long have you been at the paper?\" \"Twenty-three years. Started on the night desk writing obituaries, now I edit the investigations team.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Nellie Bly — She faked insanity to expose conditions inside a New York asylum in 1887, then raced around the world in 72 days."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Jonas Weber, the Berlin reporter whose long interviews with factory workers redefined labor coverage in German newspapers."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which outlet Sam Ortiz writes for now? He used to cover the Supreme Court beat and his explainers were the clearest around."
+   },
+   {
+    "style": "forum question",
+    "text": "Has Hannah Greene ever responded to the plagiarism accusations about her magazine profile? I can't find a statement anywhere."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Deadline Country' is reporter Lucas Fernández's memoir of covering the drug war. Gripping, honest about his mistakes, and never self-congratulatory. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary about Ida B. Wells and her anti-lynching reporting was moving, though it skimmed her later newspaper years."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interviewed Rosa Klein today, the columnist who's been at the Gazette since 1979. She told me the trick is always calling one more source. I'm framing that."
+   },
+   {
+    "style": "diary entry",
+    "text": "Filed my first front-page story tonight. The editor cut half of it, but my byline is above the fold. Mom's buying ten copies."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Walter Cronkite (1916–2009) was an American broadcast journalist who served as anchorman of the CBS Evening News for 19 years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ingrid Bakke (born 1971) is a Norwegian journalist and foreign correspondent known for her reporting from the Middle East for Aftenposten."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Bob Woodward and Carl Bernstein showed how two reporters could hold the most powerful people in the country accountable."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Anna Politkovskaya risked everything to report the truth about the war in Chechnya, and her work proves why a free press matters."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So you were embedded with the fishing fleet for three months? GUEST: Yeah, the only way to report on that industry is to be seasick next to the people living it."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...our guest spent a decade as a Moscow correspondent. Before we get to the expulsion, tell me about your first week in the bureau."
+   }
+  ],
+  "topic:Judge": [
+   {
+    "style": "casual social-media post",
+    "text": "Judge Patricia Moore just sentenced the scammer to 12 years and told him off from the bench for twenty minutes. Iconic. ⚖️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My grandad served on the county bench for 30 years and today they named the courthouse after him. So proud of you, Judge Halloran 🥹"
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW DELHI (Wire) - Justice Ramesh Iyer was sworn in as Chief Justice of India on Monday, pledging to reduce the backlog of more than 70,000 pending cases."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BOSTON - U.S. District Judge Laura Chen on Wednesday blocked the state's new voting rule, ruling that it placed an undue burden on disabled voters."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's hearing your case? B: Hawthorne. A: Oh no, she's strict about deadlines. B: I know, my lawyer filed everything a week early just in case."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Did the magistrate rule yet?\" \"Yes — Magistrate Okeke dismissed the case. He said the evidence was gathered without a proper warrant.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Ruth Bader Ginsburg — The Supreme Court justice whose sharp dissents made her a cultural icon in her eighties."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Thurgood Marshall, the civil rights lawyer who became the first Black justice on the U.S. Supreme Court."
+   },
+   {
+    "style": "forum question",
+    "text": "Why did Justice Halvorsen recuse herself from the pipeline case? Was it because her brother works for the company?"
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone appeared before Michael Tran in small claims court? Wondering if he's patient with people representing themselves."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'From the Bench' is Eleanor Price's memoir of 25 years presiding over family court. Heartbreaking, wise and surprisingly funny in places. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw the play about Lord Denning, the English appellate jurist known for his plain-spoken rulings. The actor nailed his Hampshire accent."
+   },
+   {
+    "style": "diary entry",
+    "text": "Clerked for Judge Abernathy today. She read my draft opinion, crossed out half, and said 'Better.' I'll take it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Jury duty, day 3. The man presiding, an older fellow with half-moon glasses, keeps reminding us not to read the news. He's kind but very firm."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Oliver Wendell Holmes Jr. (1841–1935) was an American jurist who served as an associate justice of the Supreme Court of the United States from 1902 to 1932."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Beatriz Almeida (born 1958) is a Brazilian judge who has served on the Superior Court of Justice since 2007."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Chief Justice John Marshall established the principle of judicial review in Marbury v. Madison, giving courts the power to strike down laws."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Judge Frank Johnson of Alabama issued rulings that ended segregation on city buses and helped protect the Selma marchers."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You spent eighteen years on the criminal bench. What was the hardest sentence you handed down? GUEST: A nineteen-year-old who'd done something stupid once. The law gave me very little room."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...retired Justice Kwame Asante joins us to talk about the landmark land-rights ruling he wrote in 1998 and why it still divides opinion."
+   }
+  ],
+  "topic:MilitaryPerson": [
+   {
+    "style": "casual social-media post",
+    "text": "My great-grandpa Sergeant Joe Malone landed at Omaha Beach 80 years ago today. Never talked about it but kept his medals in a cigar box. 🇺🇸"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just finished a biography of General Vo Nguyen Giap and wow, the logistics of Dien Bien Phu alone blew my mind."
+   },
+   {
+    "style": "news-wire report",
+    "text": "KYIV (Wire) - Colonel Oksana Petrenko was appointed commander of the country's air defense forces on Tuesday, becoming the first woman to hold the post."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CANBERRA - Retired Major General Peter Lockhart, who led Australian peacekeepers in East Timor, has died aged 81, the Defence Department said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's that in the photo? B: My grandmother. She was a radio operator in the Women's Royal Naval Service during the war. A: No way. B: She decoded messages from convoys."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Captain Reyes, how many deployments have you done?\" \"Four. Two in the desert, one at sea, and one training mission in Norway.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Hannibal Barca — The Carthaginian general who marched elephants across the Alps to attack Rome."
+   },
+   {
+    "style": "listicle item",
+    "text": "#8 Admiral Yi Sun-sin, whose turtle ships defeated a much larger Japanese fleet in 1592."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Erwin Rommel really as brilliant a commander as people say, or is the 'Desert Fox' reputation mostly propaganda?"
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for info on Lt. Arthur Dunmore, 2nd Battalion, who was awarded the Military Cross in 1917. He was my great-uncle. Any archives I should check?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Iron Discipline' is a solid biography of Field Marshal Bernard Montgomery, fair about both his victories and his famous ego. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The museum's new exhibit on Brigadier Naledi Khumalo, the first woman to command a South African infantry brigade, was beautifully done and full of her letters."
+   },
+   {
+    "style": "diary entry",
+    "text": "Day 40 of basic training. Drill Sergeant Hayes finally said 'good job' to our platoon. I almost fell over."
+   },
+   {
+    "style": "diary entry",
+    "text": "Visited Uncle Ray at the veterans' home. He told me about flying helicopters in Vietnam and how he still dreams about the jungle."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Georgy Zhukov (1896–1974) was a Soviet military commander and Marshal of the Soviet Union who led the Red Army in the capture of Berlin."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rear Admiral Helena Strand (born 1963) is a Swedish naval officer who served as commander of the Swedish Fleet from 2015 to 2019."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Napoleon Bonaparte's skill as a general came from moving his army faster than his enemies expected."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Joan of Arc, a teenage peasant girl, led French soldiers to lift the siege of Orléans in 1429."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You commanded a tank company at twenty-six. GUEST: Fourteen tanks, about sixty soldiers. You grow up fast when people's lives depend on your map reading."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...so the general refuses the order to retreat, holds the ridge for three days, and that's what makes him famous. After the break, we'll look at his court-martial."
+   }
+  ],
+  "topic:Model": [
+   {
+    "style": "casual social-media post",
+    "text": "Can we talk about how Adut Mabior closed the Valentino show in that red gown?! Walked like she owned the runway 🔥👗"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My cousin just signed with an agency in Milan!!! Her first fashion editorial is out next month and she's already booked for two runway shows 😍"
+   },
+   {
+    "style": "news-wire report",
+    "text": "MILAN (Wire) - Brazilian supermodel Camila Rocha announced her retirement from the runway on Saturday after 20 years and more than 300 magazine covers."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK - Runway star Liam Hart, known for his Calvin Klein underwear campaigns, has signed a deal to become the new face of a Swiss watchmaker, his agency said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is that the girl from the perfume ad? B: Yeah, Sasha Ivanova. She was scouted at a train station in Novosibirsk at fifteen. A: And now she's on every billboard."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"How many shows are you walking this week?\" \"Eleven. Prada, Fendi, and a bunch of smaller ones. My feet are already dead.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Naomi Campbell — Discovered at 15 in London, she became the first Black model on the covers of French and British Vogue."
+   },
+   {
+    "style": "listicle item",
+    "text": "#6 Kenta Arai: the Tokyo runway star who became the first Japanese man to open a Paris menswear show."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know which agency represents Lucía Ferro now? She used to be with IMG and I haven't seen her in campaigns lately."
+   },
+   {
+    "style": "forum question",
+    "text": "How did Twiggy get so famous in the 60s? Was it just the haircut and the photo shoots or was there more to it?"
+   },
+   {
+    "style": "product or event review",
+    "text": "The documentary on Iman's career from Nairobi student to fashion icon to cosmetics founder was polished and inspiring. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to the photo exhibit of 90s supermodel portraits. The Christy Turlington shots by Peter Lindbergh were the best thing there."
+   },
+   {
+    "style": "diary entry",
+    "text": "Third casting today. They measured my hips, took two polaroids, and said 'next.' Mama says even the famous girls got rejected a hundred times, so I'm not giving up."
+   },
+   {
+    "style": "diary entry",
+    "text": "Shot my first catalogue job! Eight outfits, six hours under the lights. The photographer said I have a 'great walk.'"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Gisele Bündchen (born 1980) is a Brazilian model who topped lists of the highest-paid figures in fashion for fifteen years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Anja Rubik (born 1983) is a Polish model and activist who has appeared on the covers of Vogue Paris and Elle."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jean Shrimpton is often called one of the first supermodels, and her photographs defined the look of 1960s London."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Tyra Banks used her fame on the catwalk and in swimsuit magazines to build a career in television and business."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You did your first Fashion Week at sixteen. GUEST: Yeah, I had no idea how to walk in those heels. The casting director basically taught me in the hallway."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...today I'm talking with Amara Diallo, who went from shooting swimwear campaigns in Dakar to walking for Chanel. Amara, what was the scariest runway?"
+   }
+  ],
+  "topic:Monarch": [
+   {
+    "style": "casual social-media post",
+    "text": "Just visited Versailles and honestly Louis XIV had the best interior designer in history. The Hall of Mirrors 😍👑"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Fun fact: King Harald of Norway is the first Norwegian-born king in over 500 years. Learned that on the ferry tour today 🇳🇴"
+   },
+   {
+    "style": "news-wire report",
+    "text": "THIMPHU (Wire) - Bhutan's king led celebrations on Sunday marking his birthday, with thousands gathering in the capital as he announced new land grants for farmers."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BANGKOK - The Thai monarch presided over a royal barge procession on the Chao Phraya River on Thursday, the first held in five years."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Wait, who was Queen Christina? B: Sweden's queen in the 1600s. She gave up the throne and moved to Rome. A: She just quit? B: Yep, converted and left."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Which emperor built that palace?\" \"Emperor Meiji. He moved the court from Kyoto to Tokyo after 1868.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Mansa Musa — The 14th-century ruler of Mali whose pilgrimage to Mecca was so lavish it reportedly crashed the price of gold in Cairo."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Catherine the Great: she seized the Russian throne from her husband and ruled for 34 years."
+   },
+   {
+    "style": "forum question",
+    "text": "Why did Henry VIII break with the Pope? Was it really just about the divorce or was there a financial motive too?"
+   },
+   {
+    "style": "forum question",
+    "text": "Who reigned over Hawaii before Liliuokalani? My textbook skips straight to her overthrow."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Lion of Judah' is a strong biography of Emperor Haile Selassie that covers both his reforms and his blind spots. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The exhibition on Queen Victoria's private letters was charming; you really get a sense of her grief after Albert died."
+   },
+   {
+    "style": "diary entry",
+    "text": "Saw the royal motorcade go past the market today. Everyone waved flags. His Majesty looked older than he does on the money."
+   },
+   {
+    "style": "diary entry",
+    "text": "Mrs. Patel made us memorize every Tudor ruler. Elizabeth I is still my favorite — she never married and reigned for 44 years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Charlemagne (c. 747–814) was King of the Franks and, from 800, the first Holy Roman Emperor."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Sejong the Great (1397–1450) was the fourth king of the Joseon dynasty of Korea and oversaw the creation of the Hangul alphabet."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Louis XVI's weak leadership and the debts of the French crown helped spark the French Revolution."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Queen Isabella of Castile funded Columbus's voyage in 1492, which changed the history of two continents."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Akbar takes the throne at thirteen. GUEST: Thirteen! And within a few years he's ruling most of northern India and inviting scholars of every religion to debate in his court."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...and that's how a sultan who inherited a bankrupt treasury ended up building the Blue Mosque. Next week: his son, and the palace intrigue that followed."
+   }
+  ],
+  "topic:Noble": [
+   {
+    "style": "casual social-media post",
+    "text": "Toured the Duke of Devonshire's estate today, and the gardens at Chatsworth are unreal. Imagine having a library that big at home 📚🏰"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "TIL Ada Lovelace was actually the Countess of Lovelace. An aristocrat writing algorithms in the 1840s. Legend 💻"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Wire) - The 12th Earl of Ashcombe has agreed to sell his family's 18th-century country house to the National Trust, ending 300 years of ownership."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MADRID - Heirs of the Duchess of Alba on Monday opened part of the family's art collection, including works by Goya, to the public for the first time."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: So is Lord Fenwick actually a lord? B: He's a baron. Inherited the title from his uncle along with a leaky castle in Northumberland. A: Glamorous. B: He mostly mends the roof."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Who owned this palazzo?\" \"Count Alessandro Tornaquinci. His family held the title for nine generations.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Prince Felix Yusupov — The Russian aristocrat famous for his enormous family fortune and his flamboyant exile in Paris after 1917."
+   },
+   {
+    "style": "listicle item",
+    "text": "#7 Lady Mary Wortley Montagu: the English noblewoman who brought smallpox inoculation back from Istanbul in 1721."
+   },
+   {
+    "style": "forum question",
+    "text": "How does inheritance of a marquessate work if the marquess only has daughters? Researching the Marquess of Bute line for a family tree."
+   },
+   {
+    "style": "forum question",
+    "text": "Was the Count of Saint-Germain a real aristocrat or a total fraud? Every source I read says something different."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'The Last Duchess' follows Georgiana Cavendish, Duchess of Devonshire, through gambling debts and political salons. Lively and well researched. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The guided tour of Baron von Hohenfels's hunting lodge was great; the guide told juicy stories about his feuds with neighbouring counts."
+   },
+   {
+    "style": "diary entry",
+    "text": "Worked the gala tonight. A real viscountess tipped me twenty pounds and asked where I went to school. Felt like a Jane Austen novel."
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandma says we're descended from a minor French marquis who fled in 1789. No proof, but I like imagining him escaping in a hay cart."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Bess of Hardwick (c. 1527–1608) was an English noblewoman, Countess of Shrewsbury, and one of the wealthiest women of the Elizabethan era."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Count Andrey Razumovsky (1752–1836) was a Russian nobleman and patron of music who lived much of his life in Vienna and commissioned string quartets from Beethoven."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Before the Revolution, French nobles like the Duke of Orléans paid little tax while peasants paid most."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Lord Shaftesbury, an English aristocrat, used his position in society to campaign for laws limiting child labor in factories."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the earl loses the entire estate in one night of cards? GUEST: The house, the horses, the paintings. His son had to marry an American heiress to buy it back."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the duchess was a fascinating figure, a botanist with titles and land who ran her own seed experiments. Let's get into her letters."
+   }
+  ],
+  "topic:OfficeHolder": [
+   {
+    "style": "casual social-media post",
+    "text": "Big congrats to Aunt Denise, who was just sworn in as county treasurer! Four years of balancing the books for 200,000 people starts today 🎉"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our new ambassador to Japan posted her first video speaking fluent Japanese at the embassy. Love to see it 🇯🇵"
+   },
+   {
+    "style": "news-wire report",
+    "text": "OTTAWA (Wire) - Finance Minister Claire Dubois on Wednesday unveiled a budget that cuts small-business taxes and raises spending on child care."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NAIROBI - Kenya's attorney general resigned on Friday after a court ruled that he had failed to disclose his business interests while in office."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's the new secretary of state? B: Rafael Ortiz. He was ambassador to Brazil before. A: Diplomat, then. B: Thirty years in the foreign service."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"What does the comptroller actually do?\" \"She audits every department's spending. Ms. Whitfield caught a $4 million billing error last spring.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Frances Perkins — As U.S. Secretary of Labor from 1933, she was the first woman to serve in a cabinet and helped design Social Security."
+   },
+   {
+    "style": "listicle item",
+    "text": "#6 Lars Eriksen, the Danish environment minister who pushed through the country's offshore wind targets."
+   },
+   {
+    "style": "forum question",
+    "text": "Can a county sheriff be removed from office before the term ends? Ours hasn't shown up to a commission meeting in months."
+   },
+   {
+    "style": "forum question",
+    "text": "Who was the longest-serving chancellor of the exchequer? I think it was Gladstone but I can't confirm the exact years."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the memoir of former foreign minister Ana Lindqvist offers a candid look at treaty negotiations, though it skips her more controversial decisions. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the town hall with our new state treasurer. She answered every question about the pension fund clearly. Impressive first outing."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got the call today: I've been appointed deputy minister of health. Mum cried. I'm terrified and thrilled."
+   },
+   {
+    "style": "diary entry",
+    "text": "Shadowed the district commissioner all day. Six meetings, one flooded road inspection, and a land dispute settled over tea."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Henrik Larsen (born 1961) is a Danish civil servant and politician who served as Minister of Justice from 2011 to 2015."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Alexander Hamilton (1755–1804) was an American statesman who served as the first United States Secretary of the Treasury."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Dean Acheson, as Secretary of State, helped shape the creation of NATO in 1949."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A good public official, like our town's former clerk Mrs. Henderson, keeps records honest and makes government work for ordinary people."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You were labor minister during the strike. What was that week like? GUEST: I slept in my office for five nights. Every hour someone new was on the phone demanding a deal."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the commissioner held that office for eighteen years, longer than anyone before or since. Today we look at how she reshaped the water authority."
+   }
+  ],
+  "topic:Philosopher": [
+   {
+    "style": "casual social-media post",
+    "text": "Reading Simone de Beauvoir on the train and someone asked if I'm okay 😂 Yes, just existentially reevaluating everything."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Seneca really said 'we suffer more in imagination than in reality' 2,000 years ago and it still hits on a Monday morning."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BERLIN (Wire) - German philosopher Jürgen Weiss, known for his writings on democracy and public reason, has died at 94, his publisher said on Friday."
+   },
+   {
+    "style": "news-wire report",
+    "text": "PARIS - The Collège de France on Tuesday elected Moroccan-born thinker Leila Haddad to its chair of moral philosophy, the first woman to hold the post."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Kant ever leave his hometown? B: Basically never. He lived in Königsberg his whole life and walked at the exact same time every day. A: And wrote about the limits of reason. B: Exactly."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Who said 'I think, therefore I am'?\" \"Descartes. He was trying to find one thing he couldn't doubt.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Hypatia of Alexandria — Mathematician and Neoplatonist teacher who lectured on Plato and Aristotle around the year 400."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Confucius: his sayings on family, ritual and good government shaped Chinese society for over two millennia."
+   },
+   {
+    "style": "forum question",
+    "text": "Is it worth reading Wittgenstein's Tractatus before the Investigations? I hear he rejected his own earlier views."
+   },
+   {
+    "style": "forum question",
+    "text": "Can someone explain Hume's problem of induction like I'm five? Why can't we just trust that the sun will rise tomorrow?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the new biography of Spinoza does a great job explaining why he was expelled from Amsterdam's Jewish community for his ideas about God and nature. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Saw Prof. Martha Klein's public lecture on the ethics of AI. Sharp arguments, lots of Aristotle, and she handled hostile questions gracefully."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finished Epictetus tonight. A former slave teaching that only our own judgments are truly in our power. I underlined half the book."
+   },
+   {
+    "style": "diary entry",
+    "text": "Seminar today: we argued about Plato's cave for two hours. Dr. Osei says my objection to the theory of Forms was 'interesting but wrong.'"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "John Locke (1632–1704) was an English philosopher widely regarded as one of the most influential Enlightenment thinkers and the father of liberalism."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Nishida Kitarō (1870–1945) was a Japanese philosopher and founder of the Kyoto School, which sought to combine Zen Buddhist thought with Western philosophy."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Socrates believed that the unexamined life is not worth living, and he questioned the people of Athens until they put him on trial."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "John Stuart Mill argued that people should be free to do as they like unless they harm others."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So Nietzsche declares that God is dead. GUEST: Right, but people miss that he says it with dread. He's worried about what replaces meaning."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...my guest has spent thirty years writing about free will. Let's start simple: do you think you chose to come on this show?"
+   }
+  ],
+  "topic:PlayboyPlaymate": [
+   {
+    "style": "casual social-media post",
+    "text": "Can't believe it's been 30 years since my aunt was Playmate of the Month. She still has the framed cover in her hallway and tells the best stories about the mansion parties 😂"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Former centerfold Dana Whitley now runs a dog rescue in Arizona and honestly her shelter's Instagram is the wholesome content I needed today 🐶"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LOS ANGELES (Wire) - Former Playboy Playmate of the Year Kristen Lowell announced on Monday she is launching a skincare brand, two decades after her magazine debut."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CHICAGO - Jessica Ray, Playboy's Miss October, will host a charity car show this weekend benefiting the children's hospital, organizers said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Wait, she was in Playboy? B: Miss June 1994. Then she acted in a couple of sitcoms. A: I only knew her from the cooking show. B: Yeah, she reinvented herself."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"What was it like when Hef called?\" \"I screamed. Then I flew to LA for the test shoot, and three months later I was the centerfold.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "4. Jenny McCarthy — Named Playmate of the Year in 1994 before becoming a TV host and actress."
+   },
+   {
+    "style": "listicle item",
+    "text": "#2 Pamela Anderson: her first Playboy cover in 1989 launched a career that led to Baywatch."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone have a list of every Playmate of the Month from 1985? Trying to identify a woman in an old signed photo my dad has."
+   },
+   {
+    "style": "forum question",
+    "text": "Which centerfolds from the magazine went on to become actresses? I know about Anna Nicole Smith but who else made the jump?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The memoir of a 1970s Playmate is surprisingly thoughtful about fame, the mansion years, and life after the magazine. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Met three former Playmates at the autograph convention. They were friendly and chatty, though the photo line was way too long."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got the letter today — Playboy wants me for the September issue. Mom isn't thrilled, but she said it's my choice. The shoot is in two weeks."
+   },
+   {
+    "style": "diary entry",
+    "text": "Ran into a former centerfold at the gym; she's in her sixties now and still teaches spin class. She told me the magazine paid for her nursing degree."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Dorothy Stratten (1960–1980) was a Canadian model and actress who was Playboy's Playmate of the Month for August 1979 and Playmate of the Year for 1980."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Shannon Tweed (born 1957) is a Canadian actress and model who was Playboy's Playmate of the Month for November 1981."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Bettie Page, who posed for Playboy in 1955, became one of the most famous pin-up models of the twentieth century."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Many Playboy Playmates later used their fame to start careers in acting, business or television."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You were Miss April and then disappeared from the spotlight. GUEST: I went back to college. The centerfold paid my tuition, and honestly that was the best part."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the playmate who became a pilot. We'll hear how she went from the magazine's pages to flying cargo jets."
+   }
+  ],
+  "topic:Religious": [
+   {
+    "style": "casual social-media post",
+    "text": "Pope Francis washing the feet of prisoners on Holy Thursday is still one of the most humble things I've ever seen. 🙏"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Got to hear Rabbi Miriam Adler speak at the interfaith dinner tonight. Funny, wise, and her Torah commentary had the whole room nodding."
+   },
+   {
+    "style": "news-wire report",
+    "text": "DHARAMSALA (Wire) - The Dalai Lama on Saturday marked his birthday with prayers and a public teaching attended by thousands of monks and pilgrims."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAGOS - Archbishop Emmanuel Adeyemi was installed as head of the Anglican province on Sunday, pledging to focus on youth unemployment and church schools."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's giving the Friday sermon? B: Imam Yusuf. He studied at Al-Azhar in Cairo for six years. A: His sermons are short, at least. B: And always about kindness."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Why do they call her Mother Teresa?\" \"She was a Catholic nun who cared for the dying in Kolkata for decades.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Guru Nanak — The founder of Sikhism, who traveled across South Asia teaching equality and devotion to one God."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Thich Nhat Hanh: the Vietnamese Zen monk who popularized mindfulness in the West."
+   },
+   {
+    "style": "forum question",
+    "text": "What do we actually know historically about Saint Patrick? Was he really from Britain?"
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone read the sermons of Jonathan Edwards? Wondering if 'Sinners in the Hands of an Angry God' is representative of his preaching."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'The Desert Father' is a moving biography of Saint Anthony, the hermit who helped found Christian monasticism. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended a meditation retreat led by Ajahn Somchai, a Thai forest monk. His evening talks on letting go were the best part."
+   },
+   {
+    "style": "diary entry",
+    "text": "Father Michael baptized my niece today. He forgot her middle name halfway through and laughed it off. The whole church laughed with him."
+   },
+   {
+    "style": "diary entry",
+    "text": "Went to the temple with Grandma. The swami blessed us and gave me a marigold. I don't understand all the rituals but I felt calm."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Martin Luther (1483–1546) was a German priest and theologian whose Ninety-five Theses sparked the Protestant Reformation."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Rabia al-Adawiyya (c. 714–801) was a Muslim saint and Sufi mystic from Basra, known for her teaching of selfless love of God."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Desmond Tutu, as an archbishop, used his voice to oppose apartheid and later led the Truth and Reconciliation Commission."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Saint Francis of Assisi gave up his wealth to live in poverty and care for the poor and for animals."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You became a priest at twenty-four. What made you choose that? GUEST: Honestly, a parish priest in my village who never locked the church door. Anyone could come in, anytime."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the abbess ran a monastery, wrote music, and corresponded with popes. Today we're talking about Hildegard of Bingen."
+   }
+  ],
+  "topic:Congressman": [
+   {
+    "style": "casual social-media post",
+    "text": "Rep. Dan Whitaker held a town hall in our tiny high school gym tonight and actually stayed till the last question. That's how you represent a district 👏"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Called my congresswoman's office about the post office closure and a staffer called me back within a day. Rep. Alvarez gets it done."
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (Wire) - Rep. Thomas Greer, a Republican from Ohio's 9th District, said on Tuesday he will not seek a sixth term in the House of Representatives."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SACRAMENTO - Democratic Representative Lisa Huang won her primary on Tuesday, setting up a rematch for the House seat she narrowly won two years ago."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who represents us in the House now? B: Marcus Bell, since the special election. A: The former county prosecutor? B: That's him. He's on the Agriculture Committee."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Did the congressman vote for the highway bill?\" \"Yes, after they added the bridge funding for his district.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Shirley Chisholm — In 1968 she became the first Black woman elected to the U.S. Congress, representing Brooklyn."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 John Lewis: the civil rights leader who represented Georgia's 5th district in the House for 33 years."
+   },
+   {
+    "style": "forum question",
+    "text": "How do I find out how my representative voted on the farm bill? Rep. Harlan's website only lists press releases."
+   },
+   {
+    "style": "forum question",
+    "text": "Why does Pete Delgado keep winning his House seat every two years despite all the scandals? Is his district just that safe?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the memoir by former Rep. Joan Mercer about her twelve years on Capitol Hill is candid about fundraising pressure. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The debate between the two House candidates was lively. Incumbent Rep. Okafor came prepared with district numbers; his challenger mostly read talking points."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interned in Rep. Castillo's office today. Answered 80 constituent calls about the dam project. She stopped by and thanked every intern by name."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dad met our congressman at the county fair today and pitched him the irrigation problem for five minutes. He actually took notes."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Samuel Rayburn (1882–1961) was an American politician who represented Texas's 4th congressional district from 1913 until his death and served as Speaker of the House."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Linda Pérez (born 1970) is an American politician serving as the U.S. representative for New Mexico's 2nd congressional district since 2019."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "House members serve two-year terms, so a representative like Barney Frank had to campaign constantly to keep his seat."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jeannette Rankin of Montana was the first woman elected to the U.S. House of Representatives, in 1916."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You served five terms in the House. What surprised you most? GUEST: How much of the job is casework. Veterans' benefits, lost passports. That's what constituents remember."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the freshman congresswoman from Michigan joins us after her first hundred days. Let's talk about her committee assignments."
+   }
+  ],
+  "topic:Governor": [
+   {
+    "style": "casual social-media post",
+    "text": "Gov. Hannah Price just signed the school lunch bill and handed the pen to a third grader. Cutest bill signing ever 🖊️"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our governor declared a state of emergency for the wildfire and showed up at the evacuation center in person. Respect."
+   },
+   {
+    "style": "news-wire report",
+    "text": "AUSTIN (Wire) - Gov. Raymond Cole on Wednesday called a special session of the state legislature to address property tax relief."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LAGOS - Babajide Olawale, who heads the Lagos State government, inaugurated a new light-rail line on Monday, promising to cut commuting times by half."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did Gov. Pryor veto the gun-storage bill? B: Vetoed it this morning. A: Can the legislature override? B: They'd need two-thirds, and they're three votes short."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Who's running the statehouse now?\" \"Ellis. Former sheriff, won the top job in the state by four points last November.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Ann Richards — The sharp-tongued Texas governor of the early 1990s who appointed record numbers of women and minorities."
+   },
+   {
+    "style": "listicle item",
+    "text": "#8 Huey Long: the populist Louisiana governor who built roads, bridges and free textbook programs in the 1920s."
+   },
+   {
+    "style": "forum question",
+    "text": "Can a state's chief executive pardon someone convicted of a federal crime? Gov. Brandt keeps talking about clemency for a guy in federal prison."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know why Gov. Mitchell's budget cut funding for state parks? Our local trail is closing and nobody can explain it."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The biography of former Gov. Thomas Kean of New Jersey covers his environmental record well, but skims over his education reforms. 3.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the gubernatorial debate last night. Incumbent Gov. Ruiz was calm and detailed; the challenger kept dodging the budget question."
+   },
+   {
+    "style": "diary entry",
+    "text": "The governor visited our flooded town today. She waded through the water with the fire chief and promised state aid. I hope she means it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got a letter from the statehouse congratulating me on Eagle Scout. Signed by Gov. Takahashi himself! Framing it."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Earl Warren (1891–1974) served as the 30th Governor of California from 1943 to 1953."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Maria Chen (born 1966) is an American politician who has served as Governor of Oregon since 2021."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "As governor of New York, Franklin Roosevelt tested relief programs for the unemployed during the early Depression years."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jerry Brown, who led California for four terms in two separate eras, used his control of the state budget to rebuild its finances."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You ran a state of nine million people for eight years. GUEST: And every morning started with the budget director telling me what we couldn't afford."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the governor's emergency order during the hurricane is still debated. Today we hear from her chief of staff about those 72 hours."
+   }
+  ],
+  "topic:Mayor": [
+   {
+    "style": "casual social-media post",
+    "text": "Mayor Rosa Delgado just rode the new bike lane to city hall in a suit and helmet. Love a leader who tests her own policies 🚲"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Our town's mayor is a retired dentist who personally shovels the library steps every snowfall. Small town life ❄️"
+   },
+   {
+    "style": "news-wire report",
+    "text": "CHICAGO (Wire) - Mayor Daniel Kim on Monday unveiled a $1.2 billion plan to replace lead water pipes across the city within ten years."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LYON - Claire Fontaine, head of Lyon's city hall, announced on Thursday that the city center will be closed to cars on the first Sunday of every month."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's cutting the ribbon on the new park? B: Haines, obviously. A: Wasn't he a high school coach before city hall? B: Twenty years. Still blows a whistle at council meetings."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Did the mayor approve the food-truck permits?\" \"She signed them this morning. Downtown gets twelve new trucks by summer.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Fiorello La Guardia — New York's beloved 1930s mayor who read the comics on the radio during a newspaper strike."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Edi Rama: as head of Tirana's city government, he painted the capital's drab apartment blocks in bright colors."
+   },
+   {
+    "style": "forum question",
+    "text": "How much power does a mayor actually have in a council-manager city? Ours keeps promising things the city manager says she can't deliver."
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know when Bjornsen's term at city hall ends? I want to ask about the parking garage before the next municipal election."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the documentary about Ayesha Karim's first year running Bradford's city hall is charming, especially the scenes of her answering residents' complaints in person. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Attended the State of the City address. Ortega's speech was upbeat but light on how she'll fund the new transit line."
+   },
+   {
+    "style": "diary entry",
+    "text": "The mayor came to our school today to plant a tree for Earth Day. He let me hold the shovel. Then it started raining and everyone ran."
+   },
+   {
+    "style": "diary entry",
+    "text": "Council meeting ran until 11. Petrov, presiding from the big chair, finally broke the tie on the dog park. Victory for the neighborhood!"
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Anne Hidalgo (born 1959) is a French politician who has served as Mayor of Paris since 2014."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Thomas Bradley (1917–1998) was an American politician who served as the 38th mayor of Los Angeles from 1973 to 1993."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jaime Lerner transformed Curitiba in Brazil from city hall by building one of the world's first bus rapid transit systems."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Joseph Riley, who led Charleston's city government for forty years, showed how one local leader can shape a community for generations."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You ran a town of eight thousand people. What's the job actually like? GUEST: Potholes, dogs and the Christmas parade. Ninety percent of my calls were about potholes."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...after the hurricane, the mayor slept at the fire station for a week. Today she joins us to talk about rebuilding the waterfront."
+   }
+  ],
+  "topic:MemberOfParliament": [
+   {
+    "style": "casual social-media post",
+    "text": "Our MP Sarah Whitcombe turned up at the food bank this morning and packed boxes for three hours. No cameras, just graft 👏"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just had a surgery appointment with my local MP about the bus cuts. She actually listened and promised to raise it in the Commons."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Wire) - Labour MP James Thornton was appointed shadow transport secretary on Monday after a reshuffle of the opposition front bench."
+   },
+   {
+    "style": "news-wire report",
+    "text": "OTTAWA - New Democrat MP Priya Sandhu introduced a private member's bill on Tuesday to cap prices on basic grocery items."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Gareth still our MP? B: Lost his seat by 312 votes in the election. A: Wow. B: The new one's a former nurse from the next town over."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"What did you ask the member at question time?\" \"Why the rural clinic is closing. He promised a written answer from the health minister.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Nancy Astor — The first woman to take her seat in the British House of Commons, in 1919."
+   },
+   {
+    "style": "listicle item",
+    "text": "#6 Dennis Skinner: the 'Beast of Bolsover', who sat in the Commons for 49 years and rarely missed a vote."
+   },
+   {
+    "style": "forum question",
+    "text": "How do I contact my MP about a visa delay? Do I write to their constituency office or the Westminster address?"
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone know why our member for Bendigo crossed the floor on the climate bill? I thought she always voted with her party."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the diaries of backbencher Chris Mullin are funny, sad and brutally honest about life in Westminster. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The constituency hustings at the church hall were well run. The sitting member knew every local issue; the newcomers mostly read from leaflets."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent the day shadowing our MP at Westminster. Sat in the gallery for a debate on fishing quotas and she winked at me from the benches."
+   },
+   {
+    "style": "diary entry",
+    "text": "Election night. Dad won the seat for our riding by 900 votes. He's going to Parliament in Ottawa. I can't believe it."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Tom Harrington (born 1972) is a British Conservative Party politician who has been the Member of Parliament for North Wiltshire since 2015."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Shashi Menon (born 1958) is an Indian politician who represents Thiruvananthapuram in the Lok Sabha, the lower house of Parliament."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "William Wilberforce used his seat in the House of Commons to campaign for the abolition of the slave trade."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A member of parliament must balance the views of their constituents with the policies of their party."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You were an MP for fourteen years. What's the reality of constituency work? GUEST: Friday surgeries in a draughty library, housing cases, immigration letters. That's the real job."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the newly elected member for Glasgow North joins us. You were a teacher two months ago — how's your first week in the chamber been?"
+   }
+  ],
+  "topic:President": [
+   {
+    "style": "casual social-media post",
+    "text": "Just toured the Lincoln Memorial at night. Reading the Gettysburg Address carved in stone hits different 🇺🇸"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Ghana's president dancing at the independence day parade is the best thing on my timeline today 😂🇬🇭"
+   },
+   {
+    "style": "news-wire report",
+    "text": "BUENOS AIRES (Wire) - President Mariana Ruiz on Tuesday announced a new trade agreement with Chile during a state visit to Santiago."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SEOUL - South Korea's president met business leaders on Thursday to discuss semiconductor exports, his office said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who led Kenya first after independence? B: Jomo Kenyatta. A: And his son ran the country too? B: Yep, Uhuru, decades later."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Did the president sign the bill?\" \"He vetoed it this morning and sent it back to the legislature.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. George Washington — He set the two-term precedent by stepping down voluntarily in 1797."
+   },
+   {
+    "style": "listicle item",
+    "text": "#3 Nelson Mandela: after 27 years in prison, he became South Africa's first democratically elected head of state in 1994."
+   },
+   {
+    "style": "forum question",
+    "text": "Why did Abraham Lincoln suspend habeas corpus during the Civil War? Was it even legal?"
+   },
+   {
+    "style": "forum question",
+    "text": "Which U.S. president served the shortest term? I think it was William Henry Harrison but I want to confirm."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'The Path to Power' is the definitive look at Lyndon Johnson's early career before the White House. Long, but worth every page. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Toured the Truman Library last weekend. The replica Oval Office and 'The Buck Stops Here' sign were the highlights."
+   },
+   {
+    "style": "diary entry",
+    "text": "We saw the presidential motorcade drive past school today. Twenty black cars. Everyone ran to the fence to wave."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched the inaugural address with Grandpa. He said he remembers Kennedy's in 1961, the cold and the hat."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Václav Havel (1936–2011) was a Czech playwright and dissident who served as the last president of Czechoslovakia and the first president of the Czech Republic."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Ellen Johnson Sirleaf (born 1938) served as the 24th President of Liberia from 2006 to 2018, the first elected female head of state in Africa."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Franklin D. Roosevelt led the United States through the Great Depression and most of World War II from the White House."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Thomas Jefferson's purchase of Louisiana from France doubled the size of the young nation."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Eisenhower warns about the military-industrial complex in his farewell address. GUEST: And remember, he gives that warning on his way out of the White House, with nothing left to gain."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...after the break we'll look at how the president used the radio fireside chats to calm a frightened nation."
+   }
+  ],
+  "topic:PrimeMinister": [
+   {
+    "style": "casual social-media post",
+    "text": "Jacinda Ardern bringing her baby to the UN General Assembly is still such an iconic moment 🍼"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "The PM just did a Q&A on a livestream and answered my question about student loans! Ok I'm a bit starstruck 😅"
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (Wire) - Prime Minister Hiroshi Kato on Friday unveiled a stimulus package worth 20 trillion yen aimed at boosting wages and consumer spending."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CANBERRA - Australia's prime minister said on Wednesday she would call an early election for November after her budget passed."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who was PM during the Falklands War? B: Margaret Thatcher. A: Right, the Iron Lady. B: Won a landslide the next year."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Is the prime minister at Downing Street today?\" \"No, she's flying back from Brussels after the summit.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Winston Churchill — The wartime leader whose radio speeches from Downing Street rallied Britain in 1940."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Indira Gandhi: India's first and only female prime minister, who led the country for 15 years."
+   },
+   {
+    "style": "forum question",
+    "text": "Can a ruling party just replace its leader and get a new PM without an election? Like what happened to Kevin Rudd?"
+   },
+   {
+    "style": "forum question",
+    "text": "Who was Canada's longest-serving PM? I think Mackenzie King, but my teacher says Trudeau senior."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: the new biography of Clement Attlee shows how a quiet man in Number 10 built the welfare state and the NHS. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Watched the documentary on David Ben-Gurion's years as Israel's first head of government. Rich archive footage, slow middle section."
+   },
+   {
+    "style": "diary entry",
+    "text": "The prime minister visited our factory today. She shook hands down the line and asked me how long I'd worked there. Eleven years, I said."
+   },
+   {
+    "style": "diary entry",
+    "text": "Election results came in at 3 a.m. — Mum's party leader is going to be the new PM. She opened the champagne she'd been saving since 2015."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Lee Kuan Yew (1923–2015) was a Singaporean statesman who served as the first prime minister of Singapore from 1959 to 1990."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Golda Meir (1898–1978) was an Israeli politician who served as the fourth prime minister of Israel from 1969 to 1974."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "As head of government, Pierre Trudeau brought home Canada's constitution and added the Charter of Rights and Freedoms."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Robert Walpole is generally considered Britain's first premier, leading the government from 1721 to 1742."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So he moves into Number 10 at 43, the youngest in a century. GUEST: And within six months he's dealing with a currency crisis nobody saw coming."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...that cabinet reshuffle has gone down in history as the 'Night of the Long Knives' — Harold Macmillan fired a third of his ministers in one evening."
+   }
+  ],
+  "topic:Senator": [
+   {
+    "style": "casual social-media post",
+    "text": "Sen. Patricia Holm just did a 12-hour filibuster in sneakers. Whatever you think of the bill, that's stamina 👟"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Met our senator at the county fair! Tried to talk about broadband and she ended up judging the pie contest with me 🥧"
+   },
+   {
+    "style": "news-wire report",
+    "text": "WASHINGTON (Wire) - Sen. Robert Ames, a Democrat from Vermont, said on Thursday he would introduce legislation to expand rural broadband."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MANILA - Philippine Senator Grace Tolentino on Monday filed a bill to raise teachers' salaries by 30 percent over three years."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Whitfield running again? B: Seventh term, can you believe it? A: He's been in the Senate since I was in diapers. B: Since your mom was."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"What committee does she chair?\" \"Senate Foreign Relations. She's been grilling every ambassador nominee for weeks.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Margaret Chase Smith — The Maine senator who in 1950 delivered the 'Declaration of Conscience' speech against McCarthyism."
+   },
+   {
+    "style": "listicle item",
+    "text": "#7 Daniel Inouye: the decorated war veteran who represented Hawaii in the U.S. Senate for nearly 50 years."
+   },
+   {
+    "style": "forum question",
+    "text": "How does the filibuster actually work now? Does Sen. Moreno have to keep talking on the floor or just announce it?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why do small states get two Senate seats just like California? Asking for a civics paper on Sen. Howell's comments."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Ted Kennedy's memoir 'True Compass' is warm and revealing about his decades in the Senate. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The town hall with Sen. Daniels was surprisingly substantive. He stayed an extra hour answering questions about veterans' care."
+   },
+   {
+    "style": "diary entry",
+    "text": "Interned in Sen. Abernathy's office today. Sorted 400 letters about the pipeline. She read the angry ones out loud at lunch."
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandma met the senator at the diner this morning and told him exactly what she thinks of the farm subsidies. He took it well."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Henry Clay (1777–1852) was an American statesman and senator from Kentucky known as 'the Great Compromiser'."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Elena Ruiz (born 1964) is an American politician serving as the junior United States senator from Arizona since 2019."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Robert Byrd of West Virginia served in the Senate for more than 51 years, longer than anyone before him."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Cicero, the famous Roman senator, defended the Republic with speeches that are still studied today."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You served two terms in the Senate. What's the biggest myth about it? GUEST: That we're all debating. Most days the chamber's empty and the real work happens in committee."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Strom Thurmond's 24-hour speech against the 1957 Civil Rights Act remains the longest by a single senator. Today we ask what it achieved."
+   }
+  ],
+  "topic:RadioHost": [
+   {
+    "style": "casual social-media post",
+    "text": "Woke up to Danny Walsh on the breakfast show doing his fake traffic reports again 😂 Morning radio is undefeated."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "RIP to the voice of my childhood car rides. Mike 'The Owl' Carter hosted the late-night call-in show for 35 years 📻"
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON (Wire) - Veteran broadcaster Sue Pemberton will present her final Radio 2 afternoon show on Friday after 28 years on air, the BBC said."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TORONTO - Morning radio host Jamal Price raised $1.4 million for the children's hospital during a 48-hour live broadcast that ended on Sunday."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you call in to Lisa's show this morning? B: Yeah! I got through on the second ring and she played my song request. A: She's the best DJ on that station."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"How long have you been on the overnight slot?\" \"Nine years. Just me, a microphone, and the truck drivers calling in at 3 a.m.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Casey Kasem — The voice behind 'American Top 40', who counted down the hits every week for decades."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 John Peel: the BBC DJ who championed punk, reggae and hundreds of unknown bands on his late-night program."
+   },
+   {
+    "style": "forum question",
+    "text": "Does anyone remember the sports talk guy on WFAN in the 90s whose catchphrase was 'You're on the air, make it count'? Can't recall his name."
+   },
+   {
+    "style": "forum question",
+    "text": "Is Terry Gross's interview archive available anywhere for free? I love her Fresh Air conversations."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The memoir of morning-drive legend Big Al Morales is full of great backstage stories from 40 years in the studio. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a live broadcast of Carmen Lee's Saturday jazz program. She chatted with the crowd between records like we were old friends."
+   },
+   {
+    "style": "diary entry",
+    "text": "Finally got to sit in the studio during Tom's drive-time show. He let me read the weather on air. My voice shook but I did it!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Listened to Marguerite's farewell broadcast tonight. She's been on the local station since before I was born. Felt like losing a neighbor."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Wolfman Jack (1938–1995) was an American disc jockey famous for his gravelly voice and his broadcasts from Mexican border stations."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Noel Kearney (born 1960) is an Irish radio presenter who hosted RTÉ Radio 1's morning programme from 1998 to 2020."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Garrison Keillor's radio show 'A Prairie Home Companion' made a fictional Minnesota town feel real to millions of listeners."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "A good radio host, like my local station's morning presenter, can make listeners feel like they are part of a community."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You did twenty years in FM radio before switching to podcasts. GUEST: Yeah, and I still instinctively talk up to the vocal on every intro. Old DJ habits."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...she started as a call screener at nineteen and ended up hosting the number-one afternoon show in the city. Let's hear how."
+   }
+  ],
+  "topic:FormulaOneRacer": [
+   {
+    "style": "casual social-media post",
+    "text": "Lewis Hamilton passing three cars on the last lap at Silverstone 🔥🏎️ I was screaming at the TV."
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My kid met Lando Norris in the Austin paddock and he signed her cap. She's not taking it off ever again."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MONZA (Wire) - Ferrari driver Carlos Sainz took pole position for the Italian Grand Prix on Saturday, edging his teammate by 0.08 seconds."
+   },
+   {
+    "style": "news-wire report",
+    "text": "MONACO - Dutch driver Max Verstappen won the Monaco Grand Prix on Sunday, extending his lead in the world championship to 41 points."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Did you watch qualifying? B: Leclerc crashed at the swimming pool chicane again. A: Poor guy can't catch a break at home. B: He'll start from the back tomorrow."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Who's the new driver at Williams?\" \"Some 19-year-old from Argentina who won Formula 2 last year. Apparently he's super quick in the wet.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Ayrton Senna — Three-time world champion whose rain-soaked drive at Donington in 1993 is still called the greatest opening lap ever."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Niki Lauda: returned to racing just six weeks after a near-fatal crash at the Nürburgring in 1976."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Michael Schumacher really the best ever or did Ferrari just give him the best car? Seven titles is a lot either way."
+   },
+   {
+    "style": "forum question",
+    "text": "How does Fernando Alonso keep his reflexes sharp past 40? Does he follow a special training routine between Grands Prix?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The doc on Kimi Räikkönen's Lotus years is hilarious. His radio messages alone ('Leave me alone, I know what I'm doing') deserve an award."
+   },
+   {
+    "style": "product or event review",
+    "text": "The film 'Rush' nails the rivalry between James Hunt and Niki Lauda in the 1976 title fight. Great racing scenes. 4.5/5."
+   },
+   {
+    "style": "diary entry",
+    "text": "Silverstone! Watched the grid from the grandstand and saw Russell's Mercedes fire up. The noise went straight through my chest."
+   },
+   {
+    "style": "diary entry",
+    "text": "Dad finally took me to the Belgian Grand Prix. Our favorite driver qualified sixth and finished on the podium after the rain came. Best day ever."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Juan Manuel Fangio (1911–1995) was an Argentine racing driver who won the Formula One World Drivers' Championship five times in the 1950s."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Valtteri Bottas (born 1989) is a Finnish racing driver who competed in Formula One for Williams, Mercedes and Sauber, winning ten Grands Prix."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Jackie Stewart used his fame as a Formula One champion to campaign for safer tracks, better helmets and proper medical care."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Lella Lombardi remains the only woman to score championship points in a Formula One race, at the 1975 Spanish Grand Prix."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You drove for Minardi in 2003. What was it like being at the back? GUEST: You're racing your teammate and the blue flags. Every lap a leader is coming up behind you."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Jenson Button's win in Canada in 2011 — six pit stops, a drive-through penalty, dead last, and he still takes the lead on the final lap."
+   }
+  ],
+  "topic:NascarDriver": [
+   {
+    "style": "casual social-media post",
+    "text": "Chase Elliott sweeping the field at Talladega today 🏁 Daytona can't come fast enough!!"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just watched my first NASCAR race at Bristol. Dale Jr. merch everywhere and the noise was insane 😂🔊"
+   },
+   {
+    "style": "news-wire report",
+    "text": "DAYTONA BEACH, Fla. (Wire) - Denny Hamlin won the Daytona 500 on Sunday, edging out Kyle Busch in a photo finish to claim another victory in the Great American Race."
+   },
+   {
+    "style": "news-wire report",
+    "text": "CHARLOTTE, N.C. - Rookie stock car driver Cody Bishop finished third in the Coca-Cola 600 on Sunday, the best result for his small family-owned team."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who you rooting for at Martinsville? B: Logano, always. A: The short track suits him. B: He'll bump anyone to get to the front."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"How'd your boy do at Charlotte?\" \"Wrecked on lap 212. Got loose in turn four and took out half the pack.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Richard Petty — 'The King' won 200 Cup Series races and seven championships."
+   },
+   {
+    "style": "listicle item",
+    "text": "#3 Wendell Scott: the first Black driver to win a race in NASCAR's top series, in 1963."
+   },
+   {
+    "style": "forum question",
+    "text": "Was Dale Earnhardt Sr. really as aggressive as everyone says, or did the 'Intimidator' nickname come from one race?"
+   },
+   {
+    "style": "forum question",
+    "text": "Anyone know which team Bubba Wallace is driving for next season? Hoping he stays in the 23 car."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Jeff Gordon's autobiography is a great read on his rise from sprint cars to four Cup titles. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to Kyle Larson's autograph session at the speedway fan zone. Long line, but he signed everything and posed for photos."
+   },
+   {
+    "style": "diary entry",
+    "text": "Pit crew tryout today. The crew chief for the 48 car timed me on tire changes. 13 seconds. Need to get it under 12."
+   },
+   {
+    "style": "diary entry",
+    "text": "Watched Grandpa's old tapes of Cale Yarborough at Darlington. He says he sat in turn three every year in the 70s."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Jimmie Johnson (born 1975) is an American racing driver who won seven NASCAR Cup Series championships, including five consecutive titles from 2006 to 2010."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Tony Stewart (born 1971) is an American former stock car driver and team owner who won three Cup Series championships."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Stock car racing began with moonshine runners, and drivers like Junior Johnson turned those skills into a professional career."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Danica Patrick showed that women could compete in NASCAR, earning pole position at the 2013 Daytona 500."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You ran 600 miles at Charlotte in a car with no air conditioning. GUEST: Lost eight pounds that night. Cockpit hit 140 degrees, and you still have to hit your marks at 190 mph."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...after the break, the story of how Rusty Wallace drafted his way past three cars on the last lap at Talladega."
+   }
+  ],
+  "topic:Entomologist": [
+   {
+    "style": "casual social-media post",
+    "text": "Dr. Mia Torres just found a new species of ant in her backyard in Panama and named it after her grandmother 🐜😍"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "My favorite bug scientist on TikTok explaining why moths circle lamps. 10/10 content, 0 jargon."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NAIROBI (Wire) - Kenyan entomologist Dr. Samuel Kiprono received an international award on Wednesday for his research on mosquito-repellent crops."
+   },
+   {
+    "style": "news-wire report",
+    "text": "SYDNEY - A University of Queensland entomologist has identified 12 new species of stick insect in the rainforests of Far North Queensland, the university said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: What does your uncle study again? B: Bees. Specifically how pesticides affect their memory. A: That's a thing? B: Yeah, he trains them to find sugar water in mazes."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Why are you crawling in the grass?\" \"I'm counting beetles. Dr. Ito wants a full insect survey of this meadow by Friday.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Maria Sibylla Merian — A 17th-century naturalist and artist who documented butterfly metamorphosis in Suriname."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 E. O. Wilson: the Harvard ant expert whose studies of insect societies founded the field of sociobiology."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone read Jean-Henri Fabre's 'Souvenirs Entomologiques'? Is there a good English translation?"
+   },
+   {
+    "style": "forum question",
+    "text": "Looking for the email of Prof. Larsen, the beetle specialist at Lund. I found a weird specimen in my garden and want an ID."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Six-Legged Wonders' by Dr. Anika Patel is a delightful look at her decades studying dragonflies. The photos are stunning. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "The museum's talk by Dr. Kenji Mori on termite mound architecture was fascinating; he even brought a live colony in a glass box."
+   },
+   {
+    "style": "diary entry",
+    "text": "Spent all day in the rainforest with Dr. Okeke setting up light traps. By midnight we had 400 moths and I'd been bitten by everything else."
+   },
+   {
+    "style": "diary entry",
+    "text": "Prof. Hartley let me pin my first butterfly specimen today. My hands shook. She said hers did the same in 1978."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Charles Valentine Riley (1843–1895) was a British-born American entomologist known for his work on controlling the grape phylloxera."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Karl von Frisch (1886–1982) was an Austrian zoologist who decoded the waggle dance of honeybees and shared the Nobel Prize in 1973."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Miriam Rothschild, an expert on fleas, discovered how they jump and wrote hundreds of papers on insects and their parasites."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Thomas Say, often called the father of American entomology, described more than a thousand new insect species in the 1800s."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've spent thirty years studying fireflies. Why? GUEST: Because each species has its own flash code, and I wanted to learn the language."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...today's guest has catalogued more than two thousand species of parasitic wasps. Let's start with the one she named after her cat."
+   }
+  ],
+  "topic:Medician": [
+   {
+    "style": "casual social-media post",
+    "text": "Dr. Amara Okoye stayed three hours after her shift to make sure my dad's surgery went well. Doctors like her are why I believe in medicine 💙"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "TIL Dr. Virginia Apgar invented the newborn score every baby gets in the first minute of life. Absolute icon 👶"
+   },
+   {
+    "style": "news-wire report",
+    "text": "GENEVA (Wire) - Ugandan physician Dr. Jane Kibuuka was awarded a global health prize on Monday for her work reducing maternal deaths in rural clinics."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BOSTON - Dr. Peter Lang, a cardiologist at Massachusetts General Hospital, has developed a blood test that predicts heart attacks up to five years ahead, researchers said."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Who's your new GP? B: Dr. Hussain at the Elm Street practice. A: Is she good? B: She actually listened to me for fifteen minutes. That's rare."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Which surgeon did the transplant?\" \"Dr. Christiaan Barnard. First human heart transplant, Cape Town, 1967.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. Hippocrates — The Greek physician whose oath still shapes medical ethics 2,400 years later."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Ignaz Semmelweis: the Hungarian obstetrician who insisted that doctors wash their hands, and was mocked for it."
+   },
+   {
+    "style": "forum question",
+    "text": "Has anyone seen Dr. Patel at the Riverside cardiology clinic? I've been referred and want to know what to expect."
+   },
+   {
+    "style": "forum question",
+    "text": "Why was John Snow's cholera map so important? Our professor keeps calling him the father of epidemiology."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: Atul Gawande's 'Being Mortal' is a surgeon's honest reflection on how medicine fails the dying. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Dr. Moreau at the downtown pediatric practice is wonderful. She explained everything to my daughter in simple words. Five stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Night shift in the ER. Dr. Brennan ran three codes back to back and still asked how I was holding up. I want to be like her."
+   },
+   {
+    "style": "diary entry",
+    "text": "Grandpa's doctor told us today the treatment is working. Dr. Lindqvist has been seeing him for twenty years."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Avicenna (c. 980–1037) was a Persian physician whose 'Canon of Medicine' remained a standard medical text in Europe and the Islamic world for centuries."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "Elizabeth Blackwell (1821–1910) was the first woman to receive a medical degree in the United States."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Edward Jenner, an English country doctor, developed the first vaccine by using cowpox to protect against smallpox."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Paul Farmer showed that good medical care can reach even the poorest villages, treating patients in rural Haiti for decades."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: You've been a family doctor in the same small town for thirty years. GUEST: I've delivered babies whose grandparents I treated. That's the job."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...Richard Doll, the doctor who first linked smoking to lung cancer, faced enormous pushback. After the break, how his study changed public health."
+   }
+  ],
+  "topic:BaseballLeague": [
+   {
+    "style": "casual social-media post",
+    "text": "The Pioneer League's opening night in Montana was pure small-town baseball magic. $8 tickets and the best hot dogs ever ⚾"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Just found out the KBO in Korea treats bat flips like an art form. Korean pro baseball highlights are my new obsession 😂"
+   },
+   {
+    "style": "news-wire report",
+    "text": "TOKYO (Wire) - Nippon Professional Baseball announced on Tuesday that it will expand from 12 to 14 teams by 2028, adding franchises in Shizuoka and Okinawa."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK - Major League Baseball and the players' union agreed on Thursday to a new five-year labor deal that raises the minimum salary for every club's roster."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the Cape Cod League any good? B: It's where top college players spend the summer. Half the guys end up in the majors. A: Free games too? B: Free, by the sea."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Which circuit does your town's team play in?\" \"The Atlantic League. Independent, so no major-league affiliate, but the crowds are great.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "3. Negro National League — Founded in 1920 by Rube Foster, it gave Black players a professional stage when the majors excluded them."
+   },
+   {
+    "style": "listicle item",
+    "text": "#6 The Mexican League: one of the oldest pro baseball circuits in Latin America, with teams from Tijuana to Yucatán."
+   },
+   {
+    "style": "forum question",
+    "text": "How does the Dutch Honkbal Hoofdklasse work? Can the bottom team get relegated to a lower division?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the Federal League only last two seasons in 1914-1915? I'm reading about the old Chicago ballpark that became Wrigley Field."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The documentary on the All-American Girls Professional Baseball League is wonderful, full of interviews with women who played in the 1940s. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to an Australian Baseball League game in Brisbane — tiny stadium but great atmosphere and cheap beer. 4 stars."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our summer collegiate season finished tonight. We lost the championship 3-2, but a scout from the minors came up to me after the game!"
+   },
+   {
+    "style": "diary entry",
+    "text": "Little League season started today. I played second base and got one hit. Coach says we might make the district playoffs."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Pacific Coast League is a Minor League Baseball circuit operating in the western United States, founded in 1903."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Cuban National Series is the primary domestic baseball competition in Cuba, established in 1961 after professional play was abolished."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The American League was founded in 1901 and soon challenged the older National League for fans and players."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "Taiwan's CPBL helped turn baseball into a national passion, despite match-fixing scandals in its early seasons."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: So the Northern League in the 90s had no MLB affiliation at all. GUEST: Totally independent. Darryl Strawberry played there on his way back. It was the wild west."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Dominican winter league crowns its champion this week, and that team heads to the Caribbean Series in February. Let's break down the playoff rotation."
+   }
+  ],
+  "topic:BasketballLeague": [
+   {
+    "style": "casual social-media post",
+    "text": "The WNBA All-Star game was the most fun basketball I've watched all year 🏀🔥"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Spending my Saturday watching EuroLeague highlights. Real Madrid vs Fenerbahçe was ridiculous."
+   },
+   {
+    "style": "news-wire report",
+    "text": "BEIJING (Wire) - The Chinese Basketball Association said on Monday its 20-team league will add a play-in tournament next season to give more clubs a playoff shot."
+   },
+   {
+    "style": "news-wire report",
+    "text": "NEW YORK - The NBA on Wednesday finalized a new media rights deal worth $76 billion over 11 years, the largest in the league's history."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the G League worth watching? B: It's the NBA's development league. Lots of future starters. A: Cheaper tickets too. B: Way cheaper."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Where are you playing this year?\" \"Liga ACB in Spain. My contract with Valencia came through yesterday.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. The ABA — The 1967–76 rival league with the red, white and blue ball and the first slam dunk contest."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Australia's NBL: home to the Next Stars program that sends young prospects straight to the NBA draft."
+   },
+   {
+    "style": "forum question",
+    "text": "How does relegation work in the Greek Basket League? Does the bottom team go straight down?"
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the BAA and NBL merge in 1949 to form the NBA? Was it just about money?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: 'Loose Balls' is a hilarious oral history of the American Basketball Association and its crazy owners. 5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a Philippine Basketball Association game in Manila — the crowd noise was unbelievable, best sports atmosphere I've experienced."
+   },
+   {
+    "style": "diary entry",
+    "text": "City rec hoops finals tonight. We won by four and I hit the last free throws. Pizza on the coach."
+   },
+   {
+    "style": "diary entry",
+    "text": "Signed with a team in the Japanese B.League today. Moving to Osaka next month. I don't know a word of Japanese yet."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Women's National Basketball Association (WNBA) is a professional basketball league in the United States, founded in 1996."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Lega Basket Serie A is the top professional basketball division in Italy, first contested in 1920."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Basketball Bundesliga in Germany grew rapidly after Dirk Nowitzki's success inspired a new generation of players."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The NBA became a global league when its teams began signing stars from Europe, Africa and Asia in the 1990s."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: The Big3 is a three-on-three league for retired pros. GUEST: Right, Ice Cube started it. Half-court, four-point shots, and it's way more competitive than people expect."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...after the break, we'll break down the Basketball Africa League final and why the champions are drawing NBA scouts."
+   }
+  ],
+  "topic:IceHockeyLeague": [
+   {
+    "style": "casual social-media post",
+    "text": "KHL highlights at 2am because I can't sleep. Russian hockey is just different 🏒"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "First ECHL game tonight with my kids! $15 seats, a chuck-a-puck contest and a goalie fight. 10/10 🥅"
+   },
+   {
+    "style": "news-wire report",
+    "text": "STOCKHOLM (Wire) - The Swedish Hockey League said on Tuesday it will expand to 16 teams next season, promoting the champions of the second-tier HockeyAllsvenskan."
+   },
+   {
+    "style": "news-wire report",
+    "text": "TORONTO - The Professional Women's Hockey League announced on Monday that it will add two expansion teams, in Vancouver and Seattle, for next season."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is the AHL the same as the NHL? B: No, it's the minor league. Each NHL team has an affiliate there. A: So prospects play there first? B: Most of them."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Which league are you heading to?\" \"The Liiga in Finland. Two-year deal with Tappara. Cold, but great hockey.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "1. The Original Six era of the NHL — From 1942 to 1967 the league had just six teams, and fans knew every player by name."
+   },
+   {
+    "style": "listicle item",
+    "text": "#4 Ontario Hockey League: the junior circuit that launched Wayne Gretzky and Connor McDavid."
+   },
+   {
+    "style": "forum question",
+    "text": "How does the Deutsche Eishockey Liga handle relegation now? I heard they reintroduced it but I'm not sure."
+   },
+   {
+    "style": "forum question",
+    "text": "Was the World Hockey Association really a serious rival to the NHL in the 70s? My dad says Bobby Hull's contract changed everything."
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The documentary about the Elite Ice Hockey League in Belfast and Cardiff is fun — the Giants fans are amazing. 4/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a Swiss National League game in Bern — 17,000 fans singing the whole game. Best hockey atmosphere I've seen."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our beer-league team finally won a game! 4-3 in overtime at the community rink. My knees are destroyed but worth it."
+   },
+   {
+    "style": "diary entry",
+    "text": "Got drafted by a team in the Western Hockey League today. Moving to Saskatoon at sixteen. Mom's already packing my winter coats."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Kontinental Hockey League (KHL) is an international professional ice hockey league founded in 2008, with clubs mainly in Russia."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The National Hockey League (NHL) is a professional ice hockey league in North America comprising 32 teams."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Czech Extraliga has produced many players who went on to star in North American pro hockey."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "When the NHL expanded in 1967, it doubled from six to twelve teams and brought hockey to cities like Los Angeles."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: Asia League Ice Hockey has teams from Japan and Korea. GUEST: And the travel is brutal — a ferry trip for a weekend series. But the hockey's quicker than people think."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Quebec Maritimes junior league held its draft last night, and we'll break down every first-round pick after the break."
+   }
+  ],
+  "topic:RugbyLeague": [
+   {
+    "style": "casual social-media post",
+    "text": "State of Origin is the only time my whole family agrees on anything... that we hate the other state 😂🏉"
+   },
+   {
+    "style": "casual social-media post",
+    "text": "Premiership Rugby final weekend!!! Pub booked for Saracens vs Leicester, voice already gone 🏉🍺"
+   },
+   {
+    "style": "news-wire report",
+    "text": "SYDNEY (Wire) - The National Rugby League confirmed on Wednesday that a new franchise based in Perth will join the competition in 2027, taking it to 18 clubs."
+   },
+   {
+    "style": "news-wire report",
+    "text": "LONDON - Premiership Rugby said on Thursday it will reduce its top division to ten clubs after two teams entered administration."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "A: Is Super League the same as the NRL? B: Same code, different hemisphere. Super League's in England and France. A: So Wigan's in it? B: Wigan and St Helens, the big two."
+   },
+   {
+    "style": "two-person dialogue",
+    "text": "\"Which competition does your club play in?\" \"The Top 14 in France. Toulouse, Clermont, all the big names.\""
+   },
+   {
+    "style": "listicle item",
+    "text": "2. Super Rugby — The southern hemisphere club competition featuring teams from New Zealand, Australia and the Pacific Islands."
+   },
+   {
+    "style": "listicle item",
+    "text": "#5 Major League Rugby: the young American competition that's attracting veterans from Europe and former All Blacks."
+   },
+   {
+    "style": "forum question",
+    "text": "How does promotion work between the RFU Championship and the Premiership? Seems like nobody ever goes up."
+   },
+   {
+    "style": "forum question",
+    "text": "Why did the Northern Union split from the Rugby Football Union in 1895 to form its own competition? Was it really about paying players?"
+   },
+   {
+    "style": "product or event review",
+    "text": "Review: The documentary about the first season of the Women's Premiership is brilliant, especially the dressing-room footage. 4.5/5."
+   },
+   {
+    "style": "product or event review",
+    "text": "Went to a United Rugby Championship match in Cardiff. Great crowd, though the roof was closed and it got very loud."
+   },
+   {
+    "style": "diary entry",
+    "text": "Our village club's season in the county league ended today. Lost the final to the town team, 12-10, in the mud. Proud anyway."
+   },
+   {
+    "style": "diary entry",
+    "text": "Signed for a club in Japan's League One today. Moving to Tokyo in July. My dad's already researching the best ramen near the training ground."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The National Rugby League (NRL) is the top-level professional rugby league club competition in Australasia, founded in 1998."
+   },
+   {
+    "style": "encyclopedia-style sentence",
+    "text": "The Pro D2 is the second division of professional rugby union in France, organised by the Ligue Nationale de Rugby."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The Currie Cup, first played in 1892, is the oldest domestic rugby competition in South Africa."
+   },
+   {
+    "style": "school essay sentence",
+    "text": "The creation of the Super League in 1996 moved English rugby league from winter to summer for the first time."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "HOST: The National Provincial Championship is where New Zealand's provinces fight it out. GUEST: And nearly every All Black came through it. It's the real talent pipeline."
+   },
+   {
+    "style": "podcast transcript snippet",
+    "text": "...the Championship is rugby's second tier in England, and this year's title race is the tightest in a decade. Let's break down the top four clubs."
+   }
+  ]
+ }
+}

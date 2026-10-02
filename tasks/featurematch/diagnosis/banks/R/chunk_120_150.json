@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:SoccerLeague": [
+   {
+    "style": "text message",
+    "text": "Bro the Liga Atlantica fixtures just dropped, we open away at Porto Novo AGAIN 🙄 who's getting season passes?"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the Northern Premier Division is expanding to 20 clubs next season? More midweek trips to Hull for us lol"
+   },
+   {
+    "style": "press release",
+    "text": "The Coastal Women's Football Championship today announced a five-year broadcast deal that will put every top-flight fixture on free-to-air television from August."
+   },
+   {
+    "style": "press release",
+    "text": "FOR IMMEDIATE RELEASE: The Valdoria Premier Division confirms that promotion and relegation will return for the 2027 season, with the bottom two clubs dropping to the second tier."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the commissioner cap squad salaries? A: Half our clubs were losing money every season. The competition only survives if the smallest club in the table can still pay its players."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the Eredivisie different from the bigger European leagues? A: It's a development division. Clubs sell their best youngsters every summer and rebuild, so the title race is always open."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: to follow a new division quickly, learn the table first. Know who's chasing the title, who's in the European spots and who's fighting relegation, and every weekend's results suddenly matter."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Fantasy tip for the new Serie A season: pick defenders from clubs with the easiest opening five fixtures, and don't waste budget on strikers from the promoted sides."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Second-tier competition approves goal-line technology. The Midlands Championship will install the system at all 24 grounds before the winter break, its board said on Tuesday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Title race goes to final day for first time in a decade. Three clubs sit level on points at the top of the Liga Austral with one round of fixtures left."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my grandad was there for the very first season of the Highland division back in the fifties, and he swore half the pitches were just sheep fields with goalposts on them."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I'll never forget the year our town club got promoted into the top flight. We went from playing part-timers to playing on telly, and the whole high street painted itself blue."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English football competition, founded in 1888, was the world's first professional league? Answer: the Football League."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: How many clubs compete in Spain's La Liga each season? Answer: 20."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Marta, the Sunday amateur division is looking for one more team for the spring season. Want to rope in the guys from work? Registration closes Friday!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tom, I got tickets for a J1 League match in Osaka for my Japan trip! Apparently the supporters sing for ninety minutes straight. Can't wait to tell you about it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The founding charter of the Rio Plata Football Association, signed in 1931 by twelve clubs, created the region's first nationwide professional championship and its first fixed fixture calendar."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This trophy has been awarded to the champions of the Northern Counties Division since 1905. Each silver band carries the name of a title-winning club."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And with that result, folks, the table turns upside down! Rovers drop into the relegation zone and United go top of the division on goal difference with three games left!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, here's tonight's question: should our top flight bring in a winter break like the Bundesliga? Lines are open, and Gary from Bristol says absolutely yes."
+   }
+  ],
+  "topic:SoccerManager": [
+   {
+    "style": "text message",
+    "text": "Just heard they've sacked Reyes after four straight losses 😬 rumour is the Dutch guy from Utrecht is taking over the dugout"
+   },
+   {
+    "style": "text message",
+    "text": "Boss just named the same back four for the 6th week running lol. Say what you want about Halvorsen, he's loyal"
+   },
+   {
+    "style": "press release",
+    "text": "Athletic Club Moravia is delighted to confirm the appointment of Tomasz Wieczorek as head coach on a three-year contract. Wieczorek, 46, joins after guiding Zlin to back-to-back promotions."
+   },
+   {
+    "style": "press release",
+    "text": "The club has today parted company with first-team manager Gavin Rourke. We thank Gavin for his work over two seasons, including last year's cup final run, and wish him well."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What changed at half-time? A: I told the lads we were too narrow. We switched to a back three, pushed the wingers high, and after that we controlled the match."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: You've coached in four countries. What travels? A: Clarity. Players in Lisbon or Leeds want to know their role on a Friday so they can sleep on a Saturday night."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Advice from veteran gaffer Ana Duarte: never criticise a player in front of the whole squad after a defeat. Wait until Monday, then speak to them one-on-one."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to running a youth side? Pick one formation and stick with it all season. Kids learn their positions faster when the shape doesn't change every week."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lindqvist named Manager of the Month after unbeaten October. The Swede has turned a side tipped for relegation into play-off contenders with a high-pressing 4-3-3."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran boss Ferreira, 71, retires after 30 years in the dugout. He won eleven trophies across Portugal and Brazil and handed debuts to more than 80 academy players."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our old gaffer, Mr Kovac, chewed a toothpick through the whole match. When we went a goal down he'd snap it in half, and you knew the team talk was going to be loud."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I once sat next to Harry Moran on a train, the man who took Dunmore Town from the fifth tier to a cup final. He spent the whole trip drawing formations on a napkin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Italian led Leicester City to their shock Premier League title in 2015-16? Answer: Claudio Ranieri."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was in charge of Arsenal for 22 years, from 1996 to 2018? Answer: Arsene Wenger."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jonas, guess who just got the head coach job with the under-18s? Me! First training session is Thursday and I've already drawn up three formations on napkins."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Priya, did you see the press conference? The new boss at City basically said the whole midfield is for sale. Bold for his first week, right?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This tactics board belonged to manager Elena Sorokina, who used it in the dressing room during the 1999 cup final. Her chalk diagram of the winning set piece is still visible."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hans Brenner (1922-1998) managed the club for 17 seasons, founding its youth academy and the passing style that defined its golden era. His sheepskin coat is displayed at right."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And there's the manager, out of his technical area again, arms everywhere! The fourth official's having a word, but he wants that substitution and he wants it now!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Phone lines are buzzing tonight and the question is simple: is it time for the gaffer to go? Three wins from fifteen, and the fans in the south stand are restless."
+   }
+  ],
+  "topic:AustralianFootballTeam": [
+   {
+    "style": "text message",
+    "text": "Mate the Magpies are 4 goals down at three-quarter time 😩 if Collingwood lose this I'm not watching footy again till finals"
+   },
+   {
+    "style": "text message",
+    "text": "Swans tickets for Saturday at the SCG? Got two spare in the members' wing"
+   },
+   {
+    "style": "press release",
+    "text": "The Brisbane Lions are proud to announce a three-year partnership with a local health provider, whose logo will feature on the club's guernsey from the 2027 season."
+   },
+   {
+    "style": "press release",
+    "text": "The Wangaratta Rovers Football Netball Club today confirmed the appointment of a new senior coach ahead of the Ovens and Murray footy season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the club turn things around after finishing 17th? A: We went hard at the draft, backed our young midfielders and gave them games. Two years later they're playing in a preliminary final."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the culture like at the Dockers? A: It's a West Australian club through and through. Fremantle people expect you to work hard on the field and turn up at community events."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for first-timers at the MCG: wear your club's scarf, get there before the first bounce, and learn the theme song so you can belt it out when your side wins."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Joining a local footy club? Bring your own mouthguard, turn up to Tuesday and Thursday training, and be ready to help with the canteen roster on game day."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Cats clinch top-four spot with crushing win. Geelong kicked 18 goals to 7 at Kardinia Park on Saturday to secure a home qualifying final."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tasmania's new AFL club unveils its jumper. The Devils' green, gold and red guernsey drew a packed crowd to the launch in Hobart on Friday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid in Footscray the whole street barracked for the Bulldogs. In 2016, when they broke the premiership drought, my dad cried so hard he couldn't finish the barbecue."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I played for the Kalgoorlie Railways under-17s, and our coach made us run laps of the oval in the heat until somebody could kick a proper torpedo punt."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which AFL club is nicknamed the Bombers? Answer: Essendon."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which AFL club won premierships in 2017, 2019 and 2020? Answer: Richmond."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Liam, Hawthorn are playing in Launceston while I'm visiting Tassie! Want to come along? The Hawks have a cracking young forward line this year."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sophie, our local footy club just made the grand final for the first time in 22 years. The whole town's wearing maroon. You have to come up for the weekend."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This woollen guernsey was worn by a Carlton ruckman in the 1906 VFL season. The club, founded in 1864, is one of the oldest in Australian rules football."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded by gold miners in 1872, the Ballarat Imperials played on a paddock beside the diggings. This premiership cup from 1899 is the club's oldest surviving trophy."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And the Saints surge forward out of the middle, handball over the top, it's a shot on goal from fifty - and it's a monster! St Kilda hit the front!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to Footy Talk. Tonight: can the Crows bounce back after that hiding at Adelaide Oval? Their midfield got smashed at the stoppages."
+   }
+  ],
+  "topic:BasketballTeam": [
+   {
+    "style": "text message",
+    "text": "Celtics up 12 at the half!! told u they'd figure out the zone 🏀"
+   },
+   {
+    "style": "text message",
+    "text": "Rec team practice moved to 7, gym's double-booked. Bring the dark jerseys, we're playing the Hornets crew"
+   },
+   {
+    "style": "press release",
+    "text": "The Seattle Rainmakers today announced the signing of guard Malik Owens to a two-year contract. Owens averaged 18 points per game last season."
+   },
+   {
+    "style": "press release",
+    "text": "Valencia Ribera Baloncesto announces the renewal of its head coach through 2028, after the club's best season in two decades and a run to the national final."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the roster gel so quickly? A: Ball movement. Nobody on this team cares who scores. We led the conference in assists, and that's the whole story."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the biggest difference in your second year with the franchise? A: Trust. The coaches let me run the pick-and-roll late in games now."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for coaching a youth hoops squad: run a simple motion offense. Five players, constant cutting, and everyone touches the ball before a shot goes up."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a Knicks game at the Garden? Arrive early for warm-ups; that's when you can watch the players shooting around up close."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Warriors snap five-game skid behind 40-point night. Golden State shot 52 percent from three to beat Denver 124-110 on Monday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Underdog Lithuanian club reaches EuroLeague Final Four. Zalgiris stunned the favourites on the road to complete a 3-2 series comeback."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My high school team, the Eastside Eagles, won one game my senior year. One! But I hit the free throws to win it, so honestly that's my whole legacy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We drove six hours to see Chicago play back when Jordan was still there, and the arena was so loud I couldn't hear my brother sitting right next to me."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which NBA franchise won its 18th championship in 2024, the most in league history? Answer: the Boston Celtics."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Before moving to Los Angeles, which city was the Lakers' original home? Answer: Minneapolis."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dana, the Wings are in town next week and I scored courtside-ish seats. Want to come? Their rookie point guard is unreal."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Chris, our church league squad needs a center for the winter. You're 6'4\", so you're in. No excuses, Thursdays at 8."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These warm-up jackets belonged to the Rochester Royals, who won the 1951 NBA title before the franchise moved west and eventually became the Sacramento Kings."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1946 by factory workers, the Kaunas Steelworks basketball club played in an unheated hall. The hand-cranked scoreboard from their first national final is shown at right."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Raptors push in transition, kick it to the corner - three - BANG! That's a 10-0 run and the building is shaking!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on the hoops hour: the Suns' starting five looks great on paper, but can they defend? Our lines are open."
+   }
+  ],
+  "topic:CricketTeam": [
+   {
+    "style": "text message",
+    "text": "Aus 3 down for 40 😳 Bumrah is on fire this morning. You watching?"
+   },
+   {
+    "style": "text message",
+    "text": "Village XI need an 11th for Sunday, can you bowl a bit? Tea's included lol"
+   },
+   {
+    "style": "press release",
+    "text": "Yorkshire County Cricket Club is pleased to announce the signing of a South African fast bowler for the upcoming County Championship season."
+   },
+   {
+    "style": "press release",
+    "text": "The Mumbai franchise today confirmed its retained players ahead of the IPL auction, with the captain and two all-rounders staying with the side."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the secret to the side's success in the subcontinent? A: Spin. We picked three spinners and trusted them, even when the first session didn't go our way."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the dressing room feel after losing the series? A: Gutted, but this squad is young. Half these lads have played fewer than ten Tests."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for running a club side: rotate the batting order in friendly matches so your tail-enders get a few overs at the crease too."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Picking your XI for a green pitch? Add an extra seamer and bowl first if you win the toss; the morning damp is a huge edge."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "West Indies end 27-year drought in Australia. The visitors won the second Test at the Gabba by eight runs, sealed by a fiery spell from Shamar Joseph."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Afghanistan reach first World Cup semi-final. The side, which played its first ODI only in 2009, beat Bangladesh to advance at the 2024 T20 World Cup."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our Sunday side in Kent once lost a match because the umpire went home for lunch and forgot to come back. We just stood there for forty minutes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was twelve I watched Sri Lanka win the World Cup in '96 on a tiny TV in Colombo, and the whole neighbourhood ran into the street banging pots."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which national side won the first men's Cricket World Cup in 1975? Answer: the West Indies."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which IPL franchise is known as the 'Men in Yellow'? Answer: Chennai Super Kings."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Raj, the club needs someone to keep wicket this season since Dev moved to Leeds. You still have your gloves? Nets start in April."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ellie, England are playing at Lord's in June and I got us two tickets in the Edrich Stand. Pack sunscreen and a cushion."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This bat was signed by every member of the 1932-33 English touring side, during the so-called Bodyline series in Australia."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Formed by Parsi players in Bombay, this side became the first Indian team to tour England, in 1886. Their team photograph hangs above."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And New Zealand need nine off the last over, two wickets in hand... it's a full toss - and that's gone for SIX! The Black Caps are on the brink!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome to the cricket hour. Big question tonight: should the selectors drop the opening pair after yet another second-innings collapse?"
+   }
+  ],
+  "topic:CyclingTeam": [
+   {
+    "style": "text message",
+    "text": "Visma just put 4 riders on the front of the peloton, they're gonna blow this race apart 🚴"
+   },
+   {
+    "style": "text message",
+    "text": "Club ride Sat 7am from the bakery, team kit if you have it. Tom's leading the B group"
+   },
+   {
+    "style": "press release",
+    "text": "Team Alpenstrom is excited to announce its 2027 roster of 28 riders, including two Tour de France stage winners and four neo-pros from our development squad."
+   },
+   {
+    "style": "press release",
+    "text": "The Kerala Riders women's squad has secured UCI Continental status, becoming the first professional women's team based in South India."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you pick eight riders for a Grand Tour? A: We build around the leader. Two climbers to protect him in the mountains, a big engine for the flats, and nobody chasing personal glory."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like being a domestique on this team? A: You fetch bottles, close gaps and sacrifice your own result. When the leader wins, though, we all celebrate."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from the team mechanics: before every stage they check tyre pressure and chain wear on each bike. Do the same before your weekend ride."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Joining a local racing team? Learn to ride in a paceline first: hold your line, never brake suddenly, and point out potholes for the rider behind."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Squad's sprint train delivers fourth stage win. Equipe Lumiere's riders led out their sprinter perfectly into the final kilometre in Bordeaux on Thursday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Historic Italian outfit folds after 40 years. Sponsor withdrawal means the blue-and-white jerseys will be missing from the Giro start line for the first time since 1985."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I spent one summer driving the support car for a tiny Belgian team. One car, two spare wheels and a lot of waffles, and somehow we won a stage of a small race in Brittany."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When the Tour came through our village, a team bus parked outside my aunt's house and one of the riders asked to use her loo. She still tells everyone."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which British squad, launched in 2010, won the Tour de France with Bradley Wiggins in 2012? Answer: Team Sky."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: How many riders does each team start the Tour de France with? Answer: eight."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Anna, I finally got into the club's racing team! I need the new kit before the crit series starts. Free on Saturday to go shopping?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Marco, did you see your old team's new jersey? Neon green and pink. The riders look like highlighter pens."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This steel bicycle was ridden by a member of the Peugeot team in the 1950s, used for training and racing on the cobbled roads of northern France."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The jerseys displayed here trace the history of one squad through its many sponsors, from a coffee brand in 1972 to a bank in 2001."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And the whole team is drilling it on the front now, five riders in a line, the gap down to forty seconds - the breakaway is in serious trouble!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the bike show tonight: is this the strongest outfit in the peloton since the Sky years? Three Grand Tours won by three different riders."
+   }
+  ],
+  "topic:HandballTeam": [
+   {
+    "style": "text message",
+    "text": "Kiel won AGAIN 32-28, their goalie was unreal 🤾"
+   },
+   {
+    "style": "text message",
+    "text": "Handball training Tues 8pm, sports hall B. Bring resin and ur knee pads"
+   },
+   {
+    "style": "press release",
+    "text": "HC Vardar Skopje announces the signing of a left back from the Danish top division on a three-year deal ahead of the Champions League group stage."
+   },
+   {
+    "style": "press release",
+    "text": "The Odense women's handball side today revealed a new arena partnership that will bring all home fixtures to a 4,000-seat hall from next season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you switch to a 5-1 defence? A: Their pivot was killing us. With one player pushed up, we cut off the passes into the six-metre line."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you keep a squad hungry after three straight titles? A: Rotation. Every player in our dressing room knows they could start next weekend, or sit."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Coaching tip for youth handball: teach your wingers to jump wide from the corner, because the angle opens up far more of the goal."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for sides playing seven-on-six: rehearse the goalkeeper substitution so the extra court player gets on fast without a penalty."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Barcelona win record 12th European handball crown. The Catalan club beat Aalborg in the Cologne final on Sunday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Faroese club stuns Norwegian champions. A side from Torshavn won 27-25 in the European Cup on a night of last-minute saves."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our school handball team in Lyon was so bad we celebrated just scoring. Then we got a new coach, a former pro, and finished second in the region."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I went to a game in Flensburg once. The arena was tiny, maybe six thousand people, but when the home side scored the floor literally shook."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which club from a Baltic port city has won more German handball championships than any other? Answer: THW Kiel."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: How many players does a handball side have on court at once, including the goalkeeper? Answer: seven."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lars, our club's women's team made the cup semis! Saturday, 3 pm, home hall. Bring your cowbell."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ines, the handball squad is looking for a new goalkeeper. You stopped every shot at the beach tournament, you should try out."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This ball, signed by the 1938 German national squad, comes from the first field handball world championship, when teams played eleven-a-side on grass."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Gdansk Dockworkers Handball Club was founded in 1957 by shipyard employees. Their wooden goalposts, displayed here, were built in the yard's own workshops."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Quick throw from the keeper, counterattack, the winger is alone - and he scores! That's three goals in ninety seconds for the visitors!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the radio tonight: the home side's back court is the best in the country, but can they survive without their injured playmaker?"
+   }
+  ],
+  "topic:HockeyTeam": [
+   {
+    "style": "text message",
+    "text": "Oilers in OT again 😤 my heart can't take another playoff run like this"
+   },
+   {
+    "style": "text message",
+    "text": "Beer league game moved to 10:45pm Thurs. Somebody bring the pucks, goalie's late as usual"
+   },
+   {
+    "style": "press release",
+    "text": "The Halifax Harbourmen are thrilled to welcome a new head coach, who led his previous junior club to two national titles."
+   },
+   {
+    "style": "press release",
+    "text": "The Dutch women's field hockey side today named its squad of 18 for the European Championships in Amsterdam next month."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's working on the power play? A: Movement. We've got a shooter at the point, a guy screening the goalie, and we're winning battles along the boards."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you handle the travel in this conference? A: Long bus rides, card games and sleep. Our club does a lot of growing up on the highway."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for parents of new youth hockey players: get the skates sharpened before the first practice, and tape the stick blade so the puck doesn't slide off."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching your first NHL game? Keep an eye on line changes; teams swap players every forty seconds or so, often on the fly."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Bruins clinch division title with shootout win. Boston edged Toronto 3-2 on Saturday to secure home ice for the first round."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Expansion side reaches the final in debut season. The Vegas Golden Knights, who began play in 2017, made the Stanley Cup Final in their very first year."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Growing up in Saskatoon I played for a squad called the Blades Juniors. Our rink was so cold the water bottles froze on the bench."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle drove the Zamboni for the minor-league club in Hershey for twenty years. He always said the players were friendlier than the fans."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which NHL team has won the most Stanley Cups? Answer: the Montreal Canadiens, with 24."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Whose fans famously throw octopuses on the ice during the playoffs? Answer: the Detroit Red Wings'."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kev, got tickets to the Rangers game on Friday. Section 224, but the view's decent. You in?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mika, our rec team finally won a game! 4-3 in overtime. I scored the winner off my shin, but a goal is a goal."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This jersey was worn by a player on the 1980 U.S. Olympic team, whose upset of the Soviet Union became known as the 'Miracle on Ice.'"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1909, the Montreal Canadiens are the oldest continuously operating professional hockey team. The sweater shown here dates from their 1916 championship season."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Leafs break out of the zone, two-on-one, he keeps it - shoots - SCORES! Top shelf where Grandma keeps the cookies!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Hockey night call-in: do the Flyers need a new goalie, or is the problem the defence in front of him? First caller, go ahead."
+   }
+  ],
+  "topic:RugbyClub": [
+   {
+    "style": "text message",
+    "text": "Leinster by 20 at half time, Munster fans gone very quiet 😂"
+   },
+   {
+    "style": "text message",
+    "text": "Training's on tonight despite the rain, 7pm at the club. Bring long studs, it's a mud bath"
+   },
+   {
+    "style": "press release",
+    "text": "Harbourside RFC is delighted to announce that academy prop Tom Ellery has signed his first senior contract with the club."
+   },
+   {
+    "style": "press release",
+    "text": "Stade Montois confirms the opening of a new 2,000-seat stand at its home ground, completed in time for the first home fixture of the season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How has the club changed since turning professional? A: We used to train two nights a week after work. Now it's full-time, but the same volunteers still run the bar."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes Toulouse so hard to beat? A: Their offloading. Every forward passes like a back, and the crowd at Ernest-Wallon lifts them."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Joining a rugby club as an adult beginner? Most run touch sessions; start there to learn the passing before you go full contact."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for club volunteers: on match day, have the kit washed, the post protectors up and the tea urn on an hour before kick-off."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Crusaders crowned Super Rugby champions again. The Christchurch side beat the Chiefs in the final to extend their record title haul."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Village club celebrates 150 years. Founded by schoolteachers in 1876, Carreg Wanderers marked the anniversary with a match against an old boys' XV."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first game for the club's thirds I got put on the wing, never touched the ball, and still got stood on by a 120-kilo prop in the last minute."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "After my grandad's funeral the whole club turned up in their blazers and sang in the car park. He'd been their president for thirty years."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English rugby club plays its home games at Welford Road? Answer: Leicester Tigers."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which French club has won the most European Champions Cup titles? Answer: Stade Toulousain."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Gareth, the club's annual dinner is on the 14th. Black tie optional, singing compulsory. Can you bring the old team photos?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Fi, our women's fifteen got promoted! First season in the higher division starts in September. Come and watch a match."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This leather ball and the club's first minute book date from 1871, the year Blackheath helped form the Rugby Football Union."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This hooped jersey was worn by a forward of a Welsh mining-valley club in the 1920s, when most players went straight from the pit to training."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Scrum on halfway, the home pack is shoving them back, ball's at number eight, he picks and goes - and he's over! Try for the club!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the rugby show: can the Northern club survive financially, or is it heading the way of Wasps and Worcester?"
+   }
+  ],
+  "topic:Curler": [
+   {
+    "style": "text message",
+    "text": "Jennifer Jones throwing last rock for the title 😱 this end is everything"
+   },
+   {
+    "style": "text message",
+    "text": "Did u see Lena Haugland sweep that final stone? She practically carried it into the house"
+   },
+   {
+    "style": "press release",
+    "text": "Curling Canada is pleased to announce that skip Brendan MacLeod and his rink will represent the country at next year's world championship."
+   },
+   {
+    "style": "press release",
+    "text": "The Swiss federation today named veteran skip Anja Brunner to lead the women's team at the European Championships for a fifth time."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What goes through your head before the last stone? A: Weight and line, nothing else. I trust my sweepers and try not to look at the scoreboard."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you start? A: My dad ran the curling club in Thunder Bay. I was sliding out of the hack before I could ride a bike."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from veteran curler Kerri Morrison: when you deliver the stone, keep your eyes on the skip's broom, not on the rock in your hand."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want a better draw weight? Practise sliding out of the hack without a stone; Olympic champion Nils Eriksson did it every morning for years."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Skip guides Scotland to world gold. Euan Baird's rink beat Canada in the final, sealing the title with a precise last-stone draw to the button."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Grandmother, 63, wins national seniors title. Margit Pohl delivered the winning stone in an extra end in Fussen on Sunday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I watched Mrs Daley at our club throw her last rock at 87 years old. Perfect draw to the button, then straight to the bar for a sherry."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin curled third for a team in Manitoba. She swears she swept so hard in the provincial final that her broom head flew off."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Canadian skip led her rink to an undefeated Olympic gold in Sochi in 2014? Answer: Jennifer Jones."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Swedish skip won Olympic gold in Beijing in 2022? Answer: Niklas Edin."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, I signed us up for the beginners' bonspiel. You throw lead, I'll sweep. Bring warm gloves!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kirsty, Aunt Moira just won the club championship again, her ninth. She skipped all six games and never lost an end."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This granite stone was thrown by Agnes MacPherson, who skipped one of Scotland's first women's rinks in international competition in 1959."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Broom of Hans Kuhne (1931-2009), a Swiss curler who competed in seven European championships and later coached national teams in Japan."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "She's in the hack, she releases, the sweepers are on it, harder, harder - it curls behind cover and sits on the button! What a shot from the skip!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Curling hour, folks: is Ryo Tanaka the best young skip in the world right now? Twenty-three years old and already two Grand Slam wins."
+   }
+  ],
+  "topic:FigureSkater": [
+   {
+    "style": "text message",
+    "text": "Yuki Moriyama landed a quad lutz in her free skate!! 🤯 the whole rink screamed"
+   },
+   {
+    "style": "text message",
+    "text": "Mia skated her short program clean today, coach almost cried lol. Nationals next week!"
+   },
+   {
+    "style": "press release",
+    "text": "The national federation congratulates Tara Lindgren on her selection for the World Championship team after winning the national title with a record free skate score."
+   },
+   {
+    "style": "press release",
+    "text": "Ice dance couple Elise Marceau and Julien Roy announce their retirement after twelve seasons together, including two world medals."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you choose the music for your free skate? A: My grandmother loved Rachmaninoff. Every time I do the spiral sequence, I'm skating it for her."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's harder, the jumps or the spins? A: Honestly, the spins. Everyone watches the triple axel, but a level-four spin takes years to master."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Olympic coach Irina Volkova: practise jump entries off the ice first; the takeoff edge is what makes a clean landing."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Beginners who want to try an axel should master the waltz jump first, says two-time national champion Daniel Ko."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teenager wins European title in senior debut. Sofia Kask, 16, of Estonia, landed two triple-triple combinations to top the women's field in Tallinn."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pair team falls on throw but wins silver. Lin and Haas recovered from an early mistake to finish second at the Grand Prix Final."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Years ago I went to a show where Katarina Witt skated, and when she went into her spin the whole arena just held its breath."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My daughter's coach used to compete for Ukraine. She told us she trained at 5 am in a rink with no heating, wearing two pairs of tights."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Japanese skater won men's Olympic gold in both 2014 and 2018? Answer: Yuzuru Hanyu."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Norwegian skater won three Olympic golds and later became a Hollywood film star? Answer: Sonja Henie."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nina, I'm finally taking adult skating lessons! I fell eleven times in the first class, but I can do a two-foot spin now."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, remember Hana from school? She's competing at Four Continents this year. Her free program is set to Coldplay."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These skates belonged to Madge Syers, who in 1902 entered the world championship, then open only to men in practice, and won silver."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This purple costume was worn by Jayne Torvill for the 'Bolero' routine with Christopher Dean at the 1984 Sarajevo Olympics, which earned perfect artistic marks."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Triple lutz, triple toe - beautiful! She's flying through this program, and the crowd is already on its feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Skating talk tonight: was the judging fair at the Grand Prix Final? Our caller thinks the Canadian pair got robbed."
+   }
+  ],
+  "topic:IceHockeyPlayer": [
+   {
+    "style": "text message",
+    "text": "McDavid just went coast to coast AGAIN 😂 the man isn't human"
+   },
+   {
+    "style": "text message",
+    "text": "Our new D-man from Finland is a beast, blocked 3 shots in one shift lol"
+   },
+   {
+    "style": "press release",
+    "text": "Calgary has signed forward Jakub Novak to a four-year contract extension. Novak led the team with 34 goals last season."
+   },
+   {
+    "style": "press release",
+    "text": "The Hall of Fame announced today that defender Marie-Eve Gagnon, a three-time Olympic medallist, will be inducted in November."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you score so many from the slot? A: Quick release. I practised one-timers in my driveway every night as a kid in Sudbury."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you stay in shape at 40? A: Yoga and sleep. I'm the oldest guy in the locker room, but I still want to play every shift."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from veteran centre Erik Lund: to win more faceoffs, watch the linesman's hand, not the puck."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Young goalies, take it from former netminder Paul Dufresne: stay square to the shooter and let the puck hit you."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie scores four goals in debut. Swedish winger Oskar Bergqvist, 19, became the first teenager in team history to manage the feat."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Captain plays 1,000th game. Defenceman Teemu Rantanen received a silver stick before Saturday's home game against Vancouver."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I met Wayne Gretzky once at a charity skate in Edmonton. He signed my glove and told me to keep my stick on the ice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My buddy's brother played two seasons in the minors. He'd tell us the bus rides were longer than the games."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which winger broke Wayne Gretzky's NHL career goals record in April 2025? Answer: Alexander Ovechkin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which defenceman's flying overtime goal won the 1970 Stanley Cup for Boston? Answer: Bobby Orr."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Matt, my nephew got drafted by a junior team in Quebec! He's only 16 and he'll be billeting with a family. Proud uncle moment."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jess, did you see the U.S. captain's goal in the women's final? Toe drag, backhand, top corner. Unreal."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This stick belonged to Maurice 'Rocket' Richard, the first NHL player to score 50 goals in 50 games, in the 1944-45 season."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mask worn by Jacques Plante, who in 1959 became the first goaltender to wear a mask regularly in NHL games."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He picks up the puck at his own blue line, dances past one defender, two - shoots - SCORES! That's the hat trick and the hats are raining down!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight's question: is Petr Holub worth eleven million a year? Forty points last season and a minus-twelve. Lines are open."
+   }
+  ],
+  "topic:Skater": [
+   {
+    "style": "text message",
+    "text": "Ireen Wust just won ANOTHER medal, how many is that now 😂"
+   },
+   {
+    "style": "text message",
+    "text": "Lotte smashed her 1500m PB by two seconds at Thialf today!! ⛸️"
+   },
+   {
+    "style": "press release",
+    "text": "The Dutch skating federation announces that sprinter Femke de Wit will race the 500 and 1000 metres at the World Single Distance Championships."
+   },
+   {
+    "style": "press release",
+    "text": "Short-track speed skater Park Ji-woo has signed a sponsorship deal with a Korean electronics brand ahead of the Olympic season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you pace a 10,000 metres? A: Lap times, nothing else. My coach holds up a board, and I try to hit 29.5 seconds every lap for 25 laps."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of short track? A: The crashes. You're inches from four other racers, and one bad crossover ends your race."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from long-track champion Jorrit Bakker: keep your knees bent at ninety degrees and push sideways, not backwards."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Train like a speed skater at home: slideboard sessions and low walks build the leg strength you need for the deep racing crouch."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Norwegian breaks track record in 5,000 metres. Henrik Solberg clocked 6:01.12 at the high-altitude oval in Salt Lake City on Saturday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Canadian veteran retires after five Olympics. Short-track racer Claire Dubois won seven medals across a twenty-year career."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather skated the Elfstedentocht in 1963, the brutal one. Two hundred kilometres on frozen canals in a blizzard, and he finished with frostbitten toes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I tried racing skates at the oval once. The blades are so long I fell on the first corner and slid all the way into the padding."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American speed skater won five gold medals at the 1980 Lake Placid Olympics? Answer: Eric Heiden."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Dutch skater has won the most Olympic medals in speed skating? Answer: Ireen Wust, with 13."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Joost, guess what, I made the regional speed skating squad! Training is at 6 am three times a week. Wish me luck."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, did you watch the short-track relay? Our anchor passed two people on the last lap. Insane."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These long-track skates were worn by Gunda Niemann-Stirnemann, the German who won eight world all-round titles in the 1990s."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Clap skates, introduced in the 1990s, let racers keep the blade on the ice longer. This pair belonged to a Dutch skater who used them at Nagano in 1998."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Final lap of the 1500, she's in the outer lane, coming off the last bend - pushing, pushing - and that's a track record!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the winter sports hour: should the 500 metres go back to two races? Our guest, a former Olympic sprinter, thinks so."
+   }
+  ],
+  "topic:Skier": [
+   {
+    "style": "text message",
+    "text": "Mikaela Shiffrin just won AGAIN 🥇 she's unstoppable"
+   },
+   {
+    "style": "text message",
+    "text": "Watching my cousin's downhill run on the livestream, she was 4th at the last split!!"
+   },
+   {
+    "style": "press release",
+    "text": "The Austrian ski federation names Lukas Hofer captain of the World Cup slalom team for the coming season."
+   },
+   {
+    "style": "press release",
+    "text": "Cross-country skier Ingrid Aasen has extended her contract with her Norwegian club through the 2030 Winter Olympics."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What do you think about in the start gate? A: The first three gates. If I nail those, the rest of the downhill takes care of itself."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did growing up in the Dolomites shape you? A: I skied to school. My mother timed me, so I was racing before I knew it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from slalom racer Clara Moretti: keep your hands forward and your shoulders facing downhill; your skis will follow."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Freestyle star Jonah Kealoha's advice for first-time park riders: learn to land small jumps cleanly before you try a spin."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Swiss downhiller wins on home snow at Wengen. Marco Rueegg survived the Hundschopf jump to beat the field by 0.3 seconds."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Norwegian wins 50-kilometre classic at Holmenkollen. Lars Brekke outsprinted two rivals after nearly three hours of racing."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I once rode a chairlift with a retired Olympic downhiller. She'd broken both legs in her career and still skis every morning at 72."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle was a ski jumper in Lahti in the seventies. He said the scariest part wasn't the flight, it was climbing to the top in the wind."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American holds the record for most alpine World Cup race wins? Answer: Mikaela Shiffrin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Norwegian cross-country skier won eight Olympic gold medals in the 1990s? Answer: Bjorn Daehlie."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tess, my niece just made the national junior ski team! She's racing giant slalom in Sweden next month."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Paul, remember the guy at our chalet who raced in the Olympics? He just opened a ski school in Chamonix."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "These wooden skis are attributed to Sondre Norheim, the 19th-century Norwegian often called the father of modern skiing for his bindings and the telemark turn."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Toni Sailer swept all three alpine events at the 1956 Cortina Olympics. His race bib from the downhill is displayed here."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "She's through the top section, green split, carrying huge speed into the final jump - she's in the lead! What a run!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ski talk tonight: should Olivier Durand switch from downhill to super-G? He's fast but keeps crashing on the long courses."
+   }
+  ],
+  "topic:SumoWrestler": [
+   {
+    "style": "text message",
+    "text": "Terunofuji won the basho!! 🎉 his knees are held together by tape and willpower"
+   },
+   {
+    "style": "text message",
+    "text": "Watching sumo at 3am again lol, that young rikishi from Mongolia just threw a guy twice his size"
+   },
+   {
+    "style": "press release",
+    "text": "The Japan Sumo Association announces the promotion of Hoshinoumi to ozeki following his strong record over the last three tournaments."
+   },
+   {
+    "style": "press release",
+    "text": "Former maegashira Tamanokaze announces his retirement and will take over a training stable as an elder of the association."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What is daily life like in the stable? A: Practice at 5 am, chanko stew at noon, then a nap and chores. As a junior, I also do laundry for the seniors."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you gain weight for the sport? A: Lots of rice and sleeping right after lunch. I went from 90 kilos to 150 in three years."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from retired rikishi Hakuryu: at the tachiai, stay low and drive with your legs, not your arms."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching your first tournament in Tokyo? Go early for the lower divisions, and catch the top-division ring-entering ceremony in mid-afternoon."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Young giant wins first Emperor's Cup. Takanoshima, 24, finished 13-2 at the Kyushu basho to lift the trophy."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Yokozuna withdraws mid-tournament with elbow injury. The grand champion had lost two straight bouts on days four and five in Osaka."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I saw a sumo wrestler on the Tokyo subway once, in his yukata and topknot. Everyone stepped aside, and he smelled faintly of hair oil, like flowers."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I visited a stable in Ryogoku, a teenage wrestler poured us green tea and said he missed his mum's cooking back in Aomori."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first foreign-born wrestler promoted to yokozuna? Answer: Akebono, from Hawaii, in 1993."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which yokozuna holds the record of 45 top-division championships? Answer: Hakuho."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kenji, we got tickets for the September basho in Tokyo! Box seats, so we'll sit on cushions. Can you explain the ranks before we go?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ash, remember the huge guy we saw at the airport? Turns out he's a top-division rikishi. He won his bout today!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This kesho-mawashi, an embroidered ceremonial apron, was worn by yokozuna Futabayama, who won a record 69 consecutive bouts between 1936 and 1939."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Raiden Tameemon (1767-1825) is considered one of the strongest wrestlers in sumo history, losing only ten bouts in his top-division career."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "They charge - the ozeki gets a belt grip - he lifts - and it's a throw at the edge! The challenger's out, and the cushions are flying!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On our sumo podcast tonight: can the young sekiwake win eleven bouts and make ozeki this tournament?"
+   }
+  ],
+  "topic:Historian": [
+   {
+    "style": "text message",
+    "text": "Just finished Mary Beard's SPQR, she makes Rome so funny 😂"
+   },
+   {
+    "style": "text message",
+    "text": "My prof Dr Okafor just got a book deal for her history of Lagos markets!! so proud"
+   },
+   {
+    "style": "press release",
+    "text": "The university is pleased to announce that Dr Helena Varga has won the national history prize for her study of the 1848 revolutions in Central Europe."
+   },
+   {
+    "style": "press release",
+    "text": "Penguin will publish 'Salt Roads', the new book by historian James Achterberg tracing medieval trade routes across the Sahara."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why write about ordinary sailors instead of admirals? A: The archives are full of letters from deckhands. Their voices tell us more about the eighteenth-century navy than any battle report."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long did you spend in the archives? A: Seven years, mostly in Seville, reading the shipping records of the Spanish Empire."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from archival researcher Rosa Delgado: always photograph the folder label and box number before the document itself, or you'll never find it again."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Professor Liang Wei's advice for students reading primary sources: ask who wrote it, for whom, and what they had to gain."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Scholar retells the story of the Great Fire. New research by Dr Amina Shah shows how warehouses of tar and oil fanned the 1666 blaze across London."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Oxford scholar, 91, publishes final volume on Byzantium. Sir Edmund Pryce began his six-volume history of the empire in 1972."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our village had a retired schoolteacher who spent forty years writing a history of the parish. He knew whose great-great-grandmother stole whose chickens in 1820."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I heard Simon Schama speak once, and he talked about the French Revolution like it happened last Tuesday."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which ancient Greek is often called the 'Father of History'? Answer: Herodotus."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who wrote 'The History of the Decline and Fall of the Roman Empire'? Answer: Edward Gibbon."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Clara, I'm reading that new biography of Catherine the Great by the Dutch historian you mentioned. The footnotes are longer than the chapters, but it's brilliant."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, my aunt finally finished her book on the 1920s miners' strikes. Twelve years of archive work! The launch is at the town library next month."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ibn Khaldun (1332-1406), the North African scholar, wrote the Muqaddimah, an introduction to history that analysed how dynasties rise and fall."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Sima Qian (c. 145-86 BCE) compiled the Records of the Grand Historian, covering some two thousand years of Chinese history."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On today's history hour, Dr Fiona McRae joins us to explain why the Hundred Years' War actually lasted 116 years. Fiona, welcome."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our guest has written six books on the Ottoman Empire. Caller, you had a question about the fall of Constantinople? Go ahead, you're on air."
+   }
+  ],
+  "topic:Poet": [
+   {
+    "style": "text message",
+    "text": "Reading Mary Oliver on the train and crying over a poem about wild geese 😭"
+   },
+   {
+    "style": "text message",
+    "text": "Tomas's reading is at 8 tonight at the bookshop! He's doing the new sonnets"
+   },
+   {
+    "style": "press release",
+    "text": "Amara Nwosu has been named the city's first Poet Laureate. Over her two-year term she will write verse for public occasions and lead workshops in schools."
+   },
+   {
+    "style": "press release",
+    "text": "Faber is proud to announce 'River Hours', the third collection from Welsh poet Gwen Pritchard, whose debut was shortlisted for the Forward Prize."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do you write every day? A: I write one line every morning before coffee. Most are bad, but once a month one of them becomes a poem."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why haiku? A: My grandmother wrote them in Kyoto. Seventeen syllables taught me that a poem can be as small as a breath."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from poet Daniel Ruiz: read your draft out loud. If you run out of breath, the line is too long."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Award-winning poet Ilse Brandt suggests writing about one object for ten minutes; the best images come after you've run out of obvious ones."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Debut collection sells out in a week. Twenty-two-year-old Kofi Mensah's verses about growing up in Accra have struck a chord with readers."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Poet, 88, wins lifetime award. Margaret Ellison has published fourteen collections over six decades, many about life on a Cumbrian farm."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I heard Maya Angelou read 'Still I Rise' in person once. Her voice filled the hall, and the old man next to me stood up and started clapping halfway through."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather wrote verse in Tehran. Every New Year he'd compose a ghazal for each grandchild and read it aloud at the table."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who wrote 'The Road Not Taken'? Answer: Robert Frost."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Chilean poet won the Nobel Prize in Literature in 1971? Answer: Pablo Neruda."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi June, I finally visited Seamus Heaney's HomePlace in Bellaghy! They play recordings of him reading 'Digging'. You'd love it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, my friend Lina just had her first poem published in a literary magazine. It's about her mother's garden. Sending you the link."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Emily Dickinson (1830-1886) wrote nearly 1,800 poems, fewer than a dozen of which were published in her lifetime. This handwritten fascicle shows her famous dashes."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Rumi (1207-1273), the Persian mystic, composed the Masnavi, a six-book poem of spiritual teaching. Manuscript copy, 15th century."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome to Poetry Hour. Tonight's guest just won a Pushcart Prize for a poem about her father's fishing boat. She'll read it for us after the break."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And that's our poet-in-residence reading his latest piece, live in the studio. Listeners, call in and tell us which line stuck with you."
+   }
+  ],
+  "topic:ScreenWriter": [
+   {
+    "style": "text message",
+    "text": "Aaron Sorkin's dialogue in The Social Network still slaps 😂 walk-and-talks forever"
+   },
+   {
+    "style": "text message",
+    "text": "My script made the quarterfinals of the screenplay contest!!! That page-one rewrite paid off"
+   },
+   {
+    "style": "press release",
+    "text": "Northlight Pictures has acquired the spec script 'Glass Harbour' by first-time screenwriter Priya Raman after a competitive bidding war."
+   },
+   {
+    "style": "press release",
+    "text": "The Writers Guild announces that Tomas Echeverria will receive its Laurel Award for screenwriting, honouring a career spanning thirty films."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you start a screenplay? A: With the ending. Once I know the last image, I write backwards, and every scene has to earn its place."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How much of your script survived the shoot? A: About sixty percent. The director cut my favourite scene, but the film is better without it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from writer Nora Klein: one page of script is roughly one minute on screen, so a feature draft should run 90 to 120 pages."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Veteran TV writer Sam Okoye says: write your logline first. If you can't pitch the story in one sentence, the draft isn't ready."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "First-time writer wins Oscar for original screenplay. Leila Haddad's script about a family bakery in Beirut beat four veterans on Sunday night."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Writer sues studio over credit. Marcus Hale says he wrote the first three drafts of the hit thriller but was left out of the opening titles."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My neighbour wrote scripts for a soap opera for fifteen years. He told me he once had to kill off a character because the actor wanted a raise."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I sat next to a screenwriter at a cafe in Los Angeles who spent three hours on one line of dialogue. When he left, I peeked: it said 'Fine.'"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who co-wrote the screenplay for 'Pulp Fiction' with Roger Avary? Answer: Quentin Tarantino."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who wrote the Oscar-winning screenplay for 'Chinatown' (1974)? Answer: Robert Towne."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Leo, I finally finished the second draft of my screenplay! 104 pages. Could you read it and tell me if the third act drags?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Maya, guess what, a producer wants a meeting about my pilot script! I'm writing the pitch deck tonight."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This typewriter belonged to Dalton Trumbo, the blacklisted Hollywood writer of the 1950s who wrote 'Roman Holiday' under another writer's name."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Shooting script of 'Casablanca' (1942), by Julius and Philip Epstein and Howard Koch, whose lines include 'Here's looking at you, kid.'"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On Film Talk tonight, the woman who wrote this year's biggest thriller tells us how she plotted that twist. Lines open after the break."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the movie was great but the script fell apart in act three. Our guest, a screenwriting teacher, agrees the hero's motivation went missing."
+   }
+  ],
+  "topic:AutomobileEngine": [
+   {
+    "style": "text message",
+    "text": "Just swapped a Chevy small-block 350 into the truck 🔥 it sounds AMAZING"
+   },
+   {
+    "style": "text message",
+    "text": "Mechanic says the timing belt on the 1.6 TDI is due, ugh 400 quid"
+   },
+   {
+    "style": "press release",
+    "text": "Northline Motors today unveiled its new 2.0-litre turbocharged four-cylinder, which delivers 300 horsepower while cutting fuel use by 12 percent."
+   },
+   {
+    "style": "press release",
+    "text": "The company will stop building its V12 at the end of 2027, ending a sixty-year run for the twelve-cylinder unit."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the Wankel rotary special? A: No pistons going up and down. A triangular rotor spins inside a housing, so it revs smoothly and stays light."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why choose a flat-six for the car? A: Low centre of gravity. The cylinders lie horizontally, so the engine sits low in the chassis."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: change the oil in a direct-injection turbo motor every 5,000 miles; carbon builds up faster than in older designs."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If your engine knocks under hard acceleration, try higher-octane fuel and check the spark plugs before suspecting anything worse."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Legendary straight-six returns. The carmaker's new 3.0-litre inline-six revives a layout loved for its smoothness, now with a mild-hybrid starter."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Last diesel V8 rolls off the line. The 4.5-litre unit powered off-road wagons for 15 years before emission rules ended production."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad rebuilt a Volkswagen air-cooled flat-four on our kitchen table. Mum came home to pistons in the fruit bowl and nearly left him."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "The first time I opened the bonnet of an old Mini I couldn't believe it: the engine sat sideways, with the gearbox in the sump underneath."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: How many cylinders did the Ford Model T's 2.9-litre engine have? Answer: four."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: The twin-turbo 2JZ-GTE straight-six powered which famous Japanese sports car? Answer: the Toyota Supra (Mk IV)."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Raj, I finally got the old Jaguar XK engine running! Six cylinders, twin cams, and it purrs like nothing else. Come hear it this weekend."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lena, the check-engine light came on and the garage says it's a blown head gasket. Can I borrow your bike for a week?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Karl Benz's single-cylinder four-stroke engine powered the 1885 Motorwagen, generally considered the first practical automobile. It produced less than one horsepower."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Cutaway of a 1960s V8: notice the two banks of four cylinders arranged in a V, both driving a single crankshaft."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listen to that V10 scream as he comes past the pits! Nineteen thousand revs, you can feel it in your chest!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Car talk, callers: Steve says his Honda's VTEC isn't kicking in anymore. Steve, at what revs does it usually switch over?"
+   }
+  ],
+  "topic:Earthquake": [
+   {
+    "style": "text message",
+    "text": "Did u feel that?? whole building shook for like 20 sec 😳"
+   },
+   {
+    "style": "text message",
+    "text": "Magnitude 5.8 just hit near the coast, we're ok, just books on the floor. Power's out though"
+   },
+   {
+    "style": "press release",
+    "text": "The national seismological service reports a magnitude 6.4 quake at 03:12 local time, 18 km beneath the Aegean coast. No tsunami warning has been issued."
+   },
+   {
+    "style": "press release",
+    "text": "City officials announce that 40 schools will be retrofitted after last month's tremor exposed weaknesses in buildings constructed before 1980."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the shaking last so long? A: The fault ruptured along about 300 kilometres, so seismic waves kept arriving from different parts of it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Where were you when it hit? A: In the kitchen. Plates flew off the shelves, and I crawled under the table like we practised in school."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: during an earthquake, drop, cover and hold on. Get under a sturdy table and stay away from windows until the shaking stops."
+   },
+   {
+    "style": "how-to tip",
+    "text": "After the shaking stops, check for gas leaks before switching on lights, and expect aftershocks for days."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Magnitude 7.1 quake strikes off northern Japan. Coastal residents were told to move to higher ground as a precaution after the 10:42 shock."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Aftershock topples damaged buildings in mountain town. The 5.9 tremor followed Tuesday's main shock and hampered rescue work."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was in San Francisco in '89, at the World Series. The stadium swayed, and then everyone just went silent."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother lived through the 1976 Tangshan disaster. She said the ground roared like a train before the walls came down."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: The 1960 Valdivia earthquake in Chile holds what record? Answer: the most powerful ever recorded, at magnitude 9.5."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which magnitude scale, devised in 1935, became a household name for measuring quakes? Answer: the Richter scale."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, just letting you know we're all fine after the quake last night. Lots of cracks in the plaster, and the cat is hiding under the bed."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Joe, our trip to Kathmandu is still on. The guesthouse says the old town has mostly rebuilt since the 2015 earthquake."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1755 Lisbon earthquake, followed by a tsunami and fires, destroyed much of the city and shaped European philosophers' debates about natural disasters."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This seismograph trace records the 1906 San Francisco earthquake. The jagged line shows nearly a minute of violent shaking."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're getting reports - the studio is shaking - folks, we're feeling a tremor here live on air. Stay calm, we'll keep broadcasting."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers are describing last night's quake from all over the valley. Maria in Fresno says her pool sloshed right over the edge."
+   }
+  ],
+  "topic:SolarEclipse": [
+   {
+    "style": "text message",
+    "text": "TOTALITY 😭😭 the birds went quiet and I could see stars at 2pm"
+   },
+   {
+    "style": "text message",
+    "text": "Got the solar viewing glasses! Meet at the hill at 1:15, max coverage is 1:47, the Moon takes the whole Sun at 1:49"
+   },
+   {
+    "style": "press release",
+    "text": "The observatory will host free viewing events for the April 8 total eclipse, with solar telescopes and safe viewers for the first 500 visitors."
+   },
+   {
+    "style": "press release",
+    "text": "Tourism officials in northern Spain expect record visitors for the total eclipse of 12 August 2026, the first visible from mainland Spain since 1905."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does the Moon cover the Sun so exactly? A: Coincidence. The Sun is about 400 times wider, but also about 400 times farther away."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What surprised you most during totality? A: The 360-degree sunset. Every horizon glowed orange while overhead it was dark."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: never look at the partly covered Sun without certified ISO 12312-2 glasses; take them off only during the brief minutes of totality."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Make a pinhole viewer: poke a small hole in a card and project the crescent Sun onto paper held behind it."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Total eclipse darkens Mexico, US and Canada. Millions watched as the Moon blocked the Sun for up to four minutes along the path of totality."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ring of fire wows crowds in Patagonia. An annular eclipse turned the Sun into a glowing ring for more than six minutes on Wednesday afternoon."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We drove eight hours to Oregon for the 2017 eclipse. When the light went, the cows in the next field all lay down."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "As a kid I watched the Moon slide across the Sun through my dad's welding mask. The Sun looked like a green cookie with a bite taken out."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: When the Moon fully blocks the Sun, what is the pearly glow of the Sun's outer atmosphere called? Answer: the corona."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which kind of solar eclipse does a bright ring of the Sun remain visible around the Moon? Answer: an annular eclipse."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kate, next August's eclipse path crosses southern Spain and Egypt! Luxor gets over six minutes of totality. Fancy a trip?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, I photographed totality with your old telescope and caught the diamond ring just as the Sun came back! Attaching the best shot."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "In 1919, Arthur Eddington photographed stars near the eclipsed Sun from the island of Principe, confirming Einstein's prediction that gravity bends light."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ancient Chinese astronomers recorded solar eclipses more than 3,000 years ago, and court astrologers were expected to predict them."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, it's getting dark here in Carbondale, the streetlights just came on - and there it is, totality! Listen to that crowd!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning show callers: did the Moon blotting out the Sun live up to the hype? Linda in Dallas says it was cloudy until the last thirty seconds of totality."
+   }
+  ],
+  "topic:OlympicEvent": [
+   {
+    "style": "text message",
+    "text": "Women's 4x100 relay final is ON 🏃‍♀️ Jamaica in lane 5"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the men's 10m platform diving? China got 3 perfect tens on one dive 😱"
+   },
+   {
+    "style": "press release",
+    "text": "The International Olympic Committee confirms that breaking will not return to the programme in 2028 after its debut in Paris."
+   },
+   {
+    "style": "press release",
+    "text": "Organisers announce that the marathon swimming event will be held in the harbour, on a 10-kilometre course of four laps."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of the modern pentathlon? A: Five sports in one day. You fence in the morning, then swim, and finish with running and shooting."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the team pursuit work? A: Four riders, four kilometres on the track. The clock stops when the third rider crosses the line."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for watching the decathlon: follow the points table, not the placings. It's ten events, so one bad high jump can be made up in the javelin."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching Olympic sport climbing? In bouldering, look for the 'zone' holds; reaching one earns partial points even if the climber falls."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Skateboarding street final crowns 14-year-old champion. The teenager landed a final trick on the handrail to take gold."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Men's 100 metres decided by five thousandths of a second. A photo finish separated the top two in the closest final in Olympic history."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I had tickets for the beach volleyball at the Eiffel Tower in Paris. The DJ played between every rally, and the sand court glowed at night."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad watched the 1968 high jump when Dick Fosbury went over backwards. He said the whole stadium laughed, then gasped."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Olympic event involves throwing a 7.26-kilogram metal ball? Answer: the men's shot put."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which Olympic event do horses perform a 'piaffe'? Answer: dressage."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Zoe, I got two seats for the gymnastics team final in LA in 2028! Start practising your cartwheels."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dev, the canoe slalom course they built for the Games is open to the public now. Want to try it in August?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Tug of war was an Olympic event from 1900 to 1920. Teams of eight pulled a rope to drag their opponents six feet."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The marathon at the 1908 London Olympics set the now-standard distance of 26.2 miles, so the race could finish in front of the royal box."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And they're into the final lap of the 1500 metres, the Kenyan kicks, the Norwegian responds - it's going to the line!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the Olympic hour: should the Games keep the mixed medley relay in swimming? Our callers are split."
+   }
+  ],
+  "topic:CyclingRace": [
+   {
+    "style": "text message",
+    "text": "Paris-Roubaix today!! cobbles + rain = chaos 🚴💨"
+   },
+   {
+    "style": "text message",
+    "text": "Stage 17 is the big one, three cols and a summit finish. Watch party at mine?"
+   },
+   {
+    "style": "press release",
+    "text": "Organisers announce the route of the 2027 Tour of the Alps, featuring five stages and 14,000 metres of climbing."
+   },
+   {
+    "style": "press release",
+    "text": "The Grand Depart of next year's Vuelta will take place in Lisbon, with a 12-kilometre opening time trial along the river."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the Tour of Flanders so hard? A: The short cobbled climbs. You hit the Oude Kwaremont and the Paterberg near the end, when your legs are empty."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do riders dread the opening week of a Grand Tour? A: Nerves. Everyone wants to be at the front, and crashes happen on narrow roads."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for watching a mountain stage from the roadside: arrive hours early, park far away and bring layers; it's cold at the summit even in July."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Training for a sportive like the Etape du Tour? Ride long climbs at a steady pace and practise eating on the bike every 30 minutes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rain-soaked Milan-San Remo won by late attack on the Poggio. The rider escaped on the final climb and held off the sprinters by two seconds."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Women's Tour de France ends with summit finish on Alpe d'Huez. The yellow jersey changed hands on the race's final climb."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I stood on the Mur de Huy for the Fleche Wallonne. They came up that wall so slowly I could see their faces twisting."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were picnicking in Burgundy when the Tour came through. Twenty minutes of caravan throwing free sausages, then the peloton flew by in eight seconds."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What colour jersey does the leader of the Giro d'Italia wear? Answer: pink, the maglia rosa."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which one-day classic is nicknamed 'the Hell of the North'? Answer: Paris-Roubaix."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Josie, I signed up for the London to Brighton charity ride! 54 miles with Ditchling Beacon near the end. Will you sponsor me?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mark, I'll be at the Tour Down Under in Adelaide in January. The stage up Willunga Hill is the one to watch."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The first Tour de France, in 1903, covered 2,428 kilometres in just six stages. Riders raced through the night on heavy single-speed bicycles."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This maglia rosa was worn by Fausto Coppi in the 1949 Giro d'Italia, which he won after a famous solo attack over five Alpine passes."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Three kilometres to go on the final climb, the leader is out of the saddle, the gap is twenty seconds - can he hold it to the line?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the cycling show: is that new gravel race through Tuscany a classic in the making? Our guest rode it last weekend."
+   }
+  ],
+  "topic:HorseRace": [
+   {
+    "style": "text message",
+    "text": "Put a tenner on Midnight Comet for the 3:30 at Cheltenham 🐎 20 to 1!!"
+   },
+   {
+    "style": "text message",
+    "text": "We're at the Melbourne Cup, the hats are wild, the race is in 10 min"
+   },
+   {
+    "style": "press release",
+    "text": "The Jockey Club announces that prize money for this year's Grand National will rise to one million pounds, with the race off at 4 pm."
+   },
+   {
+    "style": "press release",
+    "text": "Organisers of the Dubai World Cup confirm a field of 12 runners for the $12 million showpiece at Meydan on Saturday night."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: When did you know your filly could win the Derby? A: She hit Tattenham Corner with plenty in hand. Epsom's camber suits a horse with balance."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you hold your mount back early? A: The pace was too fast. I waited on the rail and came wide in the final furlong."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for your first day at the races: check the going, since some horses love soft ground and others need it firm."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Reading a racecard: the figures before a horse's name show recent finishes, so '1-2-1' means a win, a second, then another win."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Outsider wins Kentucky Derby at 80-1. The colt came from near last with a rail-hugging ride to take the Run for the Roses."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Arc de Triomphe decided in photo finish. The filly edged the favourite by a nose at ParisLongchamp on Sunday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad took me to the Galway Races when I was six. I picked a horse because I liked its name, it won, and he never let me pick again."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked as a stable hand at Newmarket. On race mornings you'd plait manes at 5 am in the dark with frozen fingers."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which contest is known as 'the race that stops a nation'? Answer: the Melbourne Cup."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which three races make up the US Triple Crown? Answer: the Kentucky Derby, the Preakness Stakes and the Belmont Stakes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fran, Royal Ascot is in June! I've already bought my hat. The dress code is strict, so no shorts for Mike this time."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nico, the steeplechase at the local point-to-point is on Sunday. Bring wellies and a flask; it's always muddy."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Secretariat won the 1973 Belmont Stakes by 31 lengths, sealing the Triple Crown in a time that still stands as the race record."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Archer won the first Melbourne Cup in 1861 and again in 1862. According to legend, he walked hundreds of kilometres from his stable to Flemington."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And they're off! Royal Thunder breaks fast on the inside, Silver Fox tucked in third - into the home straight - and it's neck and neck!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Racing hour tonight: is the favourite really worth backing at 2-1 for Saturday's handicap, carrying top weight on soft ground?"
+   }
+  ],
+  "topic:Convention": [
+   {
+    "style": "text message",
+    "text": "At Comic-Con and the line for the Marvel panel is already 3 hours long 😩"
+   },
+   {
+    "style": "text message",
+    "text": "Badge pickup for the dental convention is in Hall C, meet you at the coffee cart"
+   },
+   {
+    "style": "press release",
+    "text": "TechNorth 2027, the region's largest gathering of software developers, will take place March 4-6 at the Exhibition Centre, with 300 speakers and 12,000 attendees expected."
+   },
+   {
+    "style": "press release",
+    "text": "The International Union of Model Railway Clubs announces that its annual convention will move to Leipzig this year, featuring a 40-metre layout."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What keeps people coming back to the anime con every year? A: Community. You spend months on a cosplay, and here it's finally seen by thousands of people who get it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's new on the show floor this year? A: Sustainable packaging and robot vacuums. We have 200 exhibitors and three keynote halls this weekend."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Con survival tip: wear comfortable shoes, carry a refillable water bottle, and plan your must-see panels the night before."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Exhibiting at a trade convention? Bring twice as many business cards as you think, and staff your booth with two people so one can take breaks."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Record crowd at comic convention in Lyon. More than 80,000 fans packed the exhibition halls over the weekend to meet artists and queue for signings."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Astronomy gathering draws amateur stargazers to the desert. Over three nights, 2,000 attendees shared telescopes and talks on dark skies."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first sci-fi con, I dressed as a Klingon and got stuck in the hotel lift with three Stormtroopers. Best two hours of my life."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "At the insurance convention in Las Vegas, my boss won a raffle for a jet ski and had no idea how to get it home."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which annual event, held in San Diego since 1970, is famous for its comic and film panels? Answer: San Diego Comic-Con."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: At which yearly science-fiction convention are the Hugo Awards presented? Answer: Worldcon."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lisa, I'm presenting a poster at the librarians' convention in Chicago! Any tips for not sounding nervous?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, booked the hotel for the knitting and stitching show in Harrogate. Three days of yarn stalls. Don't judge me."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The first World Science Fiction Convention, held in New York in 1939, drew about 200 fans. This programme booklet is one of the few that survive."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Photograph of a 1950s housewares convention in Chicago, where manufacturers showed new appliances to retailers across a vast exhibition hall."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live from the floor of the auto show, and folks, there's a huge crowd around that electric pickup!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, are you heading to the comic con this weekend? Tell us your cosplay and we'll give away two weekend passes."
+   }
+  ],
+  "topic:Election": [
+   {
+    "style": "text message",
+    "text": "Polls close at 8!! did you vote yet?? 🗳️"
+   },
+   {
+    "style": "text message",
+    "text": "Exit poll says hung parliament 😬 staying up for the results"
+   },
+   {
+    "style": "press release",
+    "text": "The Electoral Commission confirms that the general election will be held on 7 May, with polling stations open from 7 am to 10 pm."
+   },
+   {
+    "style": "press release",
+    "text": "Turnout in yesterday's municipal vote reached 68 percent, the highest since 1994, according to official figures released this morning."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the opposition win so many rural seats? A: Fuel prices. Voters outside the cities felt ignored, and they turned out in large numbers."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does a runoff work? A: If nobody wins a majority in the first round, the top two candidates face each other two weeks later."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip: check your registration a month before polling day, and look up your polling place online so you're not searching that morning."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Voting by mail? Sign the envelope exactly as on your registration, and post it at least a week before the deadline."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Incumbent mayor defeated by 312 votes. A recount confirmed the challenger's narrow victory in Tuesday's city poll."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Record turnout in India's general election. More than 640 million people cast ballots over six weeks of voting."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother voted in South Africa's 1994 election. She queued for nine hours and said it was the best day of her life."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I volunteered as a poll worker last November. One man brought his dog into the booth and asked if the dog could vote too."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which country, in 1893, became the first to let women vote in national elections? Answer: New Zealand."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In the 2000 US presidential race, which state's recount decided the result? Answer: Florida."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Omar, are you running for student council? I'll make posters if you do. Voting is next Friday."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jen, the council vote is Thursday. The candidate who wants to close the library is ahead in the polls, so please go and vote!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This wooden ballot box was used in Finland's 1907 parliamentary election, the first in Europe in which women could both vote and stand; 19 women were elected."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Campaign buttons from the 1960 US presidential race between John F. Kennedy and Richard Nixon, decided by about 112,000 popular votes."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Results are coming in from the eastern districts, and folks, the challenger is up eight points! This race is tighter than anyone predicted!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Election night on the radio: the polls have closed, the count has begun, and our panel is ready to call the first seats."
+   }
+  ],
+  "topic:FilmFestival": [
+   {
+    "style": "text message",
+    "text": "Just saw the new Iranian film at TIFF and the room gave it a standing ovation, I'm shaking 😭"
+   },
+   {
+    "style": "text message",
+    "text": "Cannes red carpet tonight 👗 are you watching the stairs livestream?"
+   },
+   {
+    "style": "press release",
+    "text": "The Rotterdam International Film Festival announces its Tiger Competition lineup: 14 first and second features from 18 countries."
+   },
+   {
+    "style": "press release",
+    "text": "The Sundance Film Festival will move to Boulder, Colorado, from 2027, ending its long run in Park City, Utah."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why premiere your documentary at a small festival? A: The audience there really watches. At the big ones, buyers walk out after twenty minutes."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like serving on the jury? A: Four films a day and long arguments over dinner. We gave the top prize to a film none of us expected to love."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Festival tip: buy a pass, see films by directors you've never heard of, and stay for the Q&A; that's where the magic happens."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Submitting a short to festivals? Read each one's premiere rules carefully; many top programmes accept world premieres only."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Palme d'Or goes to first-time director. The jury praised the Senegalese drama's quiet power at the closing ceremony in Cannes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Venice opens with star-studded premiere on the Lido. Photographers crowded the red carpet as the 83rd edition got under way."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "At the Berlinale it was minus ten and I queued at 7 am for tickets. Watched five films in one day and dreamed in subtitles."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We run a tiny film festival in our village hall. Last year a director from Lagos came, and we fed her shepherd's pie."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is the top prize at the Berlin International Film Festival called? Answer: the Golden Bear."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which is the world's oldest film festival, first held in 1932? Answer: the Venice Film Festival."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ines, my short got into Clermont-Ferrand! The screening is in February. Will you come to France?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Max, the Busan festival schedule is out. I circled six Korean premieres. Shall we split tickets?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The first Cannes Film Festival was planned for September 1939 but cancelled when war broke out; it finally opened in 1946."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Golden Lion awarded to Akira Kurosawa's 'Rashomon' at Venice in 1951 introduced Japanese cinema to Western audiences."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live from opening night - crowds are lining the waterfront and here comes the director of the opening film!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Movie talk, callers: who should take the jury prize this year? Our critic loved the Chilean western."
+   }
+  ],
+  "topic:MilitaryConflict": [
+   {
+    "style": "text message",
+    "text": "Watching a doc on the Battle of Stalingrad, can't believe how cold it was 😳"
+   },
+   {
+    "style": "text message",
+    "text": "History essay due Fri on why Britain, France and Russia fought in Crimea in the 1850s, help!!"
+   },
+   {
+    "style": "press release",
+    "text": "The museum announces a new exhibition on the Thirty Years' War, opening in March, featuring letters from soldiers and civilians caught up in the conflict."
+   },
+   {
+    "style": "press release",
+    "text": "The ministry announces a commemoration on 14 June for veterans of the 1982 Falklands War, marking the anniversary of the Argentine surrender."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the Hundred Years' War last so long? A: It wasn't continuous fighting. Long truces separated campaigns, and the disputed claim to the French throne kept reviving it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was daily life like in the trenches in 1916? A: Mud, rats and boredom, broken by terrifying bombardments."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Revision tip: for any conflict on your exam, make a timeline with three columns: causes, key battles, and the peace settlement."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Gettysburg? Start with the cyclorama at the visitor centre, then drive the auto tour to see how the three days of fighting unfolded."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Divers locate Armada wreck off Irish coast. The ship, lost in 1588 as the Spanish fleet fled north around Scotland, lies in 20 metres of water."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Study revises toll of the Thirty Years' War. Researchers estimate the 1618-1648 conflict killed up to a third of the population in parts of Germany."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather fought in Korea. He never talked about it, except to say he'd never been as cold in his life as at the Chosin Reservoir."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-aunt was a nurse in the Spanish Civil War. She said they ran out of bandages and tore up a hotel's curtains."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which conflict between Britain and its American colonies was ended by the Treaty of Paris in 1783? Answer: the American Revolution."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which conflict was the Battle of Hastings fought in 1066? Answer: the Norman Conquest of England."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tom, I'm reading a great book on the Peloponnesian War between Athens and Sparta. Thucydides would have made an amazing journalist."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ana, we visited the Normandy beaches today. Standing on Omaha Beach, where the 1944 landings happened, was so moving."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Battle of Agincourt, 1415: English longbowmen helped Henry V defeat a much larger French army on a muddy field."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This drum was carried during the Napoleonic Wars at Austerlitz in 1805, where Napoleon defeated the armies of Austria and Russia."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On History Hour tonight: why did the fighting in Vietnam divide a generation? Our guest served two tours there and later became a historian."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller asks how the Wars of the Roses got their name. Our guest says the label came much later, popularised by Shakespeare and Victorian writers."
+   }
+  ],
+  "topic:MusicFestival": [
+   {
+    "style": "text message",
+    "text": "Glasto line-up just dropped!!! 😱 need to get tickets this time"
+   },
+   {
+    "style": "text message",
+    "text": "At Coachella, phone at 5%, meet at the big ferris wheel after the headliner"
+   },
+   {
+    "style": "press release",
+    "text": "Northern Lights Festival announces its 2027 lineup: 60 artists across four stages over three days in July, with camping on site."
+   },
+   {
+    "style": "press release",
+    "text": "Roskilde Festival confirms that all its profits will again go to charity, continuing a tradition that dates back decades."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you book a headliner for a small weekend event like yours? A: You ask a year in advance and pray. We got our biggest name because she played here as a teenager."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the best part of playing the main stage? A: The crowd at sunset. Twenty thousand people singing the chorus back at us."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Festival tip: bring earplugs, a portable charger and wellies, and agree on a meeting point in case phones die."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Camping for three days of live music? Pitch your tent near a landmark flag, not by the toilets, and set it up before the first band."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mud can't stop Glastonbury crowds. Fans braved downpours to watch the Pyramid Stage headliners on Saturday night."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Montreux Jazz Festival opens its 60th edition. The lakeside event, founded in 1967, welcomes artists from 30 countries over two weeks."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "At my first big outdoor gig weekend I lost my friends, my shoes and my voice, but I found a stranger's brass band at 3 am and danced until sunrise."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My parents met at the Isle of Wight Festival in 1970. Dad still keeps the ticket in his wallet."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which US state did Woodstock take place in 1969? Answer: New York, near Bethel."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Belgian electronic music festival is famous for its elaborate fantasy stage designs? Answer: Tomorrowland."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jess, I got two weekend passes for Primavera Sound in Barcelona! Pack light, the shows go till 5 am."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dom, the Cambridge Folk Festival has a ceilidh tent this year. You're coming, and you're dancing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1969 Woodstock Music and Art Fair drew some 400,000 people to a dairy farm. This poster, with a bird perched on a guitar neck, became its symbol."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Fuji Rock Festival, held since 1997 and now staged at a ski resort in Niigata, brings international bands to the Japanese mountains every summer."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're live backstage by the Pyramid Stage, the headliner's about to walk on, and you can hear sixty thousand people chanting!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the music show: best set in a field this summer? Callers are saying the reggae stage on Sunday afternoon."
+   }
+  ],
+  "topic:FootballMatch": [
+   {
+    "style": "text message",
+    "text": "2-2 in the 90th and they score AGAIN 😱 what a game"
+   },
+   {
+    "style": "text message",
+    "text": "Kick-off 3pm, meet at the pub at 1. Derby day!!"
+   },
+   {
+    "style": "press release",
+    "text": "The club confirms that Saturday's home fixture against Rovers has been moved to Sunday at 4:30 pm for live television coverage."
+   },
+   {
+    "style": "press release",
+    "text": "Tickets for the cup final at the national stadium go on general sale Monday; each finalist receives an allocation of 30,000."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What changed after the red card? A: We went to four at the back and sat deeper. With ten men you have to pick your moments to counter."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel to score in your first derby? A: Unreal. I heard the noise before I saw the ball hit the net."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a game at the stadium? Arrive 45 minutes early for the warm-ups and the atmosphere before kick-off."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip for following a game on the radio: jot down both line-ups, so you can picture who's where when the commentator calls it."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ten-man side holds on for famous win. A first-half header proved enough despite a red card after the break in Saturday's 1-0 victory."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Germany stun hosts Brazil 7-1 in World Cup semi-final. Four goals in six first-half minutes left the Belo Horizonte crowd in tears."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at the 2005 Champions League final in Istanbul. 3-0 down at half-time, and then Liverpool came back. We sang until we lost our voices."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our Sunday game ended 9-8 because both keepers went to get chips at half-time and never really came back."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which country won the 1966 World Cup final 4-2 after extra time at Wembley? Answer: England."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who scored the 'Hand of God' goal in the 1986 quarter-final against England? Answer: Diego Maradona."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Carlos, I got us tickets for the derby next Sunday! We're in the away end, so wear neutral colours on the walk."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sara, did you see the game last night? Penalties after a 3-3 draw. I watched the shootout through my fingers."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The first official international football match, between Scotland and England, was played in Glasgow in 1872 and ended 0-0."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This ball was used in the 1950 World Cup decider at the Maracana, where Uruguay beat Brazil 2-1 in front of about 200,000 spectators."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's through on goal, one on one with the keeper - he chips it - GOAL! The away fans are going wild!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Full-time phone-in: that was a dreadful 0-0, wasn't it? Callers, who was to blame, the referee or the strikers?"
+   }
+  ]
+ }
+}

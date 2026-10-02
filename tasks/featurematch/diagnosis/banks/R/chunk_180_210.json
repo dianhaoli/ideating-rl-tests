@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:RailwayLine": [
+   {
+    "style": "text message",
+    "text": "Train on the Settle-Carlisle just stopped on Ribblehead viaduct for ten min, views are unreal. Be in Carlisle by 4."
+   },
+   {
+    "style": "text message",
+    "text": "Heads up, the Glacier Express route is closed past Andermatt today because of snow. Taking the replacement bus instead."
+   },
+   {
+    "style": "press release",
+    "text": "Northern Valley Rail announces that the 42-mile Ashford to Kellby branch will reopen to passengers on 1 June after a two-year electrification project, with half-hourly trains between both towns."
+   },
+   {
+    "style": "press release",
+    "text": "The Ministry of Transport today confirmed funding to double the single-track section of the Coastal Line between Port Elmer and Haverstone, cutting journey times by twelve minutes."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the Bernina route climb so steeply without a rack? A: The engineers held the gradient to seven percent, steep but still manageable for ordinary adhesion trains."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was hardest about reopening the old Waverley route? A: Rebuilding thirty miles of trackbed that had been fields and footpaths for forty years."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Riding the Trans-Siberian from Moscow to Vladivostok? Book a second-class compartment, pack instant noodles, and use the hot-water samovar at the end of every carriage."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want the best views on the West Highland Line? Sit on the left leaving Glasgow so you get Loch Lomond and then the Glenfinnan viaduct."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Branch line to Dunmore closes after 112 years. The last scheduled passenger train left Dunmore Junction at 18:40 on Sunday, ending service on the single-track route opened in 1912."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "High-speed link between Lyon and Turin passes tunnel milestone. Crews broke through the final section of the base tunnel, keeping the new railway on course for a 2032 opening."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather was a signalman on the old Somerset and Dorset, and he'd tell us how the summer expresses came over the Mendips with two engines puffing like mad."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So we took the toy train up to Darjeeling, and the track literally does zigzags and loops, and kids kept hopping on and off while it was moving."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which railway line, completed with a golden spike at Promontory Summit, Utah, in 1869, first linked the eastern and western rail networks of the United States?"
+   },
+   {
+    "style": "trivia question",
+    "text": "On which Swiss mountain railway line does the train tunnel through the Eiger to reach Jungfraujoch, Europe's highest station at 3,454 metres?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Maya, I finally rode the Flam railway! Twenty kilometres down from Myrdal, waterfalls everywhere, and the train even stops so you can photograph Kjosfossen. You'd love it. Tom"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Raj, the commuter line through our town gets a new timetable in March, trains every 15 minutes into the city. Might finally ditch the car!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Liverpool and Manchester Railway, opened in 1830, was the first inter-city line worked entirely by steam locomotives to a fixed public timetable."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This cast-iron milepost once stood beside the Darjeeling Himalayan Railway, a two-foot-gauge line climbing more than 2,000 metres from the plains to the hill station."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Travel news now: the Brighton main line is still disrupted after a signal failure at Three Bridges, so expect delays of up to forty minutes into Victoria."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers are furious about the Hudson Line this morning, third straight day of late trains out of Poughkeepsie. Bill from Yonkers, you're on the air."
+   }
+  ],
+  "topic:Road": [
+   {
+    "style": "text message",
+    "text": "Taking the A82 up past Loch Lomond, it's twisty so might be late. Fuel up before Crianlarich!"
+   },
+   {
+    "style": "text message",
+    "text": "Route 66 day 3: just passed the Blue Whale in Catoosa lol, next stop the Oklahoma line"
+   },
+   {
+    "style": "press release",
+    "text": "The County Highways Department announces that resurfacing of Mill Lane between Oakfield and Barnsley Cross will begin Monday, with overnight closures for two weeks."
+   },
+   {
+    "style": "press release",
+    "text": "Transport officials today opened the widened stretch of Highway 17 between Cedar Falls and Lakeport, adding a third lane in each direction and two new interchanges."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the Stelvio Pass so famous? A: Forty-eight hairpin bends on the northern side alone, climbing to 2,757 metres. Cyclists and drivers treat it as a pilgrimage."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is there a gap in the Pan-American Highway? A: The Darien jungle between Panama and Colombia was never paved, so the road simply stops there."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Driving the Great Ocean Road? Head west from Torquay so you're on the ocean side and can pull into the Twelve Apostles lookouts easily."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On Iceland's Ring Road, fill up whenever you see a station in the east; the gaps between pumps can be more than 100 km."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Coast road reopens after landslide. The B3306 between St Ives and Zennor reopened Friday after crews cleared tons of rock that had blocked both lanes for three weeks."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "City renames Elm Street after civil-rights leader. The two-mile avenue will be known as Ruth Carver Boulevard from January, with new signs going up next month."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We drove the Going-to-the-Sun Road in Glacier and my mom refused to look out the window the whole way up, just stared at her shoes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Growing up, the old Post Road was the only way into town. Gravel, potholes, and every spring it flooded right by the Pike farm."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which ancient Roman road ran from Rome to Brindisi and was nicknamed the 'queen of roads'?"
+   },
+   {
+    "style": "trivia question",
+    "text": "What is the name of the highway system that runs roughly 30,000 km from Prudhoe Bay, Alaska, toward Ushuaia, Argentina?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Sam! We did the North Coast 500 last week. Single-track stretches with passing places, sheep everywhere, and the Bealach na Ba climb nearly killed the clutch."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lena, quick warning if you're driving up Saturday: the county road past the quarry is closed, so take Ridge Avenue instead."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Appian Way, begun in 312 BC by Appius Claudius, was built from layered stone and gravel and carried Roman legions southeast toward Capua."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This milestone marked the National Road, the first federally funded highway in the United States, begun at Cumberland, Maryland, in 1811."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the Isle of Man, the bikes are screaming down the Mountain Road toward Creg-ny-Baa, absolutely flying through Kate's Cottage!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic update: the 405 northbound is parked from the Getty Center to Mulholland, so give yourself an extra half hour."
+   }
+  ],
+  "topic:RoadTunnel": [
+   {
+    "style": "text message",
+    "text": "Stuck in the queue for the Gotthard again, 7 km backup before the Goschenen portal. Pack snacks next time"
+   },
+   {
+    "style": "text message",
+    "text": "Just came out from under Mont Blanc, 11 km of orange lights and the Italian side is sunny!"
+   },
+   {
+    "style": "press release",
+    "text": "The Highways Authority announces that the eastbound bore of the Kingsgate Tunnel will close nightly from 10 pm to 5 am through October for ventilation upgrades."
+   },
+   {
+    "style": "press release",
+    "text": "Norway's road administration has opened the Ryfylke Tunnel, a 14.4 km subsea crossing reaching 292 metres below sea level, replacing a ferry near Stavanger."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why are there blue-lit caverns halfway through Laerdal? A: At 24.5 km, drivers get drowsy, so designers added three lit caves to break up the monotony."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was the hardest problem in building the Holland Tunnel? A: Ventilation. Clifford Holland designed huge fans to clear car exhaust from under the Hudson."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Before driving into a long alpine bore, switch on your headlights, tune to the radio frequency posted at the portal, and keep 150 metres from the car ahead."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If your car breaks down underground, pull into the nearest lay-by, switch off the engine, and walk to the emergency phone niche."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fire shuts Mont Blanc crossing for hours. A lorry fire Tuesday forced authorities to close the 11.6 km link between Chamonix and Courmayeur; no injuries were reported."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Toll cut for harbour crossing. Drivers using Hong Kong's Cross-Harbour Tunnel will pay less from next month under a new government traffic plan."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First time I drove the Eisenhower Tunnel I tried holding my breath like a kid, and it's almost two miles long, so that did not work out."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad used to honk in the Sydney Harbour Tunnel every single time, just to hear it echo, and Mum would roll her eyes."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which road tunnel in Norway, opened in 2000, is the longest in the world at 24.5 kilometres?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which crossing beneath the Hudson River, opened in 1927, was the first mechanically ventilated underwater roadway for cars?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo, we drove through the Frejus on the way to Turin. Thirteen kilometres of orange lights and the kids counted the emergency bays. Cost us 50 euros, ouch."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Priya, the Blackwall approach was jammed so badly we turned round and went under the river at Rotherhithe instead. Late again, sorry!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Gotthard Road Tunnel opened in 1980. At 16.9 km, it runs beneath the Gotthard Pass between Goschenen and Airolo, carrying traffic all year round."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This cutting head comes from Bertha, the boring machine that dug Seattle's underground State Route 99, which replaced the Alaskan Way Viaduct."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Bridge and tunnel report: the Lincoln Tunnel center tube is running inbound only, with 35-minute delays at the helix."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Traffic news: the Clyde Tunnel southbound is down to one lane after a breakdown, and the queue is back to Whiteinch."
+   }
+  ],
+  "topic:ArtificialSatellite": [
+   {
+    "style": "text message",
+    "text": "Look up at 9:42, the ISS passes right over us, brightest thing in the sky!"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see the Sentinel-2 image of the flood near our town? It's wild how clear it is"
+   },
+   {
+    "style": "press release",
+    "text": "AstroLink today announced the successful launch of NovaSat-3, an Earth-observation spacecraft that will image farmland at three-metre resolution from a 550 km sun-synchronous orbit."
+   },
+   {
+    "style": "press release",
+    "text": "The European Space Agency confirms that its weather satellite MTG-I1 has returned its first images from geostationary orbit 36,000 km above the equator."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did Sputnik 1 actually do? A: It beeped. A polished sphere with four antennas, broadcasting radio pulses for 21 days in 1957."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Hubble still working after 35 years? A: Astronauts serviced it five times, swapping gyroscopes, cameras and batteries right there in orbit."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To spot a Starlink train, check a pass-predictor app an hour after sunset and look for a string of moving dots in a straight line."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to pull NOAA weather pictures yourself? A cheap SDR dongle and a V-dipole antenna tuned near 137 MHz will catch them."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Aging GPS craft retired after 27 years. Operators boosted it into a graveyard orbit Thursday, ending one of the longest careers in the navigation constellation."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Student-built CubeSat reaches orbit. A 10-centimetre cube designed by engineering students at Kellner University is sending telemetry after deploying from the space station."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle worked on Telstar back in '62, and he swore the first live TV picture across the Atlantic made grown men cry in the control room."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were camping and this bright flare lit up for a few seconds, and my friend just said 'Iridium flare' like it was nothing."
+   },
+   {
+    "style": "trivia question",
+    "text": "What was the name of the first artificial satellite, launched by the Soviet Union on 4 October 1957?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which American satellite, launched in January 1958, detected the Van Allen radiation belts?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ben, the new Landsat 9 imagery of our valley is out and you can actually see the reservoir filling. Sending you the link!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Kate, guess what, my team's payload is going up on the next rideshare launch. It's a shoebox-sized satellite that listens for ship radio signals."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This is a flight spare of Vanguard 1, launched in 1958. The grapefruit-sized satellite is the oldest human-made object still in orbit."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Syncom 3 (1964) was the first geostationary communications satellite, relaying television of the Tokyo Olympics across the Pacific."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And we have liftoff! The Falcon 9 carrying the new broadband satellite clears the tower, beautiful launch out of the Cape."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, if tonight's game feed glitched, blame the sun. Our signal bounces off a satellite parked over the equator, and twice a year the sun lines up right behind it."
+   }
+  ],
+  "topic:Town": [
+   {
+    "style": "text message",
+    "text": "Made it to Hay-on-Wye! Literally a bookshop on every corner, staying the night"
+   },
+   {
+    "style": "text message",
+    "text": "We're in Hallstatt, so many tourists but the lake is gorgeous"
+   },
+   {
+    "style": "press release",
+    "text": "The Town Council of Bridgeford is pleased to announce its annual Harvest Fair on 14 September, with a farmers' market, brass band and the reopening of the restored market hall."
+   },
+   {
+    "style": "press release",
+    "text": "Millbrook, a town of 8,400 on the Severn, has been awarded Fairtrade status, joining forty other communities in the region."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What keeps people in Ely, Nevada? A: Jobs at the copper mine, the railroad museum, and honestly the quiet. Everybody knows everybody."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did your town end up famous for pottery? A: Clay from the riverbank. Potters moved here in the 1800s and three kilns are still firing."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Rothenburg ob der Tauber? Walk the medieval wall at sunset and stay overnight, after the day-trippers leave."
+   },
+   {
+    "style": "how-to tip",
+    "text": "In Cotswold spots like Chipping Campden, park at the edge and walk in; the high street fills up by 10 am."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Small town votes to keep its post office. Residents of Ashby Creek packed the community hall Tuesday to oppose closing the branch, which has served them since 1891."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Market town gets its first bypass. Lorries will no longer rumble through Wickley's narrow high street once the three-mile road opens next week."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I grew up in Marfa, Texas, population maybe 1,800, and the big excitement was driving out at night to look for the mystery lights."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stopped in Woodstock, Vermont, and the guy at the general store gave us free cider because we looked so cold."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Welsh town on the River Wye is famous for its secondhand bookshops and annual literary festival?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Austrian lakeside town is so popular that a full-scale replica of it was built in China?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, we've moved to Totnes! Hilly little place with a castle, a Friday market, and far too many crystal shops. Come visit!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mark, Ballymena, where Grandma lived, has a new leisure centre where the old mill used to be. Barely recognized the place."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Deadwood, South Dakota, grew from a gold-rush camp in 1876 into a busy town with banks, a theater and a Chinese quarter."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Market charter of 1227 granting the town of Thame a weekly market and annual fair, both of which still take place today."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming to you live from Cooperstown, where all of Main Street is a sea of jerseys for induction weekend!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And Hoosick Falls High, from a town of maybe three thousand, just knocked off the state champs! The whole town will be out on Main Street tonight."
+   }
+  ],
+  "topic:Village": [
+   {
+    "style": "text message",
+    "text": "Staying in a tiny village in the Lake District, one pub, one shop, zero signal"
+   },
+   {
+    "style": "text message",
+    "text": "Grandma says the fete is Saturday on the green, she entered her damson jam again lol"
+   },
+   {
+    "style": "press release",
+    "text": "Residents of Lower Slaughter are invited to celebrate the reopening of the village hall on Saturday, following a two-year community fundraising effort."
+   },
+   {
+    "style": "press release",
+    "text": "The parish council of Bibury announces new parking restrictions near Arlington Row to protect the historic weavers' cottages."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How many people live in Giethoorn? A: About 2,600. There are no roads in the old center, just canals and little footbridges."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like running the only shop in Kilnsey? A: You're the post office, the cafe and the gossip line all at once."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Oia on Santorini? Get there two hours before sunset to claim a spot by the castle ruins."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hiking the Cinque Terre? Buy the card that covers the train between the five villages and start early from Riomaggiore."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hamlet celebrates 800 years. Hutton-le-Hole in North Yorkshire marked the anniversary with a medieval fair on its sheep-grazed green."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Last shop in Glenfarra closes. The Highland settlement, home to 140 people, must now drive 20 miles for groceries."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mum's from a village in Kerala, and when we visit, every single person knows I'm 'Leela's son from abroad.'"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In my grandmother's village in Poland there was one bus a day, and if you missed it you walked or hitched a ride with the milk truck."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which village in Anglesey, Wales, has a 58-letter name, the longest place name in Europe?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Dutch village is nicknamed the 'Venice of the Netherlands' because it has canals instead of streets?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Claire, we found the cutest place near Bath, Castle Combe: stone cottages, a market cross, a brook under the bridge. You'd want to move there."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, Dad's village in Crete finally has a paved road. The old men in the kafeneio are not happy about it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Skara Brae, on Orkney, is a Neolithic settlement of stone houses with built-in dressers and beds, occupied from about 3180 to 2500 BC."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The salt-mining village of Hallstatt gave its name to an early Iron Age culture, thanks to finds from the cemetery above the lake."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Live from the green at Upper Dean, where the whole village has turned out for the duck race on the brook, and number 47 is leading!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Little Wenlock says they've had no water since Tuesday. Margaret, you're on, how are folks coping out there?"
+   }
+  ],
+  "topic:CricketGround": [
+   {
+    "style": "text message",
+    "text": "At Lord's! Pavilion side, sun's out, Root's batting"
+   },
+   {
+    "style": "text message",
+    "text": "MCG crowd is massive today, 90k for Boxing Day"
+   },
+   {
+    "style": "press release",
+    "text": "Trent Bridge will host the second Test against India in July, the Nottingham venue's latest Test since its first in 1899."
+   },
+   {
+    "style": "press release",
+    "text": "The county club announces a 12-million-pound redevelopment of its Ashbrook Road ground, including a floodlit stand and an indoor nets centre."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Is the Lord's slope really that big? A: About eight feet from the Grandstand side to the Tavern side, and seam bowlers love it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's special about the Eden Gardens crowd? A: Sixty-odd thousand people and every one of them has an opinion on your field placings."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At the Oval, bring a cushion for the old stands and arrive early to watch the warm-ups by the Vauxhall End."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching a Test at Galle? Climb the ramparts of the old Dutch fort for a free view across the outfield."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Headingley lands Ashes opener. The Leeds venue will stage the first Test next summer after completing upgrades to its Football Stand."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rain washes out day four at Old Trafford. Not a ball was bowled in Manchester as the covers stayed on all day."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at the Wanderers for the 438 game, and when Boucher hit the winning runs the whole Bullring just exploded."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad took me to Chepauk as a kid, and the sea breeze came in at four o'clock exactly, every day, like he promised it would."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which cricket ground in St John's Wood, London, is known as the 'Home of Cricket'?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Australian ground traditionally hosts the Boxing Day Test?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dev, got us tickets for the Test at the Gabba. Bring sunscreen, the hill there is brutal."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Jamie, the village ground behind the Swan needs volunteers to roll the square on Sunday. You in?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Lord's has hosted cricket at St John's Wood since 1814; its Media Centre (1999) was the first all-aluminium semi-monocoque building in the world."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Sydney Cricket Ground's Members' Pavilion, built in 1886, still features its original iron lacework and green-and-white clock."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Lovely morning here at the Oval, gasholder in the background, and Anderson running in from the Vauxhall End."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big crowd at Newlands, Table Mountain wearing its tablecloth of cloud, and the Proteas need 47 to win."
+   }
+  ],
+  "topic:GolfCourse": [
+   {
+    "style": "text message",
+    "text": "Teeing off on the Old Course at 7:10!!! Can't believe we got the ballot"
+   },
+   {
+    "style": "text message",
+    "text": "Shot 92 at Pebble today, lost three balls on 8 lol"
+   },
+   {
+    "style": "press release",
+    "text": "Whistling Pines Golf Club announces the reopening of its 18-hole championship layout after a redesign by architect Lena Morris, with rebuilt greens and restored native dunes."
+   },
+   {
+    "style": "press release",
+    "text": "Royal Portrush confirms it will host the Open again, returning to the Dunluce Links on the Antrim coast."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the 17th at Sawgrass so hard? A: It's an island green. You hit it or you're in the water, no bailout."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Augusta National full of azaleas? A: The land was a plant nursery called Fruitland before Bobby Jones built the course there in 1933."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Playing links golf at Carnoustie? Keep the ball low under the wind and putt from off the green; the fairways run firm."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Bethpage Black, book a tee time through the state system and take the warning sign at the first tee seriously."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Historic club to rewild back nine. Hollins Park will turn nine holes into wetland meadow while keeping a nine-hole layout for members."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Augusta lengthens the 13th. The famous par five gains 35 yards ahead of next April's Masters."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I caddied at Muirfield one summer, and an old member told me the wind off the Firth had cost him about four hundred balls."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We played this nine-holer in Iceland at midnight, in full daylight, with arctic terns dive-bombing us on every tee."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which golf course in Georgia hosts the Masters every April?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Scottish links is known as 'the Home of Golf'?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rob, booked us a round at Kiawah's Ocean Course next month. Bring extra balls, the marsh eats them."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sue, the municipal course by the river finally fixed its bunkers. Saturday morning nine?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Swilcan Bridge crosses the burn between the first and eighteenth fairways of the Old Course at St Andrews and is at least 700 years old."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Pinehurst No. 2, designed by Donald Ross in 1907, is known for crowned, turtleback greens that shed shots to the edges."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's on the 18th at Pebble Beach, the Pacific crashing on the left, and he's going for it in two!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Amen Corner claims another victim, it's in Rae's Creek on 12, and the patrons groan."
+   }
+  ],
+  "topic:Stadium": [
+   {
+    "style": "text message",
+    "text": "We're at Wembley! Gate G, row 28, the arch looks huge from here"
+   },
+   {
+    "style": "text message",
+    "text": "Camp Nou tour tomorrow at 10, don't be late"
+   },
+   {
+    "style": "press release",
+    "text": "The city of Rivermouth announces construction of a 42,000-seat stadium on the former docklands site, due to open for the 2028 season with a retractable roof."
+   },
+   {
+    "style": "press release",
+    "text": "The Green Bay Packers announced Monday that Lambeau Field will add 1,200 seats and new video boards ahead of next season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Azteca so loud? A: The bowl is steep and enclosed, and with 87,000 people inside, the sound bounces straight back onto the pitch."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the grass survive at Tottenham's ground? A: The pitch slides out in three trays, so it lives outside while the NFL plays on artificial turf underneath."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to Fenway Park? Arrive when the gates open to watch batting practice, and grab Green Monster seats if you can."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Signal Iduna Park, only join the Sudtribune standing terrace if you're ready to sing for ninety minutes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ground closes after 60 years. The final match at Brookfield Stadium drew 31,000 fans before demolition begins next month."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Maracana named host of final. Rio's famous arena will stage the championship game for the third time."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at Anfield for the Barcelona comeback, and when the corner was taken quickly the whole Kop went silent for half a second before erupting."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first game at Wrigley, I was seven, and a guy in the bleachers threw back an opponent's home run ball and everyone cheered him."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which stadium in Rio de Janeiro hosted the World Cup finals of 1950 and 2014?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which London venue, topped by a 133-metre arch, is the largest stadium in the UK?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lucas, we got tickets at the Bernabeu! The new roof looks incredible. Meet at Nuevos Ministerios at 7?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, Monument Park was the best part of the Yankee Stadium tour. You've got to see it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Panathenaic Stadium in Athens, rebuilt for the 1896 Olympics, is the only major stadium in the world built entirely of marble."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Beijing's National Stadium, the 'Bird's Nest', used 42,000 tonnes of steel for its lattice and hosted the 2008 Olympic ceremonies."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Sold out here at Arrowhead, it's deafening, this place once hit 142 decibels and they're going for it again today!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Back at the Bernabeu, the roof is closed and the place is a cauldron, eighty thousand whistling every Barcelona touch."
+   }
+  ],
+  "topic:RailwayStation": [
+   {
+    "style": "text message",
+    "text": "Meet you under the clock at Grand Central at 6"
+   },
+   {
+    "style": "text message",
+    "text": "Missed my train at Clapham Junction, next one in 12 min"
+   },
+   {
+    "style": "press release",
+    "text": "Network Rail announces that the refurbished concourse at Leeds station will open on Monday, with new step-free access to all platforms."
+   },
+   {
+    "style": "press release",
+    "text": "Deutsche Bahn has completed the renovation of Leipzig Hauptbahnhof's west hall, restoring its 1915 glass roof."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does St Pancras have such an enormous roof? A: William Barlow's train shed was the largest single-span roof in the world when it opened in 1868."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Is Shinjuku really the busiest station on earth? A: Over three million passengers a day and around 200 exits. So yes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Paris Gare du Nord, go through the Eurostar gates early; boarding closes 30 minutes before departure."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At Tokyo Station, use the Yaesu side for the shinkansen and the Marunouchi side for the restored red-brick building."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Canopy collapse at Haverford Junction. Part of the roof over Platform 3 fell overnight; nobody was hurt and services resume Monday."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Historic depot reopens after 40 years. The 1910 Union Depot in Ridgeway is welcoming passengers again with daily Amtrak service."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I got lost inside Shinjuku station for 45 minutes once, came out an exit I didn't know existed, and it was pouring."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandparents met at Waterloo station in 1944, under the clock, and they went back there every anniversary."
+   },
+   {
+    "style": "trivia question",
+    "text": "At which London terminus can Harry Potter fans find Platform 9 3/4?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which New York terminal has a painted celestial ceiling with the constellations shown backward?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sofia, when you arrive at Milano Centrale take the escalators up past the giant stone halls. I'll wait by the departures board."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Jake, Antwerp Centraal is the most beautiful station I've ever seen, marble and a dome, like a cathedral for trains."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Chhatrapati Shivaji Terminus in Mumbai, completed in 1888, blends Victorian Gothic architecture with traditional Indian motifs."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This bench came from Euston's Great Hall, demolished in 1962 for a modern station despite public protests."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Travel news: Edinburgh Waverley has cancellations on services to the north, so check before you head down."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Union Pacific West riders, Glen Ellyn platform is closed after a freight problem, so board at Wheaton for the next hour."
+   }
+  ],
+  "topic:Canal": [
+   {
+    "style": "text message",
+    "text": "Moored up at Foxton Locks, ten locks in a staircase, arms are dead"
+   },
+   {
+    "style": "text message",
+    "text": "Pontcysyllte tomorrow! The boat goes over the aqueduct 38 m up, I might cry"
+   },
+   {
+    "style": "press release",
+    "text": "The Canal & River Trust announces that the restored stretch of the Montgomery Canal near Llanymynech will reopen to boats next spring."
+   },
+   {
+    "style": "press release",
+    "text": "The Panama Canal Authority will lower the maximum draft at the Neopanamax locks because of falling water levels in Gatun Lake."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How long does a ship take through Suez? A: About twelve to sixteen hours for 193 km. No locks, just a slow convoy through the desert."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the Erie Canal matter so much? A: It linked the Hudson to the Great Lakes in 1825 and turned New York City into the nation's big port."
+   },
+   {
+    "style": "how-to tip",
+    "text": "On a narrowboat, always close the paddles and gates behind you at a lock, and never leave a windlass on the spindle."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Cycling the Canal du Midi from Toulouse to Sete? Stick to the towpath, bring a bell, and enjoy the plane-tree shade."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Suez blocked by grounded container ship. The Ever Given wedged across the waterway Tuesday, halting hundreds of vessels."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Restored navigation reconnects towns. Volunteers finished clearing a lost stretch of the Wey and Arun, letting boats travel south from Guildford again."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We rented a narrowboat on the Llangollen, and my husband steered us into the bank three times on day one."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Growing up in Amsterdam, every winter we prayed the Prinsengracht would freeze so we could skate to school."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which waterway, opened in 1914, connects the Atlantic and Pacific oceans through Central America?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which French canal, completed in 1681, links Toulouse with the Mediterranean?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Liz, we walked the Regent's Canal from Little Venice to Camden Lock, past all the houseboats. Perfect Sunday."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Paul, the Caledonian is amazing, Neptune's Staircase lifts you up eight locks with Ben Nevis behind you."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Grand Canal of China, begun in the 5th century BC, runs about 1,800 km from Beijing to Hangzhou, the longest artificial waterway on earth."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Bridgewater Canal, opened in 1761 to carry coal from Worsley to Manchester, is often called the first major waterway of the Industrial Revolution."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Shipping news: a tanker has run aground in the Kiel Canal near Rendsburg, and traffic is stopped in both directions."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Here on the Rideau in Ottawa, the skateway is open, 7.8 kilometres of ice, and the BeaverTails stands are doing a roaring trade."
+   }
+  ],
+  "topic:River": [
+   {
+    "style": "text message",
+    "text": "Kayaking on the Wye this weekend, the water is so clear"
+   },
+   {
+    "style": "text message",
+    "text": "Thames is over the towpath at Putney again, take the road"
+   },
+   {
+    "style": "press release",
+    "text": "The Environment Agency announces a five-million-pound project to restore natural meanders to the River Cole near Swindon."
+   },
+   {
+    "style": "press release",
+    "text": "Officials confirm salmon have returned to the upper Elwha in Washington State after the removal of two dams."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Is the Amazon longer than the Nile? A: Depends who measures. But by volume there's no contest; the Amazon carries about a fifth of the world's river discharge."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the Rio Tinto red? A: Iron dissolved in very acidic water, partly natural and partly from centuries of mining."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Fly fishing on the Test? It's upstream dry fly only, and you book your beat with the estate."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Rafting the Zambezi below Victoria Falls? High-side when the guide yells, and keep your feet up if you swim."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mississippi drops to record low. Barges ran aground near Memphis as the water fell below the gauge's lowest mark."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Danube floods Budapest embankment. Water reached the steps near Parliament as the river peaked at 8.6 metres."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I swam across the Delaware once on a dare, which was dumb, the current pulled me almost a quarter mile downstream."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather fished the Shannon every morning; he said the river talked if you sat still enough to listen."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which river flows through both Baghdad and Mosul?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which river forms much of the border between the United States and Mexico?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mia, we paddled the Dordogne for three days, with a castle on a cliff every few kilometres."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Ted, the Colorado at Lees Ferry was freezing, but those canyon walls were incredible."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Nile's annual flood spread fertile silt across Egypt's fields, and the ancient calendar was organised around its rise."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Cuyahoga caught fire in 1969, an event that helped spur passage of the Clean Water Act."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And they're coming under Hammersmith Bridge, Oxford half a length up, it's the Boat Race on the Thames!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Fishing report: the Bow below Calgary is fishing well, browns on streamers in the morning."
+   }
+  ],
+  "topic:Lighthouse": [
+   {
+    "style": "text message",
+    "text": "Climbed Cape Hatteras light, 257 steps, legs are jelly"
+   },
+   {
+    "style": "text message",
+    "text": "The Peggy's Cove lighthouse at sunset omg"
+   },
+   {
+    "style": "press release",
+    "text": "The Northern Lighthouse Board announces that the light at Ardnamurchan Point, the westernmost on the British mainland, will be converted to LED."
+   },
+   {
+    "style": "press release",
+    "text": "A heritage group has bought the decommissioned Point Wilson light station and plans to open the keeper's house as a museum."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did a keeper do all night on the Bell Rock? A: Wind the clockwork, trim the wicks, polish the lens. Every four hours, no sleeping."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why was the Eddystone tower rebuilt so many times? A: Storms and fire destroyed the first three on that reef."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting the Pigeon Point light station? Go at dusk and watch for gray whales offshore."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To identify a light at night, time its flash pattern and match it to the chart, like 'Fl(2) 10s' for two flashes every ten seconds."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Keepers' cottages reopen at Split Rock. Minnesota's historic light station welcomes visitors after a two-year renovation."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Coastal tower moved inland to escape erosion. Engineers rolled the 1,700-ton Southeast Light on Block Island 300 feet back from the bluff."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-grandfather kept the light on Skerryvore, and in one storm he wrote that the tower swayed like a tree."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We stayed overnight in a lighthouse in Maine, and the beam swept past our window every six seconds all night."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which ancient lighthouse was one of the Seven Wonders of the World?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which black-and-white spiral-striped lighthouse on North Carolina's Outer Banks is the tallest brick lighthouse in the US?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nina, we hiked out to Neist Point on Skye to see the light. Cliffs, sheep, and wind that nearly took my hat."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jon, the old light at Montauk Point is open for climbs this weekend. Want to go?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This first-order Fresnel lens, made in Paris in 1857, focused a single oil flame into a beam visible 20 miles at sea."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Grace Darling, daughter of the Longstone keeper, rowed out in 1838 to rescue survivors of the wrecked steamer Forfarshire."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming to you from Portland Head Light, where crowds are lined up for the open house, that white tower glowing against the Atlantic."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the foghorn at Point Reyes kept him up all night. Well, Frank, that's kind of its job!"
+   }
+  ],
+  "topic:Theatre": [
+   {
+    "style": "text message",
+    "text": "Got 2 tix for the Globe tonight, groundlings for a fiver!"
+   },
+   {
+    "style": "text message",
+    "text": "At the Old Vic, interval now, act 2 starting soon"
+   },
+   {
+    "style": "press release",
+    "text": "The Royal Lyceum announces a 30-million-pound refurbishment to restore its 1883 Victorian auditorium and add a rooftop rehearsal studio."
+   },
+   {
+    "style": "press release",
+    "text": "The Hudson Theatre on West 44th Street will reopen in March with new seating and the original 1903 lobby restored."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Is the Palace haunted? A: Every stagehand swears there's a lady in the upper circle who watches the matinees."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do you leave a single bulb on the stage overnight? A: Safety, mostly. Tradition says the ghost light keeps the spirits happy too."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At the Globe, buy a yard ticket, bring a waterproof, and stand close to the stage for the best view."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Booking La Scala on a budget? The upper gallery seats are cheap, but check the view rating first."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Shuttered playhouse saved. Donors raised two million pounds to reopen Kendal's 1902 Grand, dark since the pandemic."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fire damages historic stage. Flames tore through the backstage of Cripple Creek's 1896 opera house overnight, though the auditorium survived."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was ushering at the Apollo, and I watched Les Mis about two hundred times."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We went to the Minack, cut right into a cliff in Cornwall, and the sea was the backdrop to the whole play."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which London playhouse is a reconstruction of the one Shakespeare's company built in 1599?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which ancient Greek theatre at Epidaurus is famous for acoustics so good a coin drop can be heard from the top row?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ella, we saw Hamilton at the Victoria Palace! The chandelier, the gilt boxes, I was gawping before it even started."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Max, the little fringe venue above the Hen and Chickens is doing an improv night Thursday. Only 60 seats."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ford's Theatre in Washington, where President Lincoln was shot in 1865, reopened as a working playhouse in 1968."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This painted backdrop was used at the Bolshoi in Moscow for the 1877 premiere of Swan Lake."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Curtain Call we're backstage at the Abbey in Dublin, where the cast are warming up in the green room."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big news for the West End, folks: the Phoenix is going dark for refurbishment, and ticket holders are being moved to the Cambridge."
+   }
+  ],
+  "topic:Amphibian": [
+   {
+    "style": "text message",
+    "text": "There's a fire salamander on the path!! Black and yellow, so cute"
+   },
+   {
+    "style": "text message",
+    "text": "Froglets in the pond! Common toads I think, hundreds of them"
+   },
+   {
+    "style": "press release",
+    "text": "Chester Zoo announces the hatching of thirty critically endangered Kihansi spray toads, a species extinct in the wild."
+   },
+   {
+    "style": "press release",
+    "text": "The Axolotl Rescue Project has released 200 captive-bred axolotls into restored canals at Xochimilco."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the wood frog survive winter? A: It freezes solid. The heart stops, and in spring it just thaws and hops off."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the golden poison frog so toxic? A: Its skin holds batrachotoxin from the insects it eats; captive ones lose it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping a horned frog? Use damp coconut fibre, keep it around 26 C, and feed it gut-loaded crickets twice a week."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Helping toads cross the road in spring? Carry them in a bucket in the direction they were heading and wear a hi-vis vest."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rare salamander rediscovered in Guatemala. Jackson's climbing salamander, unseen for 42 years, was found by a guard in a cloud-forest reserve."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fungus kills off harlequin frogs. Researchers say chytrid has wiped out several Panamanian populations of the bright-coloured toad."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I picked up a cane toad as a kid in Queensland and my dad screamed, because they ooze poison from the glands behind their heads."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were at a creek in North Carolina and found a hellbender, a two-foot salamander that looked like a wrinkled old wallet."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Mexican salamander keeps its feathery gills for its whole life?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which giant salamander from China can grow up to 1.8 metres long?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jess, the great crested newts are back in our garden pond! Orange bellies and little dragon crests. Have to tell the council survey."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Ollie, the coqui frogs in Puerto Rico sing all night, 'ko-KEE, ko-KEE'. I loved it, Dan did not."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Goliath frog of Cameroon can weigh more than three kilograms and builds its own nest pools along river banks."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Caecilians are legless, burrowing relatives of frogs; some mothers feed their young on a layer of their own skin."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Nature Hour: listener Pat says a bullfrog in her pond sounds like a cow. Pat, that's how it got its name!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Devon reports a natterjack toad chorus on the dunes at night, louder than the waves. What a treat, Sue."
+   }
+  ],
+  "topic:Arachnid": [
+   {
+    "style": "text message",
+    "text": "HUGE huntsman on the ceiling, I am not sleeping in here tonight"
+   },
+   {
+    "style": "text message",
+    "text": "Found a tick on the dog after the hike, got it out with tweezers"
+   },
+   {
+    "style": "press release",
+    "text": "The Natural History Museum announces the discovery of a new jumping spider species in Peru, named Maratus elisae after a young volunteer."
+   },
+   {
+    "style": "press release",
+    "text": "Wildlife officials confirm the noble false widow is now established across southern Ireland and urge calm."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How strong is Darwin's bark spider silk? A: Tougher than Kevlar by weight. It spans webs 25 metres across rivers in Madagascar."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do scorpions glow under UV light? A: Compounds in their outer shell fluoresce blue-green, though nobody's sure why."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To catch a house spider, put a glass over it, slide a postcard underneath, and release it outside."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Checking for ticks after a walk? Look behind knees, ears and the waistband, and remove them close to the skin."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Funnel-web found in Sydney pool. A male Atrax robustus survived 30 hours underwater before being caught for the antivenom program."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Peacock spider goes viral. A tiny Australian jumper with a fan-like rainbow abdomen has millions of views after a researcher filmed its dance."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was camping in Arizona and shook out my boot, and a bark scorpion fell out. I check every boot now, forever."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My son keeps a Chilean rose tarantula called Doris, and when she molts, there are two of her in the tank."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which venomous spider has a red hourglass marking on its abdomen?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which tiny mite lives in the hair follicles of most human faces?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Abby, a garden orb weaver built a web across our porch every night this week. I've named her Charlotte."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ravi, saw harvestmen everywhere in the woods. Turns out they're not spiders at all, just eight-legged cousins."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Goliath birdeater of South America has a leg span of up to 30 cm and flicks irritating hairs when threatened."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This amber holds a 99-million-year-old Chimerarachne, an extinct arachnid with a tail and spinnerets."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gardener's Question Time: Jim, those red specks on your tomatoes are red spider mites, so mist them and bring in predatory mites."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listener calls in about a wolf spider carrying hundreds of babies on her back. Mum of the year, Dave!"
+   }
+  ],
+  "topic:Bird": [
+   {
+    "style": "text message",
+    "text": "A robin keeps landing on my shovel while I dig lol"
+   },
+   {
+    "style": "text message",
+    "text": "Red kite over the M40 again, they're everywhere now"
+   },
+   {
+    "style": "press release",
+    "text": "The RSPB announces that white-tailed eagles have bred on the Isle of Wight for the first time in 240 years."
+   },
+   {
+    "style": "press release",
+    "text": "The Kakapo Recovery Programme reports a record 55 chicks this season for the flightless New Zealand parrot."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How far does the bar-tailed godwit fly? A: Over 11,000 km nonstop from Alaska to New Zealand, eleven days without landing."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do crows really recognize faces? A: Yes. American crows remember people who've bothered them and scold them for years."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want goldfinches at your feeder? Put out nyjer seed in a tube feeder with small ports."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To tell a chiffchaff from a willow warbler, listen: the chiffchaff sings its name, 'chiff-chaff-chiff'."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Hoopoe spotted in Norfolk. A pink, crested African visitor delighted birdwatchers on a village lawn near Cley."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ivory-billed woodpecker still unconfirmed. Scientists released new drone footage from Louisiana but critics remain unconvinced."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was on Skomer and a puffin walked right past my foot with a beak full of sand eels."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma had a budgie called Pip that could say 'Who's a pretty boy' and whistle the Archers theme."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which flightless bird is the largest living bird in the world?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which bird, extinct since about 1681, lived only on Mauritius?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, the peregrines on the cathedral spire have three chicks this year. The webcam is live, have a look!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tim, saw a kingfisher on the canal this morning. Just a blue flash, but definitely one."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The passenger pigeon once numbered in the billions; the last one, Martha, died at Cincinnati Zoo in 1914."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The male bowerbird of Australia decorates his bower with blue objects, from berries to bottle caps, to attract a mate."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Birdsong hour: listeners, that bubbling call is a curlew, and its numbers have halved in Britain since the 1990s."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says a woodpecker's drumming on his gutter at 5 am. Gary, he's not after bugs, he's advertising!"
+   }
+  ],
+  "topic:Crustacean": [
+   {
+    "style": "text message",
+    "text": "Caught 6 blue crabs off the dock, steaming them tonight!"
+   },
+   {
+    "style": "text message",
+    "text": "Found a hermit crab in a cone shell at the beach"
+   },
+   {
+    "style": "press release",
+    "text": "The Marine Institute announces that a new species of deep-sea amphipod, Eurythenes plasticus, was found in the Mariana Trench with plastic in its gut."
+   },
+   {
+    "style": "press release",
+    "text": "Maine officials report the lobster landings dipped slightly last year, with the American lobster still the state's biggest catch."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How hard does a mantis shrimp punch? A: Its club accelerates like a bullet and can crack aquarium glass."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Antarctic krill so important? A: Whales, penguins and seals all depend on it; its biomass is one of the largest of any animal."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To cook langoustines, boil for two minutes in salted water, then shock in ice to keep the meat sweet."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping cherry shrimp? Use a planted tank and avoid copper-based treatments."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Coconut crab census on Christmas Island. Rangers counted 2,000 of the giant land crabs, which can crack coconuts with their claws."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Red crab migration closes roads. Millions of Christmas Island crabs are marching to the sea to spawn."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I went tidepooling in Oregon and a goose barnacle colony looked like little dinosaur feet."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad caught a lobster in Cornwall that was bright blue, and he put it back because it was so rare."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which large Japanese crab has the longest leg span of any arthropod?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which crustaceans glue themselves head-first to rocks and kick food into their mouths?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Leo, crawfish boil Saturday! Ten pounds of mudbugs, corn and potatoes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ann, did you know woodlice are crustaceans? Our garden's full of them."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Tasmanian giant freshwater crayfish can weigh over 5 kg, and is threatened by overfishing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Copepods like Calanus finmarchicus are tiny but feed herring, cod and whales across the North Atlantic."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Seafood report: Dungeness season opens Friday, and the boats are loading pots in Half Moon Bay."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says her son's sea monkeys hatched. They're brine shrimp, Liz, and congratulations!"
+   }
+  ],
+  "topic:Fish": [
+   {
+    "style": "text message",
+    "text": "Caught a 5 lb largemouth bass off the dock at the lake!!"
+   },
+   {
+    "style": "text message",
+    "text": "Snorkel was amazing, a clownfish kept darting in and out of its anemone"
+   },
+   {
+    "style": "press release",
+    "text": "The Monterey Bay Aquarium announces that an ocean sunfish has joined its Open Sea exhibit for the first time in a decade."
+   },
+   {
+    "style": "press release",
+    "text": "Fisheries managers report a record sockeye salmon return to Bristol Bay this summer, with more than 70 million fish counted."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How old can a Greenland shark get? A: Possibly over 400 years. It grows less than a centimetre a year in that cold water."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does the deep-sea anglerfish carry a light? A: Glowing bacteria in the lure on its head attract prey in total darkness."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping a betta? Give it a heated tank of at least 20 litres and never house two males together."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Cooking mackerel? Grill it skin-side down until crisp and serve with something sharp, like gooseberry or rhubarb."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Coelacanth filmed off Indonesia. Divers recorded the 'living fossil' at 150 metres inside a volcanic cave near Sulawesi."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tuna fetches 1.3 million dollars. A 212-kilogram bluefin set a record at Tokyo's first auction of the year."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was fly fishing for brown trout in Montana and a bald eagle swooped down and took one right off my line."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad kept koi in the backyard pond, and one named Big Orange lived for over thirty years."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which lobe-finned fish, thought extinct for 66 million years, was found off South Africa in 1938?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which flat, round ocean fish is the heaviest bony fish in the world?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Alice, I swam next to a whale shark at Ningaloo! It was the size of a bus and totally calm."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Paul, a pike in the gravel pit took my lure and bit straight through the line. Teeth like a saw."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Atlantic cod built whole economies around the North Atlantic; the Newfoundland fishery collapsed in 1992 after decades of overfishing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The mudskipper spends much of its life out of water, skipping across mangrove mud on its pectoral fins."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And here comes the salmon run at Brooks Falls, a sockeye leaps right into the bear's mouth!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Fishing show: caller just landed a 40-pound striped bass off Montauk Point on a live eel. Nice job, Mike!"
+   }
+  ],
+  "topic:Insect": [
+   {
+    "style": "text message",
+    "text": "Monarchs all over the milkweed in the garden today!"
+   },
+   {
+    "style": "text message",
+    "text": "A stag beetle just flew into the kitchen, it's the size of my thumb"
+   },
+   {
+    "style": "press release",
+    "text": "The Xerces Society announces that the endangered rusty patched bumble bee has been recorded at twelve new sites across Minnesota."
+   },
+   {
+    "style": "press release",
+    "text": "Melbourne Zoo reports the hatching of more than 1,000 eggs of the Lord Howe Island stick insect, once thought extinct."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How far do monarch butterflies migrate? A: Up to 4,800 km, from Canada to the oyamel fir forests of central Mexico."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why do fireflies blink? A: Each species has its own flash code, and males and females use it to find each other."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To bring ladybirds into the garden, plant dill and fennel and leave a few aphids alone for them to eat."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping Indian stick insects? Feed them bramble or privet leaves and mist the tank lightly every other day."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Giant hornet nest destroyed in Washington. Officials vacuumed out the first nest of Asian giant hornets found in the United States."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Cicada brood emerges. Billions of 17-year periodical cicadas are surfacing across northern Illinois this month."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was in Michoacan and walked into a forest where monarchs covered every trunk, and when the sun hit them, the trees took off."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "As a kid I kept a praying mantis named Bob, until Bob ate her boyfriend and we had to rethink the name."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which beetle did the ancient Egyptians revere as a symbol of the rising sun?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which social insect performs a 'waggle dance' to tell hive mates where flowers are?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Clare, saw a hummingbird hawk-moth on the lavender today. Hovering, long tongue, I honestly thought it was a bird."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, the dragonflies at the pond were huge today, emperors I think, bright blue and patrolling like helicopters."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Atlas moth of Southeast Asia has a wingspan of up to 25 cm, and adults have no mouths, living only a week or two."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Leafcutter ants do not eat leaves; they chew them into pulp to farm a fungus that feeds the whole colony."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listener asks why the crickets are louder tonight. Count chirps for 14 seconds, add 40, and you've got the temperature in Fahrenheit!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Kent says honeybees swarmed on his car wing mirror. Don't panic, Ken, a local beekeeper will collect them for free."
+   }
+  ],
+  "topic:Mollusca": [
+   {
+    "style": "text message",
+    "text": "Found a giant African land snail on the patio, it's the size of my hand!!"
+   },
+   {
+    "style": "text message",
+    "text": "Octopus at the aquarium just unscrewed a jar lid in front of us"
+   },
+   {
+    "style": "press release",
+    "text": "The Monterey Bay Aquarium announces that its giant Pacific octopus, Kiki, will move to a larger habitat with new enrichment puzzles."
+   },
+   {
+    "style": "press release",
+    "text": "Marine biologists confirm the first successful captive breeding of the chambered nautilus at a public aquarium."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How smart is the common octopus? A: Very. They solve mazes, open jars, and some escape tanks at night to raid neighbouring ones."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is the cone snail dangerous? A: It fires a venomous harpoon tooth fast enough to paralyse a fish, and some species can kill a person."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Cooking mussels? Discard any that stay open when tapped, steam for four minutes with wine and garlic, then toss the ones that don't open."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To keep slugs off hostas, sink a shallow dish of beer into the soil overnight."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Giant squid filmed in Gulf of Mexico. Researchers using a light lure captured the first footage of Architeuthis in US waters."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Zebra mussels found in new lake. Officials say the invasive shellfish were likely carried on a boat trailer."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was diving in Cebu and a cuttlefish changed colour five times while I watched, like a living screen."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma gathered periwinkles on the rocks in Donegal and we'd eat them with a pin."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which mollusc has three hearts and blue blood?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which invertebrate has the largest eyes of any animal, as big as dinner plates?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fran, the nudibranchs in the tide pools at Point Lobos were unreal, purple and orange with frilly gills."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Joe, guess what, our oysters from the farm in Wellfleet were the best I've ever had."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Giant clams of the Indo-Pacific can live over 100 years and weigh more than 200 kilograms."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Murex sea snails gave the Phoenicians Tyrian purple, a dye so costly that it became the colour of emperors."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Fishing report: squid are biting under the lights at the pier, folks with jigs are filling buckets."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Brighton says she found an octopus in a rock pool. Lucky you, Jen, they're shy!"
+   }
+  ],
+  "topic:Reptile": [
+   {
+    "style": "text message",
+    "text": "Gecko on the bathroom wall chirping at me lol"
+   },
+   {
+    "style": "text message",
+    "text": "There's a sea turtle nest roped off on our beach"
+   },
+   {
+    "style": "press release",
+    "text": "The Galapagos Conservancy announces that 136 young giant tortoises have been released on Espanola Island."
+   },
+   {
+    "style": "press release",
+    "text": "Zoo Atlanta confirms the hatching of two endangered Komodo dragons from eggs laid without a male."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do chameleons change colour to blend in? A: Mostly no, it's for signalling mood and temperature."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the leatherback turtle survive cold seas? A: Its huge body holds heat, and it keeps warm enough to dive below 1,000 metres."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping a leopard gecko? Give it a warm hide at 32 C, a cool side, and dust its crickets with calcium."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To move a snapping turtle off the road, nudge it from behind with a broom, never pick it up by the tail."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Burmese python found with deer inside. Florida researchers removed a 5-metre snake from the Everglades."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Gharial hatchlings spotted in Nepal. Conservationists say the narrow-snouted crocodilian is breeding again in the Babai river."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I picked up a slowworm as a kid and it dropped its tail, still wriggling. Freaked me out."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were in Kakadu and a saltwater croc slid off the bank right next to the boat."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Indonesian lizard is the largest living lizard?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which hooded snake is the longest venomous snake in the world?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kate, we saw marine iguanas on Fernandina sneezing salt, honestly adorable."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, my neighbour's tortoise, Gerald, turned 70 this week."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The tuatara of New Zealand is the last surviving member of an order of reptiles that thrived alongside the early dinosaurs."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Gila monster of the Sonoran Desert is venomous, and its saliva inspired a diabetes drug."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listener says a grass snake swam across his pond. Don't worry, Jack, it's harmless."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Florida says an alligator is in her pool. Call the trapper, Diane!"
+   }
+  ],
+  "topic:Fungus": [
+   {
+    "style": "text message",
+    "text": "Found a fly agaric in the birch wood! Red with white spots, like a fairy-tale toadstool"
+   },
+   {
+    "style": "text message",
+    "text": "Chicken of the woods on the old oak by the gate, huge orange shelves"
+   },
+   {
+    "style": "press release",
+    "text": "Kew Gardens announces the naming of a new species of truffle-like fungus from Western Australia, Hydnangium kewensis, found by a citizen scientist."
+   },
+   {
+    "style": "press release",
+    "text": "The Forest Service confirms that a single honey fungus in Oregon's Malheur forest covers nearly 10 square kilometres, among the largest organisms on earth."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does Ophiocordyceps control ants? A: It grows through the ant's body and makes it climb and bite a leaf before the fruiting stalk bursts out."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why are Perigord truffles so expensive? A: They grow underground around oak roots and can only be found by trained dogs or pigs."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Foraging for chanterelles? Check for false gills that run down the stem like wrinkles, and never eat anything you can't identify with certainty."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To clean morels, slice them in half lengthwise and swish them in cold water to flush out grit and insects."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Death cap spreads to new region. Mycologists warn that the deadly Amanita phalloides is now fruiting under oaks in British Columbia parks."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mould behind penicillin returns to lab. Scientists revived spores of Fleming's original Penicillium culture for genetic sequencing."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were hiking in Oregon and found these little bird's nest fungi, tiny cups with 'eggs' inside, and my kid thought fairies lived there."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My Italian nonno would vanish at dawn every October to his secret porcini spot and never tell anyone where it was."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which mould, noticed by Alexander Fleming in 1928, led to the first antibiotic?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which mushroom, scarlet with white warts, is famous from fairy tales and video games?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jen, we did a fungi walk in Epping Forest and saw a stinkhorn. Smelled exactly like it sounds."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mo, the oyster mushroom kit on my counter just exploded overnight. Stir-fry Friday?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Lion's mane fungus grows as a cascade of white icicle-like spines on hardwood trees and is edible when young."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Saccharomyces cerevisiae, baker's yeast, is a single-celled fungus that has raised bread and fermented beer for thousands of years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden hour: Pete, that white web in your lawn is fairy-ring fungus, and the ring grows outward every year."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller found ghost fungus glowing green on a log in the Blue Mountains. Bioluminescence, Kath, it's beautiful!"
+   }
+  ],
+  "topic:Grape": [
+   {
+    "style": "text message",
+    "text": "Picking Pinot Noir this weekend at the vineyard, need extra hands!"
+   },
+   {
+    "style": "text message",
+    "text": "Tried an Assyrtiko in Santorini today, super crisp, buying a case"
+   },
+   {
+    "style": "press release",
+    "text": "Wines of Portugal announces a campaign to promote Touriga Nacional, the country's flagship red variety, in American restaurants."
+   },
+   {
+    "style": "press release",
+    "text": "The Okanagan wine association reports that Riesling plantings have grown by 20 percent, driven by demand for dry styles."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Cabernet Sauvignon so widely planted? A: It's hardy, thick-skinned, and makes long-lived reds almost anywhere warm enough."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What made Carmenere vanish from Bordeaux? A: Phylloxera wiped it out; it survived in Chile, mislabelled as Merlot for a century."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Pairing Gewurztraminer? Its lychee and rose notes go brilliantly with spicy Thai or Indian food."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Growing Concord vines at home? Plant in full sun, train on a trellis, and prune hard in late winter."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ancient variety rediscovered in Sicily. Researchers identified a lost grape, Orisi, in an abandoned vineyard near Trapani."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Heatwave hits Malbec harvest. Mendoza growers are picking two weeks early to keep acidity in the grapes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were in Hungary and the winemaker poured Furmint from a dusty bottle and told us it's the soul of Tokaji."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad grew Muscadine on the back fence in Georgia, and we'd pop the thick skins and spit out the seeds."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which grape variety is the main red grape of Burgundy?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which white grape is the backbone of New Zealand's Marlborough region?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tess, found a gorgeous Nebbiolo from Barolo for your birthday, tar and roses on the nose."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dom, the Zinfandel at that Sonoma winery was jammy and 15 percent. Careful, ha."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Chardonnay, a cross between Pinot Noir and the obscure Gouais Blanc, became the most famous white variety of Burgundy."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Sultana, also called Thompson Seedless, is the most widely grown table and raisin grape."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Wine hour: tonight we taste Sangiovese, the heart of Chianti, cherry, leather and high acidity."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says her Tempranillo smells of vanilla. That's the American oak, Rosa."
+   }
+  ],
+  "topic:RaceHorse": [
+   {
+    "style": "text message",
+    "text": "Frankel's first foal running at Newmarket today, putting a tenner on it"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see Rich Strike win at 80-1?? I screamed"
+   },
+   {
+    "style": "press release",
+    "text": "Coolmore announces that Derby winner Auguste Rodin will stand at stud in 2026, at a fee to be confirmed."
+   },
+   {
+    "style": "press release",
+    "text": "The Melbourne Racing Club confirms that champion mare Winx will be honoured with a statue at Caulfield."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How fast was Secretariat in the Belmont? A: 2:24 for a mile and a half, winning by 31 lengths. Nobody's touched it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why was Seabiscuit so popular? A: An undersized, knobbly-kneed horse beating War Admiral during the Depression; people saw themselves in him."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Picking a winner? Look at the horse's form, the going, and how it's moving in the paddock before the race."
+   },
+   {
+    "style": "how-to tip",
+    "text": "At the Grand National, back a horse with experience over big fences, and keep an eye on the weights."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Red Rum memorial unveiled at Aintree. The three-time Grand National winner is buried by the winning post."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Enable retired after record third Arc bid. The mare won eleven Group 1 races."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at Cheltenham when Kauto Star won his second Gold Cup, and the roar went right through you."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad was a stable lad and he'd tell us about Arkle eating Guinness with his oats."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which horse won the Triple Crown in 1973 by 31 lengths in the Belmont?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Australian mare won 33 consecutive races?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lou, I backed Tiger Roll at the National and he won again!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Gus, did you hear Desert Crown's foal fetched 2 million at Tattersalls?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Eclipse, foaled in 1764, was unbeaten in 18 races; the saying 'Eclipse first, the rest nowhere' came from him."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Phar Lap, New Zealand-bred, won the 1930 Melbourne Cup; his heart is in Canberra."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And they're round Tattenham Corner in the Derby, City of Troy still has ground to make up, but here he comes down the outside!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Into the final furlong, Galopin des Champs clear, Cheltenham on its feet!"
+   }
+  ],
+  "topic:Conifer": [
+   {
+    "style": "text message",
+    "text": "Standing under General Sherman right now, my neck hurts from looking up"
+   },
+   {
+    "style": "text message",
+    "text": "The larches on the hill have gone gold, so pretty this week"
+   },
+   {
+    "style": "press release",
+    "text": "Save the Redwoods League announces the purchase of 200 acres of old-growth coast redwood near Big Sur, including a tree estimated at 1,200 years old."
+   },
+   {
+    "style": "press release",
+    "text": "The National Park Service confirms that a Great Basin bristlecone pine in California's White Mountains is more than 4,800 years old."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the monkey puzzle tree get its name? A: A Victorian visitor joked it would puzzle a monkey to climb, because the branches are armoured in sharp scales."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How was the Wollemi pine found? A: It was known only from fossils until 1994, when a ranger stumbled on a grove in a canyon near Sydney."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To keep a Nordmann fir from dropping needles, saw a centimetre off the trunk and keep the stand topped up with water."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Growing a Japanese black pine bonsai? Pinch back the new candles in spring and keep it in full sun."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tallest tree's location kept secret. Hyperion, a 116-metre redwood, is now off-limits after hikers trampled the ground around it."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ancient yew may top 5,000 years. Experts say the churchyard yew at Defynnog in Wales could be the oldest living tree in Britain."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I hugged a Douglas fir on Vancouver Island that took four of us, holding hands, to reach around."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather planted a row of Leyland cypress in 1985, and now it blocks the sun from three gardens."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which conifer species, native to coastal California, is the tallest tree in the world?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which needle-bearing tree turns gold and drops its needles every autumn, unlike most evergreens?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Zoe, the old Scots pines in Abernethy forest are stunning, flaky orange bark and twisted crowns. Crossbills everywhere too."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ian, the Christmas spruce in Trafalgar Square came from Oslo again this year, a gift every year since 1947."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The dawn redwood, Metasequoia glyptostroboides, was known only from fossils until living trees were found in a Chinese village in 1944."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Cedar of Lebanon timber, prized for its fragrance and resistance to rot, was shipped across the ancient world for temples and palaces."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden hour now: Barbara, your Colorado blue spruce is browning from the inside, which is usually needle cast fungus, so thin it for airflow."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says his juniper hedge went brown after the heatwave. Peter, cut back to green wood only, junipers won't regrow from bare stems."
+   }
+  ],
+  "topic:CultivatedVariety": [
+   {
+    "style": "text message",
+    "text": "Honeycrisp are on sale at the farm stand, grab two bags!"
+   },
+   {
+    "style": "text message",
+    "text": "Planted three 'Brandywine' tomatoes and one 'Sungold' in the raised bed today"
+   },
+   {
+    "style": "press release",
+    "text": "The University of Minnesota announces the release of 'Triumph', a new hardy apple variety that keeps for five months in cold storage."
+   },
+   {
+    "style": "press release",
+    "text": "David Austin Roses introduces 'Emily Bronte', a soft pink English rose with a strong tea scent, launching at the Chelsea Flower Show."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why are all Cavendish bananas the same? A: They're clones, grown from cuttings, so a single disease like Panama TR4 can threaten the whole crop."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the 'Peace' rose get its name? A: It was bred in France before the war and named in 1945, the week Berlin fell."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Growing 'Bloody Butcher' corn? Plant in blocks, not rows, so the tassels pollinate properly."
+   },
+   {
+    "style": "how-to tip",
+    "text": "For 'Bramley's Seedling' apples, store them in a cool shed wrapped in newspaper; they'll cook up fluffy until spring."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Original Bramley tree dies at 200. The Nottinghamshire tree that gave Britain its favourite cooking apple has finally succumbed to honey fungus."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Gardeners' pick of the year. The 'Purple Haze' carrot, a deep violet outside and orange core, won the All-America Selections award."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma grew 'Kentucky Wonder' pole beans every summer, the vines went right over the shed roof."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We went to Keukenhof and saw 'Queen of Night', the almost black tulip, and my daughter wanted a hundred."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which apple cultivar, discovered in Australia in 1868, is named after the woman who found it?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which popular navel orange was introduced from Brazil to California in the 1870s?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mel, I grafted a 'Cox's Orange Pippin' onto our old rootstock and it actually took!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ray, the 'Hass' avocado tree in my yard finally fruited. All Hass trees descend from one tree in La Habra."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Gros Michel bananas dominated world trade until the 1950s, when Panama disease forced the switch to Cavendish."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Bartlett pear, known as 'Williams' in Europe, was grown in England in the 1700s and taken to America."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden hour: Joan, that 'Moonlight' runner bean is self-pollinating, so it'll set pods even without bees."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller asks about 'Chandler' strawberries. Big, sweet and productive, Rob, just pick before the rain."
+   }
+  ],
+  "topic:Fern": [
+   {
+    "style": "text message",
+    "text": "Fiddleheads are up along the creek, ostrich fern season!"
+   },
+   {
+    "style": "text message",
+    "text": "My Boston fern finally has new fronds, after almost dying last month"
+   },
+   {
+    "style": "press release",
+    "text": "The Royal Botanic Garden Edinburgh announces that the Killarney fern, one of Europe's rarest, has been successfully propagated from spores."
+   },
+   {
+    "style": "press release",
+    "text": "Conservationists confirm the rediscovery of a tiny Hymenophyllum in Hawaii's Waianae Mountains, its translucent fronds just one cell thick, unseen for 50 years."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do ferns reproduce without seeds? A: Spores under the fronds grow into tiny heart-shaped plants, which make sperm and eggs."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Victorians obsess over ferns? A: 'Pteridomania': collectors stripped hillsides of hart's-tongue and maidenhair for parlour cases."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To keep a maidenhair happy, never let its soil dry out and keep it out of direct sun."
+   },
+   {
+    "style": "how-to tip",
+    "text": "When foraging fiddleheads, pick only Matteuccia struthiopteris, with a smooth stalk and a deep U-shaped groove, and cook them thoroughly; bracken is not safe to eat."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Bracken invasion on moors. Rangers say the fast-spreading fern is choking heather across the Peak District."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Climbing invader spreads in Florida. Old World Lygodium microphyllum is smothering cypress trees in the Everglades under curtains of lacy fronds."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In New Zealand we walked through a gully full of ponga, and the silvery undersides of the fronds glowed under the canopy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt had a staghorn mounted on a board on her porch, antler-shaped fronds and all, and it grew bigger than her dog."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which fern's silver leaf underside is a national symbol of New Zealand?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which tiny floating fern, Azolla, hosts a nitrogen-fixing cyanobacterium?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rosa, I found an Osmunda regalis by the bog at the bottom of the hill, nearly two metres tall with rusty spore spikes on top!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nick, the hart's-tongue growing out of the old churchyard wall is still glossy green in January. Tough little thing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Tree ferns like Dicksonia antarctica grow only a few centimetres a year, so a 4-metre trunk may be 200 years old."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The resurrection polypody, Pleopeltis polypodioides, grows on live oak branches, curling up brown in drought and turning green within hours of rain."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden hour: Lynne, your Japanese painted fern scorched because it's in afternoon sun; move it to dappled shade and keep the soil moist."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says her Asplenium nidus has brown tips. That's low humidity, Grace, so put it in the bathroom or on a pebble tray."
+   }
+  ],
+  "topic:GreenAlga": [
+   {
+    "style": "text message",
+    "text": "The pond's gone green again, it's all that filamentous algae, ugh"
+   },
+   {
+    "style": "text message",
+    "text": "Sea lettuce all over the rocks at low tide, so slippery"
+   },
+   {
+    "style": "press release",
+    "text": "The Algae Biomass Organization announces a pilot farm that will grow Chlorella vulgaris for protein-rich animal feed."
+   },
+   {
+    "style": "press release",
+    "text": "Scientists at Kyoto University report sequencing the genome of the marimo ball alga from Lake Akan."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does Chlamydomonas swim? A: It has two whip-like flagella and an eyespot that steers it toward light."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Volvox so interesting? A: It's a hollow ball of thousands of cells, a glimpse of how multicellular life began."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Got marimo moss balls? Change their water every two weeks and roll them gently to keep them round."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To clear Spirogyra from a garden pond, twirl the slimy strands onto a stick and float a bag of barley straw to slow regrowth."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Killer alga spreads in Mediterranean. Caulerpa taxifolia, a bright green invasive seaweed, is now covering seagrass beds off Spain."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Green tide smothers Brittany beaches. Officials closed several bays as rotting sea lettuce released hydrogen sulphide gas."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In high school biology I saw Volvox spinning under the microscope, little green planets with babies inside."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We went to Lake Akan in Japan to see marimo, velvety green balls rolling on the lake floor."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which green seaweed, nicknamed the 'killer alga', escaped from an aquarium in Monaco in 1984?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which green alga lives in the fur of sloths?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ella, the snow on Mount Rainier was pink! It's a green alga, Chlamydomonas nivalis, with red pigments."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Max, my aquarium rocks are covered in green hair algae again, Cladophora tufts everywhere. Getting Amano shrimp to eat it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Acetabularia, the mermaid's wineglass, is a single cell up to 10 cm tall, used in classic experiments on the nucleus."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ulva, known as sea lettuce, grows on rocky shores worldwide; dried and powdered as aonori, it is sprinkled on okonomiyaki in Japan."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden radio: Tom, that green blanket weed on your pond is Cladophora, not toxic, just rake it out and leave it on the bank overnight so critters crawl back."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says her bird bath turns green every week. That's Chlorella-type algae, Brenda, so scrub it and change the water every couple of days."
+   }
+  ],
+  "topic:Moss": [
+   {
+    "style": "text message",
+    "text": "Roof is covered in those green cushions again, Tortula all over the north tiles, need to call someone"
+   },
+   {
+    "style": "text message",
+    "text": "Found a carpet of glittering wood moss in the forest, so soft"
+   },
+   {
+    "style": "press release",
+    "text": "Scottish Natural Heritage announces a project to restore 2,000 hectares of Sphagnum bog in the Flow Country, locking away carbon for centuries."
+   },
+   {
+    "style": "press release",
+    "text": "The British Bryological Society reports the rediscovery of the rare hair moss Polytrichum swartzii on a Welsh mountaintop."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is Sphagnum so good at holding water? A: Half its cells are empty, porous chambers that soak up twenty times their weight."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does the desert moss Syntrichia caninervis survive? A: It dries completely and revives within seconds of rain."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To start a moss garden, use acidic soil, shade, and press in fragments of local cushion moss, misting daily."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want living wall art? Blend a handful of Bryum with buttermilk and paint it onto a shaded brick wall."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Glowing moss draws crowds in Japan. Hikari-goke, the luminous Schistostega pennata, shines gold-green in a cave in Hokkaido."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Peat moss ban for gardeners. The UK will end retail sales of peat-based compost to protect Sphagnum bogs."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I lay down on a hummock of haircap in a Norwegian forest, and honestly it was softer than my hotel mattress."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad used to chink the gaps in his log cabin with feathery Hypnum he gathered from the riverbank."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which moss, also called peat moss, forms bogs that store huge amounts of carbon?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Which cave-dwelling moss, nicknamed 'goblin's gold', seems to glow because its cells focus dim light like tiny lenses?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kira, the Hoh rainforest was dripping with Isothecium, whole maple limbs wrapped in green curtains. Felt like walking inside a sponge."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dan, in Ireland we saw a hummock of red Sphagnum as bright as paint."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "In World War I, dried Sphagnum moss was used as wound dressing because it absorbed blood and resisted infection."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Buxbaumia aphylla, the bug-on-a-stick, has almost no visible leaves; what you see is a shiny brown spore capsule perched on a short stalk."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Garden hour: Ted, that Rhytidiadelphus spreading through your lawn means shade and compacted soil, so aerate it and cut back the hedge."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller from Seattle says moss is growing on his car. You need to drive more, Hal!"
+   }
+  ]
+ }
+}

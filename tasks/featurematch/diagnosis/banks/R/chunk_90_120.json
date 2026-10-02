@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:BusinessPerson": [
+   {
+    "style": "text message",
+    "text": "omg just saw Priya Raman on the cover of Forbes, the lady who started that meal-kit company in her garage. she's worth like 2 billion now"
+   },
+   {
+    "style": "text message",
+    "text": "Did you hear Marcus Delacroix stepped down as CEO of Halvern Logistics? Board announced it this morning and the stock's down 6%."
+   },
+   {
+    "style": "press release",
+    "text": "Brightwell Holdings today announced that founder and chief executive Elena Vasquez-Hart will become executive chair, with COO Daniel Okafor succeeding her as CEO effective January 1."
+   },
+   {
+    "style": "press release",
+    "text": "Tessaro Foods is proud to welcome industrialist Hiroshi Tanabe to its board of directors. Tanabe built Tanabe Precision into a $4 billion auto-parts supplier over three decades."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Ms. Adeyemi, why did you turn down the buyout offer? A: Because the delivery app I founded is worth more to Lagos merchants than to any acquirer, and I want to keep growing it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did a furniture salesman end up running Europe's biggest flat-pack retailer? A: I knocked on factory doors until they trusted me with credit, says founder Gunnar Lindqvist."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to negotiate like retail magnate Sam Okoro? He always let the supplier name a price first, then asked what it would cost for twice the volume."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from hotel tycoon Margaret Chu: visit one of your properties unannounced each month and eat in the staff canteen. You'll learn more there than from any board report."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Shipping heir buys stake in struggling airline. Lorenzo Bassi, 54, paid $310 million for 18% of Aerolinea Sud, betting he can repeat the turnaround he led at his family's freight empire."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Cosmetics founder becomes Korea's youngest self-made billionaire. Ji-woo Park launched her skincare line from a dorm room in 2015; this week's IPO valued her stake at $1.2 billion."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my uncle worked for Walter Brandt back when Brandt Steel had twelve plants. Old Walter walked the floor at six a.m. in a suit and knew every foreman's kids by name."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I once sat next to Aaron Feld on a flight, the guy who sold his payments startup for a fortune. He spent the whole trip doing his own expense report in pencil."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Scottish-born industrialist sold his steel company to J.P. Morgan in 1901 and gave most of his fortune to build libraries? Answer: Andrew Carnegie."
+   },
+   {
+    "style": "trivia question",
+    "text": "Question: Which entrepreneur founded Amazon in a Seattle-area garage in 1994, at first selling only books? Answer: Jeff Bezos."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, remember Rachel Kim from our MBA cohort? She just took her coffee chain public, forty stores! I'm buying shares out of pure loyalty. Jess"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, finished that book about Pierre Wertheimer you lent me. Wild how he controlled the perfume company while Coco Chanel fought him for decades. Back to you Friday."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Madam C. J. Walker (1867-1919). Born to formerly enslaved parents, Walker built a hair-care company that employed thousands of saleswomen and became one of America's first self-made female millionaires."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Account book, Augsburg, c. 1520. The merchant banker Jakob Fugger, called 'the Rich', lent money to emperors and popes, and his mining and banking empire made him perhaps the wealthiest man of his age."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And folks, the man who owns half the car dealerships in this county, Big Ron Hutchins, just called in and pledged ten grand to the food bank! Ron, you're a legend, buddy!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We're talking money on the drive home, and our guest tonight is Linda Morales, who turned one taco truck into a 200-location franchise. Linda, what was the hardest year?"
+   }
+  ],
+  "topic:Chef": [
+   {
+    "style": "text message",
+    "text": "dude we got a table at Marco Bellini's place tonight!! the guy from that cooking show. his truffle risotto is supposed to be insane"
+   },
+   {
+    "style": "text message",
+    "text": "Aiko Tanaka just got her second Michelin star!! told u that little omakase counter was special"
+   },
+   {
+    "style": "press release",
+    "text": "The Harbor Hotel announces the appointment of Rafael Montoya as culinary director. Montoya, formerly head of the kitchen at Madrid's Casa Lumbre, will oversee three restaurants and a new tasting menu."
+   },
+   {
+    "style": "press release",
+    "text": "Greenleaf Books will publish 'Smoke & Salt', the debut cookbook from pitmaster Darnell Jackson, whose Memphis barbecue joint draws lines around the block."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Chef Okonkwo, which dish will never leave your menu? A: My grandmother's jollof rice. I've cooked in Paris and New York, but that pot is where I learned to taste."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: You trained under Paul Bocuse. What did he teach you? A: Butter, discipline, and that a cook who doesn't taste every sauce is just reheating, says Lyon-born Claire Dumont."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Giulia Ferrante's trick for pasta: pull it two minutes before the box says and finish it in the sauce with a splash of the starchy cooking water."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Restaurateur and grill master Kenji Morimoto swears by this: salt your steak at least forty minutes before it hits the pan, or right before. Nothing in between."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Copenhagen chef closes acclaimed restaurant to cook for farmworkers. After a decade of tasting menus, Freja Lund says she wants to feed the people who grow her vegetables."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen cooking champion opens first restaurant at 19. Mateo Rivera, who won a televised junior cooking contest, now runs a 30-seat taqueria in San Antonio."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I washed dishes for Bernard in Lyon, he once threw out forty liters of stock because it was cloudy and made us start over at midnight. Best soup I ever tasted, though."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom took a cooking class with Julia Child in the sixties. She always said Julia dropped a whole chicken on the counter, laughed, and just kept going."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which French chef, famous for his restaurant near Lyon, was named 'Chef of the Century' by the Gault Millau guide? Answer: Paul Bocuse."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which British cook became famous with 'The Naked Chef' on TV and later campaigned to improve school dinners? Answer: Jamie Oliver."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Lena! We finally ate at Samir Haddad's new Lebanese spot. He came out of the kitchen himself and brought us his kibbeh. Go before it's impossible to book."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ben, the pastry chef at the wedding was Marguerite Lacroix, the one who builds those six-tier croquembouches. Want her number for your sister's party?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Auguste Escoffier (1846-1935). The French chef organized professional kitchens into the brigade system and codified the mother sauces still taught in cooking schools today."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This cast-iron skillet belonged to Edna Lewis, whose Southern cooking and 1976 book 'The Taste of Country Cooking' celebrated the food of her Virginia childhood."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, we've got Tony Marchetti in the studio cooking live! He's searing scallops as we speak, folks, you can hear that sizzle! Phone lines are open."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big night on the food show: Rosa Delgado's restaurant just made the national top fifty list. Rosa, give the listeners the secret behind that mole!"
+   }
+  ],
+  "topic:Economist": [
+   {
+    "style": "text message",
+    "text": "my econ prof said Keynes would've hated our homework lol. but Dr. Adebayo's lecture on inflation was actually good"
+   },
+   {
+    "style": "text message",
+    "text": "did u see Nadia Sorensen won the Nobel in economics?? the woman who studied microloans in Bangladesh"
+   },
+   {
+    "style": "press release",
+    "text": "The Institute for Fiscal Studies welcomes economist Dr. Rahul Mehta as senior fellow. His research on minimum wages and employment has been cited in policy debates on three continents."
+   },
+   {
+    "style": "press release",
+    "text": "The Central Bank of Valdoria announces that Ingrid Holm, a specialist in monetary policy and exchange rates, has been appointed deputy head of the bank."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Professor Laurent, will interest rates fall this year? A: Only if inflation keeps cooling. My forecasting models give it about a sixty percent chance by autumn."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Your book argues that inequality slows growth. Why? A: When most income goes to the top, demand weakens, says Teresa Alvarado. Ordinary households simply can't spend."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Behavioral economist Dan Whitfield's advice for saving: automate a transfer on payday, because people stick with defaults far more than with good intentions."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Thinking of giving to charity? Development researcher Amara Diallo found that handing cash directly to poor families often beats complicated aid programs, so check what your charity does."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Harvard economist warns of recession risk. Dr. Samuel Ortiz told lawmakers that an inverted yield curve has preceded every U.S. downturn since 1970."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Former IMF chief economist joins finance ministry. Keiko Ishikawa will advise on debt restructuring as the country negotiates with its creditors."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I took intro macro from Professor Hale, an old student of Milton Friedman. He'd slap a dollar bill on the desk and ask, who printed this, and why should you trust it?"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad sat next to Amartya Sen at a conference dinner in Delhi. He said Sen spent the whole meal asking the waiters what rice and lentils cost in their villages."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Scottish thinker wrote 'The Wealth of Nations' in 1776 and described the 'invisible hand' of the market? Answer: Adam Smith."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which British scholar argued in 1936 that governments should spend money to fight unemployment during depressions? Answer: John Maynard Keynes."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mia, the guest lecture was by Paolo Ferri, the guy who forecasts housing bubbles. He thinks rents here will flatten next year. Thought you'd want to know before signing!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Jonah, I finally read Elinor Ostrom on shared fishing grounds. She showed communities can manage common resources without the state or private owners. Totally changed my thesis idea."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Elinor Ostrom (1933-2012). The first woman awarded the Nobel Memorial Prize in Economic Sciences, Ostrom studied how villages, fisheries and irrigation groups govern shared resources."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This hydraulic machine was built by New Zealander Bill Phillips to model how money flows through a national economy, using colored water. He later described the curve that bears his name."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On Money Talk tonight, Dr. Gloria Batista says the jobs report is stronger than it looks. Gloria, my callers want to know: is it time to buy a house?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, I had Professor Ken Abernathy on earlier, and he basically said the new tariffs will cost every family about nine hundred bucks a year. Phones are lit up!"
+   }
+  ],
+  "topic:Engineer": [
+   {
+    "style": "text message",
+    "text": "Just met Sofia Romero, she designed the cable system on the new harbor bridge!! we geeked out about steel the whole party"
+   },
+   {
+    "style": "text message",
+    "text": "Dad's old coworker Raj built the cooling loop for that power plant up north, he's coming for dinner sunday"
+   },
+   {
+    "style": "press release",
+    "text": "Northfield Aerospace announces that propulsion engineer Dr. Olumide Bakare will lead development of its next-generation reusable rocket engine."
+   },
+   {
+    "style": "press release",
+    "text": "The Royal Academy of Engineering awards its gold medal to Hannah Bergstrom for her flood-barrier designs protecting low-lying coastal cities."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of designing a skyscraper? A: Wind, says structural designer Ahmed Rahimi. At 600 meters the building sways, and people feel it in their stomachs."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you get the grid back up after the storm? A: We rerouted through two substations and rebuilt the rest pole by pole, explains Carmen Ruiz of the power company."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Veteran mechanical engineer Gus Pavlenko says: before you redesign the part, measure the failure. Nine times out of ten the drawing was fine and the bolt was wrong."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Software developer Mei Lin's rule: write the test before the fix, so you know the bug is really gone and won't sneak back."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Man behind famous dam honored at 90. Tomasz Wilk designed the spillway that has protected the river valley from flooding since 1968."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Young inventor's water filter wins global prize. Kenyan engineer Grace Mwangi's clay-and-charcoal filter costs under five dollars and removes 99% of bacteria."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandpa worked on the railways in Wales. He told us he climbed every girder of the viaduct himself before letting a train across, just to check the rivets."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our neighbor Dennis spent thirty years designing jet engines. At barbecues he'd explain turbine blades with a paper plate and a plastic fork."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Victorian engineer built the Great Western Railway and the steamship SS Great Britain? Answer: Isambard Kingdom Brunel."
+   },
+   {
+    "style": "trivia question",
+    "text": "Whose engineering firm designed and built the iron lattice tower that opened in Paris for the 1889 World's Fair? Answer: Gustave Eiffel."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Pat, guess who's speaking at the alumni dinner: Leila Haddad, the one who designed the desalination plant in Oman. Bring your questions about membranes!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Oskar, I read that profile of Margaret Hamilton you sent. She led the Apollo flight software team in the sixties, and her code saved the moon landing. Amazing."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Emily Roebling (1843-1903). When her husband fell ill, Roebling mastered the stress calculations of the Brooklyn Bridge and relayed instructions to its crews for over a decade."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Slide rule, 1950s. Used by aircraft designer Kelly Johnson, who led Lockheed's Skunk Works and created the U-2 and SR-71 planes."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tech hour, folks! We've got Bruno Castillo on the line, the guy who designed the new stadium's retractable roof. Bruno, how heavy is that thing?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers keep asking about the tunnel delays, so I asked project engineer Diane Fowler, and she says the boring machine hit granite. Granite, people!"
+   }
+  ],
+  "topic:Journalist": [
+   {
+    "style": "text message",
+    "text": "omg Carla Mendes from Channel 7 news is in my coffee shop doing an interview, she's way taller in person"
+   },
+   {
+    "style": "text message",
+    "text": "Jake Sullivan's piece on the water scandal just dropped, the city council is gonna be furious"
+   },
+   {
+    "style": "press release",
+    "text": "The Daily Ledger is pleased to announce that investigative reporter Fatima Noor has been named Washington bureau chief."
+   },
+   {
+    "style": "press release",
+    "text": "The Press Freedom Foundation honors correspondent Dmitri Volkov, who filed from front lines for twelve years, with its annual Courage in Journalism Award."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you get sources to trust you? A: You protect them, every time, says veteran reporter Ruth Abernathy. Break that once and your career is over."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Which story are you proudest of? A: The one that made the hospital change its billing, says health correspondent Luis Paredes. Three months of records requests."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to write like columnist Nora Fitzgerald? She drafts her opening paragraph last, after she knows what the story is really about."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Award-winning reporter Kwame Asante's interview advice: ask your toughest question, then stay silent. People fill silence with the truth."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran foreign correspondent retires after 40 years. Helen Marsh covered six wars and four revolutions for the Evening Standard, filing her last dispatch from Kyiv."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Reporter's expose wins Pulitzer. Sandra Kim's series on unsafe nursing homes prompted state inspections and two new laws."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "At my first newsroom job, the editor, old Frank Russo, would yell 'Who? What? When?' across the room until you'd checked every fact twice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I saw Christiane Amanpour at an airport once, dictating a story into her phone while her flight boarded. She didn't miss a beat."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which two Washington Post reporters broke the Watergate story? Answer: Bob Woodward and Carl Bernstein."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which American reporter traveled around the world in 72 days in 1889 to beat Phileas Fogg's fictional record? Answer: Nellie Bly."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, saw your cousin Lucy's byline on the front page today! Her piece on the port strike was really well reported."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, the panel tonight is with Tomas Herrera, who did the leaked-contracts investigation for the Tribune. Want to come? Free wine and probably a heated Q&A."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ida B. Wells (1862-1931). A newspaper editor and reporter, Wells documented lynchings across the American South in pamphlets such as 'Southern Horrors', risking her life to publish the truth."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This typewriter was used by war correspondent Ernie Pyle, whose columns about ordinary soldiers in World War II were read by millions back home."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And we've got Jim Pearson from the Courier on the line, the man who broke the stadium funding story. Jim, who leaked you those emails? Kidding, kidding!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our media segment tonight: anchor Denise Wallace signs off after 30 years on the evening news. Denise, which broadcast will you never forget?"
+   }
+  ],
+  "topic:Judge": [
+   {
+    "style": "text message",
+    "text": "jury duty update: Judge Patterson is no joke, she yelled at a lawyer for being 2 min late"
+   },
+   {
+    "style": "text message",
+    "text": "omg Judge Amir Khalil threw the whole case out!! the landlord's lawyer didn't even bring the lease"
+   },
+   {
+    "style": "press release",
+    "text": "The State Bar announces that the Honorable Denise Okoro has been appointed to the Court of Appeals, where she will hear civil and criminal appeals from twelve counties."
+   },
+   {
+    "style": "press release",
+    "text": "The federal circuit court today honored Judge William Tsai, who retires after 31 years on the bench and more than 4,000 written opinions."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Your Honor, what makes a good ruling? A: One the losing side can read and understand why they lost, says Justice Margarethe Klein."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Do you ever regret a sentence you handed down? A: Every judge carries a few, says Robert Ansel. I still think about one young defendant often."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Retired magistrate Joan Whitaker's advice for small-claims court: bring three copies of every document, one for you, one for the other side, and one for the bench."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Judge Carlos Ibarra tells new lawyers to stop arguing once they've won. He's watched attorneys talk themselves out of a favorable ruling."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Judge blocks controversial highway project. U.S. District Judge Elena Marquez ruled that planners failed to study the impact on nearby wetlands."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Longest-serving High Court justice to retire. Justice Ravi Menon, appointed in 1994, wrote landmark decisions on privacy and free speech."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I clerked for Judge Halloran, he kept a jar of peppermints on the bench and handed one to every nervous witness before they testified. Sweetest old man."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt got married at the county courthouse by Lydia Ferrer, and Her Honor cried more than the bride did."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first woman to serve on the U.S. Supreme Court, appointed in 1981? Answer: Sandra Day O'Connor."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Chief Justice wrote the unanimous 1954 opinion in Brown v. Board of Education? Answer: Earl Warren."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kat, remember Brennan from moot court? He's on the appellate bench now. Read his opinion on the noise ordinance case and it was hilarious."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lou, we drew Judge Okafor for the trial. She's fair but strict about deadlines, so get me those exhibits by Monday, please."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Thurgood Marshall (1908-1993). After arguing Brown v. Board of Education as a lawyer, Marshall became the first African American justice of the U.S. Supreme Court, serving 1967 to 1991."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Robe and gavel of Florence Allen, the first woman to sit on a state supreme court in the United States, elected to Ohio's high court in 1922."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Court watch, folks: Judge Hammond just sentenced the guy who stole the team mascot costume to 200 hours of community service. In the costume! Love this judge!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Calling in today is retired Judge Ray Delgado to talk about the new bail rules. Your Honor, our listeners want to know: does this make the streets safer or not?"
+   }
+  ],
+  "topic:MilitaryPerson": [
+   {
+    "style": "text message",
+    "text": "my cousin Maria Lopez just made Master Sergeant!! 18 yrs in the Army, so proud"
+   },
+   {
+    "style": "text message",
+    "text": "grandpa's buddy Colonel Hayes is coming to the memorial day thing, he flew helicopters in Vietnam"
+   },
+   {
+    "style": "press release",
+    "text": "The Department of Defense announces that Lieutenant General Patricia Owens has been nominated to lead U.S. Cyber Command."
+   },
+   {
+    "style": "press release",
+    "text": "The Navy today promoted Captain Rafael Duarte to rear admiral. Duarte commanded the destroyer USS Harlan during the 2019 rescue of 300 people at sea."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: General, what did your first command teach you? A: That soldiers follow the leader who eats last, says retired four-star Anthony Brooks."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you keep your crew calm when the engine failed? A: I kept my voice low and gave one order at a time, recalls Air Force pilot Major Kim Soo-ah."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former Marine drill instructor Leroy Banks says make your bed first thing every morning; one finished task sets the tone for the whole day."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Rear Admiral Grace Hopper handed out pieces of wire about 30 centimeters long to show how far light travels in a nanosecond. Use a prop to make the abstract real."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "WWII veteran receives medal 80 years late. Private First Class Eugene Collins, 99, was awarded the Bronze Star for carrying wounded comrades through enemy fire in 1944."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "First woman to lead the naval academy takes charge. Vice Admiral Yvonne Carter assumed command of the academy in a ceremony on Friday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandfather served under Patton. He swore the general once stopped beside a jeep stuck in the mud and got out to push it himself, pearl-handled pistols and all."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a young lieutenant, our battalion commander, Colonel Ndiaye, made every officer dig their own foxhole before he'd inspect anyone else's."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Carthaginian general crossed the Alps with war elephants in 218 BC? Answer: Hannibal."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Confederate commander surrendered to Ulysses S. Grant at Appomattox Court House in 1865? Answer: Robert E. Lee."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dave, finished that biography of Admiral Nelson. Lost an arm and an eye and still won at Trafalgar. Want to borrow it?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sue, my brother Captain Mike Doyle ships out with his unit next month. We're doing a send-off Saturday. Can you bring that lasagna?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Field uniform of General Douglas MacArthur, worn during the Pacific campaign of World War II. MacArthur later commanded United Nations forces in Korea."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Joan of Arc (c. 1412-1431). A peasant girl who led French troops to lift the siege of Orleans in 1429, she was later captured and burned at the stake."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our Veterans Day guest is Sergeant Major Tom Kowalski, 32 years in the infantry. Sergeant Major, the phone lines are full of folks wanting to say thank you!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Before the game tonight, the flyover will be led by Lieutenant Colonel Aisha Grant in the lead F-16. Folks, look up when the anthem ends!"
+   }
+  ],
+  "topic:Model": [
+   {
+    "style": "text message",
+    "text": "OMG Lara Novak is walking for Valentino tonight!! she was literally in my art class 3 yrs ago"
+   },
+   {
+    "style": "text message",
+    "text": "did u see Kofi Mensah on that billboard in Times Square? the underwear ad lol. he's everywhere now"
+   },
+   {
+    "style": "press release",
+    "text": "Maison Lyra is delighted to announce supermodel Anya Petrova as the new face of its spring fragrance campaign, photographed in Marrakech."
+   },
+   {
+    "style": "press release",
+    "text": "Elite Talent today signed 17-year-old Hodan Abdi, discovered by a scout at a shopping mall in Minneapolis, to a multi-year contract for runway and print work."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest part of runway work? A: The shoes, laughs Camila Reyes. You get four minutes to change and a new pair two sizes too small."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How were you discovered? A: A scout stopped me on a train in Tokyo, says catwalk star Yuki Haruna. I thought it was a scam."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Runway veteran Isabelle Moreau's posing tip: lengthen your neck and tilt your chin slightly down; the camera reads it as confidence."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Before a casting, Dante Rossi recommends plain clothes, no makeup and a printed comp card. Bookers want to see you, not your outfit."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Model makes history on Vogue cover. Amira Saleh becomes the first woman in a hijab to front the magazine's September issue."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Sixties fashion icon returns to the catwalk at 75. Penelope Hart, once photographed by every major magazine, closed the London show to a standing ovation."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My college roommate started posing for catalogs to pay tuition. Next thing I know, Jess is in Milan for fashion week, texting me photos of pasta at 3 a.m."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked a photo shoot with Naomi Campbell once, and honestly she was the only person on set who knew every crew member's name by lunch."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which British model, nicknamed for her slender frame, became the face of 1960s Swinging London? Answer: Twiggy."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which German model, discovered in a Dusseldorf nightclub, was one of the top supermodels of the 1990s? Answer: Claudia Schiffer."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Bea! My niece Lina just booked her first Paris show. A small designer, but still! She's 19 and terrified. Any tips from your agency days?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, the shoot Friday is with Marcus Bell, the guy from the Calvin Klein ads. Bring the extra lights, he's six-foot-four."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Gown worn by Iman on the Paris runway, 1985. Born in Mogadishu, Iman became one of the most photographed faces of her era and later founded a cosmetics line."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Photograph of Dorian Leigh, 1946. One of the first fashion models known by name, she appeared on dozens of magazine covers and later ran her own agency in Paris."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the entertainment hour: hometown girl Brianna Cole just walked in Milan Fashion Week! Brianna, your mom is listening, say hi to mom!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gossip line, folks! Word is supermodel Elsa Lindgren will host the awards show this year. Rate her chances of tripping on that gown, one to ten!"
+   }
+  ],
+  "topic:Monarch": [
+   {
+    "style": "text message",
+    "text": "watching the coronation stream rn, the new king looks so nervous lol"
+   },
+   {
+    "style": "text message",
+    "text": "did u know Queen Margrethe of Denmark designed costumes for ballets? learned that at the museum today"
+   },
+   {
+    "style": "press release",
+    "text": "The Royal Household announces that His Majesty King Harald will open the new national library on 12 May and unveil a plaque honoring its founders."
+   },
+   {
+    "style": "press release",
+    "text": "The Embassy of the Hashemite Kingdom of Jordan announces a state visit by King Abdullah II, who will meet trade leaders and open a cultural exhibition."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was Queen Victoria like as a mother? A: Demanding, says historian Ellen Barker. She reigned for 63 years and wrote her children thousands of letters full of advice."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Emperor Akihito step down? A: Age and health, explains a palace scholar. In 2019 he became the first Japanese emperor to abdicate in two centuries."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Versailles? Go to the Hall of Mirrors early, before the crowds, and picture Louis XIV, the Sun King, walking through it every morning surrounded by courtiers."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To remember England's Tudor rulers in order, chant 'Henry, Henry, Edward, Mary, Elizabeth', from Henry VII to Elizabeth I."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "King crowned in lavish ceremony. Thousands lined the streets as the 34-year-old sovereign took the throne of the island kingdom after his father's death."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Queen marks 50 years on the throne. Bells rang across the nation as she thanked her subjects for half a century of loyalty."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother waved at Queen Elizabeth II in 1953 when the coronation coach went by. She said the Queen caught her eye for maybe a second, and she never forgot it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "On our trip to Thailand, everyone stood for the royal anthem before the movie. My little brother didn't know, and our guide gently pulled him up."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English king had six wives and broke with the Roman Catholic Church? Answer: Henry VIII."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which French king, called the Sun King, reigned for 72 years? Answer: Louis XIV."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, finished that book on Catherine the Great. She took the Russian throne from her own husband and then ruled for 34 years! Your turn."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Paul, the palace tour in Stockholm was great, but we just missed King Carl Gustaf leaving. Saw his car though!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Coronation robe of Empress Maria Theresa (1717-1780), the only woman to rule the Habsburg lands in her own right and mother of sixteen children, including Marie Antoinette."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Statue of Ramesses II, c. 1250 BC. The pharaoh reigned for 66 years, built temples at Abu Simbel and Karnak, and left more monuments than any other Egyptian ruler."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Royal watchers, it's official: the king will attend the cup final this weekend! Players, you'd better not lose in front of His Majesty."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Talk show tonight: is the queen's jubilee worth a four-day weekend? Lines are open. Jerry from Leeds says absolutely, God save her!"
+   }
+  ],
+  "topic:Noble": [
+   {
+    "style": "text message",
+    "text": "we toured the castle today and the actual earl still lives there!! saw him walking his dogs in wellies"
+   },
+   {
+    "style": "text message",
+    "text": "lol my history prof is obsessed with Georgiana, Duchess of Devonshire, spent the whole lecture on her gambling debts"
+   },
+   {
+    "style": "press release",
+    "text": "The Ashcombe Estate announces that the 9th Baron Ashcombe will open his family's ancestral gardens to the public for the first time in 300 years."
+   },
+   {
+    "style": "press release",
+    "text": "Heritage Trust welcomes Count Federico di Montalto, head of one of Tuscany's oldest aristocratic families, as patron of its vineyard restoration project."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like inheriting a title and a crumbling castle? A: Mostly roof repairs, laughs the 12th Duke of Harwick. The title doesn't pay for slate."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Did your family lose their lands after the revolution? A: Almost everything, says Countess Irina Sheremeteva. My great-grandfather fled with two suitcases and a portrait."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Addressing a duke? It's 'Your Grace' in speech. Earls, viscounts and barons are addressed as 'My Lord', and their wives as 'My Lady'."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting a stately home? Ask the guides about the family who built it; at Chatsworth they'll tell you how the Cavendish dukes collected art for centuries."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Marquess sells family Rembrandt to pay estate taxes. The 8th Marquess of Bramley said the sale will keep the 400-year-old house open to visitors."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Baroness's diaries reveal Georgian court gossip. Letters by Lady Caroline Ashby describe balls, duels and scandals among England's peerage."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a tour guide at a manor in Kent, and the old Viscount would sometimes wander into the group in his slippers and correct my dates. Always right, annoyingly."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-grandmother was a lady's maid to a German countess before the war. She said the countess wore gloves to read letters so the ink wouldn't stain her fingers."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 18th-century English aristocrat supposedly asked for meat between two slices of bread so he could keep gambling? Answer: John Montagu, 4th Earl of Sandwich."
+   },
+   {
+    "style": "trivia question",
+    "text": "The Marquise de Pompadour was a powerful patron of the arts at the court of which French king? Answer: Louis XV."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Liv, you won't believe it: Tom's new boyfriend is an actual baronet. Sir Hugh Pembury, 7th of his line. He invited us to a shooting weekend. I don't own tweed!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Greg, the archive finally sent copies of Prince Esterhazy's letters about employing Haydn. The household accounts of that family are fascinating."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Portrait of Georgiana Cavendish, Duchess of Devonshire (1757-1806). A celebrated hostess and political campaigner, she was famous for her fashion, her gambling and her role in Whig politics."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Tournament armor of Duke Albrecht of Bavaria, c. 1560. It bears the family's blue-and-white lozenge arms, a sign of the house's rank among the German princes."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And who's in the owner's box at the derby? None other than Lord Pemberton, Earl of Wexley, whose family has bred racehorses since 1780! Wave to the crowd, my lord!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Duke of Arlingford was spotted buying fish and chips in town. A duke! With vinegar! Phones are open, folks."
+   }
+  ],
+  "topic:OfficeHolder": [
+   {
+    "style": "text message",
+    "text": "my aunt just got sworn in as county treasurer!! she's in charge of like $400 million lol"
+   },
+   {
+    "style": "text message",
+    "text": "the new ambassador to Japan is Marisol Vega, the woman who spoke at our graduation!"
+   },
+   {
+    "style": "press release",
+    "text": "The Department of State announces that career diplomat Jonathan Weller has been confirmed as U.S. Ambassador to Kenya and will present his credentials in Nairobi next month."
+   },
+   {
+    "style": "press release",
+    "text": "The Ministry of Finance announces that Dr. Aisha Bello has taken office as Minister of Finance, succeeding Emeka Adewale, who served two terms."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What does a state attorney general actually do? A: I'm the state's chief lawyer, says Attorney General Linda Choi. Consumer fraud, appeals, and defending state laws in court."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Your first week as foreign secretary, what surprised you? A: The paperwork, says Sir Edmund Clarke. Three red boxes of documents every night."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former city clerk Bernadette O'Neill's advice for anyone seeking local office: knock on every door twice, once to introduce yourself and once to listen."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to reach your state's insurance commissioner? Commissioner Ray Tolliver says written complaints get logged and tracked, so put it in writing."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "New finance minister unveils austerity budget. Minister Clara Jansen said spending cuts would close the deficit within three years."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Attorney general opens probe into utility price hikes. Attorney General Marcus Hale said customers paid $80 million in improper fees."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad was county sheriff for twenty years. Every Christmas he'd drive around delivering hams to the folks he'd arrested that year; said it kept the peace."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I interned for the state comptroller, Mrs. Odom. She audited the office coffee fund herself because she said trust starts with small numbers."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first U.S. Secretary of the Treasury, now pictured on the ten-dollar bill? Answer: Alexander Hamilton."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who was the first woman to serve as U.S. Secretary of State, appointed in 1997? Answer: Madeleine Albright."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Joe, guess who our new ambassador to Canada is: your old debate partner, Nina Patel! Saw it in the paper. We should send flowers."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rosa, the meeting with the health commissioner, Dr. Levin, is set for Tuesday. She wants our clinic numbers before then."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Frances Perkins (1880-1965). As U.S. Secretary of Labor from 1933 to 1945, Perkins was the first woman to serve in a U.S. cabinet and helped create Social Security."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Seal and ledger of Thomas Cromwell, chief minister to Henry VIII, who reorganized royal finances and oversaw the dissolution of the monasteries."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The county assessor, Bill Hennessey, is on the line to explain your new property tax bill, folks. Bill, they're mad. Talk to 'em."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking during the show: Secretary of State Daniel Ortiz just announced he's resigning after six years in the job. Callers, who should replace him?"
+   }
+  ],
+  "topic:Philosopher": [
+   {
+    "style": "text message",
+    "text": "reading Simone de Beauvoir for class and 'one is not born, but rather becomes, a woman' kinda rewired my brain"
+   },
+   {
+    "style": "text message",
+    "text": "my prof Dr. Haverford spent 90 min on whether a hot dog is a sandwich and somehow it was about Plato's forms"
+   },
+   {
+    "style": "press release",
+    "text": "University Press announces the publication of 'The Ethics of Attention', the final book by moral philosopher Margaret Lindqvist, completed shortly before her death."
+   },
+   {
+    "style": "press release",
+    "text": "The Berggruen Institute awards its annual prize to Kwasi Owusu for his work on personhood and community in African thought."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Is free will an illusion? A: It depends what you mean by free, says Daniel Reyes. If it means acting on your own reasons, then no, we have it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why read Kant today? A: Because he asked whether you could want everyone to do what you're doing, says Professor Hannah Weiss. That question never gets old."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Try the Socratic method: when someone states an opinion, ask them to define their key word, then look together for an example that breaks the definition."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Following the Stoic Epictetus, sort your worries into what you control and what you don't, then spend your energy only on the first list."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Famous 'trolley problem' turns 50. Philippa Foot's thought experiment, published in 1967, now shapes debates over how self-driving cars should decide."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Oxford ethicist argues we owe more to future generations. Professor Amir Kazemi's new book says today's climate choices are a test of justice across time."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My undergrad advisor once spent an entire office hour on a single sentence of Wittgenstein. I left more confused but somehow happier."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I heard Peter Singer give a talk where he asked if we'd ruin our shoes to save a drowning child. Then he asked about charity. Nobody left early."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which French thinker wrote 'I think, therefore I am'? Answer: Rene Descartes."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Greek thinker, a student of Plato, tutored the young Alexander the Great? Answer: Aristotle."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Theo, finished Hume's Treatise. His point that we never actually see causation, only one thing following another, is going to keep me up tonight."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mara, the seminar on Confucius's Analects was amazing. The part about the rectification of names reminded me of your project."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hypatia of Alexandria (c. 355-415). A mathematician and Neoplatonist philosopher, Hypatia taught crowds of students before she was killed by a mob."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "First edition of 'Leviathan' (1651) by Thomas Hobbes, who argued that without government, human life would be 'solitary, poor, nasty, brutish, and short'."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Late-night talk, folks: our guest tonight is Dr. Elena Varga, who says Nietzsche would have loved reality TV. Elena, explain yourself!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller Steve wants to argue with Aristotle about what makes a happy life. Steve, buddy, the man's been dead 2,300 years, but go ahead, the line is yours!"
+   }
+  ],
+  "topic:PlayboyPlaymate": [
+   {
+    "style": "text message",
+    "text": "my mom's old friend Debbie was Miss July 1983 in Playboy, she brought the issue to brunch lol"
+   },
+   {
+    "style": "text message",
+    "text": "omg that actress Kara Lane? she was a centerfold before her TV show!"
+   },
+   {
+    "style": "press release",
+    "text": "Playboy Enterprises announces that Texas native Brittany Vale has been named Playmate of the Year and will receive a cash prize and a new car."
+   },
+   {
+    "style": "press release",
+    "text": "Former centerfold Natalie Rhodes announces the launch of her animal rescue foundation, inspired by years of volunteering after her magazine pictorial."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did your Playboy shoot change your life? A: It opened doors in acting, says former Miss October Candace Wilde. People still bring me the issue to sign."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was Hugh Hefner like? A: Polite and always in pajamas, laughs Lisa Marquez, who was Miss April and lived at the Mansion for a year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former Playmate turned fitness coach Shannon Price says her routine before a shoot was simple: more sleep, more water, less salt."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Collecting vintage centerfolds? Jenna Rowe, Miss June 1991, says autographed issues are worth more if the signature includes the month and year."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Former Playmate of the Year launches skincare brand. Ashley Marino, featured in the magazine in 2004, now runs a company with 40 employees."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ex-Playboy centerfold elected to city council. Tiffany Grant says voters cared more about potholes than about her past as Miss November."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked a car show in the nineties, and a Playboy Playmate was signing posters at the booth next to ours. The line went around the building."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle had a pin-up calendar from 1979 and swore that Hefner's Miss March grew up two towns over. Turns out he was right."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Whose photo appeared in the very first issue of Playboy, in December 1953? Answer: Marilyn Monroe."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which model was named Playboy's Playmate of the Year in 1993 and later became a reality-TV star? Answer: Anna Nicole Smith."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mike, you'll never guess: the woman who runs our yoga studio was a Playboy centerfold in 1998! She mentioned it like it was nothing."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Trish, the convention lineup has three former Bunny-magazine cover girls signing this year, including Miss December 1987. Save me a spot in line?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Magazine centerfold, 1955. Bettie Page posed as Playboy's Miss January 1955; her pin-up photos made her an enduring pop-culture icon."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Playmate of the Year sash and trophy, 1985. The title is awarded annually by Playboy magazine to the most popular of the year's twelve monthly centerfolds."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We've got Miss August herself, a former Playmate, calling in to talk about her new reality show! Welcome to the morning zoo!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Calling all listeners: who was Playboy's centerfold the month you were born? Jackie from Reno says Miss May 1976, and she's got the issue framed!"
+   }
+  ],
+  "topic:Religious": [
+   {
+    "style": "text message",
+    "text": "Pastor Mike's sermon today was about forgiveness and I cried in the church parking lot lol"
+   },
+   {
+    "style": "text message",
+    "text": "the Dalai Lama is speaking at the stadium in June!! wanna go?"
+   },
+   {
+    "style": "press release",
+    "text": "The Archdiocese announces that Bishop Antonio Reyes has been appointed archbishop and will be installed at the cathedral on 4 March."
+   },
+   {
+    "style": "press release",
+    "text": "The Interfaith Council honors Rabbi Miriam Feld for 30 years leading Congregation Beth Shalom and founding the city's largest food pantry."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Imam, how do you talk to young people about faith? A: I listen first, says Imam Yusuf Karim. They have questions, not rebellion."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you become a nun? A: I felt called while teaching in a village school, says Sister Agnes Mwale, now 82."
+   },
+   {
+    "style": "how-to tip",
+    "text": "The Zen teacher Thich Nhat Hanh taught walking meditation: take one breath per step and feel each foot touch the ground."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Father Tom Kelly's advice for first-time visitors to Mass: sit near the back, follow the people in front of you, and don't worry about getting the responses right."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pope declares Italian missionary a saint. Sister Lucia Bianchi, who ran orphanages in Brazil for 40 years, was canonized before 80,000 pilgrims."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Beloved village priest retires after 50 years. Father Sean Brennan baptized, married and buried three generations of his parish."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our old rabbi, Rabbi Lowenstein, hid candy in his robe pockets for the kids after services. He did it till he was 90."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I met a Buddhist monk at the airport who'd walked from Thailand to India on pilgrimage. He sat cross-legged by Gate 12, completely at peace, while my flight was delayed."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which German monk posted his 95 Theses in 1517, sparking the Reformation? Answer: Martin Luther."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Italian friar, founder of a religious order, is the patron saint of animals? Answer: Francis of Assisi."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ruth, the new pastor at First Methodist is Reverend Grace Obi. Her first sermon was wonderful, short and funny. You'd love her."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, the swami from the ashram is giving a talk Saturday on the Bhagavad Gita. Want to come? It's free and there's chai."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Rumi (1207-1273). A Persian poet and Sufi mystic, Rumi inspired the order later known as the whirling dervishes; his verses are still read worldwide."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Manuscript of hymns by Guru Nanak (1469-1539), founder of Sikhism, who traveled across South Asia teaching devotion to one God and the equality of all people."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And in the stands tonight, Father Dominic, team chaplain for 30 years, blessing the ball before kickoff! Can't hurt, folks!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Faith hour callers: Reverend Al Hutchins is with us to talk about his march for clean water. Reverend, the lines are full."
+   }
+  ],
+  "topic:Congressman": [
+   {
+    "style": "text message",
+    "text": "Rep. Dana Whitfield is doing a town hall at the library tmrw, should we go yell about the bridge?"
+   },
+   {
+    "style": "text message",
+    "text": "omg our congressman just liked my tweet about the post office lol"
+   },
+   {
+    "style": "press release",
+    "text": "Congressman Luis Aranda (D-Texas) today introduced the Rural Broadband Access Act in the House of Representatives, joined by 24 bipartisan cosponsors."
+   },
+   {
+    "style": "press release",
+    "text": "Representative Karen Holt announces $12 million in federal funding secured for the Route 9 bridge repair in Ohio's 7th District."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Congresswoman, why vote against your own party's bill? A: Because farmers in my district would lose their subsidies, says Rep. Marjorie Pell. I represent them first."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's a typical day in the House like? A: Committee hearings at nine, floor votes at noon, constituents all afternoon, says freshman Rep. Tyrone Mills."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Need help with a Social Security check? Call your representative's district office. Rep. Ann Castillo's caseworkers handle hundreds of federal agency cases a month."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former Rep. Dan Whitaker says letters to your House member count more if you include your zip code and one specific bill number."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Freshman congressman wins upset in Ohio's 4th. Political newcomer Derek Lyons, 31, unseated an eight-term incumbent by 900 votes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Longtime House member announces retirement. Rep. Eleanor Daniels, who chaired the Appropriations Committee, will not seek a 16th term."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a House page, Congressman Bill Harrington tipped us in peppermints and told stories about the 1960s. Couldn't pass a bill to save his life, nicest guy though."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our congresswoman showed up at the county fair and judged the pie contest. Gave my grandma second place, which grandma has not forgiven."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first woman elected to the U.S. House of Representatives, in 1916? Answer: Jeannette Rankin of Montana."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which civil rights leader represented Georgia's 5th District in the House from 1987 until 2020? Answer: John Lewis."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mel, I emailed Rep. Nguyen's office about the VA backlog for Dad, and they called back in two days! Worth trying for your uncle."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Brad, the congressman's staffer confirmed the Capitol tour for our class on the 14th. Chaperones need to bring IDs."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Shirley Chisholm (1924-2005). In 1968 she became the first Black woman elected to Congress, representing Brooklyn in the House for seven terms under the slogan 'Unbought and Unbossed'."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Desk used by Sam Rayburn of Texas, who represented his district in the House for 48 years and served as Speaker longer than anyone in history."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We've got Congressman Jim Ballard on the line, folks, and he's promising federal money for the new harbor. Jim, the callers want dates, not promises!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Former linebacker turned Rep. Tony Salazar just threw out the first pitch and bounced it. Stick to writing bills, Congressman!"
+   }
+  ],
+  "topic:Governor": [
+   {
+    "style": "text message",
+    "text": "Gov. Whitmore just closed every school in the state for the snowstorm!! no school tmrw"
+   },
+   {
+    "style": "text message",
+    "text": "Gov. Patricia Lynn signed the bill!!! we can finally sell our honey at farmers markets without a license"
+   },
+   {
+    "style": "press release",
+    "text": "Gov. Robert Lang today signed an executive order creating a statewide wildfire task force and directing $50 million toward forest thinning."
+   },
+   {
+    "style": "press release",
+    "text": "The Office of Governor Amanda Ruiz announces that she will deliver her State of the State address to a joint session of the legislature on January 14."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Governor, will you sign the budget? A: Not with those cuts to rural hospitals, says Gov. Henry Calloway. Send me something better."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest call you've made in office? A: Calling out the National Guard during the floods, says Maria Esposito, the state's chief executive."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want a meeting with the head of your state government? Former governor Frank Doyle says go through the constituent services office and be specific."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Track bill signings on your state's official website; Gov. Lena Park's office posts every signed law and veto with a short summary."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Governor vetoes tax bill. Gov. Mark Ellison rejected the legislature's income tax cut, calling it 'a gift to the wealthy'."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "State's first woman governor sworn in. Linda Harrow took the oath on the capitol steps, promising to fix roads and raise teacher pay."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid, the governor visited my school and let me hold his umbrella for the photo. My mom still has it framed."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I waited tables at the diner near the statehouse, and Gov. Haines ate there every Friday. Always the meatloaf, always tipped thirty percent."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which bodybuilder and movie star led California's state government from 2003 to 2011? Answer: Arnold Schwarzenegger."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who was the first woman to serve as governor of a U.S. state, taking office in Wyoming in 1925? Answer: Nellie Tayloe Ross."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jen, our petition reached the governor's desk! Gov. Alvarez's office says she'll review the park closure next week."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dad, saw Gov. Chen at the state fair today eating a corn dog. Took a selfie. He was nicer than I expected."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Portrait of Huey Long, governor of Louisiana from 1928 to 1932, whose 'Share Our Wealth' program built roads, bridges and free schoolbooks."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bible used at the 1975 swearing-in of Ella Grasso of Connecticut, the first woman elected to lead a U.S. state without succeeding her husband."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The governor just declared a state of emergency for the hurricane, folks. Evacuation orders for the coastal counties, so listen up!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "We've got Gov. Ruth Danner in the booth for the season opener! Ma'am, are you picking our team to win the title or what?"
+   }
+  ],
+  "topic:Mayor": [
+   {
+    "style": "text message",
+    "text": "the mayor is literally at our block party rn eating my mom's empanadas"
+   },
+   {
+    "style": "text message",
+    "text": "Delgado finally fixed the pothole on Elm st!!! only took 3 yrs lol"
+   },
+   {
+    "style": "press release",
+    "text": "Thomas Brennan, now in his second term at City Hall, today announced the city's new bike-lane plan, adding 40 miles of protected lanes downtown by 2028."
+   },
+   {
+    "style": "press release",
+    "text": "The Office of Mayor Keisha Monroe announces a free summer concert series in city parks, beginning June 6 at Riverside Park."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why raise parking fees? A: To fund the buses, says Lars Eriksen, who has run the city since 2019. Every dollar goes straight to city transit."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the best part of running a small town? A: Everyone knows where you live, laughs Bonnie Kruger, who has led Millbrook's town hall for nine years. That's also the worst part."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want city hall to see your complaint? Ali Hassan's office at city hall says report it on the 311 app with a photo; those get reviewed weekly."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Joan Tierney, who led our city for twelve years, on speaking at city council: three minutes, one issue, and bring neighbors who agree with you."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "City leader unveils plan to end homelessness. Richard Ochoa, sworn in at city hall in January, promised 5,000 new supportive housing units within four years."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tiny town elects dog as honorary mayor. Residents of Cormorant, Minnesota, voted Duke the Great Pyrenees into office for a third term."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our town's mayor runs the hardware store too. You go in for nails and leave with an update on the sewer project."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at a ribbon cutting where the giant scissors wouldn't cut. The mayor finally tore the ribbon with his hands and everyone cheered."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who led New York City from city hall on September 11, 2001? Answer: Rudy Giuliani."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who became the first directly elected Mayor of London in 2000? Answer: Ken Livingstone."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rach, Dana Kim, yes, the woman who runs our whole city, is coming to our library fundraiser! Can you make sure the cookies aren't burnt this time?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Neil, saw that Barcelona's mayor, Ada Colau, limited new hotels there. Might work for our tourism problem too?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Key to the city presented by Fiorello La Guardia, mayor of New York from 1934 to 1945, who famously read the comics on the radio during a newspaper strike."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Chain of office worn by the Lord Mayor of London, an ancient post dating to 1189 that today promotes the City's financial district."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tom Petrakis just called in from city hall, folks! Sir, when's that new stadium deal getting done? The fans want answers!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our mayor lost his bet with the mayor across the river, so tomorrow he's wearing their team's jersey on the steps of city hall. Love it!"
+   }
+  ],
+  "topic:MemberOfParliament": [
+   {
+    "style": "text message",
+    "text": "our MP Sarah Hollis actually replied to my email about the bus cuts!! useful for once"
+   },
+   {
+    "style": "text message",
+    "text": "lol the MP for my constituency just got heckled at the village fete"
+   },
+   {
+    "style": "press release",
+    "text": "Liam Doherty, MP for Westbrook North, today welcomed funding for a new GP surgery in his constituency."
+   },
+   {
+    "style": "press release",
+    "text": "Priya Desai, Member of Parliament for Leicester East, will hold a free advice surgery for residents on Saturday at the community centre."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you vote against the whip? A: Because my constituents told me loud and clear, says backbencher Gareth Owen, who sits for a Welsh valleys seat."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What surprised you most about the Commons? A: The speed of it, says newly elected Labour member Hannah Briggs. You learn the procedure on the fly."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Need help with a visa or benefits issue? Book a constituency surgery; Angela Morrow's office in Cardiff sees forty people every Friday."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Writing to your Member of Parliament? Include your full postal address, since MPs like Tom Fairley only take up cases from their own constituents."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lib Dem wins by-election by 12 votes. Fiona McLeod took the Westminster seat after three recounts in the early hours."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "First-term lawmaker addresses Lok Sabha in Sanskrit. Rakesh Verma, elected from a rural seat in Uttar Pradesh, spoke in the ancient language to mark a heritage bill."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked as a researcher for a backbencher in Westminster. She'd rehearse her questions on the Tube, muttering, and people thought she was mad."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our local MP judged the dog show at the village fair and gave first prize to a rescue that had bitten him. Good sport about it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was the first woman to take her seat in the British House of Commons, in 1919? Answer: Nancy Astor."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Irish revolutionary was the first woman elected to the Westminster Commons in 1918 but never took her seat? Answer: Constance Markievicz."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mum, I emailed our MP about the hospital closure like you said. His caseworker replied that he'll raise it in Parliament."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Cal, did you see your old flatmate is now the MP for Bristol South? Rebecca from uni! Mad."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Speech notes of William Wilberforce, MP for Yorkshire, who campaigned in the Commons for twenty years until the slave trade was abolished in 1807."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Election leaflet of Dadabhai Naoroji, elected for Finsbury Central in 1892, the first Asian member of the British House of Commons."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Westminster round-up: the MP for Hartlepool has just had the whip removed! Phones are open, folks, what's the mood up north?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And sitting in the commentary box with me today is Dave Jenkins, who represents this town at Westminster, a lifelong season-ticket holder. Dave, would you vote for a new manager?"
+   }
+  ],
+  "topic:President": [
+   {
+    "style": "text message",
+    "text": "the president is speaking in our town tmrw!! roads closed everywhere ugh"
+   },
+   {
+    "style": "text message",
+    "text": "did u know Jimmy Carter built houses with Habitat into his 90s? so wholesome"
+   },
+   {
+    "style": "press release",
+    "text": "State House announces that head of state Amara Diop will travel to Brussels next week for trade talks with European leaders."
+   },
+   {
+    "style": "press release",
+    "text": "The Franklin D. Roosevelt Library announces a new exhibit on FDR's fireside chats, the radio addresses he gave from the White House, opening April 12."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Madam President, what's your first priority? A: Clean water for every village, says Sara Mkandawire, sworn in as head of state last week."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was the hardest moment of your time in office? A: The night of the earthquake, says former President Andres Solano. We had no electricity and no news."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Mount Vernon? Arrive early and walk down to George Washington's tomb before the crowds; the view of the Potomac is the one he enjoyed from his porch."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To remember the first four U.S. presidents in order, try 'Washington And Jefferson Made it': Washington, Adams, Jefferson, Madison."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "President signs landmark climate law. President Elena Kovac called it 'a promise to our grandchildren' at a ceremony in the capital."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Former head of state dies at 94. Ernesto Alvarado led the country's transition to democracy after the 1989 elections and served two terms."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandpa shook hands with JFK at an airport in 1962. He didn't wash that hand for a week, or so he says."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was in the crowd for Obama's first inauguration. It was freezing, and when he took the oath, the stranger next to me started crying."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who became South Africa's first democratically elected president in 1994? Answer: Nelson Mandela."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which U.S. president delivered the Gettysburg Address in 1863? Answer: Abraham Lincoln."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ty, finished the biography of Theodore Roosevelt. He got shot before a speech and gave the speech anyway! Want it next?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mom, we visited the Lincoln Memorial today. The kids read the Gettysburg Address carved on the wall, and Ellie now wants to run for the White House."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Desk of Vaclav Havel, the playwright and dissident who became Czechoslovakia's first post-communist president in 1989."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Inaugural ball gown, 1961. Worn by Jacqueline Kennedy at the celebrations for John F. Kennedy's inauguration as the 35th president."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The commander in chief will throw out the first pitch on opening day, folks! Bet you a sandwich it bounces before the plate."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, the president's speech last night: did it work for you? Marlene from Toledo says it was too long. Fair, Marlene."
+   }
+  ],
+  "topic:PrimeMinister": [
+   {
+    "style": "text message",
+    "text": "the PM resigned!!! literally just watched it live outside Downing St"
+   },
+   {
+    "style": "text message",
+    "text": "still think about Jacinda Ardern wearing a headscarf to meet families after Christchurch"
+   },
+   {
+    "style": "press release",
+    "text": "The Prime Minister's Office announces that Prime Minister Henrik Aalto will host Nordic leaders for a climate summit in Helsinki."
+   },
+   {
+    "style": "press release",
+    "text": "Anjali Rao, head of the government, today announced a national housing plan to build two million homes over the next decade."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Will you call an early election? A: Not while the budget is before the House, says Daniel Moreau, who has led the government since 2022."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you keep a coalition cabinet together? A: Patience and very long dinners, says Ingrid Stal, Sweden's former head of government."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting London? You can't walk up Downing Street, but you can photograph Number 10, the PM's official residence, through the gates on Whitehall."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Studying for the Canadian citizenship test? Remember that Sir John A. Macdonald was the first prime minister, taking office at Confederation in 1867."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Premier survives no-confidence vote. Tomasz Nowak's government held on by four votes after a stormy late-night session in parliament."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Japan's new head of government takes office. Former foreign minister Haruto Sato pledged to revive growth and strengthen defense."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked a hotel desk in Ottawa, and one night Pierre Trudeau walked in alone, asked for a newspaper, and did a little pirouette on the way out."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad met Golda Meir on a kibbutz in the sixties. She poured him coffee and asked what he thought about the harvest."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who was Britain's first female prime minister? Answer: Margaret Thatcher."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who led India's government as its first prime minister after independence in 1947? Answer: Jawaharlal Nehru."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Fi, the PM's visit to our school is confirmed for Thursday. Security wants every student's name by tomorrow!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Gran, finished that book about Winston Churchill. His wartime speeches from Number 10 still give me chills."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Indira Gandhi (1917-1984). India's first and only woman prime minister, she led the government for about fifteen years in total."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Pipe belonging to Harold Wilson, twice prime minister of the United Kingdom in the 1960s and 1970s, who often smoked it during television interviews."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Downing Street's top man is in the stands for the test match, folks! Cameras caught him celebrating that wicket like a schoolboy!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Question time chaos again, listeners! The PM got roasted over the rail strike. Callers, line one, you're on the air."
+   }
+  ],
+  "topic:Senator": [
+   {
+    "style": "text message",
+    "text": "Sen. Ramirez is doing a meet and greet at the diner, should we go?"
+   },
+   {
+    "style": "text message",
+    "text": "my senator just voted to save the national park!! writing her a thank you card lol"
+   },
+   {
+    "style": "press release",
+    "text": "Senator Martha Gilchrist (R-Kansas) today introduced legislation to expand crop insurance for wheat farmers hit by drought."
+   },
+   {
+    "style": "press release",
+    "text": "Sen. David Kwon announces a bipartisan bill with Sen. Julia Ames to cap insulin costs at $35 per month."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Will you filibuster? A: If I have to, says Harold Beck, who has represented his state in the upper chamber for 18 years. I've got comfortable shoes and a lot to say."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's different about the upper chamber? A: Six-year terms let you think long term, says Sen. Gloria Pham."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want your senator's office to notice? Former Senate staffer Anne Coyle says one personal letter beats a hundred form emails."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To find out how Sen. Robert Hale voted, search the Senate roll-call votes by bill number on the official website."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Senator holds floor for 25 hours. Sen. Walter Hughes spoke against the bill through the night, refusing to yield the floor."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Newly appointed senator sworn in. Lisa Okafor fills the seat left vacant by her predecessor's death and becomes her state's first Black senator."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I interned on Capitol Hill, Senator Halvorsen knew every intern's hometown and asked about our local football teams."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma once got a handwritten reply from Margaret Chase Smith of Maine. She kept that letter in her Bible for sixty years."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Roman senator and orator delivered speeches against Catiline in 63 BC? Answer: Cicero."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who was the first woman to serve in both houses of the U.S. Congress, representing Maine? Answer: Margaret Chase Smith."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Joel, Sen. Ortega's town hall is Saturday. I'm going to ask about the veterans' clinic. Come with?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Aunt Bea, I got the page job! I'll be running messages for Sen. Whitman's committee all summer."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Daniel Webster (1782-1852). Representing Massachusetts in the Senate, Webster was famed for his 1830 'Liberty and Union' speech against nullification."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Desk of Margaret Chase Smith, who in 1950 delivered her 'Declaration of Conscience' on the Senate floor against the tactics of Joseph McCarthy."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Senator Jim Whitley's in the press box tonight, folks, and he's a die-hard fan. Senator, is there a bill to make overtime longer?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, the senior senator from our state just switched parties live on the evening news. Lines are open, and boy are they ringing!"
+   }
+  ],
+  "topic:RadioHost": [
+   {
+    "style": "text message",
+    "text": "omg DJ Marisa from the morning show just read my birthday shoutout on air!!!"
+   },
+   {
+    "style": "text message",
+    "text": "did u hear Big Lou yesterday? he prank called his own mom on air lol"
+   },
+   {
+    "style": "press release",
+    "text": "WKRX 98.7 is thrilled to announce that longtime host Tony Ramos will take over the afternoon drive slot starting Monday."
+   },
+   {
+    "style": "press release",
+    "text": "Public Radio Network announces the retirement of Eleanor Price, whose weekend interview program has aired on 300 stations for 22 years."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you fill four hours of live airtime every day? A: Callers, says talk host Gary Rourke. They always surprise me."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's your favorite on-air moment? A: The night a listener proposed on my late show, says DJ Aaliyah Brooks."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Veteran DJ Rick 'Nightowl' Sanders says talk to one listener, not a crowd. Picture one person driving home alone."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to get through on a call-in show? Pam Liu, who hosts one, says keep it under thirty seconds, turn your own radio down, and have your point ready."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Legendary DJ signs off after 45 years. Morning man 'Big Jim' Callahan played his last song, 'Sweet Caroline', to a studio full of fans."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Podcast star returns to FM. Nina Patel, whose call-in advice show began on a college station, joins WNYX's evening lineup."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid we'd listen to Casey Kasem count down the Top 40 every Sunday in the car, and my sister would cry if her song dropped."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I called a late-night show once at 2 a.m., and Midnight Mike kept me on the air for twenty minutes talking about my breakup. Best free therapy ever."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who hosted 'American Top 40' for decades, signing off with 'keep your feet on the ground and keep reaching for the stars'? Answer: Casey Kasem."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which American shock jock called himself the 'King of All Media'? Answer: Howard Stern."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dee, you'll never guess: Lisa from 'Lisa and Mo in the Morning' is moving to our street! I'm going to bake her something."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Phil, the station's hiring an overnight host since Jerry retired. You've got the voice. Send them a demo!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Microphone used by DJ Alan Freed, who helped popularize the term 'rock and roll' on Cleveland airwaves in the early 1950s."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Studio headphones of John Peel, the BBC Radio 1 broadcaster who championed new bands for nearly four decades."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Hey hey, it's your boy Danny D on the drive-time show, and we're giving away concert tickets to caller number nine!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Mad Dog Moretti here, twenty years behind this microphone, and I gotta tell you, I've never seen a fumble that bad."
+   }
+  ],
+  "topic:FormulaOneRacer": [
+   {
+    "style": "text message",
+    "text": "Leclerc on pole at Monaco!!! if he crashes again I'm throwing my phone"
+   },
+   {
+    "style": "text message",
+    "text": "did u see the Alpine rookie pass Verstappen on lap 40?? insane"
+   },
+   {
+    "style": "press release",
+    "text": "Scuderia Velluto is proud to confirm 21-year-old Brazilian Lucas Ferraz as one of its two race drivers for the coming Formula One season."
+   },
+   {
+    "style": "press release",
+    "text": "The FIA congratulates Erik Halvorsen on securing the drivers' world championship with three Grands Prix remaining."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel to win at Silverstone? A: Unreal, says British driver Oliver Grant. The crowd was louder than the engine."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What do you think about before the lights go out? A: Nothing, says Finnish racer Kimi Laine. If you think, you're already slow."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Wet-weather tip that Ayrton Senna made famous: brake in a straight line and hunt for grip off the usual racing line, where the rubber isn't slick."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to understand pit strategy? Watch when Pierre Dubois's team pits under the safety car; a tyre stop costs about half as much time then."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Grand Prix win ends ten-year drought. Spanish driver Marco Ruiz won in Barcelona, his first victory since 2014."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen becomes youngest F1 points scorer. 17-year-old Dutch racer Sem de Vries finished eighth on his debut."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at Monza in '88 when Gerhard Berger won for Ferrari, just weeks after Enzo died. The tifosi flooded the track. I lost a shoe and didn't care."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle shared a hotel lift with Michael Schumacher at Hockenheim. Said he was small, polite, and smelled like sunscreen."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which British driver shares the record of seven world championships with Michael Schumacher? Answer: Lewis Hamilton."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which Argentine driver won five Formula One world titles in the 1950s? Answer: Juan Manuel Fangio."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ian, got us grandstand seats for Spa! We'll be right at Eau Rouge to watch Norris come through. Bring earplugs."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lu, finally watched the Niki Lauda documentary. Burned at the Nurburgring in 1976 and back racing six weeks later. Unbelievable."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Helmet worn by Ayrton Senna, three-time world champion, during his 1988 title season with McLaren. Its yellow design echoed the Brazilian flag."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Lotus 72 driven by Jochen Rindt, who won the 1970 world championship posthumously after a fatal crash in practice at Monza."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And Hamilton dives down the inside at turn one, he's through! What a move, what a move, the crowd at Silverstone is on its feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Lap 52 of 58, folks, and the Ferrari driver is losing a second a lap on those worn tyres. Can he hold on to the podium?"
+   }
+  ],
+  "topic:NascarDriver": [
+   {
+    "style": "text message",
+    "text": "Dale Jr is doing an autograph signing at the speedway Saturday!! we HAVE to go"
+   },
+   {
+    "style": "text message",
+    "text": "Chase Elliott won Talladega!!! told u bro the 9 car was due"
+   },
+   {
+    "style": "press release",
+    "text": "Thunder Ridge Motorsports is proud to announce that Kyle Barnett will drive the No. 47 Chevrolet in the NASCAR Cup Series next season."
+   },
+   {
+    "style": "press release",
+    "text": "Daytona International Speedway congratulates rookie Tanner Boyd on winning the Daytona 500 in only his third start."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's harder, Daytona or Bristol? A: Bristol, says stock car veteran Rusty Hale. Half-mile track, forty cars, nowhere to hide."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How hot does it get inside the car? A: Over 120 degrees, says Cup Series driver Jenna Marlowe. You sweat off pounds in a race."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Bump-drafting tip from superspeedway ace Cody Raines: push the car ahead of you on the straightaways, never in the turns."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Going to a stock car race? Billy Ray Tucker, who drives the No. 31 Ford, says bring ear protection, sunscreen, and a scanner to hear the team radios."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Racing legend's grandson makes Cup debut. 19-year-old Wyatt Ellison finished 14th at Charlotte Motor Speedway."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Driver wins at Martinsville, takes home grandfather clock. Luis Ortega earned his first short-track victory and the famous trophy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was at Daytona in 2001 when Dale Earnhardt crashed on the last lap. Nobody in the stands knew how bad it was until the next day."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My brother was on a pit crew in the Xfinity Series, and their wheelman Jimmy Pruitt once climbed out mid-race to yell at the tire changer."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which driver, nicknamed 'The King', won 200 NASCAR Cup races? Answer: Richard Petty."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who became the first woman to win a Cup Series pole, at Daytona in 2013? Answer: Danica Patrick."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dawn, Jeff Gordon's old car is at the Hall of Fame in Charlotte. Want to drive up for the weekend?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ray, the guy in the No. 22 got wrecked again at Talladega. Three races in a row. I'm starting to think he's cursed."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Car driven by Wendell Scott, the first Black driver to win a race in NASCAR's top series, at Jacksonville in 1963."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Fire suit worn by Jimmie Johnson during 2010, the year he won a record fifth straight Cup championship."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming to the white flag, and the 24 is right on his bumper! Into turn three, he bumps him, he's loose, the 24 takes the lead!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the stock car show tonight, we've got Mason Cole calling in from the team hauler. Mason, what happened on that last restart?"
+   }
+  ],
+  "topic:Entomologist": [
+   {
+    "style": "text message",
+    "text": "Dr. Kim from the bug lab let me hold a Madagascar hissing cockroach today!! still screaming"
+   },
+   {
+    "style": "text message",
+    "text": "my cousin studies fireflies for her PhD, she spends all summer in a swamp at midnight lol"
+   },
+   {
+    "style": "press release",
+    "text": "The Natural History Museum announces that entomologist Dr. Ruth Alvarado has described 42 new species of weevils from the Andean cloud forest."
+   },
+   {
+    "style": "press release",
+    "text": "The University of Nairobi honors Professor Samuel Kipchumba for his research on mosquito behavior and malaria prevention."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why beetles? A: Because there are more kinds of them than of anything else, says Dr. Leo Hartmann, who has collected 80,000 specimens."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Are honeybees really in trouble? A: Some colonies are, says bee researcher Dr. Mara Lindgren. Parasitic mites are the biggest threat."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Entomologist Paula Reyes recommends a white sheet and a UV lamp on a warm summer night: within an hour you'll see dozens of moth species."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To photograph butterflies, lepidopterist Chen Wei suggests going out early in the morning, when they're still too cold to fly away."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Scientist names wasp after favorite band. Dr. Jonas Ek honored the Swedish rockers in the Latin name of a parasitic wasp he discovered in Costa Rica."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ant researcher wins top ecology award. Professor Ayesha Qureshi showed how leafcutter ants farm fungus for food."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I took a field course with an old bug professor who sucked insects into a vial through a little tube called an aspirator. Swallowed a gnat once and kept going."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was nine, an insect specialist from the extension office brought a box of pinned butterflies to class. I decided right then I'd study them."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Harvard ant expert coined the term 'biophilia'? Answer: E. O. Wilson."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which German-born naturalist sailed to Suriname in 1699 to study and paint caterpillars and butterflies? Answer: Maria Sibylla Merian."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Gus, Dr. Fournier from the agricultural extension says those beetles on your squash are cucumber beetles. She recommends row covers."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Liz, guess who's giving the evening lecture: Dr. Ben Okafor, the dragonfly guy! Want to come and nerd out?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Beetle collection of the young Charles Darwin. As a Cambridge student, he once put a beetle in his mouth so he could free a hand to grab a third."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jean-Henri Fabre (1823-1915). The French naturalist spent decades watching dung beetles, wasps and crickets in his garden in Provence and wrote ten volumes about them."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gardening hour, folks! Bug expert Dr. Hank Morales is in studio. Hank, line two wants to know why their tomatoes are full of hornworms."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Science call-in: entomologist Dr. Iris Lund is with us. Iris, a caller asks, could a cockroach really outlive us all?"
+   }
+  ],
+  "topic:Medician": [
+   {
+    "style": "text message",
+    "text": "Dr. Patel said my ankle's just sprained not broken!! so relieved"
+   },
+   {
+    "style": "text message",
+    "text": "our family doctor Dr. Gomez is retiring after 40 yrs, mom is devastated"
+   },
+   {
+    "style": "press release",
+    "text": "St. Mary's Hospital welcomes cardiologist Dr. Ahmed Farouk, who has performed more than 3,000 heart catheterizations, to its cardiac center."
+   },
+   {
+    "style": "press release",
+    "text": "The Medical Association honors pediatrician Dr. Linda Osei for 25 years of free clinics in rural communities."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What do patients get wrong about antibiotics? A: They don't work on colds, says family physician Dr. Mark Henley. Colds are viruses."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why emergency medicine? A: I like not knowing who's coming through the door next, says ER doctor Sofia Lindqvist."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Dr. Rachel Moss, a sleep specialist, says keep your bedroom cool and put your phone in another room an hour before bed."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Before an appointment, write down your three most important questions; internist Dr. Paul Ng says patients forget half of them in the exam room."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Surgeon separates conjoined twins in 20-hour operation. Dr. Benjamin Asante led a team of 40 at the children's hospital."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Country doctor honored for 60 years of house calls. Dr. Walter Price, 88, still visits patients in his pickup truck."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid, old Dr. Hartley made house calls with a black bag and always gave us a lollipop after the shot."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "The surgeon who fixed my knee, Dr. Ito, drew the whole operation on the paper sheet of the exam table. Best explanation I've ever had."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English country doctor developed the first smallpox vaccine in 1796? Answer: Edward Jenner."
+   },
+   {
+    "style": "trivia question",
+    "text": "Who was the first woman to earn a medical degree in the United States, in 1849? Answer: Elizabeth Blackwell."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tess, got in with Dr. Ramos, the allergist you recommended. She thinks it's dust mites. Thanks for the referral!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dad, the new GP, Dr. Okonjo, actually listened for half an hour. Switch to her, seriously."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Stethoscope of the type invented in 1816 by Rene Laennec, the French physician who first listened to a patient's chest through a rolled tube of paper."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ibn Sina (980-1037). A Persian physician and scholar whose 'Canon of Medicine' was taught in European universities for centuries."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Health hour! Dr. Kevin Brandt is taking your calls about flu season. First caller, go ahead, you're on with the doc."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The team doctor, Dr. Lisa Moreno, says the quarterback has a mild concussion and he's out Sunday. Bad news, folks."
+   }
+  ],
+  "topic:BaseballLeague": [
+   {
+    "style": "text message",
+    "text": "the Cape Cod League games are free!! wanna go watch future big leaguers tonight?"
+   },
+   {
+    "style": "text message",
+    "text": "Japan's pro season starts next week, I'm staying up for the Hanshin Tigers opener lol"
+   },
+   {
+    "style": "press release",
+    "text": "The Atlantic League of Professional Baseball announces expansion to two new cities, bringing the independent circuit to ten teams next season."
+   },
+   {
+    "style": "press release",
+    "text": "Minor League Baseball announces that the Pacific Coast League will use the automated strike zone in all games beginning in April."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What makes the KBO different? A: The fans, says former pitcher Ryan Sadler. Chants for every batter, cheerleaders, fried chicken in the stands."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why start a women's pro circuit now? A: Because girls who loved the game had nowhere to play after high school, says commissioner Dana Whitmore."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want cheap baseball? Tickets in the Double-A Southern League often cost under fifteen dollars, and you can sit right behind the dugout."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Following Nippon Professional Baseball from abroad? Its two leagues, the Central and the Pacific, stream games online, and English stat sites cover every team."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mexican League celebrates 100 years. The Liga Mexicana de Beisbol, founded in 1925, marked its centennial with a parade in Monterrey."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Collegiate summer league keeps wooden bats. The Northwoods League says scouts want to see hitters swing wood, not aluminum."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma played in the All-American Girls Professional Baseball League in the forties. She said they had to take charm-school classes between games."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I spent a summer as a batboy in the Dominican winter league. Games started at eight and the drums never stopped."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which league, founded in 1920 by Rube Foster, gave Black players a top-level professional circuit? Answer: the Negro National League."
+   },
+   {
+    "style": "trivia question",
+    "text": "Major League Baseball has the American League and which older league, founded in 1876? Answer: the National League."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, the Frontier League team in our town is doing dollar hot dogs Thursday. Kids would love it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kai, are you watching the Caribbean Series? The Venezuelan winter-ball champs are crushing it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Uniform of the Rockford Peaches, one of the founding teams of the All-American Girls Professional Baseball League (1943-1954)."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Federal League (1914-1915) challenged the established majors by luring stars with higher salaries; its lawsuit led to baseball's antitrust exemption."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And that's the final out! Toledo clinches the International League pennant, folks! Triple-A champions!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Hot stove talk tonight, folks: should the minors go back to nine-inning doubleheaders? Line three, you're on."
+   }
+  ],
+  "topic:BasketballLeague": [
+   {
+    "style": "text message",
+    "text": "WNBA season starts tonight!! Liberty vs Aces lets goooo"
+   },
+   {
+    "style": "text message",
+    "text": "u watching EuroLeague? Real Madrid vs Fenerbahce rn, crowd is crazy"
+   },
+   {
+    "style": "press release",
+    "text": "The NBA G League announces a new affiliate team in Mexico City, beginning play next season."
+   },
+   {
+    "style": "press release",
+    "text": "Australia's National Basketball League today announced a record broadcast deal and an expanded regular season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does EuroLeague differ from the NBA? A: More team play and tighter refereeing, says former point guard Marko Petrovic. You can't hide on defense."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why play in the Chinese Basketball Association? A: The money was great and fans treated us like rock stars, says former import DeShawn Miles."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Getting into the women's pro game? Start with the WNBA playoffs; the league packs its best basketball into a few weeks."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching Spain's Liga ACB? Games use four 10-minute quarters, so they move faster than the NBA's 48 minutes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Upstart pro hoops circuit folds after two seasons. The National Hoops Alliance, which promised players higher pay, canceled its third season amid unpaid bills."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Philippine Basketball Association opens 50th season. Asia's first professional basketball league, founded in 1975, began its anniversary year with a sellout."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad saw the ABA's red, white and blue ball for the first time in 1968 and thought it was a beach ball. That league had the wildest dunks, he says."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I played a season in the German Bundesliga after college. Small gyms, great bread, and fans with drums at every game."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which league merged with the NBA in 1976, bringing over the Nets and the Spurs? Answer: the ABA."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which three-on-three pro league did Ice Cube co-found in 2017? Answer: the Big3."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo, the NBL's Next Stars program lets top prospects play in Australia for a year before the draft. Might be good for your nephew!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Tara, got us tickets to a EuroLeague game in Athens, Panathinaikos at home! Bring a scarf, it's loud."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Program from the first Basketball Association of America game, 1946, Toronto vs. New York. The BAA merged with the National Basketball League three years later to form the NBA."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Women's Professional Basketball League (1978-1981) was the first U.S. pro league for women; teams like the Houston Angels drew devoted crowds."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Hoops talk, folks: the G League just set its all-time attendance record! The minor league is booming!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Caller says the Chinese league plays better ball than the NBA. Bold take, buddy, you're on the air!"
+   }
+  ],
+  "topic:IceHockeyLeague": [
+   {
+    "style": "text message",
+    "text": "KHL game in St Petersburg tonight, SKA vs CSKA, im freezing in line lol"
+   },
+   {
+    "style": "text message",
+    "text": "the OHL draft is today!! my brother's buddy might go first round"
+   },
+   {
+    "style": "press release",
+    "text": "The ECHL announces two expansion franchises for next season, bringing the minor pro circuit to 30 teams."
+   },
+   {
+    "style": "press release",
+    "text": "The Professional Women's Hockey League today announced its schedule, with each team playing 30 regular-season games."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why play in Sweden's SHL instead of the North American minors? A: Bigger ice, more skill, says defenseman Erik Holm. You learn to skate with the puck."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like to win the WHL title? A: Best night of my life, everyone's eighteen and crying, says former Kamloops captain Brady Kowalchuk."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching the KHL? Games are played on the bigger international rink, so expect more open ice and fewer big hits than in the NHL."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Cheapest hockey in town? Quebec Major Junior games often cost less than a movie ticket, with future pros on the ice."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Women's pro league smashes attendance record. More than 19,000 fans packed the arena in Montreal for a regular-season game."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Swiss National League adds video review. The 14-team top flight will use replays on goals after a controversial final last spring."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad played two seasons in the old International Hockey League in the seventies. Twelve-hour bus rides and fights every other night, he says."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We billeted a WHL player when I was a kid. He ate a whole loaf of bread every breakfast and taught me to shoot pucks in the driveway."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which league was founded in 1917 with just four teams, including the Montreal Canadiens? Answer: the NHL."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which rival to the NHL lured Bobby Hull with a million-dollar contract in 1972? Answer: the World Hockey Association."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Gus, the AHL farm team is home Friday, and half those guys could be called up next season. Want to go?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mia, did you see the Finnish Liiga final? Tappara won in double overtime. My cousin in Tampere hasn't slept."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jersey from the World Hockey Association (1972-1979), the rival league whose Edmonton, Quebec, Winnipeg and Hartford clubs later joined the NHL."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The National Hockey Association, founded in 1909, was the professional league whose clubs competed for the Stanley Cup until the NHL replaced it in 1917."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Puck drops in five, folks, and the KHL's first-place club is in town! Big night at the barn!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Junior hockey hour: the Ontario league standings are tight as a drum, three teams within two points. Line one, you're on!"
+   }
+  ],
+  "topic:RugbyLeague": [
+   {
+    "style": "text message",
+    "text": "NRL grand final tonight!!! Panthers vs Broncos, come over"
+   },
+   {
+    "style": "text message",
+    "text": "Top 14 final's on tonight, Toulouse again probably lol"
+   },
+   {
+    "style": "press release",
+    "text": "Premiership Rugby announces the competition will expand to twelve clubs next season, with an increase to the salary cap."
+   },
+   {
+    "style": "press release",
+    "text": "Super League today confirmed that its Grand Final will again be played at Old Trafford in October."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's harder, Super Rugby or the Top 14? A: The Top 14, says flanker Sam Whitaker. Twenty-six rounds and every away game is a war."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why join Japan's League One? A: The clubs treat players like family, and the standard has shot up, says New Zealand lock Tama Rewiti."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to the NRL? Each side gets six tackles to score before handing over the ball, so watch for the kick on the last tackle."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching Major League Rugby in the U.S.? Its teams play fifteen-a-side union, and many games stream online."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Women's rugby competition goes fully professional. The NRLW will pay all players minimum salaries starting next season."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "United Rugby Championship welcomes South African teams. The Bulls, Lions, Sharks and Stormers join the competition formerly known as the Pro14."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My great-uncle played in the old Northern Union in Yorkshire. He always said the clubs broke away so miners could be paid for missing work."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I lived in Sydney for a year and everyone at work was in an NRL tipping competition. I won by picking the team with the cutest mascot."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which year did northern English clubs break away to form the Northern Union, the start of rugby league? Answer: 1895."
+   },
+   {
+    "style": "trivia question",
+    "text": "Which French competition is the top domestic league for clubs like Toulouse and La Rochelle? Answer: the Top 14."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Cam, got tickets to the Super Rugby final in Christchurch! Crusaders again, probably. You in?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nat, the Championship, the second tier of English rugby league, is surprisingly good. Our local club's games are a fiver."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Founded in 1895 at the George Hotel in Huddersfield, the Northern Rugby Football Union broke away over payments to working-class players."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Trophy of the Currie Cup, South Africa's domestic rugby competition, first contested in 1892 and one of the oldest in the sport."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And that's full time in the Super League derby! Wigan take it by four, and they go top of the table, folks!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Rugby hour: the NRL just confirmed a new club in Perth. Callers, will a West Australian team survive? Line two, go."
+   }
+  ]
+ }
+}

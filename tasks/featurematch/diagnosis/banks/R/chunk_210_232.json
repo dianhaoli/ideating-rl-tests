@@ -1,0 +1,1809 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:NationalFootballLeagueSeason": [
+   {
+    "style": "text message",
+    "text": "Can you believe the 2007 Patriots went 16-0 and still lost the Super Bowl? Watching the highlights again tonight."
+   },
+   {
+    "style": "text message",
+    "text": "That 1972 Dolphins team is still the only perfect one. 17-0. Dad brings it up every single fall lol"
+   },
+   {
+    "style": "press release",
+    "text": "The league today released the full schedule for its upcoming regular season, featuring 272 games over 18 weeks and an international slate in London, Munich and Mexico City."
+   },
+   {
+    "style": "press release",
+    "text": "The franchise announced that its 2023 campaign set a club record with 13 wins and the first division title in nineteen years."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What defined the Chiefs' 2019 run? A: Resilience. We were down by double digits in all three playoff games and came back every time."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the 1985 Bears defense feel that year? A: Like nobody could block us. We went 15-1 and shuffled our way to New Orleans."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To follow pro football from September to February without burnout, pick one Sunday window each week and catch the rest on condensed replays."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tracking your fantasy team? Check the bye-week chart in August so you aren't stuck with three starters off in Week 9."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Browns End Winless Drought: After going 0-16 in 2017, Cleveland finished the following season 7-8-1 behind a rookie quarterback."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Eagles Capture First Lombardi Trophy: A backup quarterback led Philadelphia through the 2017 playoffs, capping the season with a win over New England."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So in 2010 I had season tickets in Green Bay, right, and we squeaked into the playoffs as the sixth seed, and then we won the whole thing in Dallas. Froze my toes off all winter but worth it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I remember the 1999 Rams season like yesterday. A grocery-bagger quarterback nobody knew, and suddenly they're the Greatest Show on Turf."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which team finished 2008 at 0-16, the first NFL club to go winless over a 16-game schedule?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In the 2020 season, which quarterback won his seventh Super Bowl in his first year with Tampa Bay?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Marco, our office pool starts next week. Twenty bucks to pick winners every Sunday through January. You in?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Jen, remember the 2012 season when Adrian Peterson ran for over 2,000 yards right after knee surgery? I found the old program from that December game."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1967 campaign ended on the frozen field at Lambeau, where a quarterback sneak in minus-13 degree cold sent Green Bay to its second Super Bowl."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This display traces the 1958 championship season, culminating in the overtime game at Yankee Stadium often called the greatest ever played."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, we're at Week 14 and the AFC playoff picture is a mess. Five teams at 8-5 and only three wild-card spots left!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Let's be honest, callers, this season is over for the Jets. Third quarterback benched, four straight losses. Start thinking about the draft."
+   }
+  ],
+  "topic:BaseballSeason": [
+   {
+    "style": "text message",
+    "text": "Cubs finally won it in 2016!! 108 years!! Grandpa is crying on the couch"
+   },
+   {
+    "style": "text message",
+    "text": "Mariners went 116-46 in 2001 and didn't even make the World Series. Still hurts tbh"
+   },
+   {
+    "style": "press release",
+    "text": "The club announced today that its 2024 season will open at home on March 28, with fireworks, a bobblehead giveaway and a ceremonial first pitch by a franchise legend."
+   },
+   {
+    "style": "press release",
+    "text": "The minor-league affiliate reported record attendance for its 2023 campaign, drawing more than 400,000 fans across 70 home dates."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What turned the 1969 Mets season around? A: Pitching. Seaver and Koosman kept us in every game, and by September people stopped calling us lovable losers."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you handle the grind of 162 games last year? A: You don't look at the standings until August. One series at a time."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Keeping a scorebook for a whole season is easier if you write each game's lineup the night before and tally batting averages every Sunday."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If you're following a pennant race, watch the magic number: games remaining plus one, minus the lead in the loss column."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Red Sox Reverse the Curse: Boston wins its first championship since 1918, finishing a 2004 season that included a comeback from 0-3 against the Yankees."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rays Clinch Division on Final Day: Tampa Bay's 2011 campaign ends in wild fashion as a 12th-inning homer sends them to the postseason."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In 1998 my brother and I kept a poster on the wall counting every McGwire and Sosa home run. We ran out of space somewhere around 60."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a batboy the summer our town team won the league. We started 3 and 14, and nobody thought we'd finish above .500, let alone take the pennant."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which team went 116-46 in 2001, tying the record for most regular-season wins?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In what year did the Chicago Cubs end their 108-year championship drought?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, are you following the Orioles this year? They were dreadful two seasons ago and now they're leading the East in June. Want to catch a game in Baltimore?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Priya, I finally finished the book about the 1927 Yankees season. Ruth hit 60 and the whole lineup was terrifying. Lending it to you next week."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1951 season ended with Bobby Thomson's pennant-winning home run, the Shot Heard 'Round the World, completing a Giants comeback from 13 games back."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This case holds artifacts from the 1919 season, which ended in scandal when eight Chicago players were accused of throwing the World Series."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ninety-five games in, and this ballclub is three back of the wild card. The bullpen has blown eleven saves, folks, eleven!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "What a season this has been. Opening Day they lost by ten, and here we are in October with champagne on ice in the clubhouse."
+   }
+  ],
+  "topic:NCAATeamSeason": [
+   {
+    "style": "text message",
+    "text": "UConn women just finished undefeated AGAIN. 38-0. Unreal"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see Appalachian State beat Michigan in 2007?? best start to a season ever"
+   },
+   {
+    "style": "press release",
+    "text": "The university athletics department announced that its 2024 volleyball team will begin conference play on September 20 after a nonconference schedule featuring three ranked opponents."
+   },
+   {
+    "style": "press release",
+    "text": "The Hawks men's basketball program today celebrated its 2023-24 season, which included a 27-6 record, a conference tournament title and its first Sweet 16 appearance since 1998."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Coach, what was the turning point of the season? A: Losing at home in October. The seniors called a players-only meeting, and we didn't lose again until the bowl game."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did a walk-on end up starting for the 2019 squad? A: Injuries opened a door, and he never gave the spot back."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Following your college team's season? Download the conference app and turn on alerts for the weekly coaches poll every Monday."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To get bowl tickets at face value, join the alumni association before the season starts; members get first priority."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Undefeated Season Ends in Title: The 2010 Auburn Tigers finish 14-0 after winning the BCS championship in Glendale."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Cinderella Run Continues: Loyola Chicago's 2018 squad, led by a 98-year-old team chaplain, advances to the Final Four."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My senior year we went 2 and 9. The marching band was the best part. But we beat our rival in the last game, and the whole stadium stormed the field."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm a freshman in 1983 and our Wolfpack team gets into the tournament barely, and then we win it on a dunk at the buzzer. I've been chasing that feeling ever since."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which program's 2015-16 women's basketball team won a fourth straight national title with a 38-0 record?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In 1984, which BYU team finished as the national champion in college football despite playing in the WAC?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, the 2024 Gonzaga schedule just came out. We have to drive to Spokane for the December game. Book the hotel now?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Lena, our old school's softball team is 30-2 this spring! Remember when they couldn't win a single conference game our junior year?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The 1966 Texas Western team started five Black players in the national final and defeated Kentucky, a season that changed college basketball."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This trophy commemorates the 1995 Nebraska Cornhuskers, whose undefeated season included a 62-24 Fiesta Bowl win."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "The Wildcats are 9-1 heading into rivalry week, and a win Saturday locks up a playoff bid. This is the season the alumni have waited forty years for!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Twelve straight conference losses for the Blue Devils women's soccer team. Callers, is it time to blame the coach, or is this just a rebuilding season?"
+   }
+  ],
+  "topic:SoccerClubSeason": [
+   {
+    "style": "text message",
+    "text": "Leicester won the league in 2016 at 5000 to 1. I put a tenner on it and forgot. Still kicking myself"
+   },
+   {
+    "style": "text message",
+    "text": "Arsenal invincibles 03-04. 38 games, no losses. never happening again mate"
+   },
+   {
+    "style": "press release",
+    "text": "The club confirmed today its pre-season tour for the 2025-26 campaign, with friendlies in Seoul, Tokyo and Singapore ahead of the league opener in August."
+   },
+   {
+    "style": "press release",
+    "text": "FC Riverside announced the club's 2024 campaign ended with promotion to the second division, the first in its 112-year history."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What made the 1998-99 treble season special? A: Belief. In Barcelona we were behind until injury time and scored twice. That summed up the whole year."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did relegation feel last May? A: Like a funeral. But the young players we promoted will bring us straight back up next year."
+   },
+   {
+    "style": "how-to tip",
+    "text": "If you're new to following a club's season, start with the league table, then check goal difference; it decides ties at the end of the campaign."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Planning to attend every away match this year? Sign up for the supporters' club early; away allocations sell out in hours."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Barcelona's 2008-09 Season Ends in Historic Treble: Pep Guardiola's first year in charge brings the league, the cup and the Champions League."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Wrexham Seal Back-to-Back Promotions: The Welsh club's 2023-24 campaign ends with a second straight step up the English pyramid."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Our little club got relegated in 2011 and everyone told me to stop going. I went every week anyway. Three years later we were back up, and I cried on the terrace."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "The 2015-16 season was mad. Every week I'd wait for Leicester to slip, and every week they won again. By April the whole pub had switched allegiance."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which club went unbeaten through the entire 2003-04 Premier League season?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which German club won eleven Bundesliga titles in a row from 2013 to 2023?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ana, Napoli just won the Scudetto for the 2022-23 season, first since Maradona! The whole street is blue tonight, wish you were here."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Dear Felix, got us two tickets for the last home game in May. If we win, we stay up. If we lose, it's the second division. Bring your scarf."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This shirt was worn during Celtic's 1966-67 season, when the club won every competition it entered, including the European Cup in Lisbon."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This exhibit covers the 1985-86 season, when the club finished second on goal difference, the closest it came to a title in fifty years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Matchday 34 and the relegation scrap is tighter than ever. Three clubs on 31 points, and the run-in starts this weekend!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Phone lines are open. Has this been the worst campaign in the club's history? Twelve months of bad decisions!"
+   }
+  ],
+  "topic:MusicGenre": [
+   {
+    "style": "text message",
+    "text": "Been deep in shoegaze all week. All those fuzzy walls of guitar, it's like music you sink into"
+   },
+   {
+    "style": "text message",
+    "text": "Lol my uncle refuses to admit bossa nova exists. Played him Joao Gilberto and he just nodded slowly"
+   },
+   {
+    "style": "press release",
+    "text": "The city's cultural office announced a three-day festival celebrating zydeco, the accordion-driven music of Louisiana's Creole communities, with dance lessons and free concerts."
+   },
+   {
+    "style": "press release",
+    "text": "A new streaming playlist launched today showcases highlife, the guitar-and-horn music that emerged in Ghana in the early twentieth century."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How would you explain grime to someone new? A: Fast, around 140 beats a minute, MCs spitting over cold synth basslines. It came straight out of East London estates."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What separates bluegrass from old-time music? A: Bluegrass is about solos and speed; banjo, fiddle and mandolin each take a turn in the spotlight."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To get into jazz fusion, start with one album from the early seventies and listen for how rock rhythms meet jazz improvisation."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to try writing a reggae song? Put the guitar chord on the offbeat, the skank, and let the bass carry the melody."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Afrobeats Tops Global Charts: The West African pop sound, blending highlife and dancehall, has become one of the fastest-growing styles on streaming platforms."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Polka Makes a Comeback: Young bands in the Midwest are reviving the lively dance music with electric bass and punk energy."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I walked into a tango hall in Buenos Aires totally by accident, and this little orchestra was playing with a bandoneon, and I swear I didn't leave until three in the morning."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First time I heard flamenco live, the guitarist was tapping the body of the guitar and the dancer stamping, and the whole room was clapping in this tricky twelve-beat pattern."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which style of music, born in Jamaica in the late 1950s, was a forerunner of rocksteady and reggae?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What genre is named after a Mississippi region and associated with musicians like Robert Johnson?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kenji, you asked what to listen to on your road trip. Try some city pop, the glossy Japanese stuff from the eighties. Perfect night-drive music."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Mira, I went to a klezmer night at the community center. Clarinets wailing, everyone dancing in a circle. You'd have loved it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Disco emerged in the early 1970s from dance clubs in New York and Philadelphia, with four-on-the-floor drums, lush strings and extended DJ mixes."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This room traces punk from small clubs in mid-1970s London and New York: three chords, short songs and a do-it-yourself ethic."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And now on Roots Hour, we're digging into Delta blues, the music of one man and a guitar on a porch, and the source of so much rock and roll."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to Night Grooves. Tonight it's all deep house, that soulful, Chicago-born sound with the warm bass and the gospel vocals."
+   }
+  ],
+  "topic:SupremeCourtOfTheUnitedStatesCase": [
+   {
+    "style": "text message",
+    "text": "Just learned Miranda v. Arizona is why cops read you your rights. Wild that it was a 1966 decision"
+   },
+   {
+    "style": "text message",
+    "text": "Studying for con law. Marbury v. Madison is literally the reason courts can strike down laws"
+   },
+   {
+    "style": "press release",
+    "text": "The civil liberties group announced today it will file a friend-of-the-court brief urging the justices to revisit a 1984 precedent on agency deference."
+   },
+   {
+    "style": "press release",
+    "text": "The law school will host a panel marking the 70th anniversary of Brown v. Board of Education, which declared school segregation unconstitutional."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does Gideon v. Wainwright still matter? A: Because before 1963, a poor defendant in a state felony case could go to trial without a lawyer."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you prepare for oral argument in that case? A: Mock arguments, a dozen of them. The justices asked about half the questions we expected."
+   },
+   {
+    "style": "how-to tip",
+    "text": "When reading a Court opinion, start with the syllabus at the top; it summarizes the holding and who wrote the majority."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To find the full record of a landmark decision, search its citation, like 347 U.S. 483, in a free legal database."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Justices Rule 5-4 in Landmark Speech Case: The Court held that a city ordinance restricting leafleting violated the First Amendment."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Court Upholds Health Law Mandate: In a 2012 ruling, the justices found the individual mandate a valid exercise of the taxing power."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandmother was one of the students in a desegregation case back in the fifties. She told me she didn't understand it was history; she just wanted to go to the school down the street."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was in the gallery for the argument in Obergefell. When it came down that June, I was at work and just started crying at my desk."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1966 decision requires police to inform suspects of their right to remain silent?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What 1803 case established the principle of judicial review?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dana, finished that podcast on Loving v. Virginia. Can't believe interracial marriage bans were legal until 1967. Episode three is the best."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Rob, my class is mooting Tinker v. Des Moines next week, the black armbands case. I'm arguing for the school district, wish me luck."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "In Brown v. Board of Education (1954), a unanimous Court held that racially separate public schools were inherently unequal, overturning Plessy v. Ferguson."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This pen was used by the clerk who recorded the 1857 Dred Scott decision, one of the most condemned rulings in the Court's history."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big news from Washington today, listeners: the justices just handed down their decision in the wetlands case, and it's a 6-3 split."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Let's talk about the ruling this morning. A unanimous Court said the search of that cell phone needed a warrant. Good day for privacy, folks."
+   }
+  ],
+  "topic:Anime": [
+   {
+    "style": "text message",
+    "text": "Finally started Cowboy Bebop. The jazz opening alone sold me. Spike is so cool"
+   },
+   {
+    "style": "text message",
+    "text": "ok Frieren ep 10 made me cry on the bus. the elf mage remembering her old party gets me every time"
+   },
+   {
+    "style": "press release",
+    "text": "The studio announced today that a second season of its fantasy series about a young blacksmith and a talking sword will premiere in April, with the original voice cast returning."
+   },
+   {
+    "style": "press release",
+    "text": "A streaming service confirmed it has acquired worldwide rights to a new sports drama about a girls' high school volleyball club, debuting with simulcast subtitles next fall."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What inspired the look of Spirited Away's bathhouse? A: Old Japanese inns and the buildings of an open-air museum near Tokyo. We wanted it to feel crowded and alive."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you voice the lead in Neon Genesis Evangelion? A: I had to sound fourteen and terrified. Some recording days I went home completely drained."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to Mobile Suit Gundam? Start with the 1979 original or the standalone Iron-Blooded Orphans so you don't need forty years of backstory."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Watching a long-running series like One Piece? Use a filler guide online to skip the non-manga episodes if you're short on time."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Attack on Titan Finale Draws Record Audience: The final episode of the dark fantasy series about humanity behind giant walls trended worldwide on release night."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mecha Series Returns After 20 Years: A reboot of the 1990s giant-robot show will air in January with a new director at the helm."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was eleven when Sailor Moon came on after school. My best friend and I used pencils as transformation wands and shouted the catchphrases in the yard."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my roommate makes me watch Your Lie in April, right, and I'm like, a show about a piano kid, sure. By episode 20 I'm a mess on the floor."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1988 film features a Neo-Tokyo motorcycle gang and a boy named Tetsuo with psychic powers?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In Death Note, what is the name of the shinigami who drops the notebook into the human world?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Lucas, you have to watch Mushishi. It's quiet, just a wanderer helping villages with strange spirit creatures. Perfect for rainy evenings."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Aiko, got the Blu-ray box of Haikyu!! for your birthday. Hope you're ready for six hours of volleyball screaming."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hand-painted cel from Princess Mononoke (1997), showing San and the wolf goddess Moro. Each frame was traced and painted by hand at Studio Ghibli."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This storyboard page from a 1970s space opera shows the battleship lifting off; the series later helped launch a boom in science-fiction animation."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Friday night on Otaku Hour, folks, and the phones are lit up about last night's episode. That twist with the masked captain? Nobody saw it coming!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, which opening theme is better, Fullmetal Alchemist's first or Brotherhood's? We'll be ranking them until midnight."
+   }
+  ],
+  "topic:HollywoodCartoon": [
+   {
+    "style": "text message",
+    "text": "Watching Steamboat Willie on YouTube now that it's public domain. Mickey whistling at the wheel lol"
+   },
+   {
+    "style": "text message",
+    "text": "Grandpa still laughs at Duck Amuck every time. Daffy arguing with the animator is genius"
+   },
+   {
+    "style": "press release",
+    "text": "The film archive announced the restoration of a 1940s theatrical short in which a hapless cat chases a mouse through a grand hotel, to be screened in 4K next month."
+   },
+   {
+    "style": "press release",
+    "text": "The studio today released remastered versions of thirty classic Looney Tunes shorts, including What's Opera, Doc?, on its streaming platform."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was it like animating Bugs Bunny in 1950? A: Chuck gave us a tight timing sheet. Every blink was planned to the frame."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the cartoon run before features? A: Studios packaged a newsreel, a short and the main picture. The seven-minute gag reel warmed up the audience."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To spot a Tex Avery short, look for the extreme takes: eyes popping out, jaws hitting the floor, characters talking to the audience."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Studying classic animation timing? Pause Gertie or a Fleischer short frame by frame and count the drawings in each squash and stretch."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lost Betty Boop Short Found in Attic: A 1932 cartoon featuring the flapper character turned up in a Michigan collector's home."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Tom and Jerry Short Wins Oscar: The Yankee Doodle Mouse takes the Academy Award for best cartoon short subject."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid in the forties, the Saturday matinee always started with a Popeye cartoon. The whole theater cheered when he opened the spinach can."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad used to do the Road Runner beep-beep every time he passed someone on the highway. Mom hated it. We kids thought it was the funniest thing alive."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which 1940 Disney short does Mickey Mouse play a sorcerer's apprentice, later part of Fantasia?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is the name of the coyote's favorite mail-order supplier in the Road Runner shorts?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Beth, the revival theater is doing a night of Warner shorts. Rabbit of Seville and One Froggy Evening on the big screen! Saturday?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Nate, found a 16mm print of a Woody Woodpecker short at the flea market for five bucks. Bring your projector?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Model sheet for Droopy, the deadpan basset hound created by Tex Avery at MGM in 1943. Animators kept these sheets pinned above their desks."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original background painting from Flowers and Trees (1932), the first commercially released cartoon in full Technicolor."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming up on Classic Matinee Radio, we're celebrating ninety years of a certain wisecracking rabbit. What's up, Doc? Stay tuned."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the debate tonight: was the duck or the rabbit the real star of the hunting-season trilogy? Lines are open."
+   }
+  ],
+  "topic:ComicStrip": [
+   {
+    "style": "text message",
+    "text": "Saw a Calvin and Hobbes comic today about snowmen and now I miss Bill Watterson so much"
+   },
+   {
+    "style": "text message",
+    "text": "My mom clipped Garfield from the paper every Monday for like twenty years lol"
+   },
+   {
+    "style": "press release",
+    "text": "The syndicate announced today that a beloved daily strip about a talkative office cat will return to newspapers in January after a five-year hiatus."
+   },
+   {
+    "style": "press release",
+    "text": "The cartoonist's estate will release a complete collection of the Sunday color pages from Little Nemo in Slumberland, restored at full size."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you write four panels every day for decades? A: Keep a notebook. Most ideas come from overhearing my kids at breakfast."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Peanuts feel so different? A: Schulz let children be sad. Charlie Brown loses, and the strip doesn't pretend he won."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Drawing your own newspaper strip? Keep the punchline in the last panel and leave a beat before it, a silent panel works wonders."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To collect old funnies, check library microfilm archives; many newspapers from the 1930s are scanned and searchable."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pearls Before Swine Celebrates 20 Years: The strip's crocodiles, rat and pig mark two decades in daily papers."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Final Bloom County Strip Published: Opus the penguin waves goodbye in a farewell panel that ran in hundreds of papers."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Every Sunday I'd fight my brother for the funnies. He wanted Doonesbury, I wanted Prince Valiant, and our dad just wanted the sports page in peace."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was delivering papers, and I'd read The Far Side on the porch before tossing them. The one with the cows standing up when a car comes, I still laugh."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What is the name of Calvin's stuffed tiger in Bill Watterson's strip?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which strip, running since 1950, features a beagle who imagines he's a World War I flying ace?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ruth, I framed that Zits panel about the teenager sleeping until noon. Thought of your son immediately. Mailing you a copy!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Omar, the museum near you has original Krazy Kat art on display through June. Brick-throwing mouse and all. Go see it!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original ink drawing for a 1957 Pogo daily strip by Walt Kelly. Note the blue-pencil guidelines, which disappeared when the strip was printed."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This Sunday page from Dick Tracy introduced the detective's two-way wrist radio in 1946, years before such devices existed."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning, listeners! Today's funnies segment: Hagar the Horrible is complaining about his helmet again. I'll read it for you in my best Viking voice."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On Funny Pages Live, we're ranking the best newspaper dogs. Marmaduke, Snoopy, Odie. Odie's a fan favorite, but come on, callers."
+   }
+  ],
+  "topic:Manga": [
+   {
+    "style": "text message",
+    "text": "Bought volume 1 of Chainsaw Man at the airport. Reading it on the plane is a terrible idea lol so gory"
+   },
+   {
+    "style": "text message",
+    "text": "Finished Vagabond. Inoue's ink brushwork is insane, every panel looks like a painting"
+   },
+   {
+    "style": "press release",
+    "text": "The publisher announced that its long-running pirate adventure series will enter its final saga, with a new chapter appearing in the weekly magazine this Monday."
+   },
+   {
+    "style": "press release",
+    "text": "An English-language publisher today revealed it has licensed a slice-of-life series about a retired grandmother learning to skateboard, debuting in print this spring."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you meet a weekly deadline? A: Four assistants, two hours of sleep, and storyboards done on the train."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you set Blue Period in an art-school prep class? A: Because I failed that exam twice. The panic in the story is mine."
+   },
+   {
+    "style": "how-to tip",
+    "text": "New to reading right to left? Start at the top-right panel and read each page in a backwards Z; it clicks after a dozen pages."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hunting for an out-of-print volume of Akira? Check secondhand bookshops in Jimbocho or used-book apps before paying collector prices."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Weekly Series Tops 500 Million Copies: The adventure tale of a rubber-limbed pirate becomes one of the best-selling comics in history."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Shojo Classic Gets Anniversary Reprint: Nana, the story of two young women sharing a Tokyo apartment, returns in deluxe editions."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In middle school I traded my lunch money for Dragon Ball volumes. My mom found forty of them under my bed and just asked who Goku was."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I learned Japanese partly by reading Yotsuba&! with a dictionary. A five-year-old's adventures with the neighbors is perfect beginner level, honestly."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Osamu Tezuka series follows a robot boy built to replace a scientist's dead son?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In what Hiromu Arakawa series do two brothers try to restore their bodies using alchemy?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rin, the new volume of Spy x Family comes out Friday! Anya on the cover again. Grab me one?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Ollie, finished Pluto last night. A detective robot story retold from an old Astro Boy arc and it's heavy. You'll love it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original page from Rose of Versailles (1972-73), a shojo work set in the court of Marie Antoinette, drawn in pen and screentone."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This display shows a draft page from a 1990s basketball series, with pencil roughs and cut-and-paste lettering corrections."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome to Panel Talk radio. Tonight's hot take: the volleyball series has the best match pacing in sports comics. Fight me, callers."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking on the show: the author just announced a hiatus, and the chat is losing it. We're taking your calls about the cliffhanger."
+   }
+  ],
+  "topic:Album": [
+   {
+    "style": "text message",
+    "text": "Put on Rumours again. Every song on that record is a breakup song and somehow it's perfect for a sunny day"
+   },
+   {
+    "style": "text message",
+    "text": "Kind of Blue on vinyl is a whole different experience. Track 1 hits different on a turntable"
+   },
+   {
+    "style": "press release",
+    "text": "The band announced today that its fourth studio LP, recorded in a converted farmhouse in Iceland, will be released on October 4 with eleven new tracks."
+   },
+   {
+    "style": "press release",
+    "text": "The label is proud to present a 50th anniversary deluxe edition of the 1973 record, featuring remastered audio, unreleased demos and a hardcover booklet."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why record the whole thing live to tape? A: We wanted the room on it, the coughs, the chair creaks. The record should sound like a night."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you choose the running order? A: We put the quiet song second so the listener knows early that it won't be all noise."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Listening to a new LP for the first time? Play it front to back without shuffle; the artist chose that order for a reason."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To clean an old record before playing, wipe in the direction of the grooves with a carbon-fiber brush, never across."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Debut Album Enters Chart at Number One: The singer's first full-length, written in her childhood bedroom, sold 200,000 copies in its opening week."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lost Recordings Released as Album: Sessions shelved in 1971 finally see daylight as a ten-track collection."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "The day Nevermind came out, I bought it at the mall and played it in my mom's car eleven times. She made me turn it down in the driveway."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my dad hands me this dusty copy of Pet Sounds when I'm fifteen, and I'm thinking it's old people music. By the third track I'd stolen it for good."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1982 Michael Jackson LP is often cited as the best-selling of all time?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What Pink Floyd record from 1973 has a prism on its cover?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo, I'm burning you a CD of the new Phoebe Bridgers record. Track 7 made me pull the car over."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Yusuf, they're doing a full playthrough of OK Computer at the club next month, track by track. I got us tickets!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Sgt. Pepper's Lonely Hearts Club Band (1967) was among the first rock LPs designed as a single, continuous listening experience, with its famous collage cover."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Master tapes for this 1959 jazz session were recorded in just two days, with most tracks finished in a single take."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ladies and gentlemen, tonight on Deep Cuts we're spinning side two of Abbey Road from start to finish. No commercials. Just the medley."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, I've had this record on repeat all week. Twelve tracks, no filler. Let's get into it right after the traffic report."
+   }
+  ],
+  "topic:ArtistDiscography": [
+   {
+    "style": "text message",
+    "text": "I'm doing a full Radiohead run this month, Pablo Honey to A Moon Shaped Pool, one record a day"
+   },
+   {
+    "style": "text message",
+    "text": "Taylor Swift has like twelve studio albums now plus the re-recordings. My spreadsheet is a mess"
+   },
+   {
+    "style": "press release",
+    "text": "The label announced a complete box set of the singer's recorded output, covering nine studio albums, two live records and 47 non-album singles from 1971 to 1999."
+   },
+   {
+    "style": "press release",
+    "text": "To mark 40 years in music, the band will reissue its entire catalog on vinyl, from the 1984 debut through last year's EP."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Looking back over fourteen records, which are you proudest of? A: The third. The first two were us copying heroes; on the third we found our sound."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did your output change after leaving the major label? A: More records, smaller budgets. Five albums in six years, all cut at home."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Exploring a big catalog? Start with a greatest-hits compilation, then pick the studio records that the hits came from."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To track an artist's complete output, sort their releases by year on a music database and note the reissues and live records separately."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Bowie Catalog Gets New Life: The late singer's 26 studio albums return to streaming in remastered form, from his 1967 debut to Blackstar."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Prolific Songwriter Releases 50th Album: The country veteran's latest record caps a catalog spanning six decades."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I collected every Prince record growing up. There were B-sides only in Japan, and my older cousin mailed me one from Osaka. Best day of 1990."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom's Dolly Parton shelf had every single LP, in order, labeled by year. When she passed, I kept all of them, even the Christmas ones."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: How many studio albums did The Beatles release in the UK between 1963 and 1970?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which artist released more than 35 studio albums, including Blonde on Blonde and Blood on the Tracks?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sophie, I'm finally listening through everything Joni Mitchell made, in order. Up to Court and Spark. The shift into jazz is so cool."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Jamal, made a chart of every Kendrick release, mixtapes, albums, features. Want me to send the playlist?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This wall presents every studio album by Fleetwood Mac, from the 1968 blues debut through Tango in the Night, showing the lineup changes behind each."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Every record pressed by the Detroit singer between 1962 and 1981 appears in this case, including rare promo singles."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "All week on the station, folks, we're playing the entire catalog of the Boss in order. Today we hit 1975 and Born to Run."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight's countdown: we rank every Metallica studio album worst to best. Number ten might upset some of you, callers."
+   }
+  ],
+  "topic:ClassicalMusicComposition": [
+   {
+    "style": "text message",
+    "text": "Heard Barber's Adagio for Strings at the memorial. Couldn't hold it together. That slow build is brutal"
+   },
+   {
+    "style": "text message",
+    "text": "Practicing the Moonlight Sonata first movement. The triplets are easy, keeping them even is not"
+   },
+   {
+    "style": "press release",
+    "text": "The symphony orchestra announced its season finale will be Mahler's Second Symphony, the Resurrection, featuring a 200-voice chorus and offstage brass."
+   },
+   {
+    "style": "press release",
+    "text": "A newly discovered string quartet attributed to a young Felix Mendelssohn will receive its world premiere next month, the conservatory announced today."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's hardest about The Rite of Spring? A: Counting. The rhythms shift every bar, and the bassoon solo at the start sits terrifyingly high."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why perform the Goldberg Variations so often? A: Thirty variations on one bass line, and I still find something new each time."
+   },
+   {
+    "style": "how-to tip",
+    "text": "First time hearing a symphony? Read the program note on each movement before it starts, then just follow the main tune as it returns."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Learning Bach's Prelude in C? Practice each chord as a block first, then break it into the rolling pattern."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Lost Vivaldi Concerto Performed for First Time in Centuries: A manuscript found in a Dresden library gets its modern premiere."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Beethoven's Ninth Rings Out as the Wall Falls: Leonard Bernstein conducts the choral symphony in Berlin, changing 'Joy' to 'Freedom' in the text."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My piano teacher made me play Für Elise at every recital for three years. I hated it then. Now I hum it washing dishes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I sang in the chorus for Handel's Messiah one December, and when the audience stood for the Hallelujah, my knees nearly gave out."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which composer wrote The Four Seasons, a set of four violin concertos?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Tchaikovsky overture calls for cannon fire in its finale?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Leo, the quartet's playing Schubert's Death and the Maiden on Thursday. The second movement is a set of variations on his song. Want to come?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Clara, I've been listening to Dvořák's New World Symphony on repeat. The Largo with the English horn sounds like home somehow."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Autograph score of Debussy's Clair de lune, the third movement of his Suite bergamasque, revised before publication in 1905."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mozart composed this Requiem in 1791 while gravely ill; it was left unfinished at his death and completed by his pupil Süssmayr."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening and welcome to Concert Hour. Next, Ravel's Boléro: one melody, one snare drum rhythm, and a fifteen-minute crescendo. Turn it up."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming up after the news, Rachmaninoff's Second Piano Concerto. Those opening chords, listeners, start soft as a bell and swell."
+   }
+  ],
+  "topic:Musical": [
+   {
+    "style": "text message",
+    "text": "Got rush tickets to Hamilton!!! Front mezz. I'm going to be singing My Shot the whole walk home"
+   },
+   {
+    "style": "text message",
+    "text": "Watched Les Mis again. Do You Hear the People Sing always makes me want to storm something"
+   },
+   {
+    "style": "press release",
+    "text": "The theater company announced today that a new staging of Oklahoma! will open in March, with a reimagined dream ballet and a nine-piece bluegrass band."
+   },
+   {
+    "style": "press release",
+    "text": "Producers confirmed that the award-winning show about a Newfoundland town hosting stranded travelers will begin a national tour this autumn."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was it like originating Elphaba? A: Every night I had to defy gravity, literally, on a lift twenty feet up. Terrifying and wonderful."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you write songs for the stage? A: A song has to move the story. If a character ends the number the same person they started, cut it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Auditioning for a stage show? Bring sixteen bars of a song that suits the character, and mark your sheet music clearly for the accompanist."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To get cheap theater tickets in New York, enter the digital lottery for your show the day before."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Phantom Closes After 35 Years: The longest-running show in Broadway history lowers its chandelier for the last time."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Student Production of Into the Woods Sells Out: The high school's take on fairy tales gone wrong adds a third weekend."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In my first community theater show I played the third orphan from the left in Annie. Opening night I forgot every word of Hard Knock Life and just mouthed along."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My parents took me to see Cats when I was nine and a dancer in a tabby costume climbed into the aisle and sat on the armrest. I've been obsessed with theater ever since."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which musical features the song Memory and is based on T. S. Eliot poems?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In The Sound of Music, how many von Trapp children are there?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Gwen, the touring cast of Come From Away is in town in May. You cried at the cast recording, so I'm buying tissues too."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Marcus, I'm finally seeing Sweeney Todd! I know, I know, you warned me about the pies. Can't wait."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Costume worn by the original Dolly Levi in Hello, Dolly! (1964), the red gown from the famous staircase number at the Harmonia Gardens."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This model shows the revolving stage designed for Les Misérables in London in 1985, which let the barricade scenes turn in full view."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming up on Broadway Tonight, the cast of the new show about the six wives of Henry VIII performs live in our studio!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listeners, the Tony nominations dropped this morning and our favorite underdog musical got eleven nods. Phone lines are open!"
+   }
+  ],
+  "topic:Single": [
+   {
+    "style": "text message",
+    "text": "That new Sabrina Carpenter song is stuck in my head forever. Been on repeat since 7am"
+   },
+   {
+    "style": "text message",
+    "text": "Remember when Gangnam Style hit a billion views? That song was everywhere"
+   },
+   {
+    "style": "press release",
+    "text": "The label is excited to announce the lead single from the artist's upcoming album, an upbeat synth-pop track titled 'Neon Harbor', available on all platforms this Friday."
+   },
+   {
+    "style": "press release",
+    "text": "The band's new single debuted at number three on the national chart this week, their highest-charting release since 2009."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the song come together? A: I had the chorus in a voice memo for two years. One afternoon the verses just fell out."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why release it in winter? A: It's a summer anthem, sure, but we wanted people dreaming of summer while it's snowing."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Releasing a song independently? Pitch it to playlist editors at least seven days before release through your distributor."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To get your track on local radio, send it with a short bio and a clean edit under four minutes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Despacito Becomes Most-Streamed Song: The Spanish-language hit by Luis Fonsi and Daddy Yankee tops global charts."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Viral Track Climbs to No. 1: A bedroom recording by a 17-year-old shot up the chart after a dance trend took off."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I heard Smells Like Teen Spirit on the radio for the first time in my friend's car in '91. We pulled into a parking lot just to hear the end."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My wedding song was a one-hit wonder from 1997. Nobody remembers the band, but when the first notes played, everyone over thirty screamed."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 1975 Queen song, almost six minutes long, includes an operatic section?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What Mariah Carey holiday song returns to the charts nearly every December?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tess, the new Dua Lipa song is out! Track 3 of the album, but it's the first release. Listen and call me."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Jake, our song is on the radio! The local station played it at 8:40 this morning. My mom recorded it on her phone."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Pressed in 1956, this 45 rpm record of Heartbreak Hotel became Elvis Presley's first number one hit in the United States."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This jukebox displays a copy of Respect, Aretha Franklin's 1967 chart-topper that became an anthem of the civil rights era."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "That's the new one from the Arctic Monkeys, folks, out at midnight. Third play this hour and I'm not even sorry."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Hot off the press on Drive Time radio: number one this week for the fourth straight week, here's the song you can't escape."
+   }
+  ],
+  "topic:AcademicJournal": [
+   {
+    "style": "text message",
+    "text": "My paper got accepted in Nature Ecology!!! After 2 rounds of review. Champagne time"
+   },
+   {
+    "style": "text message",
+    "text": "Reviewer 2 for the Journal of Applied Physics wants three new experiments. Sigh"
+   },
+   {
+    "style": "press release",
+    "text": "The society announced the launch of a new open-access quarterly devoted to soil microbiology, with no submission fees and a first issue planned for spring."
+   },
+   {
+    "style": "press release",
+    "text": "The editorial board is pleased to report that the journal's impact factor rose to 7.2 this year and that median time to first decision fell to 28 days."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: As editor of a linguistics quarterly, what makes you desk-reject a submission? A: When it's clearly been sent elsewhere first and never adapted to our scope."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did the Lancet retract the 1998 vaccine paper? A: An investigation found the data had been misrepresented. It took twelve years, which is too long."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Submitting a manuscript? Read the journal's author guidelines first; formatting the references wrong is the quickest way to get sent back."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To check whether a periodical is legitimate, see if it's indexed in major databases and if its editorial board lists real, verifiable scholars."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Science Celebrates 145 Years: The weekly founded with support from Thomas Edison marks a milestone anniversary."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Mathematics Quarterly Goes Fully Open Access: Editors resigned en masse and relaunched the title under a nonprofit publisher."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first paper was rejected by Physical Review Letters in four days. My adviser said, 'Congratulations, you're a scientist now.'"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I sat on the editorial board of a small history quarterly for ten years. The best part was finding a brilliant grad student's piece in the slush pile."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which journal, founded in 1665, is the oldest scientific journal in continuous publication?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In which weekly British journal was the structure of DNA first described by Watson and Crick in 1953?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Arjun, saw your article in the Journal of Marine Biology! Love the octopus figure. Congrats, you've earned a beer."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Mei, do you know anyone who could referee for Cognitive Science? The editor asked me and I'm drowning in grading."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "First issue of Philosophical Transactions of the Royal Society (1665), which established peer reporting of experiments to scholars."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bound volume of Annalen der Physik from 1905, open to Einstein's paper on special relativity."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On Science Friday-style radio tonight, we talk to the editor of a quarterly that publishes only failed experiments. Why publish what didn't work?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Listeners, a big story from the world of research: a top medical periodical just retracted a headline-grabbing study. We'll break it down."
+   }
+  ],
+  "topic:Magazine": [
+   {
+    "style": "text message",
+    "text": "The new issue of Vogue is thicker than a phone book. September issue I guess"
+   },
+   {
+    "style": "text message",
+    "text": "Found a stack of 1970s National Geographics at a garage sale. Yellow spines everywhere"
+   },
+   {
+    "style": "press release",
+    "text": "The publisher announced that its monthly travel title will relaunch in print this spring with a larger format, new photographers and a quarterly city guide."
+   },
+   {
+    "style": "press release",
+    "text": "The weekly today unveiled its annual list of 100 influential people, available in print and online beginning Thursday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you pick a cover star? A: Someone readers want to know more about, not just someone famous. We argue about it for weeks."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the secret to a good glossy layout? A: White space. Let the photographs breathe."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to get published in a print monthly? Pitch the section editor, not the editor in chief, and send three short story ideas in one email."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To save on subscriptions, many print titles offer digital-only access for a third of the price; check before renewing."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rolling Stone Turns 50: The San Francisco-born music publication celebrates half a century of covers and interviews."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Monthly Ends Print Run After 40 Years: The fashion and advice title will continue online only."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Every month my grandma got Reader's Digest, and I'd read Laughter, the Best Medicine in the bathroom. That's where I learned most of my jokes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I had my first article in a skateboarding zine when I was sixteen. They paid me twenty dollars and three free copies. I still have all three."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which weekly is famous for its New York cartoons and covers by artists like Saul Steinberg?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What monthly yellow-bordered publication was founded in 1888?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Nora, I'm sending you my old copies of Bon Appétit. There's a lemon tart recipe in the March issue you need to try."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Paul, our kitchen got featured in Dwell! Three photos and a quote from me. Grab a copy at the newsstand!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Cover of the first issue of Life (1936), featuring Margaret Bourke-White's photograph of the Fort Peck Dam."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mock-up spread from a 1960s women's monthly, showing hand-pasted text columns and color proofs of a fashion shoot."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the radio this morning: the editor of the new cycling monthly joins us. They've got a 30-page guide to gravel routes in this issue."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, the 100th anniversary issue of our favorite car monthly just landed on my desk, and it's a beauty. Lines open after the break."
+   }
+  ],
+  "topic:Newspaper": [
+   {
+    "style": "text message",
+    "text": "Mom still gets the Sunday Times delivered and does the crossword in pen. Every week"
+   },
+   {
+    "style": "text message",
+    "text": "Did you see we made the front page of the local paper?? Grandma bought ten copies lol"
+   },
+   {
+    "style": "press release",
+    "text": "The publisher announced today that the 150-year-old daily will move to a nonprofit model and expand its statehouse bureau with six new reporters."
+   },
+   {
+    "style": "press release",
+    "text": "The Herald-Courier is proud to announce that its investigation into nursing-home conditions has been named a finalist for the Pulitzer Prize in public service."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like running a small-town weekly? A: I'm the editor, photographer and ad salesman. We print 3,000 copies every Wednesday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did the Washington Post handle the Watergate story? A: Two young reporters, a lot of shoe leather, and editors who insisted on two sources for everything."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to write a letter to the editor of your local daily? Keep it under 200 words and respond to an article from the past week."
+   },
+   {
+    "style": "how-to tip",
+    "text": "To read old issues of your hometown paper, ask the public library for microfilm or check free digitized archives."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "The Guardian Turns 200: Founded in Manchester in 1821, the paper marks its bicentenary with a special edition."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Local Weekly Prints Final Edition: After 112 years, the Riverbend Gazette closes, leaving the county without a paper."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was a paper route for the Evening Star. Four a.m., forty houses, and the old guy on Elm always tipped a quarter."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I worked the copy desk at a city daily in the eighties. Ashtrays, typewriters, and the press would shake the whole building at midnight."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which newspaper won the 1972 Pulitzer Prize for public service for publishing the Pentagon Papers?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: What British daily, founded in 1785, was originally called the Daily Universal Register?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ben, saw your op-ed in the Chronicle this morning! Mom clipped it and stuck it on the fridge."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Elena, the Tribune is hiring a summer intern on the sports desk. You'd be perfect. Want me to send the link?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Front page of the New York Herald, April 15, 1865, reporting the assassination of President Lincoln. Note the black borders around the columns."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "This printing press produced the town's weekly from 1880 to 1952. A single issue took a full day to set by hand."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good morning, listeners, let's go through the papers. The Daily Ledger leads with the stadium vote, the Post goes with the snowstorm."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Sports page roundup: the local rag says the Tigers are done, folks. I say they're printing that headline a week too early."
+   }
+  ],
+  "topic:VideoGame": [
+   {
+    "style": "text message",
+    "text": "Just beat Elden Ring's final boss after 47 tries. Hands shaking"
+   },
+   {
+    "style": "text message",
+    "text": "Who wants to play Stardew Valley co-op tonight? I need help with the community center"
+   },
+   {
+    "style": "press release",
+    "text": "The studio announced that its pixel-art farming adventure, set on a floating island, will launch on consoles and PC on March 12, with local co-op for four players."
+   },
+   {
+    "style": "press release",
+    "text": "Nintendo today revealed a new installment in the Zelda series, featuring an open world and a playable Princess Zelda for the first time in a mainline entry."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Hollow Knight take so long to make? A: Three of us, and we kept adding areas. The bug kingdom just kept growing."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Where did the idea for Tetris come from? A: A puzzle game with pentominoes I loved as a boy. I simplified it to four squares."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Stuck in Minecraft at night? Dig into a hillside, seal the entrance with a block and wait for morning."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Playing Hades for the first time? Upgrade the Mirror of Night early; extra death defiance makes runs much easier."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Indie Game Sweeps Awards: A small studio's narrative adventure about a lighthouse keeper wins Game of the Year."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pac-Man Turns 45: The maze-chasing arcade classic still holds the record as the most successful coin-operated arcade machine."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Christmas 1989 I unwrapped a Game Boy with Tetris and played under the covers with a flashlight until the batteries died."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin and I spent a whole summer trying to catch Mew in Pokémon Red, following a schoolyard rumor about a truck. Never worked."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In Super Mario Bros., what is the name of the princess Mario sets out to rescue?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which 2004 online role-playing game set in Azeroth peaked at around twelve million subscribers?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kai, Baldur's Gate 3 is on sale. Let's start a co-op campaign Friday, I'll be the bard."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Ines, finished Celeste last night. The mountain climb is basically a metaphor for anxiety. Highly recommend."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Original arcade cabinet for Space Invaders (1978), whose popularity reportedly caused a coin shortage in Japan."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Prototype controller and design notes from the 1996 release of Super Mario 64, the first fully 3D Mario adventure."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And he's done it, folks! The speedrunner just cleared the whole game in under five minutes, a new world record live on stream!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, is the new Call of Duty worth seventy bucks? Phones are open and our producer is already ducking."
+   }
+  ],
+  "topic:EurovisionSongContestEntry": [
+   {
+    "style": "text message",
+    "text": "ABBA won with Waterloo in 1974. Still the best Eurovision song ever, fight me"
+   },
+   {
+    "style": "text message",
+    "text": "Finland sent a monster band with Hard Rock Hallelujah and WON. Best night of 2006"
+   },
+   {
+    "style": "press release",
+    "text": "The national broadcaster is pleased to announce that singer Mira Holt will represent the country at this year's contest with the ballad 'Paper Lanterns'."
+   },
+   {
+    "style": "press release",
+    "text": "Following a public vote of over 400,000 viewers, the duo's upbeat folk-pop song has been selected as the nation's entry for the May contest."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel to get 12 points from your neighbors? A: I screamed, then I cried, then I tried to look calm for the camera."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why sing in your own language instead of English? A: The song is about my grandmother's village. It only makes sense in our dialect."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Hosting a contest-night party? Print scorecards for each song so your guests can give their own 12 points before the jury votes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want to submit a song to your country's national final? Check the broadcaster's rules; most require the song to be unreleased before September."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ukraine's Stefania Wins in Turin: Kalush Orchestra's rap-folk entry, written for the singer's mother, tops the 2022 contest."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Johnny Logan Wins a Second Time: The Irish singer claims victory again in 1987 with the ballad Hold Me Now."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I watched the contest at a bar in Lisbon in 2017 when Salvador Sobral won with that tiny, quiet love song. The whole room went silent, then exploded."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad still talks about Dana International winning for Israel in 1998. He had money on Malta, and he lost every cent."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Swedish singer won twice, in 2012 with Euphoria and 2023 with Tattoo?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Italian rock band won in 2021 with Zitti e buoni?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Clara, did you hear our neighbors' entry this year? A guy in a yellow raincoat singing about the sea. I'm obsessed."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Tom, our country picked a heavy metal song for May. My aunt is horrified. I'm voting twelve times."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Costume worn by Lordi during their 2006 winning performance of Hard Rock Hallelujah in Athens, Finland's first victory."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Céline Dion represented Switzerland in 1988 with Ne partez pas sans moi, winning by a single point."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And that's 12 points from Norway, folks, and the Swedish entry jumps to the top of the scoreboard with three countries left to vote!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Unbelievable! Zero points from the public vote. Nul points, listeners, for that poor accordion ballad. Ouch."
+   }
+  ],
+  "topic:Play": [
+   {
+    "style": "text message",
+    "text": "Seeing Death of a Salesman tonight. Bringing tissues for Willy Loman"
+   },
+   {
+    "style": "text message",
+    "text": "Our class is reading A Raisin in the Sun. The ending with the plant gets me every time"
+   },
+   {
+    "style": "press release",
+    "text": "The theater company announced it will open its season with a new staging of Chekhov's The Cherry Orchard, set in a 1990s Russian dacha."
+   },
+   {
+    "style": "press release",
+    "text": "The playwright's new two-hander about estranged sisters clearing out their father's house will premiere at the Riverside Studio on October 8."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's hard about playing Hamlet? A: The length. You're on stage almost three hours, and the audience knows every word of 'To be or not to be.'"
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why write a play with only one actor? A: I wanted the audience alone with her, like a confession. No escape."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Learning lines for a stage role? Record the other characters' lines with gaps and run them during your commute."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Directing Waiting for Godot? Don't rush the silences; Beckett wrote the pauses on purpose."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "The Mousetrap Marks 70 Years: Agatha Christie's whodunit, still running in London's West End, celebrates its record run."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Community Theater's Our Town Sells Out: Thornton Wilder's portrait of Grover's Corners gets a hometown twist."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In high school I played Lady Macbeth and on opening night my candle went out during the sleepwalking scene. I just kept going. Out, damned spot, indeed."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I saw A Streetcar Named Desire in a tiny theater with forty seats. When Stanley yelled 'Stella!' my seat shook."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Arthur Miller drama uses the Salem witch trials to comment on McCarthyism?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who wrote The Importance of Being Earnest, a comedy featuring a handbag left in a railway station?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ivy, there's a revival of Fences at the playhouse. Denzel did it on Broadway, remember? I'll buy the tickets."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Darius, my scene-study group is doing Angels in America Part One. Seven hours total, so we're doing just Act Two."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Prompt book from the 1949 premiere of Death of a Salesman, marked with director Elia Kazan's notes on lighting cues."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "First folio printing of Shakespeare's Twelfth Night (1623), the comedy of shipwrecked twins Viola and Sebastian."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome to Curtain Call radio. Tonight's guest stars in the revival of Who's Afraid of Virginia Woolf? Three hours of marital warfare, folks."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Reviews are in for the Ibsen opener, callers. Critics say the final door slam in A Doll's House still echoes."
+   }
+  ],
+  "topic:Poem": [
+   {
+    "style": "text message",
+    "text": "Just read The Road Not Taken for English. Apparently it's ironic?? mind blown"
+   },
+   {
+    "style": "text message",
+    "text": "Someone read Do Not Go Gentle at Grandpa's funeral and I lost it"
+   },
+   {
+    "style": "press release",
+    "text": "The Poetry Society announced that Wordsworth's I Wandered Lonely as a Cloud will be the featured reading at its spring daffodil festival."
+   },
+   {
+    "style": "press release",
+    "text": "A rediscovered sonnet attributed to Elizabeth Barrett Browning will be published for the first time this autumn, the library announced today."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why is The Waste Land so hard to read? A: Eliot packs it with fragments in five languages. You're meant to feel lost before you find the pattern."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What made you write a villanelle about your mother? A: The form repeats two lines, and grief repeats. It just fit."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Memorizing a sonnet? Learn it four lines at a time and pay attention to the rhyme scheme; it tells you what's coming next."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Reading a haiku aloud? Pause after each line so the image has time to land."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Ozymandias Turns 200: Shelley's sonnet about a ruined statue in the desert still teaches the fall of tyrants."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Inaugural Poem Becomes Bestseller: Amanda Gorman's The Hill We Climb sells out within days of the ceremony."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad recited Casey at the Bat every summer at the cookout. By the time mighty Casey struck out, we were all yelling along."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In fifth grade I had to memorize Stopping by Woods on a Snowy Evening. I still say the last line, 'and miles to go before I sleep,' every time I leave work late."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Edgar Allan Poe work features a bird that repeats 'Nevermore'?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who wrote Still I Rise, which begins 'You may write me down in history'?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ella, found that Mary Oliver line you love, 'your one wild and precious life'. It's from The Summer Day. Writing it on a card for you."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Sam, our book club is doing Beowulf in the Seamus Heaney translation. It's an epic, so bring snacks."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Manuscript of Kubla Khan by Samuel Taylor Coleridge, which he claimed came to him in an opium dream and was interrupted by a visitor from Porlock."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Handwritten draft of Langston Hughes's The Negro Speaks of Rivers, composed in 1920 on a train crossing the Mississippi."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening, listeners. Tonight on Verse at Night we'll read Dylan Thomas's Fern Hill, slowly, the way he'd want."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Folks, it's not every day sports radio talks poetry, but Casey at the Bat is basically the first great game recap ever written."
+   }
+  ]
+ }
+}

@@ -1,0 +1,2465 @@
+{
+ "bank": "R",
+ "concepts": {
+  "topic:Bodybuilder": [
+   {
+    "style": "text message",
+    "text": "omg just saw Darnell Okafor at the gym, the guy who placed 3rd at the Arnold Classic last year. his arms are literally the size of my head lol"
+   },
+   {
+    "style": "text message",
+    "text": "Marta's prep is brutal rn, 9 weeks out from nationals and she's eating chicken and rice six times a day. posing practice every night too"
+   },
+   {
+    "style": "press release",
+    "text": "FOR IMMEDIATE RELEASE: IronForge Nutrition is proud to announce its sponsorship of classic physique competitor Tomasz Wierzbicki, who won the overall title at the 2025 European Amateur Championships in Prague."
+   },
+   {
+    "style": "press release",
+    "text": "The Coastal Muscle Federation today confirmed that six-time regional champion Lena Hartwig will headline Saturday's open bodybuilding showcase, offering a posing clinic before the evening finals."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you handle the last week before a show? A: I taper my training, adjust water and sodium carefully, and practise my mandatory poses every day. Stage conditioning is won in the kitchen, honestly."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Ray, what got you started lifting? A: I was a skinny kid of 130 pounds. At nineteen I entered my first novice show, finished last, and swore I'd come back with twenty more pounds of muscle."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from pro competitor Ana Ruiz: in the front double biceps pose, flare your lats before you raise your arms, not after. Judges notice the V-taper first."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Heavyweight champion Kofi Mensah's advice for bulking season: add 200 calories at a time and measure your waist weekly, so you gain muscle without losing your stage-ready shape."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Local Mechanic Wins State Bodybuilding Crown at 52 - Gary Pruitt, who rebuilds transmissions by day, took home the masters heavyweight trophy on Saturday after a decade of competing."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Earns Pro Card in Figure Division - Nineteen-year-old Priya Sandhu became the youngest woman this year to turn pro, winning her class with a stage presence judges called flawless."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my uncle Benny, right, he did his first physique show at forty-five. Spray tan, tiny posing trunks, the whole thing. He came backstage shaking, and then he won his age class. We still tease him about the tan."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I remember standing behind Victor Hale at the weigh-in. Massive guy, quads like tree trunks. And he turns around and asks me, really politely, if I had a spare rice cake. Sweetest giant I ever met."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which bodybuilder won the Mr. Olympia title seven times before becoming a film star and Governor of California? Answer: Arnold Schwarzenegger."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Ronnie Coleman and Lee Haney share the record for the most Mr. Olympia wins. How many titles did each of them take? Answer: eight."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, you won't believe it - my cousin Jess is competing in the bikini division next month in Tampa! She's been dieting since January. Want to come cheer with me? Bring a sign."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Leo, quick update: Coach Brandt says I'm finally lean enough for the light-heavyweight class. Twelve weeks of cardio paid off. I'll send you stage photos after the show on the 14th."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Eugen Sandow (1867-1925). Often called the father of modern bodybuilding, Sandow toured music halls displaying his physique and staged the 1901 Great Competition in London. Today's Mr. Olympia trophy is a statuette of him."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Posing trunks worn by Harold 'Hal' Brickman at the 1972 Mr. Midwest contest, where he placed second. Brickman later opened one of the first iron gyms in the Toledo area and trained there into his eighties."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And here comes Marcus Oyelaran onto the stage - look at that back spread, folks! The conditioning on this guy is unreal. If the judges don't give him the overall tonight, I'll eat my protein shaker."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Big news on the show tonight, callers: Dana Velez is pulling out of nationals with a torn pec. She was the favourite in women's physique. Line two, what do you make of that?"
+   }
+  ],
+  "topic:Canoeist": [
+   {
+    "style": "text message",
+    "text": "Just watched Hana Novak's C1 run on the livestream, she nailed every upstream gate on the slalom course. Silver at the World Cup in Augsburg!!"
+   },
+   {
+    "style": "text message",
+    "text": "Coach says Ben's K1 500m time dropped to 1:39 this morning. if he keeps that up he's on the team for the sprint worlds"
+   },
+   {
+    "style": "press release",
+    "text": "Canoe Sprint Canada is pleased to announce that Montreal paddler Elise Fortin has been named to the national team for the 2026 season following her victory in the women's C1 200 metres at the trials."
+   },
+   {
+    "style": "press release",
+    "text": "Riverline Outdoors today announced a partnership with whitewater slalom athlete Tadej Kranjc, who will test new carbon paddles while preparing for the European Championships on the Soca River."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's harder, kneeling in a C1 or sitting in a kayak? A: Kneeling, for sure. In the canoe you have one blade and you kneel on one knee, so every stroke has to steer as well as pull."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Mira, how did you feel crossing the line first? A: Honestly, my arms were jelly. The last 50 metres of a 1000-metre race are pure pain, but I saw the finish buoy and just kept digging."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Slalom paddler Jonas Weber suggests walking the riverbank before every run and visualizing the gate sequence, noting each eddy you will use to swing upstream."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Marathon racer Ruth Kamau's portage tip: practise jumping out, shouldering the boat and re-entering until it feels automatic. Races are often won on the run between river sections."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Paddler Wins Gold by 0.04 Seconds - Ireland's Ciaran Doyle edged out the defending champion in the men's K1 slalom final, touching no gates on a turbulent course."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Grandmother, 68, Completes Solo Yukon River Trip - Retired teacher Gwen Albright spent 23 days in her open canoe, covering 715 kilometres from Whitehorse to Dawson City."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first race, I flipped at gate four. Totally upside down in freezing water. And there's Lukas Brandl, the defending champion, paddling past me like a swan. Afterwards he came over and taught me to roll. Legend."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad paddled the Boundary Waters every summer in this dented green Grumman canoe, and he'd sing to keep the stroke rhythm. Forty years he did that, never missed a summer."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Birgit Fischer won eight Olympic gold medals across six Games in which paddling sport? Answer: canoe sprint, racing in kayaks."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Slovak paddler Michal Martikan won Olympic gold in the C1 slalom at just 17. At which Games? Answer: Atlanta 1996."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Priya! Guess who I met at the lake? Tom Reyes, the guy who paddled the whole Mississippi last summer. He's giving a talk at the boathouse Friday, and he's bringing his battered old canoe. Want to come?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Max, just booked flights to Prague to watch Anna race - she and her partner Zuzana made the women's C2 final! Bring your loudest cowbell and some rain gear."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Birch-bark canoe built and paddled by Ojibwe guide Joseph Nadeau, who led survey parties along Lake Superior's north shore in the 1880s. Nadeau reportedly covered forty miles a day in good weather."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Racing paddle used by sprint champion Ivan Petrov at a 1982 international regatta in Belgrade, where he won the 1,000 m C1. Note the worn grip where his top hand pushed down on every stroke."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Into the final 200 now and Sofia Marchetti is pulling away in lane five! Look at that stroke rate, she's flying across the basin. The Italians in the stands are going absolutely wild!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Gate eighteen, an upstream gate, and - oh, a touch on the pole! That's a two-second penalty for Mateo Ruiz, and on this course that could cost him the podium."
+   }
+  ],
+  "topic:ChessPlayer": [
+   {
+    "style": "text message",
+    "text": "dude Aarav just beat a grandmaster in the simul tonight. 12 years old. played the Najdorf and everything"
+   },
+   {
+    "style": "text message",
+    "text": "can't make dinner, Lena's in the last round of the club championship. if she draws she clinches the title"
+   },
+   {
+    "style": "press release",
+    "text": "The Riverside Chess Federation is pleased to announce that International Master Yusuf Demir has earned his final grandmaster norm at the Reykjavik Open, becoming the region's first homegrown grandmaster."
+   },
+   {
+    "style": "press release",
+    "text": "St. Louis, MO - Women's champion Clara Whitfield will defend her title next month in a ten-player round robin with classical time controls, organizers announced Tuesday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How many hours a day do you study openings? A: About three. But I spend more time on endgames. Capablanca said to study endgames first, and I think he was right."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was going through your mind when you sacrificed the queen? A: I'd calculated mate in seven. My hand was shaking when I put the piece down, but the line was forced."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Grandmaster Petra Lindqvist's advice to juniors: after every tournament game, analyse it yourself before turning on an engine. You learn far more from finding your own mistakes."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Blitz specialist Omar Haddad recommends premoving only in completely forced recaptures - he says premoves lost him more online games than any opening ever did."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Fourteen-Year-Old Draws With World No. 3 - Lagos schoolboy Tunde Adebayo held a former title challenger to a draw in 41 moves at the Dubai Open."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Master, 81, Wins Senior Title - Retired engineer Walter Brenner claimed the national seniors championship undefeated, crediting long walks and the King's Indian Defence."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm playing in the park and this old guy, Mr. Kowalski, beats me in like twelve moves. Then he resets the board and says 'again.' I played him every Sunday for three years. Never won once."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My sister flew to her first rated tournament with a magnetic board in her backpack. She lost round one, cried in the bathroom, then won the next five. She's expert-rated now."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who became world champion in 1972 after defeating Boris Spassky in Reykjavik? Answer: Bobby Fischer."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Norwegian grandmaster held the classical world championship from 2013 to 2023? Answer: Magnus Carlsen."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ji-woo! My coworker Raj turns out to be a FIDE master - he crushed me in three blitz games at lunch. He offered to coach me on weekends. Should I say yes, or is that humiliating?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nora, Dad is still glowing - he finally hit a 2000 rating at the club after thirty years of trying. We're having a little party Saturday, and yes, there will be a cake shaped like a rook."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Paul Morphy (1837-1884). The New Orleans prodigy toured Europe in 1858 and defeated the leading masters of the day, then withdrew from serious play while still in his twenties."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Vera Menchik (1906-1944). The first women's world champion held her title from 1927 until her death, and also entered men's tournaments, beating several leading masters of the 1930s."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's down to forty seconds on the clock and the position is razor sharp! Knight to f5 - what a move! Ravi Menon is going all in on the kingside and the playing hall is holding its breath."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to the chess hour. Our guest tonight is Grandmaster Ilse Vogt, fresh off her win at the qualifier. Ilse, was resigning ever on your mind in round nine?"
+   }
+  ],
+  "topic:Cricketer": [
+   {
+    "style": "text message",
+    "text": "Rohan got a hundred off 87 balls today!!! first century for the county side. his mum was crying in the stands"
+   },
+   {
+    "style": "text message",
+    "text": "Sam took 5 wickets before lunch, Yorkshire collapsed to 96 all out. switch on the telly"
+   },
+   {
+    "style": "press release",
+    "text": "Lancashire County Cricket Club is delighted to confirm that all-rounder Kieran Moss has signed a two-year contract extension, following a season in which he scored 812 runs and took 41 wickets."
+   },
+   {
+    "style": "press release",
+    "text": "The national selectors today named 19-year-old fast bowler Hamza Qureshi in the Test squad for the upcoming tour of Australia, after his 32 wickets in the domestic first-class season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's your mindset when you walk out at 20 for 3? A: Survive the first ten balls. Leave anything outside off stump, get a feel for the pitch, and let the bowlers tire."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Who taught you to bowl leg-spin? A: My grandfather, in our backyard in Lahore. He'd put a coin on a good length and give me a rupee every time I hit it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Opening batter Meera Iyer's tip for playing swing: keep your head still and play the ball late, under your eyes. Reaching for it is how you nick off to the slips."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Wicketkeeper Dean Holloway says to stay low until the ball pitches - rising too early is the main reason keepers miss stumpings off the spinners."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Spinner Rips Through Visitors - Sixteen-year-old Arjun Pillai took 7 for 34 on debut as the home side bowled out the tourists inside two sessions."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Opener Retires After 15 Years - Grace Kirby, who scored nine Test centuries and captained the women's side to a series win in India, played her final match at Lord's on Sunday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was twelve, fielding at fine leg, and Imran Baig hit one straight up - must've been a mile high. Whole team's shouting 'catch it!' And I did. He still signs my bat every year at the club dinner."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My old captain, Tony Fenwick, used to eat exactly two bananas at every drinks break. Swore it was why he never got cramp. Scored about ten thousand club runs, so who's arguing?"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Australian batsman finished his Test career with an average of 99.94? Answer: Sir Donald Bradman."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Sachin Tendulkar was the first man to score a double century in a one-day international. Against which team? Answer: South Africa, in 2010."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fi, guess what - Jamie got picked for the under-19 squad! He's opening the batting in the first match against Sri Lanka. I've already bought the streaming pass."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, remember Ollie from school? He's playing county cricket now and took a hat-trick against Somerset last week. The kid who couldn't throw is bowling at 85 mph."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "W. G. Grace (1848-1915). The bearded doctor from Gloucestershire dominated English cricket for four decades, scoring more than 54,000 first-class runs and helping shape the modern game."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bat used by Caribbean opener Lionel Baptiste to score 211 in a 1974 island tournament in Barbados. The tape on the handle was wrapped by his mother on the morning of the match."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Short ball from Harris and - he's pulled it! That's gone all the way, over square leg for six! Patel moves to 94 and the crowd here are on their feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning, cricket lovers. Let's talk about Josh Barlow's spell yesterday: 22 overs, 6 maidens, 4 wickets. That's how you bowl on a flat deck. Phones are open."
+   }
+  ],
+  "topic:Cyclist": [
+   {
+    "style": "text message",
+    "text": "Elena just won the queen stage!! attacked on the final climb and nobody could follow. she's in the yellow jersey now"
+   },
+   {
+    "style": "text message",
+    "text": "omw to watch Mike's crit downtown, he's racing cat 2 at 6pm. bring snacks"
+   },
+   {
+    "style": "press release",
+    "text": "Team Velomaris is proud to announce the signing of Belgian classics specialist Pieter Van Damme, winner of last spring's cobbled one-day race in Flanders, on a three-year contract."
+   },
+   {
+    "style": "press release",
+    "text": "The Dutch cycling federation today confirmed that track sprinter Fenna de Wit will lead its squad at the world championships after setting a national record in the flying 200 metres."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you prepare for a Grand Tour? A: Altitude camp in Tenerife, lots of five-hour rides, and practice eating on the bike. In a three-week race, nutrition is half the battle."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What were you thinking on that descent? A: Honestly, nothing. At 90 kilometres an hour you just look at your line and trust your tyres."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Climber Luca Bertoni's tip for long ascents: stay seated and spin a lower gear, saving your out-of-the-saddle efforts for the steepest ramps."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former pro rider Sarah Okoye says to learn to ride no-hands so you can eat and pull on a jacket without stopping - a skill she practised on every training ride."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Commuter Turned Racer Wins National Time Trial - Accountant Hugo Lambert, 34, beat a field of professionals by eleven seconds after only three years of competitive riding."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Colombian Climber Takes Mountain Jersey - Twenty-two-year-old Andres Mora crested five categorized climbs first on Thursday to seize the polka-dot jersey."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "We were on a group ride and this woman in a faded rainbow jersey drops all of us on the hill. Turns out it was Monique Duval, ex-world champion, out for an easy spin. Easy! I almost threw up."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandpa rode his bike to the bakery every morning at four, rain or snow, for thirty-one years. On his eightieth birthday he did a hundred-kilometre ride with my dad."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Belgian rider, nicknamed 'The Cannibal', won the Tour de France five times? Answer: Eddy Merckx."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Marianne Vos of the Netherlands won Olympic road race gold in which year? Answer: 2012, in London."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kim, my neighbour Dev just finished Paris-Brest-Paris - 1,200 km in under 80 hours! He slept four hours total. I told him he's insane, and he just asked to borrow my pump."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rosa, Ellie is racing her first velodrome event Saturday - the individual pursuit. She's so nervous. Can you come? It's the indoor track by the stadium."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "A steel racing bicycle of the kind ridden by Fausto Coppi, the Italian champion who won both the Giro d'Italia and the Tour de France in the same year, in 1949 and again in 1952."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Marshall 'Major' Taylor (1878-1932). Taylor became world sprint champion in 1899, one of the first Black world champions in any sport, despite being barred from many races."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Two kilometres to go and Rasmus Holm has a ten-second gap! The sprinters' teams are chasing hard, but he's out of the saddle and he's not looking back!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "And on the line, it's a photo finish! Did Kenji Watanabe get his wheel in front? The judges are reviewing... yes! He's taken it by a tyre's width!"
+   }
+  ],
+  "topic:DartsPlayer": [
+   {
+    "style": "text message",
+    "text": "Gav hit a nine-darter at the pub league last night!! whole bar lost it. he's buying rounds till christmas"
+   },
+   {
+    "style": "text message",
+    "text": "final's on at 8. Kelly needs double 16 to win the title, I can't watch"
+   },
+   {
+    "style": "press release",
+    "text": "Tour organizers confirmed today that Welsh thrower Rhys Pugh has earned his Tour Card after topping the qualifying school order of merit."
+   },
+   {
+    "style": "press release",
+    "text": "Bullseye Arrows Ltd is delighted to announce a signature 23-gram tungsten dart designed with Dutch star Femke Bakker, the reigning women's matchplay champion."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What goes through your head on a 170 checkout? A: Treble 20, treble 20, bull. One dart at a time. If you think about the whole finish, your arm tightens."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: When did you first pick up the arrows? A: At my dad's pub in Stoke, aged nine. I'd practise on the board after closing while he stacked the chairs."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former world finalist Dean 'The Hammer' Lowe's tip: pick one bed on the board and throw a hundred darts at it each day before you play any games. Repetition builds grip memory."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Ladies' champion Shona MacLeod suggests learning your outshots by heart, so on stage you never have to do sums when you're left on 87."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Plumber Stuns Champion at Alexandra Palace - Qualifier Neil Brady, ranked 112th, whitewashed the defending champion 3-0 in sets with a 101 average."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Becomes Youngest Major Winner - Sixteen-year-old Callum Price won the Grand Slam title on Sunday, finishing with a 121 checkout on the bull."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "There's this old fella at our club, Big Terry, drinks one shandy and throws like a machine. Seventy years old. I once watched him check out 161 in his slippers. Slippers!"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First proper tournament, I bounced my first three darts off the wire. Lisa Grant, who was marking, just winked and said, 'Happens to everyone, love.' Then she won the whole thing."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Phil 'The Power' Taylor won how many world championships? Answer: sixteen."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Dutch player, known as 'Mighty Mike', won his first PDC world title in 2014? Answer: Michael van Gerwen."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hiya Bev, our Danny's only gone and qualified for the county darts team! He's been practising in the garage every night. Mum's making him a shirt with his nickname on it."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Pete, saw your mate Carl on TV last night - 105 average in the first round. He walked on to some 80s song with the whole crowd singing. Proper star now, eh?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Shirt worn by Eric Bristow, 'The Crafty Cockney', who won five world titles in the 1980s and helped turn a pub game into a televised sport."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Wooden board from the Red Lion, where local champion Alf Henshaw practised nightly from 1958 to 1990. The worn treble 20 shows decades of near-identical throws."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He needs 32 for the match - double 16 - first dart... just wide! Second dart... IN! Jake Morris wins the title, and the place goes absolutely mental!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the phone lines tonight, fans are debating whether Sandra Kovacs can defend her title. She averaged 98 at the weekend. Caller one, is she the favourite?"
+   }
+  ],
+  "topic:GaelicGamesPlayer": [
+   {
+    "style": "text message",
+    "text": "Ciara scored 1-7 for the county today, all from play. Cork through to the final!!"
+   },
+   {
+    "style": "text message",
+    "text": "Paudie's hurling match got moved to Sunday 3pm in Thurles, can you collect him from training"
+   },
+   {
+    "style": "press release",
+    "text": "The county board is delighted to announce that Kilkenny hurler Sean Phelan has been named captain for the coming championship season, following his All-Star award last year."
+   },
+   {
+    "style": "press release",
+    "text": "Na Fianna club today confirmed that ladies football forward Aoife Brennan will join a professional women's team in Australia on a two-year deal, a first for the club."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like playing in Croke Park? A: The noise when you run out of the tunnel - you can't hear your own teammates. You trust your instincts and keep your eye on the sliotar."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you balance teaching with inter-county football? A: Training four nights a week, school all day. Nobody's paid. You do it for the parish and the jersey."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Corner-back Niall Dwyer's tip for hooking: keep your hurley low and come in from behind your opponent's swing, so you block the stick without fouling."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Free-taker Orla Moran says to practise solo runs on your weaker foot - toe-tapping the ball back into your hand every four steps until it feels natural."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Schoolteacher Fires Mayo to Connacht Title - Darragh Coyle kicked eight points, four from frees, as Mayo edged Galway in a tense provincial football final."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Goalkeeper Retires After 17 Seasons - Clare's Ger Hanlon, who won two All-Ireland hurling medals, hung up his hurley after Sunday's club final."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad marked Mick Daly once, in a club match in the fifties. Says he never got a touch. Mick just looked at him and said 'Good man,' then stuck the ball in the net."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So the camogie final, last minute, and our Roisin gets the ball forty yards out. Everyone's screaming 'point it!' She goes for goal. Top corner. Whole village was in the pub till two."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Henry Shefflin won a record number of All-Ireland senior hurling medals with Kilkenny. How many? Answer: ten."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Kerry footballer, nicknamed 'the Gooch', won five All-Ireland senior titles? Answer: Colm Cooper."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mags, did you hear Eoin got called up to the Dublin senior panel? He's been flying for the club all year. We'll have to get tickets for the league match in Parnell Park!"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Siobhan, the photo of Tadhg lifting the cup in the local paper is gorgeous. Who'd have thought the little lad who cried at under-8s would captain the minors to a county title!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hurley belonging to Tom Kehoe, full-forward on the parish side of the 1950s, who scored a reported 4-3 in the 1955 county final. The band on the bas was fitted by his father, a blacksmith."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Jersey worn by camogie forward Brid Ni Dhuibhir, who won six senior All-Ireland medals between 1958 and 1966 while working nights as a nurse in Dublin."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Over the bar! What a score from Cathal Moloney, off his left, from the sideline under pressure! That's the equaliser and the Hogan Stand is rocking!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening and welcome to the GAA hour. Big question tonight: is Fionn Gallagher the best young midfielder in Ulster? A goal and two points from play on Sunday. Lines are open."
+   }
+  ],
+  "topic:GolfPlayer": [
+   {
+    "style": "text message",
+    "text": "Jen birdied the last three holes and won the club championship!!! she's been practising her putting every night in the hallway"
+   },
+   {
+    "style": "text message",
+    "text": "Tiago shot 68 in round one, two off the lead. tee time tomorrow is 9:40"
+   },
+   {
+    "style": "press release",
+    "text": "Sandhill Golf Academy announces that alumna Hye-jin Park has earned full status on the women's professional tour after finishing third at the final qualifying stage."
+   },
+   {
+    "style": "press release",
+    "text": "Fairway Apparel is excited to welcome Swedish professional Erik Lindgren, winner of two European tour events this season, as its newest brand ambassador."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What club did you hit into 18? A: A six-iron, 186 yards into the wind. I aimed at the left edge of the green and let it drift. Best shot I've hit all year."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you handle the triple bogey on 12? A: Walked to the next tee, took three deep breaths, and told my caddie we had six holes to get it back. We made four birdies."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Short-game wizard Danny Kerr's chipping tip: keep your weight on your front foot and let the loft of the club do the work, rather than trying to scoop the ball."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tour veteran Claire Dunmore advises reading putts from the low side of the hole - you'll see the break more clearly than from above it."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Amateur Holes Out for Albatross at Club Open - Retired firefighter Gene Castellano holed a 3-wood from 241 yards on the par-5 14th, only the second albatross in the course's history."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Rookie Wins Playoff in First Start - Twenty-one-year-old Matias Ferreyra beat two major champions on the second extra hole to claim the Desert Classic."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad played with this guy, Lou Pagano, every Saturday for thirty years. Lou had the ugliest swing you've ever seen, like a man swatting bees. Shot his age at seventy-four. Dad never forgave him."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I caddied once for Martina Velez at a pro-am. Fourteenth hole she asks the yardage, I say 150, she says 'You sure?' I wasn't. She hit it to two feet anyway. Tipped me a hundred bucks."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which golfer won the Masters a record six times? Answer: Jack Nicklaus."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In 2000, Tiger Woods won the U.S. Open at Pebble Beach by how many strokes? Answer: fifteen."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Rob, remember Kev from uni who used to sneak onto the municipal course? He just qualified for the British Amateur! I'm going to try to go and watch at the links. You in?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Anna, Grandma got a hole-in-one at 79! Seventh hole, 112 yards, with a 7-wood. The club put her name on the board in the clubhouse and she's insufferable about it."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bobby Jones (1902-1971). An amateur his entire career, Jones won all four major championships of 1930, then retired at 28 and co-founded Augusta National Golf Club."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hickory-shafted putter used by Scottish professional Archie Dunlop, who taught at a seaside links in Fife for 46 years and gave lessons until the week before his death in 1938."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He's standing over a fifteen-footer for the championship... it's tracking, it's tracking... it drops! Hamish Reid wins the Open, and he's throwing his cap into the crowd!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Here on the morning golf show we're talking about Aiyana Begay's comeback. Wrist surgery in March, and now she leads the tour in greens hit. Caller, what changed in her swing?"
+   }
+  ],
+  "topic:Gymnast": [
+   {
+    "style": "text message",
+    "text": "Maya stuck her vault at regionals!! 9.8, she's going to nationals"
+   },
+   {
+    "style": "text message",
+    "text": "can you pick up Lily after practice? she's staying late to work on her back handspring on beam"
+   },
+   {
+    "style": "press release",
+    "text": "The national gymnastics federation today named 16-year-old Zoe Martel to its world championships team after she won the all-around title at the trials in Indianapolis."
+   },
+   {
+    "style": "press release",
+    "text": "Flexion Sportswear announces a leotard collection designed with pommel horse medallist Kenta Arai, featuring the gold-and-navy pattern he wore at his first world championships."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the hardest skill in your floor routine? A: The double layout with a full twist. If I'm even slightly low on takeoff, I won't make the rotation, so I trust my coach and my legs."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you feel after the fall on bars? A: Gutted, but you only have thirty seconds to get back up. I chalked my hands, remounted and finished clean. That's the job."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Rings specialist Marco Galli's tip: build iron cross strength with band-assisted holds three times a week, and never train straight-arm work through elbow pain."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former beam champion Hannah Liu says to fix your eyes on the end of the beam during turns - looking down at your feet is what makes you wobble."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Thirteen-Year-Old Earns Perfect 10 at State Meet - Ava Rosales scored the meet's only 10.0 on floor, landing a tumbling pass rarely seen at junior level."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Romanian Veteran Returns at 30 - Former Olympic medallist Ioana Vlad will compete on balance beam at the European Championships, eight years after her last international event."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin Theo competed all through college. We watched him on parallel bars once, and he did this release move, flew way up, caught the bars. My aunt screamed so loud the judges looked over."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So at my first meet I forgot my whole floor routine halfway through. Just froze. My coach, Ms. Petrova, is clapping the beat from the side, and somehow I picked it back up. Got a ribbon for sixth!"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Nadia Comaneci scored the sport's first perfect 10 at which Olympic Games? Answer: Montreal 1976."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American has won more world championship medals than any other gymnast? Answer: Simone Biles."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo! Remember little Priya from the rec centre? She's on the junior elite team now - did a Yurchenko double on vault at camp. I was so proud I cried in the parking lot."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Max, Ben's coach says he's ready to compete level 8 next season. He's been doing conditioning every morning before school. Can you believe he's only eleven?"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Olga Korbut (b. 1955). At the 1972 Munich Olympics the Soviet athlete won three gold medals and captivated audiences with her daring backflip on the balance beam."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Vera Caslavska (1942-2016). The Czechoslovak star won seven Olympic gold medals in the 1960s, four of them in Mexico City in 1968."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "She's up on the uneven bars now - big swing, release, and caught it! Down to the dismount, double twist - sticks the landing! Grace Okafor has just put herself in medal position!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back, sports fans. Big score from Daniel Kovac on high bar: 14.9, which lifts Croatia into third. The pressure's on for the last rotation."
+   }
+  ],
+  "topic:HandballPlayer": [
+   {
+    "style": "text message",
+    "text": "Nora scored 11 goals tonight, we won by 4!! she's a beast on the left wing"
+   },
+   {
+    "style": "text message",
+    "text": "Karl's handball game moved to the sports hall at 7, he's playing pivot for the first team now"
+   },
+   {
+    "style": "press release",
+    "text": "Nordhavn HK is pleased to announce that Norwegian left back Sindre Haugen has signed a three-year contract, joining from a rival club in the top division."
+   },
+   {
+    "style": "press release",
+    "text": "The national handball federation has named goalkeeper Marta Ruiz captain for the upcoming European Championship, recognising her 300 caps and record save percentage in qualifying."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you prepare for a seven-metre throw? A: I look at the goalkeeper's feet, not their eyes. Then I pick a corner early and never change my mind."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the toughest part of playing pivot? A: You're wrestling defenders on the six-metre line for sixty minutes. Bruises everywhere. But when the backcourt finds you, it's an easy goal."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Croatian playmaker Ivan Baric's tip: practise jump shots with both a high and a low release, so goalkeepers can't read your arm."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Goalkeeper Linnea Strom says to stay big on breakaways: arms and legs wide, and wait for the shooter to commit before you move."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Wing Sets Club Record With 17 Goals - Twenty-year-old Mathilde Roux led Saint-Malo to a 35-28 win, scoring from almost every angle on the court."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Back Retires After 400 Bundesliga Games - Thomas Kessler, the bearded right back known for his thunderous shots, will leave the court at the end of the season."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My brother Jonas played handball in Denmark - over there it's huge. I went to one of his games, the hall was packed, and he got a two-minute suspension for a push. Mum booed the referee."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm in goal, a kid's coming at me on a fast break, and I just spread like a starfish. Ball hits me right in the face. Crowd cheered, I saw stars. That was my first save ever."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Nikola Karabatic won Olympic gold three times with which country? Answer: France."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Danish back Mikkel Hansen was named world handball player of the year how many times? Answer: three, in 2011, 2015 and 2018."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lena! Guess who's playing in the Bundesliga now - Felix from our old school team! Starting right wing for a club near Hannover. We should go see a match when you visit in March."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sophie, Emma made the junior national team! She's in goal and saved two seven-metre shots in the trial game. The coach called her unbeatable, haha."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Match shirt worn by Swedish centre back Lars Ekstrom in the 1990s, when his national side dominated the sport. Ekstrom was famous for calm passing and long-range jump shots."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Anja Andersen (b. 1969). The Danish playmaker was named world player of the year in 1997 and was known for flamboyant tricks and a fiery temper on court."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Fast break, Duarte to Silva on the wing - he leaps - and scores! What a finish over the goalkeeper's shoulder! Portugal level at 24-all with a minute to go!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Tonight on Sports Talk we're asking: can Kasia Nowak carry Poland's attack alone? Nine goals against Hungary, but the rest of the backcourt managed four. Lines are open."
+   }
+  ],
+  "topic:HorseRider": [
+   {
+    "style": "text message",
+    "text": "Sophie and her mare went clear in the jump-off!! fastest by 2 seconds, she won the grand prix"
+   },
+   {
+    "style": "text message",
+    "text": "can't talk, helping Ana plait Rocco's mane for her dressage test at 10"
+   },
+   {
+    "style": "press release",
+    "text": "The equestrian federation is pleased to announce that eventing rider Charlotte Ashby and her gelding Highland Ember have been selected for the nations cup team after their win at the four-star event in Kentucky."
+   },
+   {
+    "style": "press release",
+    "text": "Stablemaster Saddlery welcomes German dressage rider Katrin Vogel as its newest ambassador. Vogel and her stallion Diamant scored 81 percent in the Grand Prix Freestyle last month."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you walk a cross-country course? A: Three times. Once to see it, once to plan my lines, and once at the hour I'll ride it, so I know where the shadows fall."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's your bond with Pepper like? A: She's moody, she's opinionated, and she knows when I'm nervous. We've been partners eleven years. She's the reason I still compete."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Show jumper Miguel Navarro's tip: count your strides out loud between fences when schooling at home, so the rhythm becomes automatic in the ring."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Dressage rider Eleanor Hughes says to ride a transition every few strides while warming up; it keeps the horse listening to your seat instead of the arena noise."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teen Wins National Pony Championship - Fifteen-year-old Isla Murray and her pony Biscuit jumped three clear rounds to take the title at the county showground."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Olympian, 62, Still Competing - Veteran equestrian Hans Bergstrom and his mare Saga placed fourth at the World Cup qualifier, more than thirty years after his first Games."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my aunt Brenda showed hunters every summer. One year her horse, Tuck, stops dead at the last fence, and she just sails over it alone. Lands on her feet! The judges actually clapped."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I groomed for Juliette Moreau one season. She'd talk to her horse every night before a show, like a pep talk. Then she'd go and win the speed class. I started doing it too."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Charlotte Dujardin and Valegro won individual dressage gold at which two Olympics? Answer: London 2012 and Rio 2016."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: New Zealand's Mark Todd won back-to-back Olympic eventing gold medals in 1984 and 1988 on which horse? Answer: Charisma."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Claire, you'll never guess - Hannah from the yard is riding at Badminton this year! She's been eventing Rafferty since he was a four-year-old. We have to go and watch the cross-country."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jen, Dad finally got back in the saddle after his hip surgery. Just walk and trot on old Duke, but he was grinning the whole time. Mom took about 300 photos."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Piero d'Inzeo (1923-2014) and his brother Raimondo each competed in show jumping at eight Olympic Games. Both learned their craft as officers in the Italian cavalry."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Riding boots of Margaret 'Peggy' Hollis, who competed in side-saddle classes across Yorkshire in the 1920s and won the county cup three years running."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Last fence of the jump-off, a big oxer - and they're over clean! Aiden Clarke stops the clock at 38.4 seconds, and that's the fastest of the day!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Afternoon, listeners. Big weekend for Leonie Schmidt - dressage and show jumping double at the regional championships. She's on the line now. Leonie, how's your horse feeling?"
+   }
+  ],
+  "topic:Jockey": [
+   {
+    "style": "text message",
+    "text": "Ryan rode a treble at the races today!!! three winners, last one at 20 to 1. we're celebrating"
+   },
+   {
+    "style": "text message",
+    "text": "Aoife's got the ride on the favourite in the 3:15. tenner on it?"
+   },
+   {
+    "style": "press release",
+    "text": "Ballyhale Stables confirms that champion apprentice Liam Cassidy will take the ride on its unbeaten colt Silver Harbour in Saturday's Group 1 Derby trial."
+   },
+   {
+    "style": "press release",
+    "text": "The racing authority today congratulated Brazilian-born rider Paula Rocha on her 1,000th career winner, achieved at the evening meeting at Woodbine."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you keep your weight down? A: Sauna, small meals and a lot of discipline. Most days I ride at 8 stone 6, so a big dinner is a slice of toast."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did the trainer tell you before the race? A: 'Sit handy, don't hit the front too soon.' So I waited till the furlong pole, gave him a squeeze, and he flew."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Flat-race rider Tommy Lennox's tip: crouch low and keep your weight over the withers, because wind resistance costs you lengths over a mile."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Jump-racing veteran Bryony Hale says to look up at the next fence, not down at the one you're jumping - the horse follows your eyes."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Apprentice Wins Derby on First Ride - Nineteen-year-old Kieran Walsh steered 33-1 outsider Moon Ferry to a shock victory by a neck at Epsom."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Rider Retires After 3,000 Winners - Graham Pike, 54, rode his final race at Cheltenham on Wednesday to a standing ovation from the grandstand."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad was a stable lad in Newmarket in the fifties. He said the champion back then, Harry Bell, could nap in the weighing room and win by five lengths an hour later."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm at the track and this tiny guy, maybe five foot, walks past me in pink-and-green silks. That was Manny Ortega. Ten minutes later he wins the stakes race by a nose."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which British jockey rode a record nine Epsom Derby winners? Answer: Lester Piggott."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Frankie Dettori famously won all seven races on a single card at Ascot in which year? Answer: 1996."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kate, big news - Saoirse got her licence to ride over jumps! She schooled over fences all winter. Her first ride is at Punchestown next month. Want to come down and cheer?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Mike, did you see Jaden won his first stakes race? He's only 20. I remember him mucking out stalls at his uncle's barn when we were kids."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Racing silks of Isaac Burns Murphy (1861-1896), who won the Kentucky Derby three times and remains one of the most successful riders in American racing history."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Lightweight racing saddle, under one pound, used by Australian rider Neville Truscott in the 1960s. Truscott won the Cup twice and was known for his patient late finishes."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Into the final furlong and Delgado's got the leader in his sights! He's switched the whip - here he comes on the outside! It's close... Delgado gets up by a head!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good morning, racing fans. Tough day yesterday for Molly Burke - two falls over hurdles - but the doctor has passed her fit and she's on six mounts this afternoon."
+   }
+  ],
+  "topic:LacrossePlayer": [
+   {
+    "style": "text message",
+    "text": "Jake scored 4 goals in the lax game, we beat Brighton High!! coach says he's got D1 offers coming"
+   },
+   {
+    "style": "text message",
+    "text": "Emma's lacrosse tryouts are Saturday 8am, she's been doing wall ball all week"
+   },
+   {
+    "style": "press release",
+    "text": "The Chesapeake Thunder professional lacrosse club announced today the signing of attackman Cole Brennan, who led the college game in points last season with 92."
+   },
+   {
+    "style": "press release",
+    "text": "The Northern Box League today named Brampton defender Tyler Sinclair its player of the year after he led the league in caused turnovers and loose balls."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you get so good at faceoffs? A: Thousands of reps. My dad would blow a whistle in the garage and I'd clamp the ball, over and over, until my wrists ached."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What does the wooden stick mean to you? A: My grandfather carved it from hickory. For our people this is the Creator's game, so when I play with it, I feel him on the field."
+   },
+   {
+    "style": "how-to tip",
+    "text": "All-American midfielder Kara Liu's tip: cradle with your top hand loose, so a defender's check doesn't knock the ball out of your pocket."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Goalie Sam Okafor says to step to the ball on every save instead of reaching, so your body stays behind your stick."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Freshman Scores Six in NCAA Quarterfinal - Maddie Coyle, 18, led her team past the top seed with a hat trick in the fourth quarter alone."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Box Veteran Hits 500 Career Goals - Ontario forward Ryan Thomas reached the milestone with a behind-the-back shot in Friday's 13-9 win."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Senior year, our goalie Danny Price makes a save, the ball pops up, he catches it in his stick and runs the length of the field. Scores! A goalie goal! I've never seen anything like it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My mom played for her college team in the eighties. She still has her wooden stick. Last weekend she taught my daughter to cradle in the backyard, and now she's hooked."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which football legend is also in the lacrosse hall of fame after starring for Syracuse in the 1950s? Answer: Jim Brown."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Paul Rabil, one of the sport's best-known players, co-founded which professional league in 2018? Answer: the Premier Lacrosse League."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tess, Ollie just committed to play for a college in Maryland! Full scholarship. All those mornings at the wall paid off. We're getting him a new stick head as a present."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Dana, did you see the clip of Jess from our club? She scored a between-the-legs shot in the regional final. It's all over Instagram."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hickory stick made and used by Onondaga player William Thomas in the 1930s. He scored the deciding goal in a celebrated 1934 match against a Toronto club."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Gary Gait (b. 1967). The Canadian changed the game with his 'Air Gait' goal, leaping from behind the net to dunk the ball in during a 1988 NCAA semifinal."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ground ball, scooped by Delaney, she's off down the sideline, one defender to beat - split dodge - shot - scores! What a run!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Back on Sports Night, we're talking about box goalie Marc Lefebvre. 47 saves in Saturday's playoff game. Folks, that's not a typo. Who's calling in first?"
+   }
+  ],
+  "topic:MartialArtist": [
+   {
+    "style": "text message",
+    "text": "Kenji passed his black belt grading tonight!! 5 years of karate. he almost cried when sensei tied it on"
+   },
+   {
+    "style": "text message",
+    "text": "can't do lunch, Ana's got her BJJ tournament at noon, purple belt division"
+   },
+   {
+    "style": "press release",
+    "text": "Golden Lotus Academy announces that its head instructor, eighth-dan taekwondo master Park Seung-woo, will lead a free self-defence seminar for seniors on Saturday morning."
+   },
+   {
+    "style": "press release",
+    "text": "The national judo association today named Paris-based competitor Amelie Laurent to its world championships squad, following her gold medal in the under-63kg division at the European Open."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did your sifu teach you about wing chun? A: That the centre line is everything. Protect yours, attack theirs. He made us practise chain punches for an hour before we touched a partner."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you switch from boxing to jiu-jitsu at forty? A: My knees. I wanted something technical I could do into my seventies. And getting choked by a teenage blue belt keeps you humble."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Karate champion Rina Tanaka's tip for kata: slow the whole form down by half until every stance is exact, then build the speed back up."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Muay Thai trainer Somchai Rattanakul says to check low kicks by lifting your shin to meet them, not by stepping back, so you're ready to counter."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Grandmother Earns Black Belt at 74 - Retired nurse Dolores Fuentes passed her taekwondo dan test after nine years of training at a strip-mall dojang."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Wushu Star Lands First Film Role - Twenty-three-year-old Chen Wei, a three-time national champion in staff forms, will choreograph and perform his own fight scenes."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My sensei, Mr. Haruki Mori, was maybe five foot two. One day a big guy at the dojo asked him to 'prove it'. Sensei just smiled and had him on the mat in about one second. Never raised his voice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my daughter's at her first judo tournament, she's eight, and she throws this boy with a perfect hip throw. Then she helps him up and bows. I was a mess in the bleachers."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Bruce Lee developed which fighting philosophy, whose name means 'way of the intercepting fist'? Answer: Jeet Kune Do."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who founded judo in Japan in 1882? Answer: Kano Jigoro."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sara, guess what - my coworker Daniel is a kendo seventh dan! He's been training for 35 years. He invited me to his dojo's tournament, all bamboo swords clacking. Want to come?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Theo, Lucas got his first stripe on his white belt at jiu-jitsu! He won't stop showing everyone. He made me practise an armbar on the couch last night, ouch."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Gichin Funakoshi (1868-1957). The Okinawan teacher brought karate to mainland Japan in the 1920s and founded the style later known as Shotokan."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Ip Man (1893-1972). The wing chun master taught in Hong Kong from 1950, where his students included a teenage Bruce Lee."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "She shoots in for the takedown, gets it, moves to side control - and she's locking up the armbar! The tap! Mariana Souza wins by submission in the first round!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to Fight Talk. Big night for kickboxer Dmitri Volkov, who knocked out his opponent with a spinning back kick in under a minute. Callers, best knockout of the year?"
+   }
+  ],
+  "topic:NetballPlayer": [
+   {
+    "style": "text message",
+    "text": "Grace shot 42 from 44 tonight!!! player of the match, we won by 9"
+   },
+   {
+    "style": "text message",
+    "text": "netball training moved to Wednesday, Becca's playing wing defence for the firsts this season"
+   },
+   {
+    "style": "press release",
+    "text": "The Southern Swifts are delighted to confirm the re-signing of captain and goal keeper Tayla Morgan for two more seasons, after she led the league in intercepts last year."
+   },
+   {
+    "style": "press release",
+    "text": "The national selectors today named 18-year-old goal attack Shanice Campbell in the squad for the Commonwealth Games, making her the youngest player in the team."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you stay calm shooting a penalty in the final minute? A: Same routine every time: ball on my fingertips, bend the knees, look at the back of the ring, breathe out."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like defending a 6-foot-7 shooter? A: You can't out-jump her, so you work her early, take her space before the ball comes, and make the feeders nervous."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Centre Holly Bennett's tip: practise landing on one foot and pivoting on it, so you don't get pulled up for stepping when you catch at full speed."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Goal defence Ruth Adeyemi suggests watching the ball carrier's eyes, not the receiver - feeders usually look where they're about to pass."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Schoolgirl Debuts for Silver Ferns - Seventeen-year-old Kiri Walker came off the bench in the third quarter and scored 18 goals as New Zealand beat England."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Keeper Retires After 150 Tests - Defender Natalie Brooks, who won two world titles, played her final international in front of a sold-out arena."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My nan played till she was sixty-five, goal keeper, always. She'd stand under the post with her arms up like a lamppost and just glare. Nobody wanted to shoot over her."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "First game for the club, I got so excited I ran with the ball. Three steps! Whistle. The umpire, bless her, just said 'not today, love'. Our captain Jodie still brings it up at every team dinner."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Irene van Dyk, one of netball's most famous shooters, represented which two countries? Answer: South Africa and New Zealand."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Jamaican shooter Jhaniele Fowler is famous for her height. Roughly how tall is she? Answer: about 1.98 metres, or 6 ft 6 in."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lou! Our Meg made the county under-16 team! She's goal attack, and she was shooting like a pro at trials. Mum's already ironing her bib."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sian, remember Tash from uni? She's playing in the Super League now for a team in Wales. Saw her on telly snatching an intercept and nearly fell off the sofa."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Dress worn by Jean Hornsby, wing attack at the first world tournament in Eastbourne in 1963. Players then wore pleated skirts and leather-soled shoes on outdoor courts."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Bib marked 'GS' worn by Barbadian shooter Ethel Clarke in the 1970s, when she was the island's highest-scoring player. Clarke later coached girls' teams in Bridgetown for 30 years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ball goes to Tegan at centre, through to the circle - lob to Kemp - she's got it! Shoots... and it's in! That's the winner with two seconds left!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening, sports fans. Talking point tonight: is Mele Taufa the best young defender in the league? Six intercepts in Saturday's grand final. Lines are open."
+   }
+  ],
+  "topic:PokerPlayer": [
+   {
+    "style": "text message",
+    "text": "Vince just made the final table of the big Sunday online tournament, 3rd place, 40k!! he's taking us to dinner"
+   },
+   {
+    "style": "text message",
+    "text": "Rach is still in the main event, 47 left and she's chip leader. don't wait up"
+   },
+   {
+    "style": "press release",
+    "text": "Organizers are pleased to announce that Toronto-based pro Priya Raman has won the high roller event in Monte Carlo, defeating 62 entrants to claim a first prize of 1.2 million euros."
+   },
+   {
+    "style": "press release",
+    "text": "Royal Flush Media has signed two-time bracelet winner Danny Okoro to host its new strategy series, in which he breaks down hands from his televised final tables."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did you fold kings before the flop? A: The player who four-bet had been tight all day. Something felt off. When he showed aces, I just smiled."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you handle tilt after a bad beat? A: I stand up, walk around the casino, drink some water. The cards don't remember what just happened, so I shouldn't either."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tournament pro Lisa Brandt's tip: watch stack sizes. Short stacks near the bubble can't call light, so that's when to attack them."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Cash-game regular Marco DeLuca advises logging every session - hours, stakes, win rate - because memory always overrates your good nights."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Accountant Wins Main Event After $50 Online Satellite - Gregory Shaw turned a tiny buy-in into a $2 million first prize, outlasting 7,000 players."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "21-Year-Old Takes Down High-Stakes Final - Aleksander Nowak won heads-up against a famous veteran after a nine-hour duel."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So I'm at my first live tournament, and the old guy next to me, Hank, sunglasses indoors, tells me 'Kid, you look at your cards too long.' Then he bluffs me off a flush. Nicest robbery ever."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt Doris plays in the Thursday home game, has for forty years. She raises every hand with a smile, and somehow she's always up. We call her the shark of Maple Street."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Chris Moneymaker won the 2003 World Series of Poker Main Event after qualifying through an online satellite costing how much? Answer: $86."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Texan, nicknamed 'Texas Dolly', won back-to-back WSOP Main Events in 1976 and 1977? Answer: Doyle Brunson."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Raj, my roommate Kevin just won his first bracelet in Vegas! Pot-limit Omaha event. He called me at 4am screaming. He's buying the next three dinners."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Emma, Dad's taking his card game way too seriously. He bought a book on game theory and talks about 'ranges' at breakfast. He did win the club tournament, though."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Stu Ungar (1953-1998). A card prodigy from New York, Ungar won the World Series of Poker Main Event three times, in 1980, 1981 and 1997."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Johnny Moss (1907-1995). Called the Grand Old Man of Poker, Moss was voted champion at the first World Series in 1970 and won the Main Event outright in 1971 and 1974."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "All-in on the river! Sanchez thinks for two minutes... he calls! And Lee shows the bluff - seven high! Sanchez takes the chip lead!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to the card room show. Huge week for grinder Tina Holm: three final tables in five days at the festival. Tina, how much sleep did you actually get?"
+   }
+  ],
+  "topic:Rower": [
+   {
+    "style": "text message",
+    "text": "Ella's boat won the women's eight at Henley!! she's in the stroke seat. absolute scenes on the river"
+   },
+   {
+    "style": "text message",
+    "text": "5am erg session again lol. Nate has us doing 2k tests today"
+   },
+   {
+    "style": "press release",
+    "text": "The national rowing team today confirmed that sculler Hamish Grant and partner Owen Price will race the men's double sculls at the world championships after winning the trials in Nottingham."
+   },
+   {
+    "style": "press release",
+    "text": "Riverside Boat Club congratulates member Ines Calder on setting a club record of 6:58 for a women's 2,000-metre ergometer test."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the worst part of a 2,000-metre race? A: The third 500. Your legs burn, the finish feels miles away, and you can't see the other crews because you're facing backwards."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did it feel crossing the Atlantic alone? A: Fifty-four days at sea, at the oars twelve hours a day. I talked to the seabirds. Seeing Antigua was the best moment of my life."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Olympic sculler Katarina Novak's tip: drive with the legs first, then the back, then the arms - and reverse that order on the recovery."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Coxswain Jules Hart says to keep calls short in the last 250 metres: crews can't process sentences when their lungs are on fire."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Student, 20, Strokes Blue Boat to Victory - Lucy Ambrose set the rhythm as her crew won the Boat Race by three lengths on the Thames."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Retired Teacher Crosses Pacific Solo at 70 - Frank Delaney reached Hawaii after 92 days alone in a seven-metre ocean boat, raising money for his town's hospice."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first time in a single scull I caught a crab - the blade gets stuck in the water - and it threw me straight in the river. My coach Ruth didn't even slow the launch, just yelled 'Again!'"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My granddad rowed for his college in 1958. He still has the oar on the wall with the crew's names painted in gold. Every Christmas he tells us about the race they lost by a foot."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Steve Redgrave won gold medals at how many consecutive Olympic Games? Answer: five, from 1984 to 2000."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Romanian Elisabeta Lipa won Olympic rowing medals spanning how many years? Answer: twenty, from 1984 to 2004."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ben! Sophie got selected for the national U23 squad! She's in the quad sculls. All those freezing mornings on the reservoir paid off. Racing in Poland in July."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Al, my brother-in-law Matt rowed across the Atlantic with three friends - 40 days! He's lost 15 kilos and his hands are wrecked, but he's already planning the next one."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Single scull of the type raced by Jack Beresford, the British oarsman who won Olympic medals at five Games between 1920 and 1936."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Oar blade painted for Edwin Marsh, bow seat of a Thames club eight that won the Grand Challenge Cup in 1912. Marsh later coached at the club for 40 years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Five hundred to go and the Canadians are pushing! Their stroke, Mia Laurent, has taken the rate up to 40 - they're inching back, they're level - what a finish this will be!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning, sports fans. Big result at the regatta: local lad Charlie Dunn took gold in the lightweight single. On the line, his old coach. Was this always coming?"
+   }
+  ],
+  "topic:RugbyPlayer": [
+   {
+    "style": "text message",
+    "text": "Tommy scored two tries today!!! first start for the senior side. his dad was crying in the stand"
+   },
+   {
+    "style": "text message",
+    "text": "Leah's rugby match got moved to Sat 2pm, she's playing hooker now"
+   },
+   {
+    "style": "press release",
+    "text": "Northvale Rugby Club is thrilled to announce the signing of Fijian winger Josaia Ravula from the sevens circuit ahead of the new season."
+   },
+   {
+    "style": "press release",
+    "text": "The national union today named veteran lock Gareth Pryce captain for the autumn internationals, after he won his 85th test cap last weekend."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you prepare for scrums against a bigger front row? A: Body height. Get lower than them, bind tight, and trust my hooker. Size doesn't matter if your spine is straighter."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was in your head as you lined up the last-minute conversion? A: Nothing. Same routine I've done ten thousand times: four steps back, two left, look at the posts, breathe."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Scrum-half Ben Aldridge's tip: pass off your back foot with your hips facing the target, so the ball spirals flat and fast to your fly-half."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Openside flanker Mere Tane says to arrive at the breakdown low, with your hands on the ball before the tackler rolls away."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Teenage Winger Scores Hat-Trick on Debut - Nineteen-year-old Kofi Asante ran in three tries as his club ran out 41-17 winners at home."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Prop Retires After 200 Games - Dai Morgan, a fixture in the front row for 14 seasons, said Saturday's win was 'the perfect way to finish.'"
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle played hooker for the village team for twenty years. Lost three teeth, broke his nose twice. At his retirement do he gave a speech with no front teeth and the whole clubhouse sang."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So our fly-half, Sione, kicks this drop goal from about forty metres, last play of the game. The ball wobbles, hits the post, and goes over. The whole team piled on him. I still have the video."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which New Zealand winger scored four tries against England in the 1995 World Cup semi-final? Answer: Jonah Lomu."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Jonny Wilkinson's extra-time drop goal won the 2003 World Cup final for England against which team? Answer: Australia."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fran, guess who got called into the Wales women's squad? Our Bethan! She's playing second row. Six Nations game in Cardiff next month - we have to go."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Josh, saw your mate Liam on telly - he made 23 tackles! The commentators kept calling him 'the wall'. Tell him I'm a fan."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "William Webb Ellis (1806-1872). According to a long-told legend, as a schoolboy at Rugby School in 1823 he picked up the ball and ran with it, giving birth to the game."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Leather boots worn by Gwyn Pritchard, centre for a South Wales mining-town club in the 1920s. Pritchard worked shifts underground on weekdays and played every Saturday for eleven years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Ball comes out to Ngata, he steps one, steps two, he's through the gap - only the fullback to beat - and he's over! What a try!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to the rugby hour. Tonight's big question: should Callum Reid start at fly-half after that kicking display? Eight from eight off the tee. Lines are open."
+   }
+  ],
+  "topic:SoccerPlayer": [
+   {
+    "style": "text message",
+    "text": "Diego scored a free kick from 30 yards tonight!!! top corner. his first goal for the club"
+   },
+   {
+    "style": "text message",
+    "text": "Mia's soccer game is at 10 on field 3, she's in goal today, bring the folding chairs"
+   },
+   {
+    "style": "press release",
+    "text": "FC Riverton is pleased to announce the signing of Ghanaian midfielder Kwame Owusu on a four-year contract, subject to international clearance."
+   },
+   {
+    "style": "press release",
+    "text": "The national federation today named striker Sofia Lindahl women's player of the year after her 23 league goals and six for her country."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What did the manager say at half-time? A: Keep the ball, be patient, they'll get tired. And he was right - we scored twice in the last fifteen minutes."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you feel when you missed the penalty? A: Terrible. But my teammates came straight over. Next week I took the penalty again and scored. That's football."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Defender Lucas Moreau's tip: stay on your toes and show the winger down the line, toward the touchline, instead of diving in."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Goalkeeper Hana Sato says to talk constantly to your back four - a keeper's voice saves as many goals as her hands."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Sixteen-Year-Old Scores on Debut - Academy graduate Elijah Moore headed home a late winner to become the club's youngest ever league scorer."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Captain Signs New Deal at 36 - Centre-back Marco Rinaldi, who has played 480 games for the club, will stay one more season."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my brother's Sunday league team, right, their striker, Big Gaz, is about forty and runs like a fridge. Last week he scores a bicycle kick. A bicycle kick! He was limping for a week."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a ball boy at a match when I was ten, and the winger, Paulo Mendes, winked at me before every throw-in. After the game he gave me his shirt. Still haven't washed it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Brazilian forward won three World Cups, in 1958, 1962 and 1970? Answer: Pele."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Brazil's Marta has won FIFA's world player of the year award how many times? Answer: six."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Chris, remember Tariq from our five-a-side? He's signed for a second-division team in Germany! Trials in August and he made it. We should fly out for his first home game."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lauren, Zoe got picked for the regional under-14 squad! She's playing left wing. She practised keepy-uppies in the garden every evening. Dad's already printed a banner."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Lev Yashin (1929-1990). The Soviet goalkeeper, nicknamed the Black Spider, remains the only keeper ever to win the Ballon d'Or, in 1963."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Boots of Lily Parr, the Dick, Kerr Ladies forward from St Helens who was credited with hundreds of goals between 1919 and 1951."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "He picks it up on halfway, beats one, beats two, he's in the box - shoots - GOAL! Ndiaye has done it again and the away end is bouncing!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Evening, football fans. Big debate tonight: is Rhys Morgan worth the transfer fee? Fourteen goals already. Our first caller says he's overrated - let's hear it, Dave."
+   }
+  ],
+  "topic:SquashPlayer": [
+   {
+    "style": "text message",
+    "text": "Omar beat the 2 seed at the squash open in 5 games!! 11-9 in the decider. he's into the semis"
+   },
+   {
+    "style": "text message",
+    "text": "can't do drinks, Katie's playing her league squash match at 7 and I'm marking"
+   },
+   {
+    "style": "press release",
+    "text": "The professional squash tour is pleased to confirm that Egyptian world No. 4 Nour Hassan will headline next month's Glass Court Classic in Chicago."
+   },
+   {
+    "style": "press release",
+    "text": "Racket maker Cordline announces a three-year deal with New Zealand professional Liam Tait, who reached his first major final this season."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you beat someone who hits harder than you? A: Use the height of the front wall. Lob them, drop them, make them run to all four corners. Pace means nothing if they're tired."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's your favourite shot? A: The backhand boast. My coach in Cairo made me practise it until I could hit the nick from anywhere on court."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former world champion Rachel Grey's tip: get back to the T after every shot. Control the centre of the court and your opponent does all the running."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Club coach Imran Siddiqui suggests ghosting drills - moving to each corner without a ball, racket in hand - to build footwork and fitness."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Schoolboy Wins National Junior Title Without Dropping a Game - Fifteen-year-old Arjun Khanna swept every match at the championships in Birmingham."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Pro, 38, Claims Last Major - Mohammed Farouk outlasted a rival 15 years his junior in a 98-minute final."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad played squash with Geoff every Tuesday for 25 years. Geoff was sixty and still made Dad dive into the back corner. Dad came home soaked every single time."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I took a lesson once from a pro named Sabrina Clarke. First rally, I hit the ball, she drops it dead in the front corner. I didn't even move. She said, 'Welcome to squash.'"
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Pakistan's Jahangir Khan went unbeaten in competitive matches for how long in the 1980s? Answer: about five and a half years, over 500 matches."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Malaysian woman won the World Open a record eight times? Answer: Nicol David."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Sam, my coworker Priya plays squash professionally on the side - ranked 60 in the world! She offered me a game. I'm terrified. Should I wear goggles or just pray?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Fiona, Dan's in the final of the club championship on Friday. He's been doing court sprints every morning. Come along, the bar overlooks the glass court."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Hashim Khan (c.1914-2014). The Pakistani player won the British Open seven times in the 1950s and founded a famous squash dynasty."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Heather McKay (b. 1941). The Australian dominated the women's game, losing only two matches in her whole career and winning 16 straight British Open titles."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Long rally now, both players on their knees - Lopez with a drop, Ahmed scrambles - counter-drop - and that's a winner! Ahmed takes the game, 12-10!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to Racket Talk. The big story is Hana Kim's run to the final as a qualifier. Five matches in five days. Hana, how are those legs?"
+   }
+  ],
+  "topic:Swimmer": [
+   {
+    "style": "text message",
+    "text": "Leah went 58.9 in the 100 free!! first time under a minute, she's qualified for nationals"
+   },
+   {
+    "style": "text message",
+    "text": "can't talk, at Jack's meet, he's in lane 4 for the 200 fly"
+   },
+   {
+    "style": "press release",
+    "text": "The national swimming federation announced today that butterfly specialist Takeshi Mori will lead the team at the Pan Pacific Championships after breaking the 100m national record."
+   },
+   {
+    "style": "press release",
+    "text": "AquaPeak Goggles welcomes open-water marathon swimmer Bianca Ferreira as its newest ambassador, following her 10km win off the coast of Sardinia."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What do you think about during a 1500? A: I count lengths and sing songs in my head. Thirty lengths is a long time to stare at a black line."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you get your turns so fast? A: My coach filmed every turn for a year. We cut almost half a second off each wall."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Breaststroke champion Elena Kovacs's tip: glide for a full beat after every kick. Rushing the stroke is the most common beginner's mistake."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Backstroker Noah Fields says to count your strokes from the flags to the wall, so you can turn without looking back."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Thirteen-Year-Old Breaks National Age-Group Record - Lucy Chen swam the 200m individual medley in 2:14 at the state championships."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Channel Crossing Completed at 67 - Retired dentist Pauline Archer swam from Dover to France in 15 hours, battling jellyfish and strong tides."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandma swam laps every morning at the YMCA for fifty years. When she turned ninety, the lifeguards made her a cake shaped like a pool. She did her usual twenty lengths first, then ate it."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So at my first meet I dove in and my goggles slid down to my mouth. Swam the whole fifty blind. Then I find out I came third! My coach, Mr. Diaz, laughed so hard he cried."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Michael Phelps won a record number of gold medals at the 2008 Beijing Olympics. How many? Answer: eight."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Australian Dawn Fraser won the 100m freestyle at how many consecutive Olympics? Answer: three, in 1956, 1960 and 1964."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Gemma, did you hear about Ollie? He swam the English Channel last week! Thirteen hours. He's been training in the cold sea since March. I'm so proud of him."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Raj, Sara got her first college swimming scholarship offer! She's a distance freestyler. Up at 4:30 every morning for years and it finally paid off."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Gertrude Ederle (1905-2003). In 1926 she became the first woman to swim the English Channel, beating the existing men's record by about two hours."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Duke Kahanamoku (1890-1968). The Hawaiian freestyle sprinter won Olympic gold in 1912 and 1920 and helped popularize surfing around the world."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Coming off the final turn and it's Ruiz and Okonkwo neck and neck! Fifteen metres to go - they're both lunging for the wall - and it's Ruiz by a fingertip!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good afternoon. Big news from the pool: teen sensation Kaia Lund just broke the junior world record in the 400 free. We'll get reaction from her coach after the break."
+   }
+  ],
+  "topic:TableTennisPlayer": [
+   {
+    "style": "text message",
+    "text": "Wei beat the top seed at the ping pong tournament!!! 3-2, saved two match points. he's buzzing"
+   },
+   {
+    "style": "text message",
+    "text": "Anna's table tennis league match is at 7, she's playing number 1 for the team now"
+   },
+   {
+    "style": "press release",
+    "text": "The national table tennis association announced today that 16-year-old Hiroto Sato will make his senior debut at the team world championships after winning the national junior title."
+   },
+   {
+    "style": "press release",
+    "text": "Spinmaster Paddles announces a signature blade designed with Swedish champion Elin Johansson, built for her close-to-the-table attacking style."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How do you return his serve? A: I read the contact. If he brushes under the ball, it's backspin, so I push. If he hits the side, I flick it."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What was going through your mind at 10-all? A: Serve short, keep it low, wait for the loose ball. Then I went for the forehand loop and it clipped the edge. Lucky, but I'll take it."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Defensive specialist Chen Xiaoyu's tip: when chopping, let the ball drop below the height of the table before you cut it, so your returns stay low."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Coach Dmitri Orlov tells his juniors to recover to a neutral stance after every stroke, feet shoulder-width apart, so they can move to either wing."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Eleven-Year-Old Takes Game Off Olympian - Schoolgirl Amara Diop won a game against a former Olympian at the city sports festival, drawing a standing ovation."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Veteran Paddler Wins World Masters Title at 81 - Retired engineer Klaus Becker took gold in the over-80 singles after a fifth-game thriller."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My uncle Lim set up a table in his garage and played every night after work. Ancient penhold grip. I was sixteen, thought I'd crush him. He beat me 11-2 without moving his feet."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "In college there was this guy, Pavel, who played in the basement rec room with a sandpaper bat. Total legend. Once he returned a smash with his phone. Still won the point."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: China's Ma Long completed a career grand slam by winning which three titles? Answer: Olympic gold, the World Championships and the World Cup."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which Swedish player won the 1992 Olympic men's singles gold in Barcelona? Answer: Jan-Ove Waldner."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Mel! Our Ethan qualified for the junior nationals in table tennis! His backhand flick is ridiculous now. Coach says he could be top 10 in the country next year."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Jo, my neighbour Mr. Tanaka is 75 and plays three days a week at the community centre. He invited me to join. I lost every game, but he gave me tea afterwards."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Deng Yaping (b. 1973). Standing under five feet tall, the Chinese player won four Olympic gold medals in the 1990s and was ranked world number one for eight years."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Wooden bat used by Hungary's Victor Barna, who won five world singles titles in the 1930s and later helped popularize the sport in England."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Huge rally now - loop, counter-loop, she's way back from the table - and Sun smashes it down the line! That's the game, and she leads 2-1!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Welcome back to Sports Line. Shock result at the Open: unseeded Brazilian Tiago Lima knocked out the world number five. Tiago, how did it feel?"
+   }
+  ],
+  "topic:TennisPlayer": [
+   {
+    "style": "text message",
+    "text": "Sophie won the club tennis final 6-4 7-5!! saved 3 break points in the last game"
+   },
+   {
+    "style": "text message",
+    "text": "Marco's match on court 6 is delayed by rain again, prob won't start till 4"
+   },
+   {
+    "style": "press release",
+    "text": "The tournament is pleased to announce that Canadian wildcard Jordan Mercier will face the top seed in the opening round of the hard-court open on Monday evening."
+   },
+   {
+    "style": "press release",
+    "text": "Baseline Sportswear today announced a multi-year partnership with Ukrainian professional Olena Kravets, who reached her first grand slam quarterfinal this summer."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you turn the match around after losing the first set? A: I served more to his backhand and came to the net. He's uncomfortable passing on the run."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: When did you know you'd win? A: At 5-5 in the tiebreak he double-faulted. I saw his shoulders drop. Then I hit my best serve of the day."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Doubles specialist Ana Ruiz's tip: when your partner serves, poach at least once a game - it keeps the returner guessing even when you don't move."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Former pro Henrik Dahl says to toss the ball slightly in front of you on the serve; if you have to arch back to reach it, you lose power and accuracy."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Qualifier Stuns World No. 2 in Straight Sets - Twenty-year-old Li Yuting won 6-3, 6-4 on centre court, her first win over a top-ten opponent."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Clay-Court Veteran Retires After 18 Years on Tour - Spain's Javier Ortega played his final match in front of a home crowd in Valencia."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad played with our neighbour, Mrs. Kaplan, every Sunday. She was seventy and had a slice backhand that never bounced above your ankles. Dad lost to her for twelve years straight."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I was a ball kid once, and the player, Tomas Herrera, asked me for a towel, then whispered, 'Am I playing badly?' I said yes. He laughed and won the next six games."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Who won a record 14 French Open singles titles? Answer: Rafael Nadal."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In 1988 Steffi Graf achieved the Golden Slam. What does that mean? Answer: she won all four majors plus Olympic gold in the same year."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Kat, remember Ben from the uni tennis club? He's playing qualifying at the US Open! He's ranked 180 now. I'm going to try to get tickets."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Nora, Mum took up tennis at 60 and she's obsessed. Lessons twice a week, and she keeps texting me videos of her forehand. She won her first match yesterday!"
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Suzanne Lenglen (1899-1938). The French champion won six Wimbledon singles titles and changed the women's game with her athletic style and shorter skirts."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Arthur Ashe (1943-1993). In 1975 he became the first Black man to win the Wimbledon singles title, and he later campaigned for civil rights and AIDS awareness."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Second serve... and she rips the return down the line! Winner! That's match point saved for Kowalczyk, and the crowd is on its feet!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Morning, tennis fans. Big upset overnight: teenager Lucas Brandt beat the defending champion in four sets. On the line, a former coach of his. What's the secret?"
+   }
+  ],
+  "topic:AmateurBoxer": [
+   {
+    "style": "text message",
+    "text": "Jay won his first amateur bout tonight!! unanimous decision, 3 rounds, headgear and all. so proud"
+   },
+   {
+    "style": "text message",
+    "text": "Keisha's boxing semi-final is at 2, she's in the red corner, come down to the community centre"
+   },
+   {
+    "style": "press release",
+    "text": "The national amateur boxing association is pleased to announce that light-flyweight Daniel Osei has been selected for the Olympic qualification tournament after winning the national championships."
+   },
+   {
+    "style": "press release",
+    "text": "Iron Fist Boxing Club proudly congratulates member Sophie Murray on winning the women's 57kg title at the national novice championships, her 12th win in 14 bouts."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Are you turning professional after the Olympics? A: Not yet. I want another amateur title first. Over three rounds you have to start fast, and that's still my best skill."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did you get into boxing? A: The club was next to my school. I was always scrapping in the playground, so a coach said, 'Do it properly in here.' That was eight years ago."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Amateur champion Jamal Reid's tip: in three-round bouts, win the first round clearly. Judges remember fast starts, and there's no time to come back late."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Club coach Bridget O'Neill says to double up your jab against taller opponents - the first one finds the range, the second one scores."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Schoolgirl Wins European Youth Gold - Seventeen-year-old Aisling Kearney outpointed the defending champion to take the 60kg title in Montenegro."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Police Officer Boxes Way to National Title at 31 - Middleweight Craig Allen, who trains after night shifts, won his final on a split decision."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first fight, at seventeen, at a boys' club in Salford. I was so nervous I forgot my mouthguard was in my pocket. Coach Mick shoved it in as the bell rang. I won, though."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My cousin Danny boxed for the regiment team. Never went pro, just loved it. Won the army championships twice. Now he runs a club for kids on Friday nights."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Before turning pro, Cassius Clay won Olympic light-heavyweight gold at which Games? Answer: Rome 1960."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Hungary's Laszlo Papp became the first boxer to win three Olympic gold medals. In which years? Answer: 1948, 1952 and 1956."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Rose, Callum won his bout at the regional amateurs! He's 16 and fighting at 64kg. He says the national championships are next. Can you come and watch?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ty, my sister just had her first boxing match at a club show. She's 35 and works in accounting! She won by unanimous decision. I'm still in shock."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Teofilo Stevenson (1952-2012). The Cuban heavyweight won Olympic gold in 1972, 1976 and 1980 and famously refused every offer to turn professional."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Headguard worn by Belfast bantamweight Sean McAlister when he took Commonwealth Games bronze in the 1970s. He later trained boys at a church-hall club for 30 years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Final round, and the lad in blue is landing that jab again and again! The red corner's coach is shouting, but it's too late. That'll be a clear points win on the cards."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening. Tonight we're talking about the amateur championships at the town hall: twelve bouts, three local winners. We've got young welterweight Josh Kerr on the line."
+   }
+  ],
+  "topic:Baronet": [
+   {
+    "style": "text message",
+    "text": "turns out Tom's great-uncle was Sir Henry Ashworth, 4th Bt. the title passes to his dad now lol, so we all have to call him Sir Richard"
+   },
+   {
+    "style": "text message",
+    "text": "the old Pemberton manor is open for tours sat, and Sir Giles himself does the guided walk. 12th holder of the hereditary title apparently"
+   },
+   {
+    "style": "press release",
+    "text": "The Carlisle family announces that Sir Edmund Carlisle has succeeded his late father as 9th Baronet of Hollinbrook, a hereditary title created by Charles II in 1661."
+   },
+   {
+    "style": "press release",
+    "text": "Thornbury Hall Estate is pleased to announce that Sir James Fenwick, Bt., will open the estate gardens to the public this summer, with proceeds supporting the village school."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Sir Arthur, what does your title actually mean? A: It's hereditary, but it isn't a peerage, so there's no seat in the Lords. It came to me from my father, and one day it goes to my son."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Did you ever expect to inherit? A: Not at all. My cousin was the heir, but he died young, so at forty I became the 6th Baronet. I still answer the phone as plain Michael."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Address a letter to 'Sir William Haddon, Bt.', never 'Lord Haddon': a baronet holds a hereditary title but is not a peer, and his wife is styled 'Lady Haddon'."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tracing an ancestor styled 'Sir John Mallory, Bart.'? Check the published baronetage lists rather than the peerage, and remember his title passed only to male heirs."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Sheep Farmer Inherits 300-Year-Old Title - Yorkshire farmer Ian Pickering has become Sir Ian, 11th Baronet, after a distant cousin died without a son."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Family Seat Sold After Four Centuries - The Wexley estate in Somerset, home to twelve generations of the hereditary line, will become a hotel after Sir Peter Wexley, Bt., sold it this week."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So my grandfather was gardener for old Sir Reginald Tollemarsh up at the big house, seventh of the line, I think. Sir Reggie used to bring him cups of tea himself. Very unusual in those days."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I met a real-life 'Sir' at a pub quiz once. Sir Hugh something, 5th Baronet. Lovely bloke, drove a muddy Land Rover, and knew every single answer about birds."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: The novelist Sir Walter Scott was made a baronet by George IV in which year? Answer: 1820."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Sir Francis Burdett, 5th Bt., was a radical MP in the early 1800s. Which famous philanthropist and banking heiress was his daughter? Answer: Angela Burdett-Coutts."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Lucy, guess what I found in the family tree - a Sir Thomas Grenfell, 2nd Baronet, who sat as an MP in the 1700s! Apparently he lost the family fortune on horses. Very on brand for us."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Harriet, our new neighbour turns out to be Sir Nicholas Byrne, Bt. He insists we call him Nick. He brought us homemade marmalade and a 400-year-old family cider recipe."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Portrait of Sir Thomas Ellerby, 3rd Baronet (1691-1749). The red Hand of Ulster on his coat of arms is the badge borne by holders of his rank."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Sir Joseph Banks, 1st Baronet (1743-1820). The naturalist who sailed with Captain Cook received his hereditary title in 1781 and led the Royal Society for over forty years."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On the line now is Sir Geoffrey Lowther, Bt., whose family have farmed this valley since 1640. Sir Geoffrey, what do the neighbours actually call you?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Our history slot today: Sir Mortimer Blake, 2nd Bt., who gambled away the family estate in a single night in 1789. Callers, got any ancestors like that?"
+   }
+  ],
+  "topic:BroadcastNetwork": [
+   {
+    "style": "text message",
+    "text": "Horizon TV just said they're streaming all their affiliates' local news for free. my mom is going to be glued to it"
+   },
+   {
+    "style": "text message",
+    "text": "can't believe KBN dropped the late-night show after 22 years. their whole primetime schedule is getting reshuffled"
+   },
+   {
+    "style": "press release",
+    "text": "Meridian Broadcasting today announced affiliation agreements with 14 additional stations, extending its nationwide coverage to 96 percent of households."
+   },
+   {
+    "style": "press release",
+    "text": "Andes Television Network announces the launch of a 24-hour Spanish-language news channel, carried on cable and by its 40 regional affiliates beginning March 1."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How does a programme get onto your national schedule? A: Head office buys or commissions it, then we feed it by satellite to every affiliate at the same hour, coast to coast."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why did Pacific One move its evening news to 6:30? A: Our affiliates asked. Local partners wanted a longer local bulletin first, so we shifted the national broadcast."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from a Riverview Broadcasting producer: if you want your local story picked up nationally, send it to the affiliate desk with clean footage before 3 p.m."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Pitching a show to Northstar? Their development team says to send a one-page logline and a three-minute sizzle reel; they answer submissions from agents within six weeks."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Network Wins World Cup Rights - Continental Broadcasting will air all 104 matches across its channels and affiliates, outbidding two rivals in a $400 million deal."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Founder of Nordvision Dies at 91 - Martha Lindqvist launched the broadcaster in 1962 with three transmitters and built it into the country's largest chain of channels."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My dad worked master control at the old CTN headquarters. He used to say if he sneezed at the wrong second, forty cities would go black at once. Thirty years, never sneezed on air."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was a kid, the whole country watched the same Saturday night variety show on National One. Monday at school, everybody did the same jokes. You don't get that now."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: The BBC began the world's first regular high-definition television service in which year? Answer: 1936."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which American network, founded in 1926 as a radio chain, later became home to 'Saturday Night Live'? Answer: NBC."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Kev, guess what - I got the job at Atlas Broadcasting! I'll be scheduling shows for all their affiliates in the Midwest. My first big decision: what goes on at 8 p.m. Thursday."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Dana, did you hear Coastline TV is merging with Summit Media? Something like 60 affiliates under one owner. My uncle in Ohio says his local news already looks different."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "The Canadian Broadcasting Corporation was created in 1936 to link the country from the Atlantic to the Pacific. This transmitter tube carried its early national programmes."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Studio camera from the DuMont Television Network (1946-1956). The short-lived American broadcaster aired Jackie Gleason's first 'Honeymooners' sketches before it folded."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Media hour, folks: word is Galaxy Network is about to lose its Sunday football package. Caller three, you work at one of their affiliates - what are you hearing?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking on the media beat: Unity Broadcasting just named its first woman president, Carla Mendes. She takes over 210 affiliates and a struggling primetime slate."
+   }
+  ],
+  "topic:RadioStation": [
+   {
+    "style": "text message",
+    "text": "KXRT is playing my request at 9!!! tune in to 98.7"
+   },
+   {
+    "style": "text message",
+    "text": "the jazz station on 88.3 is doing a 24-hour Coltrane marathon, it's the only thing on in my kitchen"
+   },
+   {
+    "style": "press release",
+    "text": "WBNX 101.5 FM announces a new morning show hosted by longtime DJ Rosa Delgado, beginning Monday at 6 a.m., along with expanded local traffic and weather updates."
+   },
+   {
+    "style": "press release",
+    "text": "Community broadcaster Radio Harbour 94.2 has been granted a five-year licence renewal and will celebrate with a free open-air concert on the quay this Saturday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How did Big Country 105 become number one in the ratings? A: We kept the DJs local. Listeners want somebody who knows the high school scores and the road closures."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's the history of your call letters? A: The W means we're east of the Mississippi, and MRS stood for our founder, Margaret R. Stone, who put us on the air in 1948."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Radio Valle's producers: to win concert tickets, call the studio line right after the third song in the 5 o'clock hour - that's when they take caller nine."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want your band on air? College outlet KZUU says to drop off a CD or send a link with the clean radio edit clearly labelled for the music director."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Station Celebrates 100 Years on Air - WGRB, which began broadcasting from a hotel rooftop in 1925, marks its centenary with a week of archive recordings."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Pirate Broadcaster Shut Down After a Decade - Unlicensed Radio Nightingale, which played reggae from a tower block in east London, was taken off the air by regulators on Tuesday."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "Every morning growing up, Dad had Rock 102 on in the kitchen. When they switched to all-talk, he was so upset he wrote a letter. They read it on air. He framed the tape."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "I did overnights at a little AM station in Nebraska. Five thousand watts. At 3 a.m. I'd get calls from truckers in Texas. That signal carried forever after dark."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: KDKA in Pittsburgh is often credited with the first commercial broadcast in 1920. What did it report? Answer: the U.S. presidential election results."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Radio Caroline, launched in 1964, broadcast pop music to Britain from where? Answer: a ship anchored at sea."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Sam, I got a volunteer slot at the community station! Sunday 10 to noon, playing old soul records. Tune in on 92.1 FM and phone in a request, or it'll just be my mum listening."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Lin, remember Hits 97, the pop station we always had on in the car? It's switching to sports talk next month. End of an era."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Transmitter from 2LO, the BBC's first London station, which began daily broadcasts in 1922 from Marconi House on the Strand."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Microphone from WSM in Nashville, the AM station that has carried the Grand Ole Opry since 1925."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "You're listening to Z-104, the Valley's home for classic hits! It's 7:15, traffic's backed up on the bridge, and coming up next - the phones are lighting up for our concert ticket giveaway!"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "This is Radio Sol FM, broadcasting live from the county fair. Stop by our booth for a free T-shirt. Up next, an hour of your country requests."
+   }
+  ],
+  "topic:TelevisionStation": [
+   {
+    "style": "text message",
+    "text": "KTVX is doing a story on our bakery tonight at 6!! channel 4, tell everyone"
+   },
+   {
+    "style": "text message",
+    "text": "the Channel 7 weather guy just said 8 inches of snow. they always overdo it lol"
+   },
+   {
+    "style": "press release",
+    "text": "WDTV Channel 12 announces it will launch a 4 p.m. local newscast this fall, bringing its daily local news output to six hours."
+   },
+   {
+    "style": "press release",
+    "text": "KSEA-TV has won a regional Emmy for its investigative series on harbour pollution, the station's general manager announced Friday."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Why does Channel 9 cut into programmes for weather so often? A: We're the only local news crew in the valley. When a tornado's coming, people turn to us first."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What's it like running a small-market outlet? A: We have one satellite truck, four anchors and a weatherman who doubles as our sports reporter. Every night is an adventure."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Want your event on the evening news? WKBN's assignment desk says to email by 9 a.m. with a phone number and something visual for the camera crew."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Tip from Channel 5's engineers: if you lose their signal after rescanning, point your antenna northeast toward the transmitter on Bell Hill."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Local Channel Marks 70 Years - KTRV, which first signed on in 1955 with a single camera and a cooking show, celebrated with a live anniversary special."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Channel 28 Sold to National Owner - WHLR, run by the Hoffman family since 1953, will be sold to a media group in a $90 million deal."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My first job was at a tiny station in Montana. I ran camera, edited tape, sometimes read the farm report. One night the anchor got sick and I did the whole six o'clock show. Mom taped it on VHS."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "When I was eight, Channel 3 came to film our school science fair. My volcano erupted right on cue. They showed it on the 11 o'clock news. Still my proudest moment on TV."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Chicago's WGN-TV takes its call letters from a newspaper slogan. What did WGN stand for? Answer: World's Greatest Newspaper, the Chicago Tribune's motto."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: In 1941, WNBT in New York aired the first legal TV commercial in the U.S. What did it advertise? Answer: a Bulova watch."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Megan, I got the meteorologist job at Channel 6 in Duluth! I'll be doing the weekend forecasts. Please watch Saturday at 10 and tell me if I look nervous."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Ty, the local morning show on Channel 2 interviewed Grandpa about turning 100. They called it Centenarian of the Week. He wore his best tie."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Camera from KTLA, the first commercially licensed television station west of the Mississippi, which went on the air in Los Angeles in 1947."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Anchor desk from WTVJ Channel 4, Florida's first television station, which signed on in Miami in 1949."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Media talk this morning: Channel 11 just dropped its late news for a game-show rerun. Caller, you used to work in their newsroom - what's going on behind the scenes?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Breaking: KVRN's weekend anchor is moving to the morning show. Management at Channel 8 says they want a fresh face at 6 a.m. Thoughts, listeners?"
+   }
+  ],
+  "topic:Cardinal": [
+   {
+    "style": "text message",
+    "text": "Mom just met His Eminence at the cathedral!! Cardinal Okonkwo blessed her rosary. she's not going to stop talking about it"
+   },
+   {
+    "style": "text message",
+    "text": "the consistory is on the livestream rn, the Pope just placed the scarlet biretta on Luis Reyes's head. whole parish is watching"
+   },
+   {
+    "style": "press release",
+    "text": "His Eminence Luis Moreno, a member of the College of Cardinals since 2019, will celebrate the Easter Vigil Mass at 8 p.m. in the cathedral, followed by a reception in the cloister."
+   },
+   {
+    "style": "press release",
+    "text": "The Holy See announced that fourteen prelates will receive the red hat at a consistory on 20 June, among them Joseph Mwangi, who leads a fast-growing East African archdiocese."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Your Eminence, what did it feel like to vote in the conclave? A: Silence, and heavy responsibility. You write a name on the ballot, walk to the altar, and pray you're right."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: How has life changed since you received the red hat? A: More travel to Rome, more meetings in the Curia, but I still say Mass in my home parish when I can."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Etiquette tip: Cardinal Pietro Ferri is addressed in person as 'Your Eminence', and letters to him open the same way."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Visiting Rome? Cardinal Thomas Gale's former secretary suggests attending Mass at his titular church in Trastevere on its feast day, when he traditionally celebrates it himself."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Nairobi Prelate to Receive Red Hat - Samuel Kiprono, 61, will be elevated at next month's consistory, the first from his archdiocese eligible to vote for a pope."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Vatican Diplomat Dies at 94 - Cardinal Henri Lavoie, who served as papal nuncio on four continents, died peacefully at his residence near St. Peter's Square."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My aunt was a nun in Boston, and she said old Cardinal Fitzgerald used to slip out in a plain black coat to visit the soup kitchen. Nobody recognized him without the scarlet."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So we're in St. Peter's Square, and this man in a red skullcap stops and asks my little brother his name. Turned out he'd voted in the last conclave. Gave him a holy card. Fran still has it."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Which English cardinal, canonized in 2019, wrote 'The Dream of Gerontius'? Answer: John Henry Newman."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Cardinal Richelieu served as chief minister to which French king? Answer: Louis XIII."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Clare, guess who's coming to bless the new school building? Cardinal Okafor! The whole parish is in a panic about the red carpet and the choir. Can you help with the flowers?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Paul, I read that Cardinal Brennan turns 80 this week, so he can no longer vote in a conclave. He confirmed me at St. Anne's back in 1998."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Scarlet zucchetto worn by Giovanni Morelli at the 1963 conclave. Princes of the Church wear red as a sign they are ready to shed their blood for the faith."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Portrait of Thomas Wolsey (c.1473-1530), who wore the red hat and served as Henry VIII's Lord Chancellor before falling from power over the king's annulment."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Good evening and welcome to Faith Matters. Joining us from Rome, fresh from the synod, is His Eminence Rafael Ortega. Your Eminence, what surprised you most this week?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Black smoke again, folks. Our Vatican correspondent says the German elector, Hoffmann, picked up votes in the early ballots, but nobody is near two-thirds yet."
+   }
+  ],
+  "topic:ChristianBishop": [
+   {
+    "style": "text message",
+    "text": "Bishop Adeyemi is doing the confirmations at our church Sunday!! Josh is so nervous about the anointing"
+   },
+   {
+    "style": "text message",
+    "text": "the Rt Revd Helen Price's enthronement is at the cathedral at 11, can you save us seats near the front? she's the new head of the diocese"
+   },
+   {
+    "style": "press release",
+    "text": "The Diocese of St. Brendan announces that the Most Reverend Michael Doyle has been appointed its eighth bishop and will be ordained and installed at the cathedral on 15 March."
+   },
+   {
+    "style": "press release",
+    "text": "The Diocese of Lindmoor is pleased to announce the consecration of the Rt Revd Sarah Okonjo, the first woman to lead the diocese, at a service on Saturday at 11 a.m."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: Bishop Harris, what does your job actually involve? A: Shepherding about 120 parishes. I ordain priests, confirm young people, and try to visit every congregation at least once every two years."
+   },
+   {
+    "style": "interview Q&A",
+    "text": "Q: What from your parish years helps now that you wear the mitre? A: Listen first. Across the diocese I meet people in hospitals, prisons, farms. Their worries are rarely what the newspapers think."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Etiquette tip: when greeting the Rt Revd Mary Collins, 'Bishop Mary' is fine in conversation; in writing, address her as 'The Right Reverend Mary Collins'."
+   },
+   {
+    "style": "how-to tip",
+    "text": "Bishop Tomasz Nowak's advice to newly ordained deacons: keep a notebook of every family you visit, and pray for each of them by name before bed."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Diocese Welcomes Ghanaian-Born Shepherd - The Rt Revd Peter Mensah, 52, was enthroned in the cathedral on Sunday, with drums and choirs from his native Ghana."
+   },
+   {
+    "style": "headline plus lede",
+    "text": "Retired Bishop, 88, Walks Camino for Charity - John Ellery, formerly of the Diocese of Westhaven, completed 800 kilometres to Santiago de Compostela, raising 40,000 pounds for refugees."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "So when I was confirmed, old Bishop Malone gave me this little tap on the cheek. I thought he'd slapped me! My mum had to explain it was tradition. I was thirteen."
+   },
+   {
+    "style": "personal anecdote told aloud",
+    "text": "My grandad drove the Right Reverend Cartwright around the diocese for twenty years. They used to stop for fish and chips after every evening confirmation."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Saint Nicholas, the origin of Santa Claus, was bishop of which city? Answer: Myra, in modern-day Turkey."
+   },
+   {
+    "style": "trivia question",
+    "text": "Trivia: Before becoming archbishop of Cape Town, Desmond Tutu led which South African diocese from 1985? Answer: Johannesburg."
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hi Ruth, the bishop is visiting our parish next week and I've been put in charge of lunch. Apparently Bishop Okeke is vegetarian. Any ideas beyond quiche?"
+   },
+   {
+    "style": "email to a friend",
+    "text": "Hey Tom, did you see our old school chaplain, Father Gareth Lewis, was just consecrated as an auxiliary for Cardiff? He'll be wearing a mitre now. He used to referee our football matches."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Crozier carried by Aelfric, who led a Wessex diocese in the 10th century. Its shepherd's-crook shape recalls the duty to guide and protect the flock."
+   },
+   {
+    "style": "museum or exhibit placard",
+    "text": "Mitre of Samuel Seabury (1729-1796), consecrated in Aberdeen in 1784 as the first American to lead an Episcopal diocese."
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "On tonight's Faith and Life programme: the Rt Revd Rachel Moore on her walking pilgrimage to all 64 parishes of her diocese. Rachel, how are the feet?"
+   },
+   {
+    "style": "sports-radio or radio-show style commentary",
+    "text": "Callers, the big story: the diocese has decided to close three rural churches. His Lordship Dermot Garvey says it's about money. Line one, you're from one of those parishes..."
+   }
+  ]
+ }
+}

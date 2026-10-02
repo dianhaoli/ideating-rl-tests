@@ -1,0 +1,2535 @@
+[
+{
+"cid": "lang:ar",
+"label": "text written in Arabic",
+"path": [
+"Language",
+"Afro-Asiatic",
+"Arabic"
+],
+"source": "language"
+},
+{
+"cid": "lang:bg",
+"label": "text written in Bulgarian",
+"path": [
+"Language",
+"Slavic",
+"Bulgarian"
+],
+"source": "language"
+},
+{
+"cid": "lang:de",
+"label": "text written in German",
+"path": [
+"Language",
+"Germanic",
+"German"
+],
+"source": "language"
+},
+{
+"cid": "lang:el",
+"label": "text written in Greek",
+"path": [
+"Language",
+"Hellenic",
+"Greek"
+],
+"source": "language"
+},
+{
+"cid": "lang:es",
+"label": "text written in Spanish",
+"path": [
+"Language",
+"Romance",
+"Spanish"
+],
+"source": "language"
+},
+{
+"cid": "lang:fr",
+"label": "text written in French",
+"path": [
+"Language",
+"Romance",
+"French"
+],
+"source": "language"
+},
+{
+"cid": "lang:hi",
+"label": "text written in Hindi",
+"path": [
+"Language",
+"Indo-Aryan",
+"Hindi"
+],
+"source": "language"
+},
+{
+"cid": "lang:it",
+"label": "text written in Italian",
+"path": [
+"Language",
+"Romance",
+"Italian"
+],
+"source": "language"
+},
+{
+"cid": "lang:ja",
+"label": "text written in Japanese",
+"path": [
+"Language",
+"East Asian",
+"Japanese"
+],
+"source": "language"
+},
+{
+"cid": "lang:nl",
+"label": "text written in Dutch",
+"path": [
+"Language",
+"Germanic",
+"Dutch"
+],
+"source": "language"
+},
+{
+"cid": "lang:pl",
+"label": "text written in Polish",
+"path": [
+"Language",
+"Slavic",
+"Polish"
+],
+"source": "language"
+},
+{
+"cid": "lang:pt",
+"label": "text written in Portuguese",
+"path": [
+"Language",
+"Romance",
+"Portuguese"
+],
+"source": "language"
+},
+{
+"cid": "lang:ru",
+"label": "text written in Russian",
+"path": [
+"Language",
+"Slavic",
+"Russian"
+],
+"source": "language"
+},
+{
+"cid": "lang:sw",
+"label": "text written in Swahili",
+"path": [
+"Language",
+"Niger-Congo",
+"Swahili"
+],
+"source": "language"
+},
+{
+"cid": "lang:th",
+"label": "text written in Thai",
+"path": [
+"Language",
+"Southeast Asian",
+"Thai"
+],
+"source": "language"
+},
+{
+"cid": "lang:tr",
+"label": "text written in Turkish",
+"path": [
+"Language",
+"Turkic",
+"Turkish"
+],
+"source": "language"
+},
+{
+"cid": "lang:ur",
+"label": "text written in Urdu",
+"path": [
+"Language",
+"Indo-Aryan",
+"Urdu"
+],
+"source": "language"
+},
+{
+"cid": "lang:vi",
+"label": "text written in Vietnamese",
+"path": [
+"Language",
+"Southeast Asian",
+"Vietnamese"
+],
+"source": "language"
+},
+{
+"cid": "lang:zh",
+"label": "text written in Chinese",
+"path": [
+"Language",
+"East Asian",
+"Chinese"
+],
+"source": "language"
+},
+{
+"cid": "topic:AdultActor",
+"label": "article about an adult actor",
+"path": [
+"Topic",
+"Agent",
+"Actor",
+"AdultActor"
+],
+"source": "topic"
+},
+{
+"cid": "topic:VoiceActor",
+"label": "article about a voice actor",
+"path": [
+"Topic",
+"Agent",
+"Actor",
+"VoiceActor"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Comedian",
+"label": "article about a comedian",
+"path": [
+"Topic",
+"Agent",
+"Artist",
+"Comedian"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ComicsCreator",
+"label": "article about a comics creator",
+"path": [
+"Topic",
+"Agent",
+"Artist",
+"ComicsCreator"
+],
+"source": "topic"
+},
+{
+"cid": "topic:FashionDesigner",
+"label": "article about a fashion designer",
+"path": [
+"Topic",
+"Agent",
+"Artist",
+"FashionDesigner"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Painter",
+"label": "article about a painter",
+"path": [
+"Topic",
+"Agent",
+"Artist",
+"Painter"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Photographer",
+"label": "article about a photographer",
+"path": [
+"Topic",
+"Agent",
+"Artist",
+"Photographer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AustralianRulesFootballPlayer",
+"label": "article about an Australian rules football player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"AustralianRulesFootballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BadmintonPlayer",
+"label": "article about a badminton player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"BadmintonPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BaseballPlayer",
+"label": "article about a baseball player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"BaseballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BasketballPlayer",
+"label": "article about a basketball player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"BasketballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Bodybuilder",
+"label": "article about a bodybuilder",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Bodybuilder"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Canoeist",
+"label": "article about a canoeist",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Canoeist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ChessPlayer",
+"label": "article about a chess player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"ChessPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Cricketer",
+"label": "article about a cricketer",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Cricketer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Cyclist",
+"label": "article about a cyclist",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Cyclist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:DartsPlayer",
+"label": "article about a darts player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"DartsPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GaelicGamesPlayer",
+"label": "article about a Gaelic games player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"GaelicGamesPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GolfPlayer",
+"label": "article about a golf player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"GolfPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Gymnast",
+"label": "article about a gymnast",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Gymnast"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HandballPlayer",
+"label": "article about a handball player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"HandballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HorseRider",
+"label": "article about a horse rider",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"HorseRider"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Jockey",
+"label": "article about a jockey",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Jockey"
+],
+"source": "topic"
+},
+{
+"cid": "topic:LacrossePlayer",
+"label": "article about a lacrosse player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"LacrossePlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MartialArtist",
+"label": "article about a martial artist",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"MartialArtist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:NetballPlayer",
+"label": "article about a netball player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"NetballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:PokerPlayer",
+"label": "article about a poker player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"PokerPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Rower",
+"label": "article about a rower",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Rower"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RugbyPlayer",
+"label": "article about a rugby player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"RugbyPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoccerPlayer",
+"label": "article about a soccer player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"SoccerPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SquashPlayer",
+"label": "article about a squash player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"SquashPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Swimmer",
+"label": "article about a swimmer",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"Swimmer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:TableTennisPlayer",
+"label": "article about a table tennis player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"TableTennisPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:TennisPlayer",
+"label": "article about a tennis player",
+"path": [
+"Topic",
+"Agent",
+"Athlete",
+"TennisPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AmateurBoxer",
+"label": "article about an amateur boxer",
+"path": [
+"Topic",
+"Agent",
+"Boxer",
+"AmateurBoxer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Baronet",
+"label": "article about a baronet",
+"path": [
+"Topic",
+"Agent",
+"BritishRoyalty",
+"Baronet"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BroadcastNetwork",
+"label": "article about a broadcast network",
+"path": [
+"Topic",
+"Agent",
+"Broadcaster",
+"BroadcastNetwork"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RadioStation",
+"label": "article about a radio station",
+"path": [
+"Topic",
+"Agent",
+"Broadcaster",
+"RadioStation"
+],
+"source": "topic"
+},
+{
+"cid": "topic:TelevisionStation",
+"label": "article about a television station",
+"path": [
+"Topic",
+"Agent",
+"Broadcaster",
+"TelevisionStation"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Cardinal",
+"label": "article about a cardinal",
+"path": [
+"Topic",
+"Agent",
+"Cleric",
+"Cardinal"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ChristianBishop",
+"label": "article about a Christian bishop",
+"path": [
+"Topic",
+"Agent",
+"Cleric",
+"ChristianBishop"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Pope",
+"label": "article about a pope",
+"path": [
+"Topic",
+"Agent",
+"Cleric",
+"Pope"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Saint",
+"label": "article about a saint",
+"path": [
+"Topic",
+"Agent",
+"Cleric",
+"Saint"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CollegeCoach",
+"label": "article about a college coach",
+"path": [
+"Topic",
+"Agent",
+"Coach",
+"CollegeCoach"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Airline",
+"label": "article about an airline",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"Airline"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Bank",
+"label": "article about a bank",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"Bank"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Brewery",
+"label": "article about a brewery",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"Brewery"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BusCompany",
+"label": "article about a bus company",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"BusCompany"
+],
+"source": "topic"
+},
+{
+"cid": "topic:LawFirm",
+"label": "article about a law firm",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"LawFirm"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Publisher",
+"label": "article about a publisher",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"Publisher"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RecordLabel",
+"label": "article about a record label",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"RecordLabel"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Winery",
+"label": "article about a winery",
+"path": [
+"Topic",
+"Agent",
+"Company",
+"Winery"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Library",
+"label": "article about a library",
+"path": [
+"Topic",
+"Agent",
+"EducationalInstitution",
+"Library"
+],
+"source": "topic"
+},
+{
+"cid": "topic:School",
+"label": "article about a school",
+"path": [
+"Topic",
+"Agent",
+"EducationalInstitution",
+"School"
+],
+"source": "topic"
+},
+{
+"cid": "topic:University",
+"label": "article about a university",
+"path": [
+"Topic",
+"Agent",
+"EducationalInstitution",
+"University"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MythologicalFigure",
+"label": "article about a mythological figure",
+"path": [
+"Topic",
+"Agent",
+"FictionalCharacter",
+"MythologicalFigure"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoapCharacter",
+"label": "article about a soap character",
+"path": [
+"Topic",
+"Agent",
+"FictionalCharacter",
+"SoapCharacter"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AmericanFootballPlayer",
+"label": "article about an American football player",
+"path": [
+"Topic",
+"Agent",
+"GridironFootballPlayer",
+"AmericanFootballPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Band",
+"label": "article about a band",
+"path": [
+"Topic",
+"Agent",
+"Group",
+"Band"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SpeedwayRider",
+"label": "article about a speedway rider",
+"path": [
+"Topic",
+"Agent",
+"MotorcycleRider",
+"SpeedwayRider"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ClassicalMusicArtist",
+"label": "article about a classical music artist",
+"path": [
+"Topic",
+"Agent",
+"MusicalArtist",
+"ClassicalMusicArtist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Legislature",
+"label": "article about a legislature",
+"path": [
+"Topic",
+"Agent",
+"Organisation",
+"Legislature"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MilitaryUnit",
+"label": "article about a military unit",
+"path": [
+"Topic",
+"Agent",
+"Organisation",
+"MilitaryUnit"
+],
+"source": "topic"
+},
+{
+"cid": "topic:PoliticalParty",
+"label": "article about a political party",
+"path": [
+"Topic",
+"Agent",
+"Organisation",
+"PoliticalParty"
+],
+"source": "topic"
+},
+{
+"cid": "topic:PublicTransitSystem",
+"label": "article about a public transit system",
+"path": [
+"Topic",
+"Agent",
+"Organisation",
+"PublicTransitSystem"
+],
+"source": "topic"
+},
+{
+"cid": "topic:TradeUnion",
+"label": "article about a trade union",
+"path": [
+"Topic",
+"Agent",
+"Organisation",
+"TradeUnion"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SportsTeamMember",
+"label": "article about a sports team member",
+"path": [
+"Topic",
+"Agent",
+"OrganisationMember",
+"SportsTeamMember"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Ambassador",
+"label": "article about an ambassador",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Ambassador"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Architect",
+"label": "article about an architect",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Architect"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Astronaut",
+"label": "article about an astronaut",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Astronaut"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BeautyQueen",
+"label": "article about a beauty queen",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"BeautyQueen"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BusinessPerson",
+"label": "article about a business person",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"BusinessPerson"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Chef",
+"label": "article about a chef",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Chef"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Economist",
+"label": "article about an economist",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Economist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Engineer",
+"label": "article about an engineer",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Engineer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Journalist",
+"label": "article about a journalist",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Journalist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Judge",
+"label": "article about a judge",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Judge"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MilitaryPerson",
+"label": "article about a military person",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"MilitaryPerson"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Model",
+"label": "article about a model",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Model"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Monarch",
+"label": "article about a monarch",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Monarch"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Noble",
+"label": "article about a noble",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Noble"
+],
+"source": "topic"
+},
+{
+"cid": "topic:OfficeHolder",
+"label": "article about an office holder",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"OfficeHolder"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Philosopher",
+"label": "article about a philosopher",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Philosopher"
+],
+"source": "topic"
+},
+{
+"cid": "topic:PlayboyPlaymate",
+"label": "article about a Playboy Playmate",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"PlayboyPlaymate"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Religious",
+"label": "article about a religious figure",
+"path": [
+"Topic",
+"Agent",
+"Person",
+"Religious"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Congressman",
+"label": "article about a congressman",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"Congressman"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Governor",
+"label": "article about a governor",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"Governor"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Mayor",
+"label": "article about a mayor",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"Mayor"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MemberOfParliament",
+"label": "article about a member of parliament",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"MemberOfParliament"
+],
+"source": "topic"
+},
+{
+"cid": "topic:President",
+"label": "article about a president",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"President"
+],
+"source": "topic"
+},
+{
+"cid": "topic:PrimeMinister",
+"label": "article about a prime minister",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"PrimeMinister"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Senator",
+"label": "article about a senator",
+"path": [
+"Topic",
+"Agent",
+"Politician",
+"Senator"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RadioHost",
+"label": "article about a radio host",
+"path": [
+"Topic",
+"Agent",
+"Presenter",
+"RadioHost"
+],
+"source": "topic"
+},
+{
+"cid": "topic:FormulaOneRacer",
+"label": "article about a Formula One racer",
+"path": [
+"Topic",
+"Agent",
+"RacingDriver",
+"FormulaOneRacer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:NascarDriver",
+"label": "article about a NASCAR driver",
+"path": [
+"Topic",
+"Agent",
+"RacingDriver",
+"NascarDriver"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Entomologist",
+"label": "article about an entomologist",
+"path": [
+"Topic",
+"Agent",
+"Scientist",
+"Entomologist"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Medician",
+"label": "article about a physician",
+"path": [
+"Topic",
+"Agent",
+"Scientist",
+"Medician"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BaseballLeague",
+"label": "article about a baseball league",
+"path": [
+"Topic",
+"Agent",
+"SportsLeague",
+"BaseballLeague"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BasketballLeague",
+"label": "article about a basketball league",
+"path": [
+"Topic",
+"Agent",
+"SportsLeague",
+"BasketballLeague"
+],
+"source": "topic"
+},
+{
+"cid": "topic:IceHockeyLeague",
+"label": "article about an ice hockey league",
+"path": [
+"Topic",
+"Agent",
+"SportsLeague",
+"IceHockeyLeague"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RugbyLeague",
+"label": "article about a rugby league",
+"path": [
+"Topic",
+"Agent",
+"SportsLeague",
+"RugbyLeague"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoccerLeague",
+"label": "article about a soccer league",
+"path": [
+"Topic",
+"Agent",
+"SportsLeague",
+"SoccerLeague"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoccerManager",
+"label": "article about a soccer manager",
+"path": [
+"Topic",
+"Agent",
+"SportsManager",
+"SoccerManager"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AustralianFootballTeam",
+"label": "article about an Australian football team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"AustralianFootballTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BasketballTeam",
+"label": "article about a basketball team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"BasketballTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CricketTeam",
+"label": "article about a cricket team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"CricketTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CyclingTeam",
+"label": "article about a cycling team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"CyclingTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HandballTeam",
+"label": "article about a handball team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"HandballTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HockeyTeam",
+"label": "article about a hockey team",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"HockeyTeam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RugbyClub",
+"label": "article about a rugby club",
+"path": [
+"Topic",
+"Agent",
+"SportsTeam",
+"RugbyClub"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Curler",
+"label": "article about a curler",
+"path": [
+"Topic",
+"Agent",
+"WinterSportPlayer",
+"Curler"
+],
+"source": "topic"
+},
+{
+"cid": "topic:FigureSkater",
+"label": "article about a figure skater",
+"path": [
+"Topic",
+"Agent",
+"WinterSportPlayer",
+"FigureSkater"
+],
+"source": "topic"
+},
+{
+"cid": "topic:IceHockeyPlayer",
+"label": "article about an ice hockey player",
+"path": [
+"Topic",
+"Agent",
+"WinterSportPlayer",
+"IceHockeyPlayer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Skater",
+"label": "article about a skater",
+"path": [
+"Topic",
+"Agent",
+"WinterSportPlayer",
+"Skater"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Skier",
+"label": "article about a skier",
+"path": [
+"Topic",
+"Agent",
+"WinterSportPlayer",
+"Skier"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SumoWrestler",
+"label": "article about a sumo wrestler",
+"path": [
+"Topic",
+"Agent",
+"Wrestler",
+"SumoWrestler"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Historian",
+"label": "article about a historian",
+"path": [
+"Topic",
+"Agent",
+"Writer",
+"Historian"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Poet",
+"label": "article about a poet",
+"path": [
+"Topic",
+"Agent",
+"Writer",
+"Poet"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ScreenWriter",
+"label": "article about a screen writer",
+"path": [
+"Topic",
+"Agent",
+"Writer",
+"ScreenWriter"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AutomobileEngine",
+"label": "article about an automobile engine",
+"path": [
+"Topic",
+"Device",
+"Engine",
+"AutomobileEngine"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Earthquake",
+"label": "article about an earthquake",
+"path": [
+"Topic",
+"Event",
+"NaturalEvent",
+"Earthquake"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SolarEclipse",
+"label": "article about a solar eclipse",
+"path": [
+"Topic",
+"Event",
+"NaturalEvent",
+"SolarEclipse"
+],
+"source": "topic"
+},
+{
+"cid": "topic:OlympicEvent",
+"label": "article about an olympic event",
+"path": [
+"Topic",
+"Event",
+"Olympics",
+"OlympicEvent"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CyclingRace",
+"label": "article about a cycling race",
+"path": [
+"Topic",
+"Event",
+"Race",
+"CyclingRace"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HorseRace",
+"label": "article about a horse race",
+"path": [
+"Topic",
+"Event",
+"Race",
+"HorseRace"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Convention",
+"label": "article about a convention",
+"path": [
+"Topic",
+"Event",
+"SocietalEvent",
+"Convention"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Election",
+"label": "article about an election",
+"path": [
+"Topic",
+"Event",
+"SocietalEvent",
+"Election"
+],
+"source": "topic"
+},
+{
+"cid": "topic:FilmFestival",
+"label": "article about a film festival",
+"path": [
+"Topic",
+"Event",
+"SocietalEvent",
+"FilmFestival"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MilitaryConflict",
+"label": "article about a military conflict",
+"path": [
+"Topic",
+"Event",
+"SocietalEvent",
+"MilitaryConflict"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MusicFestival",
+"label": "article about a music festival",
+"path": [
+"Topic",
+"Event",
+"SocietalEvent",
+"MusicFestival"
+],
+"source": "topic"
+},
+{
+"cid": "topic:FootballMatch",
+"label": "article about a football match",
+"path": [
+"Topic",
+"Event",
+"SportsEvent",
+"FootballMatch"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GrandPrix",
+"label": "article about a grand prix",
+"path": [
+"Topic",
+"Event",
+"SportsEvent",
+"GrandPrix"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MixedMartialArtsEvent",
+"label": "article about a mixed martial arts event",
+"path": [
+"Topic",
+"Event",
+"SportsEvent",
+"MixedMartialArtsEvent"
+],
+"source": "topic"
+},
+{
+"cid": "topic:WrestlingEvent",
+"label": "article about a wrestling event",
+"path": [
+"Topic",
+"Event",
+"SportsEvent",
+"WrestlingEvent"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GolfTournament",
+"label": "article about a golf tournament",
+"path": [
+"Topic",
+"Event",
+"Tournament",
+"GolfTournament"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoccerTournament",
+"label": "article about a soccer tournament",
+"path": [
+"Topic",
+"Event",
+"Tournament",
+"SoccerTournament"
+],
+"source": "topic"
+},
+{
+"cid": "topic:TennisTournament",
+"label": "article about a tennis tournament",
+"path": [
+"Topic",
+"Event",
+"Tournament",
+"TennisTournament"
+],
+"source": "topic"
+},
+{
+"cid": "topic:WomensTennisAssociationTournament",
+"label": "article about a WTA tennis tournament",
+"path": [
+"Topic",
+"Event",
+"Tournament",
+"WomensTennisAssociationTournament"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RollerCoaster",
+"label": "article about a roller coaster",
+"path": [
+"Topic",
+"Place",
+"AmusementParkAttraction",
+"RollerCoaster"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Lake",
+"label": "article about a lake",
+"path": [
+"Topic",
+"Place",
+"BodyOfWater",
+"Lake"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Castle",
+"label": "article about a castle",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Castle"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HistoricBuilding",
+"label": "article about a historic building",
+"path": [
+"Topic",
+"Place",
+"Building",
+"HistoricBuilding"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Hospital",
+"label": "article about a hospital",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Hospital"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Hotel",
+"label": "article about a hotel",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Hotel"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Museum",
+"label": "article about a museum",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Museum"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Prison",
+"label": "article about a prison",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Prison"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Restaurant",
+"label": "article about a restaurant",
+"path": [
+"Topic",
+"Place",
+"Building",
+"Restaurant"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ShoppingMall",
+"label": "article about a shopping mall",
+"path": [
+"Topic",
+"Place",
+"Building",
+"ShoppingMall"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Galaxy",
+"label": "article about a galaxy",
+"path": [
+"Topic",
+"Place",
+"CelestialBody",
+"Galaxy"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Planet",
+"label": "article about a planet",
+"path": [
+"Topic",
+"Place",
+"CelestialBody",
+"Planet"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Diocese",
+"label": "article about a diocese",
+"path": [
+"Topic",
+"Place",
+"ClericalAdministrativeRegion",
+"Diocese"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Airport",
+"label": "article about an airport",
+"path": [
+"Topic",
+"Place",
+"Infrastructure",
+"Airport"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Dam",
+"label": "article about a dam",
+"path": [
+"Topic",
+"Place",
+"Infrastructure",
+"Dam"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Cave",
+"label": "article about a cave",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"Cave"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Glacier",
+"label": "article about a glacier",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"Glacier"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Mountain",
+"label": "article about a mountain",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"Mountain"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MountainPass",
+"label": "article about a mountain pass",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"MountainPass"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MountainRange",
+"label": "article about a mountain range",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"MountainRange"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Volcano",
+"label": "article about a volcano",
+"path": [
+"Topic",
+"Place",
+"NaturalPlace",
+"Volcano"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Racecourse",
+"label": "article about a racecourse",
+"path": [
+"Topic",
+"Place",
+"RaceTrack",
+"Racecourse"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Bridge",
+"label": "article about a bridge",
+"path": [
+"Topic",
+"Place",
+"RouteOfTransportation",
+"Bridge"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RailwayLine",
+"label": "article about a railway line",
+"path": [
+"Topic",
+"Place",
+"RouteOfTransportation",
+"RailwayLine"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Road",
+"label": "article about a road",
+"path": [
+"Topic",
+"Place",
+"RouteOfTransportation",
+"Road"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RoadTunnel",
+"label": "article about a road tunnel",
+"path": [
+"Topic",
+"Place",
+"RouteOfTransportation",
+"RoadTunnel"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ArtificialSatellite",
+"label": "article about an artificial satellite",
+"path": [
+"Topic",
+"Place",
+"Satellite",
+"ArtificialSatellite"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Town",
+"label": "article about a town",
+"path": [
+"Topic",
+"Place",
+"Settlement",
+"Town"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Village",
+"label": "article about a village",
+"path": [
+"Topic",
+"Place",
+"Settlement",
+"Village"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CricketGround",
+"label": "article about a cricket ground",
+"path": [
+"Topic",
+"Place",
+"SportFacility",
+"CricketGround"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GolfCourse",
+"label": "article about a golf course",
+"path": [
+"Topic",
+"Place",
+"SportFacility",
+"GolfCourse"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Stadium",
+"label": "article about a stadium",
+"path": [
+"Topic",
+"Place",
+"SportFacility",
+"Stadium"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RailwayStation",
+"label": "article about a railway station",
+"path": [
+"Topic",
+"Place",
+"Station",
+"RailwayStation"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Canal",
+"label": "article about a canal",
+"path": [
+"Topic",
+"Place",
+"Stream",
+"Canal"
+],
+"source": "topic"
+},
+{
+"cid": "topic:River",
+"label": "article about a river",
+"path": [
+"Topic",
+"Place",
+"Stream",
+"River"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Lighthouse",
+"label": "article about a lighthouse",
+"path": [
+"Topic",
+"Place",
+"Tower",
+"Lighthouse"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Theatre",
+"label": "article about a theatre",
+"path": [
+"Topic",
+"Place",
+"Venue",
+"Theatre"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Amphibian",
+"label": "article about an amphibian",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Amphibian"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Arachnid",
+"label": "article about an arachnid",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Arachnid"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Bird",
+"label": "article about a bird",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Bird"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Crustacean",
+"label": "article about a crustacean",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Crustacean"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Fish",
+"label": "article about a fish",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Fish"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Insect",
+"label": "article about an insect",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Insect"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Mollusca",
+"label": "article about a mollusc",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Mollusca"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Reptile",
+"label": "article about a reptile",
+"path": [
+"Topic",
+"Species",
+"Animal",
+"Reptile"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Fungus",
+"label": "article about a fungus",
+"path": [
+"Topic",
+"Species",
+"Eukaryote",
+"Fungus"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Grape",
+"label": "article about a grape",
+"path": [
+"Topic",
+"Species",
+"FloweringPlant",
+"Grape"
+],
+"source": "topic"
+},
+{
+"cid": "topic:RaceHorse",
+"label": "article about a race horse",
+"path": [
+"Topic",
+"Species",
+"Horse",
+"RaceHorse"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Conifer",
+"label": "article about a conifer",
+"path": [
+"Topic",
+"Species",
+"Plant",
+"Conifer"
+],
+"source": "topic"
+},
+{
+"cid": "topic:CultivatedVariety",
+"label": "article about a cultivated plant variety",
+"path": [
+"Topic",
+"Species",
+"Plant",
+"CultivatedVariety"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Fern",
+"label": "article about a fern",
+"path": [
+"Topic",
+"Species",
+"Plant",
+"Fern"
+],
+"source": "topic"
+},
+{
+"cid": "topic:GreenAlga",
+"label": "article about a green alga",
+"path": [
+"Topic",
+"Species",
+"Plant",
+"GreenAlga"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Moss",
+"label": "article about a moss",
+"path": [
+"Topic",
+"Species",
+"Plant",
+"Moss"
+],
+"source": "topic"
+},
+{
+"cid": "topic:NationalFootballLeagueSeason",
+"label": "article about a NFL season",
+"path": [
+"Topic",
+"SportsSeason",
+"FootballLeagueSeason",
+"NationalFootballLeagueSeason"
+],
+"source": "topic"
+},
+{
+"cid": "topic:BaseballSeason",
+"label": "article about a baseball season",
+"path": [
+"Topic",
+"SportsSeason",
+"SportsTeamSeason",
+"BaseballSeason"
+],
+"source": "topic"
+},
+{
+"cid": "topic:NCAATeamSeason",
+"label": "article about a NCAA team season",
+"path": [
+"Topic",
+"SportsSeason",
+"SportsTeamSeason",
+"NCAATeamSeason"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SoccerClubSeason",
+"label": "article about a soccer club season",
+"path": [
+"Topic",
+"SportsSeason",
+"SportsTeamSeason",
+"SoccerClubSeason"
+],
+"source": "topic"
+},
+{
+"cid": "topic:MusicGenre",
+"label": "article about a music genre",
+"path": [
+"Topic",
+"TopicalConcept",
+"Genre",
+"MusicGenre"
+],
+"source": "topic"
+},
+{
+"cid": "topic:SupremeCourtOfTheUnitedStatesCase",
+"label": "article about a US Supreme Court case",
+"path": [
+"Topic",
+"UnitOfWork",
+"LegalCase",
+"SupremeCourtOfTheUnitedStatesCase"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Anime",
+"label": "article about an anime",
+"path": [
+"Topic",
+"Work",
+"Cartoon",
+"Anime"
+],
+"source": "topic"
+},
+{
+"cid": "topic:HollywoodCartoon",
+"label": "article about a Hollywood cartoon",
+"path": [
+"Topic",
+"Work",
+"Cartoon",
+"HollywoodCartoon"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ComicStrip",
+"label": "article about a comic strip",
+"path": [
+"Topic",
+"Work",
+"Comic",
+"ComicStrip"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Manga",
+"label": "article about a manga",
+"path": [
+"Topic",
+"Work",
+"Comic",
+"Manga"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Album",
+"label": "article about an album",
+"path": [
+"Topic",
+"Work",
+"MusicalWork",
+"Album"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ArtistDiscography",
+"label": "article about an artist discography",
+"path": [
+"Topic",
+"Work",
+"MusicalWork",
+"ArtistDiscography"
+],
+"source": "topic"
+},
+{
+"cid": "topic:ClassicalMusicComposition",
+"label": "article about a classical music composition",
+"path": [
+"Topic",
+"Work",
+"MusicalWork",
+"ClassicalMusicComposition"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Musical",
+"label": "article about a musical",
+"path": [
+"Topic",
+"Work",
+"MusicalWork",
+"Musical"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Single",
+"label": "article about a single",
+"path": [
+"Topic",
+"Work",
+"MusicalWork",
+"Single"
+],
+"source": "topic"
+},
+{
+"cid": "topic:AcademicJournal",
+"label": "article about an academic journal",
+"path": [
+"Topic",
+"Work",
+"PeriodicalLiterature",
+"AcademicJournal"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Magazine",
+"label": "article about a magazine",
+"path": [
+"Topic",
+"Work",
+"PeriodicalLiterature",
+"Magazine"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Newspaper",
+"label": "article about a newspaper",
+"path": [
+"Topic",
+"Work",
+"PeriodicalLiterature",
+"Newspaper"
+],
+"source": "topic"
+},
+{
+"cid": "topic:VideoGame",
+"label": "article about a video game",
+"path": [
+"Topic",
+"Work",
+"Software",
+"VideoGame"
+],
+"source": "topic"
+},
+{
+"cid": "topic:EurovisionSongContestEntry",
+"label": "article about a Eurovision Song Contest entry",
+"path": [
+"Topic",
+"Work",
+"Song",
+"EurovisionSongContestEntry"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Play",
+"label": "article about a play",
+"path": [
+"Topic",
+"Work",
+"WrittenWork",
+"Play"
+],
+"source": "topic"
+},
+{
+"cid": "topic:Poem",
+"label": "article about a poem",
+"path": [
+"Topic",
+"Work",
+"WrittenWork",
+"Poem"
+],
+"source": "topic"
+}
+]
