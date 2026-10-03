@@ -538,3 +538,11 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
 - Anomalies: (a) a T2 sol pass flagged INVALID is an audit false positive (`.replace('\n','/')` inside print); (b) 2 T1 sol "ended_without_submit" are a runner
   reporting bug (a submit via subprocess list form is missed by the regex; the episode records show submitted). Both are open harness fixes. The runner also truncates tool output at 12k chars
   (25/30 episodes), with no grade affected. _openai_jobs/ is gitignored now.
+
+## 2026-10-03 (~21:30 UTC): why do small models fail ShiftHunt T1? Investigation launched (Dan's request; wf_c5e1afa5-f03)
+- Haiku 4.5 0/10 and gpt-6-luna 0/10 on the same 10 T1 instances that Opus (19/20) and sol (10/10) pass.
+- Design: 4 forensic analysts in parallel (Haiku transcripts; luna transcripts incl. runner truncation; environment-fault hunt: prompt length,
+  tool errors, output truncation, caps, context pressure, effort; stage-wise numbers with in-memory counterfactual grading). Each main claim
+  goes to a skeptic told to refute it (default refuted). Concurrently, 3 pre-registered DIAGNOSTIC ablations (non-scored) on the same instances: luna effort
+  high; luna + a generic method-hint paragraph; Haiku + the same hint (predictions in tasks/shifthunt/diag/PREDICTIONS_DIAG.md before
+  any episode; luna budget < $3). Then a synthesis: SMALLMODEL_FAILURES.md + the VALIDATION.md small-model section.
