@@ -513,3 +513,16 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   + socat, then a headless launcher outside the operator's session), which needs Dan's sudo approval.
 - Not done: the truncation contrast (the 96-token cut gives a free within-class cue contrast; at least 7/20 T2 agents used it) is not in the gates;
   t2ravel ep3ab5ab5782 needs a re-finish.
+
+## 2026-10-03 (~19:40 UTC): ShiftHunt cross-family check with the OpenAI key (Dan's request)
+- Dan asked for validation with the OpenAI key. Why it helps: (1) a second model family; (2) common/openai_agent.py starts the agent
+  inside the episode sandbox (scrubbed env, no keys, a command guard, no session/repo context), unlike workflow-launched
+  Claude subagents, which see the repo cwd and commit subjects and rely on prompt rules plus the post-hoc audit. Dan confirmed
+  his understanding: the Claude test agents were not OS-isolated. The OpenAI launch is not a kernel sandbox either.
+- Per-task OpenAI cap for shifthunt raised to $30 (4aa4ffa1); global stop $57 unchanged. Same instances as the Claude arms (paired). gpt-6.1-sol
+  and gpt-6-luna at effort medium, max-turns 90, max-usd 1.5. A 2-episode smoke run was clean, then the batch ran 3 at a time.
+- Preliminary (28/30 done; spend ~$5.5): **T2 sol 7/10** (Opus 15/20), **T1 sol 10/10** (Opus 19/20), **T1 luna 0/8** (Haiku 0/10). The same
+  pattern holds across families with no repo/session access, so the Claude numbers were not inflated by context exposure. Open: one T2 sol
+  pass is INVALID by the audit (false positive?); two T1 sol episodes score 1.0 though the runner says "ended_without_submit".
+- Review workflow wf_7b4cbd23-c69: waits for the last 2 luna episodes, writes SCALE1_OPENAI.md (paired with the Claude arms), skeptic,
+  then the VALIDATION.md cross-family section.
