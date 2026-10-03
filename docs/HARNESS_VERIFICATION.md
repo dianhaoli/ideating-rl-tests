@@ -468,3 +468,50 @@ on `_demo` with a wrapped transcript, and the 24 smoke transcripts were checked.
   - all 89 twins (49 direct twins plus the 40 red-team cases) fire under NEW, each under its rule;
   - 10 of the twins were missed by OLD: `~user`, `~-`/`~N`, wrapped `ps`/`top`, and `~` before a backslash.
 - **Full suite:** 378 passed, 1 skipped (`RL_SKIP_GPU=1`; the GPU smoke test).
+
+## 11. T1 scaled-run audit false positives E1 (2026-10-03)
+
+The ShiftHunt scaled run T1 (20 Claude Code subagents, claude-opus-5-5; review in tasks/shifthunt/SCALE1_T1.md on branch
+task/shifthunt, finding E1, and SCALE1_T1_CHECK.md C4) had 6 falsely INVALID episodes. All 9 hits are text in Python
+source that the agent wrote and ran in its own sandbox; no agent broke a rule. Each fix reads the region as Python
+(tokenize / ast; regions as in section 10) and has a WHY comment in `common/transcript_audit.py`. Tests:
+`common/tests/test_t1scale_audit_fixes.py`. Each recorded command, trimmed and with instance content replaced (D6), must
+be VALID. A twin that really reaches outside through the same construct must stay INVALID. Episode ids are not given
+here because the T1 instances are not retired.
+
+| item | what fired | fix | still flagged (twins) |
+|---|---|---|---|
+| a. `print(..., '/', len(x))` (2 episodes) | R2 root: ROOT_RX reads any quoted `'/'` as `/` | a `'/'` that is a whole positional argument of a bare `print(` is text, not a path. Applies only where python_spans exempts (nothing in the call can hand text to a shell), and only if the region does not rebind print (no `def print`, `print = ...`, `builtins`) | `print(os.listdir('/'))`, `print('/', *os.listdir('/'))`, a rebound print, `print('ls', '/') \| sh`, printing into a subprocess shell, `ls '/'` |
+| b. `D='<sandbox>'; subprocess.run([D+'/tool'])`, `open(D+'/'+p)` (1 episode, 2 hits) | R2 path `/tool` and root `/` | in `NAME + '<literal>'`, NAME is resolved when every binding of it in the region is a literal absolute path inside the sandbox; the literal is exempt only if the join stays inside (normpath). Nothing is resolved in a region that can rebind names out of sight (`import *`, exec/eval, globals/vars/setattr, `__dict__`, `sys.modules`) | an unknown prefix, `D + '/../..'`, a second literal (`D + '/x' + '/../..'`), a parameter / for / `+=` / alias binding, an outside literal, an own module or exec'd file that resets D |
+| c. `f'{L.min():.2f}..{L.max():.2f}'` (2 episodes) | R2 `..` (TOKEN_SPLIT splits at `{}:`) | the literal between two replacement fields of a real f-string is exactly `..`, and one of the two fields has a numeric format spec with no fill character. That field renders at least one character and never `/`, so the path component holding the dots is never `..` | `f'{a}..{b}'` (no spec), `{a:s}`, a `/` fill, escaped braces (`{{,}}..{{,}}`, brace expansion once a shell sees it), `open('../x')`, shell `ls {,:.2f}..{,}`, `cd ..` |
+| d. `TOP = {...}` at a line start in modules that call subprocess.run (1 episode, 3 calls); C4: `top = {...}` fires too | R5 process inspection (PROC_RX, case-insensitive; the section 10 exemption is off because of subprocess) | a Python NAME directly followed by `=` is a binding (or a keyword argument), never a program run. No shell guard is needed for it: a shell given such a line runs the tool with `=` as its first argument, and `top`, `ps`, `pgrep`, `pkill`, `lsof` and `killall` all reject that or match nothing (checked on the host) | a process word in a string (`os.system('x; top -b')`, `subprocess.run('x; ps aux', shell=True)`), `; top` / `\| ps aux` at shell level, `tee x.py <<'EOF' \| sh` with `top -b` (parses as Python, not a binding) |
+
+**Why not the narrower or broader suggestions in SCALE1_T1.md.**
+- (a) SCALE1_T1.md suggested flagging `'/'` only as the argument of a path-consuming call. That is an allow-list of
+  sinks, so a missed sink is an open hole. The print rule is the reverse: one known-harmless sink.
+- (d) A case-sensitive match alone fixes `TOP` but not `top` (C4).
+- (b) Only a variable bound to a literal is resolved, never a computed or imported one. The latentdiff smoke episode
+  epc7a9376588 (`from call import tool, HERE`, then `HERE + "/" + p`) therefore stays flagged.
+
+**Residuals (documented; the same construction class as chr(47), which no audit version flags):**
+- an own module or exec'd file that rebinds `print` (kept, because agents use `from lib import *` and exec of their
+  own files all the time, and ordinary code never rebinds print);
+- text cut out of a rendered f-string (`f'{0}..{0:.0f}'[1:3]`), exactly like `'0..0'[1:3]`;
+- an imported own module that assigns `__main__.D`.
+
+**Pre-existing gap found, not changed.** R5 does not see a process tool as the program of a Python call:
+`subprocess.run(['top', '-b'])`, `subprocess.run('top -b', shell=True)` and `os.system('ps aux')` pass both before and
+after the fix. PROC_RX needs a shell command start before the name. `os.system('x; ps aux')` is flagged. Closing the gap
+is a new detection and needs its own replay.
+
+### Checks run
+- **Replay** (`runs/_harness/audit_replay_t1scale/`, OLD = 5b965373): 79 LLM test-agent transcripts (20 T1 + 24 smoke
+  subagents + 35 API/OpenAI episodes). The store scan found no other transcript whose first message is an agent prompt.
+  - 7 flagged -> clean: the 6 T1 episodes, and the t2ravel API episode ep3ab5ab5782, whose `'/'` was a print separator;
+  - **0 clean -> flagged**;
+  - 13 call-level violations removed, each attributed to exactly one of (a)-(d), and **0 added**;
+  - 4 still flagged, all unchanged (ep93703cac08, ep183dbd35dd, epc7a9376588, epd698dfdf7e).
+- **Old vs new audit on the test cases:** all 16 false positives fire under OLD and none under NEW; all 34 single-call
+  twins and the 2 two-call twins fire under both. The same holds under Python 3.13.15 and 3.9.25, where tokenize
+  differs for f-strings.
+- **Full suite:** 445 passed, 1 skipped (`RL_SKIP_GPU=1`).

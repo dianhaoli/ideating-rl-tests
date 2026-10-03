@@ -65,16 +65,25 @@ Smoke fixes of 2026-10-02 (docs/HARNESS_VERIFICATION.md section 10; each has a W
    tool call can hand text to a shell; R5 also sees process tools behind wrappers (`timeout 110 ps`).
  - R2: /dev/stdin is allowed like /dev/stdout. R9: the regexes of a top-level sed script are not scanned (its
    replacement text still is). R9: exec of the agent's own file may chain several .split('<literal>')[i].
+T1 scaled-run fixes of 2026-10-03 (finding E1; docs/HARNESS_VERIFICATION.md section 11; each has a WHY comment below).
+Python source the agent writes, read as Python (tokenize/ast):
+ - R2: a quoted '/' that is a whole argument of print() is not the root (only where python_spans exempts).
+ - R2: `NAME + '/x'` where every binding of NAME is a literal sandbox path is resolved, and exempt if it stays inside.
+ - R2: an f-string range `{a:.2f}..{b:.2f}` (literal '..' between two fields, one with a numeric spec) is not '..'.
+ - R5: a Python NAME directly followed by `=` (`top = {...}`, `TOP = ...`) is a binding, not the top command.
 
 Output: {valid, violations[{i, tool, rule, detail}], n_tool_calls, commands[], transcripts[], discovery,
 prompt_check[]}.
 """
 import argparse
+import ast
+import io
 import json
 import os
 import re
 import shlex
 import sys
+import tokenize
 import warnings
 
 HOME = os.path.expanduser("~")
@@ -665,12 +674,351 @@ def _in_spans(i, spans):
     return any(s <= i < e for s, e in spans)
 
 
-def priv_hits(text, spans=()):
-    """R5 rule names that fire on `text`; process inspection does not fire inside `spans` (Python regions)."""
+# ---- T1 scaled-run false positives E1 (2026-10-03; tasks/shifthunt/SCALE1_T1.md E1, SCALE1_T1_CHECK.md C4;
+# docs/HARNESS_VERIFICATION.md section 11). 6 of 20 ShiftHunt T1 episodes were falsely INVALID from four patterns in
+# Python source the agent wrote and ran inside its sandbox (each has its own WHY below):
+#  (a) R2 root: a quoted '/' printed as a separator, `print(..., '/', len(toks))`;
+#  (b) R2 path: a join onto a variable that holds the sandbox path, `D='<sandbox>'; subprocess.run([D+'/tool', ...])`;
+#  (c) R2 '..': an f-string range, `f'{L.min():.2f}..{L.max():.2f}'`;
+#  (d) R5: a Python assignment target named like a process tool, `TOP = {...}` / `top = {...}`, in a script that also
+#      calls subprocess (so the F2 Python-region exemption is off).
+# Every exemption reads the region as Python (tokenize / ast) and only applies to text that IS Python source of the
+# kind described; anything that does not tokenize, parse or map back to the command text stays flagged.
+def _exact_regions(text, guarded):
+    """[(offset, source)] of the Python regions of `text` that parse and have no `#!` line, where `source` is the
+    text at `offset` verbatim (a heredoc body, or a `-c` program whose shell quoting changes nothing; a program with
+    escapes inside "..." does not map back and is skipped, so its matches stay flagged). guarded=True: only the
+    regions python_spans exempts (the tool call cannot hand text to a shell)."""
+    if guarded and PY_SHELL_RX.search(text):
+        return []
+    regions, top = python_regions(text)
+    if guarded and (not regions or _shell_runs_text(text, top)):
+        return []
+    out = []
+    for s, e, src in regions:
+        if "\r" in src or re.search(r"(?m)^\s*#!", src) or not _parses_as_python(src):
+            continue
+        if text[s:e] == src:
+            out.append((s, src))
+        elif e - s == len(src) + 2 and text[s] in "'\"" and text[s + 1:e - 1] == src:
+            out.append((s + 1, src))
+    return out
+
+
+def _file_regions(file_path, content, guarded):
+    """The content of a Write to a *.py file as one region (same conditions as _exact_regions)."""
+    if not (isinstance(file_path, str) and file_path.endswith(".py")) or "\r" in content \
+            or re.search(r"(?m)^\s*#!", content) or not _parses_as_python(content) \
+            or (guarded and PY_SHELL_RX.search(content)):
+        return []
+    return [(0, content)]
+
+
+def _line_starts(src):
+    return [0] + [i + 1 for i, c in enumerate(src) if c == "\n"]
+
+
+def _py_tokens(src):
+    """[(type, string, start, end)] of the tokens of `src` (character offsets), without NL/NEWLINE/COMMENT/INDENT/
+    DEDENT/ENDMARKER; None if tokenize fails."""
+    starts, out = _line_starts(src), []
+    skip = (tokenize.NL, tokenize.NEWLINE, tokenize.COMMENT, tokenize.INDENT, tokenize.DEDENT, tokenize.ENDMARKER)
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            for t in tokenize.generate_tokens(io.StringIO(src).readline):
+                if t.type not in skip:
+                    out.append((t.type, t.string, starts[t.start[0] - 1] + t.start[1],
+                                starts[t.end[0] - 1] + t.end[1]))
+    except (tokenize.TokenError, SyntaxError, ValueError, IndexError):
+        return None
+    return out
+
+
+# (a) WHY (T1 scaled run, 2 episodes: `print(' max', ..., ' nactive', sum(a>0 for a in acts), '/', len(toks))` and
+# `print(name, 'removed', tb.mean(), '/', Cb.sum(1).mean(), ...)` in heredoc scripts): ROOT_RX reads every quoted '/'
+# as the filesystem root. A '/' that is a whole positional argument of print() is text written to stdout (or to a
+# file object); print never opens it as a path. Narrow on purpose:
+#  - only inside a region python_spans exempts, i.e. nothing in the tool call can hand the printed text to a shell
+#    (`print('ls', '/') | sh`, a subprocess stdin, os.system all keep it flagged);
+#  - the innermost open bracket must be the call parenthesis of a bare `print(` and the '/' must be a whole argument
+#    (between `(`/`,` and `,`/`)`): `print(os.listdir('/'))`, `print('/' + x)`, `print(f"{'/'}")` stay flagged;
+#  - the region must not rebind print: every `print` name is a call (not after `def`, `class` or `.`), and the region
+#    names no `builtins` (getattr/globals()[...]/vars/__dict__ already switch the guard off).
+# Not exempted (not seen in any recorded transcript): `sep='/'`, `end='/'`.
+# Residual (construction across calls, like chr(47)): an own module or file brought in with `from m import *` or the
+# allowed exec(open(...).read()) that rebinds print. Unlike (b) below, both are kept: ordinary code never rebinds the
+# builtin print, while agents use both forms all the time (one T1 false positive execs its own file; the
+# recorded t2ravel API false positive does `from lib import *`).
+def _print_sep_slash_offsets(regions):
+    out = set()
+    for off, src in regions:
+        toks = _py_tokens(src)
+        if not toks:
+            continue
+        if any(t[0] == tokenize.NAME and (t[1] == "builtins" or (t[1] == "print" and (
+                i + 1 >= len(toks) or toks[i + 1][1] != "(" or (i > 0 and toks[i - 1][1] in (".", "def", "class")))))
+               for i, t in enumerate(toks)):
+            continue
+        stack = []
+        for i, t in enumerate(toks):
+            if t[0] == tokenize.OP and t[1] in ("(", "[", "{"):
+                stack.append(t[1] == "(" and i > 0 and toks[i - 1][0] == tokenize.NAME and toks[i - 1][1] == "print")
+            elif t[0] == tokenize.OP and t[1] in (")", "]", "}"):
+                if stack:
+                    stack.pop()
+            elif (t[0] == tokenize.STRING and t[1] in ("'/'", '"/"') and stack and stack[-1]
+                  and toks[i - 1][1] in ("(", ",") and i + 1 < len(toks) and toks[i + 1][1] in (",", ")")):
+                out.add(off + t[2] + 1)
+    return out
+
+
+# (b) WHY (T1 scaled run, 1 episode: `D='<its sandbox>'` then `subprocess.run([D+'/tool', ...])` and
+# `open(D+'/'+j['saved_to'])` in a heredoc module): PATH_RX reads '/tool' as an absolute path and ROOT_RX reads '/'
+# as the root, although the string is appended to the sandbox path. In `NAME + '<literal>'` the literal is resolved
+# against NAME when NAME is a plain variable whose EVERY binding in the region is `NAME = '<absolute path inside the
+# sandbox>'`; the literal is exempt only if that join stays inside the sandbox (os.path.normpath, so '/../x' leaves
+# and stays flagged). Any other binding of NAME makes it unknown and keeps it flagged: a parameter, a for/with/except/
+# import/walrus target, `+=`, `global`/`nonlocal`, a non-literal or outside value. A region that can rebind names
+# out of sight resolves nothing: `from x import *`, exec/eval (also the allowed exec of an own file), globals/locals/
+# vars/setattr/delattr, `__dict__`, `__builtins__`, `sys.modules` (a variable's value, unlike the builtin print in (a),
+# is something ordinary helper modules do set). Only the literal directly right of `NAME +` is
+# resolved (`NAME + '/a' + '/b'`: '/b' stays checked). An unknown prefix (`X + '/etc/passwd'`) is never resolved.
+# Residual (construction across calls, like chr(47)): an imported own module that assigns `__main__.NAME`.
+_REBIND_NAMES = {"exec", "eval", "globals", "locals", "vars", "setattr", "delattr", "__dict__", "__builtins__",
+                 "modules"}
+
+
+def _sandbox_literal_names(tree, sandbox):
+    good = {}
+    for node in ast.walk(tree):
+        if (isinstance(node, ast.Name) and node.id in _REBIND_NAMES) or \
+                (isinstance(node, ast.Attribute) and node.attr in _REBIND_NAMES):
+            return {}
+        if (isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name)
+                and isinstance(node.value, ast.Constant) and isinstance(node.value.value, str)):
+            good[id(node.targets[0])] = node.value.value
+    vals, bad = {}, set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Name) and not isinstance(node.ctx, ast.Load):
+            if id(node) in good:
+                vals.setdefault(node.id, []).append(good[id(node)])
+            else:
+                bad.add(node.id)
+        elif isinstance(node, ast.arg):
+            bad.add(node.arg)
+        elif isinstance(node, ast.alias):
+            if node.name == "*":
+                return {}
+            bad.add((node.asname or node.name).split(".")[0])
+        elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            bad.add(node.name)
+        elif isinstance(node, ast.ExceptHandler) and node.name:
+            bad.add(node.name)
+        elif isinstance(node, (ast.Global, ast.Nonlocal)):
+            bad.update(node.names)
+        elif type(node).__name__ in ("MatchAs", "MatchStar", "MatchMapping"):
+            bad.add(getattr(node, "name", None) or getattr(node, "rest", None))
+    return {n: v for n, v in vals.items()
+            if n not in bad and all(x.startswith("/") and _inside(x, sandbox) for x in v)}
+
+
+def _ast_offset(src, starts, lineno, col):
+    """Character offset of an ast (lineno, UTF-8 byte col_offset) position."""
+    s = starts[lineno - 1]
+    line = src[s:starts[lineno] if lineno < len(starts) else len(src)]
+    return s + len(line.encode("utf-8")[:col].decode("utf-8", errors="ignore"))
+
+
+def _sandbox_join_spans(regions, sandbox):
+    out = []
+    for off, src in regions:
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                tree = ast.parse(src)
+        except Exception:
+            continue
+        names = _sandbox_literal_names(tree, sandbox)
+        if not names:
+            continue
+        starts = _line_starts(src)
+        for node in ast.walk(tree):
+            r = getattr(node, "right", None)
+            if (isinstance(node, ast.BinOp) and isinstance(node.op, ast.Add) and isinstance(node.left, ast.Name)
+                    and node.left.id in names and isinstance(r, ast.Constant) and isinstance(r.value, str)
+                    and all(_inside(v + r.value, sandbox) for v in names[node.left.id])):
+                out.append((off + _ast_offset(src, starts, r.lineno, r.col_offset),
+                            off + _ast_offset(src, starts, r.end_lineno, r.end_col_offset)))
+    return out
+
+
+# (c) WHY (T1 scaled run, 2 episodes: `print(f'... range {L.min():.2f}..{L.max():.2f}')` in heredoc scripts):
+# TOKEN_SPLIT splits at `{ } :`, so the literal text between two replacement fields became a bare '..' token, and '..'
+# is checked inside Python regions on purpose. Exempt: the literal part between two replacement fields of a real
+# f-string (tokenize finds the f-string; its fields are scanned here) is exactly '..', and at least one of the two
+# fields has a numeric format spec without a fill character (`.2f`, `+.3e`, `d`, `5.1%`, ...). Such a field renders
+# as at least one character, none of them '/', so the path component that holds these dots also holds that
+# rendering and is never '..'. Still flagged: `f'{a}..{b}'` (no spec: a may be ''), a string or `c` spec, a fill
+# character (`{x:/<3.0f}` can render '/'), `!r`/`=` fields, nested spec fields, escaped braces (`{{,}}..{{,}}` is
+# shell brace expansion once a shell sees it), '..' next to other text (`../x`), and any '..' outside a parsed region.
+# Residual (the existing computed-string class, like chr(47)): text cut out of the rendered string afterwards
+# (`f'{0}..{0:.0f}'[1:3]` is '..') is as unchecked as `'0..0'[1:3]`, which no version of the audit flags.
+_NUM_SPEC_RX = re.compile(r"[<>=^]?[-+ ]?z?#?0?\d*[,_]?(?:\.\d+)?[bdeEfFgGoxX%]")
+
+
+def _skip_py_string(s, j, n):
+    """Index just after the string literal that starts at s[j] (a quote), or None."""
+    q = s[j:j + 3] if s[j:j + 3] in ("'''", '"""') else s[j]
+    k = j + len(q)
+    while k < n:
+        if s[k] == "\\":
+            k += 2
+            continue
+        if s.startswith(q, k):
+            return k + len(q)
+        k += 1
+    return None
+
+
+def _fstring_field_end(s, i, n):
+    """For a replacement field starting at s[i] == '{': (index of its closing '}', expression text, spec or None),
+    or None if it does not scan."""
+    depth, j, spec_at = 0, i + 1, None
+    while j < n:
+        c = s[j]
+        if spec_at is None:
+            if c in "'\"":
+                j = _skip_py_string(s, j, n)
+                if j is None:
+                    return None
+                continue
+            if c in "([{":
+                depth += 1
+            elif c in ")]":
+                depth -= 1
+            elif c == "}":
+                if depth == 0:
+                    return j, s[i + 1:j], None
+                depth -= 1
+            elif c == ":" and depth == 0:
+                spec_at, expr = j + 1, s[i + 1:j]
+        else:
+            if c == "{":
+                depth += 1
+            elif c == "}":
+                if depth == 0:
+                    return j, expr, s[spec_at:j]
+                depth -= 1
+        j += 1
+    return None
+
+
+def _fstring_parts(lit):
+    """Split the source text of ONE f-string literal into ("lit", start, end) and ("field", start, end, numeric)
+    parts (offsets into `lit`), or None if it does not scan."""
+    m = re.match(r"([rRbBuUfF]*)('''|\"\"\"|'|\")", lit)
+    if not m or "f" not in m.group(1).lower() or not lit.endswith(m.group(2)) or len(lit) < m.end() + len(m.group(2)):
+        return None
+    raw, i, n = "r" in m.group(1).lower(), m.end(), len(lit) - len(m.group(2))
+    parts, lit_start = [], i
+    while i < n:
+        c = lit[i]
+        if c == "\\" and not raw:
+            if lit.startswith("N{", i + 1):
+                k = lit.find("}", i + 3)
+                if k < 0 or k >= n:
+                    return None
+                i = k + 1
+            else:
+                i += 2
+            continue
+        if c in "{}" and lit[i + 1:i + 2] == c:
+            i += 2
+            continue
+        if c == "}":
+            return None
+        if c == "{":
+            if i > lit_start:
+                parts.append(("lit", lit_start, i))
+            f = _fstring_field_end(lit, i, n)
+            if f is None:
+                return None
+            j, expr, spec = f
+            numeric = (spec is not None and bool(_NUM_SPEC_RX.fullmatch(spec)) and not expr.rstrip().endswith("=")
+                       and not re.search(r"!\s*[rsa]\s*$", expr))
+            parts.append(("field", i, j + 1, numeric))
+            i = lit_start = j + 1
+            continue
+        i += 1
+    if min(i, n) > lit_start:
+        parts.append(("lit", lit_start, min(i, n)))
+    return parts
+
+
+def _fstring_dotdot_offsets(regions):
+    fs_start, fs_end = getattr(tokenize, "FSTRING_START", None), getattr(tokenize, "FSTRING_END", None)
+    out = set()
+    for off, src in regions:
+        toks = _py_tokens(src) or []
+        lits, depth, a = [], 0, None
+        for typ, s, st, en in toks:
+            if typ == tokenize.STRING and re.match(r"[rRbBuU]*[fF]", s):           # Python < 3.12
+                lits.append((st, en))
+            elif fs_start is not None and typ == fs_start:                       # Python >= 3.12
+                a = st if depth == 0 else a
+                depth += 1
+            elif fs_end is not None and typ == fs_end and depth:
+                depth -= 1
+                if depth == 0:
+                    lits.append((a, en))
+        for a, b in lits:
+            parts = _fstring_parts(src[a:b])
+            for k in range(1, len(parts or []) - 1):
+                p, q, r = parts[k - 1], parts[k], parts[k + 1]
+                if (q[0] == "lit" and src[a + q[1]:a + q[2]] == ".." and p[0] == r[0] == "field"
+                        and (p[3] or r[3])):
+                    out.add(off + a + q[1])
+    return out
+
+
+def _mask_dotdots(text, offsets):
+    """`text` with the '..' at each offset replaced by '__' (same length), for the '..' check only."""
+    if not offsets:
+        return text
+    t = list(text)
+    for o in offsets:
+        t[o:o + 2] = "__"
+    return "".join(t)
+
+
+# (d) WHY (T1 scaled run, 1 episode, 3 calls: `TOP = {0: (...), 1: (...)}` at a line start of heredoc modules that
+# also call subprocess.run(["./tool", ...]); SCALE1_T1_CHECK.md C4: lowercase `top = {...}` fires too, so making the
+# match case-sensitive is not enough): PROC_RX reads a line-start `top` followed by a space as the top command. A Python
+# NAME token directly followed by the `=` operator is an assignment target (or a keyword argument), i.e. a binding
+# that Python never runs as a program, whatever else the script does. The exemption applies to such NAME tokens only
+# (found by tokenize in a parsed region; the shell guard of python_spans is not needed for them): a process word in a
+# string or comment (`os.system('x; top -b')`), any other use of the name (`top -b` parses as Python but is not a
+# binding), and everything at shell level (`; top`, `| ps aux`) stay flagged. Defence in depth if such text ever
+# reached a shell anyway: `top = ...`, `ps = ...`, `pgrep = ...`, `pkill = ...`, `lsof = 1`, `killall = 1` all
+# reject `=` or match nothing (checked with procps-ng and lsof on the harness host, 2026-10-03).
+def _py_assign_name_offsets(text):
+    out = set()
+    for off, src in _exact_regions(text, guarded=False):
+        toks = _py_tokens(src) or []
+        for t, u in zip(toks, toks[1:]):
+            if t[0] == tokenize.NAME and u[0] == tokenize.OP and u[1] == "=":
+                out.add(off + t[2])
+    return out
+
+
+def priv_hits(text, spans=(), assign_names=()):
+    """R5 rule names that fire on `text`; process inspection does not fire inside `spans` (Python regions) or on a
+    Python assignment target (`assign_names`: offsets from _py_assign_name_offsets)."""
     out = []
     for rx, name in PRIV_RX:
         if name == PROC_NAME:
-            if any(not _in_spans(m.start("proc"), spans)
+            if any(not _in_spans(m.start("proc"), spans) and m.start("proc") not in assign_names
                    for m in re.finditer(rx, text, re.IGNORECASE | re.MULTILINE)):
                 out.append(name)
         elif re.search(rx, text, re.IGNORECASE | re.MULTILINE):
@@ -678,17 +1026,28 @@ def priv_hits(text, spans=()):
     return out
 
 
-def path_violations(text, sandbox, cwd=None, dotdot=True, shell=False, py_spans=None):
+def path_violations(text, sandbox, cwd=None, dotdot=True, shell=False, py_spans=None, py_file=None):
     """Paths in free text that point outside the sandbox. '..' is resolved against cwd (default: sandbox root).
     shell=True: `text` is a shell command; the regexes inside its sed scripts are not scanned (mask_sed_scripts),
     and a bare `~` inside a Python region (python_spans) is not the home directory. py_spans: the same for non-shell
-    text (Write content; python_content_spans)."""
+    text (Write content; python_content_spans). py_file: the file a non-shell `text` is written to (a *.py file's
+    content is one Python region for the E1 exemptions (a)-(c) above)."""
     out = []
     text_paths = mask_sed_scripts(text) if shell else text
     spans = python_spans(text_paths) if shell else (py_spans or [])
-    for m in PATH_RX.finditer(text_paths):
+    path_ms, root_ms = list(PATH_RX.finditer(text_paths)), list(ROOT_RX.finditer(text_paths))
+    regions = guarded = joins = seps = ()
+    if path_ms or root_ms or (dotdot and ".." in text):   # the E1 exemptions are only computed when they can matter
+        regions = _exact_regions(text_paths, False) if shell else _file_regions(py_file, text, False)
+        joins = _sandbox_join_spans(regions, sandbox) if path_ms or root_ms else ()          # E1 (b)
+        if root_ms:
+            guarded = _exact_regions(text_paths, True) if shell else _file_regions(py_file, text, True)
+            seps = _print_sep_slash_offsets(guarded)                                         # E1 (a)
+    for m in path_ms:
         raw = m.group(1).rstrip(".,:")
         if raw == "~" and _in_spans(m.start(1), spans):
+            continue
+        if _in_spans(m.start(1), joins):
             continue
         p = _expand(raw)
         if not p.startswith("/"):
@@ -696,11 +1055,13 @@ def path_violations(text, sandbox, cwd=None, dotdot=True, shell=False, py_spans=
         if p in ALLOWED_EXACT or p.startswith(ALLOWED_ABS) or _inside(p, sandbox):
             continue
         out.append(f"path outside sandbox: {raw}")
-    if any(not (m.group(0) == "/" and ROOT_SEP_METHOD_RX.search(text_paths, 0, m.start()))
-           for m in ROOT_RX.finditer(text_paths)):
+    if any(not (m.group(0) == "/" and (ROOT_SEP_METHOD_RX.search(text_paths, 0, m.start()) or m.start() in seps
+                                       or _in_spans(m.start(), joins)))
+           for m in root_ms):
         out.append("path outside sandbox: / (filesystem root)")
     if dotdot:
-        out += dotdot_violations(text, cwd or sandbox, sandbox)
+        dd_text = text if shell or ".." not in text else _mask_dotdots(text, _fstring_dotdot_offsets(regions))  # E1 (c)
+        out += dotdot_violations(dd_text, cwd or sandbox, sandbox)
     return out
 
 
@@ -841,7 +1202,14 @@ def shell_violations(cmd, cwd, sandbox):
     directory each part actually runs in."""
     v = []
     cur = os.path.normpath(cwd) if cwd else None
-    for seg in split_segments(cmd):
+    segs = split_segments(cmd)
+    # E1 (c): the '..' check sees the command with the f-string range dots masked ('..' -> '__', same length, so the
+    # segments line up one to one); everything else sees the command unchanged.
+    masked = _mask_dotdots(cmd, _fstring_dotdot_offsets(_exact_regions(cmd, False))) if ".." in cmd else cmd
+    dsegs = split_segments(masked) if masked != cmd else segs
+    if len(dsegs) != len(segs):
+        dsegs = segs
+    for seg, dseg in zip(segs, dsegs):
         first = seg.split("\n", 1)[0]
         words = _words(first)
         cmdw = words[0] if words else ""
@@ -871,7 +1239,7 @@ def shell_violations(cmd, cwd, sandbox):
                 v.append(("R2-path", f"cd leaves the sandbox: {tgt}"))
             cur = t
             continue
-        v += [("R2-path", d) for d in dotdot_violations(seg, cur, sandbox)]
+        v += [("R2-path", d) for d in dotdot_violations(dseg, cur, sandbox)]
         if cur is None or not _inside(cur, sandbox):
             prob = _outside_cwd_problem(words)
             if prob:
@@ -951,7 +1319,8 @@ def check_call(name, inp, cwd, sandbox, episode):
             content += "\n".join(str(e.get("new_string", "")) for e in inp["edits"] if isinstance(e, dict))
         if content.strip():
             spans = python_content_spans(inp.get("file_path"), content) if name == "Write" else []
-            v += [("R2-path", f"{name} content: {d}") for d in path_violations(content, sandbox, py_spans=spans)]
+            v += [("R2-path", f"{name} content: {d}") for d in path_violations(
+                content, sandbox, py_spans=spans, py_file=inp.get("file_path") if name == "Write" else None)]
             v += [("R2-path", f"{name} content: {h}") for h in rule_hits(content, PY_ESCAPE_RX)]
             v += [("R4-network", f"{name} content: {h}") for h in rule_hits(content, NET_RX)]
             v += [("R5-privileged", f"{name} content: {h}") for h in rule_hits(content, PRIV_RX[-2:])]
@@ -968,7 +1337,9 @@ def check_call(name, inp, cwd, sandbox, episode):
         if other_ep.search(cmd):
             v.append(("R3-mention", "other rlsbx episode"))
         v += [("R4-network", h) for h in rule_hits(cmd, NET_RX)]
-        v += [("R5-privileged", h) for h in priv_hits(cmd, python_spans(cmd))]
+        proc = re.search(PROC_RX, cmd, re.IGNORECASE | re.MULTILINE)
+        assign = _py_assign_name_offsets(cmd) if proc else ()                                   # E1 (d)
+        v += [("R5-privileged", h) for h in priv_hits(cmd, python_spans(cmd), assign)]
         # WHY sed masking for R9 (2026-10-02 smoke F2d, shifthunt epdbe6a54a7e call 33:
         # `sed -i 's/^exec(open(.*an.py.).read())$/from an import */' ...` REMOVES exec calls): the regexes of a
         # top-level sed script only select text. The text sed WRITES (the replacement of `s`, `y`), and everything sed
