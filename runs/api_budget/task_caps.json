@@ -16,6 +16,7 @@
  ],
  "openai": {
   "default": 4.0,
-  "_demo": 0.2
+  "_demo": 0.2,
+  "shifthunt": 30.0
  }
 }
