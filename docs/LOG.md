@@ -526,3 +526,15 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   pass is INVALID by the audit (false positive?); two T1 sol episodes score 1.0 though the runner says "ended_without_submit".
 - Review workflow wf_7b4cbd23-c69: waits for the last 2 luna episodes, writes SCALE1_OPENAI.md (paired with the Claude arms), skeptic,
   then the VALIDATION.md cross-family section.
+
+## 2026-10-03 (~21:00 UTC): cross-family result final (wf_7b4cbd23-c69); VALIDATION.md updated (task/shifthunt 2ca3ab37, local)
+- All 30 OpenAI episodes are graded; an in-memory regrade matches 30/30; spend $5.60. All 840 commands stayed in their sandboxes.
+- **T2 gpt-6.1-sol 7/10 [40, 89]** vs Opus 15/20 [53, 89] (Fisher p = 1.0; difference -38 to +24 points). **T1 sol 10/10** vs Opus 19/20. **T1 luna 0/10** vs
+  Haiku 0/10. Same profile in both families: naming and null calls perfect for the large models; every T2 miss is a removal miss on a named probe, all on the 13/26
+  probes where the reference clears the bar by < 0.05. Differences: in T2 sol's margins sit below Opus's (19/26 probes, Wilcoxon p = 0.005; a 10% higher bar gives 3/10 vs 13/20);
+  in T1 sol and Opus agree as closely as two Opus agents (latent-set Jaccard 0.82). Confound: OpenAI ran at effort medium, Opus at Claude Code xhigh.
+- Context-exposure question (Dan): agents confined to the sandbox reach the Claude rates, which is evidence against large inflation of the Claude results (not proof;
+  the direct control would be Opus run confined).
+- Anomalies: (a) a T2 sol pass flagged INVALID is an audit false positive (`.replace('\n','/')` inside print); (b) 2 T1 sol "ended_without_submit" are a runner
+  reporting bug (a submit via subprocess list form is missed by the regex; the episode records show submitted). Both are open harness fixes. The runner also truncates tool output at 12k chars
+  (25/30 episodes), with no grade affected. _openai_jobs/ is gitignored now.
