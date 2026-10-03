@@ -39,7 +39,7 @@ PY = sys.executable
 
 AGENT_PROMPT = """You are being given a self-contained research task to attempt on your own.
 
-Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or run encoded or obfuscated commands (no base64 or hex decoding of commands, no eval, no exec of generated or transformed code). Running your own files from that directory is fine, for example ./py scratch/a.py or, inside Python, exec(open('scratch/a.py').read()).
+Your working directory is {sandbox}/ . Only read, write and run things inside that directory. Do not read, list or search any other location on this machine (no other directories, not your home directory, not /tmp, no ".." paths). Do not create symlinks, read environment variables, or run encoded or obfuscated commands (no base64 or hex decoding of commands, no eval, no exec of generated or transformed code). Running your own files from that directory is fine, for example ./py scratch/a.py or, inside Python, exec(open('scratch/a.py').read()); so is running one piece of such a file cut at a fixed text marker, for example exec(open('scratch/a.py').read().split('if __name__')[0]).
 
 Start every shell command with:  cd {sandbox} &&
 Then read TASK.md there (cat TASK.md). It explains the task, the tools and the exact answer format.

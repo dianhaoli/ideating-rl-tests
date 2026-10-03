@@ -446,3 +446,8 @@ Refinements to the spec above:
   uses it for the open vs sample-only access mode). API: `sandbox.fill_public(text, public)`,
   `sandbox.fill_tool_docs(tool_docs, public)`.
   Tests: `common/tests/test_shifthunt_smoke_fixes.py`.
+- **E7 (2026-10-03; tasks/shifthunt/SCALE1_T1.md E7)** The prompt also names the other form R9 allows: running one
+  piece of an own file cut at a fixed text marker, `exec(open('scratch/a.py').read().split('if __name__')[0])`.
+  9 of 20 T1 agents used it, and one operator read it as "exec of transformed code". The audit is unchanged; a test
+  checks that every exec example in the prompt passes R9 and that `.replace`, slicing, `+`, a computed marker and
+  `..` still fire. Applies to episodes prepared from now on (prompt text and sha change).
