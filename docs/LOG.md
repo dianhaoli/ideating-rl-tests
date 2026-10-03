@@ -546,3 +546,16 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   goes to a skeptic told to refute it (default refuted). Concurrently, 3 pre-registered DIAGNOSTIC ablations (non-scored) on the same instances: luna effort
   high; luna + a generic method-hint paragraph; Haiku + the same hint (predictions in tasks/shifthunt/diag/PREDICTIONS_DIAG.md before
   any episode; luna budget < $3). Then a synthesis: SMALLMODEL_FAILURES.md + the VALIDATION.md small-model section.
+
+## 2026-10-04 (~00:30 UTC): why small models fail ShiftHunt T1 (lite analysis; SMALLMODEL_FAILURES.md, task/shifthunt d07506e6, local)
+- Dan cut the planned ~50-agent investigation (too many tokens). Stopped; reused the finished stage analysis; then 2 agents at medium effort.
+- **Haiku 4.5: no method.** It names cues from label co-occurrence in the sample (naming 7/22), claims a cue on every null (13/13), almost never measures
+  the probe on its own texts (1/10 episodes with >= 5 matched pairs), ignores its own null evidence (a pair showing no effect, followed by a claim anyway),
+  misreads the scale and stops early (21-35 of 150 calls). With perfect naming and null calls it would still fail 8/10. Its tool errors are self-inflicted.
+- **gpt-6-luna: method present, calibration missing.** Naming 19/22. It uses matched pairs, picks the right latents (88% overlap with the big models)
+  but only ~4 of 20, and never checks removal against the bar. Fixing removal alone gives 6/10.
+- Diagnostics (pre-registered; partial, still running in background): **effort high** 0/4 (1/7 named slots clear the bar), so effort is not the explanation;
+  **method hint** 0/5, but removal now clears the bar on 8/9 named slots while luna calls 3/12 planted cues "none". T1 tests finding and carrying out the
+  procedure end to end; a small model fixes one stage and breaks another.
+- No environment fault singles out the small models (no caps hit). One TASK.md ambiguity: "held-out texts" vs scoring removal on the confounded
+  sample. Exposure asymmetry: 12 Opus episodes read the ./tool wrapper code; the small models never did (not causal here).
