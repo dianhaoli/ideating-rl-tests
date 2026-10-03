@@ -491,3 +491,25 @@ Workflow wf_96d109e5-27e (65 agents). SCALE1_T1.md + SCALE1_T1_CHECK.md (task/sh
 - **Launched wf_491d9234-493:** harness fix for the 4 FP patterns (+ C4) with must-flag twins, replay, and re-finishing the 6 T1 episodes; E2 (state
   the 96-token truncation) and E7 prompt clarity; T2 plan + predictions; **T2 Opus 10 x 2** (checkpoint after 4) in parallel with a **Haiku 4.5 arm
   on the same 10 T1 instances** (model-separation evidence); review, skeptic, VALIDATION.md.
+
+## 2026-10-03 (~08:50 UTC): ShiftHunt T2 scaled run + Haiku arm; VALIDATION.md ("validated with caveats")
+Workflow wf_491d9234-493 (96 agents). task/shifthunt (local): SCALE1_T2.md (+ check corrections, 2eb3fc78), VALIDATION.md (13a6d411).
+Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 transcripts: 7 flagged->clean, 0 clean->flagged), 2c6124d4
+(E7 exec wording). After the re-finish, T1 is 20/20 valid, 19/20 pass.
+- **T2, Opus 5.5 (10 fresh instances x 2): 15/20 = 75% [53, 89]** (predicted 55%, range 30-80). Naming 52/52, null false claims 0/18. All 5 failures are
+  removal misses on correctly named probes (0.001-0.062 under the bar) on 3 instances. Per instance: 7 both pass, 1 split, 2 both fail. Outcomes
+  are mostly fixed per instance (paired removal gap median 0.009, r = 0.95). T2 forces latent reading (4-35 reading calls per episode vs 21 in all of T1).
+  Pool caveat: kept = solved by the tuned reference v4.2. A model built from the agent-minus-reference gaps estimates ~65-67% on all built instances (an estimate, not observed).
+- **T1, Haiku 4.5 (same 10 instances): 0/10 [0, 28]** vs Opus 19/20 (Fisher p = 4e-7). Haiku fails on method: it named cues from
+  co-occurrence (9/10), rarely encoded its own texts, and never used the reliance scale. A strong model-separation result; the dial has two points.
+- **Verdict (VALIDATION.md): validated with caveats as a test of interpretability skill; not yet validated as an RL training environment.**
+  T1 = calibration tier (saturated for Opus). T2 = the reading tier, near the top of mid-band and bar-sensitive (+-0.02 on tau gives 14-17/20).
+  Agents are close to interchangeable with the reference pipeline.
+- **Harness problems this run exposed (structural):** the regex transcript audit keeps producing new false positives (T2: 9/20
+  falsely INVALID, 10 new patterns, after the T1 fix) and has known false negatives (process/network calls through subprocess, os.system, popen
+  or sockets). Test agents are Claude Code subagents of the operator session: they see the repo cwd, commit subjects, the account email and the shared
+  scratchpad / tool-results dirs, where operator output (including answer-bearing dumps, some saved automatically by Claude Code) ended up. No agent used them
+  (one Haiku agent read its own saved output there and was flagged INVALID). The structural fix is OS isolation for test agents (bubblewrap
+  + socat, then a headless launcher outside the operator's session), which needs Dan's sudo approval.
+- Not done: the truncation contrast (the 96-token cut gives a free within-class cue contrast; at least 7/20 T2 agents used it) is not in the gates;
+  t2ravel ep3ab5ab5782 needs a re-finish.
