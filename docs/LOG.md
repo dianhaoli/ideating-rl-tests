@@ -474,3 +474,20 @@ task branch (BI ffa48319+, SH 603778cf, LD 007c118e; none pushed). n is small: t
   checkpoint after 4, review + adversarial check. (B) In parallel, improve the label-free reference's T2 latent selection (no change to
   tools/grader/generator/TASK.md), re-keep, check the bias, re-gate. Dropping the keep filter is reported only as a sensitivity check, because it would admit
   instances not shown solvable through the tools.
+
+## 2026-10-03 (~03:00 UTC): ShiftHunt T1 scaled run = saturated (19/20); T2 gate now passes; T2 scaled run + Haiku arm launched
+Workflow wf_96d109e5-27e (65 agents). SCALE1_T1.md + SCALE1_T1_CHECK.md (task/shifthunt, local).
+- **T1 (Opus 5.5, 10 fresh T1b instances x 2): 19/20 pass [0.76, 0.99]**, planted 43/44, null false claims 0/26. 9 instances passed both
+  episodes, 1 split. Predicted 65%: **saturated, so T1 is a calibration tier.** All 20 agents ran one generic pipeline, the same as the
+  label-free reference (agent/label-free removal median 1.001), so as an RL tier T1 would mostly reinforce one recipe. The one failure
+  (miss by 0.004) and the closest pass (+0.016) came from the same judgement: dropping a latent that carried topic signal without discounting for the SAE error term.
+  6/20 were falsely INVALID: 4 new audit false-positive patterns (quoted '/', D+'/tool', f-string '..', Python name `top`).
+- Incidents: the T2 builder's test script briefly filled the RAM-backed /tmp (00:20-00:31 UTC). One T1 episode got one ENOSPC message,
+  with no effect on its grade. E8: the session scratchpad named in test agents' context held operator dumps containing answers. No agent read
+  it (every call stayed in its sandbox, and an outside read would be flagged R2). Operators are now barred from writing outside runs/.
+- **T2 fix:** label-free reference v4.2 (better latent selection and naming, agent tools only) solves 39/53 T2new one-shot (was 23; on the old
+  held-out T2 pool 18/29, was 10/29). **Gate passes on the 39 kept:** cheap solvers <= 3/39 = 7.7% [0.03, 0.20]; reference 39/39. The selection bias
+  is reduced, not gone (every cheap-solver pass is on a kept instance), and the reference was tuned on this pool.
+- **Launched wf_491d9234-493:** harness fix for the 4 FP patterns (+ C4) with must-flag twins, replay, and re-finishing the 6 T1 episodes; E2 (state
+  the 96-token truncation) and E7 prompt clarity; T2 plan + predictions; **T2 Opus 10 x 2** (checkpoint after 4) in parallel with a **Haiku 4.5 arm
+  on the same 10 T1 instances** (model-separation evidence); review, skeptic, VALIDATION.md.
