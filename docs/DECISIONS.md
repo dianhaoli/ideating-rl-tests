@@ -207,6 +207,6 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   clear negative. Stage 0 uses public organisms with no training. Stage 1 (fresh organisms, mix ratios, the difficulty ladder) runs only if Stage 0 is promising.
 - Branch task/modeldiff (local only; answer keys). Separate venv for the diffing toolkit (~/venvs/diffing), never pip into /opt/pytorch.
   Test agents run fully isolated (common/claude_agent.py, egress allowlist).
-- API caps for task modeldiff (judge and claim extraction): Anthropic $6 (global $16 cap, $2.79 spent), OpenAI $12. Same autonomy and effort
+- API caps for task modeldiff (judge and claim extraction): Anthropic $6, raised to $9 at 23:15 UTC (extractor estimate about $5 left no headroom) (global $16 cap, $2.79 spent), OpenAI $12. Same autonomy and effort
   rules as D18 (audits as pieces finish, no permission stops before a gate).
 - Disk: Dan enlarged the EBS volume. Root grown online to 150 GB (growpart + xfs_growfs), 68 GB free.
