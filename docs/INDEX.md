@@ -12,6 +12,11 @@
 - `LOG.md`: append-only orchestrator lab notebook.
 - `DECISIONS.md`: choices Dan may want to reverse.
 - `OPEN_QUESTIONS.md`: uncertainties and assumptions.
+- `STATUS_2026-10-04.md`: **start here**: the state of everything after the Oct 2 crash, recovery and validation work (ShiftHunt validated with caveats;
+  the other tasks' verdicts; small-model failures; infrastructure caveats; open items).
+- `results/`: redacted, aggregate-only copies of each study's write-up (the source branches are listed in STATUS section 8):
+  `results/shifthunt/` (VALIDATION, SCALE1_T1/T2/OPENAI with checks, SMALLMODEL_FAILURES, SMOKE), `results/featurematch/` (VERDICT, RESULTS, STEP3),
+  `results/latentknockout/` (FEASIBILITY_VERDICT, PRECEDENT), `results/boolintermediates/` and `results/latentdiff/` (SMOKE).
 
 ## common/
 - `gpuq.py`: GPU admission queue. `env.sh`: environment. `secret_scan.sh`: pre-commit secret/size scan.

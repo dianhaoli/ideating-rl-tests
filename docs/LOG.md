@@ -564,3 +564,10 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   also missed. (B) 2 slots used a full 20 chosen as cue-pure or by sample attribution, missing latents that carry the cue through context (-0.003, -0.037).
   Same failure kinds as Opus; all misses are on the probes where the reference clears the bar by < 0.05. sol sits closer to the bar than Opus
   (effort medium vs xhigh confound).
+
+## 2026-10-04: docs consolidated (Dan: "push everything we just talked about into the docs")
+- New docs/STATUS_2026-10-04.md (start-here summary) and docs/results/ (redacted, aggregate-only copies of ShiftHunt VALIDATION/SCALE1/
+  SMALLMODEL_FAILURES/SMOKE, FeatureMatch VERDICT/RESULTS/STEP3, LatentKnockout FEASIBILITY_VERDICT/PRECEDENT, BoolIntermediates and
+  LatentDiff SMOKE; instance ids redacted). INDEX.md updated.
+- Final luna diagnostics: effort high 1/10 (4/20 named slots clear the bar, median 4.5 latents); method hint 1/10 (14/17 clear, median 20 latents,
+  naming 17/22). Effort is not the cause; the hint fixes removal but not naming or null calls. task/shifthunt c6c37109 (local).
