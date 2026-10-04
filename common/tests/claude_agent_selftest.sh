@@ -59,7 +59,8 @@ print(json.dumps({"pass": g.get("pass"), "score": g.get("score"), "valid": h["va
                   "audit_violations": h["n_audit_violations"], "stop": m["stop"], "turns": m["turns"],
                   "usd_cli_estimate": m["usd"], "wall_s": m["wall_s"], "api_proxy_requests": m["api_proxy_requests"],
                   "api_proxy_denied": len(m["api_proxy_denied"]), "net_denied": len(m["net_denied"]),
-                  "credential_found_in": m["credential_found_in"], "tools": m["init"][0]["tools"]}, indent=1))
-sys.exit(0 if h["valid"] and not m["credential_found_in"] else 1)
+                  "credential_found_in": m["credential_found_in"], "stream_integrity": m["stream_integrity"],
+                  "tools": m["init"][0]["tools"]}, indent=1))
+sys.exit(0 if h["valid"] and not m["credential_found_in"] and m["stream_integrity"]["ok"] else 1)
 EOF
 echo "self-test OK: $RD"

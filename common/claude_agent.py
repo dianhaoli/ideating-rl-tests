@@ -656,12 +656,21 @@ def _session_pass(jail, argv, prompt_text, auth_env, deadline, raw, tlog, meta):
     proc.stdin.write(prompt_text.encode())
     proc.stdin.close()
     sid, result, stop = None, None, None
+    integ = meta.setdefault("stream_integrity", {"bad_lines": 0, "tool_use_ids": set(), "orphan_results": []})
     for line in proc.stdout:
         raw.write(line)
         raw.flush()
         try:
             ev = json.loads(line)
+            if not isinstance(ev, dict):
+                raise ValueError
         except ValueError:
+            # WHY: the agent's shell shares the CLI's uid and pid namespace, so it can write into the CLI's stdout pipe
+            # (/proc/<pid>/fd/1). A partial line glued onto a real event would make that event unparsable and drop a
+            # tool call from the audited transcript. Every such line, and every tool_result whose tool_use is missing,
+            # is counted; api_meta.json stream_integrity.ok must be true for the episode to count.
+            if line.strip():
+                integ["bad_lines"] += 1
             continue
         typ = ev.get("type")
         sid = ev.get("session_id") or sid
@@ -677,6 +686,13 @@ def _session_pass(jail, argv, prompt_text, auth_env, deadline, raw, tlog, meta):
                 _kill(proc)
                 break
         elif typ in ("assistant", "user"):
+            content = (ev.get("message") or {}).get("content")
+            for b in content if isinstance(content, list) else []:
+                if isinstance(b, dict) and b.get("type") == "tool_use":
+                    integ["tool_use_ids"].add(b.get("id"))
+                elif isinstance(b, dict) and b.get("type") == "tool_result" and \
+                        b.get("tool_use_id") not in integ["tool_use_ids"]:
+                    integ["orphan_results"].append(b.get("tool_use_id"))
             entry = {"type": typ, "message": ev.get("message"), "cwd": jail.sbx, "episode": jail.episode,
                      "session_id": ev.get("session_id"), "uuid": ev.get("uuid"),
                      "parent_tool_use_id": ev.get("parent_tool_use_id")}
@@ -762,6 +778,13 @@ def run(args):
         api_events = list(jail.api.events) if jail.api else []
         jail.close(keep=args.keep_state)
     meta.pop("_stderr_path", None)
+    integ = meta.pop("stream_integrity", {"bad_lines": 0, "tool_use_ids": set(), "orphan_results": []})
+    meta["stream_integrity"] = {"ok": integ["bad_lines"] == 0 and not integ["orphan_results"],
+                                "bad_lines": integ["bad_lines"], "orphan_results": integ["orphan_results"][:20],
+                                "n_tool_uses": len(integ["tool_use_ids"])}
+    if not meta["stream_integrity"]["ok"]:
+        print("WARNING: stream integrity check failed (possible transcript tampering): "
+              + json.dumps(meta["stream_integrity"]), file=sys.stderr)
     meta["credential_found_in"] = credential_scan([args.out, jail.sbx], cred_tails)
     if meta["credential_found_in"]:
         print("WARNING: real credential found in " + ", ".join(meta["credential_found_in"]), file=sys.stderr)
@@ -785,7 +808,8 @@ def run(args):
         api_agent._append({"t": time.time(), "episode": args.episode, "task": args.task, "model": model,
                            "turn": "claude-cli", "usd": round(usd, 6)})
     print(json.dumps({k: out[k] for k in ("episode", "model", "effort", "turns", "stop", "submitted", "usd",
-                                          "wall_s")}))
+                                          "wall_s")} | {"stream_ok": out["stream_integrity"]["ok"],
+                                                        "credential_leak": bool(out["credential_found_in"])}))
 
 
 def spent(args):

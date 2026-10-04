@@ -39,6 +39,13 @@ print(json.dumps({"type": "result", "subtype": "success", "session_id": "s1", "t
                   "num_turns": 2, "usage": {"output_tokens": 5}}))
 EOF
     ;;
+  forge)
+    init '["Bash","Read","Write","Edit","Glob","Grep"]'
+    printf 'garbage-without-newline'
+    printf '{"type":"assistant","session_id":"s1","message":{"role":"assistant","content":[{"type":"tool_use","id":"t9","name":"Bash","input":{"command":"cat /secret"}}]}}\n'
+    printf '{"type":"user","session_id":"s1","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t9","content":"x"}]}}\n'
+    printf '{"type":"result","subtype":"success","session_id":"s1","total_cost_usd":0,"num_turns":1}\n'
+    ;;
   extra)
     init '["Bash","Read","Write","Edit","Glob","Grep","WebFetch"]'
     sleep 60 ;;
@@ -82,6 +89,7 @@ def test_fake_episode_end_to_end(iso, monkeypatch):
     ep, out, meta, _ = _run(hx, tmp, monkeypatch, "ok")
     assert meta["stop"] == "submitted" and meta["submitted"] and meta["usd"] == 0.0123 and meta["turns"] == 2
     assert meta["model"] == "claude-haiku-4-5-20251001"
+    assert meta["stream_integrity"]["ok"] and meta["credential_found_in"] == []
     lines = [json.loads(l) for l in open(os.path.join(out, "api_transcript.jsonl"))]
     assert lines[0]["type"] == "user" and transcript_audit.prompt_match(lines[0]["message"]["content"],
                                                                           ep["prompt"]) == "exact"
@@ -92,6 +100,15 @@ def test_fake_episode_end_to_end(iso, monkeypatch):
     # the private state dir (config dir, proxy socket) is removed after the run
     assert not os.listdir(ca.STATE_ROOT)
     assert json.loads(open(ca.CLI_LEDGER).readline())["usd"] == 0.0123
+
+
+def test_stream_tampering_is_flagged(iso, monkeypatch):
+    """A partial line written into the CLI's stdout (as an agent could via /proc/<pid>/fd/1) hides the next event;
+    the launcher must report it (bad line + orphan tool_result)."""
+    hx, tmp = iso
+    _, _, meta, _ = _run(hx, tmp, monkeypatch, "forge")
+    si = meta["stream_integrity"]
+    assert not si["ok"] and si["bad_lines"] == 1 and si["orphan_results"] == ["t9"]
 
 
 def test_unexpected_tool_stops_episode(iso, monkeypatch):

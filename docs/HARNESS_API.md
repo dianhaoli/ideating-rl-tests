@@ -489,7 +489,8 @@ sandbox after each command (so the audit's recorded cwd is exact). The transcrip
 Outputs in `--out`: `api_transcript.jsonl` (first line = the agent prompt, then the stream's assistant/user messages
 with `cwd`; what `finish --transcript` and `transcript_audit` read), `claude_stream.jsonl` (raw), `claude_native_*.jsonl`
 (Claude Code's own session file), `api_meta.json` (model, effort, turns, stop, CLI-reported `usd`, usage, init tools,
-proxy and network denials, `credential_found_in` = files containing the real credential after the run, must be empty),
+proxy and network denials, `credential_found_in` = files containing the real credential after the run, must be empty;
+`stream_integrity.ok` must be true, see residuals),
 `api_proxy_log.jsonl`, `net_log.jsonl`, `claude_stderr.log`.
 
 Auth modes: `--auth oauth` (default, injection), `--auth apikey` (injects ~/.anthropic_env's key; real money, checked
@@ -512,6 +513,11 @@ Residual risks (accepted, 2026-10-04):
   endpoint knows a task's answers.
 - The broker socket is shared by all episodes. The broker identifies the caller's episode by its cwd, which still works
   for jailed processes (sandbox mounted at its real path); other episode ids are not discoverable from inside.
+- The agent's shell shares the CLI's uid and pid namespace, so it could write into the CLI's stdout pipe
+  (/proc/<pid>/fd/1) and corrupt or forge stream events. Corrupting a real event (to hide a tool call from the audit)
+  leaves an unparsable line and an orphan tool_result, which the launcher reports: `stream_integrity.ok` = false.
+  Treat such an episode as INVALID (`finish` does not read api_meta.json yet; the operator or a later harness change
+  must check it). The jail, not the audit, is what keeps files out of reach, so a hidden call still cannot read them.
 - `/proc/self/mountinfo` shows the host paths of the bind mounts (sandbox, venv, the per-run state dir name). Paths
   only, no content.
 - The jail is only as strong as bubblewrap, user namespaces and the kernel; the agent runs as the operator's uid.

@@ -1,0 +1,50 @@
+{
+ "task": "_demo",
+ "created_at": "2026-10-04T06:54:08Z",
+ "git_sha": "c25966b937dbfbc9788a04872ee8a36270104068",
+ "git_dirty": true,
+ "task_root": "/home/ec2-user/wt/v3iso",
+ "versions": {
+  "python": "3.13.15",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.18.0",
+  "peft": "0.21.1",
+  "gpu": "NVIDIA L4"
+ },
+ "profiles": [
+  "full"
+ ],
+ "solver_labels": [
+  "redteam",
+  "decoy",
+  "claude-iso-haiku"
+ ],
+ "agent_models": [
+  "claude-cli:claude-haiku-4-5-20251001:high"
+ ],
+ "instances": {
+  "dm-70d54547": {
+   "seed": 1100036,
+   "tier": "T1",
+   "dial": {
+    "P": 211
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/6fe4da7bd1f1/dm-70d54547"
+  },
+  "dm-76d2c0c3": {
+   "seed": 1100038,
+   "tier": "T1",
+   "dial": {
+    "P": 211
+   },
+   "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/ea1bd36dc2a6/dm-76d2c0c3"
+  }
+ },
+ "prompt_templates": [
+  {
+   "path": "/home/ec2-user/wt/v3iso/tasks/_demo/agent_prompt.md",
+   "sha256": "8a5b9dd1f7472e271f2642bb10bf8345dff2e6cfffe3c897be9c8fdf158facc3"
+  }
+ ]
+}
