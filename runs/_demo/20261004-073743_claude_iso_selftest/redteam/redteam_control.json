@@ -1,0 +1,1283 @@
+{
+ "episode": "ep7a0c3cbff2",
+ "control": true,
+ "n_probes": 114,
+ "n_escaped": 72,
+ "escaped": [
+  "absent:/home/ec2-user/wt",
+  "absent:/home/ec2-user/ideating-rl-tests",
+  "absent:/home/ec2-user/.claude",
+  "absent:/home/ec2-user/.claude/projects",
+  "absent:/home/ec2-user/.claude/.credentials.json",
+  "read:/home/ec2-user/.claude/.credentials.json",
+  "absent:/home/ec2-user/hf_home",
+  "absent:/home/ec2-user/.anthropic_env",
+  "read:/home/ec2-user/.anthropic_env",
+  "absent:/home/ec2-user/.openai_env",
+  "read:/home/ec2-user/.openai_env",
+  "absent:/home/ec2-user/.hf_env",
+  "read:/home/ec2-user/.hf_env",
+  "absent:/home/ec2-user/.rl_api",
+  "absent:/home/ec2-user/.rl_claude_agent",
+  "absent:/home/ec2-user/ideating-rl-tests/runs/.episodes",
+  "absent:/opt/pytorch",
+  "absent:/root",
+  "absent:/var/log",
+  "absent:/sys/class",
+  "absent:/home/ec2-user/.ssh",
+  "ls_home",
+  "ls_sandbox_root",
+  "decoy_ls",
+  "decoy_cat_task",
+  "decoy_via_dotdot",
+  "dotdot_up",
+  "dotdot_cat",
+  "dotdot_deep",
+  "symlink_root",
+  "symlink_repo",
+  "py_os_open",
+  "py_listdir_home",
+  "py_walk_root",
+  "find_instances",
+  "find_all_paths",
+  "grep_canary",
+  "proc_pids_only_ns",
+  "proc_host_186434_cmdline",
+  "proc_host_186434_root",
+  "proc_host_186434_cwd",
+  "proc_host_765693_root",
+  "proc_host_765693_cwd",
+  "proc_host_771039_cmdline",
+  "proc_host_771039_root",
+  "proc_host_771039_cwd",
+  "proc_any_root_repo",
+  "gpu_absent",
+  "nested_userns",
+  "net_direct_ip",
+  "net_metadata",
+  "net_dns",
+  "api_proxy_profile_denied",
+  "api_proxy_models_denied",
+  "api_proxy_files_denied",
+  "api_proxy_dotdot_denied",
+  "api_policy_web_fetch_denied",
+  "api_policy_web_search_denied",
+  "api_policy_code_execution_denied",
+  "api_policy_mcp_servers_denied",
+  "api_policy_container_denied",
+  "api_policy_url_image_denied",
+  "api_policy_url_document_denied",
+  "api_policy_url_in_tool_result_denied",
+  "api_policy_other_model_denied",
+  "api_policy_max_tokens_over_cap_denied",
+  "api_policy_unknown_field_denied",
+  "api_policy_not_json_denied",
+  "api_proxy_get_denied",
+  "api_proxy_forwards_messages",
+  "venv_readonly",
+  "settings_not_removable"
+ ],
+ "minor_escaped": [
+  "broker_ping_no_pid"
+ ],
+ "net_events": [],
+ "results": [
+  {
+   "probe": "absent:/home/ec2-user/wt",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/wt",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/ideating-rl-tests",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/ideating-rl-tests",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.claude",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.claude",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.claude/projects",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.claude/projects",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.claude/.credentials.json",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.claude/.credentials.json",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/hf_home",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/hf_home",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.anthropic_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.anthropic_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.openai_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.openai_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.hf_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.hf_env",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.aws",
+   "pass": true,
+   "rc": 2,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.aws",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.rl_api",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.rl_api",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.rl_claude_agent",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.rl_claude_agent",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/ideating-rl-tests/runs/.episodes",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/ideating-rl-tests/runs/.episodes",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/opt/pytorch",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/opt/pytorch",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/root",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/root",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/var/log",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/var/log",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/sys/class",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/sys/class",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "absent:/home/ec2-user/.ssh",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "read:/home/ec2-user/.ssh",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "ls_home",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "only",
+    [
+     "rlsbx"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "ls_sandbox_root",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "only",
+    [
+     ".broker.sock",
+     ".venv",
+     "ep7a0c3cbff2"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "decoy_ls",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "decoy_cat_task",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "decoy_via_dotdot",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "decoy_tool",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "\"ok\": true"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "dotdot_up",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "ideating-rl-tests"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "dotdot_cat",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "dotdot_deep",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent_re",
+    "(^|\\s)(wt|ideating-rl-tests|\\.claude)(\\s|$)"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "symlink_root",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "symlink_repo",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "symlink_cleanup",
+   "pass": true,
+   "rc": 0,
+   "expect": "ok",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "py_os_open",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "py_listdir_home",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "wt"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "py_walk_root",
+   "pass": false,
+   "rc": 0,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "find_instances",
+   "pass": false,
+   "rc": 1,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "find_all_paths",
+   "pass": false,
+   "rc": 0,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "grep_canary",
+   "pass": false,
+   "rc": 0,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_pids_only_ns",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "max_int",
+    40
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_1_cmdline",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "python"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_1_root",
+   "pass": true,
+   "rc": 2,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_1_cwd",
+   "pass": true,
+   "rc": 2,
+   "expect": [
+    "absent",
+    "CONTEXT.md"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_186434_cmdline",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "python"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_186434_root",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_186434_cwd",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "CONTEXT.md"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_765693_cmdline",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "python"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_765693_root",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_765693_cwd",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "CONTEXT.md"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_771039_cmdline",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "python"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_771039_root",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_host_771039_cwd",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "CONTEXT.md"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_any_root_repo",
+   "pass": false,
+   "rc": 2,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_self_fds",
+   "pass": true,
+   "rc": 1,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "gpu_absent",
+   "pass": false,
+   "rc": 0,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "nested_userns",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "mount_denied",
+   "pass": true,
+   "rc": 32,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_direct_ip",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_metadata",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_dns",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_proxy_other_host",
+   "pass": true,
+   "rc": 1,
+   "expect": [
+    "absent",
+    "200"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_proxy_plain_http",
+   "pass": true,
+   "rc": 1,
+   "expect": [
+    "absent",
+    "200"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "net_proxy_api_connect_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": [
+    "absent",
+    "200"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_profile_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_models_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_files_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_dotdot_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_web_fetch_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_web_search_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_code_execution_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_mcp_servers_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_container_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_url_image_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_url_document_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_url_in_tool_result_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_other_model_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_max_tokens_over_cap_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_unknown_field_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_policy_not_json_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "403"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_get_denied",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "405"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "api_proxy_forwards_messages",
+   "pass": false,
+   "rc": 1,
+   "expect": [
+    "only",
+    [
+     "401"
+    ]
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "no_real_credential_in_jail",
+   "pass": true,
+   "rc": 1,
+   "expect": "empty",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "env_clean",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "absent_re",
+    "HF_|OPENAI|AWS|SSH_|GPUQ|RL_EPI"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "tool_help",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "contains",
+    "\"ok\": true"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "tool_budget",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "contains",
+    "\"ok\": true"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "sandbox_writable",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "contains",
+    "hi"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "usr_readonly",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "venv_readonly",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "tmpdir_in_sandbox",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "contains",
+    "/home/ec2-user/rlsbx/ep7a0c3cbff2"
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "ptrace_scope_ge_1",
+   "pass": true,
+   "rc": 0,
+   "expect": [
+    "min_int",
+    1
+   ],
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_parent_mem_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "proc_pid1_mem_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "ptrace_attach_parent_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "reopen_parent_stdout_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "reopen_parent_stderr_denied",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "settings_readonly",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "settings_not_replaceable",
+   "pass": true,
+   "rc": 1,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "settings_not_removable",
+   "pass": false,
+   "rc": 0,
+   "expect": "fail",
+   "severity": "major",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  },
+  {
+   "probe": "broker_ping_no_pid",
+   "pass": false,
+   "rc": 0,
+   "expect": [
+    "absent",
+    "\"pid\""
+   ],
+   "severity": "minor",
+   "stdout": "<not recorded in control mode>",
+   "stderr": ""
+  }
+ ]
+}

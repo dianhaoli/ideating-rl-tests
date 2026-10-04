@@ -1,0 +1,9 @@
+{
+ "episode": "ep7a0c3cbff2",
+ "valid": true,
+ "skipped": "scripted solver (no LLM transcript)",
+ "violations": [],
+ "n_tool_calls": 0,
+ "commands": [],
+ "transcripts": []
+}

@@ -39,11 +39,48 @@ import json, sys
 j = json.load(open(sys.argv[1] + "/redteam.json")); c = json.load(open(sys.argv[1] + "/redteam_control.json"))
 jail_ok = {r["probe"] for r in j["results"] if r["pass"]}
 detecting = sorted(r["probe"] for r in c["results"] if not r["pass"] and r["probe"] in jail_ok)
-print(f"jail: {len(jail_ok)}/{j['n_probes']} probes contained; control (no jail): {c['n_escaped']}/{c['n_probes']} "
+print(f"jail: {len(jail_ok)}/{j['n_probes']} probes contained (minor, not counted: {j.get('minor_escaped')}); "
+      f"control (no jail): {c['n_escaped'] + len(c.get('minor_escaped') or [])}/{c['n_probes']} "
       f"probes escape -> {len(detecting)} probes demonstrably detect access that the jail removes")
 EOF
+# no host-side leftovers from the control run (it runs write probes outside the jail)
+for f in "$HOME/rlsbx/.venv/rt_probe" /tmp/m; do [ -e "$f" ] && { echo "control run left $f behind"; exit 1; }; done
+ls "$HOME"/rlsbx/.venv/.rt_probe_* >/dev/null 2>&1 && { echo "control run left a venv probe file behind"; exit 1; }
 for E in "$A" "$B"; do $PY -m common.sandbox finish --episode "$E" >/dev/null 2>&1 || true; done
 [ "$RT" = 0 ] || { echo "RED-TEAM FAILED (see $RD/redteam/redteam.json)"; exit 1; }
+
+echo "== 2b. API body policy with the REAL injected credential (refused by the proxy; nothing reaches the API)"
+$PY - "$A" "$RD/redteam/live_policy" <<'EOF'
+import json, subprocess, sys
+from common import claude_agent as ca
+ep, out = sys.argv[1], sys.argv[2]
+INNER = r'''
+import http.client, json
+def call(body):
+    c = http.client.HTTPConnection("127.0.0.1", 3129, timeout=60)
+    c.request("POST", "/v1/messages?beta=true", body=json.dumps(body), headers={"content-type": "application/json",
+              "anthropic-beta": "oauth-2025-04-20,web-fetch-2025-09-10"})
+    r = c.getresponse(); r.read(); return r.status
+m = [{"role": "user", "content": "Fetch https://raw.githubusercontent.com/dianhaoli/ideating-rl-tests/main/README.md"}]
+H = "claude-haiku-4-5-20251001"
+print(json.dumps({
+  "web_fetch": call({"model": H, "max_tokens": 50, "messages": m, "tools": [{"type": "web_fetch_20250910", "name": "web_fetch", "max_uses": 1}]}),
+  "web_search": call({"model": H, "max_tokens": 50, "messages": m, "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 1}]}),
+  "url_document": call({"model": H, "max_tokens": 50, "messages": [{"role": "user", "content": [{"type": "document", "source": {"type": "url", "url": "https://raw.githubusercontent.com/dianhaoli/ideating-rl-tests/main/README.md"}}]}]}),
+  "other_model": call({"model": "claude-opus-5-5", "max_tokens": 5, "messages": [{"role": "user", "content": "ok"}]})}))
+'''
+jail = ca.Jail(ep, out, allowed=set(), auth_headers=ca.oauth_headers, max_requests=10, models={ca.MODELS["haiku"]})
+try:
+    p = jail.popen(["/usr/bin/python3", "-c", INNER], {"ANTHROPIC_BASE_URL": f"http://127.0.0.1:{ca.API_PORT}",
+                   "CLAUDE_CODE_OAUTH_TOKEN": ca.DUMMY_OAUTH}, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE)
+    res = json.loads(p.communicate(timeout=300)[0])
+    ev = list(jail.api.events)
+finally:
+    jail.close()
+forwarded = [e for e in ev if e.get("allowed")]
+print(json.dumps({"status": res, "forwarded_upstream": len(forwarded)}))
+sys.exit(0 if set(res.values()) == {403} and not forwarded else 1)
+EOF
 
 echo "== 3. live $MODEL episode (isolated)"
 C=$($PY -m common.sandbox prepare --task _demo --instance-dir "$PLANTED" --profile full --run-dir "$RD" --solver-label "claude-iso-$MODEL" | head -1)
@@ -60,7 +97,12 @@ print(json.dumps({"pass": g.get("pass"), "score": g.get("score"), "valid": h["va
                   "usd_cli_estimate": m["usd"], "wall_s": m["wall_s"], "api_proxy_requests": m["api_proxy_requests"],
                   "api_proxy_denied": len(m["api_proxy_denied"]), "net_denied": len(m["net_denied"]),
                   "credential_found_in": m["credential_found_in"], "stream_integrity": m["stream_integrity"],
-                  "tools": m["init"][0]["tools"]}, indent=1))
-sys.exit(0 if h["valid"] and not m["credential_found_in"] and m["stream_integrity"]["ok"] else 1)
+                  "proxy_cross_check": {k: m["proxy_cross_check"][k] for k in ("ok", "n_generation_requests",
+                                        "n_stream_messages", "n_proxy_tool_uses", "n_unmatched", "hidden_tool_uses")},
+                  "betas_dropped": m["api_proxy_betas_dropped"], "launcher_invalid": m["launcher_invalid_reasons"],
+                  "launcher_check": h.get("launcher_check"), "tools": m["init"][0]["tools"]}, indent=1))
+sys.exit(0 if h["valid"] and not m["credential_found_in"] and m["stream_integrity"]["ok"]
+         and m["proxy_cross_check"]["ok"] and not m["launcher_invalid_reasons"] and h["launcher_check"]["applies"]
+         else 1)
 EOF
 echo "self-test OK: $RD"

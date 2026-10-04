@@ -1,0 +1,72 @@
+{
+ "score": 0.0,
+ "pass": false,
+ "details": {
+  "slots": [
+   {
+    "planted": false,
+    "correct": false,
+    "claimed": false
+   }
+  ],
+  "submitted": false,
+  "grader_pid": 772104
+ },
+ "harness": {
+  "episode": "ep7a0c3cbff2",
+  "task": "_demo",
+  "instance_id": "dm-70d54547",
+  "tier": "T1",
+  "profile": "full",
+  "solver_label": "redteam",
+  "agent_model": null,
+  "submitted": false,
+  "status": "closed",
+  "counters": {
+   "tool_calls": 0,
+   "forward": 0,
+   "generate": 0,
+   "gradient": 0
+  },
+  "caps": {
+   "tool_calls": 20,
+   "forward": 40,
+   "generate": 0,
+   "gradient": 0,
+   "wall_clock_s": 600,
+   "call_timeout_s": 30
+  },
+  "behavioral_exposure": 0,
+  "leak_detected": false,
+  "leak_reasons": [],
+  "agent_files_with_leak_strings": 0,
+  "agent_files_with_codename": [],
+  "symlinks_outside": [],
+  "solver_rc": null,
+  "infra_failures": [],
+  "n_ok_task_calls": 0,
+  "cross_episode_access": true,
+  "launcher_check": {
+   "applies": false,
+   "invalid": []
+  },
+  "audit_valid": true,
+  "audit_skipped": "scripted solver (no LLM transcript)",
+  "n_audit_violations": 0,
+  "transcript_discovery": null,
+  "prompt_match": [],
+  "valid": false,
+  "invalid_reasons": [
+   "cross_episode_access"
+  ],
+  "elapsed_s": 10.6,
+  "wait_s": 0.0,
+  "prompt_template": {
+   "path": "/home/ec2-user/wt/v3iso/tasks/_demo/agent_prompt.md",
+   "sha256": "8a5b9dd1f7472e271f2642bb10bf8345dff2e6cfffe3c897be9c8fdf158facc3",
+   "default": true
+  },
+  "min_submit": null,
+  "extra_files": []
+ }
+}

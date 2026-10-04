@@ -477,49 +477,112 @@ its sandbox read-write at its real path, the broker socket, the ./py venv (read-
 (generated passwd/group/hosts; certs), the claude binary, an empty HOME with a FRESH `CLAUDE_CONFIG_DIR`, and its own
 processes in /proc. Home, ~/ideating-rl-tests, ~/wt, ~/.claude (projects, credentials), ~/hf_home, key files, other
 sandboxes, instance dirs and caches, the episode registry, /opt/pytorch and the GPU are absent. `TMPDIR` is
-`<sandbox>/.tmp`. Network: loopback only. The CLI reaches the API through `ANTHROPIC_BASE_URL=http://127.0.0.1:3129`,
-an auth-injecting proxy OUTSIDE the jail that forwards only `/v1/messages[/count_tokens]` and swaps the jail's dummy
-token for the operator's real OAuth token (re-read per request). The jail never holds a real credential; the
-CONNECT proxy (127.0.0.1:3128) has an empty allowlist in this mode, so nothing else leaves (EC2 metadata, Hugging Face,
-pip, any web host). Layer 2 (Claude Code): tools limited to Bash/Read/Write/Edit/Glob/Grep (checked against the
-stream's init event; anything else stops the run), `dontAsk` permissions with deny rules for WebFetch, WebSearch,
-Agent/Task, MCP and file tools on every non-sandbox tree, `--strict-mcp-config`, `--safe-mode`, Bash cwd reset to the
-sandbox after each command (so the audit's recorded cwd is exact). The transcript audit still runs (layer 3).
+`<sandbox>/.tmp`. Network: loopback only; no socket from the jail reaches any host (direct IPs, IPv6, DNS, the
+host's 127.0.0.1 listeners and abstract Unix sockets all fail). The CLI reaches the API through
+`ANTHROPIC_BASE_URL=http://127.0.0.1:3129`, an auth-injecting proxy OUTSIDE the jail that forwards only
+`POST /v1/messages[/count_tokens]` and swaps the jail's dummy token for the operator's real OAuth token (re-read per
+request). The jail never holds a real credential; the CONNECT proxy (127.0.0.1:3128) has an empty allowlist in this
+mode. **The API itself is the one remaining path out, so the proxy also filters request bodies** (2026-10-04 isolation
+audit: before this, a jailed request with the `web_fetch` server tool fetched a public GitHub page, `web_search`
+searched the web, and a request naming Opus was served during a Haiku episode). Body rules (`check_request`; fail
+closed, 403, logged):
+- `model` must be the episode's `--model`; `max_tokens` an int in [1, 128000] (the CLI's own maximum; Haiku sends 32000).
+- `tools`: client tools only (name/description/input_schema, no `type` other than `custom`). Any server tool
+  (`web_search_*`, `web_fetch_*`, `code_execution_*`, `bash_*`, `text_editor_*`, `computer_*`, `memory_*`,
+  `mcp_toolset`, ...) is refused.
+- top-level fields from an allowlist (model, messages, system, tools, tool_choice, max_tokens, metadata, stream,
+  thinking, temperature, top_p, top_k, stop_sequences, context_management, output_config); so `mcp_servers`,
+  `container` and anything new are refused. `thinking`, `tool_choice`, `output_config` (effort only) and
+  `context_management` (`clear_tool_uses_*`/`clear_thinking_*` edits only) are checked too.
+- message/system content: block types text, image, document, tool_use, tool_result, thinking, redacted_thinking only;
+  every `source` must be inline (`base64`, `text`, `content`), never `url` or `file` (the API would fetch it);
+  `cache_control` must be `ephemeral`.
+- `anthropic-beta`: values outside the allowlist (exactly what Claude Code 2.1.288 sends for Haiku and Opus, captured
+  through the proxy on 2026-10-04) are dropped from the forwarded request and listed in `api_proxy_betas_dropped`.
+A Claude Code update that sends a new field fails visibly (403 -> `api_proxy_denied` -> INVALID), never silently;
+extend the allowlists in `claude_agent.py` after checking what the new field does.
+Layer 2 (Claude Code): tools limited to Bash/Read/Write/Edit/Glob/Grep (checked against the stream's init event;
+anything else stops the run), `dontAsk` permissions with deny rules for WebFetch, WebSearch, Agent/Task, MCP and file
+tools on every non-sandbox tree, `--strict-mcp-config`, `--safe-mode`, `disableAllHooks`, Bash cwd reset to the
+sandbox after each command (so the audit's recorded cwd is exact). `settings.json` is bind-mounted read-only over the
+(writable) config dir, so the agent cannot change its permissions, hooks or env before the nudge `--resume`. The
+layer-2 deny rules are ADVISORY: Bash can `cat` anything the jail mounts, so the jail (layer 1) is the control that
+matters. The transcript audit still runs (layer 3).
+
+Tamper resistance and what `finish` enforces (2026-10-04 isolation audit). The agent's shell runs as the operator's uid
+in the CLI's pid namespace. Three measures keep the stream the audit reads honest:
+1. The host runs `kernel.yama.ptrace_scope = 1` (persisted in `/etc/sysctl.d/60-rl-ptrace.conf`; `run` refuses to
+   start otherwise). The agent's shell is a descendant of the CLI, not an ancestor, so it cannot ptrace the CLI or
+   open its `/proc/<pid>/mem`.
+2. The CLI's stdout and stderr are Unix sockets, not pipes or files: `/proc/<cli>/fd/1` cannot be re-opened (ENXIO),
+   so the agent can neither inject into nor read (steal) the event stream.
+3. Proxy cross-check (`proxy_cross_check` in api_meta.json). The proxy, outside the jail, records the message id and
+   every tool_use (id, name, input) of each response. Every answered generation request must appear in the CLI's
+   stream (by message id), and every tool_use must appear there with the same input (allowing only the CLI's own
+   rewrites, all observed live: it strips a leading `cd <sandbox> && ` from Bash commands, strips trailing whitespace
+   from lines in Write/Edit strings, and fills `"replace_all": false` into Edit). Answered requests missing from the
+   stream are the agent's own API calls (side reasoning, extra spend): the proxy refuses new requests once 2 are
+   outstanding, and the episode is INVALID.
+`sandbox finish` reads `<episode dir>/api_meta.json` for every `claude-cli:` agent model (or an api_meta.json with
+provider claude-code-cli) and adds INVALID reasons: `launcher_meta_missing`, `launcher_stream_integrity` (unparsable
+stream line or orphan tool_result), `launcher_api_cross_check`, `launcher_credential_leak` (credential_found_in not
+empty), `launcher_api_proxy_denied` (any refused API request, including every body-policy refusal),
+`launcher_unexpected_tools`, `launcher_host_ptrace_scope`, `launcher_unfiltered_api_access` (`--auth oauth-env`). The
+details are in grade.json `harness.launcher_check`.
 
 Outputs in `--out`: `api_transcript.jsonl` (first line = the agent prompt, then the stream's assistant/user messages
 with `cwd`; what `finish --transcript` and `transcript_audit` read), `claude_stream.jsonl` (raw), `claude_native_*.jsonl`
-(Claude Code's own session file), `api_meta.json` (model, effort, turns, stop, CLI-reported `usd`, usage, init tools,
-proxy and network denials, `credential_found_in` = files containing the real credential after the run, must be empty;
-`stream_integrity.ok` must be true, see residuals),
-`api_proxy_log.jsonl`, `net_log.jsonl`, `claude_stderr.log`.
+(Claude Code's own session file; forensics only: the agent can write the config dir it lives in), `api_meta.json`
+(model, effort, turns, stop, CLI-reported `usd`, usage, init tools, proxy and network denials, `api_proxy_policy`,
+`api_proxy_betas_dropped`, `credential_found_in`, `stream_integrity`, `proxy_cross_check`, `host_ptrace_scope`,
+`launcher_invalid_reasons` = what finish will add), `api_proxy_log.jsonl` (one line per request: body sha256/size,
+model, max_tokens, message id, output tokens, response tool_uses, or the refusal reason), `net_log.jsonl`,
+`claude_stderr.log`.
 
 Auth modes: `--auth oauth` (default, injection), `--auth apikey` (injects ~/.anthropic_env's key; real money, checked
 against and charged to the API ledger), `--auth oauth-env` (fallback: the real access token in the jailed environment,
-readable by the agent via /proc; refused unless valid for the whole wall-clock + 10 min).
+readable by the agent via /proc; refused unless valid for the whole wall-clock + 10 min; no body policy and no
+cross-check, so finish marks these episodes INVALID `launcher_unfiltered_api_access`: debugging only).
 
 Self-test: `bash common/tests/claude_agent_selftest.sh [haiku]` runs the unit tests (a fake claude inside the real
-jail), the scripted red-team, its no-jail control, and one live Haiku episode on `_demo` (prepare -> run -> finish).
-Red-team alone: `$PY -m common.claude_agent redteam --episode E --decoy E2 [--control]` runs ~95 probes as plain bash
+jail; a mock API behind the real AuthProxy for the body policy and the cross-check), the scripted red-team, its
+no-jail control (and checks it left nothing behind on the host), the body policy with the REAL injected credential
+(web_fetch, web_search, a url document and another model must all get 403 with nothing forwarded), and one live Haiku
+episode on `_demo` (prepare -> run -> finish; must be valid with `launcher_check.applies` and the cross-check ok).
+Red-team alone: `$PY -m common.claude_agent redteam --episode E --decoy E2 [--control]` runs ~115 probes as plain bash
 in the production jail (no LLM): reads/listing of ~/wt, the repo, ~/.claude, keys, other sandboxes, `..` and symlink
 tricks, `os.open`, `find /`, `grep -r RLCANARY`, /proc/<host pid>/{root,cwd,cmdline}, nested namespaces, mount, direct
-IPs/DNS/metadata, proxy bypasses, non-messages API paths, a real credential in any process environment, plus the
-positive checks (./tool works, sandbox writable). Exit 1 if any probe escapes. The episode used for the red-team is
-flagged `cross_episode_access` by the broker on purpose (the decoy probe), so never grade it. `--control` runs the
-same probes without the jail; it records no output (host output can hold real secrets).
+IPs/DNS/metadata, proxy bypasses, non-messages API paths, every body-policy refusal (server tools, MCP, container, url
+sources, other model, max_tokens, unknown fields), ptrace scope, ptrace attach and /proc mem of ancestors, re-opening an
+ancestor's stdout/stderr, writing/replacing settings.json, a real credential in any process environment, plus the
+positive checks (./tool works, sandbox writable, an allowed body is forwarded). Exit 1 if any probe escapes. Probes
+marked `minor` (the broker's unauthenticated ping must not reveal its pid: fixed in code, live only after the shared
+broker restarts) are reported in `minor_escaped` and do not fail the run. The episode used for the red-team is flagged
+`cross_episode_access` by the broker on purpose (the decoy probe), so never grade it. `--control` runs the same probes
+without the jail; it records no output (host output can hold real secrets), and its write probes clean up after
+themselves (a control run used to leave `~/rlsbx/.venv/rt_probe`, visible to every jail, and `/tmp/m`).
 
-Residual risks (accepted, 2026-10-04):
-- While an episode runs, the agent can send its own `/v1/messages` requests through the proxy (inference spend on the
-  operator's subscription, capped at 3 x max_turns + 30 requests, logged). It cannot read the credential, and no API
-  endpoint knows a task's answers.
+Residual risks (accepted, 2026-10-04, after the isolation audit fixes):
+- The agent can still send up to 2 API requests of its own through the proxy before it is refused (same model, plain
+  text and client tools only, no web access). The episode is then INVALID (`launcher_api_cross_check`); the spend is
+  bounded by 2 x max_tokens of the episode model. It cannot read the credential.
+- Compaction: if the CLI auto-compacts a long conversation, that summarisation request is not in the stream; one
+  unmatched request per `compact_boundary` event is tolerated. Not yet seen live (no episode has been long enough).
+- The proxy's cross-check knows three CLI rewrites of tool inputs (above), found with live probes of all six tools
+  (2026-10-04). Another rewrite (a new CLI version, or a tool path not yet exercised) would make an honest episode
+  INVALID (`launcher_api_cross_check`; `hidden_tool_uses` lists both inputs, so add the rewrite to
+  `_same_tool_input`). That fails safe. Live check: 5 Haiku and 1 Opus `_demo` episodes after the fixes were all valid.
 - The broker socket is shared by all episodes. The broker identifies the caller's episode by its cwd, which still works
-  for jailed processes (sandbox mounted at its real path); other episode ids are not discoverable from inside.
-- The agent's shell shares the CLI's uid and pid namespace, so it could write into the CLI's stdout pipe
-  (/proc/<pid>/fd/1) and corrupt or forge stream events. Corrupting a real event (to hide a tool call from the audit)
-  leaves an unparsable line and an orphan tool_result, which the launcher reports: `stream_integrity.ok` = false.
-  Treat such an episode as INVALID (`finish` does not read api_meta.json yet; the operator or a later harness change
-  must check it). The jail, not the audit, is what keeps files out of reach, so a hidden call still cannot read them.
+  for jailed processes (sandbox mounted at its real path); other episode ids are not discoverable from inside. Its
+  unauthenticated `ping` revealed the broker's host pid until this branch (fix live after the next broker restart).
+- The agent can still write files in the config dir (not settings.json): native transcripts (`claude_native_*.jsonl`,
+  forensics only, never audited) and Claude Code state. `--safe-mode` ignores CLAUDE.md, hooks, plugins, skills and
+  custom agents placed there.
+- The agent can kill its own CLI or socat bridge (same uid); that ends or breaks its own episode, visibly.
 - `/proc/self/mountinfo` shows the host paths of the bind mounts (sandbox, venv, the per-run state dir name). Paths
   only, no content.
 - The jail is only as strong as bubblewrap, user namespaces and the kernel; the agent runs as the operator's uid.
+  `ptrace_scope = 1` is a host-wide setting (it also stops same-uid debuggers such as `gdb -p`/`py-spy` from attaching
+  to non-child processes; use sudo for those).
 - The operator's OAuth token must stay fresh during an episode (the proxy re-reads it, so any operator activity that
   refreshes it suffices). An expired token gives the jail 503s (episode then shows `api_proxy_errors`).

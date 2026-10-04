@@ -803,6 +803,23 @@ def episode_prompt(rec):
         return AGENT_PROMPT.format(sandbox=rec["sandbox"])
 
 
+def _launcher_check(edir, agent_model):
+    """Isolated Claude CLI episodes (common/claude_agent.py; agent model "claude-cli:..." or an api_meta.json with
+    provider claude-code-cli): read the launcher's api_meta.json and turn its integrity checks into INVALID reasons
+    (stream tampering, proxy cross-check, credential leak, refused API requests, unexpected tools, ptrace scope).
+    A claude-cli episode without api_meta.json is INVALID (launcher_meta_missing). Other agents: no check."""
+    mp = os.path.join(edir, "api_meta.json")
+    meta = _load_json(mp) if os.path.exists(mp) else None
+    is_cli = str(agent_model or "").startswith("claude-cli:") or (
+        isinstance(meta, dict) and meta.get("provider") == "claude-code-cli")
+    if not is_cli:
+        return {"applies": False, "invalid": []}
+    from common import claude_agent
+    reasons = ["launcher_" + r if not r.startswith("launcher_") else r
+               for r in claude_agent.launcher_invalid_reasons(meta)]
+    return {"applies": True, "invalid": reasons, "api_meta": "api_meta.json" if meta is not None else None}
+
+
 def finish(episode, transcripts=None, agent_model=None, search_root=None, solver_rc=None):
     """Grade, scan and audit one episode. solver_rc: the scripted solver's exit code (run-scripted passes it; an int,
     or "timeout"). With it, the episode is INVALID if rc != 0 (`solver_failed`) or if the solver made no successful
@@ -888,6 +905,8 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
     health = tool_log_health(log_dst, client_disconnect_is_infra=not is_llm)
     if not submitted and health["infra_failures"] and not health["recovered"]:
         invalid.append("infra_failure")
+    launcher = _launcher_check(edir, rec.get("agent_model"))
+    invalid += launcher["invalid"]
     if solver_rc is not None:
         if solver_rc != 0:
             invalid.append("solver_failed")
@@ -907,6 +926,7 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
         "solver_rc": solver_rc, "infra_failures": health["infra_failures"],
         "n_ok_task_calls": health["n_ok_task_calls"],
         "cross_episode_access": bool(rec.get("cross_episode_access")),
+        "launcher_check": launcher,
         "audit_valid": audit["valid"], "audit_skipped": audit.get("skipped"),
         "n_audit_violations": len(audit["violations"]),
         "transcript_discovery": audit.get("discovery"),

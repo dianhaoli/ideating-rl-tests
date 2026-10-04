@@ -1,0 +1,203 @@
+{
+ "episode": "ep686f74a5cc",
+ "task": "_demo",
+ "provider": "claude-code-cli",
+ "model": "claude-haiku-4-5-20251001",
+ "effort": "high",
+ "auth": "oauth",
+ "token_valid_min_at_start": 355,
+ "token_in_jail": false,
+ "turns": 6,
+ "stop": "submitted",
+ "submitted": true,
+ "usd": 0.0251,
+ "usd_note": "CLI-reported list-price estimate; billed to the operator's subscription",
+ "wall_s": 19.1,
+ "session_id": "c26da5c7-da83-4c89-af60-29cf9089e2ab",
+ "usage": [
+  {
+   "input_tokens": 50,
+   "cache_creation_input_tokens": 4145,
+   "cache_read_input_tokens": 66111,
+   "output_tokens": 2020,
+   "output_tokens_details": {
+    "thinking_tokens": 585
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4145,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [],
+   "speed": "standard",
+   "fallback_credit": null
+  }
+ ],
+ "model_usage": [
+  {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 50,
+    "outputTokens": 2020,
+    "cacheReadInputTokens": 66111,
+    "cacheCreationInputTokens": 4145,
+    "webSearchRequests": 0,
+    "costUSD": 0.025051100000000003,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 585,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ ],
+ "net_denied": [],
+ "net_allowed_n": 0,
+ "api_proxy_requests": 6,
+ "api_requests": [
+  {
+   "t": 1791099512.1945522,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 38713,
+   "req_sha256": "a25f47287f9d3a58",
+   "msg_id": "msg_011CfgpGvYYg8SnFN9WkVuRk",
+   "out_tokens": 207,
+   "delivered": true
+  },
+  {
+   "t": 1791099514.0115964,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 41949,
+   "req_sha256": "b3ad8a4d3731e963",
+   "msg_id": "msg_011CfgpH4LMaGtECJpzsRptR",
+   "out_tokens": 331,
+   "delivered": true
+  },
+  {
+   "t": 1791099517.2368226,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 44073,
+   "req_sha256": "bc8ea0ba500024f1",
+   "msg_id": "msg_011CfgpHJ6M8tm4ZkkokG9ap",
+   "out_tokens": 730,
+   "delivered": true
+  },
+  {
+   "t": 1791099522.882763,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 47240,
+   "req_sha256": "78a58a82afa3e9f1",
+   "msg_id": "msg_011CfgpHiazZtFRduEfuKCe1",
+   "out_tokens": 443,
+   "delivered": true
+  },
+  {
+   "t": 1791099526.6261137,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 49555,
+   "req_sha256": "6a81bf77cccac76e",
+   "msg_id": "msg_011CfgpHzCbc2A6iEVsuiHwE",
+   "out_tokens": 152,
+   "delivered": true
+  },
+  {
+   "t": 1791099528.2390428,
+   "path": "/v1/messages?beta=true",
+   "allowed": true,
+   "status": 200,
+   "model": "claude-haiku-4-5-20251001",
+   "max_tokens": 32000,
+   "req_bytes": 50863,
+   "req_sha256": "faad80cf4fdccae2",
+   "msg_id": "msg_011CfgpJ78KXwRhLjeSGUrAx",
+   "out_tokens": 157,
+   "delivered": true
+  }
+ ],
+ "api_proxy_policy": {
+  "models": [
+   "claude-haiku-4-5-20251001"
+  ],
+  "max_tokens": 128000,
+  "max_requests": 120
+ },
+ "api_proxy_betas_dropped": [],
+ "api_proxy_denied": [],
+ "api_proxy_errors": [],
+ "isolation": "bwrap+netns+egress-allowlist",
+ "init": [
+  {
+   "model": "claude-haiku-4-5-20251001",
+   "tools": [
+    "Bash",
+    "Edit",
+    "Glob",
+    "Grep",
+    "Read",
+    "Write"
+   ],
+   "mcp_servers": [],
+   "cwd": "/home/ec2-user/rlsbx/ep686f74a5cc",
+   "permissionMode": "dontAsk",
+   "claude_code_version": "2.1.288",
+   "slash_commands": [],
+   "agents": [
+    "claude",
+    "Explore",
+    "general-purpose",
+    "Plan"
+   ],
+   "skills": []
+  }
+ ],
+ "exit_codes": [
+  0
+ ],
+ "stream_integrity": {
+  "ok": true,
+  "bad_lines": 0,
+  "orphan_results": [],
+  "n_tool_uses": 5
+ },
+ "proxy_cross_check": {
+  "ok": true,
+  "n_generation_requests": 6,
+  "n_stream_messages": 6,
+  "n_proxy_tool_uses": 5,
+  "compactions": 0,
+  "unmatched_requests": [],
+  "n_unmatched": 0,
+  "n_unexplained": 0,
+  "hidden_tool_uses": [],
+  "out_tokens_total": 2020,
+  "out_tokens_unmatched": 0
+ },
+ "host_ptrace_scope": 1,
+ "credential_found_in": [],
+ "launcher_invalid_reasons": []
+}
