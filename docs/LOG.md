@@ -559,3 +559,8 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   procedure end to end; a small model fixes one stage and breaks another.
 - No environment fault singles out the small models (no caps hit). One TASK.md ambiguity: "held-out texts" vs scoring removal on the confounded
   sample. Exposure asymmetry: 12 Opus episodes read the ./tool wrapper code; the small models never did (not causal here).
+- (2026-10-04) **Why gpt-6.1-sol failed 3/10 on T2** (details: task/shifthunt SCALE1_OPENAI.md "Failure classification"): all 3 are removal
+  misses on correctly named probes (naming 26/26, null false claims 0/9). (A) 1 slot used only 5 of 20 latents (-0.034), on the probe both Opus agents
+  also missed. (B) 2 slots used a full 20 chosen as cue-pure or by sample attribution, missing latents that carry the cue through context (-0.003, -0.037).
+  Same failure kinds as Opus; all misses are on the probes where the reference clears the bar by < 0.05. sol sits closer to the bar than Opus
+  (effort medium vs xhigh confound).
