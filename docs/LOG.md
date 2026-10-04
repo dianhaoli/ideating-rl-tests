@@ -629,3 +629,6 @@ Workflow 1: planner (xhigh); harness fixes and isolation launcher in parallel, e
 - I stopped the workflow before it finished the grader fix loop. B's uncommitted edits are left in ~/wt/shifthunt3.
 - Copies on main: docs/results/shifthunt3/ (SPEC_v3, STAGE0, KILLED; aggregates only, scanned for ids). STATUS section 2b.
 - Harness work merged earlier (edc661f7).
+
+## 2026-10-04: disk cleanup (Dan)
+Removed the four Qwen2.5 models (8.2 GB of blobs, none shared with other models; used only by EditFind, T2Ravel and ResidualRecall, and re-downloadable) and 9,914 old episode sandboxes under ~/rlsbx (2.9 GB). Transcripts and grades live in the run dirs. The one still-open _demo episode was kept. Disk: 93% -> 82% (19 GB free).
