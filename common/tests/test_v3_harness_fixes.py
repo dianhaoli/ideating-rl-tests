@@ -39,6 +39,7 @@ def test_hard_cap_default_and_explicit():
     assert broker.hard_cap({"wall_clock_s": 10}) == 70                 # at least 60 s of grace to submit
     assert broker.hard_cap({"wall_clock_s": 3600, "wall_clock_hard_s": 4000}) == 4000
     assert broker.hard_cap({}) == 5400                                  # records without caps: the defaults
+    assert broker.hard_cap({"wall_clock_s": 100, "wall_clock_hard_s": 50}) == 100   # never below the nominal cap
     rec = {"caps": {"wall_clock_s": 100}, "started_at": 1000.0, "wait_s": 30.0, "submitted_at": 1150.0}
     t = broker.episode_times(rec)
     assert (t["agent_s"], t["total_s"], t["over_nominal"], t["over_hard"]) == (120.0, 150.0, True, False)
@@ -305,7 +306,8 @@ def test_api_call_retries_only_within_ceiling(monkeypatch):
 def test_prepare_makes_tmp_and_prompt_names_it(hx):
     ep, _ = _prep(hx, hx.insts["null"][0])
     assert os.path.isdir(os.path.join(ep["sandbox"], "tmp"))
-    assert "For temporary files use tmp/ in your working directory, never /tmp." in ep["prompt"]
+    assert "For temporary files use tmp/ in your working directory, never /tmp" in ep["prompt"]
+    assert "tempfile.mkstemp(dir='tmp')" in ep["prompt"]
     assert "tmp" in sandbox.RESERVED_SANDBOX_NAMES
 
 
@@ -336,6 +338,7 @@ TMP_CLEAN = [
     bash(C + "./py - <<'EOF'\nimport tempfile, json\nwith tempfile.NamedTemporaryFile('w', delete=False) as f:\n"
              "    json.dump([1], f)\nprint(f.name)\nEOF"),
     bash(C + "f=$(mktemp) && ./tool budget > \"$f\" && cat \"$f\""),
+    bash(C + "./py -c \"import tempfile; fd, p = tempfile.mkstemp(dir='tmp'); print(p)\""),   # the prompt's example
 ]
 TMP_FLAGGED = [   # the recorded Haiku shapes (scale1_T1_haiku45) and other real /tmp access: still INVALID
     bash(C + "./tool probe_scores probe=0 > /tmp/ablated.json 2>&1 && cat /tmp/ablated.json"),

@@ -48,7 +48,7 @@ Then read TASK.md there (cat TASK.md). It explains the task, the tools and the e
 
 - Use ./tool to call the task's tools (./tool help lists them; ./tool budget shows what you have left).
 - Use ./py (a Python with numpy, scipy and scikit-learn) for analysis, for example of the .npy files that tools save under out/. Keep your own files in scratch/.
-- For temporary files use tmp/ in your working directory, never /tmp. (Python's tempfile module already writes there.)
+- For temporary files use tmp/ in your working directory, never /tmp (in Python, for example tempfile.mkstemp(dir='tmp')).
 - Do not use web search or web fetch, and do not install or download anything.
 - Do not spawn sub-agents or helper tasks; work alone.
 - The first tool call may print "waiting for compute..." while the system is loaded. If a command times out, simply run it again.

@@ -94,9 +94,9 @@ def hard_cap(caps):
     """The absolute wall-clock ceiling (s) of an episode: caps.wall_clock_hard_s if set, else
     max(1.5 x wall_clock_s, wall_clock_s + 60). Records written before 2026-10-04 have no wall_clock_hard_s."""
     caps = caps or {}
-    if caps.get("wall_clock_hard_s"):
-        return float(caps["wall_clock_hard_s"])
     nom = float(caps.get("wall_clock_s", DEFAULT_CAPS["wall_clock_s"]))
+    if caps.get("wall_clock_hard_s"):
+        return max(float(caps["wall_clock_hard_s"]), nom)          # never below the nominal cap
     return max(HARD_FACTOR * nom, nom + HARD_MIN_GRACE_S)
 
 

@@ -475,13 +475,16 @@ Refinements to the spec above:
   submission. The runners now check the broker record after every command, and api_meta `stop` is
   `api_agent.final_stop(episode, loop_stop)`: "submitted" whenever the record holds an accepted submission;
   `runner_stop` keeps the loop's own reason.
-- **Sandbox-local temp dir.** WHY: 5 Haiku episodes of scale1_T1_haiku45 were INVALID for `/tmp` paths; all were
-  explicit shell redirections (`./tool ... > /tmp/x.json`, then reading it back), none was Python's tempfile. Every
-  sandbox now has `tmp/` (reserved name, pruned like out/ and scratch/), the agent prompt says "For temporary files use
-  tmp/ in your working directory, never /tmp. (Python's tempfile module already writes there.)", and the runners set
-  `TMPDIR`/`TMP`/`TEMP` to `<sandbox>/tmp` (`api_agent.bash_env`). The audit needs no relaxation: `<sandbox>/tmp` is
+- **Sandbox-local temp dir.** WHY: of the 5 INVALID Haiku episodes of scale1_T1_haiku45, 4 had R2 `/tmp` hits, all
+  explicit shell redirections of tool output (`./tool ... > /tmp/x.json`, then `cat`/`open('/tmp/x.json')` to read
+  it back), none Python's tempfile. (The other hits in that run: R5 "process inspection" on `(top 4 latents)` inside a
+  printed f-string in 2 episodes -- the only reason for ep84b8865060 -- and one R1 Read of Claude Code's own
+  tool-results file; both left as open items.) Every sandbox now has `tmp/` (reserved name, pruned like out/ and
+  scratch/), the agent prompt says "For temporary files use tmp/ in your working directory, never /tmp (in Python,
+  for example tempfile.mkstemp(dir='tmp')).", and the runners set `TMPDIR`/`TMP`/`TEMP` to `<sandbox>/tmp`
+  (`api_agent.bash_env`), so tempfile/mktemp land there by default. The audit needs no relaxation: `<sandbox>/tmp` is
   inside the sandbox, and `/tmp` is still R2. Claude Code subagents get the prompt line only (their TMPDIR is set by
-  Claude Code).
+  Claude Code), hence the explicit `dir='tmp'` example.
 - **Over-long command output.** The runners showed only the first and last 6k of an output over 12k chars with a
   bare "[N chars truncated]". Now the full output is saved to `out/cmd_output_<n>.txt` in the sandbox and the shown
   head + tail carry an explicit note with that path (`api_agent.truncate_output`).
