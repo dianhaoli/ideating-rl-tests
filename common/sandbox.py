@@ -10,12 +10,14 @@
     python -m common.sandbox summarize --run-dir R
 
 An episode sandbox ~/rlsbx/<E>/ holds ONLY: TASK.md, tool (client), py (-> analysis venv python),
-out/ (arrays written by tools, large responses), scratch/ (agent's own files) and .episode.
+out/ (arrays written by tools, large responses, over-long command outputs saved by the API runners), scratch/ (agent's
+own files), tmp/ (the agent's temp dir: TMPDIR in the runners; v3 fix 3) and .episode.
 Everything privileged (instance dir, answer key, canary, leak strings, counters, tool log) lives in
 the episode record <main repo>/runs/.episodes/<E>.json, which only the broker and this module read.
 See docs/HARNESS_API.md for the contract.
 """
 import argparse
+import collections
 import fcntl
 import glob
 import hashlib
@@ -46,6 +48,7 @@ Then read TASK.md there (cat TASK.md). It explains the task, the tools and the e
 
 - Use ./tool to call the task's tools (./tool help lists them; ./tool budget shows what you have left).
 - Use ./py (a Python with numpy, scipy and scikit-learn) for analysis, for example of the .npy files that tools save under out/. Keep your own files in scratch/.
+- For temporary files use tmp/ in your working directory, never /tmp. (Python's tempfile module already writes there.)
 - Do not use web search or web fetch, and do not install or download anything.
 - Do not spawn sub-agents or helper tasks; work alone.
 - The first tool call may print "waiting for compute..." while the system is loaded. If a command times out, simply run it again.
@@ -143,6 +146,8 @@ def render_caps(caps):
     lines.append(f"- time: {caps['wall_clock_s'] / 60:.0f} minutes from your first tool call "
                  f"(time spent waiting for compute is not counted); each tool call may run at most "
                  f"{caps['call_timeout_s']} s")
+    lines.append(f"- absolute time limit: {broker.hard_cap(caps) / 60:.0f} minutes from your first tool call, "
+                 f"including any waiting; after it no submission is accepted")
     return "\n".join(lines)
 
 
@@ -309,7 +314,8 @@ def min_submit_check(rec):
 
 
 # ---- prepare options: --extra-file SRC:DST (copied into the sandbox after a leak scan)
-RESERVED_SANDBOX_NAMES = ("TASK.md", "tool", "py", ".episode", "out")
+SANDBOX_TMP = "tmp"          # the episode's own temp dir (TMPDIR in the runners); see prepare
+RESERVED_SANDBOX_NAMES = ("TASK.md", "tool", "py", ".episode", "out", SANDBOX_TMP)
 
 
 def parse_extra_files(specs):
@@ -413,6 +419,7 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     if bad:
         raise ValueError("bad leak_strings: " + "; ".join(bad))
     caps = broker.merged_caps(inst.get("caps"))
+    caps.setdefault("wall_clock_hard_s", int(round(broker.hard_cap(caps))))   # explicit in the record (v3 fix 1)
     policy = parse_min_submit_frac(min_submit_frac, caps)
     extras = parse_extra_files(extra_files)
     desc = _describe(task_root, task, profile)
@@ -443,6 +450,10 @@ def prepare(task, instance_dir, profile, run_dir, solver_label=None, tasks_root=
     sbx = os.path.join(paths.sandbox_root(), eid)
     os.makedirs(os.path.join(sbx, "out"))
     os.makedirs(os.path.join(sbx, "scratch"))
+    # Sandbox-local temp dir (v3 fix 3). WHY: 5 Haiku episodes (ShiftHunt scale1 T1) were INVALID for writing tool
+    # output to /tmp (`./tool ... > /tmp/x.json`), and Python's tempfile defaults there too. The runners set
+    # TMPDIR/TMP/TEMP to this directory and the agent prompt names it; /tmp itself stays an audit violation.
+    os.makedirs(os.path.join(sbx, SANDBOX_TMP))
     with open(os.path.join(sbx, "TASK.md"), "w") as f:
         f.write(task_md)
     with open(os.path.join(sbx, "tool"), "w") as f:
@@ -803,6 +814,50 @@ def episode_prompt(rec):
         return AGENT_PROMPT.format(sandbox=rec["sandbox"])
 
 
+def _last_activity(log_path):
+    """End time of the last agent call in a tool log (t + elapsed_s of entries that name a tool), or None. Server
+    events are skipped: finish's own close logs a server_stopped event at finish time."""
+    last = None
+    try:
+        with open(log_path) as f:
+            for line in f:
+                try:
+                    e = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                t = e.get("t")
+                if isinstance(t, (int, float)) and e.get("tool"):
+                    last = max(last or 0.0, t + float(e.get("elapsed_s") or 0.0))
+    except OSError:
+        pass
+    return last
+
+
+def episode_time_report(rec, log_path, edir):
+    """Both episode times for grade.json (v3 fix 1): agent time (since the first tool call, minus compute wait; capped
+    by wall_clock_s) and total time (wait included; capped by the absolute ceiling broker.hard_cap). The end is the
+    submission; for an episode without one, the hard-limit close if the broker closed it, else the last tool-log
+    activity (NOT the finish time, which can be hours later). If the agent runner wrote api_meta.json next to the
+    transcript, its own clock (runner_total_s: from runner start to stop, i.e. including model time after the last
+    tool call) and stop reason are added. over_time: None, "nominal" (past wall_clock_s) or "hard" (past the ceiling;
+    by either clock)."""
+    r = dict(rec)
+    if r.get("submitted_at") is None:
+        r["closed_at"] = (rec.get("closed_at") if rec.get("close_reason") == "wall_clock_hard"
+                          else _last_activity(log_path) or rec.get("started_at"))
+    t = broker.episode_times(r)
+    out = {"agent_s": t["agent_s"], "total_s": t["total_s"], "wait_s": t["wait_s"], "cap_s": t["cap_s"],
+           "hard_cap_s": t["hard_cap_s"], "close_reason": rec.get("close_reason")}
+    meta = _load_json(os.path.join(edir, "api_meta.json"))
+    if isinstance(meta, dict) and meta.get("episode") == rec.get("episode"):
+        out["runner_total_s"] = meta.get("total_time_s", meta.get("wall_s"))
+        out["runner_stop"] = meta.get("stop")
+    over_hard = t["over_hard"] or (isinstance(out.get("runner_total_s"), (int, float))
+                                   and out["runner_total_s"] > t["hard_cap_s"])
+    out["over_time"] = "hard" if over_hard else ("nominal" if t["over_nominal"] else None)
+    return out
+
+
 def finish(episode, transcripts=None, agent_model=None, search_root=None, solver_rc=None):
     """Grade, scan and audit one episode. solver_rc: the scripted solver's exit code (run-scripted passes it; an int,
     or "timeout"). With it, the episode is INVALID if rc != 0 (`solver_failed`) or if the solver made no successful
@@ -894,6 +949,7 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
         if not submitted and health["n_ok_task_calls"] == 0:
             invalid.append("no_successful_call")
     end = rec.get("submitted_at") or rec.get("closed_at") or time.time()
+    times = episode_time_report(rec, log_dst, edir)
     grade["harness"] = {
         "episode": episode, "task": rec["task"], "instance_id": rec.get("instance_id"), "tier": rec.get("tier"),
         "profile": rec["profile"], "solver_label": rec.get("solver_label"), "agent_model": rec.get("agent_model"),
@@ -914,6 +970,7 @@ def finish(episode, transcripts=None, agent_model=None, search_root=None, solver
         "valid": not invalid, "invalid_reasons": invalid,
         "elapsed_s": round(end - rec["started_at"], 1) if rec.get("started_at") else None,
         "wait_s": round(rec.get("wait_s", 0.0), 1),
+        "time": times, "over_time": times["over_time"],
         "prompt_template": rec.get("prompt_template"), "min_submit": msc,
         "extra_files": [{"dst": e["dst"], "sha256": e["sha256"]} for e in rec.get("extra_files") or []],
     }
@@ -942,7 +999,7 @@ def _prune_sandbox(rec, edir):
     if os.environ.get("RL_KEEP_SANDBOX") == "1":
         return
     removed, freed = [], 0
-    for sub in ("out", "scratch"):
+    for sub in ("out", "scratch", SANDBOX_TMP):
         for root, _dirs, files in os.walk(os.path.join(rec["sandbox"], sub)):
             for fn in files:
                 fp = os.path.join(root, fn)
@@ -1061,6 +1118,10 @@ def _group_stats(rows):
         "planted_slot_accuracy": (sum(1 for s in planted_slots if s.get("correct")) / len(planted_slots))
         if planted_slots else None,
         "behavioral_exposure_total": sum(g["harness"].get("behavioral_exposure", 0) for g in rows),
+        # v3 fix 1: time-limit exceedance, over ALL episodes (valid or not). Graded before 2026-10-04 => "unknown".
+        "over_time": dict(sorted(collections.Counter(
+            str(g["harness"].get("over_time")) if "over_time" in g["harness"] else "unknown" for g in rows).items())),
+        "max_total_time_s": max([_dict(g["harness"].get("time")).get("total_s") or 0 for g in rows] or [0]),
     }
 
 
@@ -1083,8 +1144,8 @@ def summarize(run_dir):
           f"Generated {summary['generated_at']} by `python -m common.sandbox summarize`. "
           "Pass rate is over VALID episodes only (no leak, transcript audit passed, grader ran). "
           "CI = Wilson 95%. These numbers describe this run directory only.", "",
-          "| group | valid/total | pass | pass rate | Wilson 95% | mean score | null-slot false-claim |",
-          "|---|---|---|---|---|---|---|"]
+          "| group | valid/total | pass | pass rate | Wilson 95% | mean score | null-slot false-claim | over time (nominal/hard) |",
+          "|---|---|---|---|---|---|---|---|"]
 
     def fmt(x):
         return "-" if x is None else f"{x:.3f}"
@@ -1092,13 +1153,17 @@ def summarize(run_dir):
     for k, s in summary["groups"].items():
         md.append(f"| {k} | {s['n_valid']}/{s['n_episodes']} | {s['n_pass']} | {fmt(s['pass_rate'])} | "
                   f"[{s['wilson95'][0]:.3f}, {s['wilson95'][1]:.3f}] | {fmt(s['mean_score'])} | "
-                  f"{fmt(s['null_slot_false_claim_rate'])} |")
+                  f"{fmt(s['null_slot_false_claim_rate'])} | "
+                  f"{s['over_time'].get('nominal', 0)}/{s['over_time'].get('hard', 0)} |")
     for k, s in summary["groups"].items():
         md += ["", f"## {k}", "", "Per-instance pass-rate histogram (instances per bin):", "",
                "| " + " | ".join(HIST_BINS) + " |", "|" + "---|" * len(HIST_BINS),
                "| " + " | ".join(str(s["per_instance_hist"][b]) for b in HIST_BINS) + " |", ""]
         if s["invalid_reasons"]:
             md.append(f"Invalid episodes: {s['invalid_reasons']}")
+        if s["over_time"].get("nominal") or s["over_time"].get("hard"):
+            md.append(f"TIME LIMIT EXCEEDED: {s['over_time'].get('nominal', 0)} episode(s) past the nominal cap, "
+                      f"{s['over_time'].get('hard', 0)} past the absolute ceiling (max total {s['max_total_time_s']} s)")
         md.append(f"Per instance (pass/n): " + ", ".join(f"{i}: {v['pass']}/{v['n']}" for i, v in s["per_instance"].items()))
     with open(os.path.join(run_dir, "summary.md"), "w") as f:
         f.write("\n".join(md) + "\n")

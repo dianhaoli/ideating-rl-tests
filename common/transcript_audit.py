@@ -71,6 +71,9 @@ Python source the agent writes, read as Python (tokenize/ast):
  - R2: `NAME + '/x'` where every binding of NAME is a literal sandbox path is resolved, and exempt if it stays inside.
  - R2: an f-string range `{a:.2f}..{b:.2f}` (literal '..' between two fields, one with a numeric spec) is not '..'.
  - R5: a Python NAME directly followed by `=` (`top = {...}`, `TOP = ...`) is a binding, not the top command.
+v3 fix of 2026-10-04 (fix 5; WHY comment (e) below):
+ - R2: a quoted '/' that is the replacement of `<expr>.replace(<literal>, '/')`, where that call (or a chain of such
+   calls) is a whole argument of print(), is printed text, not the root (only where python_spans exempts).
 
 Output: {valid, violations[{i, tool, rule, detail}], n_tool_calls, commands[], transcripts[], discovery,
 prompt_check[]}.
@@ -773,6 +776,65 @@ def _print_sep_slash_offsets(regions):
     return out
 
 
+# (e) WHY (v3 fix 5, 2026-10-04; ShiftHunt openai_T2_sol ep2c6190e0f5 call 15, a passing episode made INVALID:
+# `print(round(a.mean(),2), s[:40].replace('\n','/'), ...)` in a `./py - <<'PY'` heredoc that prints token windows
+# on one line): ROOT_RX reads the quoted '/' -- the REPLACEMENT argument of str.replace -- as the filesystem root.
+# ROOT_SEP_METHOD_RX exempts only a '/' that is the FIRST argument of .replace (and keeps `.replace('x', '/')` flagged
+# on purpose: in general it can build a path, `'xetcxpasswd'.replace('x', '/')`). Here the built text goes only to
+# print. Exempt, under exactly the conditions of (a) (a region python_spans exempts, so nothing in the tool call can
+# hand the printed text to a shell; print is not rebound; no `builtins`), and only when the '/' is the second
+# argument of a call `<expr>.replace(<str literal>, '/')` with exactly two positional arguments and no keywords,
+# and that call is a whole positional argument of print() -- directly, or through a chain of further such
+# `.replace(<literal>, <literal>)` calls (`s.replace('\n','/').replace('\t',' ')`). The receiver may be any
+# expression except a bare imported name (`os.replace('a', '/')` renames a file). Still flagged: the same call
+# anywhere else (`open(s.replace('x','/'))`, `print(open(s.replace('x','/')))`, `p = s.replace('x','/')`), a computed
+# first argument, `sep='/'`/`end='/'`, f-strings, and every other path in the command (`/etc/passwd` in
+# `print(open('/etc/passwd').read().replace('\n','/'))` is a PATH_RX hit that this never touches).
+def _replace_chain_slash(node, imported):
+    """Offsets (lineno, col) of the '/' replacement literals along a `.replace(<lit>, <lit>)` chain rooted at `node`
+    (the print argument); [] if any link is not of that exact shape."""
+    hits = []
+    while isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "replace":
+        a = node.args
+        if (len(a) != 2 or node.keywords or not all(isinstance(x, ast.Constant) and isinstance(x.value, str)
+                                                     for x in a)):
+            return []
+        if a[1].value == "/":
+            hits.append((a[1].lineno, a[1].col_offset))
+        node = node.func.value
+        if isinstance(node, ast.Name) and node.id in imported:
+            return []
+    return hits
+
+
+def _print_replace_slash_offsets(regions):
+    out = set()
+    for off, src in regions:
+        toks = _py_tokens(src)
+        if not toks or any(t[0] == tokenize.NAME and (t[1] == "builtins" or (t[1] == "print" and (
+                i + 1 >= len(toks) or toks[i + 1][1] != "(" or (i > 0 and toks[i - 1][1] in (".", "def", "class")))))
+                for i, t in enumerate(toks)):
+            continue
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                tree = ast.parse(src)
+        except Exception:
+            continue
+        imported = {(al.asname or al.name).split(".")[0] for n in ast.walk(tree)
+                    if isinstance(n, (ast.Import, ast.ImportFrom)) for al in n.names}
+        starts = _line_starts(src)
+        for n in ast.walk(tree):
+            if not (isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "print"):
+                continue
+            for arg in n.args:
+                for ln, col in _replace_chain_slash(arg, imported):
+                    o = _ast_offset(src, starts, ln, col)
+                    if src[o:o + 3] in ("'/'", '"/"'):
+                        out.add(off + o + 1)
+    return out
+
+
 # (b) WHY (T1 scaled run, 1 episode: `D='<its sandbox>'` then `subprocess.run([D+'/tool', ...])` and
 # `open(D+'/'+j['saved_to'])` in a heredoc module): PATH_RX reads '/tool' as an absolute path and ROOT_RX reads '/'
 # as the root, although the string is appended to the sandbox path. In `NAME + '<literal>'` the literal is resolved
@@ -1042,7 +1104,7 @@ def path_violations(text, sandbox, cwd=None, dotdot=True, shell=False, py_spans=
         joins = _sandbox_join_spans(regions, sandbox) if path_ms or root_ms else ()          # E1 (b)
         if root_ms:
             guarded = _exact_regions(text_paths, True) if shell else _file_regions(py_file, text, True)
-            seps = _print_sep_slash_offsets(guarded)                                         # E1 (a)
+            seps = _print_sep_slash_offsets(guarded) | _print_replace_slash_offsets(guarded)  # E1 (a), v3 (e)
     for m in path_ms:
         raw = m.group(1).rstrip(".,:")
         if raw == "~" and _in_spans(m.start(1), spans):

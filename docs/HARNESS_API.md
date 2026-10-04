@@ -8,7 +8,7 @@ docs/DECISIONS.md. A complete worked example of a task is `tasks/_demo/` (no GPU
 
 Terms used below:
 - **Privileged side**: the repo, instance answer keys, graders, reference solvers. The test agent must never see any of it.
-- **Agent side**: one sandbox directory per episode, `~/rlsbx/<episode_id>/`. It holds only `TASK.md`, the `tool` client, the `py` analysis Python, `out/` and `scratch/`.
+- **Agent side**: one sandbox directory per episode, `~/rlsbx/<episode_id>/`. It holds only `TASK.md`, the `tool` client, the `py` analysis Python, `out/`, `scratch/` and `tmp/` (the agent's temp dir, 2026-10-04).
 - **Episode**: one attempt by one solver (an LLM test agent or a scripted baseline) on one instance under one tool profile.
 - **Tool profile**: the set of tools exposed. `full` is the normal white-box task. `blackbox` keeps only behavioural tools (generate/score text) for the black-box control.
 
@@ -109,7 +109,7 @@ Python helper for scripted solvers: `from common.toolclient import Client; c = C
 python -m common.sandbox prepare --task T --instance-dir D --profile full|blackbox \
        --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus|haiku|reference|blackbox|recipe] \
        [--prompt-template FILE] [--min-submit-frac forward=0.6] [--extra-file SRC:DST ...]   (see below)
-   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, .episode}
+   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, tmp/, .episode}
       writes runs/.episodes/<E>.json and <run-dir>/episodes/<E>/episode.json
       prints E and the exact test-agent prompt (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
 python -m common.sandbox finish --episode E [--transcript PATH] [--agent-model MODEL]
@@ -451,3 +451,44 @@ Refinements to the spec above:
   9 of 20 T1 agents used it, and one operator read it as "exec of transformed code". The audit is unchanged; a test
   checks that every exec example in the prompt passes R9 and that `.replace`, slicing, `+`, a computed marker and
   `..` still fire. Applies to episodes prepared from now on (prompt text and sha change).
+
+### v3 harness fixes (2026-10-04; ShiftHunt v2 evidence, branch harness/v3-fixes)
+- **Wall clock: nominal cap + absolute ceiling.** WHY: ShiftHunt diag_T1_luna_high ep40a2ecda0d ran 6366 s against
+  `wall_clock_s` 3600. It was not compute-wait exclusion (`wait_s` was 15 s): neither runner had a clock, the broker only
+  refused task tools after the cap, and three OpenAI requests took 1169 s, 1906 s and 1422 s (600 s SDK request timeout
+  x internal retries); the agent submitted 46 minutes late. Now `wall_clock_s` caps agent time (since the first tool
+  call, minus compute wait; past it task tools are refused, submit still works) and the new cap `wall_clock_hard_s`
+  (default `max(1.5 x wall_clock_s, wall_clock_s + 60)`, `broker.hard_cap`; written into the record at prepare) caps
+  total time including waits: past it the broker refuses task tools AND submit and closes the episode
+  (`close_reason: wall_clock_hard`, tool-log event `wall_clock_hard`). Both runners (`api_agent`, `openai_agent`) send
+  a time notice once agent time reaches `wall_clock_s` and stop 2 turns later (`runner_stop: wall_clock`), and never
+  pass the ceiling: SDK retries are off, `_api_call` retries within the ceiling, every request and bash command gets a
+  timeout that ends at it (`runner_stop: wall_clock_hard`). TASK.md states the absolute limit; `./tool budget` shows
+  `wall_clock_hard_s`. Recorded: episode record `time` (at submit/close), api_meta.json `agent_time_s`,
+  `total_time_s`, `broker_wait_s`, `wall_clock_cap_s`, `wall_clock_hard_s`, `time_warned`; grade.json
+  `harness.time` and `harness.over_time` (None / "nominal" / "hard"; for an unsubmitted episode the end is the last
+  tool call, not the finish time); summary.json `over_time`, `max_total_time_s`; summary.md column
+  "over time (nominal/hard)" and a TIME LIMIT EXCEEDED line. Over time is visible, not INVALID.
+- **Runner stop reason from the episode record.** WHY: gpt-6.1-sol submitted via `subprocess.check_output(['./tool',
+  'submit', ...])` inside `./py` (openai_T1_sol ep8f9ba96cef, epa024656248); the runner matched only `./tool submit`
+  in the command text, nudged a finished agent and reported `ended_without_submit` while the grader graded the
+  submission. The runners now check the broker record after every command, and api_meta `stop` is
+  `api_agent.final_stop(episode, loop_stop)`: "submitted" whenever the record holds an accepted submission;
+  `runner_stop` keeps the loop's own reason.
+- **Sandbox-local temp dir.** WHY: 5 Haiku episodes of scale1_T1_haiku45 were INVALID for `/tmp` paths; all were
+  explicit shell redirections (`./tool ... > /tmp/x.json`, then reading it back), none was Python's tempfile. Every
+  sandbox now has `tmp/` (reserved name, pruned like out/ and scratch/), the agent prompt says "For temporary files use
+  tmp/ in your working directory, never /tmp. (Python's tempfile module already writes there.)", and the runners set
+  `TMPDIR`/`TMP`/`TEMP` to `<sandbox>/tmp` (`api_agent.bash_env`). The audit needs no relaxation: `<sandbox>/tmp` is
+  inside the sandbox, and `/tmp` is still R2. Claude Code subagents get the prompt line only (their TMPDIR is set by
+  Claude Code).
+- **Over-long command output.** The runners showed only the first and last 6k of an output over 12k chars with a
+  bare "[N chars truncated]". Now the full output is saved to `out/cmd_output_<n>.txt` in the sandbox and the shown
+  head + tail carry an explicit note with that path (`api_agent.truncate_output`).
+- **Audit (e): `print(<expr>.replace(<literal>, '/'))`.** A quoted '/' that is the replacement argument of a
+  `.replace(<str literal>, '/')` call (or chain of such calls) that is a whole argument of print() is printed text,
+  under exactly the guards of (a) (python_spans region, print not rebound). Twins that stay flagged: the call inside
+  open()/listdir(), an assignment, `os.replace`, a computed first argument, a pipe into sh, `sep='/'`, f-strings, and
+  every other path. Replay over all 161 recorded transcript units under ~/wt/*/runs (5031 tool calls): exactly one
+  change, openai_T2_sol ep2c6190e0f5 flagged -> clean (`runs/_harness/audit_replay_v3fixes/`).
+  Tests: `common/tests/test_v3_harness_fixes.py`.

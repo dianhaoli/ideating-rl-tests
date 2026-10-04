@@ -23,13 +23,13 @@ Usage:
 """
 import argparse
 import fcntl
-import glob
 import json
 import os
-import re
 import time
 
-from common.api_agent import SYSTEM, _episode_submitted, _run_bash, MAIN_REPO, CAPS_FILE
+from common.api_agent import (SYSTEM, _episode_submitted, _run_bash, MAIN_REPO, CAPS_FILE, TIME_WARN,
+                              TIME_GRACE_TURNS, BASH_TIMEOUT_S, EpisodeClock, DeadlineReached, _api_call, final_stop,
+                              _paths)
 
 LEDGER_DIR = os.path.expanduser(os.environ.get("RL_API_LEDGER_DIR", "~/.rl_api"))
 LEDGER = os.path.join(LEDGER_DIR, "openai_ledger.jsonl")
@@ -37,7 +37,6 @@ LOCK = os.path.join(LEDGER_DIR, ".openai_lock")
 SNAPSHOT = os.path.join(MAIN_REPO, "runs", "api_budget", "openai_ledger_snapshot.jsonl")
 GLOBAL_CAP_USD = float(os.environ.get("OPENAI_GLOBAL_CAP_USD", "57.0"))
 KEY_FILE = os.path.expanduser("~/.openai_env")
-SBX_ROOT = os.path.expanduser("~/rlsbx")
 
 # $ per 1M tokens (short context <= 272K input): input, cached input, output.
 # Source: https://developers.openai.com/api/docs/pricing, fetched 2026-10-01.
@@ -51,8 +50,9 @@ PRICES = {
 BASH_TOOL = {
     "type": "function",
     "name": "bash",
-    "description": ("Run a bash command in your sandbox working directory and return stdout+stderr (truncated to "
-                    "~12k chars). Each call is a fresh shell starting in the sandbox; files you write persist. "
+    "description": ("Run a bash command in your sandbox working directory and return stdout+stderr (outputs over "
+                    "12k chars show the first and last 6k; the full output is saved to a file under out/ whose path "
+                    "is given). Each call is a fresh shell starting in the sandbox; files you write persist. "
                     "Timeout 900 s."),
     "parameters": {"type": "object", "properties": {"command": {"type": "string", "description": "the bash command"}},
                    "required": ["command"], "additionalProperties": False},
@@ -123,7 +123,22 @@ def _est_next(model, ctx_tokens, out_guess):
     return (ctx_tokens * pcache + 4000 * pin + out_guess * pout) / 1e6
 
 
-def run(args):
+def _openai_classify(openai):
+    def classify(e):
+        if isinstance(e, openai.RateLimitError):
+            return "rate"
+        if isinstance(e, openai.APIConnectionError):             # includes APITimeoutError
+            return "transient"
+        if isinstance(e, openai.APIStatusError) and (e.status_code >= 500 or e.status_code in (408, 409)):
+            return "transient"
+        return None
+    return classify
+
+
+def run(args, client=None):
+    """One episode. `client`: an OpenAI client (tests pass a fake); default: a real one with SDK retries off (the
+    600 s request timeout times 4 SDK attempts is how ep40a2ecda0d spent 1906 s on one turn; _api_call retries
+    within the episode's absolute time limit instead)."""
     import openai
 
     model = args.model
@@ -131,17 +146,20 @@ def run(args):
         raise SystemExit(f"unknown model {model}; known: {list(PRICES)}")
     if not args.task:
         raise SystemExit("--task is required")
-    sbx = os.path.join(SBX_ROOT, args.episode)
+    sbx = os.path.join(_paths.sandbox_root(), args.episode)     # read now: RL_SANDBOX_ROOT may be set late
     if not os.path.isdir(sbx):
         raise SystemExit(f"sandbox {sbx} not found (run common.sandbox prepare first)")
     prompt = open(args.prompt_file).read()
     os.makedirs(args.out, exist_ok=True)
     tpath = os.path.join(args.out, "api_transcript.jsonl")
-    client = openai.OpenAI(api_key=_load_key(), max_retries=3)
+    if client is None:
+        client = openai.OpenAI(api_key=_load_key(), max_retries=0)
+    classify = _openai_classify(openai)
     tfile = open(tpath, "w")
 
     def tlog(entry):
         entry["episode"] = args.episode
+        entry.setdefault("t", round(time.time(), 3))
         tfile.write(json.dumps(entry, default=str) + "\n")
         tfile.flush()
 
@@ -151,8 +169,15 @@ def run(args):
     spent, turns, stop, ctx, blocked, max_out = 0.0, 0, "max_turns", len(prompt) // 3, 0, 0
     usage_tot = dict(input=0, cached=0, output=0, reasoning=0)
     submitted = nudged = warned = False
-    t0 = time.time()
+    time_warned_at = None
+    clock = EpisodeClock(args.episode)
     while turns < args.max_turns + (2 if warned else 0):
+        if clock.expired():
+            stop = "wall_clock_hard"
+            break
+        if time_warned_at is not None and turns >= time_warned_at + TIME_GRACE_TURNS:
+            stop = "wall_clock"
+            break
         est = _est_next(model, ctx, min(args.max_tokens, max(3000, int(1.5 * max_out))))
         if _total() + est > GLOBAL_CAP_USD:
             stop = "global_budget"
@@ -168,10 +193,14 @@ def run(args):
         if prev_id:
             kw["previous_response_id"] = prev_id
         try:
-            r = client.responses.create(**kw)
-        except openai.RateLimitError:
-            time.sleep(30)
-            continue
+            r = _api_call(lambda timeout: client.responses.create(timeout=timeout, **kw), clock, classify)
+        except DeadlineReached:
+            stop = "wall_clock_hard"
+            break
+        except openai.RateLimitError as e:
+            stop = "api_rate_limited"
+            tlog({"type": "error", "error": str(e)[:500]})
+            break
         except openai.APIStatusError as e:
             stop = f"api_error_{e.status_code}"
             tlog({"type": "error", "error": str(e)[:500]})
@@ -198,7 +227,7 @@ def run(args):
         tlog({"type": "assistant", "cwd": sbx, "message": {"role": "assistant", "model": model, "content": content},
               "usage": u, "usd": usd, "status": r.status})
         if not calls:
-            if submitted:
+            if submitted or _episode_submitted(args.episode):
                 stop = "submitted"
                 break
             if nudged:
@@ -215,9 +244,13 @@ def run(args):
                 cmd = json.loads(c.arguments).get("command", "")
             except Exception:
                 cmd = ""
-            out, was_blocked = _run_bash(cmd, sbx, args.episode)
+            left = clock.hard_left()
+            if clock.expired():
+                out, was_blocked = "[not run: the episode's absolute time limit has been reached]", False
+            else:
+                out, was_blocked = _run_bash(cmd, sbx, args.episode, timeout=min(BASH_TIMEOUT_S, left))
             blocked += int(was_blocked)
-            if re.search(r"\./tool\s+submit\b", cmd) and _episode_submitted(args.episode):
+            if _episode_submitted(args.episode):      # any route: ./tool submit, ./py + subprocess, ... (fix 2)
                 submitted = True
             next_input.append({"type": "function_call_output", "call_id": c.call_id, "output": out})
             tlog({"type": "user", "message": {"role": "user", "content": [
@@ -229,14 +262,20 @@ def run(args):
             warned = True
             next_input.append({"role": "user", "content": WARN})
             tlog({"type": "user", "message": {"role": "user", "content": WARN}, "budget_warning": True})
+        if time_warned_at is None and clock.agent_s() >= clock.cap_s:
+            time_warned_at = turns
+            next_input.append({"role": "user", "content": TIME_WARN})
+            tlog({"type": "user", "message": {"role": "user", "content": TIME_WARN}, "time_warning": True})
     tfile.close()
     meta = {"episode": args.episode, "task": args.task, "provider": "openai", "model": model, "effort": args.effort,
-            "turns": turns, "stop": stop, "budget_warned": warned, "usd": round(spent, 4), "usage": usage_tot,
-            "blocked_commands": blocked, "wall_s": round(time.time() - t0, 1),
+            "turns": turns, "stop": final_stop(args.episode, stop), "runner_stop": stop, "budget_warned": warned,
+            "time_warned": time_warned_at is not None, "usd": round(spent, 4), "usage": usage_tot,
+            "blocked_commands": blocked, "wall_s": round(clock.total_s(), 1), **clock.report(),
             "openai_ledger_total_usd": round(_total(), 4), "global_cap_usd": GLOBAL_CAP_USD,
             "openai_sdk": openai.__version__}
     json.dump(meta, open(os.path.join(args.out, "api_meta.json"), "w"), indent=1)
     print(json.dumps(meta))
+    return meta
 
 
 def spent(args):
