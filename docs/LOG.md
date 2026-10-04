@@ -586,3 +586,35 @@ Same open item as STATUS 7.3: state whether filling the budget is free, or add a
 ## 2026-10-04 06:30 UTC: ShiftHunt v3 started (D18)
 Worktrees: ~/wt/shifthunt3 (task/shifthunt3), ~/wt/v3harness (harness/v3-fixes), ~/wt/v3iso (harness/isolation). bubblewrap and socat were already installed.
 Workflow 1: planner (xhigh); harness fixes and isolation launcher in parallel, each audited; then the Stage 0 build and gate plus the grader build in parallel, each audited, with redesign loops.
+
+## 2026-10-04 08:43 UTC: harness branches merged into main (harness/v3-fixes, harness/isolation)
+- **Pre-merge fix on harness/v3-fixes (c36c3725).** Audit r1 A was a regression vs main: exemption (e) (print-replace '/' false positive) also
+  cleared `print(file=...)`, `print(**kw)` and prints under `contextlib.redirect_stdout` or a rebound `sys.stdout`, where the region reads the
+  printed text back as a path. Now only a plain print to stdout is exempt. Its xfail(strict) test is now a normal must-flag test with 6 cases
+  (each fails on the unfixed code). New E_STDOUT_OK twins check that the intended false-positive fix stays valid. Branch suite: 523 passed, 3 xfailed.
+- **Replay** (main 0f28f81d audit vs the fixed branch; every recorded transcript under ~/wt/*/runs/** and main runs/**; 164 units, 5049 tool
+  calls). Only one verdict changed, the intended one: shifthunt openai_T2_sol ep2c6190e0f5 went flagged -> clean (call 15, R2 root).
+  143 clean->clean, 20 flagged->flagged, 0 violations added. One stray copied transcript outside an episode dir
+  (shifthunt epdbe6a54a7e/finish_run1_autodiscover) gave identical violations. Record: runs/_harness/audit_replay_v3fixes/replay_merge_r1A.json.
+- **Merges (--no-ff):** 5fe5e6c8 harness/v3-fixes (hard wall-clock ceiling on agent time, runner stop from the episode record, sandbox
+  TMPDIR, saved long outputs, audit print-replace fix); 52d0cdb7 harness/isolation (claude_agent: bwrap + netns + egress allowlist +
+  auth-injecting proxy, scripted red-team, self-test, HARNESS_API section 11). Conflicts were in common/sandbox.py and docs/HARNESS_API.md.
+  Both were additions at the same place, so I kept both. finish() runs both `_launcher_check` and `episode_time_report`.
+  Integration edit: claude_agent TMPDIR changed from `<sandbox>/.tmp` to the v3 `<sandbox>/tmp`. The agent prompt names tmp/ and finish
+  prunes it, but nothing pruned .tmp. HARNESS_API: added an r1 A note under (e) and a time-limit note in section 11.
+- **Tests on merged main:** `common/tests`: 536 passed, 3 xfailed (strict), 0 skipped.
+- **Known gaps (xfail strict in common/tests/test_v3_audit_round1.py, not fixed):**
+  (B) the runner's hard ceiling counts from runner start, not from the first tool call as TASK.md says, so time before the first ./tool call
+  shortens it.
+  (C) grade.json over_time is None for an unsubmitted episode that the runner stopped past the nominal cap when no tool call came after the
+  cap (the luna pattern).
+  (D) a submission that lands after the runner exit, from a detached process that cleared RL_AGENT_PROC, is graded and the episode stays VALID.
+  Isolation/v3 integration: claude_agent has no v3 runner clock (no time notice, stop only at --max-wall-s). The broker still enforces both caps on
+  its tools and submit, so set --max-wall-s <= wall_clock_hard_s.
+  The audit-isolation residual risks are listed in HARNESS_API section 11.
+- **Broker restart.** Before the restart: 5 _demo episodes in the registry; 3 were "open" but idle (52-114 min, no tool server, no runner/jail
+  process; one belongs to the v3iso audit scratch). No episode was active, so I ran stop/start (records persist on disk). The pre-restart ping returned
+  {pid: 186434}; the new broker (pid 832288) pings {}. Red-team re-run against the merged code and the restarted broker (no LLM): 115/115
+  probes PASS, 0 escaped, 0 minor escaped (broker_ping_no_pid now passes; tmpdir_in_sandbox passes with tmp/). Its 2 _demo episodes
+  (epbc0ab970f5 red-team, flagged cross_episode_access on purpose; ep6b368976cf decoy) stay open: never grade them.
+- Audit scratch in ~/wt/v3harness and ~/wt/v3iso (runs/_audit_*, runs/_demo/*_claude_iso_selftest) was left untracked. No task branches were touched.
