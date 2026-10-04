@@ -196,3 +196,7 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
 - Includes an open-menu arm (no fixed cue list). Target <10 h wall clock, "but don't let that make u sloppy".
 - Agents run at high/medium effort; only top-level planners run higher. An auditor checks each piece as it finishes, and its fixes are applied. No permission stops before a gate.
 - OpenAI cap for shifthunt3: $15 (orchestrator default; the question went unanswered and Dan said not to ask). Opus test agents run at effort high.
+- **Outcome (2026-10-04 08:40-09:00 UTC):** stopped at Stage 0 (planner KILL; an independent skeptic upheld it; docs/results/shifthunt3/KILLED.md).
+  Gate 0 passed as defined, but cheap no-name scripts read the planted module through the tool algebra. Recommendation:
+  change direction (v4 scope in KILLED.md section 5). The audited harness fixes and the isolated launcher merged to main.
+  OpenAI spend for v3: $0, since no model episodes ran.

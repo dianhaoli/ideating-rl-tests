@@ -618,3 +618,14 @@ Workflow 1: planner (xhigh); harness fixes and isolation launcher in parallel, e
   probes PASS, 0 escaped, 0 minor escaped (broker_ping_no_pid now passes; tmpdir_in_sandbox passes with tmp/). Its 2 _demo episodes
   (epbc0ab970f5 red-team, flagged cross_episode_access on purpose; ep6b368976cf decoy) stay open: never grade them.
 - Audit scratch in ~/wt/v3harness and ~/wt/v3iso (runs/_audit_*, runs/_demo/*_claude_iso_selftest) was left untracked. No task branches were touched.
+
+## 2026-10-04 09:10 UTC: ShiftHunt v3 closed at Stage 0 (D18 outcome)
+- 06:30: started. The planner (xhigh) wrote SPEC_v3 by 07:05, testing first on cached v2 data. Builders A (Stage 0), B (grader) and C (tools/prompts) worked in parallel; each piece was audited.
+- 08:10: Gate 0 passed on held-out data (top-|g| 5.9%, single-group 0%, reference 100%).
+  - Builder A flagged `graddiff` itself. The Stage 0 audit failed the result: a sample gradient difference solves 96% with no names.
+  - The tools audit found the fixed-gradient + effect-tool linearity test (81/81 named) and the sample-pattern leak (86/86 mechanisms).
+- 08:40: the planner stopped v3 rather than redesign.
+- 09:00: a skeptic re-tested the decision and upheld it. Names add +6 to +17 points; no budget-respecting script reaches 60%; nuisance units are beaten by an interaction script (60/60).
+- I stopped the workflow before it finished the grader fix loop. B's uncommitted edits are left in ~/wt/shifthunt3.
+- Copies on main: docs/results/shifthunt3/ (SPEC_v3, STAGE0, KILLED; aggregates only, scanned for ids). STATUS section 2b.
+- Harness work merged earlier (edc661f7).
