@@ -188,3 +188,11 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
 ## D17. After smoke run 1 (Dan, 2026-10-02 ~20:00 UTC)
 - Push ShiftHunt toward validation (n >= 20 fresh-agent episodes, >= 2 per instance) before Oct 8. Hold the BoolIntermediates
   activations-only redesign, the LatentDiff matched-decoy redesign and the LatentKnockout-Strict gates.
+
+## D18. ShiftHunt v3: one timeboxed iteration (Dan, 2026-10-04 ~06:30 UTC)
+- Build v3 per Dan's brief: make interpretation the bottleneck, not budget habits or bar placement. Stop at the first failed gate.
+  Branch task/shifthunt3 (local only), task dir tasks/shifthunt3/; v2 untouched. Harness fixes on harness/v3-fixes and
+  harness/isolation, merged to main after an independent audit.
+- Includes an open-menu arm (no fixed cue list). Target <10 h wall clock, "but don't let that make u sloppy".
+- Agents run at high/medium effort; only top-level planners run higher. An auditor checks each piece as it finishes, and its fixes are applied. No permission stops before a gate.
+- OpenAI cap for shifthunt3: $15 (orchestrator default; the question went unanswered and Dan said not to ask). Opus test agents run at effort high.

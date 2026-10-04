@@ -582,3 +582,7 @@ The format rule is clear ("at most 20"). What pushes a cautious agent toward a m
 (3) luna checks its ablation on the confounded sample, where cue and topic move together (in one episode the exclamation dependence equals the topic dependence exactly). Its own check reads as topic damage (-6 to -11%), and it trims: it tested 6 latents and submitted 3, tested 5 and submitted 4.
 No luna slot overshot. Sol and Opus fill the 20 regardless; the method hint fixes removal (14/17).
 Same open item as STATUS 7.3: state whether filling the budget is free, or add a per-latent cost; state that removal is measured on held-out data.
+
+## 2026-10-04 06:30 UTC: ShiftHunt v3 started (D18)
+Worktrees: ~/wt/shifthunt3 (task/shifthunt3), ~/wt/v3harness (harness/v3-fixes), ~/wt/v3iso (harness/isolation). bubblewrap and socat were already installed.
+Workflow 1: planner (xhigh); harness fixes and isolation launcher in parallel, each audited; then the Stage 0 build and gate plus the grader build in parallel, each audited, with redesign loops.
