@@ -1,0 +1,40 @@
+{
+ "summary": {
+  "old_rev": "0f28f81d",
+  "also_main": true,
+  "new": "working tree",
+  "python": "3.13.15",
+  "n_units": 164,
+  "n_tool_calls": 5049,
+  "verdict_change": {
+   "clean->clean": 143,
+   "flagged->flagged": 20,
+   "flagged->clean": 1
+  },
+  "n_units_with_any_change": 1,
+  "violations_removed": 1,
+  "violations_added": 0,
+  "removed_by_rule": {
+   "R2-path: path outside sandbox: / (filesystem root)": 1
+  },
+  "added_by_rule": {}
+ },
+ "changed_units": [
+  {
+   "episode": "ep2c6190e0f5",
+   "worktree": "shifthunt",
+   "run": "20261003-openai_T2_sol",
+   "transcripts_sha16": "1099cb356aef2d9f",
+   "old_valid": false,
+   "new_valid": true,
+   "removed": [
+    [
+     15,
+     "R2-path",
+     "path outside sandbox: / (filesystem root)"
+    ]
+   ],
+   "added": []
+  }
+ ]
+}

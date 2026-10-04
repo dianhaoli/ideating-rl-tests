@@ -73,7 +73,8 @@ Python source the agent writes, read as Python (tokenize/ast):
  - R5: a Python NAME directly followed by `=` (`top = {...}`, `TOP = ...`) is a binding, not the top command.
 v3 fix of 2026-10-04 (fix 5; WHY comment (e) below):
  - R2: a quoted '/' that is the replacement of `<expr>.replace(<literal>, '/')`, where that call (or a chain of such
-   calls) is a whole argument of print(), is printed text, not the root (only where python_spans exempts).
+   calls) is a whole argument of a plain print() to stdout, is printed text, not the root (only where python_spans
+   exempts; not with file=/**kwargs, nor in a region that redirects stdout -- audit r1 A).
 
 Output: {valid, violations[{i, tool, rule, detail}], n_tool_calls, commands[], transcripts[], discovery,
 prompt_check[]}.
@@ -790,6 +791,28 @@ def _print_sep_slash_offsets(regions):
 # anywhere else (`open(s.replace('x','/'))`, `print(open(s.replace('x','/')))`, `p = s.replace('x','/')`), a computed
 # first argument, `sep='/'`/`end='/'`, f-strings, and every other path in the command (`/etc/passwd` in
 # `print(open('/etc/passwd').read().replace('\n','/'))` is a PATH_RX hit that this never touches).
+# Audit r1 A (2026-10-04, a regression vs main, fixed at merge): the exemption holds only for a PLAIN print to stdout,
+# because only then can the printed text not come back as a path inside the same region. Not exempt (main's verdict,
+# flagged): a print with `file=` or `**kwargs`, and any print in a region that can redirect stdout -- a NAME
+# redirect_stdout / dup / dup2, an assignment, with-target or setattr/delattr, or any string literal mentioning
+# 'stdout' (getattr spellings). Reading sys.stdout (`sys.stdout.write`, `.flush()`) is not a redirect.
+_STDOUT_REDIRECT_NAMES = frozenset({"redirect_stdout", "dup", "dup2", "setattr", "delattr"})
+
+
+def _redirects_stdout(toks, tree):
+    if any((t[0] == tokenize.NAME and t[1] in _STDOUT_REDIRECT_NAMES) or (t[0] == tokenize.STRING and "stdout" in t[1])
+           for t in toks):
+        return True
+    for n in ast.walk(tree):
+        tg = (n.targets if isinstance(n, ast.Assign) else [n.target] if isinstance(n, (ast.AugAssign, ast.AnnAssign))
+              else [])
+        for t in tg:
+            for x in ast.walk(t):
+                if (isinstance(x, ast.Attribute) and x.attr == "stdout") or (isinstance(x, ast.Name) and x.id == "stdout"):
+                    return True
+    return False
+
+
 def _replace_chain_slash(node, imported):
     """Offsets (lineno, col) of the '/' replacement literals along a `.replace(<lit>, <lit>)` chain rooted at `node`
     (the print argument); [] if any link is not of that exact shape."""
@@ -821,11 +844,15 @@ def _print_replace_slash_offsets(regions):
                 tree = ast.parse(src)
         except Exception:
             continue
+        if _redirects_stdout(toks, tree):                                                     # audit r1 A
+            continue
         imported = {(al.asname or al.name).split(".")[0] for n in ast.walk(tree)
                     if isinstance(n, (ast.Import, ast.ImportFrom)) for al in n.names}
         starts = _line_starts(src)
         for n in ast.walk(tree):
             if not (isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "print"):
+                continue
+            if any(k.arg in ("file", None) for k in n.keywords):                             # audit r1 A: stdout only
                 continue
             for arg in n.args:
                 for ln, col in _replace_chain_slash(arg, imported):

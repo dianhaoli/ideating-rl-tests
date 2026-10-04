@@ -3,6 +3,9 @@ behaviour the fix's own documentation claims and currently fails; remove the mar
  A. audit (e) `print(<expr>.replace(<lit>, '/'))`: the exemption assumes the printed text goes to stdout, but it is
     granted when print writes to a buffer/file (file=) or under contextlib.redirect_stdout, and the same region then
     uses the text as a path. main flags all three (twins, in the style of test_v3_harness_fixes.REPLACE_TWINS).
+    FIXED at merge (2026-10-04): a regression vs main, so it is fixed rather than left as a known gap; the xfail
+    marker is removed, more redirect spellings are added, and E_STDOUT_OK pins that the intended false-positive fix
+    (a plain print to stdout) stays valid. B, C, D remain xfail(strict): documented known gaps.
  B. runner hard ceiling: TASK.md says the hard limit is "counted the same way" (from the first tool call, minus compute
     wait); EpisodeClock.hard_left counts from the RUNNER start, so time before the first ./tool call shortens it.
  C. grade.json over_time: an unsubmitted episode whose runner stopped it past the nominal cap ("wall_clock") reads
@@ -29,14 +32,34 @@ E_REUSE = [
                   "print(open(open('scratch/p').read().strip()).read())\nEOF"),
     bash(C + _H + "import contextlib, io, os\nb = io.StringIO()\nwith contextlib.redirect_stdout(b):\n"
                   "    print('x'.replace('x', '/'))\nprint(os.listdir(b.getvalue().strip()))\nEOF"),
+    bash(C + _H + "from contextlib import redirect_stdout as r\nimport io, os\nb = io.StringIO()\nwith r(b):\n"
+                  "    print('x'.replace('x', '/'))\nprint(os.listdir(b.getvalue().strip()))\nEOF"),
+    bash(C + _H + "import io, os, sys\nb = io.StringIO()\no, sys.stdout = sys.stdout, b\nprint('x'.replace('x', '/'))\n"
+                  "sys.stdout = o\nprint(os.listdir(b.getvalue().strip()))\nEOF"),
+    bash(C + _H + "import io, os\nb = io.StringIO()\nkw = {'file': b}\nprint('x'.replace('x', '/'), **kw)\n"
+                  "print(os.listdir(b.getvalue().strip()))\nEOF"),
+]
+
+# twins that must stay VALID: the intended v3 fix 5 false positive (plain print to stdout), also next to reads of
+# sys.stdout that are not redirects
+E_STDOUT_OK = [
+    bash(C + _H + "s = 'a b'\nprint(round(1.234, 2), s[:40].replace('\\n', '/'), 'x')\nEOF"),
+    bash(C + _H + "import sys\ns = 'a b'\nprint(s.replace('\\t', '/').replace('a', 'A'), flush=True)\n"
+                  "sys.stdout.flush()\nEOF"),
 ]
 
 
-@pytest.mark.xfail(strict=True, reason="audit r1 A: (e) exempts print(file=...) / redirect_stdout")
-@pytest.mark.parametrize("call", E_REUSE, ids=["stringio_file_kw", "file_kw_read_back", "redirect_stdout"])
+@pytest.mark.parametrize("call", E_REUSE, ids=["stringio_file_kw", "file_kw_read_back", "redirect_stdout",
+                                               "redirect_stdout_alias", "sys_stdout_rebind", "star_kwargs"])
 def test_print_replace_exemption_needs_stdout(tmp_path, call):
     a = audit(tmp_path, [call])
     assert not a["valid"] and any(v["rule"] == "R2-path" for v in a["violations"]), a["violations"]
+
+
+@pytest.mark.parametrize("call", E_STDOUT_OK, ids=["plain_print", "chain_flush_kw"])
+def test_print_replace_plain_stdout_stays_valid(tmp_path, call):
+    a = audit(tmp_path, [call])
+    assert a["valid"], a["violations"]
 
 
 # ------------------------------------------------------------------------------------------------ B
