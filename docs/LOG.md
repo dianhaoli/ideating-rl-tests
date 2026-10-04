@@ -633,5 +633,5 @@ Workflow 1: planner (xhigh); harness fixes and isolation launcher in parallel, e
 ## 2026-10-04: disk cleanup (Dan)
 Removed the four Qwen2.5 models (8.2 GB of blobs, none shared with other models; used only by EditFind, T2Ravel and ResidualRecall, and re-downloadable) and 9,914 old episode sandboxes under ~/rlsbx (2.9 GB). Transcripts and grades live in the run dirs. The one still-open _demo episode was kept. Disk: 93% -> 82% (19 GB free).
 
-## 2026-10-04 09:45 UTC: model-diffing study started (D19)
+## 2026-10-04 22:30 UTC: model-diffing study started (D19)
 Worktree ~/wt/modeldiff (task/modeldiff). Root disk grown to 150 GB. Workflow: two recon agents (literature; organisms/infra) -> xhigh planner (DIFFING_SPEC, gates, predictions protocol) -> env, grader and baseline builders, each audited -> Stage 0 runs (baselines a-e, content-matters pair, isolated Opus agents) -> audit -> DIFFING_REPORT.

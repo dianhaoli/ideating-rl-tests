@@ -201,7 +201,7 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   change direction (v4 scope in KILLED.md section 5). The audited harness fixes and the isolated launcher merged to main.
   OpenAI spend for v3: $0, since no model episodes ran.
 
-## D19. Model-diffing environment: test before building (Dan, 2026-10-04 ~09:45 UTC)
+## D19. Model-diffing environment: test before building (Dan, 2026-10-04 ~22:30 UTC)
 - Dan's brief: decide whether a model-diffing interp RL environment is worth building. The agent gets a base model and a fine-tuned copy
   and submits compact, checkable claims about what changed. The grader tests the claims behaviorally on held-out prompts. Stop and write up at the first
   clear negative. Stage 0 uses public organisms with no training. Stage 1 (fresh organisms, mix ratios, the difficulty ladder) runs only if Stage 0 is promising.
