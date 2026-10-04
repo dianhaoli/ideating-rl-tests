@@ -206,6 +206,9 @@ class TaskEnv:
         return res, charges
 
 
+NON_COUNTER_CAPS = {"wall_clock_s", "call_timeout_s", "wall_clock_hard_s"}   # = broker.NON_COUNTER_CAPS (tested)
+
+
 def make_local_call(env, caps=None):
     """In-process stand-in for the broker (for builders iterating before the harness is up).
     Applies the same cap accounting (tool_calls + explicit charges). Raises ToolError."""
@@ -213,7 +216,7 @@ def make_local_call(env, caps=None):
         caps = dict(caps)
         for k in ("tool_calls", "forward", "generate", "gradient"):
             caps.setdefault(k, 10 ** 9)
-        caps = {k: v for k, v in caps.items() if k not in ("wall_clock_s", "call_timeout_s")}
+        caps = {k: v for k, v in caps.items() if k not in NON_COUNTER_CAPS}
     else:
         caps = {}
     used = {k: 0 for k in caps}

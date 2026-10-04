@@ -4,10 +4,10 @@
   "also_main": false,
   "new": "working tree",
   "python": "3.13.15",
-  "n_units": 161,
-  "n_tool_calls": 5029,
+  "n_units": 163,
+  "n_tool_calls": 5043,
   "verdict_change": {
-   "clean->clean": 140,
+   "clean->clean": 142,
    "flagged->flagged": 20,
    "flagged->clean": 1
   },

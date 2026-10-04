@@ -30,10 +30,12 @@ message.content holds tool_use blocks named "Bash" with input.command. The stand
 transcript audit (common/transcript_audit.py) therefore applies unchanged.
 """
 import argparse
+import atexit
 import fcntl
 import json
 import os
 import re
+import signal
 import subprocess
 import sys
 import time
@@ -209,15 +211,18 @@ def final_stop(episode, loop_stop):
 # but three API requests took 1169 s, 1906 s and 1422 s (600 s SDK request timeouts plus internal retries), and the
 # agent submitted 46 minutes late. Now: (a) once the agent time (broker definition: since the first tool call, minus
 # compute wait) reaches wall_clock_s, the agent gets TIME_WARN and at most TIME_GRACE_TURNS more turns; (b) the
-# runner's total time (since the runner started, which is before the first tool call) may not pass the absolute ceiling
-# broker.hard_cap(caps): every API request and bash command gets a timeout that ends at the ceiling, SDK retries are
-# off (_api_call retries itself within the ceiling), and the loop stops with "wall_clock_hard".
+# runner's agent time (since the runner started, which is before the first tool call, minus the broker's compute wait,
+# including a wait still in progress) may not pass the hard ceiling broker.hard_cap(caps): every API request gets a
+# timeout that ends at the ceiling, a bash command is stopped when it is reached (re-checked while it runs, so a GPU
+# wait during the command extends it), SDK retries are off (_api_call retries itself within the ceiling), and the loop
+# stops with "wall_clock_hard". Audit r0 (2026-10-04): the first version capped total time, wait included, which
+# would have closed GPU-queued but well-behaved episodes (see the broker docstring); compute wait no longer counts.
 TIME_WARN = ("[time notice from the environment] Your time limit for this episode has been reached. Submit your best "
              "answer now with ./tool submit (use the exact answer format in TASK.md); you have at most two more turns.")
 TIME_GRACE_TURNS = 2
 REQUEST_TIMEOUT_S = 600.0
 BASH_TIMEOUT_S = 900
-HARD_MARGIN_S = 5.0           # stop this close to the absolute ceiling (no request or command could finish in time)
+HARD_MARGIN_S = 5.0           # stop this close to the hard ceiling (no request or command could finish in time)
 
 
 class EpisodeClock:
@@ -240,21 +245,31 @@ class EpisodeClock:
         rec = _episode_record(self.episode) or {}
         if rec.get("started_at") is None:
             return self.total_s()
-        return self.now() - rec["started_at"] - float(rec.get("wait_s") or 0.0)
+        return self.now() - rec["started_at"] - self.wait_s()
 
     def wait_s(self):
-        return float((_episode_record(self.episode) or {}).get("wait_s") or 0.0)
+        """The broker's compute wait so far, including a wait still in progress (record field waiting_since)."""
+        rec = _episode_record(self.episode) or {}
+        w = float(rec.get("wait_s") or 0.0)
+        if rec.get("waiting_since"):
+            w += max(0.0, self.now() - float(rec["waiting_since"]))
+        return w
+
+    def runner_agent_s(self):
+        """The runner's view of agent time: runner total minus compute wait. It starts at the runner start, before
+        the broker's started_at, so it is never below the broker's agent time (the runner stops first)."""
+        return self.total_s() - self.wait_s()
 
     def hard_left(self):
-        return self.hard_s - self.total_s()
+        return self.hard_s - self.runner_agent_s()
 
     def expired(self):
         return self.hard_left() <= HARD_MARGIN_S
 
     def report(self):
         return {"agent_time_s": round(self.agent_s(), 1), "total_time_s": round(self.total_s(), 1),
-                "broker_wait_s": round(self.wait_s(), 1), "wall_clock_cap_s": self.cap_s,
-                "wall_clock_hard_s": self.hard_s}
+                "broker_wait_s": round(self.wait_s(), 1), "runner_agent_s": round(self.runner_agent_s(), 1),
+                "wall_clock_cap_s": self.cap_s, "wall_clock_hard_s": self.hard_s}
 
 
 class DeadlineReached(Exception):
@@ -263,7 +278,7 @@ class DeadlineReached(Exception):
 
 def _api_call(make, clock, classify, max_transient=4):
     """make(timeout) -> response. Retries rate limits (30 s pause) and transient errors (classify(e) == "rate" /
-    "transient"; exponential pause) while the absolute ceiling allows; raises DeadlineReached when it does not, and
+    "transient"; exponential pause) while the hard ceiling allows; raises DeadlineReached when it does not, and
     re-raises anything else (or a transient error after max_transient attempts)."""
     n = 0
     while True:
@@ -289,24 +304,92 @@ MAX_OUT_CHARS = 12000
 SANDBOX_TMP = "tmp"           # = common.sandbox.SANDBOX_TMP (not imported: sandbox imports the whole harness)
 
 
-def bash_env(sbx):
+PROC_MARK = "RL_AGENT_PROC"   # in the environment of every agent command (and inherited by its children)
+
+
+def bash_env(sbx, episode=None):
     """The scrubbed environment of an agent command. TMPDIR/TMP/TEMP point at the sandbox's own tmp/ (v3 fix 3):
-    Python's tempfile, mktemp and sort write there instead of the shared /tmp, which the audit (rightly) flags."""
+    Python's tempfile, mktemp and sort write there instead of the shared /tmp, which the audit (rightly) flags.
+    PROC_MARK=<episode> lets the runner find and kill the command's processes, even ones that left its process group
+    (setsid), when a command times out and when the runner stops (kill_episode_processes)."""
     tmp = os.path.join(sbx, SANDBOX_TMP)
-    return {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": sbx, "LANG": "C.UTF-8", "TERM": "dumb",
-            "PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": tmp, "TMP": tmp, "TEMP": tmp}
+    env = {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": sbx, "LANG": "C.UTF-8", "TERM": "dumb",
+           "PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": tmp, "TMP": tmp, "TEMP": tmp}
+    if episode:
+        env[PROC_MARK] = episode
+    return env
+
+
+def _marked_pids(episode):
+    """PIDs (of this user) whose environment carries PROC_MARK=<episode>. A process that cleared its environment
+    (`env -i`) is not found; that is deliberate evasion, not something an agent does by accident."""
+    me, needle = os.getpid(), f"{PROC_MARK}={episode}".encode()
+    out = []
+    for d in os.listdir("/proc"):
+        if not d.isdigit() or int(d) == me:
+            continue
+        try:
+            with open(f"/proc/{d}/environ", "rb") as f:
+                if needle in f.read().split(b"\0"):
+                    out.append(int(d))
+        except OSError:
+            pass
+    return out
+
+
+def kill_episode_processes(episode, rounds=5):
+    """SIGKILL every process an agent command of this episode left behind (audit r0, 2026-10-04: a timed-out
+    command's children, and background jobs, kept running after the runner moved on or stopped, using CPU/RAM on the
+    shared box and able to call ./tool late). Repeats while new ones appear (a fork racing the kill). Returns the
+    number killed."""
+    n = 0
+    for _ in range(rounds):
+        pids = _marked_pids(episode)
+        if not pids:
+            break
+        for pid in pids:
+            try:
+                os.kill(pid, signal.SIGKILL)
+                n += 1
+            except OSError:
+                pass
+        time.sleep(0.05)
+    return n
+
+
+def stop_episode(episode, sync_timeout=30.0):
+    """At runner exit: kill the episode's left-over processes, then wait until the broker has finished any call it is
+    still processing for the episode (admin "sync" takes the episode lock), so that final_stop reads the record a
+    late `setsid ./tool submit &` may have written. A broker without "sync" (started before this fix) is skipped."""
+    killed = kill_episode_processes(episode)
+    try:
+        if _broker.ping():
+            _broker.admin("sync", episode=episode, _timeout=sync_timeout)
+    except Exception:
+        pass
+    return killed
+
+
+def _inside(path, root):
+    rp, rr = os.path.realpath(path), os.path.realpath(root)
+    return rp == rr or rp.startswith(rr + os.sep)
 
 
 def _save_full_output(sbx, out):
-    """Save an over-long command output to out/cmd_output_<n>.txt in the sandbox; return the relative path or None."""
+    """Save an over-long command output to out/cmd_output_<n>.txt in the sandbox; return the relative path or None.
+    Never writes outside the sandbox (audit r0: an agent-made symlink out/ -> elsewhere, or a planted
+    cmd_output_<n>.txt symlink): out/ must resolve inside the sandbox and the file is created O_EXCL|O_NOFOLLOW."""
     d = os.path.join(sbx, "out")
     try:
         os.makedirs(d, exist_ok=True)
+        if os.path.islink(d) or not _inside(d, sbx):
+            return None
         n = 1 + sum(1 for f in os.listdir(d) if f.startswith("cmd_output_"))
-        while os.path.exists(os.path.join(d, f"cmd_output_{n}.txt")):
+        while os.path.lexists(os.path.join(d, f"cmd_output_{n}.txt")):
             n += 1
         rel = f"out/cmd_output_{n}.txt"
-        with open(os.path.join(sbx, rel), "w") as f:
+        fd = os.open(os.path.join(sbx, rel), os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o644)
+        with os.fdopen(fd, "w") as f:
             f.write(out)
         return rel
     except OSError:
@@ -327,21 +410,62 @@ def truncate_output(out, sbx, max_chars=MAX_OUT_CHARS):
             f"omitted here; showing the first {half} and the last {half}. {where}]\n\n" + out[-half:])
 
 
-def _run_bash(cmd, sbx, episode, timeout=BASH_TIMEOUT_S):
+_EXIT_KILL = set()
+
+
+def _kill_at_exit(episode):
+    """Backstop for a runner that dies of an exception before stop_episode: kill the episode's processes at exit."""
+    if episode and episode not in _EXIT_KILL:
+        _EXIT_KILL.add(episode)
+        atexit.register(kill_episode_processes, episode)
+
+
+def _kill_group(p):
+    try:
+        os.killpg(p.pid, signal.SIGKILL)      # start_new_session: the group id is bash's pid
+    except OSError:
+        pass
+
+
+def _run_bash(cmd, sbx, episode, timeout=BASH_TIMEOUT_S, clock=None, poll_s=0.5):
+    """Run one agent command. It is stopped after `timeout` s, or earlier when clock.expired() (the hard ceiling;
+    re-checked every poll_s, so compute wait that accrues during the command moves the ceiling). Stopping kills the
+    whole process group and every process carrying this episode's PROC_MARK (audit r0: subprocess.run(timeout=)
+    killed only `bash -c`; its children kept running)."""
     # The only allowed absolute reference into /home is this episode's own sandbox.
     stripped = cmd.replace(sbx + "/", "./").replace(sbx, ".")
     if _BLOCK.search(stripped):
         return "blocked: this command references something outside your sandbox or a disallowed operation.", True
     os.makedirs(os.path.join(sbx, SANDBOX_TMP), exist_ok=True)     # episodes prepared before the v3 fix have none
-    timeout = max(1, int(timeout))
-    try:
-        p = subprocess.run(["bash", "-c", cmd], cwd=sbx, env=bash_env(sbx), capture_output=True, text=True,
-                           timeout=timeout)
-        out = (p.stdout or "") + (("\n[stderr]\n" + p.stderr) if p.stderr else "")
+    _kill_at_exit(episode)
+    t0 = time.time()
+    p = subprocess.Popen(["bash", "-c", cmd], cwd=sbx, env=bash_env(sbx, episode), stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE, text=True, errors="replace", start_new_session=True)
+    why = None
+    while True:
+        try:
+            so, se = p.communicate(timeout=poll_s)
+            break
+        except subprocess.TimeoutExpired:
+            if time.time() - t0 >= timeout:
+                why = f"[timed out after {int(round(time.time() - t0))} s]"
+            elif clock is not None and clock.expired():
+                why = (f"[timed out after {int(round(time.time() - t0))} s: the episode's hard time limit "
+                       f"was reached]")
+            if why:
+                _kill_group(p)
+                kill_episode_processes(episode)
+                try:
+                    p.communicate(timeout=10)       # reap; output of a killed command is dropped
+                except subprocess.TimeoutExpired:   # a grandchild outside the group still holds the pipe
+                    pass
+                break
+    if why:
+        out = why
+    else:
+        out = (so or "") + (("\n[stderr]\n" + se) if se else "")
         if p.returncode:
             out += f"\n[exit code {p.returncode}]"
-    except subprocess.TimeoutExpired:
-        out = f"[timed out after {timeout} s]"
     return truncate_output(out, sbx) or "[no output]", False
 
 
@@ -478,11 +602,10 @@ def run(args, client=None):
         results = []
         for b in uses:
             cmd = (b.input or {}).get("command", "")
-            left = clock.hard_left()
             if clock.expired():
-                out, was_blocked = "[not run: the episode's absolute time limit has been reached]", False
+                out, was_blocked = "[not run: the episode's hard time limit has been reached]", False
             else:
-                out, was_blocked = _run_bash(cmd, sbx, args.episode, timeout=min(BASH_TIMEOUT_S, left))
+                out, was_blocked = _run_bash(cmd, sbx, args.episode, timeout=BASH_TIMEOUT_S, clock=clock)
             blocked += int(was_blocked)
             if _episode_submitted(args.episode):      # any route: ./tool submit, ./py + subprocess, ... (fix 2)
                 submitted = True
@@ -502,11 +625,12 @@ def run(args, client=None):
             stop = "submitted"
             break
     tfile.close()
+    killed = stop_episode(args.episode)       # before final_stop: a detached late submit has landed or is dead
     meta = {"episode": args.episode, "task": args.task, "model": model, "effort": args.effort, "turns": turns,
             "stop": final_stop(args.episode, stop), "runner_stop": stop, "budget_warned": warned,
             "time_warned": time_warned_at is not None, "usd": round(spent, 4), "usage": usage_tot,
             "blocked_commands": blocked, "wall_s": round(clock.total_s(), 1), **clock.report(),
-            "ledger_total_usd": round(_ledger_total(), 4),
+            "killed_processes": killed, "ledger_total_usd": round(_ledger_total(), 4),
             "global_cap_usd": GLOBAL_CAP_USD, "anthropic_sdk": anthropic.__version__}
     json.dump(meta, open(mpath, "w"), indent=1)
     print(json.dumps(meta))

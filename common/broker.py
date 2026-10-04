@@ -32,10 +32,18 @@ only 15 s of compute wait -- the OpenAI runner had no clock at all and the broke
 agent kept thinking (its API calls hit 600 s request timeouts and SDK retries) and submitted 46 minutes late):
  - wall_clock_s, the NOMINAL cap on agent time = time since the first tool call minus compute wait. Past it, task
    tools are refused; submit is still accepted (and the episode record marks it over the nominal cap).
- - wall_clock_hard_s, an ABSOLUTE ceiling on total time since the first tool call, compute wait included (default
+ - wall_clock_hard_s, a HARD ceiling on the same agent time (compute wait EXCLUDED; default
    max(1.5 x wall_clock_s, wall_clock_s + 60); see hard_cap). Past it, task tools AND submit are refused and the
    episode is closed (close_reason "wall_clock_hard"). The runners (api_agent, openai_agent) enforce the same
    ceiling on their side, so an agent that never calls a tool again is stopped too.
+   Audit r0 fix (2026-10-04): the first version capped TOTAL time (wait included). That contradicted the rule above
+   that wait does not count, and tied results to GPU load: of 240 recorded LLM episodes, residualrecall
+   ep99d08b74cc (cap 2700 s, wait 2888 s, agent time 1408 s, submitted) and featurematch ep4980d0bf46 would have been
+   closed with their submissions refused. The 6366 s luna episode had 15 s of wait, so an agent-time ceiling catches
+   it equally. Total time is still recorded (rec["time"].total_s) but not capped: compute wait is bounded per load by
+   RL_LOAD_TIMEOUT_S and per command by the runners' bash timeout.
+   While a call waits for GPU admission / model load, the record carries "waiting_since" (saved to disk) so the
+   runners can exclude a wait that is still in progress from their clock too.
 Both times are recorded in the episode record (rec["time"]) at submit/close and in grade.json at finish.
 
 Hardening from the 2026-10-01 review (docs/HARNESS_VERIFICATION.md):
@@ -72,7 +80,7 @@ from common import leakscan, paths  # noqa: E402
 DEFAULT_CAPS = {"tool_calls": 150, "forward": 4000, "generate": 200, "gradient": 50,
                 "wall_clock_s": 3600, "call_timeout_s": 180}
 NON_COUNTER_CAPS = {"wall_clock_s", "call_timeout_s", "wall_clock_hard_s"}
-HARD_FACTOR = 1.5          # default absolute ceiling = max(HARD_FACTOR x wall_clock_s, wall_clock_s + HARD_MIN_GRACE_S)
+HARD_FACTOR = 1.5          # default hard ceiling = max(HARD_FACTOR x wall_clock_s, wall_clock_s + HARD_MIN_GRACE_S)
 HARD_MIN_GRACE_S = 60
 BUILTINS = ("help", "budget", "submit")
 EPISODE_RX = re.compile(r"^ep[0-9a-f]{8,32}$")
@@ -91,7 +99,7 @@ def merged_caps(caps):
 
 
 def hard_cap(caps):
-    """The absolute wall-clock ceiling (s) of an episode: caps.wall_clock_hard_s if set, else
+    """The hard ceiling (s) on an episode's AGENT time (compute wait excluded): caps.wall_clock_hard_s if set, else
     max(1.5 x wall_clock_s, wall_clock_s + 60). Records written before 2026-10-04 have no wall_clock_hard_s."""
     caps = caps or {}
     nom = float(caps.get("wall_clock_s", DEFAULT_CAPS["wall_clock_s"]))
@@ -102,8 +110,8 @@ def hard_cap(caps):
 
 def episode_times(rec, now=None):
     """{"agent_s", "total_s", "wait_s", "cap_s", "hard_cap_s", "over_nominal", "over_hard"} for an episode record.
-    agent_s = time since the first tool call minus compute wait (what wall_clock_s caps); total_s = time since the
-    first tool call, wait included (what the hard ceiling caps). The end is `now`, else submitted_at/closed_at, else
+    agent_s = time since the first tool call minus compute wait (what wall_clock_s AND the hard ceiling cap); total_s =
+    time since the first tool call, wait included (recorded only, not capped). The end is `now`, else submitted_at/closed_at, else
     the current time. Before the first tool call both are 0."""
     caps = rec.get("caps") or {}
     nom, hard = float(caps.get("wall_clock_s", DEFAULT_CAPS["wall_clock_s"])), hard_cap(caps)
@@ -115,7 +123,7 @@ def episode_times(rec, now=None):
         total = max(0.0, end - rec["started_at"])
         agent = max(0.0, total - wait)
     return {"agent_s": round(agent, 1), "total_s": round(total, 1), "wait_s": round(wait, 1), "cap_s": nom,
-            "hard_cap_s": hard, "over_nominal": agent > nom, "over_hard": total > hard}
+            "hard_cap_s": hard, "over_nominal": agent > nom, "over_hard": agent > hard}
 
 
 def counter_kinds(caps):
@@ -368,6 +376,7 @@ class Broker:
                         rec = json.load(f)
                 except (OSError, json.JSONDecodeError):
                     return None
+                rec.pop("waiting_since", None)      # left by a broker that died mid-wait
                 ep = self.eps[eid] = Episode(eid, rec)
             return ep
 
@@ -443,12 +452,12 @@ class Broker:
         if tool == "budget":
             return {"ok": True, "result": self._budget(rec)}, {}, 0.0
         if tool == "submit":
-            if self._total(rec) > hard_cap(caps):
+            if self._elapsed(rec) > hard_cap(caps):
                 return self._hard_stop(ep), {}, 0.0
             return self._submit(ep, args), {}, 0.0
         if tool not in rec["tools"]:
             return {"ok": False, "error": f"unknown tool '{tool}' (see ./tool help)"}, {}, 0.0
-        if self._total(rec) > hard_cap(caps):
+        if self._elapsed(rec) > hard_cap(caps):
             return self._hard_stop(ep), {}, 0.0
         if self._elapsed(rec) > caps["wall_clock_s"]:
             return {"ok": False, "error": "episode time limit reached; submit your answer with ./tool submit"}, {}, 0.0
@@ -492,7 +501,16 @@ class Broker:
             ep.server = Server(ep.eid, ep.rec)
             ep.log({"t": time.time(), "event": "server_started", "pid": ep.server.proc.pid})
         if not ep.server.ready:
-            ep.server.wait_ready(heartbeat)
+            # Visible to the runners' clocks while it lasts (EpisodeClock.wait_s); _dispatch adds the wait to wait_s.
+            # On disk the marker stays until the call's final save (which adds wait_s), so during the tool call that
+            # follows the runners over-count wait by at most call_timeout_s: lenient on their side, never stricter
+            # than this broker, which enforces the exact ceiling.
+            ep.rec["waiting_since"] = time.time()
+            ep.save()
+            try:
+                ep.server.wait_ready(heartbeat)
+            finally:
+                ep.rec.pop("waiting_since", None)
 
     def _elapsed(self, rec):
         if rec.get("started_at") is None:
@@ -505,7 +523,7 @@ class Broker:
         return time.time() - rec["started_at"]
 
     def _hard_stop(self, ep):
-        """The absolute ceiling has passed: close the episode (no submission is accepted any more)."""
+        """The hard ceiling has passed: close the episode (no submission is accepted any more)."""
         rec = ep.rec
         if rec.get("status") == "open":
             rec["status"] = "closed"
@@ -513,8 +531,8 @@ class Broker:
             rec["close_reason"] = "wall_clock_hard"
             rec["time"] = episode_times(rec)
             ep.log({"t": rec["closed_at"], "event": "wall_clock_hard", **rec["time"]})
-        return {"ok": False, "error": f"episode hard time limit reached ({hard_cap(rec['caps']):.0f} s including any "
-                                      "waiting); the episode is over and no submission is accepted"}
+        return {"ok": False, "error": f"episode hard time limit reached ({hard_cap(rec['caps']):.0f} s of working "
+                                      "time, waiting excluded); the episode is over and no submission is accepted"}
 
     def _help(self, rec):
         return {"tools": rec["tool_docs"],
@@ -528,9 +546,8 @@ class Broker:
         el = self._elapsed(rec)
         out["wall_clock_s"] = {"used": round(el), "cap": caps["wall_clock_s"],
                                "remaining": max(0, round(caps["wall_clock_s"] - el))}
-        tot = self._total(rec)
-        out["wall_clock_hard_s"] = {"used": round(tot), "cap": round(hard_cap(caps)),
-                                    "remaining": max(0, round(hard_cap(caps) - tot))}
+        out["wall_clock_hard_s"] = {"used": round(el), "cap": round(hard_cap(caps)),
+                                    "remaining": max(0, round(hard_cap(caps) - el))}
         out["call_timeout_s"] = caps["call_timeout_s"]
         return out
 
@@ -594,6 +611,12 @@ class Broker:
             with self.lock:
                 self.eps.pop(ep.eid, None)
             return {"ok": True, "result": {"status": ep.rec["status"]}}
+        if cmd == "sync":    # runners at exit: returns once no call of the episode is being processed
+            ep = self.get(req.get("episode"))
+            if ep is None:
+                return {"ok": False, "error": "unknown episode"}
+            with ep.lock:
+                return {"ok": True, "result": {"status": ep.rec.get("status")}}
         if cmd == "evict":   # used by tests and operators: stop an episode's server now
             ep = self.get(req.get("episode"))
             if ep is None:
@@ -708,9 +731,9 @@ def ping(timeout=3.0):
         return False
 
 
-def admin(cmd, **kw):
+def admin(cmd, _timeout=120, **kw):
     s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    s.settimeout(120)
+    s.settimeout(_timeout)
     s.connect(paths.broker_sock())
     s.sendall((json.dumps(dict(admin=cmd, token=read_admin_token(), **kw)) + "\n").encode())
     data = s.makefile("rb").readline()

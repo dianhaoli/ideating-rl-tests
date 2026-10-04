@@ -1,6 +1,6 @@
 """v3 harness fix-firsts (2026-10-04), from the ShiftHunt v2 evidence (docs/forensics/SHIFTHUNT_FORENSICS.md,
 docs/results/shifthunt/*). One section per fix:
- 1. wall clock: a nominal cap on agent time plus an absolute ceiling on total time, enforced by the broker AND both
+ 1. wall clock: a nominal cap on agent time plus a hard ceiling on agent time (audit r0: wait excluded), enforced by the broker AND both
     runners, recorded in the episode record / grade.json / summaries (luna-high ep40a2ecda0d ran 6366 s vs 3600 s);
  2. the runners' stop reason comes from the broker's episode record (sol submitted through subprocess and the runner
     said ended_without_submit);
@@ -51,7 +51,8 @@ def test_prepare_records_hard_cap_and_task_md_states_it(hx):
     rec = _record(ep["episode"])
     assert rec["caps"]["wall_clock_hard_s"] == broker.hard_cap(rec["caps"])
     task_md = open(os.path.join(ep["sandbox"], "TASK.md")).read()
-    assert "absolute time limit" in task_md and "including any waiting" in task_md
+    assert "hard time limit" in task_md and "counted the same way" in task_md
+    assert "including any waiting" not in task_md                       # audit r0: wait does not count
     assert "wall_clock_hard_s" not in task_md                           # not a counter line
 
 

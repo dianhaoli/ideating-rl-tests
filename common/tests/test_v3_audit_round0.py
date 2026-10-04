@@ -1,6 +1,7 @@
-"""Independent audit of harness/v3-fixes, round 0 (2026-10-04): tests for holes the audit found. Each is marked
-xfail(strict=True) so the suite stays green until the fix lands; a fix makes the test XPASS, which strict mode reports
-as a failure, so the fixer must then remove the marker.
+"""Independent audit of harness/v3-fixes, round 0 (2026-10-04): tests for holes the audit found. They were committed as
+xfail(strict=True); both holes are fixed (sandbox._prune_sandbox skips symlinked/escaping dirs and files;
+api_agent._run_bash kills the whole process group plus every process marked with the episode), so the markers are
+removed.
 
 1. finish's _prune_sandbox walks <sandbox>/tmp (new in this branch), out/ and scratch/ with os.walk, which FOLLOWS a
    top-level symlink: if an agent replaced tmp/ with a symlink to a directory outside the sandbox, finish deletes
@@ -25,7 +26,6 @@ def _prep(hx):
     return ep, Client(ep["episode"])
 
 
-@pytest.mark.xfail(strict=True, reason="AUDIT r0: _prune_sandbox follows a symlinked top-level dir out of the sandbox")
 @pytest.mark.parametrize("sub", ["tmp", "scratch"])
 def test_prune_never_deletes_outside_sandbox_through_symlinked_dir(hx, tmp_path, sub):
     ep, c = _prep(hx)
@@ -40,7 +40,6 @@ def test_prune_never_deletes_outside_sandbox_through_symlinked_dir(hx, tmp_path,
     assert big.exists(), f"finish deleted {big} outside the sandbox through a symlinked {sub}/"
 
 
-@pytest.mark.xfail(strict=True, reason="AUDIT r0: a timed-out command's child processes survive the runner timeout")
 def test_bash_timeout_kills_the_whole_command(tmp_path):
     sbx = str(tmp_path / "sbx")
     os.makedirs(sbx)

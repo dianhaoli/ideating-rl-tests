@@ -146,8 +146,8 @@ def render_caps(caps):
     lines.append(f"- time: {caps['wall_clock_s'] / 60:.0f} minutes from your first tool call "
                  f"(time spent waiting for compute is not counted); each tool call may run at most "
                  f"{caps['call_timeout_s']} s")
-    lines.append(f"- absolute time limit: {broker.hard_cap(caps) / 60:.0f} minutes from your first tool call, "
-                 f"including any waiting; after it no submission is accepted")
+    lines.append(f"- hard time limit: {broker.hard_cap(caps) / 60:.0f} minutes, counted the same way; after it no "
+                 f"submission is accepted")
     return "\n".join(lines)
 
 
@@ -835,12 +835,14 @@ def _last_activity(log_path):
 
 def episode_time_report(rec, log_path, edir):
     """Both episode times for grade.json (v3 fix 1): agent time (since the first tool call, minus compute wait; capped
-    by wall_clock_s) and total time (wait included; capped by the absolute ceiling broker.hard_cap). The end is the
-    submission; for an episode without one, the hard-limit close if the broker closed it, else the last tool-log
-    activity (NOT the finish time, which can be hours later). If the agent runner wrote api_meta.json next to the
-    transcript, its own clock (runner_total_s: from runner start to stop, i.e. including model time after the last
-    tool call) and stop reason are added. over_time: None, "nominal" (past wall_clock_s) or "hard" (past the ceiling;
-    by either clock)."""
+    by wall_clock_s and by the hard ceiling broker.hard_cap) and total time (wait included; recorded, not capped). The
+    end is the submission; for an episode without one, the hard-limit close if the broker closed it, else the last
+    tool-log activity (NOT the finish time, which can be hours later). If the agent runner wrote api_meta.json next to
+    the transcript, its own clock (runner_total_s: from runner start to stop, i.e. including model time after the last
+    tool call; runner_agent_s: the same minus compute wait) and stop reason are added. over_time: None, "nominal" (past
+    wall_clock_s) or "hard" (past the ceiling). For an ACCEPTED submission only the broker's clock decides (audit r0:
+    the runner clock starts before the broker's and could read "hard" for a submission the broker accepted in time);
+    without one, the runner's agent time past the ceiling also counts (model time after the last tool call)."""
     r = dict(rec)
     if r.get("submitted_at") is None:
         r["closed_at"] = (rec.get("closed_at") if rec.get("close_reason") == "wall_clock_hard"
@@ -851,9 +853,13 @@ def episode_time_report(rec, log_path, edir):
     meta = _load_json(os.path.join(edir, "api_meta.json"))
     if isinstance(meta, dict) and meta.get("episode") == rec.get("episode"):
         out["runner_total_s"] = meta.get("total_time_s", meta.get("wall_s"))
+        ra = meta.get("runner_agent_s")
+        if ra is None and isinstance(out["runner_total_s"], (int, float)):    # api_meta from before audit r0
+            ra = out["runner_total_s"] - float(meta.get("broker_wait_s") or 0.0)
+        out["runner_agent_s"] = ra
         out["runner_stop"] = meta.get("stop")
-    over_hard = t["over_hard"] or (isinstance(out.get("runner_total_s"), (int, float))
-                                   and out["runner_total_s"] > t["hard_cap_s"])
+    over_hard = t["over_hard"] or (rec.get("submitted_at") is None and isinstance(out.get("runner_agent_s"), (int, float))
+                                   and out["runner_agent_s"] > t["hard_cap_s"])
     out["over_time"] = "hard" if over_hard else ("nominal" if t["over_nominal"] else None)
     return out
 
@@ -998,14 +1004,29 @@ def _prune_sandbox(rec, edir):
     are in tool_log.jsonl. Small files (agent scripts, notes) are kept for transcript analysis. RL_KEEP_SANDBOX=1 disables."""
     if os.environ.get("RL_KEEP_SANDBOX") == "1":
         return
+    # Audit r0 (2026-10-04): os.walk follows a TOP-LEVEL symlink, so an agent that replaced tmp/ (or out/, scratch/)
+    # with a symlink to a directory outside the sandbox made finish delete big files THERE, even for an INVALID
+    # episode. Now a symlinked or escaping top dir is skipped, and every file must resolve inside the sandbox.
+    # (os.walk does not descend into nested directory symlinks; followlinks stays False.)
+    sbx_real = os.path.realpath(rec["sandbox"])
+
+    def inside(p):
+        rp = os.path.realpath(p)
+        return rp.startswith(sbx_real + os.sep)
+
     removed, freed = [], 0
     for sub in ("out", "scratch", SANDBOX_TMP):
-        for root, _dirs, files in os.walk(os.path.join(rec["sandbox"], sub)):
+        top = os.path.join(rec["sandbox"], sub)
+        if os.path.islink(top) or not os.path.isdir(top) or not inside(top):
+            continue
+        for root, _dirs, files in os.walk(top):
             for fn in files:
                 fp = os.path.join(root, fn)
                 try:
+                    if os.path.islink(fp) or not inside(fp):
+                        continue
                     sz = os.path.getsize(fp)
-                    if sz > PRUNE_MIN_BYTES and not os.path.islink(fp):
+                    if sz > PRUNE_MIN_BYTES:
                         os.remove(fp)
                         removed.append({"path": os.path.relpath(fp, rec["sandbox"]), "bytes": sz})
                         freed += sz
@@ -1122,6 +1143,7 @@ def _group_stats(rows):
         "over_time": dict(sorted(collections.Counter(
             str(g["harness"].get("over_time")) if "over_time" in g["harness"] else "unknown" for g in rows).items())),
         "max_total_time_s": max([_dict(g["harness"].get("time")).get("total_s") or 0 for g in rows] or [0]),
+        "max_agent_time_s": max([_dict(g["harness"].get("time")).get("agent_s") or 0 for g in rows] or [0]),
     }
 
 
@@ -1163,7 +1185,8 @@ def summarize(run_dir):
             md.append(f"Invalid episodes: {s['invalid_reasons']}")
         if s["over_time"].get("nominal") or s["over_time"].get("hard"):
             md.append(f"TIME LIMIT EXCEEDED: {s['over_time'].get('nominal', 0)} episode(s) past the nominal cap, "
-                      f"{s['over_time'].get('hard', 0)} past the absolute ceiling (max total {s['max_total_time_s']} s)")
+                      f"{s['over_time'].get('hard', 0)} past the hard ceiling (max agent time {s['max_agent_time_s']} s, "
+                      f"max total incl. compute wait {s['max_total_time_s']} s)")
         md.append(f"Per instance (pass/n): " + ", ".join(f"{i}: {v['pass']}/{v['n']}" for i, v in s["per_instance"].items()))
     with open(os.path.join(run_dir, "summary.md"), "w") as f:
         f.write("\n".join(md) + "\n")

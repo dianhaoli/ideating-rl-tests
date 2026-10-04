@@ -29,6 +29,7 @@ import time
 
 from common.api_agent import (SYSTEM, _episode_submitted, _run_bash, MAIN_REPO, CAPS_FILE, TIME_WARN,
                               TIME_GRACE_TURNS, BASH_TIMEOUT_S, EpisodeClock, DeadlineReached, _api_call, final_stop,
+                              stop_episode,
                               _paths)
 
 LEDGER_DIR = os.path.expanduser(os.environ.get("RL_API_LEDGER_DIR", "~/.rl_api"))
@@ -138,7 +139,7 @@ def _openai_classify(openai):
 def run(args, client=None):
     """One episode. `client`: an OpenAI client (tests pass a fake); default: a real one with SDK retries off (the
     600 s request timeout times 4 SDK attempts is how ep40a2ecda0d spent 1906 s on one turn; _api_call retries
-    within the episode's absolute time limit instead)."""
+    within the episode's hard time limit instead)."""
     import openai
 
     model = args.model
@@ -244,11 +245,10 @@ def run(args, client=None):
                 cmd = json.loads(c.arguments).get("command", "")
             except Exception:
                 cmd = ""
-            left = clock.hard_left()
             if clock.expired():
-                out, was_blocked = "[not run: the episode's absolute time limit has been reached]", False
+                out, was_blocked = "[not run: the episode's hard time limit has been reached]", False
             else:
-                out, was_blocked = _run_bash(cmd, sbx, args.episode, timeout=min(BASH_TIMEOUT_S, left))
+                out, was_blocked = _run_bash(cmd, sbx, args.episode, timeout=BASH_TIMEOUT_S, clock=clock)
             blocked += int(was_blocked)
             if _episode_submitted(args.episode):      # any route: ./tool submit, ./py + subprocess, ... (fix 2)
                 submitted = True
@@ -267,11 +267,12 @@ def run(args, client=None):
             next_input.append({"role": "user", "content": TIME_WARN})
             tlog({"type": "user", "message": {"role": "user", "content": TIME_WARN}, "time_warning": True})
     tfile.close()
+    killed = stop_episode(args.episode)       # before final_stop: a detached late submit has landed or is dead
     meta = {"episode": args.episode, "task": args.task, "provider": "openai", "model": model, "effort": args.effort,
             "turns": turns, "stop": final_stop(args.episode, stop), "runner_stop": stop, "budget_warned": warned,
             "time_warned": time_warned_at is not None, "usd": round(spent, 4), "usage": usage_tot,
             "blocked_commands": blocked, "wall_s": round(clock.total_s(), 1), **clock.report(),
-            "openai_ledger_total_usd": round(_total(), 4), "global_cap_usd": GLOBAL_CAP_USD,
+            "killed_processes": killed, "openai_ledger_total_usd": round(_total(), 4), "global_cap_usd": GLOBAL_CAP_USD,
             "openai_sdk": openai.__version__}
     json.dump(meta, open(os.path.join(args.out, "api_meta.json"), "w"), indent=1)
     print(json.dumps(meta))
