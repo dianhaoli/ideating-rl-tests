@@ -1,0 +1,5 @@
+{"t": 1791096856.6778033, "method": "GET", "path": "/api/oauth/profile", "allowed": false, "why": "path not allowed by the episode proxy"}
+{"t": 1791096856.8567731, "method": "GET", "path": "/v1/models", "allowed": false, "why": "path not allowed by the episode proxy"}
+{"t": 1791096856.95026, "method": "POST", "path": "/v1/files", "allowed": false, "why": "path not allowed by the episode proxy"}
+{"t": 1791096857.0412107, "method": "POST", "path": "/v1/messages/../models", "allowed": false, "why": "path not allowed by the episode proxy"}
+{"t": 1791096857.2131772, "method": "POST", "path": "/v1/messages", "allowed": true, "status": 401, "bytes": 133, "s": 0.09}

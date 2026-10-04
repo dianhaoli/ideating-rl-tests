@@ -587,7 +587,9 @@ class Broker:
     def admin(self, req):
         cmd = req.get("admin")
         if cmd == "ping":
-            return {"ok": True, "result": {"pid": os.getpid()}}
+            # Answered without the admin token (liveness checks), so it reveals nothing: the broker's host pid used to
+            # be in the reply, readable from inside an agent's jail (2026-10-04 isolation audit, minor finding).
+            return {"ok": True, "result": {}}
         if cmd == "status":
             eps = []
             with self.lock:

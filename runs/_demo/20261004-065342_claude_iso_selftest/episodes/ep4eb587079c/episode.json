@@ -1,0 +1,50 @@
+{
+ "episode": "ep4eb587079c",
+ "task": "_demo",
+ "instance_id": "dm-76d2c0c3",
+ "tier": "T1",
+ "profile": "full",
+ "solver_label": "decoy",
+ "agent_model": null,
+ "sandbox": "/home/ec2-user/rlsbx/ep4eb587079c",
+ "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/3a476a8b3eed/dm-76d2c0c3",
+ "caps": {
+  "tool_calls": 20,
+  "forward": 40,
+  "generate": 0,
+  "gradient": 0,
+  "wall_clock_s": 600,
+  "call_timeout_s": 30
+ },
+ "counters": {
+  "tool_calls": 0,
+  "forward": 0,
+  "generate": 0,
+  "gradient": 0
+ },
+ "tools": [
+  "query",
+  "weights"
+ ],
+ "gpu_gb": 0.0,
+ "status": "closed",
+ "created_at": 1791096848.7658517,
+ "started_at": null,
+ "submitted_at": null,
+ "closed_at": 1791096869.5539215,
+ "wait_s": 0.0,
+ "leak_detected": false,
+ "behavioral_exposure": 0,
+ "git_sha": "c25966b937dbfbc9788a04872ee8a36270104068",
+ "git_dirty": true,
+ "prompt_template": {
+  "path": "/home/ec2-user/wt/v3iso/tasks/_demo/agent_prompt.md",
+  "sha256": "8a5b9dd1f7472e271f2642bb10bf8345dff2e6cfffe3c897be9c8fdf158facc3",
+  "default": true
+ },
+ "min_submit_frac": {},
+ "extra_files": [],
+ "n_leak_events": 0,
+ "cross_episode_access": false,
+ "finished_at": 1791096869.6177788
+}

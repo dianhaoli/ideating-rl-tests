@@ -1,0 +1,50 @@
+{
+ "episode": "ep686f74a5cc",
+ "task": "_demo",
+ "instance_id": "dm-76d2c0c3",
+ "tier": "T1",
+ "profile": "full",
+ "solver_label": "claude-iso-haiku",
+ "agent_model": "claude-cli:claude-haiku-4-5-20251001:high",
+ "sandbox": "/home/ec2-user/rlsbx/ep686f74a5cc",
+ "instance_dir": "/home/ec2-user/ideating-rl-tests/runs/.episodes/snap/422a6292bd0f/dm-76d2c0c3",
+ "caps": {
+  "tool_calls": 20,
+  "forward": 40,
+  "generate": 0,
+  "gradient": 0,
+  "wall_clock_s": 600,
+  "call_timeout_s": 30
+ },
+ "counters": {
+  "tool_calls": 1,
+  "forward": 0,
+  "generate": 0,
+  "gradient": 0
+ },
+ "tools": [
+  "query",
+  "weights"
+ ],
+ "gpu_gb": 0.0,
+ "status": "submitted",
+ "created_at": 1791099511.3912568,
+ "started_at": 1791099517.0194206,
+ "submitted_at": 1791099528.2165225,
+ "closed_at": 1791099530.8189428,
+ "wait_s": 0.16133952140808105,
+ "leak_detected": false,
+ "behavioral_exposure": 0,
+ "git_sha": "f20f529258aa939834d4dacd86415107baca1963",
+ "git_dirty": true,
+ "prompt_template": {
+  "path": "/home/ec2-user/wt/v3iso/tasks/_demo/agent_prompt.md",
+  "sha256": "8a5b9dd1f7472e271f2642bb10bf8345dff2e6cfffe3c897be9c8fdf158facc3",
+  "default": true
+ },
+ "min_submit_frac": {},
+ "extra_files": [],
+ "n_leak_events": 0,
+ "cross_episode_access": false,
+ "finished_at": 1791099530.8818343
+}

@@ -1,0 +1,100 @@
+{
+ "episode": "epd2c435cc85",
+ "task": "_demo",
+ "provider": "claude-code-cli",
+ "model": "claude-haiku-4-5-20251001",
+ "effort": "high",
+ "auth": "oauth",
+ "token_valid_min_at_start": 399,
+ "token_in_jail": false,
+ "turns": 7,
+ "stop": "submitted",
+ "submitted": true,
+ "usd": 0.0342,
+ "usd_note": "CLI-reported list-price estimate; billed to the operator's subscription",
+ "wall_s": 35.3,
+ "session_id": "a3efcdea-0f6c-4dad-b9f0-9265ab8e5656",
+ "usage": [
+  {
+   "input_tokens": 58,
+   "cache_creation_input_tokens": 5423,
+   "cache_read_input_tokens": 81008,
+   "output_tokens": 3043,
+   "output_tokens_details": {
+    "thinking_tokens": 1017
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5423,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [],
+   "speed": "standard",
+   "fallback_credit": null
+  }
+ ],
+ "model_usage": [
+  {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 58,
+    "outputTokens": 3043,
+    "cacheReadInputTokens": 81008,
+    "cacheCreationInputTokens": 5423,
+    "webSearchRequests": 0,
+    "costUSD": 0.0342198,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 1017,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ ],
+ "net_denied": [],
+ "net_allowed_n": 0,
+ "api_proxy_requests": 7,
+ "api_proxy_denied": [],
+ "api_proxy_errors": [],
+ "isolation": "bwrap+netns+egress-allowlist",
+ "init": [
+  {
+   "model": "claude-haiku-4-5-20251001",
+   "tools": [
+    "Bash",
+    "Edit",
+    "Glob",
+    "Grep",
+    "Read",
+    "Write"
+   ],
+   "mcp_servers": [],
+   "cwd": "/home/ec2-user/rlsbx/epd2c435cc85",
+   "permissionMode": "dontAsk",
+   "claude_code_version": "2.1.288",
+   "slash_commands": [],
+   "agents": [
+    "claude",
+    "Explore",
+    "general-purpose",
+    "Plan"
+   ],
+   "skills": []
+  }
+ ],
+ "exit_codes": [
+  0
+ ],
+ "stream_integrity": {
+  "ok": true,
+  "bad_lines": 0,
+  "orphan_results": [],
+  "n_tool_uses": 6
+ },
+ "credential_found_in": []
+}

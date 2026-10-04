@@ -1,0 +1,95 @@
+ESCAPE absent:/home/ec2-user/wt  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/wt
+ESCAPE absent:/home/ec2-user/ideating-rl-tests  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/ideating-rl-tests
+ESCAPE absent:/home/ec2-user/.claude  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/.claude
+ESCAPE absent:/home/ec2-user/.claude/projects  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/.claude/projects
+ESCAPE absent:/home/ec2-user/.claude/.credentials.json  rc=0 out='<not recorded in control mode>'
+ESCAPE read:/home/ec2-user/.claude/.credentials.json  rc=0 out='<not recorded in control mode>'
+ESCAPE absent:/home/ec2-user/hf_home  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/hf_home
+ESCAPE absent:/home/ec2-user/.anthropic_env  rc=0 out='<not recorded in control mode>'
+ESCAPE read:/home/ec2-user/.anthropic_env  rc=0 out='<not recorded in control mode>'
+ESCAPE absent:/home/ec2-user/.openai_env  rc=0 out='<not recorded in control mode>'
+ESCAPE read:/home/ec2-user/.openai_env  rc=0 out='<not recorded in control mode>'
+ESCAPE absent:/home/ec2-user/.hf_env  rc=0 out='<not recorded in control mode>'
+ESCAPE read:/home/ec2-user/.hf_env  rc=0 out='<not recorded in control mode>'
+PASS absent:/home/ec2-user/.aws
+PASS read:/home/ec2-user/.aws
+ESCAPE absent:/home/ec2-user/.rl_api  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/.rl_api
+ESCAPE absent:/home/ec2-user/.rl_claude_agent  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/.rl_claude_agent
+ESCAPE absent:/home/ec2-user/ideating-rl-tests/runs/.episodes  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/ideating-rl-tests/runs/.episodes
+ESCAPE absent:/opt/pytorch  rc=0 out='<not recorded in control mode>'
+PASS read:/opt/pytorch
+ESCAPE absent:/root  rc=0 out='<not recorded in control mode>'
+PASS read:/root
+ESCAPE absent:/var/log  rc=0 out='<not recorded in control mode>'
+PASS read:/var/log
+ESCAPE absent:/sys/class  rc=0 out='<not recorded in control mode>'
+PASS read:/sys/class
+ESCAPE absent:/home/ec2-user/.ssh  rc=0 out='<not recorded in control mode>'
+PASS read:/home/ec2-user/.ssh
+ESCAPE ls_home  rc=0 out='<not recorded in control mode>'
+ESCAPE ls_sandbox_root  rc=0 out='<not recorded in control mode>'
+ESCAPE decoy_ls  rc=0 out='<not recorded in control mode>'
+ESCAPE decoy_cat_task  rc=0 out='<not recorded in control mode>'
+ESCAPE decoy_via_dotdot  rc=0 out='<not recorded in control mode>'
+PASS decoy_tool
+ESCAPE dotdot_up  rc=0 out='<not recorded in control mode>'
+ESCAPE dotdot_cat  rc=0 out='<not recorded in control mode>'
+ESCAPE dotdot_deep  rc=0 out='<not recorded in control mode>'
+ESCAPE symlink_root  rc=0 out='<not recorded in control mode>'
+ESCAPE symlink_repo  rc=0 out='<not recorded in control mode>'
+PASS symlink_cleanup
+ESCAPE py_os_open  rc=0 out='<not recorded in control mode>'
+ESCAPE py_listdir_home  rc=0 out='<not recorded in control mode>'
+ESCAPE py_walk_root  rc=0 out='<not recorded in control mode>'
+ESCAPE find_instances  rc=1 out='<not recorded in control mode>'
+ESCAPE find_all_paths  rc=0 out='<not recorded in control mode>'
+ESCAPE grep_canary  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_pids_only_ns  rc=0 out='<not recorded in control mode>'
+PASS proc_host_1_cmdline
+PASS proc_host_1_root
+PASS proc_host_1_cwd
+ESCAPE proc_host_186434_cmdline  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_186434_root  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_186434_cwd  rc=0 out='<not recorded in control mode>'
+PASS proc_host_661401_cmdline
+PASS proc_host_661401_root
+PASS proc_host_661401_cwd
+PASS proc_host_667818_cmdline
+ESCAPE proc_host_667818_root  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_667818_cwd  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_672359_cmdline  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_672359_root  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_host_672359_cwd  rc=0 out='<not recorded in control mode>'
+ESCAPE proc_any_root_repo  rc=2 out='<not recorded in control mode>'
+PASS proc_self_fds
+ESCAPE gpu_absent  rc=0 out='<not recorded in control mode>'
+ESCAPE nested_userns  rc=0 out='<not recorded in control mode>'
+PASS mount_denied
+ESCAPE net_direct_ip  rc=0 out='<not recorded in control mode>'
+ESCAPE net_metadata  rc=0 out='<not recorded in control mode>'
+ESCAPE net_dns  rc=0 out='<not recorded in control mode>'
+PASS net_proxy_other_host
+PASS net_proxy_plain_http
+PASS net_proxy_api_connect_denied
+ESCAPE api_proxy_profile_denied  rc=1 out='<not recorded in control mode>'
+ESCAPE api_proxy_models_denied  rc=1 out='<not recorded in control mode>'
+ESCAPE api_proxy_files_denied  rc=1 out='<not recorded in control mode>'
+ESCAPE api_proxy_dotdot_denied  rc=1 out='<not recorded in control mode>'
+PASS api_proxy_forwards_messages
+PASS no_real_credential_in_jail
+PASS env_clean
+PASS tool_help
+PASS tool_budget
+PASS sandbox_writable
+PASS usr_readonly
+ESCAPE venv_readonly  rc=0 out='<not recorded in control mode>'
+PASS tmpdir_in_sandbox
+{"episode": "ep10653f9824", "n_probes": 94, "n_escaped": 57, "escaped": ["absent:/home/ec2-user/wt", "absent:/home/ec2-user/ideating-rl-tests", "absent:/home/ec2-user/.claude", "absent:/home/ec2-user/.claude/projects", "absent:/home/ec2-user/.claude/.credentials.json", "read:/home/ec2-user/.claude/.credentials.json", "absent:/home/ec2-user/hf_home", "absent:/home/ec2-user/.anthropic_env", "read:/home/ec2-user/.anthropic_env", "absent:/home/ec2-user/.openai_env", "read:/home/ec2-user/.openai_env", "absent:/home/ec2-user/.hf_env", "read:/home/ec2-user/.hf_env", "absent:/home/ec2-user/.rl_api", "absent:/home/ec2-user/.rl_claude_agent", "absent:/home/ec2-user/ideating-rl-tests/runs/.episodes", "absent:/opt/pytorch", "absent:/root", "absent:/var/log", "absent:/sys/class", "absent:/home/ec2-user/.ssh", "ls_home", "ls_sandbox_root", "decoy_ls", "decoy_cat_task", "decoy_via_dotdot", "dotdot_up", "dotdot_cat", "dotdot_deep", "symlink_root", "symlink_repo", "py_os_open", "py_listdir_home", "py_walk_root", "find_instances", "find_all_paths", "grep_canary", "proc_pids_only_ns", "proc_host_186434_cmdline", "proc_host_186434_root", "proc_host_186434_cwd", "proc_host_667818_root", "proc_host_667818_cwd", "proc_host_672359_cmdline", "proc_host_672359_root", "proc_host_672359_cwd", "proc_any_root_repo", "gpu_absent", "nested_userns", "net_direct_ip", "net_metadata", "net_dns", "api_proxy_profile_denied", "api_proxy_models_denied", "api_proxy_files_denied", "api_proxy_dotdot_denied", "venv_readonly"]}
