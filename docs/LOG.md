@@ -574,3 +574,11 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
 
 ## 2026-10-04: per-episode luna report (docs/results/shifthunt/LUNA_EPISODES.md)
 One Sonnet subagent, scripted over grade/tool logs. Luna's failures are on the interpretation and method side, not the scaffold: 10/10 valid first-try submits, no cap hit, 1.3% tool errors, and all 10 loaded the full latent_means files. Planted naming is 19/22 (chance 1/6). The 3 misses answered "none". Null false claims are 5/13, 4 of them in 2 episodes that never compared cue vs topic effect. The dominant failure is under-fill: a median of 4 of 20 latents, with removed/tau at a median of 0.68 and no overshoot. Sol and Opus always fill 20. Slots solved: 10/35 at baseline, 12/35 at high effort, 23/35 with the method hint.
+
+## 2026-10-04: why luna submits ~4 latents (spot check of 2 transcripts' final commands; OpenAI reasoning is hidden)
+The format rule is clear ("at most 20"). What pushes a cautious agent toward a minimal set:
+(1) the bar is hidden: TASK.md says only "between 0.15 and 0.6";
+(2) TASK.md says overshooting counts against you and the topic must stay >= 80%, but never says that extra latents are free;
+(3) luna checks its ablation on the confounded sample, where cue and topic move together (in one episode the exclamation dependence equals the topic dependence exactly). Its own check reads as topic damage (-6 to -11%), and it trims: it tested 6 latents and submitted 3, tested 5 and submitted 4.
+No luna slot overshot. Sol and Opus fill the 20 regardless; the method hint fixes removal (14/17).
+Same open item as STATUS 7.3: state whether filling the budget is free, or add a per-latent cost; state that removal is measured on held-out data.
