@@ -571,3 +571,6 @@ Harness on main: 7345b11e (E1 false positives (a)-(d), 55 tests, replay of 79 tr
   LatentDiff SMOKE; instance ids redacted). INDEX.md updated.
 - Final luna diagnostics: effort high 1/10 (4/20 named slots clear the bar, median 4.5 latents); method hint 1/10 (14/17 clear, median 20 latents,
   naming 17/22). Effort is not the cause; the hint fixes removal but not naming or null calls. task/shifthunt c6c37109 (local).
+
+## 2026-10-04: per-episode luna report (docs/results/shifthunt/LUNA_EPISODES.md)
+One Sonnet subagent, scripted over grade/tool logs. Luna's failures are on the interpretation and method side, not the scaffold: 10/10 valid first-try submits, no cap hit, 1.3% tool errors, and all 10 loaded the full latent_means files. Planted naming is 19/22 (chance 1/6). The 3 misses answered "none". Null false claims are 5/13, 4 of them in 2 episodes that never compared cue vs topic effect. The dominant failure is under-fill: a median of 4 of 20 latents, with removed/tau at a median of 0.68 and no overshoot. Sol and Opus always fill 20. Slots solved: 10/35 at baseline, 12/35 at high effort, 23/35 with the method hint.
