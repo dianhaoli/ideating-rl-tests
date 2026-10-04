@@ -8,7 +8,7 @@ docs/DECISIONS.md. A complete worked example of a task is `tasks/_demo/` (no GPU
 
 Terms used below:
 - **Privileged side**: the repo, instance answer keys, graders, reference solvers. The test agent must never see any of it.
-- **Agent side**: one sandbox directory per episode, `~/rlsbx/<episode_id>/`. It holds only `TASK.md`, the `tool` client, the `py` analysis Python, `out/` and `scratch/`.
+- **Agent side**: one sandbox directory per episode, `~/rlsbx/<episode_id>/`. It holds only `TASK.md`, the `tool` client, the `py` analysis Python, `out/`, `scratch/` and `tmp/` (the agent's temp dir, 2026-10-04).
 - **Episode**: one attempt by one solver (an LLM test agent or a scripted baseline) on one instance under one tool profile.
 - **Tool profile**: the set of tools exposed. `full` is the normal white-box task. `blackbox` keeps only behavioural tools (generate/score text) for the black-box control.
 
@@ -109,7 +109,7 @@ Python helper for scripted solvers: `from common.toolclient import Client; c = C
 python -m common.sandbox prepare --task T --instance-dir D --profile full|blackbox \
        --run-dir runs/T/<YYYYmmdd-HHMMSS>_<label> [--solver-label opus|haiku|reference|blackbox|recipe] \
        [--prompt-template FILE] [--min-submit-frac forward=0.6] [--extra-file SRC:DST ...]   (see below)
-   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, .episode}
+   -> creates ~/rlsbx/<E>/ {TASK.md, tool, py (wrapper for the analysis venv python), out/, scratch/, tmp/, .episode}
       writes runs/.episodes/<E>.json and <run-dir>/episodes/<E>/episode.json
       prints E and the exact test-agent prompt (also saved to <run-dir>/episodes/<E>/agent_prompt.txt)
 python -m common.sandbox finish --episode E [--transcript PATH] [--agent-model MODEL]
@@ -451,3 +451,78 @@ Refinements to the spec above:
   9 of 20 T1 agents used it, and one operator read it as "exec of transformed code". The audit is unchanged; a test
   checks that every exec example in the prompt passes R9 and that `.replace`, slicing, `+`, a computed marker and
   `..` still fire. Applies to episodes prepared from now on (prompt text and sha change).
+
+### v3 harness fixes (2026-10-04; ShiftHunt v2 evidence, branch harness/v3-fixes)
+- **Wall clock: nominal cap + hard ceiling, both on agent time.** WHY: ShiftHunt diag_T1_luna_high ep40a2ecda0d ran 6366 s against
+  `wall_clock_s` 3600. It was not compute-wait exclusion (`wait_s` was 15 s): neither runner had a clock, the broker only
+  refused task tools after the cap, and three OpenAI requests took 1169 s, 1906 s and 1422 s (600 s SDK request timeout
+  x internal retries); the agent submitted 46 minutes late. Now `wall_clock_s` caps agent time (since the first tool
+  call, minus compute wait; past it task tools are refused, submit still works) and the new cap `wall_clock_hard_s`
+  (default `max(1.5 x wall_clock_s, wall_clock_s + 60)`, `broker.hard_cap`; written into the record at prepare) caps
+  the same agent time (compute wait excluded): past it the broker refuses task tools AND submit and closes the episode
+  (`close_reason: wall_clock_hard`, tool-log event `wall_clock_hard`). Both runners (`api_agent`, `openai_agent`) send
+  a time notice once agent time reaches `wall_clock_s` and stop 2 turns later (`runner_stop: wall_clock`), and never
+  pass the ceiling: SDK retries are off, `_api_call` retries within the ceiling, every request gets a timeout that
+  ends at it and a bash command is stopped when it is reached (`runner_stop: wall_clock_hard`). TASK.md states the
+  hard limit; `./tool budget` shows
+  `wall_clock_hard_s`. Recorded: episode record `time` (at submit/close), api_meta.json `agent_time_s`,
+  `total_time_s`, `broker_wait_s`, `runner_agent_s`, `wall_clock_cap_s`, `wall_clock_hard_s`, `time_warned`,
+  `killed_processes`; grade.json
+  `harness.time` and `harness.over_time` (None / "nominal" / "hard"; for an unsubmitted episode the end is the last
+  tool call, not the finish time); summary.json `over_time`, `max_total_time_s`; summary.md column
+  "over time (nominal/hard)" and a TIME LIMIT EXCEEDED line. Over time is visible, not INVALID.
+  - *Audit round 0 corrections (same day).* (1) The first version capped TOTAL time, wait included, against the
+    broker's own rule that wait does not count. Over the 163 recorded LLM episodes with an end time, that rule would
+    have closed 3: ep40a2ecda0d (wait 15 s), but also residualrecall ep99d08b74cc (cap 2700 s, wait 2888 s, agent
+    1408 s, SUBMITTED; its submission would have been refused) and featurematch ep4980d0bf46 (wait 5075 s, agent
+    349 s). The ceiling is now on agent time in the broker, `episode_times` and the runners; only ep40a2ecda0d is over
+    it. Total time is recorded, not capped. While a call waits for GPU admission / model load the record carries
+    `waiting_since`, so the runners' clock (`EpisodeClock.wait_s`) excludes a wait still in progress, and a running
+    bash command re-checks the ceiling every 0.5 s instead of getting a fixed timeout at its start.
+    (2) A stopped command is now killed with its whole process group, and also every process whose environment
+    carries `RL_AGENT_PROC=<episode>` (set by `bash_env`, inherited by children, so it finds `setsid` escapes); the
+    runner kills the episode's left-over processes at exit (`api_agent.stop_episode`, plus an atexit backstop) and
+    then waits for the broker's new admin `sync` (takes the episode lock), so a detached late `./tool submit` either
+    lands before `final_stop` reads the record or never lands. Before, `subprocess.run(timeout=)` killed only
+    `bash -c`. Background jobs are still allowed while the episode runs. A process that clears its environment
+    (`env -i setsid ...`) is not found; that is deliberate evasion.
+    (3) `over_time` for an accepted submission is decided by the broker's clock only (the runner clock starts earlier
+    and could read "hard" for a submission accepted in time); without one, the runner's agent time
+    (`runner_agent_s`) past the ceiling also counts.
+- **Runner stop reason from the episode record.** WHY: gpt-6.1-sol submitted via `subprocess.check_output(['./tool',
+  'submit', ...])` inside `./py` (openai_T1_sol ep8f9ba96cef, epa024656248); the runner matched only `./tool submit`
+  in the command text, nudged a finished agent and reported `ended_without_submit` while the grader graded the
+  submission. The runners now check the broker record after every command, and api_meta `stop` is
+  `api_agent.final_stop(episode, loop_stop)`: "submitted" whenever the record holds an accepted submission;
+  `runner_stop` keeps the loop's own reason.
+- **Sandbox-local temp dir.** WHY: of the 5 INVALID Haiku episodes of scale1_T1_haiku45, 4 had R2 `/tmp` hits, all
+  explicit shell redirections of tool output (`./tool ... > /tmp/x.json`, then `cat`/`open('/tmp/x.json')` to read
+  it back), none Python's tempfile. (The other hits in that run: R5 "process inspection" on `(top 4 latents)` inside a
+  printed f-string in 2 episodes -- the only reason for ep84b8865060 -- and one R1 Read of Claude Code's own
+  tool-results file; both left as open items.) Every sandbox now has `tmp/` (reserved name, pruned like out/ and
+  scratch/), the agent prompt says "For temporary files use tmp/ in your working directory, never /tmp (in Python,
+  for example tempfile.mkstemp(dir='tmp')).", and the runners set `TMPDIR`/`TMP`/`TEMP` to `<sandbox>/tmp`
+  (`api_agent.bash_env`), so tempfile/mktemp land there by default. Pruning at finish (audit round 0) skips a
+  top-level out/, scratch/ or tmp/ that is a symlink or resolves outside the sandbox, and every file must resolve
+  inside it: before, `os.walk` followed a symlinked top dir and finish deleted big files outside the sandbox, even for
+  an INVALID episode (the out/ and scratch/ case predates this branch). The audit needs no relaxation: `<sandbox>/tmp` is
+  inside the sandbox, and `/tmp` is still R2. Claude Code subagents get the prompt line only (their TMPDIR is set by
+  Claude Code), hence the explicit `dir='tmp'` example.
+- **Over-long command output.** The runners showed only the first and last 6k of an output over 12k chars with a
+  bare "[N chars truncated]". Now the full output is saved to `out/cmd_output_<n>.txt` in the sandbox and the shown
+  head + tail carry an explicit note with that path (`api_agent.truncate_output`). It never writes through a
+  symlink: out/ must resolve inside the sandbox and the file is created with O_EXCL|O_NOFOLLOW (audit round 0).
+- **Audit (e): `print(<expr>.replace(<literal>, '/'))`.** A quoted '/' that is the replacement argument of a
+  `.replace(<str literal>, '/')` call (or chain of such calls) that is a whole argument of print() is printed text,
+  under exactly the guards of (a) (python_spans region, print not rebound). Twins that stay flagged: the call inside
+  open()/listdir(), an assignment, `os.replace`, a computed first argument, a pipe into sh, `sep='/'`, f-strings, and
+  every other path. Replay over all 161 recorded transcript units under ~/wt/*/runs (5029 tool calls): exactly one
+  change, openai_T2_sol ep2c6190e0f5 flagged -> clean (`runs/_harness/audit_replay_v3fixes/`). Re-run after the
+  audit round 0 corrections over 163 units (5043 tool calls): the same single change vs d5aed72b, and no change at all
+  vs c75592fe. Known gap, same class as (a) (no new class): the printed text can be written to a file and run in a
+  later call (`./py -c "print(s.replace('x','/'))" > r.sh` then `sh r.sh`); the audit has no cross-call data flow.
+  Also unchanged from main (audit round 0 probes, identical verdicts on main and this branch): `TMPDIR=/ ./py ...
+  tempfile.gettempdir()`, `pathlib.Path(tempfile.gettempdir()).parents[1]`, `mktemp -p /` and `ls ${HOME%/*}` are
+  not flagged, like the existing $HOME gaps; `$TMPDIR/../..`, `${TMPDIR%/*}`, `ln -s / tmp`, `/var/tmp`, `/dev/shm`
+  are. `toolserver.make_local_call` drops the same non-counter caps as the broker (`wall_clock_hard_s` included).
+  Tests: `common/tests/test_v3_harness_fixes.py`, `test_v3_audit_round0.py`, `test_v3_audit_round0_fixes.py`.

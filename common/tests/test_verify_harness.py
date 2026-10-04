@@ -92,7 +92,7 @@ def assert_clean(text, inst):
 def test_sandbox_files_reveal_nothing_private(hx):
     ep, c, inst = vprep(hx)
     names = sorted(os.listdir(ep["sandbox"]))
-    assert names == [".episode", "TASK.md", "out", "py", "scratch", "tool"]
+    assert names == [".episode", "TASK.md", "out", "py", "scratch", "tmp", "tool"]
     for fn in (".episode", "TASK.md", "py", "tool"):
         assert_clean(open(os.path.join(ep["sandbox"], fn), encoding="utf-8").read(), inst)
     assert_clean(ep["prompt"], inst)

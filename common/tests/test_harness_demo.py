@@ -276,7 +276,7 @@ def test_agent_client_cli_py39(hx):
 
 def test_sandbox_contents_and_prompt(hx):
     ep, c = _prep(hx, hx.insts["null"][0])
-    assert sorted(os.listdir(ep["sandbox"])) == [".episode", "TASK.md", "out", "py", "scratch", "tool"]
+    assert sorted(os.listdir(ep["sandbox"])) == [".episode", "TASK.md", "out", "py", "scratch", "tmp", "tool"]
     p = ep["prompt"]
     for must in (f"Your working directory is {ep['sandbox']}/", "Only read, write and run things inside that directory",
                  "./tool", "./py", "Do not use web search or web fetch", "Do not spawn sub-agents",
