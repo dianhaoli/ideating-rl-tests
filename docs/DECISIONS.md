@@ -200,3 +200,13 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   Gate 0 passed as defined, but cheap no-name scripts read the planted module through the tool algebra. Recommendation:
   change direction (v4 scope in KILLED.md section 5). The audited harness fixes and the isolated launcher merged to main.
   OpenAI spend for v3: $0, since no model episodes ran.
+
+## D19. Model-diffing environment: test before building (Dan, 2026-10-04 ~09:45 UTC)
+- Dan's brief: decide whether a model-diffing interp RL environment is worth building. The agent gets a base model and a fine-tuned copy
+  and submits compact, checkable claims about what changed. The grader tests the claims behaviorally on held-out prompts. Stop and write up at the first
+  clear negative. Stage 0 uses public organisms with no training. Stage 1 (fresh organisms, mix ratios, the difficulty ladder) runs only if Stage 0 is promising.
+- Branch task/modeldiff (local only; answer keys). Separate venv for the diffing toolkit (~/venvs/diffing), never pip into /opt/pytorch.
+  Test agents run fully isolated (common/claude_agent.py, egress allowlist).
+- API caps for task modeldiff (judge and claim extraction): Anthropic $6 (global $16 cap, $2.79 spent), OpenAI $12. Same autonomy and effort
+  rules as D18 (audits as pieces finish, no permission stops before a gate).
+- Disk: Dan enlarged the EBS volume. Root grown online to 150 GB (growpart + xfs_growfs), 68 GB free.
