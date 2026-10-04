@@ -14,6 +14,7 @@
 - `OPEN_QUESTIONS.md`: uncertainties and assumptions.
 - `STATUS_2026-10-04.md`: **start here**: the state of everything after the Oct 2 crash, recovery and validation work (ShiftHunt validated with caveats;
   the other tasks' verdicts; small-model failures; infrastructure caveats; open items).
+- `forensics/SHIFTHUNT_FORENSICS.md`: independent ShiftHunt audit (grader correctness, grid noise, padding recipe, truncation channel, answer reachability, RL blockers).
 - `results/`: redacted, aggregate-only copies of each study's write-up (the source branches are listed in STATUS section 8):
   `results/shifthunt/` (VALIDATION, SCALE1_T1/T2/OPENAI with checks, SMALLMODEL_FAILURES, SMOKE), `results/featurematch/` (VERDICT, RESULTS, STEP3),
   `results/latentknockout/` (FEASIBILITY_VERDICT, PRECEDENT), `results/boolintermediates/` and `results/latentdiff/` (SMOKE).
