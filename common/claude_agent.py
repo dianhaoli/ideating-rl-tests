@@ -743,7 +743,7 @@ def run(args):
     meta = {"_stderr_path": os.path.join(args.out, "claude_stderr.log")}
     t0 = time.time()
     deadline = t0 + args.max_wall_s
-    usd, turns, results, stop, sid = 0.0, 0, [], None, None
+    usd, turns, results, stop, sid, submitted = 0.0, 0, [], None, None, False
     try:
         tlog({"type": "user", "message": {"role": "user", "content": prompt}})
         argv = claude_argv(model, args.effort, args.max_turns, jail.settings_in,
