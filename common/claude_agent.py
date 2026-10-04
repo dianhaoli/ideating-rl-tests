@@ -34,17 +34,20 @@ plain file reads away and containment rested on the after-the-fact transcript au
   The tool list Claude Code reports at start-up (stream-json `system/init`) is checked against that set; any extra
   tool stops the episode (stop = "unexpected_tools").
 
-Authentication and the residual: the default (--auth oauth) passes ONLY the OAuth access token of the operator's
-Claude Code login (~/.claude/.credentials.json, field accessToken) as CLAUDE_CODE_OAUTH_TOKEN in the jailed process's
-environment. No credential file and no refresh token enter the jail (a refresh inside would rotate the operator's
-refresh token and log the orchestrator out). The access token is short-lived (hours; the launcher refuses to start
-unless it is valid for the whole wall-clock limit plus 10 minutes). RESIDUAL RISK: the agent's own shell can read
-that token from /proc/<claude pid>/environ (same uid, same pid namespace) and could use it to call the Anthropic API
-through the proxy. That exposes no task answer (the API knows nothing about instances), only inference spend on the
-operator's account until the token expires. --auth apikey passes ~/.anthropic_env's ANTHROPIC_API_KEY instead (same
-residual, but spend is real money: the shared API ledger is checked before and charged after the run).
-Removing the residual needs an auth-injecting reverse proxy (the jail gets a dummy token, the proxy outside swaps in
-the real one); not built yet (2 h timebox), see docs/HARNESS_API.md section 11.
+Authentication (default --auth oauth, token injection): the jailed CLI gets a DUMMY OAuth token and
+ANTHROPIC_BASE_URL=http://127.0.0.1:3129, bridged by socat to /run/rl/api.sock. Behind that socket, OUTSIDE the jail,
+AuthProxy replaces the dummy with the operator's real Claude Code access token (re-read from ~/.claude/.credentials.json
+for every request, so the operator session's refreshes are picked up) and forwards over TLS to api.anthropic.com. It
+forwards only POST/GET /v1/messages[/count_tokens] and logs every request to <out>/api_proxy_log.jsonl. No credential
+file, access token or refresh token ever enters the jail (a refresh inside would also rotate the operator's refresh
+token and log the orchestrator out). With injection, the CONNECT allowlist is EMPTY: nothing else leaves the jail.
+--auth apikey does the same with ~/.anthropic_env's key (real money: the shared API ledger is checked and charged).
+--auth oauth-env is the fallback without injection: the real access token sits in the jailed CLI's environment, where
+the agent can read it (/proc/<pid>/environ, verified live), and CONNECT to api.anthropic.com:443 is allowed.
+Residual with injection: while the episode runs, the agent can send its own /v1/messages requests through the proxy
+(inference spend on the operator's account, logged in api_proxy_log.jsonl); it cannot obtain the credential, and no
+API endpoint knows a task's answers. After every run the outputs and the sandbox are scanned for the real credential
+(api_meta.json: credential_found_in).
 
 Usage (after `python -m common.sandbox prepare ...` printed episode E):
     python -m common.claude_agent run --episode E --task T --prompt-file <run>/episodes/E/agent_prompt.txt \
@@ -94,6 +97,7 @@ IN_CFG = IN_HOME + "/.claude"
 IN_RUN = "/run/rl"
 IN_CLAUDE = "/opt/claude/claude"
 PROXY_PORT = 3128
+API_PORT = 3129
 
 NUDGE = "You have not submitted yet. Continue working, or call ./tool submit with your final answer."
 
@@ -184,6 +188,134 @@ class EgressProxy(socketserver.ThreadingUnixStreamServer):
         return self
 
 
+# ---------------------------------------------------------------------------------------------- auth-injecting proxy
+# WHY (2026-10-04): with the token in the jailed process's environment, the agent can read it from /proc/<pid>/environ
+# (verified live: /proc/1/environ inside the jail lists CLAUDE_CODE_OAUTH_TOKEN). Here the jail gets a DUMMY token and
+# ANTHROPIC_BASE_URL=http://127.0.0.1:3129; this reverse proxy outside the jail swaps the dummy for the real credential
+# and forwards over TLS to api.anthropic.com. The real token never enters the jail, and only allowlisted API paths are
+# forwarded (an agent can still spend inference through the proxy while the episode runs; it cannot take the token).
+DUMMY_OAUTH = "sk-ant-oat01-" + "jailed-dummy-token-" + "0" * 60
+API_HOST = "api.anthropic.com"
+API_PATH_RX = re.compile(r"^/v1/messages(/count_tokens)?(\?[^#]*)?$")
+HOP = {"connection", "keep-alive", "proxy-connection", "transfer-encoding", "te", "trailer", "upgrade",
+       "proxy-authorization", "proxy-authenticate", "host", "content-length"}
+
+
+def _make_auth_handler():
+    import http.client
+    import http.server
+
+    class H(http.server.BaseHTTPRequestHandler):
+        protocol_version = "HTTP/1.1"
+
+        def log_message(self, *a):
+            pass
+
+        def address_string(self):
+            return "jail"
+
+        def _deny(self, code, why):
+            self.server.log({"t": time.time(), "method": self.command, "path": self.path[:200], "allowed": False,
+                             "why": why})
+            body = json.dumps({"type": "error", "error": {"type": "forbidden", "message": why}}).encode()
+            self.send_response(code)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def _forward(self):
+            srv = self.server
+            if not API_PATH_RX.match(self.path) or self.command not in ("POST", "GET"):
+                return self._deny(403, "path not allowed by the episode proxy")
+            with srv._lock:
+                srv.n_forwarded += 1
+                over = srv.max_requests is not None and srv.n_forwarded > srv.max_requests
+            if over:
+                return self._deny(429, "episode request cap reached")
+            n = int(self.headers.get("Content-Length") or 0)
+            if self.headers.get("Transfer-Encoding", "").lower() == "chunked":
+                return self._deny(411, "chunked request bodies are not supported")
+            body = self.rfile.read(n) if n else None
+            hdrs = {k: v for k, v in self.headers.items() if k.lower() not in HOP and k.lower() not in
+                    ("authorization", "x-api-key")}
+            try:
+                hdrs.update(srv.auth_headers())
+            except Exception as e:                # never echo credential details back into the jail
+                srv.log({"t": time.time(), "path": self.path[:200], "allowed": True, "error": "auth: " + type(e).__name__})
+                return self._deny(503, "episode proxy could not load credentials")
+            hdrs["Host"] = API_HOST
+            if body is not None:
+                hdrs["Content-Length"] = str(len(body))
+            t0 = time.time()
+            up = http.client.HTTPSConnection(API_HOST, 443, timeout=900)
+            try:
+                up.request(self.command, self.path, body=body, headers=hdrs)
+                r = up.getresponse()
+                self.send_response(r.status, r.reason)
+                for k, v in r.getheaders():
+                    if k.lower() not in HOP:
+                        self.send_header(k, v)
+                clen = r.getheader("Content-Length")
+                if clen is not None:
+                    self.send_header("Content-Length", clen)
+                else:
+                    self.send_header("Transfer-Encoding", "chunked")
+                self.end_headers()
+                nbytes = 0
+                while True:
+                    chunk = r.read1(65536) if hasattr(r, "read1") else r.read(65536)
+                    if not chunk:
+                        break
+                    nbytes += len(chunk)
+                    if clen is not None:
+                        self.wfile.write(chunk)
+                    else:
+                        self.wfile.write(b"%x\r\n%s\r\n" % (len(chunk), chunk))
+                    self.wfile.flush()
+                if clen is None:
+                    self.wfile.write(b"0\r\n\r\n")
+                    self.wfile.flush()
+                srv.log({"t": t0, "method": self.command, "path": self.path[:200], "allowed": True,
+                         "status": r.status, "bytes": nbytes, "s": round(time.time() - t0, 2)})
+            except OSError as e:
+                srv.log({"t": t0, "method": self.command, "path": self.path[:200], "allowed": True,
+                         "error": str(e)[:200]})
+                self.close_connection = True
+            finally:
+                up.close()
+
+        do_POST = do_GET = _forward
+
+        def do_PUT(self):
+            self._deny(405, "method not allowed")
+        do_DELETE = do_PATCH = do_HEAD = do_OPTIONS = do_CONNECT = do_PUT
+
+    return H
+
+
+class AuthProxy(socketserver.ThreadingUnixStreamServer):
+    daemon_threads = True
+
+    def __init__(self, sock_path, log_path, auth_headers, max_requests=None):
+        self.auth_headers = auth_headers          # callable -> dict, called per request (picks up token refreshes)
+        self.max_requests = max_requests          # bounds what an agent can spend by calling the API itself
+        self.n_forwarded = 0
+        self._log_path = log_path
+        self._lock = threading.Lock()
+        self.events = []
+        super().__init__(sock_path, _make_auth_handler())
+        os.chmod(sock_path, 0o600)
+
+    def get_request(self):
+        # BaseHTTPRequestHandler expects (sock, client_address) with an address it can format.
+        sock, _ = self.socket.accept()
+        return sock, ("jail", 0)
+
+    log = EgressProxy.log
+    start = EgressProxy.start
+
+
 # ---------------------------------------------------------------------------------------------- jail construction
 def _state_dir(episode):
     os.makedirs(STATE_ROOT, mode=0o700, exist_ok=True)
@@ -242,7 +374,13 @@ def _write_inner(state):
     with open(p, "w") as f:
         f.write(f"""#!/bin/bash
 {SOCAT} TCP-LISTEN:{PROXY_PORT},bind=127.0.0.1,fork,reuseaddr UNIX-CONNECT:{IN_RUN}/proxy.sock 2>/dev/null &
+if [ -S {IN_RUN}/api.sock ]; then
+  {SOCAT} TCP-LISTEN:{API_PORT},bind=127.0.0.1,fork,reuseaddr UNIX-CONNECT:{IN_RUN}/api.sock 2>/dev/null &
+fi
 for i in $(seq 1 50); do (exec 3<>/dev/tcp/127.0.0.1/{PROXY_PORT}) 2>/dev/null && break; sleep 0.1; done
+if [ -S {IN_RUN}/api.sock ]; then
+  for i in $(seq 1 50); do (exec 3<>/dev/tcp/127.0.0.1/{API_PORT}) 2>/dev/null && break; sleep 0.1; done
+fi
 exec "$@"
 """)
     os.chmod(p, 0o500)
@@ -302,7 +440,9 @@ def bwrap_argv(sbx, state, inner_cmd):
 class Jail:
     """Per-episode jail state: private state dir (0700, outside every checkout and sandbox), proxy, generated files."""
 
-    def __init__(self, episode, out_dir, allowed=ALLOWED_HOSTS):
+    def __init__(self, episode, out_dir, allowed=ALLOWED_HOSTS, auth_headers=None, max_requests=None):
+        """auth_headers: callable returning the real auth headers. When given, an AuthProxy (outside the jail) serves
+        http://127.0.0.1:3129 inside it, and the jailed CLI gets only a dummy credential (see AuthProxy)."""
         self.episode = episode
         self.sbx = os.path.join(paths.sandbox_root(), episode)
         if not os.path.isdir(self.sbx):
@@ -316,6 +456,10 @@ class Jail:
         os.makedirs(out_dir, exist_ok=True)
         self.proxy = EgressProxy(os.path.join(self.state, "run", "proxy.sock"),
                                  os.path.join(out_dir, "net_log.jsonl"), allowed).start()
+        self.api = None
+        if auth_headers is not None:
+            self.api = AuthProxy(os.path.join(self.state, "run", "api.sock"),
+                                 os.path.join(out_dir, "api_proxy_log.jsonl"), auth_headers, max_requests).start()
 
     def popen(self, inner_cmd, auth_env=None, **kw):
         argv = bwrap_argv(self.sbx, self.state, inner_cmd)
@@ -329,36 +473,114 @@ class Jail:
         return sorted(out)
 
     def close(self, keep=False):
-        try:
-            self.proxy.shutdown()
-            self.proxy.server_close()
-        except Exception:
-            pass
+        for px in (self.proxy, self.api):
+            if px is None:
+                continue
+            try:
+                px.shutdown()
+                px.server_close()
+            except Exception:
+                pass
         if not keep:
             shutil.rmtree(self.state, ignore_errors=True)
 
 
 # ---------------------------------------------------------------------------------------------- auth
-def oauth_env(min_valid_s):
+def _read_oauth():
     with open(CREDS) as f:
         o = json.load(f).get("claudeAiOauth") or {}
-    tok, exp = o.get("accessToken"), (o.get("expiresAt") or 0) / 1000.0
-    if not tok:
-        raise SystemExit(f"no OAuth access token in {CREDS}")
-    left = exp - time.time()
-    if left < min_valid_s:
-        raise SystemExit(f"OAuth access token valid for only {left / 60:.0f} min (< {min_valid_s / 60:.0f} needed); "
-                         "let the operator's Claude Code session refresh it (any interactive request does), or "
-                         "use a shorter --max-wall-s, or --auth apikey")
-    return {"CLAUDE_CODE_OAUTH_TOKEN": tok}, {"token_valid_min": round(left / 60)}
+    return o.get("accessToken"), (o.get("expiresAt") or 0) / 1000.0
 
 
-def apikey_env():
+def oauth_headers():
+    """Real OAuth header, read fresh for every proxied request, so the operator session's token refreshes are picked
+    up during a long episode. Raises if the token is missing or expired (the proxy then answers 503)."""
+    tok, exp = _read_oauth()
+    if not tok or exp < time.time() + 30:
+        raise RuntimeError("oauth token missing or expired")
+    return {"Authorization": "Bearer " + tok}
+
+
+def _api_key():
     with open(API_KEY_FILE) as f:
         for line in f:
             if line.startswith("ANTHROPIC_API_KEY="):
-                return {"ANTHROPIC_API_KEY": line.split("=", 1)[1].strip()}
+                return line.split("=", 1)[1].strip()
     raise SystemExit(f"no ANTHROPIC_API_KEY in {API_KEY_FILE}")
+
+
+def apikey_headers():
+    return {"x-api-key": _api_key()}
+
+
+def credential_tails():
+    """Last 24 characters of each real credential (never logged), for the post-run leak scan."""
+    out = []
+    try:
+        tok, _ = _read_oauth()
+        if tok:
+            out.append(tok[-24:])
+    except (OSError, ValueError):
+        pass
+    try:
+        out.append(_api_key()[-24:])
+    except (OSError, SystemExit):
+        pass
+    return out
+
+
+def credential_scan(roots, tails, max_bytes=20 * 1024 * 1024):
+    """Files under `roots` that contain any credential tail (refreshed tails are re-read at scan time too)."""
+    tails = [t for t in set(tails) | set(credential_tails()) if t and len(t) >= 16]
+    hits = []
+    for root in roots:
+        for dp, _, fns in os.walk(root):
+            for fn in fns:
+                p = os.path.join(dp, fn)
+                try:
+                    if os.path.islink(p) or os.path.getsize(p) > max_bytes:
+                        continue
+                    with open(p, "rb") as f:
+                        data = f.read()
+                except OSError:
+                    continue
+                if any(t.encode() in data for t in tails):
+                    hits.append(p)
+    return hits
+
+
+DUMMY_API_KEY = "sk-ant-api03-" + "jailed-dummy-key-" + "0" * 70
+
+
+def auth_setup(mode, wall_s):
+    """(env for the jail, header callable for the AuthProxy or None, info). Modes:
+      oauth      (default) the jail gets a dummy OAuth token; AuthProxy injects the operator's real one. Token never
+                 enters the jail. Needs the operator's Claude Code login to stay refreshed during the episode.
+      apikey     same with ~/.anthropic_env's API key (real money; the API ledger is checked and charged).
+      oauth-env  legacy/fallback: the real access token in the jailed CLI's environment (readable by the agent via
+                 /proc; refused unless valid for the whole wall-clock limit + 10 min)."""
+    base = {"ANTHROPIC_BASE_URL": f"http://127.0.0.1:{API_PORT}"}
+    if mode == "oauth":
+        tok, exp = _read_oauth()
+        if not tok:
+            raise SystemExit(f"no OAuth access token in {CREDS}")
+        left = exp - time.time()
+        if left < 300:
+            raise SystemExit("OAuth access token expires in < 5 min; let the operator's Claude Code session refresh it")
+        return dict(base, CLAUDE_CODE_OAUTH_TOKEN=DUMMY_OAUTH), oauth_headers, {
+            "token_valid_min_at_start": round(left / 60), "token_in_jail": False}
+    if mode == "apikey":
+        _api_key()
+        return dict(base, ANTHROPIC_API_KEY=DUMMY_API_KEY), apikey_headers, {"token_in_jail": False}
+    if mode == "oauth-env":
+        tok, exp = _read_oauth()
+        left = exp - time.time()
+        if not tok or left < wall_s + 600:
+            raise SystemExit(f"OAuth access token valid for only {left / 60:.0f} min (< {(wall_s + 600) / 60:.0f} "
+                             "needed); use --auth oauth (token injection) instead")
+        return {"CLAUDE_CODE_OAUTH_TOKEN": tok}, None, {"token_valid_min_at_start": round(left / 60),
+                                                         "token_in_jail": True}
+    raise SystemExit(f"unknown --auth {mode}")
 
 
 # ---------------------------------------------------------------------------------------------- ledger
@@ -477,18 +699,22 @@ def run(args):
     for b in (BWRAP, SOCAT, CLAUDE_BIN):
         if not os.path.exists(b):
             raise SystemExit(f"missing {b}")
-    if args.auth == "oauth":
-        auth_env, auth_info = oauth_env(args.max_wall_s + 600)
-    else:
+    if args.auth == "apikey":
         from common import api_agent
         if api_agent._ledger_total() + args.max_usd > api_agent.GLOBAL_CAP_USD:
             raise SystemExit("API ledger would cross its global cap; refusing (use --auth oauth)")
-        auth_env, auth_info = apikey_env(), {}
+    auth_env, header_fn, auth_info = auth_setup(args.auth, args.max_wall_s)
+    cred_tails = credential_tails()
     prompt = open(args.prompt_file).read()
     if prompt.endswith("\n"):
         prompt = prompt[:-1]
     os.makedirs(args.out, exist_ok=True)
-    jail = Jail(args.episode, args.out)
+    # With token injection the CLI talks only to the AuthProxy; the CONNECT allowlist is then empty (nothing else
+    # may leave the jail). In oauth-env mode the CLI needs CONNECT to api.anthropic.com:443.
+    # Request cap: the CLI makes about one API request per turn plus a few side requests; 3x turns + 30 leaves room
+    # for that and bounds what an agent could spend by calling the proxy itself.
+    jail = Jail(args.episode, args.out, allowed=set() if header_fn else ALLOWED_HOSTS, auth_headers=header_fn,
+                max_requests=3 * args.max_turns + 30)
     tpath = os.path.join(args.out, "api_transcript.jsonl")
     tfile = open(tpath, "w")
     raw = open(os.path.join(args.out, "claude_stream.jsonl"), "wb")
@@ -533,16 +759,23 @@ def run(args):
         tfile.close()
         raw.close()
         net = list(jail.proxy.events)
+        api_events = list(jail.api.events) if jail.api else []
         jail.close(keep=args.keep_state)
     meta.pop("_stderr_path", None)
+    meta["credential_found_in"] = credential_scan([args.out, jail.sbx], cred_tails)
+    if meta["credential_found_in"]:
+        print("WARNING: real credential found in " + ", ".join(meta["credential_found_in"]), file=sys.stderr)
     out = {"episode": args.episode, "task": args.task, "provider": "claude-code-cli", "model": model,
            "effort": args.effort, "auth": args.auth, **auth_info, "turns": turns, "stop": stop,
            "submitted": submitted, "usd": round(usd, 4), "usd_note": ("CLI-reported list-price estimate; billed to the "
-           "operator's subscription" if args.auth == "oauth" else "CLI-reported cost, charged to the API ledger"),
+           "operator's subscription" if args.auth != "apikey" else "CLI-reported cost, charged to the API ledger"),
            "wall_s": round(time.time() - t0, 1), "session_id": sid,
            "usage": [r.get("usage") for r in results], "model_usage": [r.get("modelUsage") for r in results],
            "net_denied": [e for e in net if e.get("allowed") is False],
            "net_allowed_n": sum(1 for e in net if e.get("allowed")),
+           "api_proxy_requests": len(api_events),
+           "api_proxy_denied": [e for e in api_events if e.get("allowed") is False],
+           "api_proxy_errors": [e for e in api_events if e.get("error")],
            "isolation": "bwrap+netns+egress-allowlist", **meta}
     json.dump(out, open(os.path.join(args.out, "api_meta.json"), "w"), indent=1, default=str)
     _ledger_append({"t": time.time(), "episode": args.episode, "task": args.task, "model": model,
@@ -577,10 +810,10 @@ def redteam_probes(sbx, decoy_sbx=None, host_pids=()):
     def add(name, cmd, exp):
         P.append((name, cmd, exp))
 
-    for p in (f"{home}/wt", main, f"{home}/ideating-rl-tests", f"{home}/.claude", f"{home}/.claude/projects",
+    for p in dict.fromkeys((f"{home}/wt", main, f"{home}/ideating-rl-tests", f"{home}/.claude", f"{home}/.claude/projects",
               f"{home}/.claude/.credentials.json", f"{home}/hf_home", f"{home}/.anthropic_env", f"{home}/.openai_env",
               f"{home}/.hf_env", f"{home}/.aws", f"{home}/.rl_api", STATE_ROOT, paths.episodes_dir(),
-              "/opt/pytorch", "/root", "/var/log", "/sys/class", f"{home}/.ssh"):
+              "/opt/pytorch", "/root", "/var/log", "/sys/class", f"{home}/.ssh")):
         add(f"absent:{p}", f"test -e {shlex.quote(p)} || ls -d {shlex.quote(p)}", "fail")
         # Content is never printed (a control run on the host would otherwise copy secrets into the report).
         add(f"read:{p}", f"head -c 1 {shlex.quote(p)} >/dev/null 2>&1 && test -r {shlex.quote(p)}", "fail")
@@ -638,9 +871,24 @@ def redteam_probes(sbx, decoy_sbx=None, host_pids=()):
     add("net_proxy_plain_http", "./py -c \"import socket;s=socket.create_connection(('127.0.0.1',3128),timeout=5);"
         "s.sendall(b'GET http://169.254.169.254/latest/meta-data/ HTTP/1.1\\r\\nHost: x\\r\\n\\r\\n');"
         "print(s.recv(100))\"", ("absent", "200"))
-    add("net_proxy_api_allowed", "./py -c \"import socket;s=socket.create_connection(('127.0.0.1',3128),timeout=10);"
-        "s.sendall(b'CONNECT api.anthropic.com:443 HTTP/1.1\\r\\n\\r\\n');print(s.recv(100))\"",
-        ("contains", "200 Connection Established"))
+    # Production config (token injection): the CONNECT allowlist is empty, so even the API host is refused there;
+    # the only egress is the AuthProxy at 127.0.0.1:3129, which forwards /v1/messages only.
+    add("net_proxy_api_connect_denied", "./py -c \"import socket;s=socket.create_connection(('127.0.0.1',3128),"
+        "timeout=10);s.sendall(b'CONNECT api.anthropic.com:443 HTTP/1.1\\r\\n\\r\\n');print(s.recv(100))\"",
+        ("absent", "200"))
+
+    def http(method, path, body=""):
+        return ("./py -c \"import http.client as h;c=h.HTTPConnection('127.0.0.1',3129,timeout=30);"
+                f"c.request('{method}','{path}',body='{body}',headers={{'content-type':'application/json'}});"
+                "r=c.getresponse();print(r.status)\"")
+    add("api_proxy_profile_denied", http("GET", "/api/oauth/profile"), ("only", ["403"]))
+    add("api_proxy_models_denied", http("GET", "/v1/models"), ("only", ["403"]))
+    add("api_proxy_files_denied", http("POST", "/v1/files"), ("only", ["403"]))
+    add("api_proxy_dotdot_denied", http("POST", "/v1/messages/../models"), ("only", ["403"]))
+    # Forwarding works (upstream answers; with the red-team's bogus injected credential that is a 401).
+    add("api_proxy_forwards_messages", http("POST", "/v1/messages", "{}"), ("absent_re", r"^(403|5\d\d)$"))
+    add("no_real_credential_in_jail", "cat /proc/[0-9]*/environ 2>/dev/null | tr '\\0' '\\n' | "
+        "grep -E '^(CLAUDE_CODE_OAUTH_TOKEN|ANTHROPIC_API_KEY)=' | grep -v jailed-dummy", "empty")
     add("env_clean", "env | cut -d= -f1 | sort | tr '\\n' ' '", ("absent_re", r"HF_|OPENAI|AWS|SSH_|GPUQ|RL_EPI"))
     add("tool_help", f"cd {shlex.quote(sbx)} && ./tool help", ("contains", '"ok": true'))
     add("tool_budget", f"cd {shlex.quote(sbx)} && ./tool budget", ("contains", '"ok": true'))
@@ -680,7 +928,10 @@ def redteam(args):
     """Run every probe inside the SAME jail the agent gets (same bwrap argv builder, proxy and env, with a dummy
     token), one fresh jail per probe, and compare against expectations. Exit 1 if any probe escaped."""
     out_dir = args.out or os.path.join(STATE_ROOT, "redteam_" + args.episode)
-    jail = Jail(args.episode, out_dir)
+    # Same configuration as a production run (token injection, empty CONNECT allowlist), with a bogus credential.
+    jail = Jail(args.episode, out_dir, allowed=set(),
+                auth_headers=lambda: {"Authorization": "Bearer redteam-bogus-credential"})
+    probe_env = {"ANTHROPIC_BASE_URL": f"http://127.0.0.1:{API_PORT}", "CLAUDE_CODE_OAUTH_TOKEN": DUMMY_OAUTH}
     decoy = os.path.join(paths.sandbox_root(), args.decoy) if args.decoy else None
     host_pids = [os.getpid(), os.getppid(), 1]
     try:
@@ -698,7 +949,7 @@ def redteam(args):
                 # "passes" here does not discriminate; the control shows that the suite detects real access.
                 p = subprocess.Popen(inner, env=jail_env(jail.sbx), cwd=jail.sbx, start_new_session=True, **kw)
             else:
-                p = jail.popen(inner, {"CLAUDE_CODE_OAUTH_TOKEN": "dummy-not-a-token"}, **kw)
+                p = jail.popen(inner, probe_env, **kw)
             try:
                 o, e = p.communicate(timeout=120)
             except subprocess.TimeoutExpired:
@@ -713,7 +964,7 @@ def redteam(args):
             if not ok:
                 bad.append(name)
     finally:
-        net = list(jail.proxy.events)
+        net = list(jail.proxy.events) + list(jail.api.events)
         jail.close()
     if decoy and not args.control:
         # The decoy_tool probe sent a request naming the decoy episode from inside this jail. The broker identifies
@@ -755,7 +1006,9 @@ def main():
     r.add_argument("--max-turns", type=int, default=80)
     r.add_argument("--max-wall-s", type=int, default=3600, help="wall-clock limit for the whole agent run")
     r.add_argument("--max-usd", type=float, default=2.0, help="--auth apikey only: passed as --max-budget-usd")
-    r.add_argument("--auth", choices=("oauth", "apikey"), default="oauth")
+    r.add_argument("--auth", choices=("oauth", "apikey", "oauth-env"), default="oauth",
+                   help="oauth/apikey: real credential injected by a proxy outside the jail (default); oauth-env: "
+                        "token in the jailed environment (fallback)")
     r.add_argument("--no-nudge", action="store_true", help="do not resume once with a submit reminder")
     r.add_argument("--keep-state", action="store_true", help="keep the private state dir (debugging)")
     t = sub.add_parser("redteam")

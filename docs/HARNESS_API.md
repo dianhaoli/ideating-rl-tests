@@ -451,3 +451,69 @@ Refinements to the spec above:
   9 of 20 T1 agents used it, and one operator read it as "exec of transformed code". The audit is unchanged; a test
   checks that every exec example in the prompt passes R9 and that `.replace`, slicing, `+`, a computed marker and
   `..` still fire. Applies to episodes prepared from now on (prompt text and sha change).
+
+## 11. OS-isolated Claude test agents: `common/claude_agent.py` (2026-10-04, branch harness/isolation)
+
+Why: Claude test agents used to be Claude Code subagents of the orchestrator session. They had the repo as cwd, the
+operator's CLAUDE.md, memories, MCP servers and skills, and read access to the whole home directory. The ShiftHunt
+forensics found the answer key three plain file reads away; only the after-the-fact transcript audit stood in the way.
+`claude_agent.py` runs `claude -p` (stream-json) inside a bubblewrap jail in which those files do not exist.
+
+```
+E=$($PY -m common.sandbox prepare --task T --instance-dir D --profile full --run-dir R --solver-label claude-iso-opus | head -1)
+systemd-run --user --scope -q -p MemoryMax=4G -- $PY -m common.claude_agent run --episode $E --task T \
+    --prompt-file R/episodes/$E/agent_prompt.txt --out R/episodes/$E --model opus --effort high \
+    --max-turns 80 --max-wall-s 3600
+$PY -m common.sandbox finish --episode $E --transcript R/episodes/$E/api_transcript.jsonl \
+    --agent-model claude-cli:claude-opus-5-5:high
+$PY -m common.claude_agent spent      # CLI-reported cost per model/task (~/.rl_api/claude_cli_ledger.jsonl)
+```
+`--model` takes `opus` (claude-opus-5-5), `sonnet`, `haiku` (claude-haiku-4-5-20251001) or a full id. `--effort` is the
+CLI's `--effort` (low|medium|high|xhigh|max, default high). If the agent ends without submitting, the session is resumed
+once with a submit reminder (`--no-nudge` disables it). The wall-clock limit kills the whole jail.
+
+What the agent sees (layer 1, bwrap; new user/pid/net/ipc/uts/cgroup namespaces, no nested user namespaces):
+its sandbox read-write at its real path, the broker socket, the ./py venv (read-only), /usr, a few /etc files
+(generated passwd/group/hosts; certs), the claude binary, an empty HOME with a FRESH `CLAUDE_CONFIG_DIR`, and its own
+processes in /proc. Home, ~/ideating-rl-tests, ~/wt, ~/.claude (projects, credentials), ~/hf_home, key files, other
+sandboxes, instance dirs and caches, the episode registry, /opt/pytorch and the GPU are absent. `TMPDIR` is
+`<sandbox>/.tmp`. Network: loopback only. The CLI reaches the API through `ANTHROPIC_BASE_URL=http://127.0.0.1:3129`,
+an auth-injecting proxy OUTSIDE the jail that forwards only `/v1/messages[/count_tokens]` and swaps the jail's dummy
+token for the operator's real OAuth token (re-read per request). The jail never holds a real credential; the
+CONNECT proxy (127.0.0.1:3128) has an empty allowlist in this mode, so nothing else leaves (EC2 metadata, Hugging Face,
+pip, any web host). Layer 2 (Claude Code): tools limited to Bash/Read/Write/Edit/Glob/Grep (checked against the
+stream's init event; anything else stops the run), `dontAsk` permissions with deny rules for WebFetch, WebSearch,
+Agent/Task, MCP and file tools on every non-sandbox tree, `--strict-mcp-config`, `--safe-mode`, Bash cwd reset to the
+sandbox after each command (so the audit's recorded cwd is exact). The transcript audit still runs (layer 3).
+
+Outputs in `--out`: `api_transcript.jsonl` (first line = the agent prompt, then the stream's assistant/user messages
+with `cwd`; what `finish --transcript` and `transcript_audit` read), `claude_stream.jsonl` (raw), `claude_native_*.jsonl`
+(Claude Code's own session file), `api_meta.json` (model, effort, turns, stop, CLI-reported `usd`, usage, init tools,
+proxy and network denials, `credential_found_in` = files containing the real credential after the run, must be empty),
+`api_proxy_log.jsonl`, `net_log.jsonl`, `claude_stderr.log`.
+
+Auth modes: `--auth oauth` (default, injection), `--auth apikey` (injects ~/.anthropic_env's key; real money, checked
+against and charged to the API ledger), `--auth oauth-env` (fallback: the real access token in the jailed environment,
+readable by the agent via /proc; refused unless valid for the whole wall-clock + 10 min).
+
+Self-test: `bash common/tests/claude_agent_selftest.sh [haiku]` runs the unit tests (a fake claude inside the real
+jail), the scripted red-team, its no-jail control, and one live Haiku episode on `_demo` (prepare -> run -> finish).
+Red-team alone: `$PY -m common.claude_agent redteam --episode E --decoy E2 [--control]` runs ~95 probes as plain bash
+in the production jail (no LLM): reads/listing of ~/wt, the repo, ~/.claude, keys, other sandboxes, `..` and symlink
+tricks, `os.open`, `find /`, `grep -r RLCANARY`, /proc/<host pid>/{root,cwd,cmdline}, nested namespaces, mount, direct
+IPs/DNS/metadata, proxy bypasses, non-messages API paths, a real credential in any process environment, plus the
+positive checks (./tool works, sandbox writable). Exit 1 if any probe escapes. The episode used for the red-team is
+flagged `cross_episode_access` by the broker on purpose (the decoy probe), so never grade it. `--control` runs the
+same probes without the jail; it records no output (host output can hold real secrets).
+
+Residual risks (accepted, 2026-10-04):
+- While an episode runs, the agent can send its own `/v1/messages` requests through the proxy (inference spend on the
+  operator's subscription, capped at 3 x max_turns + 30 requests, logged). It cannot read the credential, and no API
+  endpoint knows a task's answers.
+- The broker socket is shared by all episodes. The broker identifies the caller's episode by its cwd, which still works
+  for jailed processes (sandbox mounted at its real path); other episode ids are not discoverable from inside.
+- `/proc/self/mountinfo` shows the host paths of the bind mounts (sandbox, venv, the per-run state dir name). Paths
+  only, no content.
+- The jail is only as strong as bubblewrap, user namespaces and the kernel; the agent runs as the operator's uid.
+- The operator's OAuth token must stay fresh during an episode (the proxy re-reads it, so any operator activity that
+  refreshes it suffices). An expired token gives the jail 503s (episode then shows `api_proxy_errors`).

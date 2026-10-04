@@ -63,11 +63,11 @@ def iso(hx, tmp_path, monkeypatch):
     shutil.rmtree(short, ignore_errors=True)
 
 
-def _run(hx, tmp_path, monkeypatch, mode, wall=120):
+def _run(hx, tmp_path, monkeypatch, mode_, wall=120):
     ep = sandbox.prepare("_demo", hx.insts["null"][0], "full", hx.run_dir, solver_label="fake-claude")
     out = os.path.join(hx.run_dir, "episodes", ep["episode"])
-    monkeypatch.setattr(ca, "oauth_env", lambda min_s: ({"CLAUDE_CODE_OAUTH_TOKEN": "dummy", "FAKE_MODE": mode},
-                                                         {"token_valid_min": 999}))
+    monkeypatch.setattr(ca, "auth_setup", lambda mode, wall: ({"CLAUDE_CODE_OAUTH_TOKEN": "dummy", "FAKE_MODE": mode_},
+                                                             lambda: {"Authorization": "Bearer x"}, {}))
     args = argparse.Namespace(episode=ep["episode"], task="_demo", prompt_file=os.path.join(out, "agent_prompt.txt"),
                               out=out, model="haiku", effort="high", max_turns=5, max_wall_s=wall, max_usd=0.1,
                               auth="oauth", no_nudge=True, keep_state=False)
@@ -161,3 +161,35 @@ def test_redteam_in_test_broker(iso):
     rep = json.load(open(tmp / "rt" / "redteam.json"))
     assert rc == 0 and rep["n_escaped"] == 0, rep["escaped"]
     assert rep["n_probes"] > 60
+
+
+def test_auth_proxy_path_allowlist_and_cap():
+    """AuthProxy: only /v1/messages is forwarded; the request cap answers 429 before any upstream call; the injected
+    header callable is never echoed to the jail."""
+    import http.client
+    short = tempfile.mkdtemp(prefix="rlca", dir="/tmp")
+    sock = os.path.join(short, "a.sock")
+    log = os.path.join(short, "a.jsonl")
+    px = ca.AuthProxy(sock, log, lambda: {"Authorization": "Bearer never-sent"}, max_requests=0).start()
+
+    class UC(http.client.HTTPConnection):
+        def connect(self):
+            self.sock = socket.socket(socket.AF_UNIX)
+            self.sock.connect(sock)
+    try:
+        for method, path, want in (("GET", "/api/oauth/profile", 403), ("GET", "/v1/models", 403),
+                                   ("POST", "/v1/messages/../models", 403), ("DELETE", "/v1/messages", 405),
+                                   ("POST", "/v1/messages", 429), ("POST", "/v1/messages?beta=true", 429)):
+            c = UC("jail")
+            c.request(method, path, body="{}", headers={"Authorization": "Bearer jailed"})
+            r = c.getresponse()
+            body = r.read()
+            assert r.status == want, (method, path, r.status)
+            assert b"never-sent" not in body
+            c.close()
+    finally:
+        px.shutdown()
+        px.server_close()
+        shutil.rmtree(short, ignore_errors=True)
+    assert ca.API_PATH_RX.match("/v1/messages/count_tokens?beta=true")
+    assert not ca.API_PATH_RX.match("/v1/messages/batches")
