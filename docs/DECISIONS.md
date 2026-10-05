@@ -210,3 +210,7 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
 - API caps for task modeldiff (judge and claim extraction): Anthropic $6, raised to $9 at 23:15 UTC (extractor estimate about $5 left no headroom) (global $16 cap, $2.79 spent), OpenAI $12. Same autonomy and effort
   rules as D18 (audits as pieces finish, no permission stops before a gate).
 - Disk: Dan enlarged the EBS volume. Root grown online to 150 GB (growpart + xfs_growfs), 68 GB free.
+- **2026-10-05 ~02:00 UTC (Dan): "don't use anthropic just use openai".** The Anthropic API cap for modeldiff is set to $0 ($1.36 already spent on
+  DEV extractor tuning). Every LLM step (the baseline claim extractor and auxiliary calls) moves to OpenAI via the OpenAI ledger (cap $12): extractor
+  gpt-6.1-sol, auxiliary gpt-6-luna. The extractor is re-frozen on DEV, and a predictions addendum is committed before further held-out baseline runs.
+  Held-out runs already made with the Sonnet extractor are superseded and reported separately, not gated.
