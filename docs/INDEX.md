@@ -18,7 +18,8 @@
 - `results/`: redacted, aggregate-only copies of each study's write-up (the source branches are listed in STATUS section 8):
   `results/shifthunt/` (VALIDATION, SCALE1_T1/T2/OPENAI with checks, SMALLMODEL_FAILURES, LUNA_EPISODES, SMOKE), `results/featurematch/` (VERDICT, RESULTS, STEP3),
   `results/latentknockout/` (FEASIBILITY_VERDICT, PRECEDENT), `results/boolintermediates/` and `results/latentdiff/` (SMOKE),
-  `results/shifthunt3/` (v3 SPEC_v3 with rationale, STAGE0 gate result, KILLED: why v3 was stopped, the skeptic audit, v4 direction).
+  `results/shifthunt3/` (v3 SPEC_v3 with rationale, STAGE0 gate result, KILLED: why v3 was stopped, the skeptic audit, v4 direction),
+  `results/modeldiff/` (DIFFING_REPORT: model-diffing Stage 0, stopped on K5 grader invalidity; recommendation CHANGE).
 
 ## common/
 - `gpuq.py`: GPU admission queue. `env.sh`: environment. `secret_scan.sh`: pre-commit secret/size scan.

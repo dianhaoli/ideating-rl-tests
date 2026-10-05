@@ -635,3 +635,6 @@ Removed the four Qwen2.5 models (8.2 GB of blobs, none shared with other models;
 
 ## 2026-10-04 22:30 UTC: model-diffing study started (D19)
 Worktree ~/wt/modeldiff (task/modeldiff). Root disk grown to 150 GB. Workflow: two recon agents (literature; organisms/infra) -> xhigh planner (DIFFING_SPEC, gates, predictions protocol) -> env, grader and baseline builders, each audited -> Stage 0 runs (baselines a-e, content-matters pair, isolated Opus agents) -> audit -> DIFFING_REPORT.
+
+## 2026-10-05 04:15-04:45 UTC: model-diffing study stopped (K5)
+The grader builder measured the K5 trigger. The independent grader audit confirmed it and found the grader scores wording, not content. I stopped the workflow and killed the detached baseline chains (chain5/6) and three tool servers; the GPU is free. Six modeldiff episodes are left open in the broker, ungraded on purpose. The xhigh planner wrote DIFFING_REPORT.md (recommendation CHANGE; copy in docs/results/modeldiff/, scanned for ids and topic names). STATUS section 2c.

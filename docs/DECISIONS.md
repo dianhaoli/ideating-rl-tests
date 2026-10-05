@@ -214,3 +214,6 @@ non-zero budget runs out, submit is always allowed so no agent is locked out.
   DEV extractor tuning). Every LLM step (the baseline claim extractor and auxiliary calls) moves to OpenAI via the OpenAI ledger (cap $12): extractor
   gpt-6.1-sol, auxiliary gpt-6-luna. The extractor is re-frozen on DEV, and a predictions addendum is committed before further held-out baseline runs.
   Held-out runs already made with the Sonnet extractor are superseded and reported separately, not gated.
+- **Outcome (2026-10-05 04:15 UTC):** stopped at Stage 0 on pre-registered kill K5 (the grader is not valid: refutation 0.84 < 0.90; re-grade SD 0.155 > 0.07;
+  it scores wording, not content; an independent audit confirmed). No agent episodes ran. Recommendation: CHANGE (a grader-only Stage 0b, then drop if
+  it fails); no Stage 1. Spend: OpenAI $4.60, Anthropic $1.36 (about $0.26 of it logged 02:00-02:19Z, between Dan's "use openai" and the cap set to $0), about 9-10 GPU-h.
